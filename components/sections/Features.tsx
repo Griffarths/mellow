@@ -6,6 +6,7 @@ type FeatureMeta = {
   image: string;
   span: "big" | "small";
   multilineTitle: boolean;
+  inlineOnMobile?: boolean;
 };
 
 const FEATURES: FeatureMeta[] = [
@@ -36,6 +37,7 @@ const FEATURES: FeatureMeta[] = [
     image: "/assets/Analyse.svg",
     span: "big",
     multilineTitle: true,
+    inlineOnMobile: true,
   },
 ];
 
@@ -47,10 +49,10 @@ export function Features() {
       <div className="mx-auto max-w-6xl px-6">
         <div>
           <h2 className="section-title text-center text-4xl font-bold md:text-left md:text-6xl">
-            <span className="block md:whitespace-nowrap">
+            <span className="md:block md:whitespace-nowrap">
               {t("title.line1")}
-            </span>
-            <span className="block md:whitespace-nowrap">
+            </span>{" "}
+            <span className="md:block md:whitespace-nowrap">
               {t("title.line2")}
             </span>
           </h2>
@@ -75,9 +77,16 @@ export function Features() {
                 <h3 className="text-2xl font-bold tracking-tight md:text-3xl">
                   {f.multilineTitle ? (
                     <>
-                      {t(`${f.id}.title.line1`)}
-                      <br />
-                      {t(`${f.id}.title.line2`)}
+                      <span
+                        className={f.inlineOnMobile ? "md:block" : "block"}
+                      >
+                        {t(`${f.id}.title.line1`)}
+                      </span>{" "}
+                      <span
+                        className={f.inlineOnMobile ? "md:block" : "block"}
+                      >
+                        {t(`${f.id}.title.line2`)}
+                      </span>
                     </>
                   ) : (
                     t(`${f.id}.title`)
