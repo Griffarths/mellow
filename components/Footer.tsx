@@ -19,7 +19,12 @@ export function Footer() {
           <Link href="/confidentialite" className="hover:text-black">
             Confidentialité
           </Link>
-          <a href="#" className="hover:text-black">
+          <a
+            href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-black"
+          >
             Conditions
           </a>
           <Link href="/mentions-legales" className="hover:text-black">
