@@ -1,8 +1,14 @@
+import Link from "next/link";
+
 export function Nav() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-black/5 bg-white/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <a href="#" className="flex items-center gap-2 text-2xl font-bold tracking-tight">
+        <Link
+          href="/"
+          aria-label="Mellow — retour à l'accueil"
+          className="flex items-center gap-2 text-2xl font-bold tracking-tight"
+        >
           <img
             src="/blobs/Fleur1.svg"
             alt=""
@@ -11,7 +17,7 @@ export function Nav() {
             draggable={false}
           />
           <span>Mellow</span>
-        </a>
+        </Link>
         <a
           href="#download"
           aria-label="Télécharger dans l'App Store"
