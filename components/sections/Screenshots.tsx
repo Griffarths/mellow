@@ -1,4 +1,4 @@
-const FRAMES = [130, 131, 132, 133, 134, 135, 136, 137, 138, 140];
+const FRAMES = [130, 131, 132, 133, 134, 135, 138, 137, 136];
 
 export function Screenshots() {
   return (
