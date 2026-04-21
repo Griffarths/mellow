@@ -3,7 +3,7 @@ type Course = {
   title: string;
   subtitle: string;
   bg: string;
-  illustration: React.ReactNode;
+  image: string;
 };
 
 const COURSES: Course[] = [
@@ -11,22 +11,22 @@ const COURSES: Course[] = [
     id: "understand",
     title: "Comprendre",
     subtitle: "Les mécanismes, les phases et ce qui se passe dans ton cerveau.",
-    bg: "bg-[#FDECEF]",
-    illustration: <BrainIllus />,
+    bg: "bg-[#F4C1D8]",
+    image: "/assets/Comprendre3.svg",
   },
   {
     id: "prevent",
     title: "Prévenir",
     subtitle: "Routines, hygiène de vie et signaux d'alerte à reconnaître.",
-    bg: "bg-[#E6EEFB]",
-    illustration: <ShieldIllus />,
+    bg: "bg-[#BFD4EE]",
+    image: "/assets/Prevenir.svg",
   },
   {
     id: "manage",
     title: "Gérer",
     subtitle: "Les méthodes qui marchent vraiment pendant la crise.",
-    bg: "bg-[#FDE2D1]",
-    illustration: <IcePackIllus />,
+    bg: "bg-[#F1C1A6]",
+    image: "/assets/Gerer.svg",
   },
 ];
 
@@ -61,7 +61,13 @@ function CourseCard({ course }: { course: Course }) {
       className={`group relative flex min-h-[320px] flex-col justify-between overflow-hidden rounded-[32px] p-8 transition hover:-translate-y-0.5 hover:shadow-soft md:rounded-[40px] md:p-10 ${course.bg}`}
     >
       <div className="flex items-center justify-center py-6 md:py-8">
-        <div className="h-28 w-28 md:h-32 md:w-32">{course.illustration}</div>
+        <img
+          src={course.image}
+          alt=""
+          aria-hidden
+          draggable={false}
+          className="h-32 w-32 select-none md:h-40 md:w-40"
+        />
       </div>
       <div>
         <h3 className="text-2xl font-bold tracking-tight md:text-3xl">
@@ -90,75 +96,3 @@ function CourseCard({ course }: { course: Course }) {
   );
 }
 
-function BrainIllus() {
-  return (
-    <svg
-      viewBox="0 0 200 200"
-      className="h-full w-full"
-      fill="none"
-      aria-hidden
-    >
-      <path
-        d="M100 22c28 0 52 16 52 46 0 10-4 18-10 24 6 6 8 14 8 22 0 22-20 40-50 40-28 0-52-16-52-46 0-10 4-18 10-24-6-6-8-14-8-22 0-22 20-40 50-40z"
-        fill="#F8C8CC"
-      />
-      <path
-        d="M74 80c0-12 10-22 22-22M82 110c0-10 8-18 18-18M90 140c0-8 6-14 14-14M118 80c6 4 10 12 10 20M122 112c6 4 10 12 10 20"
-        stroke="#0A0A0A"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-      <circle cx="78" cy="72" r="4" fill="#0A0A0A" />
-      <circle cx="126" cy="72" r="4" fill="#0A0A0A" />
-      <path
-        d="M88 128c6 6 18 6 24 0"
-        stroke="#0A0A0A"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function ShieldIllus() {
-  return (
-    <svg
-      viewBox="0 0 200 200"
-      className="h-full w-full"
-      fill="none"
-      aria-hidden
-    >
-      <path
-        d="M100 24 48 44v48c0 34 22 62 52 76 30-14 52-42 52-76V44L100 24z"
-        fill="#BFD4EE"
-      />
-      <path
-        d="M70 100l22 22 42-44"
-        stroke="#0A0A0A"
-        strokeWidth="10"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function IcePackIllus() {
-  return (
-    <svg
-      viewBox="0 0 200 200"
-      className="h-full w-full"
-      fill="none"
-      aria-hidden
-    >
-      <rect x="36" y="52" width="128" height="96" rx="24" fill="#F8B68A" />
-      <path
-        d="M100 72v56M72 100h56M82 82l36 36M118 82l-36 36"
-        stroke="#0A0A0A"
-        strokeWidth="8"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
