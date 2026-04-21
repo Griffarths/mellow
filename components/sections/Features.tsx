@@ -19,7 +19,7 @@ const FEATURES: Feature[] = [
     ),
     description:
       "Pendant la crise, chaque seconde compte. Déclare une migraine en deux taps et renseigne les détails plus tard.",
-    bg: "bg-[#FDECEF]",
+    bg: "bg-[#FFCBCB]",
     image: "/assets/Migraine1.svg",
     span: "big",
   },
@@ -28,7 +28,7 @@ const FEATURES: Feature[] = [
     title: "Suivi des déclencheurs",
     description:
       "Stress, sommeil, écrans, cycle… Mellow révèle ce qui déclenche tes crises.",
-    bg: "bg-[#E6EEFB]",
+    bg: "bg-[#F1C1A6]",
     image: "/assets/Historique.svg",
     span: "small",
   },
@@ -37,7 +37,7 @@ const FEATURES: Feature[] = [
     title: "Pression atmosphérique",
     description:
       "Suivi météo automatique pour détecter les schémas invisibles.",
-    bg: "bg-[#EEE7F7]",
+    bg: "bg-[#BFD4EE]",
     image: "/assets/Pression.svg",
     span: "small",
   },
@@ -52,7 +52,7 @@ const FEATURES: Feature[] = [
     ),
     description:
       "Calendrier, durée moyenne, intensité, tendances sur 1, 3 ou 12 mois. Tout ton historique, à portée de main.",
-    bg: "bg-[#FDE2D1]",
+    bg: "bg-[#F4C1D8]",
     image: "/assets/Analyse.svg",
     span: "big",
   },
@@ -81,7 +81,7 @@ export function Features() {
                 alt=""
                 aria-hidden
                 draggable={false}
-                className="h-20 w-20 select-none md:h-24 md:w-24"
+                className="h-20 w-20 select-none rounded-2xl md:h-24 md:w-24 md:rounded-3xl"
               />
               <div className="mt-16 md:mt-24">
                 <h3 className="text-2xl font-bold tracking-tight md:text-3xl">
