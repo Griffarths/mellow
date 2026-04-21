@@ -21,7 +21,7 @@ export function Hero() {
             alt=""
             aria-hidden
             draggable={false}
-            className="w-full max-w-[300px] -rotate-12 select-none md:max-w-[380px]"
+            className="w-full max-w-[300px] rotate-12 select-none md:max-w-[380px]"
           />
         </div>
       </div>
