@@ -87,5 +87,17 @@
   },
   "common": {
     "back": "← Volver"
+  },
+  "contactPage": {
+    "metaTitle": "Soporte — Mellow",
+    "metaDescription": "Contacto, gestión de suscripciones y soporte para la app Mellow."
+  },
+  "privacyPage": {
+    "metaTitle": "Política de privacidad — Mellow",
+    "metaDescription": "Política de privacidad de Mellow — cómo recopilamos, usamos y protegemos tus datos."
+  },
+  "legalPage": {
+    "metaTitle": "Aviso legal — Mellow",
+    "metaDescription": "Aviso legal de Mellow — editor, alojamiento, propiedad intelectual y responsabilidad."
   }
 }
