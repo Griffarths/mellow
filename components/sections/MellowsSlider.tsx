@@ -6,39 +6,27 @@ import { Blob } from "../phones/Blob";
 type Mellow = {
   name: string;
   blob: "Fleur1" | "Tagada1" | "Croix1";
-  tagline: string;
   description: string;
-  bg: string;
-  accent: string;
 };
 
 const MELLOWS: Mellow[] = [
   {
     name: "Mellow Rose",
     blob: "Fleur1",
-    tagline: "Le veilleur des jours tranquilles",
     description:
       "Il veille sur toi quand la douleur se fait discrète. Ces moments plus légers méritent aussi d'être accompagnés.",
-    bg: "bg-[#FDECEF]",
-    accent: "text-[#E27A8E]",
   },
   {
     name: "Mellow Bleu",
     blob: "Tagada1",
-    tagline: "L'épaule des jours plus lourds",
     description:
       "Il t'accompagne avec douceur quand la douleur s'installe. Tu n'as pas à traverser ça seul.",
-    bg: "bg-[#E6EEFB]",
-    accent: "text-[#5F86C0]",
   },
   {
     name: "Mellow Rouge",
     blob: "Croix1",
-    tagline: "Le compagnon des crises",
     description:
       "Il reste à tes côtés quand la douleur est au plus fort. Même dans les moments les plus difficiles, il est là.",
-    bg: "bg-[#FBE2E6]",
-    accent: "text-[#C84D61]",
   },
 ];
 
@@ -69,7 +57,7 @@ export function MellowsSlider() {
   return (
     <section className="relative py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-2xl">
+        <div className="mx-auto max-w-2xl text-center">
           <h2 className="section-title text-4xl font-bold md:text-6xl">
             Rencontre les Mellows.
           </h2>
@@ -111,23 +99,16 @@ export function MellowsSlider() {
 
 function MellowCard({ mellow }: { mellow: Mellow }) {
   return (
-    <div
-      className={`relative flex min-h-[420px] flex-col items-center justify-center overflow-hidden rounded-[36px] px-8 py-14 text-center md:min-h-[520px] md:py-20 ${mellow.bg}`}
-    >
+    <div className="flex flex-col items-center justify-center px-6 py-12 text-center md:py-16">
       <Blob
         name={mellow.blob}
-        className="h-44 w-44 md:h-60 md:w-60"
+        className="h-48 w-48 md:h-64 md:w-64"
         alt={mellow.name}
       />
-      <p
-        className={`mt-8 text-xs font-semibold uppercase tracking-[0.2em] ${mellow.accent}`}
-      >
+      <h3 className="mt-8 text-4xl font-bold tracking-tight md:text-6xl">
         {mellow.name}
-      </p>
-      <h3 className="mt-3 max-w-md text-2xl font-bold leading-tight tracking-tight md:text-3xl">
-        {mellow.tagline}
       </h3>
-      <p className="mt-4 max-w-lg text-base text-black/60 md:text-lg">
+      <p className="mt-5 max-w-lg text-base text-black/60 md:text-lg">
         {mellow.description}
       </p>
     </div>
