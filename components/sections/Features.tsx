@@ -1,5 +1,5 @@
 type Feature = {
-  title: string;
+  title: React.ReactNode;
   description: string;
   bg: string;
   iconBg: string;
@@ -10,7 +10,13 @@ type Feature = {
 
 const FEATURES: Feature[] = [
   {
-    title: "Logging ultra-rapide",
+    title: (
+      <>
+        Enregistrement
+        <br />
+        ultra-rapide
+      </>
+    ),
     description:
       "Pendant la crise, chaque seconde compte. Déclare une migraine en deux taps et renseigne les détails plus tard.",
     bg: "bg-[#FDECEF]",
@@ -40,7 +46,13 @@ const FEATURES: Feature[] = [
     span: "small",
   },
   {
-    title: "Stats et historique",
+    title: (
+      <>
+        Stats
+        <br />
+        et historique
+      </>
+    ),
     description:
       "Calendrier, durée moyenne, intensité, tendances sur 1, 3 ou 12 mois. Tout ton historique, à portée de main.",
     bg: "bg-[#FDE2D1]",
