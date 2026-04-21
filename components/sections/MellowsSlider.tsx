@@ -99,16 +99,16 @@ export function MellowsSlider() {
 
 function MellowCard({ mellow }: { mellow: Mellow }) {
   return (
-    <div className="flex flex-col items-center justify-center px-6 py-12 text-center md:py-16">
+    <div className="flex flex-col items-center justify-center px-6 py-10 text-center md:py-12">
       <Blob
         name={mellow.blob}
-        className="h-48 w-48 md:h-64 md:w-64"
+        className="h-32 w-32 md:h-40 md:w-40"
         alt={mellow.name}
       />
-      <h3 className="mt-8 text-4xl font-bold tracking-tight md:text-6xl">
+      <h3 className="mt-6 text-2xl font-bold tracking-tight md:text-3xl">
         {mellow.name}
       </h3>
-      <p className="mt-5 max-w-lg text-base text-black/60 md:text-lg">
+      <p className="mt-3 max-w-md text-base text-black/60">
         {mellow.description}
       </p>
     </div>
