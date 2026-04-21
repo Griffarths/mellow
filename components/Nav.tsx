@@ -13,9 +13,6 @@ export function Nav() {
           <a href="#screens" className="transition hover:text-black">
             L&apos;app
           </a>
-          <a href="#pricing" className="transition hover:text-black">
-            Tarifs
-          </a>
         </nav>
         <a
           href="#download"

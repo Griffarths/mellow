@@ -3,32 +3,16 @@ import { Blob } from "../phones/Blob";
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden bg-ink py-24 text-white md:py-32">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-16 -top-20 h-96 w-96 rounded-full bg-mellow-pink/20 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-24 -left-20 h-96 w-96 rounded-full bg-mellow-sky/20 blur-3xl"
-      />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-[1fr_auto]">
-        <div>
-          <h2 className="section-title text-4xl font-bold md:text-6xl">
-            Arrête de deviner.
-            <br />
-            Commence à comprendre.
-          </h2>
-          <p className="mt-5 max-w-xl text-lg text-white/65">
-            Téléchargement gratuit. Pas de compte obligatoire. Tes données
-            restent à toi.
-          </p>
-          <div className="mt-8">
-            <AppStoreButton variant="light" />
-          </div>
+    <section className="relative overflow-hidden py-24 md:py-32">
+      <div className="relative mx-auto max-w-4xl px-6 text-center">
+        <div className="mx-auto flex justify-center">
+          <Blob name="Fleur1" className="float-slow h-32 w-32 md:h-40 md:w-40" />
         </div>
-        <div className="hidden md:block">
-          <Blob name="Fleur1" className="float-slow h-48 w-48" />
+        <h2 className="section-title mt-8 text-4xl font-bold md:text-6xl">
+          Télécharge Mellow
+        </h2>
+        <div className="mt-8 flex justify-center">
+          <AppStoreButton />
         </div>
       </div>
     </section>
