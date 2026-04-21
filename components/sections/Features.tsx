@@ -64,7 +64,9 @@ export function Features() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl">
           <h2 className="section-title text-4xl font-bold md:text-6xl">
-            Des fonctionnalités pensées pour réduire tes migraines.
+            Des fonctionnalités pensées
+            <br />
+            pour réduire tes migraines.
           </h2>
         </div>
 
