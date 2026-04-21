@@ -1,4 +1,5 @@
 type Feature = {
+  id: string;
   title: React.ReactNode;
   description: string;
   bg: string;
@@ -10,6 +11,7 @@ type Feature = {
 
 const FEATURES: Feature[] = [
   {
+    id: "logging",
     title: (
       <>
         Enregistrement
@@ -26,6 +28,7 @@ const FEATURES: Feature[] = [
     span: "big",
   },
   {
+    id: "triggers",
     title: "Suivi des déclencheurs",
     description:
       "Stress, sommeil, écrans, cycle… Mellow révèle ce qui déclenche tes crises.",
@@ -36,6 +39,7 @@ const FEATURES: Feature[] = [
     span: "small",
   },
   {
+    id: "pressure",
     title: "Pression atmosphérique",
     description:
       "Suivi météo automatique pour détecter les schémas invisibles.",
@@ -46,6 +50,7 @@ const FEATURES: Feature[] = [
     span: "small",
   },
   {
+    id: "stats",
     title: (
       <>
         Stats
@@ -76,7 +81,7 @@ export function Features() {
         <div className="mt-14 grid gap-4 md:mt-20 md:grid-cols-3 md:gap-5">
           {FEATURES.map((f) => (
             <div
-              key={f.title}
+              key={f.id}
               className={`flex flex-col justify-between rounded-[32px] p-8 md:rounded-[40px] md:p-10 ${f.bg} ${
                 f.span === "big" ? "md:col-span-2" : "md:col-span-1"
               }`}
