@@ -1,0 +1,116 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+const LANGUAGES = [
+  { code: "fr", label: "Français" },
+  { code: "en", label: "English" },
+  { code: "de", label: "Deutsch" },
+  { code: "it", label: "Italiano" },
+  { code: "es", label: "Español (España)" },
+  { code: "es-419", label: "Español (Latinoamérica)" },
+  { code: "pt", label: "Português (Portugal)" },
+  { code: "pt-BR", label: "Português (Brasil)" },
+];
+
+export function LanguageSwitcher() {
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState("fr");
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function onMouseDown(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    document.addEventListener("mousedown", onMouseDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onMouseDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  const current =
+    LANGUAGES.find((l) => l.code === selected) ?? LANGUAGES[0];
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-black/70 transition hover:bg-black/[0.04]"
+      >
+        <span>{current.label}</span>
+        <svg
+          viewBox="0 0 24 24"
+          className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          aria-hidden
+        >
+          <path
+            d="m6 9 6 6 6-6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+
+      {open && (
+        <ul
+          role="listbox"
+          className="absolute left-1/2 top-full z-50 mt-2 min-w-[220px] -translate-x-1/2 overflow-hidden rounded-2xl bg-white p-1 shadow-soft ring-1 ring-black/10"
+        >
+          {LANGUAGES.map((l) => {
+            const active = selected === l.code;
+            return (
+              <li key={l.code}>
+                <button
+                  type="button"
+                  role="option"
+                  aria-selected={active}
+                  onClick={() => {
+                    setSelected(l.code);
+                    setOpen(false);
+                  }}
+                  className={`flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2 text-left text-sm transition ${
+                    active
+                      ? "bg-black/[0.05] font-medium text-ink"
+                      : "text-black/70 hover:bg-black/[0.04]"
+                  }`}
+                >
+                  <span>{l.label}</span>
+                  {active && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4 shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      aria-hidden
+                    >
+                      <path
+                        d="m5 12 5 5L20 7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  )}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+}

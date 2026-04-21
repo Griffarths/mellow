@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Nav() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-black/5 bg-white/80 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link
           href="/"
           aria-label="Mellow — retour à l'accueil"
@@ -18,6 +19,9 @@ export function Nav() {
           />
           <span>Mellow</span>
         </Link>
+        <div className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block">
+          <LanguageSwitcher />
+        </div>
         <a
           href="#download"
           aria-label="Télécharger dans l'App Store"
