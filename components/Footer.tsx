@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="border-t border-black/5 py-10">
@@ -14,16 +16,16 @@ export function Footer() {
           <span>© {new Date().getFullYear()}</span>
         </div>
         <div className="flex items-center gap-6">
-          <a href="#" className="hover:text-black">
+          <Link href="/confidentialite" className="hover:text-black">
             Confidentialité
-          </a>
+          </Link>
           <a href="#" className="hover:text-black">
             Conditions
           </a>
           <a href="#" className="hover:text-black">
             Mentions légales
           </a>
-          <a href="mailto:hello@mellow.app" className="hover:text-black">
+          <a href="mailto:contact.mellow@proton.me" className="hover:text-black">
             Contact
           </a>
         </div>
