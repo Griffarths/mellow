@@ -66,7 +66,7 @@ function CourseCard({ course }: { course: Course }) {
           alt=""
           aria-hidden
           draggable={false}
-          className="h-32 w-32 select-none md:h-40 md:w-40"
+          className="h-44 w-44 select-none md:h-56 md:w-56"
         />
       </div>
       <div>
