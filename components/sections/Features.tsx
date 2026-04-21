@@ -20,7 +20,7 @@ const FEATURES: Feature[] = [
     description:
       "Pendant la crise, chaque seconde compte. Déclare une migraine en deux taps et renseigne les détails plus tard.",
     bg: "bg-[#FFE5E5]",
-    image: "/assets/Migraine1.svg",
+    image: "/assets/Migraine3%28site%29.svg",
     span: "big",
   },
   {
