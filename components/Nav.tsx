@@ -3,7 +3,13 @@ export function Nav() {
     <header className="sticky top-0 z-50 w-full border-b border-black/5 bg-white/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a href="#" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
-          <LogoMark />
+          <img
+            src="/blobs/Fleur1.svg"
+            alt=""
+            aria-hidden
+            className="h-8 w-8 select-none"
+            draggable={false}
+          />
           <span>Mellow</span>
         </a>
         <nav className="hidden items-center gap-8 text-sm text-black/60 md:flex">
@@ -22,16 +28,5 @@ export function Nav() {
         </a>
       </div>
     </header>
-  );
-}
-
-function LogoMark() {
-  return (
-    <span
-      aria-hidden
-      className="grid h-7 w-7 place-items-center rounded-[10px] bg-mellow-pink"
-    >
-      <span className="h-2 w-2 rounded-full bg-mellow-rose" />
-    </span>
   );
 }
