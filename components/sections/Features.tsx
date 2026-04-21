@@ -46,7 +46,7 @@ export function Features() {
     <section id="features" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div>
-          <h2 className="section-title text-4xl font-bold md:text-6xl">
+          <h2 className="section-title text-center text-4xl font-bold md:text-left md:text-6xl">
             <span className="block md:whitespace-nowrap">
               {t("title.line1")}
             </span>

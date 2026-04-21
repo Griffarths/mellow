@@ -35,7 +35,7 @@ export function Screenshots() {
   return (
     <section id="screens" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="section-title max-w-2xl text-4xl font-bold md:text-6xl">
+        <h2 className="section-title mx-auto max-w-2xl text-center text-4xl font-bold md:mx-0 md:text-left md:text-6xl">
           {t("title")}
         </h2>
       </div>
