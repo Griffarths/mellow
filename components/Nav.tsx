@@ -12,14 +12,6 @@ export function Nav() {
           />
           <span>Mellow</span>
         </a>
-        <nav className="hidden items-center gap-8 text-sm text-black/60 md:flex">
-          <a href="#features" className="transition hover:text-black">
-            Fonctionnalités
-          </a>
-          <a href="#screens" className="transition hover:text-black">
-            L&apos;app
-          </a>
-        </nav>
         <a
           href="#download"
           aria-label="Télécharger dans l'App Store"
