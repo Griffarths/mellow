@@ -3,12 +3,13 @@ export function Footer() {
     <footer className="border-t border-black/5 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 text-sm text-black/50 md:flex-row md:justify-between">
         <div className="flex items-center gap-2">
-          <span
+          <img
+            src="/blobs/Fleur1.svg"
+            alt=""
             aria-hidden
-            className="grid h-6 w-6 place-items-center rounded-md bg-mellow-pink"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-mellow-rose" />
-          </span>
+            className="h-7 w-7 select-none"
+            draggable={false}
+          />
           <span className="font-semibold text-black/80">Mellow</span>
           <span>© {new Date().getFullYear()}</span>
         </div>
@@ -18,6 +19,9 @@ export function Footer() {
           </a>
           <a href="#" className="hover:text-black">
             Conditions
+          </a>
+          <a href="#" className="hover:text-black">
+            Mentions légales
           </a>
           <a href="mailto:hello@mellow.app" className="hover:text-black">
             Contact
