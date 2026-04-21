@@ -26,6 +26,6 @@ export const LOCALE_LABELS: Record<Locale, string> = {
 
 export const routing = defineRouting({
   locales: LOCALES,
-  defaultLocale: "fr",
+  defaultLocale: "en",
   localePrefix: "as-needed",
 });
