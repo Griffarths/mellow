@@ -24,7 +24,9 @@ export function AppStoreButton({ className = "", sizeClass }: Props) {
 
   return (
     <a
-      href="#"
+      href="https://apps.apple.com/app/id6762257609"
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label={t("appStoreAriaLabel")}
       className={`inline-block transition hover:opacity-85 ${className}`}
     >
