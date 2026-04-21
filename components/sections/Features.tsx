@@ -62,11 +62,14 @@ export function Features() {
   return (
     <section id="features" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-3xl">
+        <div>
           <h2 className="section-title text-4xl font-bold md:text-6xl">
-            Des fonctionnalités pensées
-            <br />
-            pour réduire tes migraines.
+            <span className="block md:whitespace-nowrap">
+              Des fonctionnalités pensées
+            </span>
+            <span className="block md:whitespace-nowrap">
+              pour réduire tes migraines.
+            </span>
           </h2>
         </div>
 
