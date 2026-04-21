@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Mellow — Migräne-Tracker",
+    "description": "Mellow hilft dir, deine Migräne in Sekunden zu erfassen, Auslöser zu erkennen und zu verstehen, was dir wirklich Linderung verschafft.",
+    "ogDescription": "Erfasse Migräneanfälle im Nu. Erkenne deine Auslöser. Verstehe, was dir hilft."
+  },
+  "nav": {
+    "homeAriaLabel": "Mellow — zurück zur Startseite",
+    "appStoreAriaLabel": "Im App Store laden"
+  },
+  "hero": {
+    "title": "Nimm die Kontrolle über deine Migräne zurück.",
+    "subtitle": "Mellow hilft dir, sie besser zu verstehen und durchzustehen."
+  },
+  "mellows": {
+    "title": "Lerne die Mellows kennen.",
+    "subtitle": "Jeder Mellow begleitet dich in einem anderen Moment.",
+    "rose": {
+      "name": "Mellow Rosa",
+      "description": "Er ist für dich da, wenn der Schmerz leise ist. Auch die ruhigeren Momente verdienen Aufmerksamkeit."
+    },
+    "bleu": {
+      "name": "Mellow Blau",
+      "description": "Er begleitet dich sanft, wenn der Schmerz kommt. Du musst das nicht allein durchstehen."
+    },
+    "rouge": {
+      "name": "Mellow Rot",
+      "description": "Er bleibt an deiner Seite, wenn der Schmerz am stärksten ist. Selbst in den schwersten Momenten ist er da."
+    },
+    "dotAriaLabel": "{name} ansehen"
+  },
+  "features": {
+    "title": {
+      "line1": "Funktionen, die helfen,",
+      "line2": "deine Migräne zu reduzieren."
+    },
+    "logging": {
+      "title": {
+        "line1": "Blitzschnelles",
+        "line2": "Erfassen"
+      },
+      "description": "Während eines Anfalls zählt jede Sekunde. Erfasse eine Migräne in zwei Tipps und ergänze die Details später."
+    },
+    "triggers": {
+      "title": "Auslöser erkennen",
+      "description": "Stress, Schlaf, Bildschirme, Zyklus… Mellow zeigt, was deine Anfälle auslöst."
+    },
+    "pressure": {
+      "title": "Luftdruck",
+      "description": "Automatisches Wetter-Tracking, um unsichtbare Muster zu erkennen."
+    },
+    "stats": {
+      "title": {
+        "line1": "Statistiken",
+        "line2": "und Verlauf"
+      },
+      "description": "Kalender, durchschnittliche Dauer, Intensität, Trends über 1, 3 oder 12 Monate. Deine Historie immer zur Hand."
+    }
+  },
+  "courses": {
+    "title": "Lerne, besser mit Migräne zu leben.",
+    "subtitle": "Alles, was du über Migräne wissen musst — einfach erklärt.",
+    "understand": {
+      "title": "Verstehen",
+      "subtitle": "Die Mechanismen, die Phasen und was in deinem Gehirn passiert."
+    },
+    "prevent": {
+      "title": "Vorbeugen",
+      "subtitle": "Routinen, Lebensstil und Warnsignale, die du erkennen solltest."
+    },
+    "manage": {
+      "title": "Bewältigen",
+      "subtitle": "Methoden, die wirklich wirken, wenn der Anfall da ist."
+    }
+  },
+  "screenshots": {
+    "title": "Entdecke die App."
+  },
+  "finalCta": {
+    "title": "Lade Mellow herunter"
+  },
+  "footer": {
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "legal": "Impressum",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "back": "← Zurück"
+  }
+}

@@ -1,6 +1,8 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export function Footer() {
+  const t = useTranslations("footer");
   return (
     <footer className="border-t border-black/5 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 text-sm text-black/50 md:flex-row md:justify-between">
@@ -17,7 +19,7 @@ export function Footer() {
         </div>
         <div className="flex items-center gap-6">
           <Link href="/confidentialite" className="hover:text-black">
-            Confidentialité
+            {t("privacy")}
           </Link>
           <a
             href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
@@ -25,13 +27,13 @@ export function Footer() {
             rel="noopener noreferrer"
             className="hover:text-black"
           >
-            Conditions
+            {t("terms")}
           </a>
           <Link href="/mentions-legales" className="hover:text-black">
-            Mentions légales
+            {t("legal")}
           </Link>
           <Link href="/contact" className="hover:text-black">
-            Contact
+            {t("contact")}
           </Link>
         </div>
       </div>

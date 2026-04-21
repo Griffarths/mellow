@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Mellow — Diário de enxaquecas",
+    "description": "A Mellow ajuda-te a registar as tuas crises em segundos, identificar os teus desencadeadores e perceber o que realmente te alivia.",
+    "ogDescription": "Regista as crises num instante. Identifica os teus desencadeadores. Descobre o que te alivia."
+  },
+  "nav": {
+    "homeAriaLabel": "Mellow — voltar ao início",
+    "appStoreAriaLabel": "Descarregar na App Store"
+  },
+  "hero": {
+    "title": "Retoma o controlo das tuas enxaquecas.",
+    "subtitle": "A Mellow acompanha-te para as compreenderes melhor e atravessares."
+  },
+  "mellows": {
+    "title": "Conhece os Mellows.",
+    "subtitle": "Cada Mellow acompanha-te num momento diferente.",
+    "rose": {
+      "name": "Mellow Rosa",
+      "description": "Está contigo quando a dor é ligeira. Esses momentos mais calmos também merecem atenção."
+    },
+    "bleu": {
+      "name": "Mellow Azul",
+      "description": "Acompanha-te com suavidade quando a dor aparece. Não tens de atravessar isto sozinho."
+    },
+    "rouge": {
+      "name": "Mellow Vermelho",
+      "description": "Fica ao teu lado quando a dor está no auge. Mesmo nos momentos mais difíceis, está lá."
+    },
+    "dotAriaLabel": "Ver {name}"
+  },
+  "features": {
+    "title": {
+      "line1": "Funcionalidades pensadas",
+      "line2": "para reduzir as tuas enxaquecas."
+    },
+    "logging": {
+      "title": {
+        "line1": "Registo",
+        "line2": "ultrarrápido"
+      },
+      "description": "Durante a crise, cada segundo conta. Regista uma enxaqueca em dois toques e acrescenta os detalhes mais tarde."
+    },
+    "triggers": {
+      "title": "Seguimento de desencadeadores",
+      "description": "Stress, sono, ecrãs, ciclo… A Mellow revela o que desencadeia as tuas crises."
+    },
+    "pressure": {
+      "title": "Pressão atmosférica",
+      "description": "Seguimento meteorológico automático para detetar padrões invisíveis."
+    },
+    "stats": {
+      "title": {
+        "line1": "Estatísticas",
+        "line2": "e histórico"
+      },
+      "description": "Calendário, duração média, intensidade, tendências a 1, 3 ou 12 meses. Todo o teu histórico ao alcance."
+    }
+  },
+  "courses": {
+    "title": "Aprende a viver melhor com a enxaqueca.",
+    "subtitle": "Tudo o que precisas de saber sobre a enxaqueca, explicado de forma simples.",
+    "understand": {
+      "title": "Compreender",
+      "subtitle": "Os mecanismos, as fases e o que se passa no teu cérebro."
+    },
+    "prevent": {
+      "title": "Prevenir",
+      "subtitle": "Rotinas, estilo de vida e sinais de alerta a reconhecer."
+    },
+    "manage": {
+      "title": "Gerir",
+      "subtitle": "Os métodos que realmente funcionam durante a crise."
+    }
+  },
+  "screenshots": {
+    "title": "Descobre a app."
+  },
+  "finalCta": {
+    "title": "Descarrega a Mellow"
+  },
+  "footer": {
+    "privacy": "Privacidade",
+    "terms": "Condições",
+    "legal": "Aviso legal",
+    "contact": "Contacto"
+  },
+  "common": {
+    "back": "← Voltar"
+  }
+}

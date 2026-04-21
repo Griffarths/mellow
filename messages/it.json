@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Mellow — Diario delle emicranie",
+    "description": "Mellow ti aiuta a registrare le crisi in pochi secondi, identificare i tuoi trigger e capire cosa ti dà davvero sollievo.",
+    "ogDescription": "Registra le crisi in un istante. Identifica i tuoi trigger. Scopri cosa ti dà sollievo."
+  },
+  "nav": {
+    "homeAriaLabel": "Mellow — torna alla home",
+    "appStoreAriaLabel": "Scarica su App Store"
+  },
+  "hero": {
+    "title": "Riprendi il controllo delle tue emicranie.",
+    "subtitle": "Mellow ti accompagna per capirle meglio e affrontarle."
+  },
+  "mellows": {
+    "title": "Ecco i Mellow.",
+    "subtitle": "Ogni Mellow ti accompagna in un momento diverso.",
+    "rose": {
+      "name": "Mellow Rosa",
+      "description": "È con te quando il dolore è lieve. Anche i momenti più leggeri meritano attenzione."
+    },
+    "bleu": {
+      "name": "Mellow Blu",
+      "description": "Ti accompagna con dolcezza quando il dolore si fa sentire. Non devi affrontarlo da solo."
+    },
+    "rouge": {
+      "name": "Mellow Rosso",
+      "description": "Resta al tuo fianco quando il dolore è al massimo. Anche nei momenti più duri, lui è lì."
+    },
+    "dotAriaLabel": "Vedi {name}"
+  },
+  "features": {
+    "title": {
+      "line1": "Funzionalità pensate",
+      "line2": "per ridurre le tue emicranie."
+    },
+    "logging": {
+      "title": {
+        "line1": "Registrazione",
+        "line2": "ultrarapida"
+      },
+      "description": "Durante la crisi ogni secondo conta. Registra un'emicrania in due tap e aggiungi i dettagli dopo."
+    },
+    "triggers": {
+      "title": "Tracciamento dei trigger",
+      "description": "Stress, sonno, schermi, ciclo… Mellow svela cosa scatena le tue crisi."
+    },
+    "pressure": {
+      "title": "Pressione atmosferica",
+      "description": "Monitoraggio meteo automatico per scoprire schemi invisibili."
+    },
+    "stats": {
+      "title": {
+        "line1": "Statistiche",
+        "line2": "e storico"
+      },
+      "description": "Calendario, durata media, intensità, tendenze su 1, 3 o 12 mesi. Tutto il tuo storico a portata di mano."
+    }
+  },
+  "courses": {
+    "title": "Impara a vivere meglio con l'emicrania.",
+    "subtitle": "Tutto quello che c'è da sapere sull'emicrania, spiegato in modo semplice.",
+    "understand": {
+      "title": "Capire",
+      "subtitle": "I meccanismi, le fasi e cosa succede nel tuo cervello."
+    },
+    "prevent": {
+      "title": "Prevenire",
+      "subtitle": "Routine, stile di vita e segnali d'allarme da riconoscere."
+    },
+    "manage": {
+      "title": "Gestire",
+      "subtitle": "I metodi che funzionano davvero durante la crisi."
+    }
+  },
+  "screenshots": {
+    "title": "Scopri l'app."
+  },
+  "finalCta": {
+    "title": "Scarica Mellow"
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "terms": "Termini",
+    "legal": "Note legali",
+    "contact": "Contatti"
+  },
+  "common": {
+    "back": "← Indietro"
+  }
+}

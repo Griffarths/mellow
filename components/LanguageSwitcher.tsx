@@ -1,22 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
-const LANGUAGES = [
-  { code: "fr", label: "Français" },
-  { code: "en", label: "English" },
-  { code: "de", label: "Deutsch" },
-  { code: "it", label: "Italiano" },
-  { code: "es", label: "Español (España)" },
-  { code: "es-419", label: "Español (Latinoamérica)" },
-  { code: "pt", label: "Português (Portugal)" },
-  { code: "pt-BR", label: "Português (Brasil)" },
-];
+import { useEffect, useRef, useState, useTransition } from "react";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { LOCALES, LOCALE_LABELS, type Locale } from "@/i18n/routing";
 
 export function LanguageSwitcher() {
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState("fr");
+  const [isPending, startTransition] = useTransition();
   const ref = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+  const pathname = usePathname();
+  const locale = useLocale() as Locale;
 
   useEffect(() => {
     if (!open) return;
@@ -36,8 +31,13 @@ export function LanguageSwitcher() {
     };
   }, [open]);
 
-  const current =
-    LANGUAGES.find((l) => l.code === selected) ?? LANGUAGES[0];
+  function switchTo(next: Locale) {
+    setOpen(false);
+    if (next === locale) return;
+    startTransition(() => {
+      router.replace(pathname, { locale: next });
+    });
+  }
 
   return (
     <div ref={ref} className="relative">
@@ -46,9 +46,10 @@ export function LanguageSwitcher() {
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-black/70 transition hover:bg-black/[0.04]"
+        disabled={isPending}
+        className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-black/70 transition hover:bg-black/[0.04] disabled:opacity-60"
       >
-        <span>{current.label}</span>
+        <span>{LOCALE_LABELS[locale]}</span>
         <svg
           viewBox="0 0 24 24"
           className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`}
@@ -70,25 +71,22 @@ export function LanguageSwitcher() {
           role="listbox"
           className="absolute left-1/2 top-full z-50 mt-2 min-w-[220px] -translate-x-1/2 overflow-hidden rounded-2xl bg-white p-1 shadow-soft ring-1 ring-black/10"
         >
-          {LANGUAGES.map((l) => {
-            const active = selected === l.code;
+          {LOCALES.map((code) => {
+            const active = locale === code;
             return (
-              <li key={l.code}>
+              <li key={code}>
                 <button
                   type="button"
                   role="option"
                   aria-selected={active}
-                  onClick={() => {
-                    setSelected(l.code);
-                    setOpen(false);
-                  }}
+                  onClick={() => switchTo(code)}
                   className={`flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2 text-left text-sm transition ${
                     active
                       ? "bg-black/[0.05] font-medium text-ink"
                       : "text-black/70 hover:bg-black/[0.04]"
                   }`}
                 >
-                  <span>{l.label}</span>
+                  <span>{LOCALE_LABELS[code]}</span>
                   {active && (
                     <svg
                       viewBox="0 0 24 24"

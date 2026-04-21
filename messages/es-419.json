@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Mellow — Seguimiento de migrañas",
+    "description": "Mellow te ayuda a registrar tus crisis en segundos, identificar tus desencadenantes y entender qué realmente te alivia.",
+    "ogDescription": "Registra tus crisis al instante. Identifica tus desencadenantes. Descubre qué te alivia."
+  },
+  "nav": {
+    "homeAriaLabel": "Mellow — volver al inicio",
+    "appStoreAriaLabel": "Descargar en el App Store"
+  },
+  "hero": {
+    "title": "Recupera el control de tus migrañas.",
+    "subtitle": "Mellow te acompaña para entenderlas mejor y atravesarlas."
+  },
+  "mellows": {
+    "title": "Conoce a los Mellows.",
+    "subtitle": "Cada Mellow te acompaña en un momento distinto.",
+    "rose": {
+      "name": "Mellow Rosa",
+      "description": "Está contigo cuando el dolor es leve. Esos momentos más tranquilos también merecen atención."
+    },
+    "bleu": {
+      "name": "Mellow Azul",
+      "description": "Te acompaña con calma cuando el dolor aparece. No tienes que pasar por esto solo."
+    },
+    "rouge": {
+      "name": "Mellow Rojo",
+      "description": "Se queda a tu lado cuando el dolor está en su punto más alto. Incluso en los momentos más difíciles, está ahí."
+    },
+    "dotAriaLabel": "Ver {name}"
+  },
+  "features": {
+    "title": {
+      "line1": "Funciones pensadas",
+      "line2": "para reducir tus migrañas."
+    },
+    "logging": {
+      "title": {
+        "line1": "Registro",
+        "line2": "ultrarrápido"
+      },
+      "description": "Durante la crisis, cada segundo cuenta. Registra una migraña en dos toques y agrega los detalles después."
+    },
+    "triggers": {
+      "title": "Seguimiento de desencadenantes",
+      "description": "Estrés, sueño, pantallas, ciclo… Mellow revela qué desencadena tus crisis."
+    },
+    "pressure": {
+      "title": "Presión atmosférica",
+      "description": "Seguimiento climático automático para descubrir patrones invisibles."
+    },
+    "stats": {
+      "title": {
+        "line1": "Estadísticas",
+        "line2": "e historial"
+      },
+      "description": "Calendario, duración promedio, intensidad, tendencias a 1, 3 o 12 meses. Todo tu historial al alcance."
+    }
+  },
+  "courses": {
+    "title": "Aprende a vivir mejor con la migraña.",
+    "subtitle": "Todo lo que necesitas saber sobre la migraña, explicado de forma sencilla.",
+    "understand": {
+      "title": "Comprender",
+      "subtitle": "Los mecanismos, las fases y lo que ocurre en tu cerebro."
+    },
+    "prevent": {
+      "title": "Prevenir",
+      "subtitle": "Rutinas, hábitos de vida y señales de alerta que debes reconocer."
+    },
+    "manage": {
+      "title": "Manejar",
+      "subtitle": "Los métodos que realmente funcionan durante la crisis."
+    }
+  },
+  "screenshots": {
+    "title": "Descubre la app."
+  },
+  "finalCta": {
+    "title": "Descarga Mellow"
+  },
+  "footer": {
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "legal": "Aviso legal",
+    "contact": "Contacto"
+  },
+  "common": {
+    "back": "← Volver"
+  }
+}

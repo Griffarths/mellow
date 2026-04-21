@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Mellow — Migraine tracker",
+    "description": "Mellow helps you log your migraines in seconds, identify your triggers, and understand what actually brings you relief.",
+    "ogDescription": "Log migraines in an instant. Identify your triggers. Understand what brings relief."
+  },
+  "nav": {
+    "homeAriaLabel": "Mellow — back to home",
+    "appStoreAriaLabel": "Download on the App Store"
+  },
+  "hero": {
+    "title": "Take back control of your migraines.",
+    "subtitle": "Mellow helps you understand them and get through them."
+  },
+  "mellows": {
+    "title": "Meet the Mellows.",
+    "subtitle": "Each Mellow is there for a different moment.",
+    "rose": {
+      "name": "Mellow Rose",
+      "description": "Here for you when the pain is mild. Those quieter moments deserve attention too."
+    },
+    "bleu": {
+      "name": "Mellow Blue",
+      "description": "A gentle companion when the pain sets in. You don't have to go through it alone."
+    },
+    "rouge": {
+      "name": "Mellow Red",
+      "description": "Stays with you when the pain peaks. Even in the hardest moments, it's there."
+    },
+    "dotAriaLabel": "View {name}"
+  },
+  "features": {
+    "title": {
+      "line1": "Features built",
+      "line2": "to reduce your migraines."
+    },
+    "logging": {
+      "title": {
+        "line1": "Ultra-fast",
+        "line2": "logging"
+      },
+      "description": "During an attack, every second counts. Log a migraine in two taps and add the details later."
+    },
+    "triggers": {
+      "title": "Trigger tracking",
+      "description": "Stress, sleep, screens, cycle… Mellow reveals what triggers your attacks."
+    },
+    "pressure": {
+      "title": "Atmospheric pressure",
+      "description": "Automatic weather tracking to uncover invisible patterns."
+    },
+    "stats": {
+      "title": {
+        "line1": "Stats",
+        "line2": "and history"
+      },
+      "description": "Calendar, average duration, intensity, trends over 1, 3 or 12 months. Your full history at your fingertips."
+    }
+  },
+  "courses": {
+    "title": "Learn to live better with migraines.",
+    "subtitle": "Everything you need to know about migraines, explained simply.",
+    "understand": {
+      "title": "Understand",
+      "subtitle": "The mechanisms, the phases, and what happens in your brain."
+    },
+    "prevent": {
+      "title": "Prevent",
+      "subtitle": "Routines, lifestyle, and warning signs to recognize."
+    },
+    "manage": {
+      "title": "Manage",
+      "subtitle": "The methods that truly work during an attack."
+    }
+  },
+  "screenshots": {
+    "title": "Discover the app."
+  },
+  "finalCta": {
+    "title": "Download Mellow"
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "legal": "Legal Notice",
+    "contact": "Contact"
+  },
+  "common": {
+    "back": "← Back"
+  }
+}

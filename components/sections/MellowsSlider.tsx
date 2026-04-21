@@ -1,36 +1,20 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Blob } from "../phones/Blob";
 
-type Mellow = {
-  name: string;
-  blob: "Fleur1" | "Tagada1" | "Croix1";
-  description: string;
-};
+type MellowKey = "rose" | "bleu" | "rouge";
 
-const MELLOWS: Mellow[] = [
-  {
-    name: "Mellow Rose",
-    blob: "Fleur1",
-    description:
-      "Il veille sur toi quand la douleur se fait discrète. Ces moments plus légers méritent aussi d'être accompagnés.",
-  },
-  {
-    name: "Mellow Bleu",
-    blob: "Tagada1",
-    description:
-      "Il t'accompagne avec douceur quand la douleur s'installe. Tu n'as pas à traverser ça seul.",
-  },
-  {
-    name: "Mellow Rouge",
-    blob: "Croix1",
-    description:
-      "Il reste à tes côtés quand la douleur est au plus fort. Même dans les moments les plus difficiles, il est là.",
-  },
-];
+const MELLOWS: Array<{ key: MellowKey; blob: "Fleur1" | "Tagada1" | "Croix1" }> =
+  [
+    { key: "rose", blob: "Fleur1" },
+    { key: "bleu", blob: "Tagada1" },
+    { key: "rouge", blob: "Croix1" },
+  ];
 
 export function MellowsSlider() {
+  const t = useTranslations("mellows");
   const [index, setIndex] = useState(0);
   const scrollerRef = useRef<HTMLDivElement>(null);
 
@@ -59,10 +43,10 @@ export function MellowsSlider() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="section-title text-4xl font-bold md:text-6xl">
-            Rencontre les Mellows.
+            {t("title")}
           </h2>
           <p className="mt-4 text-lg text-black/60 md:text-xl">
-            Chaque Mellow t&apos;accompagne à un moment différent.
+            {t("subtitle")}
           </p>
         </div>
 
@@ -71,19 +55,34 @@ export function MellowsSlider() {
             ref={scrollerRef}
             className="-mx-6 flex snap-x snap-mandatory overflow-x-auto scroll-smooth px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
-            {MELLOWS.map((m) => (
-              <div key={m.name} className="w-full shrink-0 snap-center pr-4">
-                <MellowCard mellow={m} />
-              </div>
-            ))}
+            {MELLOWS.map((m) => {
+              const name = t(`${m.key}.name`);
+              return (
+                <div key={m.key} className="w-full shrink-0 snap-center pr-4">
+                  <div className="flex flex-col items-center justify-center px-6 py-10 text-center md:py-12">
+                    <Blob
+                      name={m.blob}
+                      className="h-32 w-32 md:h-40 md:w-40"
+                      alt={name}
+                    />
+                    <h3 className="mt-6 text-2xl font-bold tracking-tight md:text-3xl">
+                      {name}
+                    </h3>
+                    <p className="mt-3 max-w-md text-base text-black/60">
+                      {t(`${m.key}.description`)}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           <div className="mt-8 flex items-center justify-center gap-2">
             {MELLOWS.map((m, i) => (
               <button
-                key={m.name}
+                key={m.key}
                 type="button"
-                aria-label={`Voir ${m.name}`}
+                aria-label={t("dotAriaLabel", { name: t(`${m.key}.name`) })}
                 onClick={() => goTo(i)}
                 className={`h-2 rounded-full transition-all ${
                   i === index ? "w-8 bg-ink" : "w-2 bg-black/20"
@@ -94,23 +93,5 @@ export function MellowsSlider() {
         </div>
       </div>
     </section>
-  );
-}
-
-function MellowCard({ mellow }: { mellow: Mellow }) {
-  return (
-    <div className="flex flex-col items-center justify-center px-6 py-10 text-center md:py-12">
-      <Blob
-        name={mellow.blob}
-        className="h-32 w-32 md:h-40 md:w-40"
-        alt={mellow.name}
-      />
-      <h3 className="mt-6 text-2xl font-bold tracking-tight md:text-3xl">
-        {mellow.name}
-      </h3>
-      <p className="mt-3 max-w-md text-base text-black/60">
-        {mellow.description}
-      </p>
-    </div>
   );
 }

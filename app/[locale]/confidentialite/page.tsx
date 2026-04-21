@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
@@ -9,7 +11,18 @@ export const metadata: Metadata = {
     "Politique de confidentialité de Mellow — comment nous collectons, utilisons et protégeons tes données.",
 };
 
-export default function PrivacyPage() {
+export default async function PrivacyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <PrivacyContent />;
+}
+
+function PrivacyContent() {
+  const t = useTranslations("common");
   return (
     <>
       <Nav />
@@ -18,7 +31,7 @@ export default function PrivacyPage() {
           href="/"
           className="inline-flex items-center gap-1 text-sm text-black/50 transition hover:text-black"
         >
-          ← Retour
+          {t("back")}
         </Link>
 
         <article className="prose prose-neutral mt-6 max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h1:text-4xl md:prose-h1:text-5xl prose-h2:mt-14 prose-h2:text-2xl md:prose-h2:text-3xl prose-h3:mt-10 prose-h3:text-xl prose-p:text-black/70 prose-a:text-mellow-rose prose-a:underline-offset-2 prose-strong:text-ink prose-li:text-black/70">

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Mellow — Suivi de migraines",
+    "description": "Mellow t'aide à enregistrer tes crises en quelques secondes, identifier tes déclencheurs et comprendre ce qui te soulage vraiment.",
+    "ogDescription": "Enregistre tes crises en un instant. Identifie tes déclencheurs. Analyse ce qui te soulage."
+  },
+  "nav": {
+    "homeAriaLabel": "Mellow — retour à l'accueil",
+    "appStoreAriaLabel": "Télécharger dans l'App Store"
+  },
+  "hero": {
+    "title": "Reprends le contrôle de tes migraines.",
+    "subtitle": "Mellow t'accompagne pour mieux les comprendre et les traverser."
+  },
+  "mellows": {
+    "title": "Rencontre les Mellows.",
+    "subtitle": "Chaque Mellow t'accompagne à un moment différent.",
+    "rose": {
+      "name": "Mellow Rose",
+      "description": "Il veille sur toi quand la douleur se fait discrète. Ces moments plus légers méritent aussi d'être accompagnés."
+    },
+    "bleu": {
+      "name": "Mellow Bleu",
+      "description": "Il t'accompagne avec douceur quand la douleur s'installe. Tu n'as pas à traverser ça seul."
+    },
+    "rouge": {
+      "name": "Mellow Rouge",
+      "description": "Il reste à tes côtés quand la douleur est au plus fort. Même dans les moments les plus difficiles, il est là."
+    },
+    "dotAriaLabel": "Voir {name}"
+  },
+  "features": {
+    "title": {
+      "line1": "Des fonctionnalités pensées",
+      "line2": "pour réduire tes migraines."
+    },
+    "logging": {
+      "title": {
+        "line1": "Enregistrement",
+        "line2": "ultra-rapide"
+      },
+      "description": "Pendant la crise, chaque seconde compte. Déclare une migraine en deux taps et renseigne les détails plus tard."
+    },
+    "triggers": {
+      "title": "Suivi des déclencheurs",
+      "description": "Stress, sommeil, écrans, cycle… Mellow révèle ce qui déclenche tes crises."
+    },
+    "pressure": {
+      "title": "Pression atmosphérique",
+      "description": "Suivi météo automatique pour détecter les schémas invisibles."
+    },
+    "stats": {
+      "title": {
+        "line1": "Stats",
+        "line2": "et historique"
+      },
+      "description": "Calendrier, durée moyenne, intensité, tendances sur 1, 3 ou 12 mois. Tout ton historique, à portée de main."
+    }
+  },
+  "courses": {
+    "title": "Apprends à mieux vivre avec la migraine.",
+    "subtitle": "Tout ce qu'il faut savoir sur la migraine, expliqué simplement.",
+    "understand": {
+      "title": "Comprendre",
+      "subtitle": "Les mécanismes, les phases et ce qui se passe dans ton cerveau."
+    },
+    "prevent": {
+      "title": "Prévenir",
+      "subtitle": "Routines, hygiène de vie et signaux d'alerte à reconnaître."
+    },
+    "manage": {
+      "title": "Gérer",
+      "subtitle": "Les méthodes qui marchent vraiment pendant la crise."
+    }
+  },
+  "screenshots": {
+    "title": "Découvre l'app."
+  },
+  "finalCta": {
+    "title": "Télécharge Mellow"
+  },
+  "footer": {
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "legal": "Mentions légales",
+    "contact": "Contact"
+  },
+  "common": {
+    "back": "← Retour"
+  }
+}
