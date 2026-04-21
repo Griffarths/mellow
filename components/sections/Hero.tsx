@@ -2,8 +2,11 @@ import { AppStoreButton } from "../AppStoreButton";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-16 md:pt-24" id="download">
-      <div className="relative mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2 md:gap-12 md:pb-28">
+    <section
+      id="download"
+      className="relative flex min-h-[calc(100svh-4rem)] items-center overflow-hidden py-16 md:py-24"
+    >
+      <div className="relative mx-auto grid w-full max-w-6xl gap-10 px-6 md:grid-cols-2 md:gap-12">
         <div className="flex flex-col justify-center">
           <h1 className="hero-title text-5xl font-bold tracking-tight md:text-7xl">
             Reprends le contrôle de tes migraines.
