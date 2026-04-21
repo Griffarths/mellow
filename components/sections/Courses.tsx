@@ -34,7 +34,7 @@ export function Courses() {
   return (
     <section id="courses" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-3xl">
+        <div className="mx-auto max-w-3xl text-center">
           <h2 className="section-title text-4xl font-bold md:text-6xl">
             Apprends à mieux vivre avec la migraine.
           </h2>
