@@ -1,16 +1,4 @@
-import { PhoneLog } from "../phones/PhoneLog";
-import { PhoneIntensity } from "../phones/PhoneIntensity";
-import { PhoneTriggers } from "../phones/PhoneTriggers";
-import { PhoneRelief } from "../phones/PhoneRelief";
-import { PhoneAnalysis } from "../phones/PhoneAnalysis";
-
-const SHOTS = [
-  { title: "Enregistrer", node: <PhoneLog /> },
-  { title: "Exprimer", node: <PhoneIntensity /> },
-  { title: "Identifier", node: <PhoneTriggers /> },
-  { title: "Soulager", node: <PhoneRelief /> },
-  { title: "Analyser", node: <PhoneAnalysis /> },
-];
+const FRAMES = [130, 131, 132, 133, 134, 135, 136, 137, 138, 140];
 
 export function Screenshots() {
   return (
@@ -29,13 +17,14 @@ export function Screenshots() {
               "max(1.5rem, calc((100vw - 72rem) / 2 + 1.5rem))",
           }}
         >
-          {SHOTS.map((s) => (
-            <div key={s.title} className="snap-center shrink-0">
-              <div className="w-[260px] md:w-[300px]">{s.node}</div>
-              <p className="mt-4 text-center text-sm font-medium text-black/60">
-                {s.title}
-              </p>
-            </div>
+          {FRAMES.map((n) => (
+            <img
+              key={n}
+              src={`/screenshot/FR/Frame%20${n}.jpg`}
+              alt=""
+              draggable={false}
+              className="aspect-[1320/2868] w-[260px] shrink-0 snap-center select-none md:w-[300px]"
+            />
           ))}
         </div>
       </div>
