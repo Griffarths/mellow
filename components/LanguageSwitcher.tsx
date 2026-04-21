@@ -5,7 +5,11 @@ import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { LOCALES, LOCALE_LABELS, type Locale } from "@/i18n/routing";
 
-export function LanguageSwitcher() {
+type Props = {
+  direction?: "down" | "up";
+};
+
+export function LanguageSwitcher({ direction = "down" }: Props = {}) {
   const [open, setOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
   const ref = useRef<HTMLDivElement>(null);
@@ -69,7 +73,9 @@ export function LanguageSwitcher() {
       {open && (
         <ul
           role="listbox"
-          className="absolute left-1/2 top-full z-50 mt-2 min-w-[220px] -translate-x-1/2 overflow-hidden rounded-2xl bg-white p-1 shadow-soft ring-1 ring-black/10"
+          className={`absolute left-1/2 z-50 min-w-[220px] -translate-x-1/2 overflow-hidden rounded-2xl bg-white p-1 shadow-soft ring-1 ring-black/10 ${
+            direction === "up" ? "bottom-full mb-2" : "top-full mt-2"
+          }`}
         >
           {LOCALES.map((code) => {
             const active = locale === code;

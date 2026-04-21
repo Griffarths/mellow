@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { AppStoreButton } from "./AppStoreButton";
-import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Nav() {
   const t = useTranslations("nav");
@@ -22,9 +21,6 @@ export function Nav() {
           />
           <span>Mellow</span>
         </Link>
-        <div className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block">
-          <LanguageSwitcher />
-        </div>
         <AppStoreButton sizeClass="h-10 w-auto select-none" />
       </div>
     </header>
