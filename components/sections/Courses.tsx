@@ -39,8 +39,7 @@ export function Courses() {
             Apprends à mieux vivre avec la migraine.
           </h2>
           <p className="mt-4 text-lg text-black/60 md:text-xl">
-            Des cours courts, écrits avec des spécialistes, pour t&apos;aider au
-            quotidien.
+            Tout ce qu&apos;il faut savoir sur la migraine, expliqué simplement.
           </p>
         </div>
 
