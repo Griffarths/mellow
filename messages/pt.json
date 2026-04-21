@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Mellow — Diário de enxaquecas",
-    "description": "A Mellow ajuda-te a registar as tuas crises em segundos, identificar os teus desencadeadores e perceber o que realmente te alivia.",
-    "ogDescription": "Regista as crises num instante. Identifica os teus desencadeadores. Descobre o que te alivia."
+    "title": "Mellow · Diário de enxaquecas",
+    "description": "Compreende finalmente o que desencadeia as tuas enxaquecas. A Mellow ajuda-te a registar as crises e a revelar as ligações entre a dor e o teu dia a dia.",
+    "ogDescription": "Retoma o controlo das tuas enxaquecas. Uma app calma e gratuita para te acompanhar todos os dias."
   },
   "nav": {
     "homeAriaLabel": "Mellow — voltar ao início",

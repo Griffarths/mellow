@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Mellow — Suivi de migraines",
-    "description": "Mellow t'aide à enregistrer tes crises en quelques secondes, identifier tes déclencheurs et comprendre ce qui te soulage vraiment.",
-    "ogDescription": "Enregistre tes crises en un instant. Identifie tes déclencheurs. Analyse ce qui te soulage."
+    "title": "Mellow · Suivi de migraines",
+    "description": "Comprends enfin ce qui déclenche tes migraines. Mellow t'aide à enregistrer tes crises et à révéler les liens entre la douleur et ton quotidien.",
+    "ogDescription": "Reprends le contrôle de tes migraines. Une app calme, gratuite, pour t'accompagner au quotidien."
   },
   "nav": {
     "homeAriaLabel": "Mellow — retour à l'accueil",
