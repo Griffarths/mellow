@@ -1,5 +1,4 @@
 import { AppStoreButton } from "../AppStoreButton";
-import { PhoneLog } from "../phones/PhoneLog";
 
 export function Hero() {
   return (
@@ -17,7 +16,13 @@ export function Hero() {
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <PhoneLog />
+          <img
+            src="/blobs/Trio.svg"
+            alt=""
+            aria-hidden
+            draggable={false}
+            className="w-full max-w-[420px] select-none md:max-w-[520px]"
+          />
         </div>
       </div>
     </section>
