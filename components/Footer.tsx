@@ -30,9 +30,9 @@ export function Footer() {
           <Link href="/mentions-legales" className="hover:text-black">
             Mentions légales
           </Link>
-          <a href="mailto:contact.mellow@proton.me" className="hover:text-black">
+          <Link href="/contact" className="hover:text-black">
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
