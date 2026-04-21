@@ -19,7 +19,7 @@ const FEATURES: Feature[] = [
     ),
     description:
       "Pendant la crise, chaque seconde compte. Déclare une migraine en deux taps et renseigne les détails plus tard.",
-    bg: "bg-[#FFCBCB]",
+    bg: "bg-[#FFE5E5]",
     image: "/assets/Migraine1.svg",
     span: "big",
   },
@@ -28,7 +28,7 @@ const FEATURES: Feature[] = [
     title: "Suivi des déclencheurs",
     description:
       "Stress, sommeil, écrans, cycle… Mellow révèle ce qui déclenche tes crises.",
-    bg: "bg-[#F1C1A6]",
+    bg: "bg-[#FADFCC]",
     image: "/assets/Historique.svg",
     span: "small",
   },
@@ -37,7 +37,7 @@ const FEATURES: Feature[] = [
     title: "Pression atmosphérique",
     description:
       "Suivi météo automatique pour détecter les schémas invisibles.",
-    bg: "bg-[#BFD4EE]",
+    bg: "bg-[#DFE8F5]",
     image: "/assets/Pression.svg",
     span: "small",
   },
@@ -52,7 +52,7 @@ const FEATURES: Feature[] = [
     ),
     description:
       "Calendrier, durée moyenne, intensité, tendances sur 1, 3 ou 12 mois. Tout ton historique, à portée de main.",
-    bg: "bg-[#F4C1D8]",
+    bg: "bg-[#FADFEA]",
     image: "/assets/Analyse.svg",
     span: "big",
   },
