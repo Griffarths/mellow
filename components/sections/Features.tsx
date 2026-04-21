@@ -81,7 +81,7 @@ export function Features() {
                 alt=""
                 aria-hidden
                 draggable={false}
-                className="h-20 w-20 select-none rounded-2xl md:h-24 md:w-24 md:rounded-3xl"
+                className="h-16 w-16 select-none rounded-2xl md:h-20 md:w-20 md:rounded-3xl"
               />
               <div className="mt-16 md:mt-24">
                 <h3 className="text-2xl font-bold tracking-tight md:text-3xl">
