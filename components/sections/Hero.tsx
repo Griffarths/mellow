@@ -1,5 +1,6 @@
 import { AppStoreButton } from "../AppStoreButton";
 import { PhoneLog } from "../phones/PhoneLog";
+import { Blob } from "../phones/Blob";
 
 export function Hero() {
   return (
@@ -44,16 +45,15 @@ export function Hero() {
         </div>
         <div className="relative flex items-center justify-center">
           <div className="relative">
-            <div className="absolute -left-10 top-10 float-slower">
-              <div className="grid h-16 w-16 place-items-center rounded-2xl bg-mellow-pink text-mellow-rose shadow-soft">
-                <svg viewBox="0 0 32 32" className="h-9 w-9" fill="none">
-                  <circle cx="16" cy="16" r="13" stroke="currentColor" strokeOpacity="0.3" strokeWidth="1.5" />
-                  <circle cx="16" cy="16" r="8" stroke="currentColor" strokeOpacity="0.6" strokeWidth="1.5" />
-                  <circle cx="16" cy="16" r="3" fill="currentColor" />
-                </svg>
-              </div>
-            </div>
-            <div className="absolute -right-8 bottom-16 float-slow">
+            <Blob
+              name="Fleur3"
+              className="float-slower absolute -left-16 -top-6 h-28 w-28 md:-left-24 md:h-32 md:w-32"
+            />
+            <Blob
+              name="Tagada2"
+              className="float-slow absolute -right-14 top-24 h-24 w-24 md:-right-20 md:h-28 md:w-28"
+            />
+            <div className="float-slow absolute -right-6 bottom-24 z-10">
               <div className="rounded-2xl bg-white px-3 py-2 text-xs shadow-soft ring-1 ring-black/5">
                 <div className="text-[10px] text-black/40">Intensité</div>
                 <div className="flex items-baseline gap-1 text-mellow-blue">
@@ -62,6 +62,10 @@ export function Hero() {
                 </div>
               </div>
             </div>
+            <Blob
+              name="Croix2"
+              className="float-slower absolute -bottom-8 -left-10 h-20 w-20 md:h-24 md:w-24"
+            />
             <PhoneLog />
           </div>
         </div>

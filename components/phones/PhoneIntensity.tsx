@@ -16,7 +16,7 @@ export function PhoneIntensity() {
           Quelle est l&apos;intensité ?
         </h3>
         <div className="mt-10 flex flex-col items-center gap-6">
-          <Blob color="#CFE2F3" className="h-28 w-28" smile={false} />
+          <Blob name="Tagada1" className="h-28 w-28" />
           <div className="w-full">
             <div className="relative h-1 rounded-full bg-mellow-sky/60">
               <div className="absolute left-0 top-0 h-1 w-[60%] rounded-full bg-mellow-sky" />

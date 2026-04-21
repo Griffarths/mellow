@@ -28,7 +28,7 @@ export function FinalCta() {
           </div>
         </div>
         <div className="hidden md:block">
-          <Blob color="#F8C8CC" className="h-40 w-40 float-slow" />
+          <Blob name="Fleur1" className="float-slow h-48 w-48" />
         </div>
       </div>
     </section>

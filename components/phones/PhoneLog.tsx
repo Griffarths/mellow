@@ -5,10 +5,7 @@ export function PhoneLog() {
   return (
     <PhoneFrame>
       <div className="relative flex h-full flex-col pt-6">
-        <Blob
-          color="#F8C8CC"
-          className="absolute -right-6 -top-6 h-32 w-32"
-        />
+        <Blob name="Fleur1" className="absolute -right-4 -top-4 h-32 w-32" />
         <div className="mt-24 px-6">
           <h3 className="text-base font-bold tracking-tight">
             J&apos;enregistre une migraine

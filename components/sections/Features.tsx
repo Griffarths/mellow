@@ -1,3 +1,5 @@
+import { Blob } from "../phones/Blob";
+
 type Feature = {
   title: string;
   description: string;
@@ -52,8 +54,12 @@ const FEATURES: Feature[] = [
 
 export function Features() {
   return (
-    <section id="features" className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="features" className="relative overflow-hidden py-24 md:py-32">
+      <Blob
+        name="Tagada2"
+        className="float-slower pointer-events-none absolute -right-12 top-16 h-40 w-40 opacity-80 md:h-56 md:w-56"
+      />
+      <div className="relative mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-wider text-mellow-rose">
             Fonctionnalités
