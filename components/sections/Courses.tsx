@@ -1,31 +1,29 @@
 type Course = {
-  label: string;
+  id: string;
   title: string;
   subtitle: string;
   bg: string;
   illustration: React.ReactNode;
 };
 
-const BIG: Course = {
-  label: "Comprendre",
-  title: "Qu'est-ce que la migraine ?",
-  subtitle:
-    "Les mécanismes, les phases et ce qui se passe vraiment dans ton cerveau.",
-  bg: "bg-[#FDECEF]",
-  illustration: <BrainIllus />,
-};
-
-const SMALL: Course[] = [
+const COURSES: Course[] = [
   {
-    label: "Prévenir",
-    title: "Comment éviter une migraine ?",
-    subtitle: "Routines, hygiène de vie et signaux d'alerte.",
+    id: "understand",
+    title: "Comprendre",
+    subtitle: "Les mécanismes, les phases et ce qui se passe dans ton cerveau.",
+    bg: "bg-[#FDECEF]",
+    illustration: <BrainIllus />,
+  },
+  {
+    id: "prevent",
+    title: "Prévenir",
+    subtitle: "Routines, hygiène de vie et signaux d'alerte à reconnaître.",
     bg: "bg-[#E6EEFB]",
     illustration: <ShieldIllus />,
   },
   {
-    label: "Gérer",
-    title: "Comment soulager une migraine ?",
+    id: "manage",
+    title: "Gérer",
     subtitle: "Les méthodes qui marchent vraiment pendant la crise.",
     bg: "bg-[#FDE2D1]",
     illustration: <IcePackIllus />,
@@ -46,59 +44,30 @@ export function Courses() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 md:mt-16">
-          <CourseCard course={BIG} size="big" />
-          <div className="grid gap-4 sm:grid-cols-2">
-            {SMALL.map((c) => (
-              <CourseCard key={c.label} course={c} size="small" />
-            ))}
-          </div>
+        <div className="mt-12 grid gap-4 md:mt-16 md:grid-cols-3 md:gap-5">
+          {COURSES.map((c) => (
+            <CourseCard key={c.id} course={c} />
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-function CourseCard({
-  course,
-  size,
-}: {
-  course: Course;
-  size: "big" | "small";
-}) {
-  const isBig = size === "big";
+function CourseCard({ course }: { course: Course }) {
   return (
     <a
       href="#"
-      className={`group relative flex overflow-hidden rounded-[32px] ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-soft ${
-        course.bg
-      } ${isBig ? "min-h-[260px] flex-col md:min-h-[320px] md:flex-row" : "min-h-[260px] flex-col"}`}
+      className={`group relative flex min-h-[320px] flex-col justify-between overflow-hidden rounded-[32px] p-8 transition hover:-translate-y-0.5 hover:shadow-soft md:rounded-[40px] md:p-10 ${course.bg}`}
     >
-      <div
-        className={`relative flex items-center justify-center p-8 ${
-          isBig ? "md:w-1/2 md:p-12" : "p-6"
-        }`}
-      >
-        <div className={isBig ? "h-40 w-40 md:h-48 md:w-48" : "h-28 w-28"}>
-          {course.illustration}
-        </div>
+      <div className="flex items-center justify-center py-6 md:py-8">
+        <div className="h-28 w-28 md:h-32 md:w-32">{course.illustration}</div>
       </div>
-      <div
-        className={`flex flex-1 flex-col justify-end p-8 ${
-          isBig ? "md:p-12" : "p-6"
-        }`}
-      >
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-black/50">
-          {course.label}
-        </span>
-        <h3
-          className={`mt-2 font-bold tracking-tight ${
-            isBig ? "text-3xl md:text-4xl" : "text-xl md:text-2xl"
-          }`}
-        >
+      <div>
+        <h3 className="text-2xl font-bold tracking-tight md:text-3xl">
           {course.title}
         </h3>
-        <p className={`mt-2 text-black/60 ${isBig ? "text-base md:text-lg" : "text-sm"}`}>
+        <p className="mt-2 text-sm text-black/60 md:text-base">
           {course.subtitle}
         </p>
       </div>
