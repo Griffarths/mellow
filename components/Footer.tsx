@@ -22,9 +22,9 @@ export function Footer() {
           <a href="#" className="hover:text-black">
             Conditions
           </a>
-          <a href="#" className="hover:text-black">
+          <Link href="/mentions-legales" className="hover:text-black">
             Mentions légales
-          </a>
+          </Link>
           <a href="mailto:contact.mellow@proton.me" className="hover:text-black">
             Contact
           </a>
