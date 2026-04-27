@@ -6,7 +6,18 @@
   },
   "nav": {
     "homeAriaLabel": "Mellow — retour à l'accueil",
-    "appStoreAriaLabel": "Télécharger dans l'App Store"
+    "appStoreAriaLabel": "Télécharger dans l'App Store",
+    "blog": "Blog"
+  },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexSubtitle": "Tout pour mieux comprendre tes migraines",
+    "emptyState": "Aucun article pour le moment. Reviens bientôt.",
+    "backToBlog": "Retour au blog",
+    "tocTitle": "Sommaire",
+    "relatedTitle": "Articles connexes",
+    "ctaTitle": "Reprends le contrôle de tes migraines",
+    "ctaSubtitle": "Télécharge Mellow et commence à comprendre ce qui déclenche tes crises."
   },
   "hero": {
     "title": "Reprends le contrôle de tes migraines.",

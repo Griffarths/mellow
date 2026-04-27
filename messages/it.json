@@ -6,7 +6,15 @@
   },
   "nav": {
     "homeAriaLabel": "Mellow — torna alla home",
-    "appStoreAriaLabel": "Scarica su App Store"
+    "appStoreAriaLabel": "Scarica su App Store",
+    "blog": "Blog"
+  },
+  "blog": {
+    "comingSoon": {
+      "title": "Il blog di Mellow arriva presto in italiano",
+      "text": "Stiamo lavorando ai contenuti in italiano. Nel frattempo, puoi leggere i nostri articoli in inglese.",
+      "button": "Leggi in inglese"
+    }
   },
   "hero": {
     "title": "Riprendi il controllo delle tue emicranie.",

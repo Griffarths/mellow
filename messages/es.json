@@ -6,7 +6,15 @@
   },
   "nav": {
     "homeAriaLabel": "Mellow — volver al inicio",
-    "appStoreAriaLabel": "Descargar en el App Store"
+    "appStoreAriaLabel": "Descargar en el App Store",
+    "blog": "Blog"
+  },
+  "blog": {
+    "comingSoon": {
+      "title": "El blog de Mellow llegará pronto en español",
+      "text": "Estamos trabajando en el contenido en español. Mientras tanto, puedes leer nuestros artículos en inglés.",
+      "button": "Leer en inglés"
+    }
   },
   "hero": {
     "title": "Recupera el control de tus migrañas.",

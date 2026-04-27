@@ -6,7 +6,15 @@
   },
   "nav": {
     "homeAriaLabel": "Mellow — voltar ao início",
-    "appStoreAriaLabel": "Descarregar na App Store"
+    "appStoreAriaLabel": "Descarregar na App Store",
+    "blog": "Blog"
+  },
+  "blog": {
+    "comingSoon": {
+      "title": "O blog Mellow chega em breve em português",
+      "text": "Estamos a trabalhar no conteúdo em português. Entretanto, podes ler os nossos artigos em inglês.",
+      "button": "Ler em inglês"
+    }
   },
   "hero": {
     "title": "Retoma o controlo das tuas enxaquecas.",

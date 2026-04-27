@@ -21,6 +21,12 @@ export function Nav() {
           />
           <span>Mellow</span>
         </Link>
+        <Link
+          href="/blog"
+          className="text-sm font-medium text-black/70 transition hover:text-black"
+        >
+          {t("blog")}
+        </Link>
         <AppStoreButton sizeClass="h-10 w-auto select-none" />
       </div>
     </header>

@@ -6,7 +6,15 @@
   },
   "nav": {
     "homeAriaLabel": "Mellow — zurück zur Startseite",
-    "appStoreAriaLabel": "Im App Store laden"
+    "appStoreAriaLabel": "Im App Store laden",
+    "blog": "Blog"
+  },
+  "blog": {
+    "comingSoon": {
+      "title": "Der Mellow-Blog kommt bald auf Deutsch",
+      "text": "Wir arbeiten an Inhalten auf Deutsch. In der Zwischenzeit kannst du unsere englischen Artikel lesen.",
+      "button": "Auf Englisch lesen"
+    }
   },
   "hero": {
     "title": "Nimm die Kontrolle über deine Migräne zurück.",

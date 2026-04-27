@@ -6,7 +6,18 @@
   },
   "nav": {
     "homeAriaLabel": "Mellow — back to home",
-    "appStoreAriaLabel": "Download on the App Store"
+    "appStoreAriaLabel": "Download on the App Store",
+    "blog": "Blog"
+  },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexSubtitle": "Everything to better understand your migraines",
+    "emptyState": "No articles yet. Check back soon.",
+    "backToBlog": "Back to blog",
+    "tocTitle": "Table of contents",
+    "relatedTitle": "Related articles",
+    "ctaTitle": "Take back control of your migraines",
+    "ctaSubtitle": "Download Mellow and start understanding what triggers your attacks."
   },
   "hero": {
     "title": "Take back control of your migraines.",
