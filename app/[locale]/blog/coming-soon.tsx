@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export function ComingSoon() {
   const t = useTranslations("blog.comingSoon");
@@ -15,12 +16,13 @@ export function ComingSoon() {
         {t("title")}
       </h1>
       <p className="mt-5 text-lg text-black/60 md:text-xl">{t("text")}</p>
-      <a
+      <Link
         href="/blog"
+        locale="en"
         className="mt-8 inline-flex items-center rounded-2xl bg-ink px-5 py-3 text-sm font-medium text-white transition hover:bg-black/85"
       >
         {t("button")}
-      </a>
+      </Link>
     </main>
   );
 }
