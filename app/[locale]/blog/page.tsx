@@ -62,9 +62,9 @@ export default async function BlogIndexPage({ params }: Props) {
       headline: article.title,
       description: article.description,
       url: `${blogUrl}/${article.slug}`,
-      image: `${SITE_URL}${article.coverImage}`,
-      datePublished: article.publishedAt,
-      dateModified: article.updatedAt,
+      image: `${SITE_URL}/logo.png`,
+      datePublished: new Date(article.publishedAt).toISOString(),
+      dateModified: new Date(article.updatedAt).toISOString(),
       keywords: article.tags.join(", "),
       author: {
         "@type": "Organization",

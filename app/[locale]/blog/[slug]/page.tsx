@@ -104,9 +104,9 @@ export default async function ArticlePage({ params }: Props) {
     "@type": "BlogPosting",
     headline: article.title,
     description: article.description,
-    image: `${SITE_URL}${article.coverImage}`,
-    datePublished: article.publishedAt,
-    dateModified: article.updatedAt,
+    image: `${SITE_URL}/logo.png`,
+    datePublished: new Date(article.publishedAt).toISOString(),
+    dateModified: new Date(article.updatedAt).toISOString(),
     inLanguage: locale === "fr" ? "fr-FR" : "en-US",
     keywords: article.tags.join(", "),
     author: {
