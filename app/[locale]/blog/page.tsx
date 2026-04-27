@@ -52,7 +52,9 @@ export default async function BlogIndexPage({ params }: Props) {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/blobs/Fleur1.svg`,
+        url: `${SITE_URL}/logo.png`,
+        width: 450,
+        height: 450,
       },
     },
     blogPost: articles.map((article) => ({
