@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
+import GithubSlugger from "github-slugger";
 
 export const BLOG_LOCALES = ["fr", "en"] as const;
 export type BlogLocale = (typeof BLOG_LOCALES)[number];
@@ -76,19 +77,12 @@ export function getRelatedArticles(article: Article, max = 3): Article[] {
     .map((s) => s.article);
 }
 
-export function slugifyHeading(text: string): string {
-  return text
-    .toLowerCase()
-    .normalize("NFKD")
-    .replace(/[̀-ͯ]/g, "")
-    .replace(/[^\w\s-]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
-}
-
 export type TocHeading = { level: 2 | 3; text: string; slug: string };
 
 export function extractHeadings(content: string): TocHeading[] {
+  // Fresh slugger per article so duplicate-handling state matches
+  // what rehype-slug does at render time (per-document github-slugger).
+  const slugger = new GithubSlugger();
   const lines = content.split("\n");
   const headings: TocHeading[] = [];
   let inCode = false;
@@ -102,7 +96,7 @@ export function extractHeadings(content: string): TocHeading[] {
     if (!m) continue;
     const level = m[1].length as 2 | 3;
     const text = m[2].trim();
-    headings.push({ level, text, slug: slugifyHeading(text) });
+    headings.push({ level, text, slug: slugger.slug(text) });
   }
   return headings;
 }
