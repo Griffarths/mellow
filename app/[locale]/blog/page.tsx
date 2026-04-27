@@ -8,6 +8,8 @@ import { ArticleCard } from "@/components/blog/ArticleCard";
 import { getAllArticles, isBlogLocale } from "@/lib/blog";
 import { ComingSoon } from "./coming-soon";
 
+const SITE_URL = "https://mellowmigraine.com";
+
 type Props = { params: Promise<{ locale: string }> };
 
 export function generateStaticParams() {
@@ -31,6 +33,44 @@ export default async function BlogIndexPage({ params }: Props) {
 
   const t = await getTranslations("blog");
   const articles = getAllArticles(locale);
+  const blogUrl =
+    locale === routing.defaultLocale
+      ? `${SITE_URL}/blog`
+      : `${SITE_URL}/${locale}/blog`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": blogUrl,
+    url: blogUrl,
+    name: `Mellow — ${t("indexTitle")}`,
+    description: t("indexSubtitle"),
+    inLanguage: locale === "fr" ? "fr-FR" : "en-US",
+    publisher: {
+      "@type": "Organization",
+      name: "Mellow",
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/blobs/Fleur1.svg`,
+      },
+    },
+    blogPost: articles.map((article) => ({
+      "@type": "BlogPosting",
+      headline: article.title,
+      description: article.description,
+      url: `${blogUrl}/${article.slug}`,
+      image: `${SITE_URL}${article.coverImage}`,
+      datePublished: article.publishedAt,
+      dateModified: article.updatedAt,
+      keywords: article.tags.join(", "),
+      author: {
+        "@type": "Organization",
+        name: "Mellow",
+        url: SITE_URL,
+      },
+    })),
+  };
 
   return (
     <>
@@ -54,6 +94,10 @@ export default async function BlogIndexPage({ params }: Props) {
         )}
       </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </>
   );
 }

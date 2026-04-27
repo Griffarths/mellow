@@ -98,15 +98,17 @@ export default async function ArticlePage({ params }: Props) {
 
   const related = getRelatedArticles(article);
 
+  const articleUrl = urlFor(locale, `/blog/${slug}`);
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
+    "@type": "BlogPosting",
     headline: article.title,
     description: article.description,
     image: `${SITE_URL}${article.coverImage}`,
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
-    inLanguage: locale === "fr" ? "fr-FR" : "en",
+    inLanguage: locale === "fr" ? "fr-FR" : "en-US",
+    keywords: article.tags.join(", "),
     author: {
       "@type": "Organization",
       name: "Mellow",
@@ -116,6 +118,14 @@ export default async function ArticlePage({ params }: Props) {
       "@type": "Organization",
       name: "Mellow",
       url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/blobs/Fleur1.svg`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": articleUrl,
     },
   };
 
