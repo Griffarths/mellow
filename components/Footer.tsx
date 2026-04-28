@@ -26,6 +26,11 @@ export function Footer() {
               {t("about")}
             </Link>
           )}
+          {locale === "en" && (
+            <Link href="/about" className="hover:text-black">
+              {t("about")}
+            </Link>
+          )}
           <Link href="/confidentialite" className="hover:text-black">
             {t("privacy")}
           </Link>

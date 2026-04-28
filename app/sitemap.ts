@@ -79,11 +79,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // About page (FR only for now; EN version to be added later)
+  // About page — FR and EN have different paths; cross-link via hreflang
+  const aboutLanguages = {
+    "fr-FR": `${SITE_URL}/fr/a-propos`,
+    en: `${SITE_URL}/about`,
+  };
   entries.push({
     url: `${SITE_URL}/fr/a-propos`,
     changeFrequency: "yearly",
     priority: 0.5,
+    alternates: { languages: aboutLanguages },
+  });
+  entries.push({
+    url: `${SITE_URL}/about`,
+    changeFrequency: "yearly",
+    priority: 0.5,
+    alternates: { languages: aboutLanguages },
   });
 
   return entries;

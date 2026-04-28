@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 const SITE_URL = "https://mellowmigraine.com";
 const PAGE_LOCALE = "fr";
 const PAGE_URL = `${SITE_URL}/${PAGE_LOCALE}/a-propos`;
+const EN_ALTERNATE = `${SITE_URL}/about`;
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -23,7 +24,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: "À propos — Mellow",
     description:
       "L'histoire de Mellow, app de tracking de migraines créée par Arthur Griffiths, développeur solo basé à Bordeaux. Une app pensée par un migraineux, pas par un comité marketing.",
-    alternates: { canonical: PAGE_URL },
+    alternates: {
+      canonical: PAGE_URL,
+      languages: {
+        "fr-FR": PAGE_URL,
+        en: EN_ALTERNATE,
+      },
+    },
     openGraph: {
       type: "website",
       title: "À propos — Mellow",
