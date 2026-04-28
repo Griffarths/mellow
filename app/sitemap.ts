@@ -79,5 +79,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // About page (FR only for now; EN version to be added later)
+  entries.push({
+    url: `${SITE_URL}/fr/a-propos`,
+    changeFrequency: "yearly",
+    priority: 0.5,
+  });
+
   return entries;
 }
