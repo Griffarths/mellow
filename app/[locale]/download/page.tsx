@@ -93,32 +93,32 @@ export default async function DownloadPage({ params }: Props) {
         <meta httpEquiv="refresh" content={`0;url=${APP_STORE_URL}`} />
       </noscript>
     <main className="flex min-h-screen flex-col bg-white text-ink">
-      <section className="flex flex-1 flex-col items-center justify-center px-6 py-16 text-center md:py-24">
+      <section className="flex flex-1 flex-col items-center justify-center px-6 py-6 text-center md:py-16">
         <img
           src="/blobs/Fleur1.svg"
           alt=""
           aria-hidden
           draggable={false}
-          className="h-32 w-32 select-none md:h-40 md:w-40"
+          className="h-20 w-20 select-none md:h-32 md:w-32"
         />
 
-        <h1 className="hero-title mt-10 text-4xl font-bold tracking-tight md:text-6xl">
-          Une dernière étape ☁️
+        <h1 className="hero-title mt-5 text-3xl font-bold tracking-tight md:mt-10 md:text-6xl">
+          Une dernière étape
         </h1>
-        <p className="mt-5 max-w-md text-lg text-black/60 md:text-xl">
+        <p className="mt-3 max-w-md text-base text-black/60 md:mt-5 md:text-xl">
           Pour télécharger Mellow, ouvre cette page dans Safari
         </p>
 
-        <ol className="mt-14 grid w-full max-w-4xl gap-4 md:mt-16 md:grid-cols-3 md:gap-5">
+        <ol className="mt-6 grid w-full max-w-4xl gap-2.5 md:mt-16 md:grid-cols-3 md:gap-5">
           {STEPS.map((step) => (
             <li
               key={step.n}
-              className={`flex flex-col gap-4 rounded-[32px] p-6 text-left md:rounded-[40px] md:p-8 ${step.bg}`}
+              className={`flex items-center gap-3 rounded-2xl p-3.5 text-left md:flex-col md:items-start md:gap-4 md:rounded-[40px] md:p-8 ${step.bg}`}
             >
-              <div className="grid h-11 w-11 place-items-center rounded-full bg-white/70 text-base font-bold text-ink md:h-12 md:w-12 md:text-lg">
+              <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/70 text-sm font-bold text-ink md:h-12 md:w-12 md:text-lg">
                 {step.n}
               </div>
-              <p className="text-lg font-semibold leading-snug tracking-tight text-ink md:text-xl">
+              <p className="text-sm font-semibold leading-snug tracking-tight text-ink md:text-xl">
                 {step.text}
               </p>
             </li>
