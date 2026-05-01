@@ -44,7 +44,7 @@ export function generateStaticParams() {
 
 export const metadata: Metadata = {
   title: "Télécharger Mellow",
-  description: "Pour télécharger Mellow, ouvre cette page dans Safari.",
+  description: "Pour télécharger Mellow, ouvre cette page dans le navigateur.",
   robots: {
     index: false,
     follow: false,
@@ -53,7 +53,8 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "Télécharger Mellow",
-    description: "Pour télécharger Mellow, ouvre cette page dans Safari.",
+    description:
+      "Pour télécharger Mellow, ouvre cette page dans le navigateur.",
     url: PAGE_URL,
     type: "website",
   },
@@ -62,12 +63,12 @@ export const metadata: Metadata = {
 const STEPS = [
   {
     n: 1,
-    text: "Appuie sur ⋯ (en haut à droite)",
+    text: "Appuie sur  ⋯  (en haut à droite)",
     bg: "bg-[#FFE5E5]",
   },
   {
     n: 2,
-    text: "Choisis « Ouvrir dans Safari »",
+    text: "Choisis « Ouvrir dans le navigateur »",
     bg: "bg-[#FADFCC]",
   },
   {
