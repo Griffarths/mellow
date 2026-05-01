@@ -6,6 +6,27 @@ import { routing } from "@/i18n/routing";
 
 const SITE_URL = "https://mellowmigraine.com";
 const PAGE_URL = `${SITE_URL}/download`;
+const APP_STORE_URL =
+  "https://apps.apple.com/app/apple-store/id6762257609?pt=128563123&ct=tiktok&mt=8";
+
+// Inline anti-flicker + UA-gated redirect.
+// - <style> hides <html> immediately so nothing paints while we decide.
+// - The script runs synchronously as soon as it's parsed (first child of
+//   <body>): if the UA is a TikTok in-app browser, reveal the page;
+//   otherwise window.location.replace to the App Store before any paint.
+const REDIRECT_SCRIPT = `(function(){
+  try {
+    var ua = navigator.userAgent || '';
+    var inApp = /TikTok|musical_ly|Bytedance/i.test(ua);
+    if (inApp) {
+      document.documentElement.style.visibility = '';
+    } else {
+      window.location.replace(${JSON.stringify(APP_STORE_URL)});
+    }
+  } catch (e) {
+    document.documentElement.style.visibility = '';
+  }
+})();`;
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -56,6 +77,21 @@ export default async function DownloadPage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
+    <>
+      {/* Hide page until UA decides — set as <style> so it applies before
+          the redirect script runs, preventing flash on non-TikTok visitors
+          who are about to be sent to the App Store. */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: "html{visibility:hidden}",
+        }}
+      />
+      <script
+        dangerouslySetInnerHTML={{ __html: REDIRECT_SCRIPT }}
+      />
+      <noscript>
+        <meta httpEquiv="refresh" content={`0;url=${APP_STORE_URL}`} />
+      </noscript>
     <main className="flex min-h-screen flex-col bg-white text-ink">
       <section className="flex flex-1 flex-col items-center justify-center px-6 py-16 text-center md:py-24">
         <img
@@ -102,6 +138,7 @@ export default async function DownloadPage({ params }: Props) {
           <span className="font-semibold text-black/80">Mellow</span>
         </div>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }
