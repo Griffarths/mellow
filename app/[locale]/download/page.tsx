@@ -14,17 +14,23 @@ const APP_STORE_URL =
 // - The script runs synchronously as soon as it's parsed (first child of
 //   <body>): if the UA is a TikTok in-app browser, reveal the page;
 //   otherwise window.location.replace to the App Store before any paint.
+// - A 800 ms safety timeout force-reveals the page if neither branch
+//   ran (script error in an exotic webview, blocked redirect, etc.) so
+//   the user never sees a permanently blank screen.
 const REDIRECT_SCRIPT = `(function(){
+  setTimeout(function(){
+    document.documentElement.style.visibility = 'visible';
+  }, 800);
   try {
     var ua = navigator.userAgent || '';
-    var inApp = /TikTok|musical_ly|Bytedance/i.test(ua);
+    var inApp = /TikTok|musical_ly|Bytedance|BytedanceWebview|trill|aweme/i.test(ua);
     if (inApp) {
-      document.documentElement.style.visibility = '';
+      document.documentElement.style.visibility = 'visible';
     } else {
       window.location.replace(${JSON.stringify(APP_STORE_URL)});
     }
   } catch (e) {
-    document.documentElement.style.visibility = '';
+    document.documentElement.style.visibility = 'visible';
   }
 })();`;
 
