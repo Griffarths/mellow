@@ -113,7 +113,7 @@ export default async function DownloadPage({ params }: Props) {
           Une dernière étape
         </h1>
         <p className="mt-3 max-w-md text-base text-black/60 md:mt-5 md:text-xl">
-          Pour télécharger Mellow, ouvre cette page dans Safari
+          Pour télécharger Mellow, ouvre cette page dans le navigateur
         </p>
 
         <ol className="mt-6 grid w-full max-w-4xl gap-2.5 md:mt-16 md:grid-cols-3 md:gap-5">
