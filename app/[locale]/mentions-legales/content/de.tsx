@@ -13,7 +13,7 @@ export default function LegalContentDe() {
         Die mobile Anwendung <strong>Mellow</strong> wird herausgegeben von:
       </p>
       <p>
-        <strong>Arthur Griffiths</strong>
+        <strong>Laurine Nicoletti</strong>
         <br />
         Einzelunternehmer (Auto-Entrepreneur)
         <br />
@@ -30,7 +30,7 @@ export default function LegalContentDe() {
       </p>
 
       <h2>2. Verantwortlicher</h2>
-      <p>Arthur Griffiths, in seiner Funktion als Anbieter der Anwendung.</p>
+      <p>Laurine Nicoletti, in seiner Funktion als Anbieter der Anwendung.</p>
 
       <h2>3. Hosting und Verarbeitung der Nutzerdaten</h2>
       <p>
@@ -159,8 +159,8 @@ export default function LegalContentDe() {
       <p>
         Sämtliche Bestandteile der Mellow-Anwendung — insbesondere Texte,
         Grafiken, Logos, Icons, Illustrationen, Benutzeroberflächen, visuelle
-        Identität und Quellcode — sind das ausschließliche Eigentum von Arthur
-        Griffiths, sofern nicht ausdrücklich anders angegeben.
+        Identität und Quellcode — sind das ausschließliche Eigentum von Laurine
+        Nicoletti, sofern nicht ausdrücklich anders angegeben.
       </p>
       <p>
         Jegliche Vervielfältigung, Wiedergabe, Änderung, Veröffentlichung,

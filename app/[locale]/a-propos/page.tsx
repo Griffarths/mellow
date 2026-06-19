@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: "À propos — Mellow",
     description:
-      "L'histoire de Mellow, app de tracking de migraines créée par Arthur Griffiths, développeur solo basé à Bordeaux. Une app pensée par un migraineux, pas par un comité marketing.",
+      "L'histoire de Mellow, app de tracking de migraines créée par Laurine Nicoletti, développeur solo basé à Bordeaux. Une app pensée par un migraineux, pas par un comité marketing.",
     alternates: {
       canonical: PAGE_URL,
       languages: {
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       title: "À propos — Mellow",
       description:
-        "L'histoire de Mellow, app de tracking de migraines créée par Arthur Griffiths.",
+        "L'histoire de Mellow, app de tracking de migraines créée par Laurine Nicoletti.",
       url: PAGE_URL,
       locale: "fr_FR",
     },
@@ -56,7 +56,7 @@ export default async function AboutPage({ params }: Props) {
     name: "À propos — Mellow",
     mainEntity: {
       "@type": "Person",
-      name: "Arthur Griffiths",
+      name: "Laurine Nicoletti",
       jobTitle: "Développeur indépendant",
       description:
         "Créateur de Mellow, application de tracking de migraines",
@@ -80,10 +80,10 @@ export default async function AboutPage({ params }: Props) {
           </h1>
 
           <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
-            Salut, moi c&apos;est Arthur 👋
+            Salut, moi c&apos;est Laurine 👋
           </h2>
           <p className="my-5 text-lg leading-[1.8] text-black/75">
-            Je suis <strong className="font-semibold text-ink">Arthur Griffiths</strong>,
+            Je suis <strong className="font-semibold text-ink">Laurine Nicoletti</strong>,
             développeur indépendant basé à Bordeaux, et je suis migraineux.
           </p>
           <p className="my-5 text-lg leading-[1.8] text-black/75">
@@ -230,7 +230,7 @@ export default async function AboutPage({ params }: Props) {
           <p className="my-5 text-lg leading-[1.8] text-black/75">
             Merci d&apos;être là. Et prends soin de toi.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">Arthur</p>
+          <p className="my-5 text-lg leading-[1.8] text-black/75">Laurine</p>
         </article>
       </main>
       <Footer />

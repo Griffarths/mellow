@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: "About — Mellow",
     description:
-      "The story of Mellow, a migraine tracking app built by Arthur Griffiths, indie developer based in Bordeaux. An app made by someone with migraines, not by a marketing committee.",
+      "The story of Mellow, a migraine tracking app built by Laurine Nicoletti, indie developer based in Bordeaux. An app made by someone with migraines, not by a marketing committee.",
     alternates: {
       canonical: PAGE_URL,
       languages: {
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       title: "About — Mellow",
       description:
-        "The story of Mellow, a migraine tracking app built by Arthur Griffiths.",
+        "The story of Mellow, a migraine tracking app built by Laurine Nicoletti.",
       url: PAGE_URL,
       locale: "en_US",
     },
@@ -56,7 +56,7 @@ export default async function AboutPage({ params }: Props) {
     name: "About — Mellow",
     mainEntity: {
       "@type": "Person",
-      name: "Arthur Griffiths",
+      name: "Laurine Nicoletti",
       jobTitle: "Indie Developer",
       description: "Creator of Mellow, a migraine tracking app",
       address: {
@@ -79,11 +79,11 @@ export default async function AboutPage({ params }: Props) {
           </h1>
 
           <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
-            Hi, I&apos;m Arthur 👋
+            Hi, I&apos;m Laurine 👋
           </h2>
           <p className="my-5 text-lg leading-[1.8] text-black/75">
             I&apos;m{" "}
-            <strong className="font-semibold text-ink">Arthur Griffiths</strong>,
+            <strong className="font-semibold text-ink">Laurine Nicoletti</strong>,
             an indie developer based in Bordeaux, France, and I have migraines.
           </p>
           <p className="my-5 text-lg leading-[1.8] text-black/75">
@@ -243,7 +243,7 @@ export default async function AboutPage({ params }: Props) {
           <p className="my-5 text-lg leading-[1.8] text-black/75">
             Thanks for being here. And take care of yourself.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">Arthur</p>
+          <p className="my-5 text-lg leading-[1.8] text-black/75">Laurine</p>
         </article>
       </main>
       <Footer />

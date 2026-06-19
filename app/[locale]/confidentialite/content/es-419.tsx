@@ -7,7 +7,7 @@ export default function PrivacyContentEs419() {
       </p>
 
       <p>
-        Esta política de privacidad se refiere a Arthur Griffiths (operando
+        Esta política de privacidad se refiere a Laurine Nicoletti (operando
         bajo el nombre de Mellow) («nosotros»). Describe cómo y por qué
         podemos acceder, recopilar, almacenar, usar y/o compartir
         («procesar») tus datos personales cuando utilizas nuestros
@@ -855,7 +855,7 @@ export default function PrivacyContentEs419() {
         o por correo postal a:
       </p>
       <p>
-        Arthur Griffiths
+        Laurine Nicoletti
         <br />
         120 rue du Palais Gallien
         <br />

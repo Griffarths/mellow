@@ -13,7 +13,7 @@ export default function LegalContentEn() {
         The mobile application <strong>Mellow</strong> is published by:
       </p>
       <p>
-        <strong>Arthur Griffiths</strong>
+        <strong>Laurine Nicoletti</strong>
         <br />
         Sole proprietor (auto-entrepreneur)
         <br />
@@ -29,7 +29,7 @@ export default function LegalContentEn() {
       </p>
 
       <h2>2. Publication Director</h2>
-      <p>Arthur Griffiths, in his capacity as publisher of the application.</p>
+      <p>Laurine Nicoletti, in his capacity as publisher of the application.</p>
 
       <h2>3. Hosting and processing of user data</h2>
       <p>
@@ -156,7 +156,7 @@ export default function LegalContentEn() {
         All elements composing the Mellow application — including in
         particular texts, graphics, logos, icons, illustrations, interfaces,
         visual identity, and source code — are the exclusive property of
-        Arthur Griffiths, unless explicitly stated otherwise.
+        Laurine Nicoletti, unless explicitly stated otherwise.
       </p>
       <p>
         Any reproduction, representation, modification, publication,

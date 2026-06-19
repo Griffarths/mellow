@@ -7,7 +7,7 @@ export default function PrivacyContentDe() {
       </p>
 
       <p>
-        Diese Datenschutzerklärung von Arthur Griffiths (handelnd unter dem
+        Diese Datenschutzerklärung von Laurine Nicoletti (handelnd unter dem
         Namen Mellow) („wir", „uns" oder „unser") beschreibt, wie und warum
         wir auf deine personenbezogenen Daten zugreifen, sie sammeln,
         speichern, nutzen und/oder weitergeben („verarbeiten") können, wenn
@@ -857,7 +857,7 @@ export default function PrivacyContentDe() {
         oder per Post unter folgender Adresse erreichen:
       </p>
       <p>
-        Arthur Griffiths
+        Laurine Nicoletti
         <br />
         120 rue du Palais Gallien
         <br />

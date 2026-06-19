@@ -13,7 +13,7 @@ export default function LegalContentPtBr() {
         O aplicativo móvel <strong>Mellow</strong> é editado por:
       </p>
       <p>
-        <strong>Arthur Griffiths</strong>
+        <strong>Laurine Nicoletti</strong>
         <br />
         Empresário individual (auto-entrepreneur)
         <br />
@@ -29,7 +29,7 @@ export default function LegalContentPtBr() {
       </p>
 
       <h2>2. Diretor de publicação</h2>
-      <p>Arthur Griffiths, na qualidade de editor do aplicativo.</p>
+      <p>Laurine Nicoletti, na qualidade de editor do aplicativo.</p>
 
       <h2>3. Hospedagem e tratamento dos dados dos usuários</h2>
       <p>
@@ -159,7 +159,7 @@ export default function LegalContentPtBr() {
         Todos os elementos que compõem o aplicativo Mellow — incluindo
         notadamente os textos, gráficos, logos, ícones, ilustrações,
         interfaces, identidade visual e código-fonte — são propriedade
-        exclusiva de Arthur Griffiths, salvo menção explícita em contrário.
+        exclusiva de Laurine Nicoletti, salvo menção explícita em contrário.
       </p>
       <p>
         Qualquer reprodução, representação, modificação, publicação,

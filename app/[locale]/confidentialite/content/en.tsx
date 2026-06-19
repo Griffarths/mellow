@@ -7,7 +7,7 @@ export default function PrivacyContentEn() {
       </p>
 
       <p>
-        This Privacy Notice for Arthur Griffiths (doing business as Mellow)
+        This Privacy Notice for Laurine Nicoletti (doing business as Mellow)
         (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), describes how
         and why we might access, collect, store, use, and/or share
         (&quot;process&quot;) your personal information when you use our
@@ -809,7 +809,7 @@ export default function PrivacyContentEn() {
         or contact us by post at:
       </p>
       <p>
-        Arthur Griffiths
+        Laurine Nicoletti
         <br />
         120 rue du palais gallien
         <br />
