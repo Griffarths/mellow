@@ -7,7 +7,7 @@ export function TableOfContents({ content }: { content: string }) {
   if (headings.length === 0) return null;
 
   return (
-    <nav aria-label={t("tocTitle")} className="sticky top-24">
+    <nav aria-label={t("tocTitle")} className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
       <p className="text-sm font-semibold tracking-wide text-black/80">
         {t("tocTitle")}
       </p>
