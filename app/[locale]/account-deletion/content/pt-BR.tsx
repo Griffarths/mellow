@@ -3,7 +3,7 @@ export default function AccountDeletionPtBr() {
     <>
       <h1>Excluir sua conta do Mellow</h1>
       <p>
-        <strong>Aplicativo:</strong>{" "}Mellow Migraine
+        <strong>Aplicativo:</strong>{" "}Mellow Enxaqueca
         <br />
         <strong>Editor:</strong> Mellow
       </p>
