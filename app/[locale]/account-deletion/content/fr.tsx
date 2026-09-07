@@ -3,7 +3,7 @@ export default function AccountDeletionFr() {
     <>
       <h1>Supprimer votre compte Mellow</h1>
       <p>
-        <strong>Application :</strong> Mellow — Migraine &amp; Headache Tracker
+        <strong>Application :</strong>{" "}Mellow Migraine
         <br />
         <strong>Éditeur :</strong> Mellow
       </p>
