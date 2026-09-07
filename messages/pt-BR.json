@@ -91,7 +91,8 @@
     "privacy": "Privacidade",
     "terms": "Termos",
     "legal": "Aviso legal",
-    "contact": "Contato"
+    "contact": "Contato",
+    "accountDeletion": "Excluir conta"
   },
   "common": {
     "back": "← Voltar"
@@ -107,5 +108,9 @@
   "legalPage": {
     "metaTitle": "Aviso legal — Mellow",
     "metaDescription": "Aviso legal do Mellow — editor, hospedagem, propriedade intelectual e responsabilidade."
+  },
+  "accountDeletionPage": {
+    "metaTitle": "Exclusão de conta — Mellow",
+    "metaDescription": "Como excluir sua conta e seus dados no aplicativo Mellow ou por e-mail."
   }
 }

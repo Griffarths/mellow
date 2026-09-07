@@ -48,6 +48,9 @@ export function Footer() {
           <Link href="/contact" className="hover:text-black">
             {t("contact")}
           </Link>
+          <Link href="/account-deletion" className="hover:text-black">
+            {t("accountDeletion")}
+          </Link>
         </div>
       </div>
     </footer>

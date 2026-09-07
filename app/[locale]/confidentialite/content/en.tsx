@@ -1,3 +1,5 @@
+import { Link } from "@/i18n/navigation";
+
 export default function PrivacyContentEn() {
   return (
     <>
@@ -646,6 +648,11 @@ export default function PrivacyContentEn() {
       <ul>
         <li>
           Log in to your account settings and update your user account.
+        </li>
+        <li>
+          Visit our{" "}
+          <Link href="/account-deletion">account deletion page</Link> to delete
+          your account and data.
         </li>
         <li>Contact us using the contact information provided.</li>
       </ul>

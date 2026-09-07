@@ -91,7 +91,8 @@
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen",
     "legal": "Impressum",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "accountDeletion": "Konto löschen"
   },
   "common": {
     "back": "← Zurück"
@@ -107,5 +108,9 @@
   "legalPage": {
     "metaTitle": "Impressum — Mellow",
     "metaDescription": "Impressum von Mellow — Anbieter, Hosting, geistiges Eigentum und Haftung."
+  },
+  "accountDeletionPage": {
+    "metaTitle": "Konto löschen — Mellow",
+    "metaDescription": "So löschen Sie Ihr Konto und Ihre Daten über die Mellow-App oder per E-Mail."
   }
 }

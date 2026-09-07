@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 export default function PrivacyContentPtBr() {
   return (
     <>
@@ -655,6 +656,11 @@ export default function PrivacyContentPtBr() {
         <li>
           Fazer login nas configurações da sua conta e atualizar sua
           conta de usuário.
+        </li>
+        <li>
+          Visitar nossa{" "}
+          <Link href="/account-deletion">página de exclusão de conta</Link>{" "}
+          para excluir sua conta e seus dados.
         </li>
         <li>Entrar em contato pelos meios fornecidos.</li>
       </ul>

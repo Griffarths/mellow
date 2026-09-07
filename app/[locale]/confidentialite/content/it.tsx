@@ -1,3 +1,5 @@
+import { Link } from "@/i18n/navigation";
+
 export default function PrivacyContentIt() {
   return (
     <>
@@ -660,6 +662,11 @@ export default function PrivacyContentIt() {
         <li>
           accedere alle impostazioni del tuo account e aggiornare i tuoi
           dati.
+        </li>
+        <li>
+          visitare la nostra{" "}
+          <Link href="/account-deletion">pagina di eliminazione account</Link>{" "}
+          per eliminare il tuo account e i tuoi dati.
         </li>
         <li>contattarci tramite i recapiti forniti.</li>
       </ul>
