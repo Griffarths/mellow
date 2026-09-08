@@ -13,7 +13,7 @@ type T = {
   meta: { title: string; description: string };
   title: string;
   intro: string;
-  step1: { num: string; heading: string; body: string; btn: string };
+  step1: { num: string; heading: string; body: string[]; btn: string };
   step2: { num: string; heading: string; body: string; btn: string };
   important: { heading: string; body: string };
   contact: string;
@@ -22,7 +22,7 @@ type T = {
 const TRANSLATIONS: Record<Locale, T> = {
   fr: {
     meta: {
-      title: "Teste Mellow sur Android — rejoins les testeurs",
+      title: "Teste Mellow sur Android, rejoins les testeurs",
       description:
         "Mellow arrive sur Android. Rejoins les 12 testeurs nécessaires avant la publication sur le Play Store.",
     },
@@ -32,7 +32,10 @@ const TRANSLATIONS: Record<Locale, T> = {
     step1: {
       num: "Étape 1",
       heading: "Rejoins le groupe de testeurs",
-      body: "C'est ce qui te donne accès à la version de test. Il faut un compte Google.",
+      body: [
+        "C'est ce qui te donne accès à la version de test. Rejoins le groupe avec le même compte Google que celui utilisé par le Play Store sur ton téléphone. Si tu utilises une autre adresse, l'étape 2 te dira que tu n'es pas testeur.",
+        "Pour vérifier lequel : ouvre le Play Store, touche ta photo de profil en haut à droite, l'adresse s'affiche.",
+      ],
       btn: "Rejoindre le groupe",
     },
     step2: {
@@ -49,7 +52,7 @@ const TRANSLATIONS: Record<Locale, T> = {
   },
   en: {
     meta: {
-      title: "Test Mellow on Android — join the testers",
+      title: "Test Mellow on Android, join the testers",
       description:
         "Mellow is coming to Android. Join the 12 testers needed before the Play Store launch.",
     },
@@ -59,7 +62,10 @@ const TRANSLATIONS: Record<Locale, T> = {
     step1: {
       num: "Step 1",
       heading: "Join the tester group",
-      body: "This gives you access to the test version. A Google account is required.",
+      body: [
+        "This gives you access to the test version. Join the group with the same Google account used by the Play Store on your phone. If you use a different address, step 2 will tell you that you are not a tester.",
+        "To check which one: open the Play Store, tap your profile photo in the top right corner, and your address will be shown.",
+      ],
       btn: "Join the group",
     },
     step2: {
@@ -76,7 +82,7 @@ const TRANSLATIONS: Record<Locale, T> = {
   },
   de: {
     meta: {
-      title: "Teste Mellow auf Android — werde Tester",
+      title: "Teste Mellow auf Android, werde Tester",
       description:
         "Mellow kommt auf Android. Werde Teil der 12 Tester, die vor der Veröffentlichung im Play Store benötigt werden.",
     },
@@ -86,7 +92,10 @@ const TRANSLATIONS: Record<Locale, T> = {
     step1: {
       num: "Schritt 1",
       heading: "Tritt der Testergruppe bei",
-      body: "Das gibt dir Zugang zur Testversion. Ein Google-Konto ist erforderlich.",
+      body: [
+        "Das gibt dir Zugang zur Testversion. Tritt der Gruppe mit demselben Google-Konto bei, das der Play Store auf deinem Telefon verwendet. Wenn du eine andere Adresse verwendest, wird dir Schritt 2 mitteilen, dass du kein Tester bist.",
+        "Um nachzuprüfen welches: Öffne den Play Store, tippe auf dein Profilbild oben rechts, und deine Adresse wird angezeigt.",
+      ],
       btn: "Gruppe beitreten",
     },
     step2: {
@@ -103,7 +112,7 @@ const TRANSLATIONS: Record<Locale, T> = {
   },
   it: {
     meta: {
-      title: "Testa Mellow su Android — unisciti ai tester",
+      title: "Testa Mellow su Android, unisciti ai tester",
       description:
         "Mellow arriva su Android. Unisciti ai 12 tester necessari prima della pubblicazione sul Play Store.",
     },
@@ -113,7 +122,10 @@ const TRANSLATIONS: Record<Locale, T> = {
     step1: {
       num: "Passo 1",
       heading: "Unisciti al gruppo tester",
-      body: "Questo ti dà accesso alla versione di test. È necessario un account Google.",
+      body: [
+        "Questo ti dà accesso alla versione di test. Unisciti al gruppo con lo stesso account Google utilizzato dal Play Store sul tuo telefono. Se usi un indirizzo diverso, il passo 2 ti dirà che non sei un tester.",
+        "Per verificare quale: apri il Play Store, tocca la tua foto profilo in alto a destra e il tuo indirizzo verrà mostrato.",
+      ],
       btn: "Unisciti al gruppo",
     },
     step2: {
@@ -130,7 +142,7 @@ const TRANSLATIONS: Record<Locale, T> = {
   },
   es: {
     meta: {
-      title: "Prueba Mellow en Android — únete a los testers",
+      title: "Prueba Mellow en Android, únete a los testers",
       description:
         "Mellow llega a Android. Únete a los 12 testers necesarios antes del lanzamiento en el Play Store.",
     },
@@ -140,13 +152,16 @@ const TRANSLATIONS: Record<Locale, T> = {
     step1: {
       num: "Paso 1",
       heading: "Únete al grupo de testers",
-      body: "Esto te da acceso a la versión de prueba. Se necesita una cuenta de Google.",
+      body: [
+        "Esto te da acceso a la versión de prueba. Únete al grupo con la misma cuenta de Google que usa el Play Store en tu teléfono. Si usas otra dirección, el paso 2 te dirá que no eres tester.",
+        "Para comprobarlo: abre el Play Store, toca tu foto de perfil en la esquina superior derecha y se mostrará tu dirección.",
+      ],
       btn: "Unirse al grupo",
     },
     step2: {
       num: "Paso 2",
       heading: "Instala Mellow",
-      body: 'Una vez en el grupo, abre este enlace y pulsa «Convertirte en tester», luego descarga la aplicación.',
+      body: "Una vez en el grupo, abre este enlace y pulsa «Convertirte en tester», luego descarga la aplicación.",
       btn: "Instalar Mellow",
     },
     important: {
@@ -157,7 +172,7 @@ const TRANSLATIONS: Record<Locale, T> = {
   },
   "es-419": {
     meta: {
-      title: "Prueba Mellow en Android — únete a los testers",
+      title: "Prueba Mellow en Android, únete a los testers",
       description:
         "Mellow llega a Android. Únete a los 12 testers necesarios antes del lanzamiento en el Play Store.",
     },
@@ -167,13 +182,16 @@ const TRANSLATIONS: Record<Locale, T> = {
     step1: {
       num: "Paso 1",
       heading: "Únete al grupo de testers",
-      body: "Esto te da acceso a la versión de prueba. Se necesita una cuenta de Google.",
+      body: [
+        "Esto te da acceso a la versión de prueba. Únete al grupo con la misma cuenta de Google que usa el Play Store en tu teléfono. Si usas otra dirección, el paso 2 te dirá que no eres tester.",
+        "Para comprobarlo: abre el Play Store, toca tu foto de perfil en la esquina superior derecha y se mostrará tu dirección.",
+      ],
       btn: "Unirse al grupo",
     },
     step2: {
       num: "Paso 2",
       heading: "Instala Mellow",
-      body: 'Una vez en el grupo, abre este enlace y toca «Convertirte en tester», luego descarga la aplicación.',
+      body: "Una vez en el grupo, abre este enlace y toca «Convertirte en tester», luego descarga la aplicación.",
       btn: "Instalar Mellow",
     },
     important: {
@@ -184,7 +202,7 @@ const TRANSLATIONS: Record<Locale, T> = {
   },
   pt: {
     meta: {
-      title: "Testa o Mellow no Android — junta-te aos testers",
+      title: "Testa o Mellow no Android, junta-te aos testers",
       description:
         "O Mellow chega ao Android. Junta-te aos 12 testers necessários antes do lançamento no Play Store.",
     },
@@ -194,7 +212,10 @@ const TRANSLATIONS: Record<Locale, T> = {
     step1: {
       num: "Passo 1",
       heading: "Junta-te ao grupo de testers",
-      body: "É o que te dá acesso à versão de teste. É necessária uma conta Google.",
+      body: [
+        "É o que te dá acesso à versão de teste. Junta-te ao grupo com a mesma conta Google utilizada pelo Play Store no teu telefone. Se utilizares outro endereço, o passo 2 dir-te-á que não és tester.",
+        "Para verificar qual: abre o Play Store, toca na tua foto de perfil no canto superior direito e o teu endereço será apresentado.",
+      ],
       btn: "Juntar ao grupo",
     },
     step2: {
@@ -211,7 +232,7 @@ const TRANSLATIONS: Record<Locale, T> = {
   },
   "pt-BR": {
     meta: {
-      title: "Teste o Mellow no Android — junte-se aos testadores",
+      title: "Teste o Mellow no Android, junte-se aos testadores",
       description:
         "O Mellow está chegando ao Android. Junte-se aos 12 testadores necessários antes do lançamento no Play Store.",
     },
@@ -221,7 +242,10 @@ const TRANSLATIONS: Record<Locale, T> = {
     step1: {
       num: "Passo 1",
       heading: "Entre no grupo de testadores",
-      body: "É o que te dá acesso à versão de teste. É necessária uma conta Google.",
+      body: [
+        "É o que te dá acesso à versão de teste. Entre no grupo com a mesma conta Google usada pelo Play Store no seu telefone. Se você usar outro endereço, o passo 2 dirá que você não é testador.",
+        "Para verificar qual: abra o Play Store, toque na sua foto de perfil no canto superior direito e seu endereço será exibido.",
+      ],
       btn: "Entrar no grupo",
     },
     step2: {
@@ -275,7 +299,11 @@ export default async function AndroidPage({
             <h2 className="mt-2 text-xl font-bold tracking-tight">
               {t.step1.heading}
             </h2>
-            <p className="mt-2 text-black/70">{t.step1.body}</p>
+            {t.step1.body.map((paragraph, i) => (
+              <p key={i} className="mt-2 text-black/70">
+                {paragraph}
+              </p>
+            ))}
             <a
               href={STEP1_URL}
               target="_blank"
