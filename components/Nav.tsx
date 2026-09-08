@@ -28,6 +28,12 @@ export function Nav() {
           >
             {t("blog")}
           </Link>
+          <Link
+            href="/android"
+            className="text-sm font-medium text-black/70 transition hover:text-black"
+          >
+            {t("androidBeta")}
+          </Link>
         </div>
         <AppStoreButton sizeClass="h-10 w-auto select-none" />
       </div>
