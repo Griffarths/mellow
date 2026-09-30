@@ -78,7 +78,7 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
     howTitle: "Comment le remplir",
     steps: [
       "Chaque jour de crise, note l'intensité de 1 à 10 en bas de la case du jour.",
-      "Coche « Méd. » si tu as pris un médicament de crise ce jour-là. Tu peux aussi écrire un mot sur la journée : règles, mauvaise nuit, stress.",
+      "Coche « Méd. » si tu as pris un médicament de crise ce jour-là. Tu peux aussi écrire un mot dans la case : jour de règles, mauvaise nuit, stress.",
       "Pour chaque crise, remplis une ligne du tableau : heures de début et de fin, symptômes, déclencheurs possibles, médicament pris et soulagement sans médicament, en cochant pour chacun s'il a aidé.",
       "À la fin du mois, compte tes jours de migraine et tes jours avec médicament, puis apporte le journal à ta prochaine consultation.",
     ],
@@ -144,7 +144,7 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
     howTitle: "How to fill it in",
     steps: [
       "On each attack day, write the intensity from 1 to 10 at the bottom of that day's box.",
-      "Tick “Med” if you took an acute medication that day. You can also jot down a word about the day: period, bad night, stress.",
+      "Tick “Med” if you took an acute medication that day. You can also jot down a word in the box: period day, bad night, stress.",
       "For each attack, fill in one row of the log: start and end times, symptoms, possible triggers, medication taken and drug-free relief, ticking for each whether it helped.",
       "At the end of the month, count your migraine days and medication days, then bring the diary to your next appointment.",
     ],

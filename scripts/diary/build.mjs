@@ -20,11 +20,9 @@ const T = {
     name: "Prénom",
     month: "Mois",
     year: "Année",
-    intro: "Chaque jour de crise, note l'intensité de 1 à 10 en bas de la case et coche « Méd. » si tu as pris un médicament de crise. Tu peux aussi écrire un mot sur la journée : règles, mauvaise nuit, stress…",
+    intro: "Chaque jour de crise, note l'intensité de 1 à 10 en bas de la case et coche « Méd. » si tu as pris un médicament de crise. Tu peux aussi écrire un mot dans la case : jour de règles, mauvaise nuit, stress…",
     keyIntensity: "Intensité de la crise, de 1 à 10",
     keyMed: "Médicament de crise pris",
-    keyNote: "Un mot sur la journée",
-    noteSample: "règles",
     medShort: "Méd.",
     summary: "Ce mois-ci",
     migraineDays: "Jours de migraine",
@@ -41,7 +39,7 @@ const T = {
     symptoms: ["Nausées", "Gêne à la lumière", "Gêne au bruit", "Aura visuelle", "Vertiges", "Douleur qui bat"],
     reliefLabel: "Soulagements fréquents",
     relief: ["Repos dans le noir", "Froid sur le front", "Respiration lente", "Sommeil", "Boire de l'eau", "Manger un peu"],
-    footer: "Suis tes crises en deux taps avec l'app Mellow",
+    footer: "Reprends le contrôle de tes migraines avec l'application",
   },
   en: {
     title: "Migraine diary",
@@ -49,11 +47,9 @@ const T = {
     name: "Name",
     month: "Month",
     year: "Year",
-    intro: "On each attack day, write the intensity from 1 to 10 at the bottom of the box and tick “Med” if you took an acute medication. You can also jot down a word about the day: period, bad night, stress…",
+    intro: "On each attack day, write the intensity from 1 to 10 at the bottom of the box and tick “Med” if you took an acute medication. You can also jot down a word in the box: period day, bad night, stress…",
     keyIntensity: "Attack intensity, 1 to 10",
     keyMed: "Acute medication taken",
-    keyNote: "A word about the day",
-    noteSample: "period",
     medShort: "Med",
     summary: "This month",
     migraineDays: "Migraine days",
@@ -70,7 +66,7 @@ const T = {
     symptoms: ["Nausea", "Light sensitivity", "Noise sensitivity", "Visual aura", "Dizziness", "Throbbing pain"],
     reliefLabel: "Common relief",
     relief: ["Rest in the dark", "Cold on the forehead", "Slow breathing", "Sleep", "Drinking water", "Eating a little"],
-    footer: "Track your attacks in two taps with the Mellow app",
+    footer: "Take back control of your migraines with the app",
   },
 };
 
@@ -110,11 +106,11 @@ function css(paper) {
   /* Page 1: legend samples mirror what sits in each day box. */
   .legend { margin-top: 4mm; display: flex; flex-wrap: wrap; gap: 3mm 7mm; font-size: 8.5pt; font-weight: 600; color: #333; }
   .legend > span { display: inline-flex; align-items: center; gap: 2mm; }
-  .sample { display: inline-flex; align-items: flex-end; gap: 0.8mm; font-size: 7.5pt; font-weight: 700; color: #555; border: 0.3mm solid ${GRID}; border-radius: 1.5mm; padding: 1mm 1.6mm; }
-  .sample i, .day .int i { display: inline-block; width: 6mm; height: 3.6mm; border-bottom: 0.35mm solid #888; }
+  .sample { display: inline-flex; align-items: center; gap: 0.8mm; height: 6.4mm; font-size: 7.5pt; font-weight: 700; color: #555; border: 0.3mm solid ${GRID}; border-radius: 1.5mm; padding: 0 1.6mm; }
+  .sample i { display: inline-block; width: 6mm; height: 3.2mm; border-bottom: 0.35mm solid #888; margin-bottom: 0.8mm; }
+  .day .int i { display: inline-block; width: 6mm; height: 3.6mm; border-bottom: 0.35mm solid #888; }
   .sample b, .day .med b { display: inline-block; width: 3.2mm; height: 3.2mm; border: 0.4mm solid #888; border-radius: 0.7mm; }
-  .sample.med { align-items: center; font-size: 6.5pt; font-weight: 600; }
-  .sample.note { align-items: center; font-style: italic; font-weight: 500; color: #777; }
+  .sample.med { font-size: 6.5pt; font-weight: 600; }
   .grid { margin-top: 5mm; flex: 1; display: grid; grid-template-columns: repeat(7, 1fr); grid-auto-rows: 1fr; gap: 2mm; }
   .day { border: 0.35mm solid ${LINE}; border-radius: 2.5mm; position: relative; }
   .day .n { position: absolute; left: 2mm; top: 1.6mm; font-size: 8.5pt; font-weight: 800; color: #333; }
@@ -163,7 +159,6 @@ function page1(t) {
     <div class="legend">
       <span><span class="sample"><i></i>/10</span>${t.keyIntensity}</span>
       <span><span class="sample med"><b></b>${t.medShort}</span>${t.keyMed}</span>
-      <span><span class="sample note">${t.noteSample}</span>${t.keyNote}</span>
     </div>
     <div class="grid">${days}
       <div class="summary"><span class="h">${t.summary}</span>
