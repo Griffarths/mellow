@@ -67,7 +67,7 @@ const config: Config = {
       fontSize: {
         caption: ["12px", { lineHeight: "1.4" }],
         display: [
-          "clamp(40px, 6vw, 72px)",
+          "clamp(40px, 5vw, 64px)",
           { lineHeight: "1", letterSpacing: "-0.035em", fontWeight: "800" },
         ],
         h1: [
