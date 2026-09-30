@@ -1,8 +1,11 @@
 import type { ComponentPropsWithoutRef, JSX } from "react";
+import { AppCta } from "@/components/blog/AppCta";
 
 type Props<T extends keyof JSX.IntrinsicElements> = ComponentPropsWithoutRef<T>;
 
 export const mdxComponents = {
+  AppCta,
+
   // Headings
   h2: (props: Props<"h2">) => (
     <h2

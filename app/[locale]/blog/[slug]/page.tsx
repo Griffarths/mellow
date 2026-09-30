@@ -97,6 +97,7 @@ export default async function ArticlePage({ params }: Props) {
   if (!article) notFound();
 
   const related = getRelatedArticles(article);
+  const hasEndCta = /<AppCta[^>]*variant="end"/.test(article.content);
 
   const articleUrl = urlFor(locale, `/blog/${slug}`);
   const jsonLd = {
@@ -160,7 +161,7 @@ export default async function ArticlePage({ params }: Props) {
                   },
                 }}
               />
-              <BlogCta />
+              {!hasEndCta && <BlogCta />}
               <RelatedArticles articles={related} />
             </div>
           </article>
