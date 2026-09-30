@@ -39,6 +39,10 @@
       "name": "Mellow Red",
       "description": "Stays with you when the pain peaks. Even in the hardest moments, it's there."
     },
+    "jaune": {
+      "name": "Mellow Yellow",
+      "description": "It listens on ordinary days. What you feel between attacks matters as much as the attacks."
+    },
     "dotAriaLabel": "View {name}"
   },
   "features": {

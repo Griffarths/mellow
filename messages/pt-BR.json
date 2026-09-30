@@ -36,6 +36,10 @@
       "name": "Mellow Vermelho",
       "description": "Fica ao seu lado quando a dor está no auge. Mesmo nos momentos mais difíceis, ele está lá."
     },
+    "jaune": {
+      "name": "Mellow Amarelo",
+      "description": "Ele escuta você nos dias comuns. O que você sente entre duas crises conta tanto quanto as crises."
+    },
     "dotAriaLabel": "Ver {name}"
   },
   "features": {

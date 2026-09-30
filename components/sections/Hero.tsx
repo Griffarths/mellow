@@ -15,15 +15,15 @@ export function Hero() {
           <AppStoreButton />
         </div>
         <img
-          src="/blobs/Trio.svg"
+          src="/blobs/Fleur1.svg"
           alt=""
           aria-hidden
           draggable={false}
-          className="breathe mt-10 w-[250px] select-none md:mt-14 md:w-[380px]"
+          className="breathe mt-10 w-[190px] select-none md:mt-14 md:w-[280px]"
         />
       </div>
-      {/* Pulled up so the Mellows sink into the clouds, as in the app. */}
-      <Clouds className="relative z-10 -mt-[25vw] md:-mt-[8.4vw]" />
+      {/* Pulled up past the valley so Fleur sinks into the cloud, as in the app. */}
+      <Clouds className="relative z-10 -mt-[calc(1.1*min(31.55vw,300px))] md:-mt-[calc(0.95*min(31.55vw,300px))]" />
     </section>
   );
 }

@@ -85,7 +85,7 @@ export default async function BlogIndexPage({ params }: Props) {
             {t("indexSubtitle")}
           </p>
         </div>
-        <Clouds />
+        <Clouds maxHeight={160} />
       </header>
       <main className="mx-auto max-w-6xl px-6 pb-20 pt-4 md:pb-28">
         {articles.length === 0 ? (

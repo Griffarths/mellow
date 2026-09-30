@@ -36,6 +36,10 @@
       "name": "Mellow Rot",
       "description": "Er bleibt an deiner Seite, wenn der Schmerz am stärksten ist. Selbst in den schwersten Momenten ist er da."
     },
+    "jaune": {
+      "name": "Mellow Gelb",
+      "description": "Er hört dir an gewöhnlichen Tagen zu. Was du zwischen zwei Attacken fühlst, zählt genauso wie die Attacken."
+    },
     "dotAriaLabel": "{name} ansehen"
   },
   "features": {

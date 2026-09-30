@@ -36,6 +36,10 @@
       "name": "Mellow Rosso",
       "description": "Resta al tuo fianco quando il dolore è al massimo. Anche nei momenti più duri, lui è lì."
     },
+    "jaune": {
+      "name": "Mellow Giallo",
+      "description": "Ti ascolta nei giorni ordinari. Ciò che senti tra due attacchi conta quanto gli attacchi."
+    },
     "dotAriaLabel": "Vedi {name}"
   },
   "features": {

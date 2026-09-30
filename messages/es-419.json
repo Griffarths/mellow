@@ -36,6 +36,10 @@
       "name": "Mellow Rojo",
       "description": "Se queda a tu lado cuando el dolor está en su punto más alto. Incluso en los momentos más difíciles, está ahí."
     },
+    "jaune": {
+      "name": "Mellow Amarillo",
+      "description": "Te escucha los días comunes. Lo que sientes entre dos crisis cuenta tanto como las crisis."
+    },
     "dotAriaLabel": "Ver {name}"
   },
   "features": {
