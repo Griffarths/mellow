@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { MellowsSlider } from "@/components/sections/MellowsSlider";
 import { Courses } from "@/components/sections/Courses";
 import { Screenshots } from "@/components/sections/Screenshots";
+import { SocialProof } from "@/components/sections/SocialProof";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/Footer";
 
@@ -22,6 +23,7 @@ export default async function HomePage({
         <Hero />
         <MellowsSlider />
         <Screenshots />
+        <SocialProof />
         <Courses />
         <FinalCta />
       </main>

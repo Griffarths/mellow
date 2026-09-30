@@ -1,5 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import type { Locale } from "@/i18n/routing";
+import { APP_STORE_URL } from "@/lib/stores";
 
 const BADGES: Record<Locale, string> = {
   fr: "Download_on_the_App_Store_Badge_FR_RGB_blk_100517.svg",
@@ -24,7 +25,7 @@ export function AppStoreButton({ className = "", sizeClass }: Props) {
 
   return (
     <a
-      href="https://apps.apple.com/app/id6762257609"
+      href={APP_STORE_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={t("appStoreAriaLabel")}

@@ -8,7 +8,9 @@
     "homeAriaLabel": "Mellow — voltar ao início",
     "appStoreAriaLabel": "Descarregar na App Store",
     "blog": "Blog",
-    "androidBeta": "Testar Android"
+    "androidBeta": "Testar Android",
+    "android": "App Android",
+    "googlePlayAriaLabel": "Obter no Google Play"
   },
   "blog": {
     "comingSoon": {
@@ -73,6 +75,12 @@
       "09": "Perfil com tratamentos, consultas médicas e medalhas",
       "10": "Exportação de um relatório PDF para o teu médico"
     }
+  },
+  "socialProof": {
+    "title": "O que dizem.",
+    "outOf": "em 5",
+    "count": "{count, plural, one {# classificação} other {# classificações}} na App Store",
+    "starsLabel": "{rating} de 5 estrelas"
   },
   "finalCta": {
     "title": "Descarrega a Mellow"

@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { AppStoreButton } from "../AppStoreButton";
+import { StoreBadges } from "../StoreBadges";
 import { Blob } from "../phones/Blob";
 import { Clouds } from "../ui/Clouds";
 
@@ -13,9 +13,7 @@ export function FinalCta() {
           <Blob name="Fleur1" className="breathe h-28 w-28 md:h-36 md:w-36" />
         </div>
         <h2 className="mt-6 text-h2 text-ink">{t("title")}</h2>
-        <div className="mt-8 flex justify-center">
-          <AppStoreButton />
-        </div>
+        <StoreBadges className="mt-8" />
       </div>
     </section>
   );

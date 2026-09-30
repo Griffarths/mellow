@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { AppStoreButton } from "../AppStoreButton";
+import { StoreBadges } from "../StoreBadges";
 import { Clouds } from "../ui/Clouds";
 
 export function Hero() {
@@ -11,9 +11,7 @@ export function Hero() {
         <p className="mt-5 max-w-xl text-lg text-ink-2 md:mt-4 md:max-w-3xl md:text-xl">
           {t("subtitle")}
         </p>
-        <div className="mt-7">
-          <AppStoreButton />
-        </div>
+        <StoreBadges className="mt-7" />
         <img
           src="/blobs/Fleur1.svg"
           alt=""

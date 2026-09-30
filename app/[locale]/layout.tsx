@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { routing } from "@/i18n/routing";
+import { APP_STORE_ID } from "@/lib/stores";
 import "../globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -33,6 +34,8 @@ export async function generateMetadata({
       description: t("ogDescription"),
       type: "website",
     },
+    // iOS Smart App Banner: <meta name="apple-itunes-app" content="app-id=…">
+    itunes: { appId: APP_STORE_ID },
   };
 }
 

@@ -1,6 +1,10 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { AppStoreButton } from "./AppStoreButton";
+import { PLAY_STORE_URL } from "@/lib/stores";
+import { StoreBadges } from "./StoreBadges";
+
+const LINK_CLASS =
+  "whitespace-nowrap text-sm font-semibold text-ink-2 transition hover:text-ink";
 
 export function Nav() {
   const t = useTranslations("nav");
@@ -22,20 +26,28 @@ export function Nav() {
             />
             <span>Mellow</span>
           </Link>
-          <Link
-            href="/blog"
-            className="whitespace-nowrap text-sm font-semibold text-ink-2 transition hover:text-ink"
-          >
+          <Link href="/blog" className={LINK_CLASS}>
             {t("blog")}
           </Link>
-          <Link
-            href="/android"
-            className="whitespace-nowrap text-sm font-semibold text-ink-2 transition hover:text-ink"
-          >
-            {t("androidBeta")}
-          </Link>
+          {PLAY_STORE_URL ? (
+            <a
+              href={PLAY_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={LINK_CLASS}
+            >
+              {t("android")}
+            </a>
+          ) : (
+            <Link href="/android" className={LINK_CLASS}>
+              {t("androidBeta")}
+            </Link>
+          )}
         </div>
-        <AppStoreButton className="hidden shrink-0 sm:inline-block" sizeClass="h-10 w-auto select-none" />
+        <StoreBadges
+          className="hidden shrink-0 flex-nowrap gap-2 sm:flex"
+          sizeClass="h-10 w-auto select-none"
+        />
       </div>
     </header>
   );
