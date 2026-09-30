@@ -1,6 +1,9 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { PLAY_STORE_URL } from "@/lib/stores";
+import { isBlogLocale } from "@/lib/blog";
+import { DIARY, TEST_PAGE, TOOLS_LABEL } from "@/lib/tools";
+import { ToolsMenu } from "./ToolsMenu";
 import { StoreBadges } from "./StoreBadges";
 
 const LINK_CLASS =
@@ -8,6 +11,7 @@ const LINK_CLASS =
 
 export function Nav() {
   const t = useTranslations("nav");
+  const locale = useLocale();
   return (
     <header className="sticky top-0 z-50 w-full border-b border-surface-line bg-white/85 backdrop-blur">
       <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
@@ -24,11 +28,22 @@ export function Nav() {
               className="h-8 w-8 select-none sm:h-9 sm:w-9"
               draggable={false}
             />
-            <span>Mellow</span>
+            {/* Wordmark hidden on small phones when the Tools menu needs the room. */}
+            <span className={isBlogLocale(locale) ? "hidden sm:inline" : ""}>Mellow</span>
           </Link>
           <Link href="/blog" className={LINK_CLASS}>
             {t("blog")}
           </Link>
+          {isBlogLocale(locale) && (
+            <ToolsMenu
+              label={TOOLS_LABEL[locale]}
+              items={[DIARY[locale], TEST_PAGE[locale]].map((tool) => ({
+                href: tool.path,
+                label: tool.navLabel,
+                description: tool.menuDescription,
+              }))}
+            />
+          )}
           {PLAY_STORE_URL ? (
             <a
               href={PLAY_STORE_URL}

@@ -46,9 +46,6 @@ export function PillarPage({ pillar, locale, articles }: Props) {
         </div>
 
         <p className="mt-6 text-[15px] text-ink-2">
-          <span className="mr-2 text-caption font-bold uppercase tracking-[0.08em] text-croix-ink">
-            {tool.eyebrow}
-          </span>
           <Link
             href={tool.path}
             className="font-semibold text-ink underline decoration-ink/20 decoration-2 underline-offset-[3px] transition hover:decoration-ink"

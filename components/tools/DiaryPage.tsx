@@ -17,10 +17,7 @@ export function DiaryPage({ locale }: { locale: BlogLocale }) {
       <main className="mx-auto max-w-6xl px-6 pb-20 pt-10 md:pb-28 md:pt-16">
         <div className="grid items-center gap-12 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-16">
           <div>
-            <p className="text-caption font-bold uppercase tracking-[0.08em] text-croix-ink">
-              {c.eyebrow}
-            </p>
-            <h1 className="mt-3 text-display text-ink">{ty(c.title)}</h1>
+            <h1 className="text-display text-ink">{ty(c.title)}</h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-2">{ty(c.lead)}</p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               {c.downloads.map((d) => (

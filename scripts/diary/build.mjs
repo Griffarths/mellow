@@ -18,9 +18,13 @@ const COLORS = { mild: "#F4C1D8", moderate: "#BFD4EE", severe: "#F1A6B1" };
 const T = {
   fr: {
     title: "Journal de migraine",
+    docTitle: "Journal de migraine · Mellow",
+    name: "Prénom",
     month: "Mois",
     year: "Année",
-    intro: "Chaque jour de crise, colorie la pastille selon l'intensité. Coche la case si tu as pris un médicament de crise.",
+    intro: "Chaque jour de crise, écris dans le rond l'intensité de 1 à 10, ou colorie-le selon la légende. Coche la case si tu as pris un médicament de crise.",
+    intensity: "Intensité de 1 à 10 dans le rond",
+    orColour: "ou colorie :",
     mild: "Légère (1 à 3)",
     moderate: "Modérée (4 à 6)",
     severe: "Intense (7 à 10)",
@@ -30,20 +34,26 @@ const T = {
     medDays: "Jours avec médicament",
     note: "Plus de 10 jours avec un médicament de crise dans le mois ? Parles-en à ton médecin : c'est le seuil de l'abus médicamenteux.",
     logTitle: "Détail de mes crises",
-    logIntro: "Une ligne par crise. Coche si le traitement a aidé, pour repérer ce qui marche vraiment pour toi.",
-    cols: ["Date", "Début et fin", "Intensité", "Symptômes", "Déclencheurs possibles", "Traitement et heure", "Ça a aidé ?"],
+    logIntro: "Une ligne par crise, avec ce qui t'a soulagé. Imprime cette page autant de fois que nécessaire.",
+    cols: ["Date", "Début et fin", "Intensité", "Symptômes", "Déclencheurs possibles", "Médicament et heure", "Soulagement sans médicament", "Ça a aidé ?"],
     effect: ["Oui", "En partie", "Non"],
     triggersLabel: "Déclencheurs fréquents",
     triggers: ["Stress", "Manque de sommeil", "Repas sauté", "Règles", "Météo", "Écrans", "Alcool", "Déshydratation", "Caféine", "Lumière intense"],
     symptomsLabel: "Symptômes fréquents",
     symptoms: ["Nausées", "Gêne à la lumière", "Gêne au bruit", "Aura visuelle", "Vertiges", "Douleur qui bat"],
+    reliefLabel: "Soulagements fréquents",
+    relief: ["Repos dans le noir", "Froid sur le front", "Respiration lente", "Sommeil", "Boire de l'eau", "Manger un peu"],
     footer: "Suis tes crises en deux taps avec l'app Mellow",
   },
   en: {
     title: "Migraine diary",
+    docTitle: "Migraine diary · Mellow",
+    name: "Name",
     month: "Month",
     year: "Year",
-    intro: "On each attack day, colour in the dot by intensity. Tick the box if you took an acute medication.",
+    intro: "On each attack day, write the intensity from 1 to 10 in the circle, or color it in using the key. Tick the box if you took an acute medication.",
+    intensity: "Intensity from 1 to 10 in the circle",
+    orColour: "or color:",
     mild: "Mild (1 to 3)",
     moderate: "Moderate (4 to 6)",
     severe: "Severe (7 to 10)",
@@ -53,13 +63,15 @@ const T = {
     medDays: "Days with medication",
     note: "More than 10 days with acute medication this month? Talk to your doctor: that is the medication-overuse threshold.",
     logTitle: "Attack log",
-    logIntro: "One row per attack. Tick whether the treatment helped, to see what really works for you.",
-    cols: ["Date", "Start and end", "Intensity", "Symptoms", "Possible triggers", "Treatment and time", "Did it help?"],
+    logIntro: "One row per attack, with what gave you relief. Print this page as many times as you need.",
+    cols: ["Date", "Start and end", "Intensity", "Symptoms", "Possible triggers", "Medication and time", "Drug-free relief", "Did it help?"],
     effect: ["Yes", "Partly", "No"],
     triggersLabel: "Common triggers",
     triggers: ["Stress", "Lack of sleep", "Skipped meal", "Period", "Weather", "Screens", "Alcohol", "Dehydration", "Caffeine", "Bright light"],
     symptomsLabel: "Common symptoms",
     symptoms: ["Nausea", "Light sensitivity", "Noise sensitivity", "Visual aura", "Dizziness", "Throbbing pain"],
+    reliefLabel: "Common relief",
+    relief: ["Rest in the dark", "Cold on the forehead", "Slow breathing", "Sleep", "Drinking water", "Eating a little"],
     footer: "Track your attacks in two taps with the Mellow app",
   },
 };
@@ -78,38 +90,46 @@ function css(paper) {
   html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body { font-family: "Plus Jakarta Sans", Helvetica, Arial, sans-serif; color: #000; }
   .page { width: ${w}mm; height: ${h}mm; padding: 13mm 13mm 11mm; display: flex; flex-direction: column; break-after: page; overflow: hidden; }
-  .page.land { page: land; width: ${h}mm; height: ${w}mm; }
+  .page.land { page: land; width: ${h}mm; height: ${w}mm; padding: 10mm 13mm 9mm; }
+  .page.land header svg { width: 11mm; height: 11mm; }
+  .page.land h1 { font-size: 18pt; }
+  .page.land .intro { margin-top: 2.5mm; max-width: none; }
+  .page.land table { margin-top: 3.5mm; }
+  .page.land footer { margin-top: 3.5mm; }
   .page:last-child { break-after: auto; }
   header { display: flex; align-items: center; gap: 4mm; }
   header svg { width: 15mm; height: 15mm; flex: none; }
   h1 { font-size: 22pt; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
-  .fields { margin-left: auto; display: flex; gap: 6mm; font-size: 9.5pt; font-weight: 600; color: #444; }
+  .fields { margin-top: 5mm; display: flex; gap: 8mm; font-size: 9.5pt; font-weight: 600; color: #333; }
   .field { display: flex; align-items: flex-end; gap: 2mm; }
-  .field span.line { display: inline-block; width: 32mm; border-bottom: 0.35mm solid #BBB; height: 5mm; }
-  .field.short span.line { width: 18mm; }
+  .field span.line { display: inline-block; width: 30mm; border-bottom: 0.35mm solid #999; height: 5mm; }
+  .field.long span.line { width: 36mm; }
+  .field.short span.line { width: 16mm; }
   .intro { margin-top: 4mm; font-size: 9pt; color: #555; line-height: 1.45; max-width: 150mm; }
   .legend { margin-top: 4mm; display: flex; flex-wrap: wrap; gap: 5mm; font-size: 8.5pt; font-weight: 600; color: #333; }
   .legend i { display: inline-block; width: 3.6mm; height: 3.6mm; border-radius: 50%; vertical-align: -0.6mm; margin-right: 1.5mm; }
-  .legend b { display: inline-block; width: 3.2mm; height: 3.2mm; border: 0.35mm solid #999; border-radius: 0.8mm; vertical-align: -0.5mm; margin-right: 1.5mm; }
+  .legend u { text-decoration: none; display: inline-block; width: 4.2mm; height: 4.2mm; border: 0.4mm solid #888; border-radius: 50%; vertical-align: -0.9mm; margin-right: 1.5mm; }
+  .legend .muted { color: #767676; font-weight: 600; }
+  .legend b { display: inline-block; width: 3.2mm; height: 3.2mm; border: 0.35mm solid #777; border-radius: 0.8mm; vertical-align: -0.5mm; margin-right: 1.5mm; }
   .grid { margin-top: 5mm; flex: 1; display: grid; grid-template-columns: repeat(7, 1fr); grid-auto-rows: 1fr; gap: 2mm; }
-  .day { border: 0.3mm solid #E2E2E2; border-radius: 2.5mm; position: relative; }
-  .day .n { position: absolute; left: 2mm; top: 1.6mm; font-size: 8pt; font-weight: 700; color: #777; }
-  .day .dot { position: absolute; left: 50%; top: 50%; width: 11mm; height: 11mm; transform: translate(-50%, -45%); border: 0.35mm dashed #CFCFCF; border-radius: 50%; }
-  .day .med { position: absolute; right: 2mm; bottom: 2mm; width: 3.4mm; height: 3.4mm; border: 0.35mm solid #BBB; border-radius: 0.8mm; }
+  .day { border: 0.35mm solid #C8C8C8; border-radius: 2.5mm; position: relative; }
+  .day .n { position: absolute; left: 2mm; top: 1.6mm; font-size: 8pt; font-weight: 700; color: #555; }
+  .day .dot { position: absolute; left: 50%; top: 50%; width: 12.5mm; height: 12.5mm; transform: translate(-50%, -45%); border: 0.4mm solid #A8A8A8; border-radius: 50%; }
+  .day .med { position: absolute; right: 2mm; bottom: 2mm; width: 3.6mm; height: 3.6mm; border: 0.4mm solid #888; border-radius: 0.8mm; }
   .summary { grid-column: span 4; border-radius: 2.5mm; background: #FFEEF3; padding: 3mm 4mm; display: flex; flex-direction: column; justify-content: center; gap: 2.2mm; font-size: 9pt; font-weight: 600; }
   .summary .h { font-size: 8pt; text-transform: uppercase; letter-spacing: 0.08em; color: #B8505F; font-weight: 700; }
   .summary .row { display: flex; align-items: flex-end; gap: 2mm; }
-  .summary .row span.line { flex: 1; max-width: 22mm; border-bottom: 0.35mm solid #D9A5B0; height: 4.5mm; }
+  .summary .row span.line { flex: 1; max-width: 22mm; border-bottom: 0.35mm solid #C47A88; height: 4.5mm; }
   .note { margin-top: 4mm; font-size: 8.5pt; color: #444; line-height: 1.45; }
   table { margin-top: 5mm; width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed; flex: 1; }
-  th { text-align: left; font-size: 8pt; font-weight: 700; color: #333; padding: 2mm; background: #F4F4F4; }
+  th { text-align: left; font-size: 7.5pt; font-weight: 700; color: #222; padding: 1.8mm 1.6mm; background: #EDEDED; line-height: 1.25; vertical-align: bottom; }
   th:first-child { border-top-left-radius: 2mm; } th:last-child { border-top-right-radius: 2mm; }
-  td { border-bottom: 0.3mm solid #E2E2E2; border-right: 0.3mm solid #EFEFEF; vertical-align: top; padding: 2mm; font-size: 8pt; color: #999; }
+  td { border-bottom: 0.35mm solid #C8C8C8; border-right: 0.3mm solid #DADADA; vertical-align: top; padding: 1.2mm 1.6mm; font-size: 8pt; color: #888; }
   td:last-child { border-right: none; }
   td.int { color: #999; }
-  td.eff span { display: block; margin-bottom: 1.3mm; white-space: nowrap; }
-  td.eff b { display: inline-block; width: 3mm; height: 3mm; border: 0.35mm solid #BBB; border-radius: 0.7mm; vertical-align: -0.5mm; margin-right: 1.3mm; }
-  .chips { margin-top: 4mm; display: grid; grid-template-columns: auto 1fr; gap: 1.5mm 4mm; font-size: 8pt; }
+  td.eff span { display: block; font-size: 7pt; line-height: 3.3mm; white-space: nowrap; }
+  td.eff b { display: inline-block; width: 2.6mm; height: 2.6mm; border: 0.35mm solid #888; border-radius: 0.6mm; vertical-align: -0.4mm; margin-right: 1.2mm; }
+  .chips { margin-top: 3.5mm; display: grid; grid-template-columns: auto 1fr; gap: 1.2mm 4mm; font-size: 7.5pt; }
   .chips .k { font-weight: 700; color: #333; white-space: nowrap; }
   .chips .v { color: #555; }
   footer { margin-top: 5mm; display: flex; align-items: center; gap: 2mm; font-size: 8pt; color: #767676; }
@@ -127,11 +147,12 @@ function page1(t) {
   ).join("");
   return `
   <section class="page">
-    <header>${logo()}<h1>${t.title}</h1>
-      <div class="fields"><div class="field">${t.month} <span class="line"></span></div><div class="field short">${t.year} <span class="line"></span></div></div>
-    </header>
+    <header>${logo()}<h1>${t.title}</h1></header>
+    <div class="fields"><div class="field long">${t.name} <span class="line"></span></div><div class="field">${t.month} <span class="line"></span></div><div class="field short">${t.year} <span class="line"></span></div></div>
     <p class="intro">${t.intro}</p>
     <div class="legend">
+      <span><u></u>${t.intensity}</span>
+      <span class="muted">${t.orColour}</span>
       <span><i style="background:${COLORS.mild}"></i>${t.mild}</span>
       <span><i style="background:${COLORS.moderate}"></i>${t.moderate}</span>
       <span><i style="background:${COLORS.severe}"></i>${t.severe}</span>
@@ -149,11 +170,11 @@ function page1(t) {
 }
 
 function page2(t) {
-  const widths = [9, 12, 8, 21, 21, 17, 12];
+  const widths = [8, 11, 7, 17, 17, 15, 15, 10];
   const cols = t.cols.map((c, i) => `<th style="width:${widths[i]}%">${c}</th>`).join("");
   const eff = t.effect.map((e) => `<span><b></b>${e}</span>`).join("");
-  const rows = Array.from({ length: 7 }, () =>
-    `<tr><td></td><td></td><td class="int">&nbsp;/10</td><td></td><td></td><td></td><td class="eff">${eff}</td></tr>`,
+  const rows = Array.from({ length: 10 }, () =>
+    `<tr><td></td><td></td><td class="int">&nbsp;/10</td><td></td><td></td><td></td><td></td><td class="eff" style="padding-top:1mm;padding-bottom:1mm">${eff}</td></tr>`,
   ).join("");
   return `
   <section class="page land">
@@ -163,6 +184,7 @@ function page2(t) {
     <div class="chips">
       <span class="k">${t.triggersLabel}</span><span class="v">${t.triggers.join(" · ")}</span>
       <span class="k">${t.symptomsLabel}</span><span class="v">${t.symptoms.join(" · ")}</span>
+      <span class="k">${t.reliefLabel}</span><span class="v">${t.relief.join(" · ")}</span>
     </div>
     ${footer(t)}
   </section>`;
@@ -173,7 +195,7 @@ function footer(t) {
 }
 
 function html(locale, paper, pages) {
-  return `<!doctype html><html lang="${locale}"><head><meta charset="utf-8">
+  return `<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><title>${T[locale].docTitle}</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=block">
 <style>${css(paper)}</style></head><body>${pages.join("")}</body></html>`;
 }

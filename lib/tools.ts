@@ -4,9 +4,9 @@ import type { Rich } from "./migraine-test";
 type Faq = { q: string; a: string };
 
 export type DiaryCopy = {
-  eyebrow: string;
   path: string;
   navLabel: string;
+  menuDescription: string;
   metaTitle: string;
   description: string;
   title: string;
@@ -27,9 +27,9 @@ export type DiaryCopy = {
 };
 
 export type TestPageCopy = {
-  eyebrow: string;
   path: string;
   navLabel: string;
+  menuDescription: string;
   metaTitle: string;
   description: string;
   title: string;
@@ -40,11 +40,13 @@ export type TestPageCopy = {
   faq: Faq[];
 };
 
+export const TOOLS_LABEL: Record<BlogLocale, string> = { fr: "Outils", en: "Tools" };
+
 export const DIARY: Record<BlogLocale, DiaryCopy> = {
   fr: {
-    eyebrow: "Outil gratuit",
     path: "/outils/journal-de-migraine",
     navLabel: "Journal de migraine",
+    menuDescription: "Calendrier et tableau des crises à imprimer",
     metaTitle: "Journal de migraine à imprimer (PDF gratuit)",
     description:
       "Télécharge gratuitement un journal de migraine à imprimer : calendrier du mois, intensité, médicaments et tableau des crises à montrer à ton médecin.",
@@ -55,8 +57,8 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
     ],
     downloadNote: "PDF, 2 pages, format A4.",
     previewAlt: [
-      "Page 1 du journal : calendrier du mois avec une pastille d'intensité et une case médicament pour chaque jour",
-      "Page 2 du journal : tableau des crises avec date, horaires, intensité, symptômes, déclencheurs et traitement",
+      "Page 1 du journal : calendrier du mois avec, pour chaque jour, un rond où noter l'intensité de 1 à 10 et une case médicament",
+      "Page 2 du journal : tableau des crises avec date, horaires, intensité, symptômes, déclencheurs, médicament et soulagement sans médicament",
     ],
     whyTitle: "Pourquoi tenir un journal de migraine ?",
     why: [
@@ -75,9 +77,9 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
     ],
     howTitle: "Comment le remplir",
     steps: [
-      "Chaque jour de crise, colorie la pastille du jour selon l'intensité : rose pour une crise légère, bleu pour une crise modérée, rouge pour une crise intense.",
+      "Chaque jour de crise, écris dans le rond du jour l'intensité de 1 à 10. Si tu préfères, colorie-le : rose pour une crise légère, bleu pour une crise modérée, rouge pour une crise intense.",
       "Coche la petite case si tu as pris un médicament de crise ce jour-là.",
-      "Pour chaque crise, remplis une ligne du tableau : heures de début et de fin, symptômes, déclencheurs possibles, traitement et son effet.",
+      "Pour chaque crise, remplis une ligne du tableau : heures de début et de fin, symptômes, déclencheurs possibles, médicament pris, soulagement sans médicament (repos dans le noir, froid, respiration…) et si ça a aidé.",
       "À la fin du mois, compte tes jours de migraine et tes jours avec médicament, puis apporte le journal à ta prochaine consultation.",
     ],
     doctorTitle: "Ce que ton médecin va regarder",
@@ -107,9 +109,9 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
     ],
   },
   en: {
-    eyebrow: "Free tool",
     path: "/tools/migraine-diary",
     navLabel: "Migraine diary",
+    menuDescription: "Printable calendar and attack log",
     metaTitle: "Printable migraine diary (free PDF)",
     description:
       "Download a free printable migraine diary: a monthly calendar, intensity, medication days and an attack log to show your doctor.",
@@ -121,8 +123,8 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
     ],
     downloadNote: "PDF, 2 pages.",
     previewAlt: [
-      "Diary page 1: a monthly calendar with an intensity dot and a medication box for each day",
-      "Diary page 2: an attack log with date, times, intensity, symptoms, triggers and treatment",
+      "Diary page 1: a monthly calendar with, for each day, a circle to write the intensity from 1 to 10 and a medication box",
+      "Diary page 2: an attack log with date, times, intensity, symptoms, triggers, medication and drug-free relief",
     ],
     whyTitle: "Why keep a migraine diary?",
     why: [
@@ -141,9 +143,9 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
     ],
     howTitle: "How to fill it in",
     steps: [
-      "On each attack day, colour in that day's dot by intensity: pink for a mild attack, blue for a moderate one, red for a severe one.",
+      "On each attack day, write the intensity from 1 to 10 in that day's circle. If you prefer, color it in: pink for a mild attack, blue for a moderate one, red for a severe one.",
       "Tick the small box if you took an acute medication that day.",
-      "For each attack, fill in one row of the log: start and end times, symptoms, possible triggers, treatment and whether it helped.",
+      "For each attack, fill in one row of the log: start and end times, symptoms, possible triggers, medication taken, drug-free relief (resting in the dark, cold, breathing…) and whether it helped.",
       "At the end of the month, count your migraine days and medication days, then bring the diary to your next appointment.",
     ],
     doctorTitle: "What your doctor will look at",
@@ -176,9 +178,9 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
 
 export const TEST_PAGE: Record<BlogLocale, TestPageCopy> = {
   fr: {
-    eyebrow: "Outil gratuit",
     path: "/outils/test-migraine",
     navLabel: "Test migraine",
+    menuDescription: "Migraine ou mal de tête ? 11 questions",
     metaTitle: "Test migraine : migraine ou mal de tête ? (gratuit, 2 minutes)",
     description:
       "Réponds à 11 questions basées sur les critères médicaux de la migraine et découvre si tes maux de tête ressemblent à une migraine, à une céphalée de tension ou à autre chose.",
@@ -219,9 +221,9 @@ export const TEST_PAGE: Record<BlogLocale, TestPageCopy> = {
     ],
   },
   en: {
-    eyebrow: "Free tool",
     path: "/tools/migraine-test",
     navLabel: "Migraine test",
+    menuDescription: "Migraine or headache? 11 questions",
     metaTitle: "Migraine test: migraine or headache? (free, 2 minutes)",
     description:
       "Answer 11 questions based on the medical criteria for migraine and find out whether your headaches look like migraine, tension-type headache or something else.",
