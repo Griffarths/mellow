@@ -23,6 +23,12 @@ export const APP_STORE_RATING: { value: number; count: number } | null = {
 export const REVIEWS: Partial<Record<Locale, Review[]>> = {
   fr: [
     {
+      author: "Elodie.261",
+      rating: 5,
+      title: "Découverte de Mellow",
+      text: "J’avais commencé à noter chaque jour et chaque carte de migraine dans mes notes, je note également mes symptômes et potentiellement ce qui pouvait en mettre le déclencheur. Je ne trouvais pas cela du tout pratique et assez ennuyant à faire. Quand j’ai entendu parler de Mellow, j’ai donc directement décidé de tester. J’en suis très agréablement surprise, je trouve l’application simple d’utilisation et très complète ☺️",
+    },
+    {
       author: "Gwen 33550",
       rating: 5,
       title: "Super !!!",
