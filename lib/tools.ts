@@ -57,8 +57,8 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
     ],
     downloadNote: "PDF, 2 pages, format A4.",
     previewAlt: [
-      "Page 1 du journal : calendrier du mois avec, pour chaque jour, un rond où noter l'intensité de 1 à 10 et une case médicament",
-      "Page 2 du journal : tableau des crises avec date, horaires, intensité, symptômes, déclencheurs, médicament et soulagement sans médicament",
+      "Page 1 du journal : calendrier du mois avec, pour chaque jour, l'intensité sur 10, une case médicament et de la place pour une note",
+      "Page 2 du journal : tableau des crises avec date, horaires, intensité, symptômes, déclencheurs, médicament et soulagement sans médicament, chacun avec une case « ça a aidé »",
     ],
     whyTitle: "Pourquoi tenir un journal de migraine ?",
     why: [
@@ -77,9 +77,9 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
     ],
     howTitle: "Comment le remplir",
     steps: [
-      "Chaque jour de crise, écris dans le rond du jour l'intensité de 1 à 10. Si tu préfères, colorie-le : rose pour une crise légère, bleu pour une crise modérée, rouge pour une crise intense.",
-      "Coche la petite case si tu as pris un médicament de crise ce jour-là.",
-      "Pour chaque crise, remplis une ligne du tableau : heures de début et de fin, symptômes, déclencheurs possibles, médicament pris, soulagement sans médicament (repos dans le noir, froid, respiration…) et si ça a aidé.",
+      "Chaque jour de crise, note l'intensité de 1 à 10 en bas de la case du jour.",
+      "Coche « Méd. » si tu as pris un médicament de crise ce jour-là. Tu peux aussi écrire un mot sur la journée : règles, mauvaise nuit, stress.",
+      "Pour chaque crise, remplis une ligne du tableau : heures de début et de fin, symptômes, déclencheurs possibles, médicament pris et soulagement sans médicament, en cochant pour chacun s'il a aidé.",
       "À la fin du mois, compte tes jours de migraine et tes jours avec médicament, puis apporte le journal à ta prochaine consultation.",
     ],
     doctorTitle: "Ce que ton médecin va regarder",
@@ -123,8 +123,8 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
     ],
     downloadNote: "PDF, 2 pages.",
     previewAlt: [
-      "Diary page 1: a monthly calendar with, for each day, a circle to write the intensity from 1 to 10 and a medication box",
-      "Diary page 2: an attack log with date, times, intensity, symptoms, triggers, medication and drug-free relief",
+      "Diary page 1: a monthly calendar with, for each day, the intensity out of 10, a medication box and room for a note",
+      "Diary page 2: an attack log with date, times, intensity, symptoms, triggers, medication and drug-free relief, each with a \"did it help\" box",
     ],
     whyTitle: "Why keep a migraine diary?",
     why: [
@@ -143,9 +143,9 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
     ],
     howTitle: "How to fill it in",
     steps: [
-      "On each attack day, write the intensity from 1 to 10 in that day's circle. If you prefer, color it in: pink for a mild attack, blue for a moderate one, red for a severe one.",
-      "Tick the small box if you took an acute medication that day.",
-      "For each attack, fill in one row of the log: start and end times, symptoms, possible triggers, medication taken, drug-free relief (resting in the dark, cold, breathing…) and whether it helped.",
+      "On each attack day, write the intensity from 1 to 10 at the bottom of that day's box.",
+      "Tick “Med” if you took an acute medication that day. You can also jot down a word about the day: period, bad night, stress.",
+      "For each attack, fill in one row of the log: start and end times, symptoms, possible triggers, medication taken and drug-free relief, ticking for each whether it helped.",
       "At the end of the month, count your migraine days and medication days, then bring the diary to your next appointment.",
     ],
     doctorTitle: "What your doctor will look at",

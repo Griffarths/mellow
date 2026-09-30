@@ -13,8 +13,6 @@ const CHROME =
   process.env.CHROME ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const FLEUR = readFileSync(path.join(ROOT, "public/blobs/Fleur1.svg"), "utf8");
 
-const COLORS = { mild: "#F4C1D8", moderate: "#BFD4EE", severe: "#F1A6B1" };
-
 const T = {
   fr: {
     title: "Journal de migraine",
@@ -22,21 +20,21 @@ const T = {
     name: "Prénom",
     month: "Mois",
     year: "Année",
-    intro: "Chaque jour de crise, écris dans le rond l'intensité de 1 à 10, ou colorie-le selon la légende. Coche la case si tu as pris un médicament de crise.",
-    intensity: "Intensité de 1 à 10 dans le rond",
-    orColour: "ou colorie :",
-    mild: "Légère (1 à 3)",
-    moderate: "Modérée (4 à 6)",
-    severe: "Intense (7 à 10)",
-    med: "Médicament pris",
+    intro: "Chaque jour de crise, note l'intensité de 1 à 10 en bas de la case et coche « Méd. » si tu as pris un médicament de crise. Tu peux aussi écrire un mot sur la journée : règles, mauvaise nuit, stress…",
+    keyIntensity: "Intensité de la crise, de 1 à 10",
+    keyMed: "Médicament de crise pris",
+    keyNote: "Un mot sur la journée",
+    noteSample: "règles",
+    medShort: "Méd.",
     summary: "Ce mois-ci",
     migraineDays: "Jours de migraine",
     medDays: "Jours avec médicament",
     note: "Plus de 10 jours avec un médicament de crise dans le mois ? Parles-en à ton médecin : c'est le seuil de l'abus médicamenteux.",
     logTitle: "Détail de mes crises",
-    logIntro: "Une ligne par crise, avec ce qui t'a soulagé. Imprime cette page autant de fois que nécessaire.",
-    cols: ["Date", "Début et fin", "Intensité", "Symptômes", "Déclencheurs possibles", "Médicament et heure", "Soulagement sans médicament", "Ça a aidé ?"],
-    effect: ["Oui", "En partie", "Non"],
+    logIntro: "Une ligne par crise. Pour chaque médicament ou soulagement, coche s'il a aidé. Imprime cette page autant de fois que nécessaire.",
+    cols: ["Date", "Début et fin", "Intensité", "Symptômes", "Déclencheurs possibles", "Médicament et heure", "Soulagement sans médicament"],
+    helped: "Ça a aidé :",
+    effect: ["Oui", "Un peu", "Non"],
     triggersLabel: "Déclencheurs fréquents",
     triggers: ["Stress", "Manque de sommeil", "Repas sauté", "Règles", "Météo", "Écrans", "Alcool", "Déshydratation", "Caféine", "Lumière intense"],
     symptomsLabel: "Symptômes fréquents",
@@ -51,21 +49,21 @@ const T = {
     name: "Name",
     month: "Month",
     year: "Year",
-    intro: "On each attack day, write the intensity from 1 to 10 in the circle, or color it in using the key. Tick the box if you took an acute medication.",
-    intensity: "Intensity from 1 to 10 in the circle",
-    orColour: "or color:",
-    mild: "Mild (1 to 3)",
-    moderate: "Moderate (4 to 6)",
-    severe: "Severe (7 to 10)",
-    med: "Medication taken",
+    intro: "On each attack day, write the intensity from 1 to 10 at the bottom of the box and tick “Med” if you took an acute medication. You can also jot down a word about the day: period, bad night, stress…",
+    keyIntensity: "Attack intensity, 1 to 10",
+    keyMed: "Acute medication taken",
+    keyNote: "A word about the day",
+    noteSample: "period",
+    medShort: "Med",
     summary: "This month",
     migraineDays: "Migraine days",
     medDays: "Days with medication",
     note: "More than 10 days with acute medication this month? Talk to your doctor: that is the medication-overuse threshold.",
     logTitle: "Attack log",
-    logIntro: "One row per attack, with what gave you relief. Print this page as many times as you need.",
-    cols: ["Date", "Start and end", "Intensity", "Symptoms", "Possible triggers", "Medication and time", "Drug-free relief", "Did it help?"],
-    effect: ["Yes", "Partly", "No"],
+    logIntro: "One row per attack. For each medication or relief, tick whether it helped. Print this page as many times as you need.",
+    cols: ["Date", "Start and end", "Intensity", "Symptoms", "Possible triggers", "Medication and time", "Drug-free relief"],
+    helped: "Helped:",
+    effect: ["Yes", "A bit", "No"],
     triggersLabel: "Common triggers",
     triggers: ["Stress", "Lack of sleep", "Skipped meal", "Period", "Weather", "Screens", "Alcohol", "Dehydration", "Caffeine", "Bright light"],
     symptomsLabel: "Common symptoms",
@@ -81,6 +79,9 @@ const PAPER = {
   letter: { w: 215.9, h: 279.4 },
 };
 
+const LINE = "#B5B5B5";
+const GRID = "#D0D0D0";
+
 function css(paper) {
   const { w, h } = PAPER[paper];
   return `
@@ -90,13 +91,12 @@ function css(paper) {
   html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body { font-family: "Plus Jakarta Sans", Helvetica, Arial, sans-serif; color: #000; }
   .page { width: ${w}mm; height: ${h}mm; padding: 13mm 13mm 11mm; display: flex; flex-direction: column; break-after: page; overflow: hidden; }
+  .page:last-child { break-after: auto; }
   .page.land { page: land; width: ${h}mm; height: ${w}mm; padding: 10mm 13mm 9mm; }
   .page.land header svg { width: 11mm; height: 11mm; }
   .page.land h1 { font-size: 18pt; }
   .page.land .intro { margin-top: 2.5mm; max-width: none; }
-  .page.land table { margin-top: 3.5mm; }
   .page.land footer { margin-top: 3.5mm; }
-  .page:last-child { break-after: auto; }
   header { display: flex; align-items: center; gap: 4mm; }
   header svg { width: 15mm; height: 15mm; flex: none; }
   h1 { font-size: 22pt; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
@@ -105,30 +105,38 @@ function css(paper) {
   .field span.line { display: inline-block; width: 30mm; border-bottom: 0.35mm solid #999; height: 5mm; }
   .field.long span.line { width: 36mm; }
   .field.short span.line { width: 16mm; }
-  .intro { margin-top: 4mm; font-size: 9pt; color: #555; line-height: 1.45; max-width: 150mm; }
-  .legend { margin-top: 4mm; display: flex; flex-wrap: wrap; gap: 5mm; font-size: 8.5pt; font-weight: 600; color: #333; }
-  .legend i { display: inline-block; width: 3.6mm; height: 3.6mm; border-radius: 50%; vertical-align: -0.6mm; margin-right: 1.5mm; }
-  .legend u { text-decoration: none; display: inline-block; width: 4.2mm; height: 4.2mm; border: 0.4mm solid #888; border-radius: 50%; vertical-align: -0.9mm; margin-right: 1.5mm; }
-  .legend .muted { color: #767676; font-weight: 600; }
-  .legend b { display: inline-block; width: 3.2mm; height: 3.2mm; border: 0.35mm solid #777; border-radius: 0.8mm; vertical-align: -0.5mm; margin-right: 1.5mm; }
+  .intro { margin-top: 4mm; font-size: 9pt; color: #555; line-height: 1.45; max-width: 160mm; }
+
+  /* Page 1: legend samples mirror what sits in each day box. */
+  .legend { margin-top: 4mm; display: flex; flex-wrap: wrap; gap: 3mm 7mm; font-size: 8.5pt; font-weight: 600; color: #333; }
+  .legend > span { display: inline-flex; align-items: center; gap: 2mm; }
+  .sample { display: inline-flex; align-items: flex-end; gap: 0.8mm; font-size: 7.5pt; font-weight: 700; color: #555; border: 0.3mm solid ${GRID}; border-radius: 1.5mm; padding: 1mm 1.6mm; }
+  .sample i, .day .int i { display: inline-block; width: 6mm; height: 3.6mm; border-bottom: 0.35mm solid #888; }
+  .sample b, .day .med b { display: inline-block; width: 3.2mm; height: 3.2mm; border: 0.4mm solid #888; border-radius: 0.7mm; }
+  .sample.med { align-items: center; font-size: 6.5pt; font-weight: 600; }
+  .sample.note { align-items: center; font-style: italic; font-weight: 500; color: #777; }
   .grid { margin-top: 5mm; flex: 1; display: grid; grid-template-columns: repeat(7, 1fr); grid-auto-rows: 1fr; gap: 2mm; }
-  .day { border: 0.35mm solid #C8C8C8; border-radius: 2.5mm; position: relative; }
-  .day .n { position: absolute; left: 2mm; top: 1.6mm; font-size: 8pt; font-weight: 700; color: #555; }
-  .day .dot { position: absolute; left: 50%; top: 50%; width: 12.5mm; height: 12.5mm; transform: translate(-50%, -45%); border: 0.4mm solid #A8A8A8; border-radius: 50%; }
-  .day .med { position: absolute; right: 2mm; bottom: 2mm; width: 3.6mm; height: 3.6mm; border: 0.4mm solid #888; border-radius: 0.8mm; }
+  .day { border: 0.35mm solid ${LINE}; border-radius: 2.5mm; position: relative; }
+  .day .n { position: absolute; left: 2mm; top: 1.6mm; font-size: 8.5pt; font-weight: 800; color: #333; }
+  .day .med { position: absolute; right: 1.8mm; top: 1.8mm; display: flex; align-items: center; gap: 0.9mm; font-size: 6.5pt; font-weight: 600; color: #555; }
+  .day .int { position: absolute; right: 1.8mm; bottom: 1.8mm; display: flex; align-items: flex-end; gap: 0.8mm; font-size: 7.5pt; font-weight: 700; color: #555; }
   .summary { grid-column: span 4; border-radius: 2.5mm; background: #FFEEF3; padding: 3mm 4mm; display: flex; flex-direction: column; justify-content: center; gap: 2.2mm; font-size: 9pt; font-weight: 600; }
   .summary .h { font-size: 8pt; text-transform: uppercase; letter-spacing: 0.08em; color: #B8505F; font-weight: 700; }
   .summary .row { display: flex; align-items: flex-end; gap: 2mm; }
   .summary .row span.line { flex: 1; max-width: 22mm; border-bottom: 0.35mm solid #C47A88; height: 4.5mm; }
   .note { margin-top: 4mm; font-size: 8.5pt; color: #444; line-height: 1.45; }
-  table { margin-top: 5mm; width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed; flex: 1; }
-  th { text-align: left; font-size: 7.5pt; font-weight: 700; color: #222; padding: 1.8mm 1.6mm; background: #EDEDED; line-height: 1.25; vertical-align: bottom; }
-  th:first-child { border-top-left-radius: 2mm; } th:last-child { border-top-right-radius: 2mm; }
-  td { border-bottom: 0.35mm solid #C8C8C8; border-right: 0.3mm solid #DADADA; vertical-align: top; padding: 1.2mm 1.6mm; font-size: 8pt; color: #888; }
-  td:last-child { border-right: none; }
-  td.int { color: #999; }
-  td.eff span { display: block; font-size: 7pt; line-height: 3.3mm; white-space: nowrap; }
-  td.eff b { display: inline-block; width: 2.6mm; height: 2.6mm; border: 0.35mm solid #888; border-radius: 0.6mm; vertical-align: -0.4mm; margin-right: 1.2mm; }
+
+  /* Page 2: framed table with a regular grid. */
+  .tbl { margin-top: 3.5mm; flex: 1; display: flex; border: 0.4mm solid ${LINE}; border-radius: 2.5mm; overflow: hidden; }
+  table { flex: 1; width: 100%; border-collapse: collapse; table-layout: fixed; }
+  th { text-align: left; vertical-align: bottom; font-size: 7.5pt; font-weight: 700; color: #222; line-height: 1.25; padding: 1.8mm 2mm; background: #F2F2F2; border-bottom: 0.4mm solid ${LINE}; border-right: 0.3mm solid ${GRID}; }
+  td { position: relative; vertical-align: top; padding: 1.2mm 2mm; border-top: 0.3mm solid ${GRID}; border-right: 0.3mm solid ${GRID}; }
+  th:last-child, td:last-child { border-right: none; }
+  tbody tr:first-child td { border-top: none; }
+  td .ten { position: absolute; right: 2mm; bottom: 1.3mm; font-size: 8pt; font-weight: 700; color: #777; }
+  td .help { position: absolute; left: 2mm; right: 2mm; bottom: 1.3mm; display: flex; align-items: center; gap: 1.8mm; font-size: 6.5pt; color: #666; white-space: nowrap; }
+  td .help span { display: inline-flex; align-items: center; gap: 0.8mm; }
+  td .help b { display: inline-block; width: 2.6mm; height: 2.6mm; border: 0.35mm solid #888; border-radius: 0.6mm; }
   .chips { margin-top: 3.5mm; display: grid; grid-template-columns: auto 1fr; gap: 1.2mm 4mm; font-size: 7.5pt; }
   .chips .k { font-weight: 700; color: #333; white-space: nowrap; }
   .chips .v { color: #555; }
@@ -141,9 +149,11 @@ function css(paper) {
 
 const logo = (cls = "") => FLEUR.replace("<svg", `<svg class="${cls}"`);
 
+// Each day box: day number, "Med" tick box top right, intensity /10 bottom
+// right, and free space in the middle for a word about the day.
 function page1(t) {
   const days = Array.from({ length: 31 }, (_, i) =>
-    `<div class="day"><span class="n">${i + 1}</span><span class="dot"></span><span class="med"></span></div>`,
+    `<div class="day"><span class="n">${i + 1}</span><span class="med"><b></b>${t.medShort}</span><span class="int"><i></i>/10</span></div>`,
   ).join("");
   return `
   <section class="page">
@@ -151,12 +161,9 @@ function page1(t) {
     <div class="fields"><div class="field long">${t.name} <span class="line"></span></div><div class="field">${t.month} <span class="line"></span></div><div class="field short">${t.year} <span class="line"></span></div></div>
     <p class="intro">${t.intro}</p>
     <div class="legend">
-      <span><u></u>${t.intensity}</span>
-      <span class="muted">${t.orColour}</span>
-      <span><i style="background:${COLORS.mild}"></i>${t.mild}</span>
-      <span><i style="background:${COLORS.moderate}"></i>${t.moderate}</span>
-      <span><i style="background:${COLORS.severe}"></i>${t.severe}</span>
-      <span><b></b>${t.med}</span>
+      <span><span class="sample"><i></i>/10</span>${t.keyIntensity}</span>
+      <span><span class="sample med"><b></b>${t.medShort}</span>${t.keyMed}</span>
+      <span><span class="sample note">${t.noteSample}</span>${t.keyNote}</span>
     </div>
     <div class="grid">${days}
       <div class="summary"><span class="h">${t.summary}</span>
@@ -169,18 +176,20 @@ function page1(t) {
   </section>`;
 }
 
+// "Did it help?" sits inside the medication and the relief cells so it is
+// clear which one helped.
 function page2(t) {
-  const widths = [8, 11, 7, 17, 17, 15, 15, 10];
+  const widths = [8, 11, 8, 17, 17, 19.5, 19.5];
   const cols = t.cols.map((c, i) => `<th style="width:${widths[i]}%">${c}</th>`).join("");
-  const eff = t.effect.map((e) => `<span><b></b>${e}</span>`).join("");
+  const help = `<div class="help">${t.helped}${t.effect.map((e) => `<span><b></b>${e}</span>`).join("")}</div>`;
   const rows = Array.from({ length: 10 }, () =>
-    `<tr><td></td><td></td><td class="int">&nbsp;/10</td><td></td><td></td><td></td><td></td><td class="eff" style="padding-top:1mm;padding-bottom:1mm">${eff}</td></tr>`,
+    `<tr><td></td><td></td><td><span class="ten">/10</span></td><td></td><td></td><td>${help}</td><td>${help}</td></tr>`,
   ).join("");
   return `
   <section class="page land">
     <header>${logo()}<h1>${t.logTitle}</h1></header>
     <p class="intro">${t.logIntro}</p>
-    <table><thead><tr>${cols}</tr></thead><tbody>${rows}</tbody></table>
+    <div class="tbl"><table><thead><tr>${cols}</tr></thead><tbody>${rows}</tbody></table></div>
     <div class="chips">
       <span class="k">${t.triggersLabel}</span><span class="v">${t.triggers.join(" · ")}</span>
       <span class="k">${t.symptomsLabel}</span><span class="v">${t.symptoms.join(" · ")}</span>
