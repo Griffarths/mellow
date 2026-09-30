@@ -64,17 +64,17 @@ const STEPS = [
   {
     n: 1,
     text: "Appuie sur  ⋯  (en haut à droite)",
-    bg: "bg-[#FFE5E5]",
+    bg: "bg-croix-tint",
   },
   {
     n: 2,
     text: "Choisis « Ouvrir dans le navigateur »",
-    bg: "bg-[#FADFCC]",
+    bg: "bg-sable-tint",
   },
   {
     n: 3,
     text: "Télécharge Mellow sur l'App Store",
-    bg: "bg-[#DFE8F5]",
+    bg: "bg-tagada-tint",
   },
 ];
 
@@ -109,10 +109,10 @@ export default async function DownloadPage({ params }: Props) {
           className="h-20 w-20 select-none md:h-32 md:w-32"
         />
 
-        <h1 className="hero-title mt-5 text-3xl font-bold tracking-tight md:mt-10 md:text-6xl">
+        <h1 className="mt-5 text-[30px] font-extrabold leading-tight tracking-tight text-ink md:mt-10 md:text-h1">
           Une dernière étape
         </h1>
-        <p className="mt-3 max-w-md text-base text-black/60 md:mt-5 md:text-xl">
+        <p className="mt-3 max-w-md text-base text-ink-2 md:mt-5 md:text-xl">
           Pour télécharger Mellow, ouvre cette page dans le navigateur
         </p>
 
@@ -120,9 +120,9 @@ export default async function DownloadPage({ params }: Props) {
           {STEPS.map((step) => (
             <li
               key={step.n}
-              className={`flex items-center gap-3 rounded-2xl p-3.5 text-left md:flex-col md:items-start md:gap-4 md:rounded-[40px] md:p-8 ${step.bg}`}
+              className={`flex items-center gap-3 rounded-btn p-3.5 text-left md:flex-col md:items-start md:gap-4 md:rounded-card md:p-8 ${step.bg}`}
             >
-              <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/70 text-sm font-bold text-ink md:h-12 md:w-12 md:text-lg">
+              <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white text-sm font-bold text-ink md:h-12 md:w-12 md:text-lg">
                 {step.n}
               </div>
               <p className="text-sm font-semibold leading-snug tracking-tight text-ink md:text-xl">
@@ -133,8 +133,8 @@ export default async function DownloadPage({ params }: Props) {
         </ol>
       </section>
 
-      <footer className="border-t border-black/5 py-8">
-        <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-6 text-sm text-black/50">
+      <footer className="border-t border-surface-line py-8">
+        <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-6 text-sm text-ink-3">
           <img
             src="/blobs/Fleur1.svg"
             alt=""
@@ -142,7 +142,7 @@ export default async function DownloadPage({ params }: Props) {
             draggable={false}
             className="h-7 w-7 select-none"
           />
-          <span className="font-semibold text-black/80">Mellow</span>
+          <span className="font-bold text-ink">Mellow</span>
         </div>
       </footer>
       </main>

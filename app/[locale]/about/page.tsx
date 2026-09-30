@@ -74,19 +74,19 @@ export default async function AboutPage({ params }: Props) {
         <BackToHome />
 
         <article className="mx-auto mt-10 max-w-[65ch]">
-          <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+          <h1 className="text-h1 text-ink">
             About
           </h1>
 
-          <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
             Hi, I&apos;m Laurine 👋
           </h2>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             I&apos;m{" "}
             <strong className="font-semibold text-ink">Laurine Nicoletti</strong>,
             an indie developer based in Bordeaux, France, and I have migraines.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             I built Mellow because{" "}
             <strong className="font-semibold text-ink">
               I needed this app for myself
@@ -94,10 +94,10 @@ export default async function AboutPage({ params }: Props) {
             .
           </p>
 
-          <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
             My story with migraine
           </h2>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             I had my first migraine at{" "}
             <strong className="font-semibold text-ink">21</strong>. Today, I get
             one{" "}
@@ -106,7 +106,7 @@ export default async function AboutPage({ params }: Props) {
             </strong>{" "}
             on average.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             I have{" "}
             <strong className="font-semibold text-ink">
               migraine without aura
@@ -119,7 +119,7 @@ export default async function AboutPage({ params }: Props) {
             <strong className="font-semibold text-ink">sound sensitivity</strong>
             . It takes out a whole day. Sometimes more.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             If you&apos;re reading this, you probably already know what that
             feels like. That sensation where{" "}
             <strong className="font-semibold text-ink">
@@ -130,51 +130,51 @@ export default async function AboutPage({ params }: Props) {
             game for hours.
           </p>
 
-          <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
             Why this app
           </h2>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             According to the WHO, migraine is{" "}
             <strong className="font-semibold text-ink">
               the 2nd most disabling condition in the world
             </strong>{" "}
             for people under 50.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             And yet, we keep treating it like a simple headache.{" "}
             <em className="italic">
               &quot;Drink some water, take a Tylenol, you&apos;ll be fine.&quot;
             </em>{" "}
             As if it&apos;s all in your head. As if you&apos;re exaggerating.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             I looked for tools to better understand my own attacks. Identify my
             triggers. See what works, what doesn&apos;t. Have concrete data to
             bring to my doctor.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             What I found frustrated me. Apps so complex they take 5 minutes to
             log an attack when your skull is already pounding. Designs straight
             out of 2010. High prices or aggressive paywalls on basic features.
             Apps that feel like medical records, not like a daily companion.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             So I decided to build one myself. An app{" "}
             <strong className="font-semibold text-ink">
               made by someone with migraines, not by a marketing committee.
             </strong>
           </p>
 
-          <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
             What I care about in Mellow
           </h2>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             <strong className="font-semibold text-ink">Simple UX.</strong>{" "}
             Logging an attack takes a few seconds. No endless forms. No
             friction. When your head is pounding, you don&apos;t want to fight
             an interface.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             <strong className="font-semibold text-ink">
               Thoughtful design.
             </strong>{" "}
@@ -183,7 +183,7 @@ export default async function AboutPage({ params }: Props) {
             That&apos;s where the name <em className="italic">Mellow</em> comes
             from.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             <strong className="font-semibold text-ink">
               Accessible pricing.
             </strong>{" "}
@@ -192,24 +192,24 @@ export default async function AboutPage({ params }: Props) {
             analytics, personalized statistics, weather data, and more). No
             inflated prices.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             <strong className="font-semibold text-ink">Sourced content.</strong>{" "}
             Every article on the Mellow blog is written from recognized medical
             sources. WHO, Mayo Clinic, NHS, American Migraine Foundation,
             Migraine Trust, and more. No unverified &quot;miracle cures.&quot;
             No health misinformation.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             <strong className="font-semibold text-ink">
               Never selling your data.
             </strong>{" "}
             Mellow will never sell your health data. That&apos;s a hard line.
           </p>
 
-          <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
             What Mellow is not
           </h2>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Mellow{" "}
             <strong className="font-semibold text-ink">
               is not a substitute for medical advice
@@ -220,30 +220,30 @@ export default async function AboutPage({ params }: Props) {
             professionals taking care of you.
           </p>
 
-          <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
             What&apos;s next
           </h2>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Mellow is still young. I&apos;m building it solo, at my own pace,
             listening to the migraine community using it.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             If you use Mellow and want to share an idea, a bug, or just say hi,
             you can reach me at{" "}
             <strong className="font-semibold text-ink">
               <a
                 href="mailto:contact.mellow@proton.me"
-                className="text-mellow-rose underline-offset-2 hover:underline"
+                className="text-croix-ink underline decoration-croix-ink/30 decoration-2 underline-offset-[3px] transition hover:decoration-croix-ink"
               >
                 contact.mellow@proton.me
               </a>
             </strong>
             .
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Thanks for being here. And take care of yourself.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">Laurine</p>
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">Laurine</p>
         </article>
       </main>
       <Footer />
@@ -259,7 +259,7 @@ function BackToHome() {
   return (
     <a
       href="/"
-      className="inline-flex items-center gap-1 text-sm text-black/55 transition hover:text-black"
+      className="inline-flex items-center gap-1 rounded-chip bg-surface-soft px-3 py-2 text-sm font-semibold text-ink-2 transition hover:bg-surface-line hover:text-ink"
     >
       ← Home
     </a>

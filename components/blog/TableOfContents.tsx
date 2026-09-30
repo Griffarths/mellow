@@ -8,10 +8,10 @@ export function TableOfContents({ content }: { content: string }) {
 
   return (
     <nav aria-label={t("tocTitle")} className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
-      <p className="text-sm font-semibold tracking-wide text-black/80">
+      <p className="text-caption font-bold uppercase tracking-[0.08em] text-ink-3">
         {t("tocTitle")}
       </p>
-      <ul className="mt-3 space-y-2 text-sm">
+      <ul className="mt-4 space-y-2.5 border-l border-surface-line pl-4 text-sm">
         {headings.map((h) => (
           <li
             key={`${h.level}-${h.slug}`}
@@ -19,7 +19,7 @@ export function TableOfContents({ content }: { content: string }) {
           >
             <a
               href={`#${h.slug}`}
-              className="text-black/55 transition hover:text-black"
+              className="block leading-snug text-ink-2 transition hover:text-ink"
             >
               {h.text}
             </a>

@@ -1,9 +1,9 @@
 import type { Article } from "@/lib/blog";
-
-const DEFAULT_BG = "#FFE8EC";
+import { TONES, toneForImage } from "@/lib/tones";
+import { typographize } from "@/lib/typography";
 
 export function ArticleHeader({ article }: { article: Article }) {
-  const bg = article.coverBgColor ?? DEFAULT_BG;
+  const tone = TONES[toneForImage(article.coverImage)];
   const formatted = new Intl.DateTimeFormat(article.locale, {
     dateStyle: "long",
   }).format(new Date(article.publishedAt));
@@ -12,39 +12,21 @@ export function ArticleHeader({ article }: { article: Article }) {
   return (
     <header>
       <div
-        className="flex aspect-[16/9] items-center justify-center rounded-3xl"
-        style={{ background: bg }}
+        className={`flex aspect-[16/9] items-center justify-center rounded-card md:aspect-[21/9] ${tone.tint}`}
       >
         <img
           src={article.coverImage}
           alt=""
           aria-hidden
           draggable={false}
-          className="h-40 w-40 select-none md:h-52 md:w-52"
+          className="breathe h-32 w-32 select-none md:h-44 md:w-44"
         />
       </div>
-      <h1 className="mt-10 text-4xl font-bold tracking-tight md:text-5xl">
-        {article.title}
-      </h1>
-      <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-black/55">
+      <h1 className="mt-8 text-h1 text-ink md:mt-10">{typographize(article.title, article.locale)}</h1>
+      <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-ink-3">
         <time dateTime={article.publishedAt}>{formatted}</time>
         <span aria-hidden>·</span>
         <span>{minutes} min</span>
-        {article.tags.length > 0 && (
-          <>
-            <span aria-hidden>·</span>
-            <div className="flex flex-wrap gap-1.5">
-              {article.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full bg-black/[0.05] px-2 py-0.5 text-xs text-black/60"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </>
-        )}
       </div>
     </header>
   );

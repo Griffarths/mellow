@@ -58,12 +58,12 @@ function PrivacyContent({ locale }: { locale: Locale }) {
       <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-sm text-black/50 transition hover:text-black"
+          className="inline-flex items-center gap-1 rounded-chip bg-surface-soft px-3 py-2 text-sm font-semibold text-ink-2 transition hover:bg-surface-line hover:text-ink"
         >
           {t("back")}
         </Link>
 
-        <article className="prose prose-neutral mt-6 max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h1:text-4xl md:prose-h1:text-5xl prose-h2:mt-14 prose-h2:text-2xl md:prose-h2:text-3xl prose-h3:mt-10 prose-h3:text-xl prose-p:text-black/70 prose-a:text-mellow-rose prose-a:underline-offset-2 prose-strong:text-ink prose-li:text-black/70">
+        <article className="prose mt-8 max-w-none prose-headings:font-extrabold prose-headings:tracking-tight prose-headings:text-ink prose-h1:text-h1 prose-h2:mt-14 prose-h2:text-[24px] md:prose-h2:text-[30px] prose-h3:mt-10 prose-h3:text-xl prose-p:text-ink-body prose-a:font-semibold prose-a:text-croix-ink prose-a:underline-offset-[3px] prose-strong:text-ink prose-li:text-ink-body prose-li:marker:text-croix-accent">
           <Content />
         </article>
       </main>

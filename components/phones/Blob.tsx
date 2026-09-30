@@ -5,6 +5,7 @@ type BlobName =
   | "Croix2"
   | "Tagada1"
   | "Tagada2"
+  | "Humeur1"
   | "Trio";
 
 type Props = {

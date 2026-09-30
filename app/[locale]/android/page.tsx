@@ -3,6 +3,8 @@ import { setRequestLocale } from "next-intl/server";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import type { Locale } from "@/i18n/routing";
+import { buttonClass } from "@/components/ui/Button";
+import { typographize } from "@/lib/typography";
 
 const STEP1_URL = "https://groups.google.com/g/testeurs-mellow/about";
 const STEP2_URL =
@@ -293,30 +295,30 @@ export default async function AndroidPage({
     <>
       <Nav />
       <main className="mx-auto max-w-2xl px-6 py-16 md:py-24">
-        <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+        <h1 className="text-h1 text-ink">
           {t.title}
         </h1>
-        <p className="mt-6 text-lg leading-relaxed text-black/70">{t.intro}</p>
+        <p className="mt-6 text-lg leading-relaxed text-ink-2">{typographize(t.intro, locale)}</p>
 
-        <div className="mt-12 flex flex-col gap-5">
+        <div className="mt-10 flex flex-col gap-3 md:mt-12 md:gap-4">
           {/* Step 1 */}
-          <div className="rounded-2xl border border-black/10 bg-white p-8">
-            <p className="text-xs font-bold uppercase tracking-widest text-mellow-rose">
+          <div className="rounded-card bg-fleur-tint p-6 md:p-8">
+            <p className="text-caption font-bold uppercase tracking-[0.08em] text-croix-ink">
               {t.step1.num}
             </p>
-            <h2 className="mt-2 text-xl font-bold tracking-tight">
+            <h2 className="mt-2 text-h3 text-ink">
               {t.step1.heading}
             </h2>
             {t.step1.body.map((paragraph, i) => (
-              <p key={i} className="mt-2 text-black/70">
-                {paragraph}
+              <p key={i} className="mt-2 text-ink-body">
+                {typographize(paragraph, locale)}
               </p>
             ))}
             <a
               href={STEP1_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:opacity-80"
+              className={buttonClass("primary", "mt-6")}
             >
               {t.step1.btn}
               <svg
@@ -340,19 +342,19 @@ export default async function AndroidPage({
           </div>
 
           {/* Step 2 */}
-          <div className="rounded-2xl border border-black/10 bg-white p-8">
-            <p className="text-xs font-bold uppercase tracking-widest text-mellow-rose">
+          <div className="rounded-card bg-tagada-tint p-6 md:p-8">
+            <p className="text-caption font-bold uppercase tracking-[0.08em] text-croix-ink">
               {t.step2.num}
             </p>
-            <h2 className="mt-2 text-xl font-bold tracking-tight">
+            <h2 className="mt-2 text-h3 text-ink">
               {t.step2.heading}
             </h2>
-            <p className="mt-2 text-black/70">{t.step2.body}</p>
+            <p className="mt-2 text-ink-body">{typographize(t.step2.body, locale)}</p>
             <a
               href={STEP2_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:opacity-80"
+              className={buttonClass("primary", "mt-6")}
             >
               {t.step2.btn}
               <svg
@@ -377,17 +379,17 @@ export default async function AndroidPage({
         </div>
 
         {/* Important */}
-        <div className="mt-8 rounded-2xl bg-mellow-pink/40 px-8 py-6">
-          <p className="font-bold">{t.important.heading}</p>
-          <p className="mt-1 text-black/70">{t.important.body}</p>
+        <div className="mt-3 rounded-card bg-sable-tint p-6 md:mt-4 md:p-8">
+          <p className="font-bold text-ink">{t.important.heading}</p>
+          <p className="mt-1 text-ink-body">{typographize(t.important.body, locale)}</p>
         </div>
 
         {/* Contact */}
-        <p className="mt-8 text-sm text-black/50">
+        <p className="mt-8 text-sm text-ink-3">
           {t.contact}{" "}
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            className="text-mellow-rose underline underline-offset-2"
+            className="font-semibold text-croix-ink underline underline-offset-[3px]"
           >
             {CONTACT_EMAIL}
           </a>

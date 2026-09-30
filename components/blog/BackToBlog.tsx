@@ -6,7 +6,7 @@ export function BackToBlog() {
   return (
     <Link
       href="/blog"
-      className="inline-flex items-center gap-1 text-sm text-black/55 transition hover:text-black"
+      className="inline-flex items-center gap-1 rounded-chip bg-surface-soft px-3 py-2 text-sm font-semibold text-ink-2 transition hover:bg-surface-line hover:text-ink"
     >
       ← {t("backToBlog")}
     </Link>

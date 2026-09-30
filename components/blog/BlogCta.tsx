@@ -4,14 +4,19 @@ import { AppStoreButton } from "@/components/AppStoreButton";
 export function BlogCta() {
   const t = useTranslations("blog");
   return (
-    <aside className="mt-16 rounded-3xl bg-mellow-pink/30 p-8 text-center md:p-12">
-      <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-        {t("ctaTitle")}
-      </h2>
-      <p className="mx-auto mt-3 max-w-md text-black/70">{t("ctaSubtitle")}</p>
-      <div className="mt-6 flex justify-center">
-        <AppStoreButton />
+    <aside className="relative mt-16 overflow-hidden rounded-card bg-hero p-7 pb-24 md:p-10 md:pr-60">
+      <h2 className="text-h3 text-ink md:text-[28px]">{t("ctaTitle")}</h2>
+      <p className="mt-3 max-w-md text-ink-2">{t("ctaSubtitle")}</p>
+      <div className="mt-6">
+        <AppStoreButton sizeClass="h-12 w-auto select-none md:h-14" />
       </div>
+      <img
+        src="/blobs/Fleur1.svg"
+        alt=""
+        aria-hidden
+        draggable={false}
+        className="pointer-events-none absolute -bottom-8 -right-6 h-32 w-32 select-none md:-bottom-10 md:right-4 md:h-52 md:w-52"
+      />
     </aside>
   );
 }

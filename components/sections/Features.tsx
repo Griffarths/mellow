@@ -12,28 +12,28 @@ type FeatureMeta = {
 const FEATURES: FeatureMeta[] = [
   {
     id: "logging",
-    bg: "bg-[#FFE5E5]",
+    bg: "bg-croix-tint",
     image: "/assets/Migraine3%28site%29.svg",
     span: "big",
     multilineTitle: true,
   },
   {
     id: "triggers",
-    bg: "bg-[#FADFCC]",
+    bg: "bg-sable-tint",
     image: "/assets/Historique.svg",
     span: "small",
     multilineTitle: false,
   },
   {
     id: "pressure",
-    bg: "bg-[#DFE8F5]",
+    bg: "bg-tagada-tint",
     image: "/assets/Pression.svg",
     span: "small",
     multilineTitle: false,
   },
   {
     id: "stats",
-    bg: "bg-[#FADFEA]",
+    bg: "bg-fleur-tint",
     image: "/assets/Analyse.svg",
     span: "big",
     multilineTitle: true,
@@ -45,10 +45,10 @@ export function Features() {
   const t = useTranslations("features");
 
   return (
-    <section id="features" className="relative py-24 md:py-32">
+    <section id="features" className="py-14 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div>
-          <h2 className="section-title text-center text-4xl font-bold md:text-left md:text-6xl">
+          <h2 className="text-center text-h2 text-ink md:text-left">
             <span className="md:block md:whitespace-nowrap">
               {t("title.line1")}
             </span>{" "}
@@ -58,11 +58,11 @@ export function Features() {
           </h2>
         </div>
 
-        <div className="mt-14 grid gap-4 md:mt-20 md:grid-cols-3 md:gap-5">
+        <div className="mt-10 grid gap-3 md:mt-14 md:grid-cols-3 md:gap-4">
           {FEATURES.map((f) => (
             <div
               key={f.id}
-              className={`flex flex-col justify-between rounded-[32px] p-8 md:rounded-[40px] md:p-10 ${f.bg} ${
+              className={`flex flex-col justify-between rounded-card p-6 md:p-8 ${f.bg} ${
                 f.span === "big" ? "md:col-span-2" : "md:col-span-1"
               }`}
             >
@@ -71,10 +71,10 @@ export function Features() {
                 alt=""
                 aria-hidden
                 draggable={false}
-                className="h-16 w-16 select-none rounded-2xl md:h-20 md:w-20 md:rounded-3xl"
+                className="h-16 w-16 select-none rounded-btn md:h-20 md:w-20 md:rounded-card"
               />
-              <div className="mt-16 md:mt-24">
-                <h3 className="text-2xl font-bold tracking-tight md:text-3xl">
+              <div className="mt-10 md:mt-16">
+                <h3 className="text-h3 text-ink">
                   {f.multilineTitle ? (
                     <>
                       <span
@@ -92,7 +92,7 @@ export function Features() {
                     t(`${f.id}.title`)
                   )}
                 </h3>
-                <p className="mt-3 max-w-md text-base text-black/60 md:text-lg">
+                <p className="mt-2 max-w-md text-base text-ink-2">
                   {t(`${f.id}.description`)}
                 </p>
               </div>

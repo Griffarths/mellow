@@ -33,14 +33,14 @@ export function Screenshots() {
   const frames = FRAME_ORDER.map((offset) => base + offset);
 
   return (
-    <section id="screens" className="relative py-24 md:py-32">
+    <section id="screens" className="pb-2 pt-14 md:pb-8 md:pt-28">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="section-title mx-auto max-w-2xl text-center text-4xl font-bold md:mx-0 md:text-left md:text-6xl">
+        <h2 className="mx-auto max-w-2xl text-center text-h2 text-ink md:mx-0 md:text-left">
           {t("title")}
         </h2>
       </div>
 
-      <div className="mt-12 md:mt-16">
+      <div className="mt-10 md:mt-14">
         <div
           className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-6 pr-6 [scrollbar-width:none] md:gap-8 md:pr-12 [&::-webkit-scrollbar]:hidden"
           style={{

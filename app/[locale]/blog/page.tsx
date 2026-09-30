@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ArticleCard } from "@/components/blog/ArticleCard";
+import { Clouds } from "@/components/ui/Clouds";
 import { getAllArticles, isBlogLocale } from "@/lib/blog";
 import { ComingSoon } from "./coming-soon";
 
@@ -77,18 +78,20 @@ export default async function BlogIndexPage({ params }: Props) {
   return (
     <>
       <Nav />
-      <main className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-        <h1 className="hero-title text-5xl font-bold tracking-tight md:text-7xl">
-          {t("indexTitle")}
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg text-black/60 md:text-xl">
-          {t("indexSubtitle")}
-        </p>
-
+      <header className="overflow-hidden bg-hero">
+        <div className="mx-auto max-w-6xl px-6 pb-6 pt-12 md:pb-2 md:pt-20">
+          <h1 className="text-display text-ink">{t("indexTitle")}</h1>
+          <p className="mt-4 max-w-2xl text-lg text-ink-2 md:text-xl">
+            {t("indexSubtitle")}
+          </p>
+        </div>
+        <Clouds />
+      </header>
+      <main className="mx-auto max-w-6xl px-6 pb-20 pt-4 md:pb-28">
         {articles.length === 0 ? (
-          <p className="mt-12 text-black/50">{t("emptyState")}</p>
+          <p className="text-ink-3">{t("emptyState")}</p>
         ) : (
-          <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
             {articles.map((article) => (
               <ArticleCard key={article.slug} article={article} />
             ))}

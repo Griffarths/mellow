@@ -1,10 +1,10 @@
 import { Link } from "@/i18n/navigation";
 import type { Article } from "@/lib/blog";
-
-const DEFAULT_BG = "#FFE8EC";
+import { TONES, toneForImage } from "@/lib/tones";
+import { typographize } from "@/lib/typography";
 
 export function ArticleCard({ article }: { article: Article }) {
-  const bg = article.coverBgColor ?? DEFAULT_BG;
+  const tone = TONES[toneForImage(article.coverImage)];
   const formatted = new Intl.DateTimeFormat(article.locale, {
     dateStyle: "long",
   }).format(new Date(article.publishedAt));
@@ -13,44 +13,31 @@ export function ArticleCard({ article }: { article: Article }) {
   return (
     <Link
       href={`/blog/${article.slug}`}
-      className="group flex flex-col overflow-hidden rounded-3xl bg-white ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-soft"
+      className="group flex flex-col overflow-hidden rounded-card bg-white ring-1 ring-surface-line transition hover:-translate-y-0.5 hover:shadow-soft focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-ink"
     >
       <div
-        className="flex aspect-[16/10] items-center justify-center"
-        style={{ background: bg }}
+        className={`relative flex aspect-[16/9] items-center justify-center overflow-hidden ${tone.tint}`}
       >
         <img
           src={article.coverImage}
           alt=""
           aria-hidden
           draggable={false}
-          className="h-28 w-28 select-none transition group-hover:scale-105 md:h-32 md:w-32"
+          className="h-24 w-24 select-none transition-transform duration-300 group-hover:scale-105 md:h-28 md:w-28"
         />
       </div>
-      <div className="flex flex-1 flex-col p-6">
-        <div className="flex items-center gap-2 text-xs text-black/50">
+      <div className="flex flex-1 flex-col p-5 md:p-6">
+        <div className="flex items-center gap-2 text-caption font-semibold text-ink-3">
           <time dateTime={article.publishedAt}>{formatted}</time>
           <span aria-hidden>·</span>
           <span>{minutes} min</span>
         </div>
-        <h2 className="mt-3 text-xl font-bold tracking-tight">
-          {article.title}
+        <h2 className="mt-2 text-xl font-bold leading-snug tracking-tight text-ink">
+          {typographize(article.title, article.locale)}
         </h2>
-        <p className="mt-2 line-clamp-3 text-sm text-black/60">
-          {article.description}
+        <p className="mt-2 line-clamp-3 text-[15px] leading-relaxed text-ink-2">
+          {typographize(article.description, article.locale)}
         </p>
-        {article.tags.length > 0 && (
-          <div className="mt-4 flex flex-wrap gap-1.5">
-            {article.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-black/[0.05] px-2 py-0.5 text-[10px] text-black/60"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
       </div>
     </Link>
   );

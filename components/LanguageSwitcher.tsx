@@ -51,7 +51,7 @@ export function LanguageSwitcher({ direction = "down" }: Props = {}) {
         aria-haspopup="listbox"
         aria-expanded={open}
         disabled={isPending}
-        className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-black/70 transition hover:bg-black/[0.04] disabled:opacity-60"
+        className="inline-flex items-center gap-1.5 rounded-chip px-3 py-2 text-sm font-semibold text-ink-2 transition hover:bg-surface-soft disabled:opacity-60"
       >
         <span>{LOCALE_LABELS[locale]}</span>
         <svg
@@ -73,7 +73,7 @@ export function LanguageSwitcher({ direction = "down" }: Props = {}) {
       {open && (
         <ul
           role="listbox"
-          className={`absolute left-1/2 z-50 min-w-[220px] -translate-x-1/2 overflow-hidden rounded-2xl bg-white p-1 shadow-soft ring-1 ring-black/10 ${
+          className={`absolute left-1/2 z-50 min-w-[220px] -translate-x-1/2 overflow-hidden rounded-card bg-white p-1.5 shadow-soft ring-1 ring-surface-line ${
             direction === "up" ? "bottom-full mb-2" : "top-full mt-2"
           }`}
         >
@@ -86,10 +86,10 @@ export function LanguageSwitcher({ direction = "down" }: Props = {}) {
                   role="option"
                   aria-selected={active}
                   onClick={() => switchTo(code)}
-                  className={`flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2 text-left text-sm transition ${
+                  className={`flex w-full items-center justify-between gap-3 rounded-btn px-3 py-2.5 text-left text-sm transition ${
                     active
-                      ? "bg-black/[0.05] font-medium text-ink"
-                      : "text-black/70 hover:bg-black/[0.04]"
+                      ? "bg-surface-soft font-semibold text-ink"
+                      : "text-ink-2 hover:bg-surface-soft"
                   }`}
                 >
                   <span>{LOCALE_LABELS[code]}</span>

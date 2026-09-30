@@ -75,18 +75,18 @@ export default async function AboutPage({ params }: Props) {
         <BackToHome />
 
         <article className="mx-auto mt-10 max-w-[65ch]">
-          <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+          <h1 className="text-h1 text-ink">
             À propos
           </h1>
 
-          <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
             Salut, moi c&apos;est Laurine 👋
           </h2>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Je suis <strong className="font-semibold text-ink">Laurine Nicoletti</strong>,
             développeur indépendant basé à Bordeaux, et je suis migraineux.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             J&apos;ai créé Mellow parce que{" "}
             <strong className="font-semibold text-ink">
               j&apos;avais besoin de cette app pour moi-même
@@ -94,10 +94,10 @@ export default async function AboutPage({ params }: Props) {
             .
           </p>
 
-          <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
             Mon histoire avec la migraine
           </h2>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             J&apos;ai eu mes premières migraines à{" "}
             <strong className="font-semibold text-ink">21 ans</strong>.
             Aujourd&apos;hui, j&apos;en ai en moyenne{" "}
@@ -106,7 +106,7 @@ export default async function AboutPage({ params }: Props) {
             </strong>
             .
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Je suis migraineux <strong className="font-semibold text-ink">sans aura</strong>.
             La douleur s&apos;installe progressivement, d&apos;un côté de la tête,
             jusqu&apos;à devenir pulsatile et invalidante. Avec elle viennent les{" "}
@@ -115,7 +115,7 @@ export default async function AboutPage({ params }: Props) {
             et au <strong className="font-semibold text-ink">bruit</strong>. Ça me coupe
             une journée. Parfois plusieurs.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Si tu lis ces lignes, tu sais probablement déjà ce que ça fait. Cette
             sensation où{" "}
             <strong className="font-semibold text-ink">tu sais que ça vient</strong>,
@@ -124,80 +124,80 @@ export default async function AboutPage({ params }: Props) {
             hors-jeu pendant des heures.
           </p>
 
-          <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
             Pourquoi cette app
           </h2>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             La migraine est, selon l&apos;OMS,{" "}
             <strong className="font-semibold text-ink">
               la 2ème maladie la plus invalidante au monde
             </strong>{" "}
             chez les moins de 50 ans.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Et pourtant, on continue de la traiter comme un simple mal de tête.{" "}
             <em className="italic">
               &quot;Bois un verre d&apos;eau, prends un Doliprane, ça va passer.&quot;
             </em>{" "}
             Comme si c&apos;était dans la tête. Comme si on exagérait.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             J&apos;ai cherché des outils pour mieux comprendre mes propres crises.
             Identifier mes déclencheurs. Voir ce qui marche, ce qui ne marche pas.
             Avoir des données concrètes à montrer à mon médecin.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Ce que j&apos;ai trouvé m&apos;a frustré. Des apps complexes qui demandent
             5 minutes pour logger une crise quand t&apos;as déjà mal au crâne. Des
             designs datés, sortis tout droit de 2010. Des prix élevés ou des paywalls
             agressifs sur des fonctionnalités basiques. Des apps qui ressemblent à des
             dossiers médicaux, pas à un compagnon du quotidien.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Alors j&apos;ai décidé d&apos;en faire une moi-même. Une app{" "}
             <strong className="font-semibold text-ink">
               pensée par un migraineux, pas par un comité marketing.
             </strong>
           </p>
 
-          <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
             Ce qui me tient à cœur dans Mellow
           </h2>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             <strong className="font-semibold text-ink">Une UX simple.</strong>{" "}
             Logger une crise prend quelques secondes. Pas de formulaire interminable.
             Pas de friction. Quand tu as la tête qui explose, tu n&apos;as pas envie
             de te battre avec une interface.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             <strong className="font-semibold text-ink">Un design soigné.</strong>{" "}
             Je crois qu&apos;un outil qu&apos;on utilise pour gérer une maladie chronique
             doit être agréable à utiliser. Pas anxiogène. Pas hospitalier. Juste apaisant.
             D&apos;où le nom <em className="italic">Mellow</em>.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             <strong className="font-semibold text-ink">Un prix accessible.</strong>{" "}
             Mellow propose une formule gratuite généreuse, et un Premium à un prix
             volontairement bas pour celles et ceux qui veulent aller plus loin (analyses
             détaillées, statistiques personnalisées, données météo, etc.). Pas de tarifs
             gonflés.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             <strong className="font-semibold text-ink">Du contenu sourcé.</strong>{" "}
             Tous les articles du blog Mellow sont rédigés à partir de sources médicales
             reconnues. Inserm, OMS, HAS, Mayo Clinic, NHS, American Migraine Foundation,
             Migraine Trust. Pas de &quot;remèdes miracles&quot; non vérifiés. Pas de
             désinformation santé.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             <strong className="font-semibold text-ink">Aucune vente de données.</strong>{" "}
             Mellow ne vendra jamais tes données de santé. C&apos;est une ligne rouge.
           </p>
 
-          <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
             Ce que Mellow n&apos;est pas
           </h2>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Mellow{" "}
             <strong className="font-semibold text-ink">
               n&apos;est pas un substitut à un avis médical
@@ -207,30 +207,30 @@ export default async function AboutPage({ params }: Props) {
             tes crises et à mieux dialoguer avec les professionnels qui te soignent.
           </p>
 
-          <h2 className="mt-14 scroll-mt-24 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
             Et maintenant ?
           </h2>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Mellow est encore jeune. Je le développe seul, à mon rythme, en écoutant les
             retours des migraineux qui l&apos;utilisent.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Si tu utilises Mellow et que tu veux me partager une idée, un bug, ou juste
             me dire bonjour, tu peux me joindre à{" "}
             <strong className="font-semibold text-ink">
               <a
                 href="mailto:contact.mellow@proton.me"
-                className="text-mellow-rose underline-offset-2 hover:underline"
+                className="text-croix-ink underline decoration-croix-ink/30 decoration-2 underline-offset-[3px] transition hover:decoration-croix-ink"
               >
                 contact.mellow@proton.me
               </a>
             </strong>
             .
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Merci d&apos;être là. Et prends soin de toi.
           </p>
-          <p className="my-5 text-lg leading-[1.8] text-black/75">Laurine</p>
+          <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">Laurine</p>
         </article>
       </main>
       <Footer />
@@ -248,7 +248,7 @@ function BackToHome() {
   return (
     <a
       href="/fr"
-      className="inline-flex items-center gap-1 text-sm text-black/55 transition hover:text-black"
+      className="inline-flex items-center gap-1 rounded-chip bg-surface-soft px-3 py-2 text-sm font-semibold text-ink-2 transition hover:bg-surface-line hover:text-ink"
     >
       ← Accueil
     </a>

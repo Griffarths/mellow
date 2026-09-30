@@ -13,6 +13,12 @@ const MELLOWS: Array<{ key: MellowKey; blob: "Fleur1" | "Tagada1" | "Croix1" }> 
     { key: "rouge", blob: "Croix1" },
   ];
 
+const TINTS: Record<MellowKey, string> = {
+  rose: "bg-fleur-tint",
+  bleu: "bg-tagada-tint",
+  rouge: "bg-croix-tint",
+};
+
 export function MellowsSlider() {
   const t = useTranslations("mellows");
   const [index, setIndex] = useState(0);
@@ -21,7 +27,7 @@ export function MellowsSlider() {
   const goTo = useCallback((i: number) => {
     const el = scrollerRef.current;
     if (!el) return;
-    const slideWidth = el.clientWidth;
+    const slideWidth = (el.firstElementChild as HTMLElement | null)?.offsetWidth ?? el.clientWidth;
     el.scrollTo({ left: slideWidth * i, behavior: "smooth" });
   }, []);
 
@@ -29,7 +35,8 @@ export function MellowsSlider() {
     const el = scrollerRef.current;
     if (!el) return;
     const onScroll = () => {
-      const slideWidth = el.clientWidth;
+      const slideWidth =
+        (el.firstElementChild as HTMLElement | null)?.offsetWidth ?? 0;
       if (slideWidth === 0) return;
       const i = Math.round(el.scrollLeft / slideWidth);
       setIndex(i);
@@ -39,36 +46,36 @@ export function MellowsSlider() {
   }, []);
 
   return (
-    <section className="relative py-24 md:py-32">
+    <section className="pb-14 pt-12 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="section-title text-4xl font-bold md:text-6xl">
-            {t("title")}
-          </h2>
-          <p className="mt-4 text-lg text-black/60 md:text-xl">
-            {t("subtitle")}
-          </p>
+          <h2 className="text-h2 text-ink">{t("title")}</h2>
+          <p className="mt-4 text-lg text-ink-2">{t("subtitle")}</p>
         </div>
 
-        <div className="mt-12">
+        <div className="mt-10 md:mt-14">
+          {/* Swipeable on mobile, three cards side by side from md. */}
           <div
             ref={scrollerRef}
-            className="-mx-6 flex snap-x snap-mandatory overflow-x-auto scroll-smooth px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="-mx-6 flex snap-x snap-mandatory overflow-x-auto scroll-smooth px-6 [scrollbar-width:none] md:mx-0 md:grid md:grid-cols-3 md:gap-4 md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden"
           >
             {MELLOWS.map((m) => {
               const name = t(`${m.key}.name`);
               return (
-                <div key={m.key} className="w-full shrink-0 snap-center pr-4">
-                  <div className="flex flex-col items-center justify-center px-6 py-10 text-center md:py-12">
+                <div
+                  key={m.key}
+                  className="w-full shrink-0 snap-center pr-3 last:pr-0 md:w-auto md:pr-0"
+                >
+                  <div
+                    className={`flex h-full flex-col items-center rounded-card px-6 py-10 text-center ${TINTS[m.key]}`}
+                  >
                     <Blob
                       name={m.blob}
-                      className="h-32 w-32 md:h-40 md:w-40"
+                      className="h-32 w-32 md:h-36 md:w-36"
                       alt={name}
                     />
-                    <h3 className="mt-6 text-2xl font-bold tracking-tight md:text-3xl">
-                      {name}
-                    </h3>
-                    <p className="mt-3 max-w-md text-base text-black/60">
+                    <h3 className="mt-6 text-h3 text-ink">{name}</h3>
+                    <p className="mt-2 max-w-sm text-base text-ink-2">
                       {t(`${m.key}.description`)}
                     </p>
                   </div>
@@ -77,7 +84,7 @@ export function MellowsSlider() {
             })}
           </div>
 
-          <div className="mt-8 flex items-center justify-center gap-2">
+          <div className="mt-6 flex items-center justify-center gap-2 md:hidden">
             {MELLOWS.map((m, i) => (
               <button
                 key={m.key}
@@ -85,7 +92,7 @@ export function MellowsSlider() {
                 aria-label={t("dotAriaLabel", { name: t(`${m.key}.name`) })}
                 onClick={() => goTo(i)}
                 className={`h-2 rounded-full transition-all ${
-                  i === index ? "w-8 bg-ink" : "w-2 bg-black/20"
+                  i === index ? "w-8 bg-ink" : "w-2 bg-ink-mute"
                 }`}
               />
             ))}
