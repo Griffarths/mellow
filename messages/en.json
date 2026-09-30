@@ -45,34 +45,6 @@
     },
     "dotAriaLabel": "View {name}"
   },
-  "features": {
-    "title": {
-      "line1": "Features built",
-      "line2": "to reduce your migraines."
-    },
-    "logging": {
-      "title": {
-        "line1": "Ultra-fast",
-        "line2": "logging"
-      },
-      "description": "During an attack, every second counts. Log a migraine in two taps and add the details later."
-    },
-    "triggers": {
-      "title": "Trigger tracking",
-      "description": "Stress, sleep, screens, cycle… Mellow reveals what triggers your attacks."
-    },
-    "pressure": {
-      "title": "Atmospheric pressure",
-      "description": "Automatic weather tracking to uncover invisible patterns."
-    },
-    "stats": {
-      "title": {
-        "line1": "Stats",
-        "line2": "and history"
-      },
-      "description": "Calendar, average duration, intensity, trends over 1, 3 or 12 months. Your full history at your fingertips."
-    }
-  },
   "courses": {
     "title": "Learn to live better with migraines.",
     "subtitle": "Everything you need to know about migraines, explained simply.",
@@ -90,7 +62,20 @@
     }
   },
   "screenshots": {
-    "title": "Discover the app."
+    "title": "Discover the app.",
+    "prev": "Previous screenshot",
+    "next": "Next screenshot",
+    "alt": {
+      "02": "Logging a migraine with its intensity from 1 to 10",
+      "03": "Migraine calendar, month by month",
+      "04": "Choosing triggers: stress, lack of sleep, screens and more",
+      "05": "What brings relief: medications and methods, from most to least effective",
+      "06": "Detailed analysis of the last 30 days with Mellow's observations",
+      "07": "Migraine courses: Understand, Prevent, Manage",
+      "08": "Seven-day forecast of atmospheric pressure and humidity",
+      "09": "Profile with treatments, medical appointments and badges",
+      "10": "Exporting a PDF report for your doctor"
+    }
   },
   "finalCta": {
     "title": "Download Mellow"

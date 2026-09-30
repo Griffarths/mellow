@@ -42,34 +42,6 @@
     },
     "dotAriaLabel": "{name} ansehen"
   },
-  "features": {
-    "title": {
-      "line1": "Funktionen, die helfen,",
-      "line2": "deine Migräne zu reduzieren."
-    },
-    "logging": {
-      "title": {
-        "line1": "Blitzschnelles",
-        "line2": "Erfassen"
-      },
-      "description": "Während eines Anfalls zählt jede Sekunde. Erfasse eine Migräne in zwei Tipps und ergänze die Details später."
-    },
-    "triggers": {
-      "title": "Auslöser erkennen",
-      "description": "Stress, Schlaf, Bildschirme, Zyklus… Mellow zeigt, was deine Anfälle auslöst."
-    },
-    "pressure": {
-      "title": "Luftdruck",
-      "description": "Automatisches Wetter-Tracking, um unsichtbare Muster zu erkennen."
-    },
-    "stats": {
-      "title": {
-        "line1": "Statistiken",
-        "line2": "und Verlauf"
-      },
-      "description": "Kalender, durchschnittliche Dauer, Intensität, Trends über 1, 3 oder 12 Monate. Deine Historie immer zur Hand."
-    }
-  },
   "courses": {
     "title": "Lerne, besser mit Migräne zu leben.",
     "subtitle": "Alles, was du über Migräne wissen musst — einfach erklärt.",
@@ -87,7 +59,20 @@
     }
   },
   "screenshots": {
-    "title": "Entdecke die App."
+    "title": "Entdecke die App.",
+    "prev": "Vorheriger Screenshot",
+    "next": "Nächster Screenshot",
+    "alt": {
+      "02": "Erfassen einer Migräne mit ihrer Intensität von 1 bis 10",
+      "03": "Migränekalender, Monat für Monat",
+      "04": "Auswahl der Auslöser: Stress, Schlafmangel, Bildschirme und mehr",
+      "05": "Was hilft: Medikamente und Methoden, von am wirksamsten bis am wenigsten wirksam",
+      "06": "Detaillierte Analyse der letzten 30 Tage mit Mellows Beobachtungen",
+      "07": "Kurse über Migräne: Verstehen, Vorbeugen, Bewältigen",
+      "08": "Siebentagesprognose für Luftdruck und Luftfeuchtigkeit",
+      "09": "Profil mit Behandlungen, Arztterminen und Abzeichen",
+      "10": "Export eines PDF-Berichts für deinen Arzt"
+    }
   },
   "finalCta": {
     "title": "Lade Mellow herunter"

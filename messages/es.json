@@ -42,34 +42,6 @@
     },
     "dotAriaLabel": "Ver {name}"
   },
-  "features": {
-    "title": {
-      "line1": "Funciones pensadas",
-      "line2": "para reducir tus migrañas."
-    },
-    "logging": {
-      "title": {
-        "line1": "Registro",
-        "line2": "ultrarrápido"
-      },
-      "description": "Durante la crisis, cada segundo cuenta. Registra una migraña en dos toques y añade los detalles más tarde."
-    },
-    "triggers": {
-      "title": "Seguimiento de desencadenantes",
-      "description": "Estrés, sueño, pantallas, ciclo… Mellow revela qué desencadena tus crisis."
-    },
-    "pressure": {
-      "title": "Presión atmosférica",
-      "description": "Seguimiento meteorológico automático para descubrir patrones invisibles."
-    },
-    "stats": {
-      "title": {
-        "line1": "Estadísticas",
-        "line2": "e historial"
-      },
-      "description": "Calendario, duración media, intensidad, tendencias a 1, 3 o 12 meses. Todo tu historial al alcance."
-    }
-  },
   "courses": {
     "title": "Aprende a vivir mejor con la migraña.",
     "subtitle": "Todo lo que necesitas saber sobre la migraña, explicado de forma sencilla.",
@@ -87,7 +59,20 @@
     }
   },
   "screenshots": {
-    "title": "Descubre la app."
+    "title": "Descubre la app.",
+    "prev": "Captura anterior",
+    "next": "Captura siguiente",
+    "alt": {
+      "02": "Registro de una migraña con su intensidad del 1 al 10",
+      "03": "Calendario de migrañas, mes a mes",
+      "04": "Elección de desencadenantes: estrés, falta de sueño, pantallas y más",
+      "05": "Lo que te alivia: medicamentos y métodos, del más al menos eficaz",
+      "06": "Análisis detallado de los últimos 30 días con las observaciones de Mellow",
+      "07": "Cursos sobre la migraña: Comprender, Prevenir, Gestionar",
+      "08": "Previsión a siete días de la presión atmosférica y la humedad",
+      "09": "Perfil con tratamientos, citas médicas e insignias",
+      "10": "Exportación de un informe PDF para tu médico"
+    }
   },
   "finalCta": {
     "title": "Descarga Mellow"

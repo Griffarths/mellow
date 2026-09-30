@@ -42,34 +42,6 @@
     },
     "dotAriaLabel": "Ver {name}"
   },
-  "features": {
-    "title": {
-      "line1": "Funcionalidades pensadas",
-      "line2": "para reduzir suas enxaquecas."
-    },
-    "logging": {
-      "title": {
-        "line1": "Registro",
-        "line2": "ultrarrápido"
-      },
-      "description": "Durante a crise, cada segundo conta. Registre uma enxaqueca em dois toques e adicione os detalhes depois."
-    },
-    "triggers": {
-      "title": "Acompanhamento de gatilhos",
-      "description": "Estresse, sono, telas, ciclo… O Mellow revela o que desencadeia suas crises."
-    },
-    "pressure": {
-      "title": "Pressão atmosférica",
-      "description": "Acompanhamento meteorológico automático para detectar padrões invisíveis."
-    },
-    "stats": {
-      "title": {
-        "line1": "Estatísticas",
-        "line2": "e histórico"
-      },
-      "description": "Calendário, duração média, intensidade, tendências em 1, 3 ou 12 meses. Todo o seu histórico à mão."
-    }
-  },
   "courses": {
     "title": "Aprenda a viver melhor com a enxaqueca.",
     "subtitle": "Tudo o que você precisa saber sobre a enxaqueca, explicado de forma simples.",
@@ -87,7 +59,20 @@
     }
   },
   "screenshots": {
-    "title": "Descubra o app."
+    "title": "Descubra o app.",
+    "prev": "Captura anterior",
+    "next": "Próxima captura",
+    "alt": {
+      "02": "Registro de uma enxaqueca com a intensidade de 1 a 10",
+      "03": "Calendário de enxaquecas, mês a mês",
+      "04": "Escolha dos gatilhos: estresse, falta de sono, telas e mais",
+      "05": "O que alivia: medicamentos e métodos, do mais ao menos eficaz",
+      "06": "Análise detalhada dos últimos 30 dias com as observações do Mellow",
+      "07": "Cursos sobre enxaqueca: Entender, Prevenir, Gerenciar",
+      "08": "Previsão de sete dias da pressão atmosférica e da umidade",
+      "09": "Perfil com tratamentos, consultas médicas e conquistas",
+      "10": "Exportação de um relatório em PDF para o seu médico"
+    }
   },
   "finalCta": {
     "title": "Baixe o Mellow"

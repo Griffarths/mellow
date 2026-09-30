@@ -42,34 +42,6 @@
     },
     "dotAriaLabel": "Vedi {name}"
   },
-  "features": {
-    "title": {
-      "line1": "Funzionalità pensate",
-      "line2": "per ridurre le tue emicranie."
-    },
-    "logging": {
-      "title": {
-        "line1": "Registrazione",
-        "line2": "ultrarapida"
-      },
-      "description": "Durante la crisi ogni secondo conta. Registra un'emicrania in due tap e aggiungi i dettagli dopo."
-    },
-    "triggers": {
-      "title": "Tracciamento dei trigger",
-      "description": "Stress, sonno, schermi, ciclo… Mellow svela cosa scatena le tue crisi."
-    },
-    "pressure": {
-      "title": "Pressione atmosferica",
-      "description": "Monitoraggio meteo automatico per scoprire schemi invisibili."
-    },
-    "stats": {
-      "title": {
-        "line1": "Statistiche",
-        "line2": "e storico"
-      },
-      "description": "Calendario, durata media, intensità, tendenze su 1, 3 o 12 mesi. Tutto il tuo storico a portata di mano."
-    }
-  },
   "courses": {
     "title": "Impara a vivere meglio con l'emicrania.",
     "subtitle": "Tutto quello che c'è da sapere sull'emicrania, spiegato in modo semplice.",
@@ -87,7 +59,20 @@
     }
   },
   "screenshots": {
-    "title": "Scopri l'app."
+    "title": "Scopri l'app.",
+    "prev": "Schermata precedente",
+    "next": "Schermata successiva",
+    "alt": {
+      "02": "Registrazione di un'emicrania con la sua intensità da 1 a 10",
+      "03": "Calendario delle emicranie, mese per mese",
+      "04": "Scelta dei fattori scatenanti: stress, mancanza di sonno, schermi e altro",
+      "05": "Cosa dà sollievo: farmaci e metodi, dal più al meno efficace",
+      "06": "Analisi dettagliata degli ultimi 30 giorni con le osservazioni di Mellow",
+      "07": "Corsi sull'emicrania: Capire, Prevenire, Gestire",
+      "08": "Previsioni a sette giorni di pressione atmosferica e umidità",
+      "09": "Profilo con trattamenti, appuntamenti medici e badge",
+      "10": "Esportazione di un report PDF per il tuo medico"
+    }
   },
   "finalCta": {
     "title": "Scarica Mellow"
