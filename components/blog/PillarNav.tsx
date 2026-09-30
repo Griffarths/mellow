@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import type { BlogLocale } from "@/lib/blog";
+import { type BlogLocale, getPillarArticles } from "@/lib/blog";
 import { PILLARS, PILLAR_IDS, type PillarId } from "@/lib/pillars";
 import { TONES } from "@/lib/tones";
 
@@ -18,7 +18,8 @@ export function PillarNav({ locale, current, className = "" }: Props) {
       aria-label={t("themes")}
       className={`-mx-6 flex gap-2 overflow-x-auto px-6 [scrollbar-width:none] md:mx-0 md:flex-wrap md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden ${className}`}
     >
-      {PILLAR_IDS.map((id) => {
+      {/* Only the pillars that have articles in this language. */}
+      {PILLAR_IDS.filter((id) => getPillarArticles(locale, id).length > 0).map((id) => {
         const active = id === current;
         return (
           <Link

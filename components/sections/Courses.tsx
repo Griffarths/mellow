@@ -1,7 +1,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Tile } from "../ui/Tile";
 import type { Tone } from "@/lib/tones";
-import { isBlogLocale } from "@/lib/blog";
+import { getPillarArticles, hasBlog } from "@/lib/blog";
 import { PILLARS } from "@/lib/pillars";
 
 const COURSES: Array<{ id: "understand" | "prevent" | "manage"; tone: Tone }> =
@@ -28,7 +28,7 @@ export function Courses() {
             <Tile
               key={c.id}
               href={
-                isBlogLocale(locale)
+                hasBlog(locale) && getPillarArticles(locale, c.id).length > 0
                   ? `/blog/${PILLARS[c.id][locale].slug}`
                   : "/blog"
               }

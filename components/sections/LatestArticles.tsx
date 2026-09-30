@@ -1,13 +1,13 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ArticleCard } from "@/components/blog/ArticleCard";
-import { getAllArticles, isBlogLocale } from "@/lib/blog";
+import { getAllArticles, hasBlog } from "@/lib/blog";
 
-// Only FR and EN have articles; other locales skip the section.
+// Locales without articles yet skip the section.
 export function LatestArticles() {
   const t = useTranslations("blog");
   const locale = useLocale();
-  if (!isBlogLocale(locale)) return null;
+  if (!hasBlog(locale)) return null;
   const articles = getAllArticles(locale).slice(0, 3);
   if (articles.length === 0) return null;
 

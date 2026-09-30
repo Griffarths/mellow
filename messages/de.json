@@ -18,12 +18,22 @@
       "text": "Wir arbeiten an Inhalten auf Deutsch. In der Zwischenzeit kannst du unsere englischen Artikel lesen.",
       "button": "Auf Englisch lesen"
     },
+    "indexTitle": "Blog",
+    "indexSubtitle": "Alles, um deine Migräne besser zu verstehen",
+    "emptyState": "Noch keine Artikel. Schau bald wieder vorbei.",
+    "backToBlog": "Zurück zum Blog",
+    "tocTitle": "Inhalt",
+    "relatedTitle": "Ähnliche Artikel",
+    "ctaTitle": "Hol dir die Kontrolle über deine Migräne zurück",
+    "ctaSubtitle": "Lade Mellow herunter und finde heraus, was deine Attacken auslöst.",
     "pillarCount": "{count, plural, one {# Artikel} other {# Artikel}}",
     "allInPillar": "Alle Artikel zu „{pillar}“",
     "latestTitle": "Neueste Artikel",
     "seeAll": "Alle Artikel ansehen",
     "themes": "Themen",
-    "startHere": "Hier anfangen"
+    "startHere": "Hier anfangen",
+    "metaTitle": "Mellow Blog: Migräne verstehen, vorbeugen und bewältigen",
+    "metaDescription": "Fundierte, einfach erklärte Artikel über Migräne: Symptome, Aura, Auslöser, Schlaf, Ernährung, Akut- und Prophylaxebehandlungen."
   },
   "hero": {
     "title": "Nimm die Kontrolle über deine Migräne zurück.",

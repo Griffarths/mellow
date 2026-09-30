@@ -17,13 +17,16 @@ import { RelatedArticles } from "@/components/blog/RelatedArticles";
 import { PillarPage } from "@/components/blog/PillarPage";
 import { mdxComponents } from "@/lib/mdx-components";
 import {
-  BLOG_LOCALES,
   type BlogLocale,
+  HREFLANG,
+  OG_LOCALE,
   getAllArticles,
   getArticleBySlug,
+  getArticleVersions,
   getPillarArticles,
   getRelatedArticles,
-  isBlogLocale,
+  hasBlog,
+  liveBlogLocales,
 } from "@/lib/blog";
 import {
   PILLARS,
@@ -45,19 +48,41 @@ function urlFor(locale: string, suffix: string) {
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
+// A pillar page exists in a language once the pillar has articles there.
+function pillarIsLive(pillar: PillarId, locale: BlogLocale) {
+  return getPillarArticles(locale, pillar).length > 0;
+}
+
 export function generateStaticParams() {
-  return BLOG_LOCALES.flatMap((locale) => [
+  return liveBlogLocales().flatMap((locale) => [
     ...getAllArticles(locale).map((a) => ({ locale, slug: a.slug })),
-    ...PILLAR_IDS.map((id) => ({ locale, slug: PILLARS[id][locale].slug })),
+    ...PILLAR_IDS.filter((id) => pillarIsLive(id, locale)).map((id) => ({
+      locale,
+      slug: PILLARS[id][locale].slug,
+    })),
   ]);
 }
 
 function pillarLanguages(pillar: PillarId) {
-  return {
-    "fr-FR": urlFor("fr", `/blog/${PILLARS[pillar].fr.slug}`),
-    en: urlFor("en", `/blog/${PILLARS[pillar].en.slug}`),
-  };
+  return Object.fromEntries(
+    liveBlogLocales()
+      .filter((l) => pillarIsLive(pillar, l))
+      .map((l) => [HREFLANG[l], urlFor(l, `/blog/${PILLARS[pillar][l].slug}`)]),
+  );
 }
+
+// hreflang alternates of an article: every language version found through
+// relatedSlugInOtherLanguage (see getArticleVersions).
+function articleLanguages(versions: Partial<Record<BlogLocale, string>>) {
+  return Object.fromEntries(
+    (Object.entries(versions) as [BlogLocale, string][]).map(([l, s]) => [
+      HREFLANG[l],
+      urlFor(l, `/blog/${s}`),
+    ]),
+  );
+}
+
+const inLanguage = (locale: BlogLocale) => (locale === "en" ? "en-US" : HREFLANG[locale]);
 
 function pillarMetadata(pillar: PillarId, locale: BlogLocale): Metadata {
   const copy = PILLARS[pillar][locale];
@@ -71,33 +96,23 @@ function pillarMetadata(pillar: PillarId, locale: BlogLocale): Metadata {
       title: copy.metaTitle,
       description: copy.description,
       url,
-      locale: locale === "fr" ? "fr_FR" : "en_US",
+      locale: OG_LOCALE[locale],
     },
   };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
-  if (!isBlogLocale(locale)) return {};
+  if (!hasBlog(locale)) return {};
   const pillar = pillarForSlug(locale, slug);
-  if (pillar) return pillarMetadata(pillar, locale);
+  if (pillar) return pillarIsLive(pillar, locale) ? pillarMetadata(pillar, locale) : {};
   const article = getArticleBySlug(locale, slug);
   if (!article) return {};
 
   const url = urlFor(locale, `/blog/${slug}`);
   const ogImage = `${SITE_URL}${article.coverImage}`;
-  const ogLocale = locale === "fr" ? "fr_FR" : "en_US";
-
-  const languages: Record<string, string> = {
-    [locale === "fr" ? "fr-FR" : "en"]: url,
-  };
-  if (article.relatedSlugInOtherLanguage) {
-    const other: BlogLocale = locale === "fr" ? "en" : "fr";
-    languages[other === "fr" ? "fr-FR" : "en"] = urlFor(
-      other,
-      `/blog/${article.relatedSlugInOtherLanguage}`,
-    );
-  }
+  const ogLocale = OG_LOCALE[locale];
+  const languages = articleLanguages(getArticleVersions(article));
 
   return {
     title: `${article.title} · Mellow`,
@@ -126,12 +141,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ArticlePage({ params }: Props) {
   const { locale, slug } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
-  if (!isBlogLocale(locale)) notFound();
+  if (!hasBlog(locale)) notFound();
   setRequestLocale(locale);
 
   const pillar = pillarForSlug(locale, slug);
   if (pillar) {
     const articles = getPillarArticles(locale, pillar);
+    if (articles.length === 0) notFound();
     const copy = PILLARS[pillar][locale];
     const pillarUrl = urlFor(locale, `/blog/${copy.slug}`);
     const pillarJsonLd = {
@@ -141,7 +157,7 @@ export default async function ArticlePage({ params }: Props) {
       url: pillarUrl,
       name: copy.title,
       description: copy.description,
-      inLanguage: locale === "fr" ? "fr-FR" : "en-US",
+      inLanguage: inLanguage(locale),
       isPartOf: { "@type": "Blog", "@id": urlFor(locale, "/blog") },
       mainEntity: {
         "@type": "ItemList",
@@ -186,7 +202,7 @@ export default async function ArticlePage({ params }: Props) {
     image: `${SITE_URL}/logo.png`,
     datePublished: new Date(article.publishedAt).toISOString(),
     dateModified: new Date(article.updatedAt).toISOString(),
-    inLanguage: locale === "fr" ? "fr-FR" : "en-US",
+    inLanguage: inLanguage(locale),
     keywords: article.tags.join(", "),
     author: {
       "@type": "Organization",

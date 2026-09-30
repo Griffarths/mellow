@@ -18,12 +18,22 @@
       "text": "Estamos a trabalhar no conteúdo em português. Entretanto, podes ler os nossos artigos em inglês.",
       "button": "Ler em inglês"
     },
+    "indexTitle": "Blog",
+    "indexSubtitle": "Tudo para compreenderes melhor as tuas enxaquecas",
+    "emptyState": "Ainda não há artigos. Volta em breve.",
+    "backToBlog": "Voltar ao blog",
+    "tocTitle": "Índice",
+    "relatedTitle": "Artigos relacionados",
+    "ctaTitle": "Retoma o controlo das tuas enxaquecas",
+    "ctaSubtitle": "Descarrega a Mellow e começa a perceber o que desencadeia as tuas crises.",
     "pillarCount": "{count, plural, one {# artigo} other {# artigos}}",
     "allInPillar": "Todos os artigos «{pillar}»",
     "latestTitle": "Últimos artigos",
     "seeAll": "Ver todos os artigos",
     "themes": "Temas",
-    "startHere": "Começa aqui"
+    "startHere": "Começa aqui",
+    "metaTitle": "Blog Mellow: compreender, prevenir e gerir a enxaqueca",
+    "metaDescription": "Artigos com fontes e explicados de forma simples sobre a enxaqueca: sintomas, aura, fatores desencadeantes, sono, alimentação, tratamentos da crise e preventivos."
   },
   "hero": {
     "title": "Retoma o controlo das tuas enxaquecas.",

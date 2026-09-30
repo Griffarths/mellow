@@ -7,7 +7,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ArticleCard } from "@/components/blog/ArticleCard";
 import { PillarNav } from "@/components/blog/PillarNav";
-import { getAllArticles, isBlogLocale } from "@/lib/blog";
+import { HREFLANG, getAllArticles, hasBlog } from "@/lib/blog";
 import { ComingSoon } from "./coming-soon";
 
 const SITE_URL = "https://mellowmigraine.com";
@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: "blog" });
-  const title = isBlogLocale(locale) ? t("metaTitle") : t("comingSoon.title");
-  const description = isBlogLocale(locale)
+  const title = hasBlog(locale) ? t("metaTitle") : t("comingSoon.title");
+  const description = hasBlog(locale)
     ? t("metaDescription")
     : t("comingSoon.text");
   return {
@@ -48,7 +48,7 @@ export default async function BlogIndexPage({ params }: Props) {
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
-  if (!isBlogLocale(locale)) {
+  if (!hasBlog(locale)) {
     return (
       <>
         <Nav />
@@ -72,7 +72,7 @@ export default async function BlogIndexPage({ params }: Props) {
     url: blogUrl,
     name: `Mellow — ${t("indexTitle")}`,
     description: t("indexSubtitle"),
-    inLanguage: locale === "fr" ? "fr-FR" : "en-US",
+    inLanguage: locale === "en" ? "en-US" : HREFLANG[locale],
     publisher: {
       "@type": "Organization",
       name: "Mellow",
