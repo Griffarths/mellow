@@ -3,7 +3,12 @@ import type { Article } from "@/lib/blog";
 import { TONES, toneForImage } from "@/lib/tones";
 import { typographize } from "@/lib/typography";
 
-export function ArticleCard({ article }: { article: Article }) {
+type Props = {
+  article: Article;
+  badge?: string;
+};
+
+export function ArticleCard({ article, badge }: Props) {
   const tone = TONES[toneForImage(article.coverImage)];
   const formatted = new Intl.DateTimeFormat(article.locale, {
     dateStyle: "long",
@@ -18,6 +23,11 @@ export function ArticleCard({ article }: { article: Article }) {
       <div
         className={`relative flex aspect-[16/9] items-center justify-center overflow-hidden ${tone.tint}`}
       >
+        {badge && (
+          <span className="absolute left-4 top-4 rounded-chip bg-white px-3 py-1.5 text-caption font-bold text-ink">
+            {badge}
+          </span>
+        )}
         <img
           src={article.coverImage}
           alt=""

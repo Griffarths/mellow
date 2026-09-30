@@ -14,15 +14,24 @@ import { BackToBlog } from "@/components/blog/BackToBlog";
 import { TableOfContents } from "@/components/blog/TableOfContents";
 import { BlogCta } from "@/components/blog/BlogCta";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
+import { PillarPage } from "@/components/blog/PillarPage";
 import { mdxComponents } from "@/lib/mdx-components";
 import {
   BLOG_LOCALES,
   type BlogLocale,
   getAllArticles,
   getArticleBySlug,
+  getPillarArticles,
   getRelatedArticles,
   isBlogLocale,
 } from "@/lib/blog";
+import {
+  PILLARS,
+  PILLAR_IDS,
+  pillarForSlug,
+  pillarOfArticle,
+  type PillarId,
+} from "@/lib/pillars";
 
 const SITE_URL = "https://mellowmigraine.com";
 
@@ -37,14 +46,41 @@ function urlFor(locale: string, suffix: string) {
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export function generateStaticParams() {
-  return BLOG_LOCALES.flatMap((locale) =>
-    getAllArticles(locale).map((a) => ({ locale, slug: a.slug })),
-  );
+  return BLOG_LOCALES.flatMap((locale) => [
+    ...getAllArticles(locale).map((a) => ({ locale, slug: a.slug })),
+    ...PILLAR_IDS.map((id) => ({ locale, slug: PILLARS[id][locale].slug })),
+  ]);
+}
+
+function pillarLanguages(pillar: PillarId) {
+  return {
+    "fr-FR": urlFor("fr", `/blog/${PILLARS[pillar].fr.slug}`),
+    en: urlFor("en", `/blog/${PILLARS[pillar].en.slug}`),
+  };
+}
+
+function pillarMetadata(pillar: PillarId, locale: BlogLocale): Metadata {
+  const copy = PILLARS[pillar][locale];
+  const url = urlFor(locale, `/blog/${copy.slug}`);
+  return {
+    title: `${copy.metaTitle} · Mellow`,
+    description: copy.description,
+    alternates: { canonical: url, languages: pillarLanguages(pillar) },
+    openGraph: {
+      type: "website",
+      title: copy.metaTitle,
+      description: copy.description,
+      url,
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+    },
+  };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   if (!isBlogLocale(locale)) return {};
+  const pillar = pillarForSlug(locale, slug);
+  if (pillar) return pillarMetadata(pillar, locale);
   const article = getArticleBySlug(locale, slug);
   if (!article) return {};
 
@@ -93,9 +129,51 @@ export default async function ArticlePage({ params }: Props) {
   if (!isBlogLocale(locale)) notFound();
   setRequestLocale(locale);
 
+  const pillar = pillarForSlug(locale, slug);
+  if (pillar) {
+    const articles = getPillarArticles(locale, pillar);
+    const copy = PILLARS[pillar][locale];
+    const pillarUrl = urlFor(locale, `/blog/${copy.slug}`);
+    const pillarJsonLd = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": pillarUrl,
+      url: pillarUrl,
+      name: copy.title,
+      description: copy.description,
+      inLanguage: locale === "fr" ? "fr-FR" : "en-US",
+      isPartOf: { "@type": "Blog", "@id": urlFor(locale, "/blog") },
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: articles.map((a, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          url: urlFor(locale, `/blog/${a.slug}`),
+          name: a.title,
+        })),
+      },
+    };
+    return (
+      <>
+        <PillarPage pillar={pillar} locale={locale} articles={articles} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(pillarJsonLd) }}
+        />
+      </>
+    );
+  }
+
   const article = getArticleBySlug(locale, slug);
   if (!article) notFound();
 
+  const articlePillar = pillarOfArticle(locale, article.slug);
+  const pillarLink = articlePillar
+    ? {
+        href: `/blog/${PILLARS[articlePillar][locale].slug}`,
+        id: articlePillar,
+      }
+    : null;
   const related = getRelatedArticles(article);
   const hasEndCta = /<AppCta[^>]*variant="end"/.test(article.content);
 
@@ -140,7 +218,7 @@ export default async function ArticlePage({ params }: Props) {
 
         <div className="mt-8 lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-12">
           <article className="min-w-0">
-            <ArticleHeader article={article} />
+            <ArticleHeader article={article} pillar={pillarLink} />
             <div className="mx-auto mt-10 max-w-[65ch]">
               <MDXRemote
                 source={article.content}
@@ -162,7 +240,7 @@ export default async function ArticlePage({ params }: Props) {
                 }}
               />
               {!hasEndCta && <BlogCta />}
-              <RelatedArticles articles={related} />
+              <RelatedArticles articles={related} pillar={pillarLink} />
             </div>
           </article>
 

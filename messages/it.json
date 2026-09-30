@@ -17,7 +17,14 @@
       "title": "Il blog di Mellow arriva presto in italiano",
       "text": "Stiamo lavorando ai contenuti in italiano. Nel frattempo, puoi leggere i nostri articoli in inglese.",
       "button": "Leggi in inglese"
-    }
+    },
+    "pillarCount": "{count, plural, one {# articolo} other {# articoli}}",
+    "otherPillars": "Gli altri temi",
+    "allInPillar": "Tutti gli articoli «{pillar}»",
+    "latestTitle": "Ultimi articoli",
+    "seeAll": "Vedi tutti gli articoli",
+    "themes": "Temi",
+    "startHere": "Inizia da qui"
   },
   "hero": {
     "title": "Riprendi il controllo delle tue emicranie.",

@@ -20,7 +20,14 @@
     "tocTitle": "Sommaire",
     "relatedTitle": "Articles connexes",
     "ctaTitle": "Reprends le contrôle de tes migraines",
-    "ctaSubtitle": "Télécharge Mellow et commence à comprendre ce qui déclenche tes crises."
+    "ctaSubtitle": "Télécharge Mellow et commence à comprendre ce qui déclenche tes crises.",
+    "pillarCount": "{count, plural, one {# article} other {# articles}}",
+    "otherPillars": "Les autres thèmes",
+    "allInPillar": "Tous les articles « {pillar} »",
+    "latestTitle": "Derniers articles",
+    "seeAll": "Voir tous les articles",
+    "themes": "Thèmes",
+    "startHere": "Pour commencer"
   },
   "hero": {
     "title": "Reprends le contrôle de tes migraines.",

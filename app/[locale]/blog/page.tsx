@@ -6,6 +6,9 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ArticleCard } from "@/components/blog/ArticleCard";
 import { Clouds } from "@/components/ui/Clouds";
+import { Link } from "@/i18n/navigation";
+import { PILLARS, PILLAR_IDS } from "@/lib/pillars";
+import { TONES } from "@/lib/tones";
 import { getAllArticles, isBlogLocale } from "@/lib/blog";
 import { ComingSoon } from "./coming-soon";
 
@@ -84,6 +87,24 @@ export default async function BlogIndexPage({ params }: Props) {
           <p className="mt-4 max-w-2xl text-lg text-ink-2 md:text-xl">
             {t("indexSubtitle")}
           </p>
+          <nav aria-label={t("themes")} className="mt-7 flex flex-wrap gap-2">
+            {PILLAR_IDS.map((id) => (
+              <Link
+                key={id}
+                href={`/blog/${PILLARS[id][locale].slug}`}
+                className="inline-flex items-center gap-2 rounded-chip bg-white py-2 pl-2.5 pr-4 text-sm font-semibold text-ink transition hover:bg-surface-soft"
+              >
+                <img
+                  src={TONES[PILLARS[id].tone].mascot}
+                  alt=""
+                  aria-hidden
+                  className="h-6 w-6 select-none"
+                  draggable={false}
+                />
+                {PILLARS[id][locale].title}
+              </Link>
+            ))}
+          </nav>
         </div>
         <Clouds maxHeight={160} />
       </header>

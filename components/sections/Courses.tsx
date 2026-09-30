@@ -1,6 +1,8 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Tile } from "../ui/Tile";
 import type { Tone } from "@/lib/tones";
+import { isBlogLocale } from "@/lib/blog";
+import { PILLARS } from "@/lib/pillars";
 
 const COURSES: Array<{ id: "understand" | "prevent" | "manage"; tone: Tone }> =
   [
@@ -11,6 +13,7 @@ const COURSES: Array<{ id: "understand" | "prevent" | "manage"; tone: Tone }> =
 
 export function Courses() {
   const t = useTranslations("courses");
+  const locale = useLocale();
 
   return (
     <section id="courses" className="py-14 md:py-28">
@@ -24,7 +27,11 @@ export function Courses() {
           {COURSES.map((c) => (
             <Tile
               key={c.id}
-              href="/blog"
+              href={
+                isBlogLocale(locale)
+                  ? `/blog/${PILLARS[c.id][locale].slug}`
+                  : "/blog"
+              }
               tone={c.tone}
               title={t(`${c.id}.title`)}
               subtitle={t(`${c.id}.subtitle`)}

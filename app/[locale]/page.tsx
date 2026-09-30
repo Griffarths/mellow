@@ -3,6 +3,7 @@ import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/sections/Hero";
 import { MellowsSlider } from "@/components/sections/MellowsSlider";
 import { Courses } from "@/components/sections/Courses";
+import { LatestArticles } from "@/components/sections/LatestArticles";
 import { Screenshots } from "@/components/sections/Screenshots";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -25,6 +26,7 @@ export default async function HomePage({
         <Screenshots />
         <SocialProof />
         <Courses />
+        <LatestArticles />
         <FinalCta />
       </main>
       <Footer />

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { BLOG_LOCALES, getAllArticles } from "@/lib/blog";
+import { PILLARS, PILLAR_IDS } from "@/lib/pillars";
 
 const SITE_URL = "https://mellowmigraine.com";
 
@@ -39,6 +40,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
       alternates: { languages: blogIndexAlternates },
     });
+  }
+
+  // Pillar pages (FR and EN), cross-linked via hreflang
+  for (const id of PILLAR_IDS) {
+    const languages = {
+      fr: url("fr", `/blog/${PILLARS[id].fr.slug}`),
+      en: url("en", `/blog/${PILLARS[id].en.slug}`),
+    };
+    for (const locale of BLOG_LOCALES) {
+      entries.push({
+        url: languages[locale],
+        changeFrequency: "weekly",
+        priority: 0.8,
+        alternates: { languages },
+      });
+    }
   }
 
   // Articles in FR and EN, with cross-language hreflang when defined

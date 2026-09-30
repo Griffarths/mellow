@@ -3,6 +3,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 import GithubSlugger from "github-slugger";
+import { PILLARS, pillarOfArticle, type PillarId } from "./pillars";
 
 export const BLOG_LOCALES = ["fr", "en"] as const;
 export type BlogLocale = (typeof BLOG_LOCALES)[number];
@@ -64,17 +65,32 @@ export function getArticleBySlug(
   return getAllArticles(locale).find((a) => a.slug === slug) ?? null;
 }
 
+// Same pillar, same language; ties on shared tags keep the pillar's
+// reading order.
 export function getRelatedArticles(article: Article, max = 3): Article[] {
-  return getAllArticles(article.locale)
-    .filter((a) => a.slug !== article.slug)
-    .map((a) => ({
+  const pillar = pillarOfArticle(article.locale, article.slug);
+  if (!pillar) return [];
+  const order = PILLARS[pillar][article.locale].articles;
+  const all = getAllArticles(article.locale);
+  return order
+    .filter((slug) => slug !== article.slug)
+    .map((slug) => all.find((a) => a.slug === slug))
+    .filter((a): a is Article => a !== undefined)
+    .map((a, i) => ({
       article: a,
       score: a.tags.filter((t) => article.tags.includes(t)).length,
+      i,
     }))
-    .filter((s) => s.score > 0)
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => b.score - a.score || a.i - b.i)
     .slice(0, max)
     .map((s) => s.article);
+}
+
+export function getPillarArticles(locale: BlogLocale, pillar: PillarId): Article[] {
+  const all = getAllArticles(locale);
+  return PILLARS[pillar][locale].articles
+    .map((slug) => all.find((a) => a.slug === slug))
+    .filter((a): a is Article => a !== undefined);
 }
 
 export type TocHeading = { level: 2 | 3; text: string; slug: string };

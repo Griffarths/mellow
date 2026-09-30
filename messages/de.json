@@ -17,7 +17,14 @@
       "title": "Der Mellow-Blog kommt bald auf Deutsch",
       "text": "Wir arbeiten an Inhalten auf Deutsch. In der Zwischenzeit kannst du unsere englischen Artikel lesen.",
       "button": "Auf Englisch lesen"
-    }
+    },
+    "pillarCount": "{count, plural, one {# Artikel} other {# Artikel}}",
+    "otherPillars": "Weitere Themen",
+    "allInPillar": "Alle Artikel zu „{pillar}“",
+    "latestTitle": "Neueste Artikel",
+    "seeAll": "Alle Artikel ansehen",
+    "themes": "Themen",
+    "startHere": "Hier anfangen"
   },
   "hero": {
     "title": "Nimm die Kontrolle über deine Migräne zurück.",

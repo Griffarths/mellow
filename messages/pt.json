@@ -17,7 +17,14 @@
       "title": "O blog Mellow chega em breve em português",
       "text": "Estamos a trabalhar no conteúdo em português. Entretanto, podes ler os nossos artigos em inglês.",
       "button": "Ler em inglês"
-    }
+    },
+    "pillarCount": "{count, plural, one {# artigo} other {# artigos}}",
+    "otherPillars": "Outros temas",
+    "allInPillar": "Todos os artigos «{pillar}»",
+    "latestTitle": "Últimos artigos",
+    "seeAll": "Ver todos os artigos",
+    "themes": "Temas",
+    "startHere": "Começa aqui"
   },
   "hero": {
     "title": "Retoma o controlo das tuas enxaquecas.",
