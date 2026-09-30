@@ -40,21 +40,22 @@ export function DiaryPage({ locale }: { locale: BlogLocale }) {
             <p className="mt-3 text-sm text-ink-3">{c.downloadNote}</p>
           </div>
 
-          {/* Page previews, the landscape log tucked behind the calendar. */}
-          <div className="relative mx-auto w-full max-w-md pb-10 md:pb-0">
-            <img
-              src={versioned(`/tools/diary-${locale}-p2.png`)}
-              alt={c.previewAlt[1]}
-              width={1684}
-              height={1191}
-              className="absolute right-0 top-8 w-[78%] rotate-3 rounded-btn shadow-soft ring-1 ring-surface-line"
-            />
+          {/* Straight previews (no rotation, which blurs thin lines): the
+              calendar behind, the landscape log in front, fully readable. */}
+          <div className="relative mx-auto aspect-[1/1.08] w-full max-w-lg">
             <img
               src={versioned(`/tools/diary-${locale}-p1.png`)}
               alt={c.previewAlt[0]}
-              width={1191}
-              height={1684}
-              className="relative w-[62%] -rotate-2 rounded-btn shadow-soft ring-1 ring-surface-line"
+              width={1588}
+              height={2245}
+              className="absolute left-0 top-0 w-[68%] rounded-btn shadow-soft ring-1 ring-surface-line"
+            />
+            <img
+              src={versioned(`/tools/diary-${locale}-p2.png`)}
+              alt={c.previewAlt[1]}
+              width={2245}
+              height={1588}
+              className="absolute bottom-0 right-0 w-[78%] rounded-btn shadow-[0_24px_48px_-20px_rgb(0_0_0/0.28)] ring-1 ring-surface-line"
             />
           </div>
         </div>

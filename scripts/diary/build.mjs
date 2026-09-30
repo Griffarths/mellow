@@ -240,7 +240,7 @@ for (const o of OUTPUTS) {
       writeFileSync(one, html(o.locale, o.paper, [body]));
       chrome([
         `--window-size=${width},${height}`,
-        "--force-device-scale-factor=1.5",
+        "--force-device-scale-factor=2",
         `--screenshot=${path.join(ROOT, "public/tools", `diary-${o.preview}-p${n}.png`)}`,
         pathToFileURL(one).href,
       ]);
