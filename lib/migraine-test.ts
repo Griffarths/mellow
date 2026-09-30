@@ -1,4 +1,4 @@
-import type { BlogLocale } from "./blog";
+import type { ToolLocale } from "./tools";
 
 // Screening quiz inspired by the ICHD-3 criteria for migraine without aura
 // (1.1), migraine with aura (1.2), probable migraine (1.5), tension-type
@@ -106,7 +106,7 @@ export type TestCopy = {
   overuseNote: Rich;
 };
 
-export const TEST_COPY: Record<BlogLocale, TestCopy> = {
+export const TEST_COPY: Record<ToolLocale, TestCopy> = {
   fr: {
     progress: "Question {n} sur {total}",
     back: "Retour",

@@ -1,7 +1,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { PLAY_STORE_URL } from "@/lib/stores";
-import { isBlogLocale } from "@/lib/blog";
+import { isToolLocale } from "@/lib/tools";
 import { DIARY, TEST_PAGE, TOOLS_LABEL } from "@/lib/tools";
 import { ToolsMenu } from "./ToolsMenu";
 import { StoreBadges } from "./StoreBadges";
@@ -29,12 +29,12 @@ export function Nav() {
               draggable={false}
             />
             {/* Wordmark hidden on small phones when the Tools menu needs the room. */}
-            <span className={isBlogLocale(locale) ? "hidden sm:inline" : ""}>Mellow</span>
+            <span className={isToolLocale(locale) ? "hidden sm:inline" : ""}>Mellow</span>
           </Link>
           <Link href="/blog" className={LINK_CLASS}>
             {t("blog")}
           </Link>
-          {isBlogLocale(locale) && (
+          {isToolLocale(locale) && (
             <ToolsMenu
               label={TOOLS_LABEL[locale]}
               items={[DIARY[locale], TEST_PAGE[locale]].map((tool) => ({

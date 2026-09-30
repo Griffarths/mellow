@@ -1,7 +1,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { isBlogLocale } from "@/lib/blog";
+import { isToolLocale } from "@/lib/tools";
 import { DIARY, TEST_PAGE } from "@/lib/tools";
 
 export function Footer() {
@@ -33,7 +33,7 @@ export function Footer() {
               {t("about")}
             </Link>
           )}
-          {isBlogLocale(locale) && (
+          {isToolLocale(locale) && (
             <>
               <Link href={DIARY[locale].path} className="transition hover:text-ink">
                 {DIARY[locale].navLabel}

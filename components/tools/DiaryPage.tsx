@@ -2,13 +2,13 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { BlogCta } from "@/components/blog/BlogCta";
 import { buttonClass } from "@/components/ui/Button";
-import type { BlogLocale } from "@/lib/blog";
+import type { ToolLocale } from "@/lib/tools";
 import { DIARY } from "@/lib/tools";
 import { versioned } from "@/lib/diary-assets";
 import { typographize } from "@/lib/typography";
 import { RichText } from "./RichText";
 
-export function DiaryPage({ locale }: { locale: BlogLocale }) {
+export function DiaryPage({ locale }: { locale: ToolLocale }) {
   const c = DIARY[locale];
   const ty = (s: string) => typographize(s, locale);
 

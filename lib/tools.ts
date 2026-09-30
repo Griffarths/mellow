@@ -1,4 +1,9 @@
-import type { BlogLocale } from "./blog";
+// Free tools exist in French and English only (the blog can have more languages).
+export const TOOL_LOCALES = ["fr", "en"] as const;
+export type ToolLocale = (typeof TOOL_LOCALES)[number];
+export function isToolLocale(locale: string): locale is ToolLocale {
+  return (TOOL_LOCALES as readonly string[]).includes(locale);
+}
 import type { Rich } from "./migraine-test";
 
 type Faq = { q: string; a: string };
@@ -40,9 +45,9 @@ export type TestPageCopy = {
   faq: Faq[];
 };
 
-export const TOOLS_LABEL: Record<BlogLocale, string> = { fr: "Outils", en: "Tools" };
+export const TOOLS_LABEL: Record<ToolLocale, string> = { fr: "Outils", en: "Tools" };
 
-export const DIARY: Record<BlogLocale, DiaryCopy> = {
+export const DIARY: Record<ToolLocale, DiaryCopy> = {
   fr: {
     path: "/outils/journal-de-migraine",
     navLabel: "Journal de migraine",
@@ -176,7 +181,7 @@ export const DIARY: Record<BlogLocale, DiaryCopy> = {
   },
 };
 
-export const TEST_PAGE: Record<BlogLocale, TestPageCopy> = {
+export const TEST_PAGE: Record<ToolLocale, TestPageCopy> = {
   fr: {
     path: "/outils/test-migraine",
     navLabel: "Test migraine",

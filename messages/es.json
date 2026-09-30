@@ -18,12 +18,22 @@
       "text": "Estamos trabajando en el contenido en español. Mientras tanto, puedes leer nuestros artículos en inglés.",
       "button": "Leer en inglés"
     },
+    "indexTitle": "Blog",
+    "indexSubtitle": "Todo para entender mejor tus migrañas",
+    "emptyState": "Todavía no hay artículos. Vuelve pronto.",
+    "backToBlog": "Volver al blog",
+    "tocTitle": "Índice",
+    "relatedTitle": "Artículos relacionados",
+    "ctaTitle": "Recupera el control de tus migrañas",
+    "ctaSubtitle": "Descarga Mellow y empieza a entender qué desencadena tus crisis.",
     "pillarCount": "{count, plural, one {# artículo} other {# artículos}}",
     "allInPillar": "Todos los artículos «{pillar}»",
     "latestTitle": "Últimos artículos",
     "seeAll": "Ver todos los artículos",
     "themes": "Temas",
-    "startHere": "Empieza aquí"
+    "startHere": "Empieza aquí",
+    "metaTitle": "Blog de Mellow: comprender, prevenir y gestionar la migraña",
+    "metaDescription": "Artículos con fuentes y explicados de forma sencilla sobre la migraña: síntomas, aura, desencadenantes, sueño, alimentación, tratamientos de la crisis y preventivos."
   },
   "hero": {
     "title": "Recupera el control de tus migrañas.",

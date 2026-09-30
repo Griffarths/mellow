@@ -1,14 +1,14 @@
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { StoreBadges } from "@/components/StoreBadges";
-import type { BlogLocale } from "@/lib/blog";
+import type { ToolLocale } from "@/lib/tools";
 import { TEST_COPY } from "@/lib/migraine-test";
 import { TEST_PAGE } from "@/lib/tools";
 import { typographize } from "@/lib/typography";
 import { MigraineTest } from "./MigraineTest";
 import { RichText } from "./RichText";
 
-export function TestPage({ locale }: { locale: BlogLocale }) {
+export function TestPage({ locale }: { locale: ToolLocale }) {
   const c = TEST_PAGE[locale];
   const ty = (s: string) => typographize(s, locale);
 

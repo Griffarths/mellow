@@ -18,12 +18,22 @@
       "text": "Stiamo lavorando ai contenuti in italiano. Nel frattempo, puoi leggere i nostri articoli in inglese.",
       "button": "Leggi in inglese"
     },
+    "indexTitle": "Blog",
+    "indexSubtitle": "Tutto per capire meglio la tua emicrania",
+    "emptyState": "Ancora nessun articolo. Torna presto.",
+    "backToBlog": "Torna al blog",
+    "tocTitle": "Indice",
+    "relatedTitle": "Articoli correlati",
+    "ctaTitle": "Riprendi il controllo della tua emicrania",
+    "ctaSubtitle": "Scarica Mellow e inizia a capire cosa scatena i tuoi attacchi.",
     "pillarCount": "{count, plural, one {# articolo} other {# articoli}}",
     "allInPillar": "Tutti gli articoli «{pillar}»",
     "latestTitle": "Ultimi articoli",
     "seeAll": "Vedi tutti gli articoli",
     "themes": "Temi",
-    "startHere": "Inizia da qui"
+    "startHere": "Inizia da qui",
+    "metaTitle": "Blog Mellow: capire, prevenire e gestire l'emicrania",
+    "metaDescription": "Articoli con fonti e spiegati in modo semplice sull'emicrania: sintomi, aura, fattori scatenanti, sonno, alimentazione, terapie per l'attacco e di profilassi."
   },
   "hero": {
     "title": "Riprendi il controllo delle tue emicranie.",

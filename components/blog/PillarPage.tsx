@@ -4,7 +4,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import type { Article, BlogLocale } from "@/lib/blog";
 import { PILLARS, type PillarId } from "@/lib/pillars";
-import { DIARY, TEST_PAGE } from "@/lib/tools";
+import { DIARY, TEST_PAGE, isToolLocale } from "@/lib/tools";
 import { typographize } from "@/lib/typography";
 import { ArticleCard } from "./ArticleCard";
 import { BlogCta } from "./BlogCta";
@@ -20,7 +20,8 @@ export function PillarPage({ pillar, locale, articles }: Props) {
   const t = useTranslations("blog");
   const tc = useTranslations("courses");
   const copy = PILLARS[pillar][locale];
-  const tool = pillar === "understand" ? TEST_PAGE[locale] : DIARY[locale];
+  // Free tools exist in FR and EN only: no tool block in the other languages.
+  const tool = !isToolLocale(locale) ? null : pillar === "understand" ? TEST_PAGE[locale] : DIARY[locale];
 
   return (
     <>
@@ -45,6 +46,7 @@ export function PillarPage({ pillar, locale, articles }: Props) {
           ))}
         </div>
 
+        {tool && (
         <p className="mt-6 text-[15px] text-ink-2">
           <Link
             href={tool.path}
@@ -54,6 +56,7 @@ export function PillarPage({ pillar, locale, articles }: Props) {
           </Link>
           <span aria-hidden> →</span>
         </p>
+        )}
 
         <p className="mt-12 text-sm font-semibold text-ink-3">
           {t("pillarCount", { count: articles.length })}

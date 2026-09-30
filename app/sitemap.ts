@@ -1,6 +1,14 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
-import { BLOG_LOCALES, getAllArticles } from "@/lib/blog";
+import {
+  BLOG_LOCALES,
+  type BlogLocale,
+  HREFLANG,
+  getAllArticles,
+  getArticleVersions,
+  getPillarArticles,
+  liveBlogLocales,
+} from "@/lib/blog";
 import { PILLARS, PILLAR_IDS } from "@/lib/pillars";
 import { toolUrl } from "@/lib/tools-seo";
 
@@ -43,15 +51,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // Pillar pages (FR and EN), cross-linked via hreflang
+  // Pillar pages, in every language where the pillar has articles, cross-linked via hreflang
   for (const id of PILLAR_IDS) {
-    const languages = {
-      fr: url("fr", `/blog/${PILLARS[id].fr.slug}`),
-      en: url("en", `/blog/${PILLARS[id].en.slug}`),
-    };
-    for (const locale of BLOG_LOCALES) {
+    const live = liveBlogLocales().filter((l) => getPillarArticles(l, id).length > 0);
+    const languages = Object.fromEntries(
+      live.map((l) => [HREFLANG[l], url(l, `/blog/${PILLARS[id][l].slug}`)]),
+    );
+    for (const locale of live) {
       entries.push({
-        url: languages[locale],
+        url: url(locale, `/blog/${PILLARS[id][locale].slug}`),
         changeFrequency: "weekly",
         priority: 0.8,
         alternates: { languages },
@@ -59,10 +67,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Free tools (FR and EN)
+  // Free tools (FR and EN only)
   for (const tool of ["diary", "test"] as const) {
     const languages = { fr: toolUrl(tool, "fr"), en: toolUrl(tool, "en") };
-    for (const locale of BLOG_LOCALES) {
+    for (const locale of ["fr", "en"] as const) {
       entries.push({
         url: languages[locale],
         changeFrequency: "monthly",
@@ -72,19 +80,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Articles in FR and EN, with cross-language hreflang when defined
+  // Articles in every language, with hreflang to all their language versions
   for (const locale of BLOG_LOCALES) {
     for (const article of getAllArticles(locale)) {
-      const languages: Record<string, string> = {
-        [locale]: url(locale, `/blog/${article.slug}`),
-      };
-      if (article.relatedSlugInOtherLanguage) {
-        const other = locale === "fr" ? "en" : "fr";
-        languages[other] = url(
-          other,
-          `/blog/${article.relatedSlugInOtherLanguage}`,
-        );
-      }
+      const languages = Object.fromEntries(
+        (Object.entries(getArticleVersions(article)) as [BlogLocale, string][]).map(
+          ([l, s]) => [HREFLANG[l], url(l, `/blog/${s}`)],
+        ),
+      );
       entries.push({
         url: url(locale, `/blog/${article.slug}`),
         lastModified: new Date(article.updatedAt),

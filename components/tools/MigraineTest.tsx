@@ -2,13 +2,13 @@
 
 import { useRef, useState, type ReactNode } from "react";
 import { buttonClass } from "@/components/ui/Button";
-import type { BlogLocale } from "@/lib/blog";
+import type { ToolLocale } from "@/lib/tools";
 import { score, TEST_COPY, type Answers } from "@/lib/migraine-test";
 import { typographize } from "@/lib/typography";
 import { RichText } from "./RichText";
 
 type Props = {
-  locale: BlogLocale;
+  locale: ToolLocale;
   // Store badges rendered on the server.
   badges: ReactNode;
 };

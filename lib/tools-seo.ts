@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import type { BlogLocale } from "./blog";
-import { DIARY, TEST_PAGE } from "./tools";
+import { DIARY, TEST_PAGE, type ToolLocale } from "./tools";
 import { versioned } from "./diary-assets";
 
 const SITE_URL = "https://mellowmigraine.com";
@@ -8,12 +7,12 @@ const SITE_URL = "https://mellowmigraine.com";
 export type ToolId = "diary" | "test";
 const COPY = { diary: DIARY, test: TEST_PAGE };
 
-export function toolUrl(tool: ToolId, locale: BlogLocale) {
+export function toolUrl(tool: ToolId, locale: ToolLocale) {
   const path = COPY[tool][locale].path;
   return locale === "en" ? `${SITE_URL}${path}` : `${SITE_URL}/${locale}${path}`;
 }
 
-export function toolMetadata(tool: ToolId, locale: BlogLocale): Metadata {
+export function toolMetadata(tool: ToolId, locale: ToolLocale): Metadata {
   const c = COPY[tool][locale];
   const url = toolUrl(tool, locale);
   return {
@@ -34,7 +33,7 @@ export function toolMetadata(tool: ToolId, locale: BlogLocale): Metadata {
   };
 }
 
-export function toolJsonLd(tool: ToolId, locale: BlogLocale) {
+export function toolJsonLd(tool: ToolId, locale: ToolLocale) {
   const c = COPY[tool][locale];
   const faq = {
     "@type": "FAQPage",
