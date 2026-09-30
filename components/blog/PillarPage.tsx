@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { Clouds } from "@/components/ui/Clouds";
 import { Tile } from "@/components/ui/Tile";
 import type { Article, BlogLocale } from "@/lib/blog";
 import { PILLARS, PILLAR_IDS, type PillarId } from "@/lib/pillars";
@@ -26,8 +25,8 @@ export function PillarPage({ pillar, locale, articles }: Props) {
   return (
     <>
       <Nav />
-      <header className="overflow-hidden bg-hero">
-        <div className="mx-auto max-w-6xl px-6 pb-6 pt-10 md:pb-2 md:pt-14">
+      <header>
+        <div className="mx-auto max-w-6xl px-6 pb-10 pt-10 md:pb-14 md:pt-14">
           <nav aria-label="Breadcrumb" className="text-sm font-semibold text-ink-3">
             <Link href="/blog" className="transition hover:text-ink">
               {t("indexTitle")}
@@ -55,10 +54,9 @@ export function PillarPage({ pillar, locale, articles }: Props) {
             />
           </div>
         </div>
-        <Clouds maxHeight={160} />
       </header>
 
-      <main className="mx-auto max-w-6xl px-6 pb-20 pt-2 md:pb-28">
+      <main className="mx-auto max-w-6xl px-6 pb-20 md:pb-28">
         <p className="text-sm font-semibold text-ink-3">
           {t("pillarCount", { count: articles.length })}
         </p>

@@ -5,7 +5,6 @@ import { routing } from "@/i18n/routing";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ArticleCard } from "@/components/blog/ArticleCard";
-import { Clouds } from "@/components/ui/Clouds";
 import { Link } from "@/i18n/navigation";
 import { PILLARS, PILLAR_IDS } from "@/lib/pillars";
 import { TONES } from "@/lib/tones";
@@ -81,8 +80,8 @@ export default async function BlogIndexPage({ params }: Props) {
   return (
     <>
       <Nav />
-      <header className="overflow-hidden bg-hero">
-        <div className="mx-auto max-w-6xl px-6 pb-6 pt-12 md:pb-2 md:pt-20">
+      <header>
+        <div className="mx-auto max-w-6xl px-6 pb-10 pt-12 md:pb-14 md:pt-20">
           <h1 className="text-display text-ink">{t("indexTitle")}</h1>
           <p className="mt-4 max-w-2xl text-lg text-ink-2 md:text-xl">
             {t("indexSubtitle")}
@@ -92,7 +91,7 @@ export default async function BlogIndexPage({ params }: Props) {
               <Link
                 key={id}
                 href={`/blog/${PILLARS[id][locale].slug}`}
-                className="inline-flex items-center gap-2 rounded-chip bg-white py-2 pl-2.5 pr-4 text-sm font-semibold text-ink transition hover:bg-surface-soft"
+                className="inline-flex items-center gap-2 rounded-chip bg-surface-soft py-2 pl-2.5 pr-4 text-sm font-semibold text-ink transition hover:bg-surface-line"
               >
                 <img
                   src={TONES[PILLARS[id].tone].mascot}
@@ -106,9 +105,8 @@ export default async function BlogIndexPage({ params }: Props) {
             ))}
           </nav>
         </div>
-        <Clouds maxHeight={160} />
       </header>
-      <main className="mx-auto max-w-6xl px-6 pb-20 pt-4 md:pb-28">
+      <main className="mx-auto max-w-6xl px-6 pb-20 md:pb-28">
         {articles.length === 0 ? (
           <p className="text-ink-3">{t("emptyState")}</p>
         ) : (
