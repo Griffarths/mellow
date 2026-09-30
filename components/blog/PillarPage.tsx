@@ -4,6 +4,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import type { Article, BlogLocale } from "@/lib/blog";
 import { PILLARS, type PillarId } from "@/lib/pillars";
+import { DIARY, TEST_PAGE } from "@/lib/tools";
 import { typographize } from "@/lib/typography";
 import { ArticleCard } from "./ArticleCard";
 import { BlogCta } from "./BlogCta";
@@ -19,6 +20,7 @@ export function PillarPage({ pillar, locale, articles }: Props) {
   const t = useTranslations("blog");
   const tc = useTranslations("courses");
   const copy = PILLARS[pillar][locale];
+  const tool = pillar === "understand" ? TEST_PAGE[locale] : DIARY[locale];
 
   return (
     <>
@@ -42,6 +44,19 @@ export function PillarPage({ pillar, locale, articles }: Props) {
             <p key={p.slice(0, 24)}>{typographize(p, locale)}</p>
           ))}
         </div>
+
+        <p className="mt-6 text-[15px] text-ink-2">
+          <span className="mr-2 text-caption font-bold uppercase tracking-[0.08em] text-croix-ink">
+            {tool.eyebrow}
+          </span>
+          <Link
+            href={tool.path}
+            className="font-semibold text-ink underline decoration-ink/20 decoration-2 underline-offset-[3px] transition hover:decoration-ink"
+          >
+            {typographize(tool.title, locale)}
+          </Link>
+          <span aria-hidden> →</span>
+        </p>
 
         <p className="mt-12 text-sm font-semibold text-ink-3">
           {t("pillarCount", { count: articles.length })}

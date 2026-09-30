@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { BLOG_LOCALES, getAllArticles } from "@/lib/blog";
 import { PILLARS, PILLAR_IDS } from "@/lib/pillars";
+import { toolUrl } from "@/lib/tools-seo";
 
 const SITE_URL = "https://mellowmigraine.com";
 
@@ -52,6 +53,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: languages[locale],
         changeFrequency: "weekly",
+        priority: 0.8,
+        alternates: { languages },
+      });
+    }
+  }
+
+  // Free tools (FR and EN)
+  for (const tool of ["diary", "test"] as const) {
+    const languages = { fr: toolUrl(tool, "fr"), en: toolUrl(tool, "en") };
+    for (const locale of BLOG_LOCALES) {
+      entries.push({
+        url: languages[locale],
+        changeFrequency: "monthly",
         priority: 0.8,
         alternates: { languages },
       });

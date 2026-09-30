@@ -1,6 +1,8 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { isBlogLocale } from "@/lib/blog";
+import { DIARY, TEST_PAGE } from "@/lib/tools";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -30,6 +32,16 @@ export function Footer() {
             <Link href="/about" className="transition hover:text-ink">
               {t("about")}
             </Link>
+          )}
+          {isBlogLocale(locale) && (
+            <>
+              <Link href={DIARY[locale].path} className="transition hover:text-ink">
+                {DIARY[locale].navLabel}
+              </Link>
+              <Link href={TEST_PAGE[locale].path} className="transition hover:text-ink">
+                {TEST_PAGE[locale].navLabel}
+              </Link>
+            </>
           )}
           <Link href="/confidentialite" className="transition hover:text-ink">
             {t("privacy")}
