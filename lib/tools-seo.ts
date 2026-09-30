@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { BlogLocale } from "./blog";
 import { DIARY, TEST_PAGE } from "./tools";
+import { versioned } from "./diary-assets";
 
 const SITE_URL = "https://mellowmigraine.com";
 
@@ -28,7 +29,7 @@ export function toolMetadata(tool: ToolId, locale: BlogLocale): Metadata {
       description: c.description,
       url,
       locale: locale === "fr" ? "fr_FR" : "en_US",
-      images: tool === "diary" ? [{ url: `${SITE_URL}/tools/diary-${locale}-p1.png` }] : undefined,
+      images: tool === "diary" ? [{ url: `${SITE_URL}${versioned(`/tools/diary-${locale}-p1.png`)}` }] : undefined,
     },
   };
 }
@@ -54,8 +55,8 @@ export function toolJsonLd(tool: ToolId, locale: BlogLocale) {
         "@type": "HowTo",
         name: d.howTitle,
         description: d.lead,
-        image: `${SITE_URL}/tools/diary-${locale}-p1.png`,
-        supply: d.downloads.map((x) => ({ "@type": "HowToSupply", name: `${SITE_URL}${x.href}` })),
+        image: `${SITE_URL}${versioned(`/tools/diary-${locale}-p1.png`)}`,
+        supply: d.downloads.map((x) => ({ "@type": "HowToSupply", name: `${SITE_URL}${versioned(x.href)}` })),
         step: d.steps.map((text, i) => ({ "@type": "HowToStep", position: i + 1, text })),
       },
       faq,

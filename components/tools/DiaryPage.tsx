@@ -4,6 +4,7 @@ import { BlogCta } from "@/components/blog/BlogCta";
 import { buttonClass } from "@/components/ui/Button";
 import type { BlogLocale } from "@/lib/blog";
 import { DIARY } from "@/lib/tools";
+import { versioned } from "@/lib/diary-assets";
 import { typographize } from "@/lib/typography";
 import { RichText } from "./RichText";
 
@@ -23,7 +24,7 @@ export function DiaryPage({ locale }: { locale: BlogLocale }) {
               {c.downloads.map((d) => (
                 <a
                   key={d.href}
-                  href={d.href}
+                  href={versioned(d.href)}
                   download
                   className={buttonClass(d.primary ? "primary" : "secondary")}
                 >
@@ -42,14 +43,14 @@ export function DiaryPage({ locale }: { locale: BlogLocale }) {
           {/* Page previews, the landscape log tucked behind the calendar. */}
           <div className="relative mx-auto w-full max-w-md pb-10 md:pb-0">
             <img
-              src={`/tools/diary-${locale}-p2.png`}
+              src={versioned(`/tools/diary-${locale}-p2.png`)}
               alt={c.previewAlt[1]}
               width={1684}
               height={1191}
               className="absolute right-0 top-8 w-[78%] rotate-3 rounded-btn shadow-soft ring-1 ring-surface-line"
             />
             <img
-              src={`/tools/diary-${locale}-p1.png`}
+              src={versioned(`/tools/diary-${locale}-p1.png`)}
               alt={c.previewAlt[0]}
               width={1191}
               height={1684}

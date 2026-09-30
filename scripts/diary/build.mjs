@@ -3,7 +3,8 @@
 // the Plus Jakarta Sans web font). Outputs to public/downloads and
 // public/tools.
 import { execFileSync } from "node:child_process";
-import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -247,3 +248,15 @@ for (const o of OUTPUTS) {
   }
   console.log("built", o.file);
 }
+
+// Content hashes, appended as ?v= to the URLs so browsers and CDNs pick up
+// regenerated files instead of cached ones.
+const hashes = {};
+for (const dir of ["public/downloads", "public/tools"]) {
+  for (const file of readdirSync(path.join(ROOT, dir)).filter((f) => /\.(pdf|png)$/.test(f))) {
+    const data = readFileSync(path.join(ROOT, dir, file));
+    hashes[`/${dir.replace("public/", "")}/${file}`] = createHash("md5").update(data).digest("hex").slice(0, 8);
+  }
+}
+writeFileSync(path.join(ROOT, "lib/diary-assets.json"), JSON.stringify(hashes, null, 2) + "\n");
+console.log("wrote lib/diary-assets.json");
