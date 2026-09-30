@@ -19,14 +19,14 @@ export function Hero() {
           alt=""
           aria-hidden
           draggable={false}
-          className="breathe mt-10 w-[190px] select-none md:mt-8 md:w-[220px]"
+          className="breathe mt-10 w-[190px] select-none md:mt-8 md:w-[340px]"
         />
       </div>
-      {/* Pulled up past the valley (60% of the cloud's height) so about a
+      {/* Pulled up past the valley (60% of the cloud's height) so the bottom
           third of Fleur sinks into the cloud, as in the app. */}
       <Clouds
         maxHeight={240}
-        className="relative z-10 -mt-[calc(1.1*min(31.55vw,240px))] md:-mt-[calc(0.88*min(31.55vw,240px))]"
+        className="relative z-10 -mt-[calc(1.1*min(31.55vw,240px))] md:-mt-[calc(1.2*min(31.55vw,240px))]"
       />
     </section>
   );
