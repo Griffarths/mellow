@@ -19,7 +19,6 @@
       "button": "Auf Englisch lesen"
     },
     "pillarCount": "{count, plural, one {# Artikel} other {# Artikel}}",
-    "otherPillars": "Weitere Themen",
     "allInPillar": "Alle Artikel zu „{pillar}“",
     "latestTitle": "Neueste Artikel",
     "seeAll": "Alle Artikel ansehen",

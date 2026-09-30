@@ -22,12 +22,13 @@
     "ctaTitle": "Reprends le contrôle de tes migraines",
     "ctaSubtitle": "Télécharge Mellow et commence à comprendre ce qui déclenche tes crises.",
     "pillarCount": "{count, plural, one {# article} other {# articles}}",
-    "otherPillars": "Les autres thèmes",
     "allInPillar": "Tous les articles « {pillar} »",
     "latestTitle": "Derniers articles",
     "seeAll": "Voir tous les articles",
     "themes": "Thèmes",
-    "startHere": "Pour commencer"
+    "startHere": "Pour commencer",
+    "metaTitle": "Blog Mellow : comprendre, prévenir et gérer la migraine",
+    "metaDescription": "Des articles sourcés et expliqués simplement sur la migraine : symptômes, aura, déclencheurs, sommeil, alimentation, traitements de crise et de fond."
   },
   "hero": {
     "title": "Reprends le contrôle de tes migraines.",
