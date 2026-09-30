@@ -11,6 +11,13 @@ const SAMPLE_REVIEWS: Review[] = [1, 2, 3].map((n) => ({
   text: "Exemple d'avis. Remplace-le par un vrai avis App Store dans content/reviews.ts.",
 }));
 const CARD_TONES: Tone[] = ["fleur", "tagada", "sable"];
+// Keyed by number of cards (rating + reviews) so a short list stays centred.
+const GRID: Record<number, string> = {
+  1: "mx-auto max-w-sm",
+  2: "mx-auto max-w-3xl md:grid-cols-2",
+  3: "md:grid-cols-3",
+  4: "md:grid-cols-2 lg:grid-cols-4",
+};
 
 function Stars({ rating, label, size }: { rating: number; label: string; size: string }) {
   return (
@@ -33,13 +40,14 @@ function Stars({ rating, label, size }: { rating: number; label: string; size: s
 export function SocialProof() {
   const t = useTranslations("socialProof");
   const locale = useLocale() as Locale;
-  const ownReviews = REVIEWS[locale] ?? REVIEWS.en ?? REVIEWS.fr ?? [];
+  const ownReviews = REVIEWS[locale] ?? [];
   const hasData = APP_STORE_RATING !== null || ownReviews.length > 0;
   if (!hasData && !PREVIEW) return null;
 
   const isSample = !hasData;
   const rating = isSample ? SAMPLE_RATING : APP_STORE_RATING;
   const reviews = (isSample ? SAMPLE_REVIEWS : ownReviews).slice(0, 3);
+  const cards = (rating ? 1 : 0) + reviews.length;
   const formatRating = new Intl.NumberFormat(locale, {
     minimumFractionDigits: 1,
     maximumFractionDigits: 1,
@@ -54,13 +62,13 @@ export function SocialProof() {
             afficher la section en production.
           </p>
         )}
-        <h2 className="text-center text-h2 text-ink md:text-left">{t("title")}</h2>
-
-        <div
-          className={`mt-10 grid gap-3 md:mt-12 md:grid-cols-2 md:gap-4 ${
-            rating ? "lg:grid-cols-4" : "lg:grid-cols-3"
-          }`}
+        <h2
+          className={`text-center text-h2 text-ink ${cards > 2 ? "md:text-left" : ""}`}
         >
+          {t("title")}
+        </h2>
+
+        <div className={`mt-10 grid gap-3 md:mt-12 md:gap-4 ${GRID[cards] ?? GRID[4]}`}>
           {rating && (
             <div className="flex flex-col items-center justify-center rounded-card bg-hero p-8 text-center">
               <p className="text-[64px] font-extrabold leading-none tracking-tight text-ink">
@@ -90,8 +98,13 @@ export function SocialProof() {
                 size="h-4 w-4"
                 label={t("starsLabel", { rating: review.rating })}
               />
-              <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-ink-body">
-                {review.text}
+              <blockquote className="mt-4 flex-1">
+                {review.title && (
+                  <p className="text-base font-bold text-ink">{review.title}</p>
+                )}
+                <p className="mt-1 whitespace-pre-line text-[15px] leading-relaxed text-ink-body">
+                  {review.text}
+                </p>
               </blockquote>
               <figcaption className="mt-5 text-sm font-bold text-ink">
                 {review.author}

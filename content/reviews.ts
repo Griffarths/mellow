@@ -1,23 +1,32 @@
 import type { Locale } from "@/i18n/routing";
 
-// Fill with real App Store data. The home section stays hidden in production
-// until at least the rating or one review is filled in; in `npm run dev` it
-// shows labelled placeholders so the layout can be checked.
+// Real App Store data. The home section stays hidden in production until at
+// least the rating or one review is filled in; in `npm run dev` it shows
+// labelled placeholders so the layout can be checked.
 
 export type Review = {
   author: string;
   rating: 1 | 2 | 3 | 4 | 5;
+  title?: string;
+  // Word for word from the App Store; line breaks are kept.
   text: string;
 };
 
-// Average rating and number of ratings shown on the App Store page,
-// e.g. { value: 4.8, count: 127 }.
-export const APP_STORE_RATING: { value: number; count: number } | null = null;
+// Average rating and number of ratings shown on the App Store page.
+export const APP_STORE_RATING: { value: number; count: number } | null = {
+  value: 4.8,
+  count: 50,
+};
 
-// Up to 3 reviews per locale, copied word for word from the App Store.
-// Locales without their own reviews fall back to "en", then to "fr".
+// Up to 3 reviews per locale, in that locale's language. Locales without
+// reviews show the rating alone.
 export const REVIEWS: Partial<Record<Locale, Review[]>> = {
-  // fr: [
-  //   { author: "Pseudo App Store", rating: 5, text: "Texte exact de l'avis." },
-  // ],
+  fr: [
+    {
+      author: "Gwen 33550",
+      rating: 5,
+      title: "Super !!!",
+      text: "Un accompagnement au top avec cette app\nJe peux suivre mes épisodes de migraine et identifier la fréquence et les élément précurseurs\nUn design tout en douceur",
+    },
+  ],
 };
