@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ComponentProps } from "react";
 import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -16,6 +17,7 @@ import { BlogCta } from "@/components/blog/BlogCta";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
 import { PillarPage } from "@/components/blog/PillarPage";
 import { mdxComponents } from "@/lib/mdx-components";
+import { AppCta } from "@/components/blog/AppCta";
 import {
   type BlogLocale,
   HREFLANG,
@@ -208,6 +210,15 @@ export default async function ArticlePage({ params }: Props) {
         id: articlePillar,
       }
     : null;
+  // The mid-article app card takes the colour of the article's topic.
+  const components = articlePillar
+    ? {
+        ...mdxComponents,
+        AppCta: (props: ComponentProps<typeof AppCta>) => (
+          <AppCta {...props} tone={PILLARS[articlePillar].tone} />
+        ),
+      }
+    : mdxComponents;
   const related = getRelatedArticles(article);
   const hasEndCta = /<AppCta[^>]*variant="end"/.test(article.content);
 
@@ -256,7 +267,7 @@ export default async function ArticlePage({ params }: Props) {
             <div className="mx-auto mt-10 max-w-[65ch]">
               <MDXRemote
                 source={article.content}
-                components={mdxComponents}
+                components={components}
                 options={{
                   mdxOptions: {
                     remarkPlugins: [remarkGfm],

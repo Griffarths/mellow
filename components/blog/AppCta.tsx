@@ -1,5 +1,6 @@
 import { useLocale } from "next-intl";
 import { StoreBadges } from "@/components/StoreBadges";
+import { TONES, type Tone } from "@/lib/tones";
 import { typographize } from "@/lib/typography";
 import { BlogCta } from "./BlogCta";
 
@@ -7,12 +8,15 @@ type Props = {
   title: string;
   text: string;
   variant?: "inline" | "end";
+  // Colour and Mellow of the inline card: the article page passes its
+  // topic's tone (Understand pink, Prevent blue, Manage yellow).
+  tone?: Tone;
 };
 
 // Usable in MDX:
 //   <AppCta title="…" text="…" />               compact card mid-article
 //   <AppCta variant="end" title="…" text="…" /> closing block before sources
-export function AppCta({ title, text, variant = "inline" }: Props) {
+export function AppCta({ title, text, variant = "inline", tone = "tagada" }: Props) {
   const locale = useLocale();
   const t = typographize(title, locale);
   const x = typographize(text, locale);
@@ -20,7 +24,7 @@ export function AppCta({ title, text, variant = "inline" }: Props) {
   if (variant === "end") return <BlogCta title={t} text={x} />;
 
   return (
-    <aside className="relative my-10 overflow-hidden rounded-card bg-tagada-tint p-6 pr-6 md:p-7 md:pr-40">
+    <aside className={`relative my-10 overflow-hidden rounded-card p-6 pr-6 md:p-7 md:pr-40 ${TONES[tone].tint}`}>
       <p className="text-[19px] font-bold leading-snug tracking-tight text-ink md:text-xl">
         {t}
       </p>
@@ -33,7 +37,7 @@ export function AppCta({ title, text, variant = "inline" }: Props) {
         sizeClass="h-10 w-auto select-none"
       />
       <img
-        src="/blobs/Tagada1.svg"
+        src={TONES[tone].mascot}
         alt=""
         aria-hidden
         draggable={false}
