@@ -31,9 +31,6 @@ export function Nav() {
             {/* Wordmark hidden on small phones when the Tools menu needs the room. */}
             <span className={isToolLocale(locale) ? "hidden sm:inline" : ""}>Mellow</span>
           </Link>
-          <Link href="/blog" className={LINK_CLASS}>
-            {t("blog")}
-          </Link>
           {isToolLocale(locale) && (
             <ToolsMenu
               label={TOOLS_LABEL[locale]}
@@ -44,6 +41,9 @@ export function Nav() {
               }))}
             />
           )}
+          <Link href="/blog" className={LINK_CLASS}>
+            {t("blog")}
+          </Link>
           {PLAY_STORE_URL ? (
             <a
               href={PLAY_STORE_URL}
