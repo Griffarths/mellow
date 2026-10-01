@@ -24,7 +24,7 @@ export function AppCta({ title, text, variant = "inline", tone = "tagada" }: Pro
   if (variant === "end") return <BlogCta title={t} text={x} />;
 
   return (
-    <aside className={`relative my-10 overflow-hidden rounded-card p-6 pr-6 md:p-7 md:pr-40 ${TONES[tone].tint}`}>
+    <aside className={`relative my-10 overflow-hidden rounded-card p-5 md:p-7 md:pr-40 ${TONES[tone].tint}`}>
       <p className="text-[19px] font-bold leading-snug tracking-tight text-ink md:text-xl">
         {t}
       </p>
@@ -33,7 +33,7 @@ export function AppCta({ title, text, variant = "inline", tone = "tagada" }: Pro
       </p>
       <StoreBadges
         align="start"
-        className="relative z-10 mt-5 gap-2"
+        className="relative z-10 mt-4 gap-2 md:mt-5"
         sizeClass="h-10 w-auto select-none"
       />
       <img
