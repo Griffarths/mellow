@@ -40,11 +40,11 @@
     "subtitle": "O Mellow acompanha você para entendê-las melhor e atravessá-las."
   },
   "features": {
-    "title": "Seu diário de enxaqueca, no bolso.",
+    "title": "Tudo para monitorar suas enxaquecas.",
     "subtitle": "O Mellow é um app para acompanhar suas enxaquecas, pensado para ser simples mesmo durante uma crise.",
     "log": {
       "title": "Registre uma crise com dois toques",
-      "text": "Intensidade, medicamentos, gatilhos: tudo é anotado em segundos, mesmo no meio da dor."
+      "text": "Intensidade, medicamentos, gatilhos: tudo é anotado em segundos."
     },
     "understand": {
       "title": "Entenda o que desencadeia suas crises",
