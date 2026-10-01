@@ -7,7 +7,9 @@ export function FinalCta() {
   const t = useTranslations("finalCta");
   return (
     <section className="relative overflow-hidden bg-hero">
-      <Clouds flip maxHeight={260} />
+      {/* Overhangs the top by 1px (clipped) so no pink hairline shows above
+          the cloud when its edge falls between two pixels. */}
+      <Clouds flip maxHeight={260} className="-mt-px" />
       <div className="mx-auto max-w-4xl px-6 pb-20 pt-6 text-center md:pb-28">
         <div className="flex justify-center">
           <Blob name="Fleur1" className="breathe h-28 w-28 md:h-36 md:w-36" />

@@ -21,10 +21,12 @@ export function Hero() {
         />
       </div>
       {/* Pulled up past the valley (60% of the cloud's height) so the bottom
-          third of Fleur sinks into the cloud, as in the app. */}
+          third of Fleur sinks into the cloud, as in the app. The cloud's
+          height is rarely a whole pixel: it overhangs the section by 1px
+          (clipped) so neither Fleur nor the pink shows as a hairline under it. */}
       <Clouds
         maxHeight={240}
-        className="relative z-10 -mt-[calc(1.1*min(31.55vw,240px))] md:-mt-[calc(1.2*min(31.55vw,240px))]"
+        className="relative z-10 -mb-px -mt-[calc(1.1*min(31.55vw,240px))] md:-mt-[calc(1.2*min(31.55vw,240px))]"
       />
     </section>
   );
