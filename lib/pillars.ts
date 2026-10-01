@@ -191,7 +191,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Eine Migräneattacke kommt selten aus dem Nichts. Unregelmäßiger Schlaf, eine ausgelassene Mahlzeit, eine stressige Woche, ein Luftdruckabfall oder die nahende Periode können ein Migränegehirn, das empfindlicher ist als andere, aus dem Gleichgewicht bringen.",
         "Vorbeugen heißt zuerst, deine eigenen Auslöser zu erkennen, die nicht unbedingt die der anderen sind, und dann anzupassen, was sich anpassen lässt. Diese Artikel zeigen, was Studien sagen, welche Mythen du vergessen kannst und welche Gewohnheiten wirklich helfen, Attacken seltener zu machen.",
       ],
-      articles: [],
+      articles: ["migraene-bildschirm-blaulicht"],
     },
     it: {
       slug: "prevenire-emicrania",
@@ -203,7 +203,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Un attacco di emicrania raramente arriva per caso. Un sonno irregolare, un pasto saltato, una settimana stressante, un calo di pressione atmosferica o l'arrivo del ciclo possono far vacillare un cervello emicranico, più sensibile degli altri.",
         "Prevenire significa prima di tutto individuare i tuoi fattori scatenanti, che non sono per forza quelli degli altri, e poi modificare ciò che si può. Questi articoli fanno il punto su cosa dicono gli studi, sui falsi miti da dimenticare e sulle abitudini che aiutano davvero a diradare gli attacchi.",
       ],
-      articles: [],
+      articles: ["emicrania-e-schermi-luce-blu"],
     },
     es: {
       slug: "prevenir-migrana",
@@ -215,7 +215,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Una crisis de migraña rara vez llega por casualidad. Un sueño irregular, una comida saltada, una semana estresante, una bajada de la presión atmosférica o la llegada de la regla pueden desestabilizar un cerebro migrañoso, más sensible que los demás.",
         "Prevenir es, ante todo, identificar tus propios desencadenantes, que no son necesariamente los de los demás, y después ajustar lo que se pueda. Estos artículos repasan lo que dicen los estudios, los mitos que conviene olvidar y los hábitos que de verdad ayudan a espaciar las crisis.",
       ],
-      articles: [],
+      articles: ["migrana-y-pantallas-luz-azul"],
     },
     "es-419": {
       slug: "prevenir-migrana",
@@ -227,7 +227,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Una crisis de migraña rara vez llega de la nada. Dormir a deshoras, saltarte una comida, una semana estresante, un descenso de la presión atmosférica o la llegada de tu periodo pueden desestabilizar un cerebro con migraña, que es más sensible que otros.",
         "Prevenir es, antes que nada, identificar tus propios desencadenantes, que no tienen por qué ser los de otras personas, y luego ajustar lo que se pueda. Estos artículos repasan lo que dicen los estudios, los mitos que puedes olvidar y los hábitos que de verdad ayudan a espaciar las crisis.",
       ],
-      articles: [],
+      articles: ["luz-azul-y-migrana"],
     },
     pt: {
       slug: "prevenir-enxaqueca",
@@ -239,7 +239,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Uma crise de enxaqueca raramente surge por acaso. Um sono irregular, uma refeição saltada, uma semana stressante, uma descida da pressão atmosférica ou a chegada da menstruação podem desequilibrar um cérebro com enxaqueca, mais sensível do que os outros.",
         "Prevenir é, antes de mais, identificar os teus próprios fatores desencadeantes, que não são necessariamente os dos outros, e depois ajustar o que for possível. Estes artigos fazem o ponto da situação sobre o que dizem os estudos, os mitos a esquecer e os hábitos que ajudam mesmo a espaçar as crises.",
       ],
-      articles: [],
+      articles: ["enxaqueca-e-ecras-luz-azul"],
     },
     "pt-BR": {
       slug: "prevenir-enxaqueca",
@@ -251,7 +251,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Uma crise de enxaqueca raramente aparece do nada. Sono irregular, uma refeição pulada, uma semana estressante, uma queda na pressão atmosférica ou a chegada da menstruação podem desequilibrar um cérebro com enxaqueca, que é mais sensível que os outros.",
         "Prevenir é, antes de tudo, identificar os seus próprios gatilhos, que não são necessariamente os de outras pessoas, e depois ajustar o que for possível. Estes artigos mostram o que dizem os estudos, os mitos que você pode esquecer e os hábitos que realmente ajudam a espaçar as crises.",
       ],
-      articles: [],
+      articles: ["luz-azul-enxaqueca-telas"],
     },
   },
   manage: {
