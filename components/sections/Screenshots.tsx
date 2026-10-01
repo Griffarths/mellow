@@ -64,14 +64,13 @@ export function Screenshots() {
         </div>
       </div>
 
-      <div className="mt-10 md:mt-12">
+      {/* Mobile: edge to edge, the next card peeking to invite a swipe.
+          From md: kept inside the page column like every other section,
+          showing whole cards only (3, then 4 from lg); the arrows scroll. */}
+      <div className="mt-10 md:mx-auto md:mt-12 md:max-w-6xl md:px-6">
         <div
           ref={scrollerRef}
-          className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-6 pr-6 [scrollbar-width:none] md:gap-6 md:pr-12 [&::-webkit-scrollbar]:hidden"
-          style={{
-            paddingLeft: "max(1.5rem, calc((100vw - 72rem) / 2 + 1.5rem))",
-            scrollPaddingLeft: "max(1.5rem, calc((100vw - 72rem) / 2 + 1.5rem))",
-          }}
+          className="flex snap-x snap-mandatory scroll-pl-6 gap-4 overflow-x-auto scroll-smooth px-6 pb-6 [scrollbar-width:none] md:scroll-pl-0 md:gap-6 md:px-0 [&::-webkit-scrollbar]:hidden"
         >
           {SHOTS.map((n) => (
             <img
@@ -82,7 +81,7 @@ export function Screenshots() {
               height={1600}
               loading="lazy"
               draggable={false}
-              className="aspect-[736/1600] w-[240px] shrink-0 snap-start select-none rounded-card md:w-[280px]"
+              className="aspect-[736/1600] w-[240px] shrink-0 snap-start select-none rounded-card md:w-[calc((100%-3rem)/3)] lg:w-[calc((100%-4.5rem)/4)]"
             />
           ))}
         </div>
