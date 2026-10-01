@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { StoreBadges } from "@/components/StoreBadges";
 import type { ToolLocale } from "@/lib/tools";
 import { TEST_COPY } from "@/lib/migraine-test";
-import { TEST_PAGE } from "@/lib/tools";
+import { TEST_PAGE, toolPaths } from "@/lib/tools";
 import { typographize } from "@/lib/typography";
 import { MigraineTest } from "./MigraineTest";
 import { RichText } from "./RichText";
@@ -57,7 +57,7 @@ export function TestPage({ locale }: { locale: ToolLocale }) {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer localePaths={toolPaths(TEST_PAGE)} />
     </>
   );
 }

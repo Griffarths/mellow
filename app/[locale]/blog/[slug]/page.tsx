@@ -71,6 +71,19 @@ function pillarLanguages(pillar: PillarId) {
   );
 }
 
+// Paths for the language switcher, { locale: "/blog/<slug>" }.
+function pillarPaths(pillar: PillarId) {
+  return Object.fromEntries(
+    liveBlogLocales()
+      .filter((l) => pillarIsLive(pillar, l))
+      .map((l) => [l, `/blog/${PILLARS[pillar][l].slug}`]),
+  );
+}
+
+function articlePaths(versions: Partial<Record<BlogLocale, string>>) {
+  return Object.fromEntries(Object.entries(versions).map(([l, s]) => [l, `/blog/${s}`]));
+}
+
 // hreflang alternates of an article: every language version found through
 // relatedSlugInOtherLanguage (see getArticleVersions).
 function articleLanguages(versions: Partial<Record<BlogLocale, string>>) {
@@ -171,7 +184,12 @@ export default async function ArticlePage({ params }: Props) {
     };
     return (
       <>
-        <PillarPage pillar={pillar} locale={locale} articles={articles} />
+        <PillarPage
+          pillar={pillar}
+          locale={locale}
+          articles={articles}
+          localePaths={pillarPaths(pillar)}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pillarJsonLd) }}
@@ -265,7 +283,7 @@ export default async function ArticlePage({ params }: Props) {
           </aside>
         </div>
       </main>
-      <Footer />
+      <Footer localePaths={articlePaths(getArticleVersions(article))} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -1,10 +1,16 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { isToolLocale } from "@/lib/tools";
 import { DIARY, TEST_PAGE } from "@/lib/tools";
 
-export function Footer() {
+type Props = {
+  // This page's path in each language, when it differs (see LanguageSwitcher).
+  localePaths?: Partial<Record<Locale, string>>;
+};
+
+export function Footer({ localePaths }: Props = {}) {
   const t = useTranslations("footer");
   const locale = useLocale();
   return (
@@ -21,7 +27,7 @@ export function Footer() {
           <span className="font-bold text-ink">Mellow</span>
           <span>© {new Date().getFullYear()}</span>
         </div>
-        <LanguageSwitcher direction="up" />
+        <LanguageSwitcher direction="up" paths={localePaths} />
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           {locale === "fr" && (
             <Link href="/a-propos" className="transition hover:text-ink">

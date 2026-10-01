@@ -233,7 +233,7 @@ export default async function AboutPage({ params }: Props) {
           <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">Laurine</p>
         </article>
       </main>
-      <Footer />
+      <Footer localePaths={{ en: "/about", fr: "/a-propos" }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

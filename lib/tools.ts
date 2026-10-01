@@ -53,6 +53,11 @@ export type TestPageCopy = {
   faq: Faq[];
 };
 
+// A tool's path in every language, for the language switcher.
+export function toolPaths(copy: Record<ToolLocale, { path: string }>) {
+  return Object.fromEntries(TOOL_LOCALES.map((l) => [l, copy[l].path])) as Record<ToolLocale, string>;
+}
+
 export const TOOLS_LABEL: Record<ToolLocale, string> = {
   fr: "Outils",
   en: "Tools",

@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { BlogCta } from "@/components/blog/BlogCta";
 import { buttonClass } from "@/components/ui/Button";
 import type { ToolLocale } from "@/lib/tools";
-import { DIARY } from "@/lib/tools";
+import { DIARY, toolPaths } from "@/lib/tools";
 import { versioned } from "@/lib/diary-assets";
 import { typographize } from "@/lib/typography";
 import { RichText } from "./RichText";
@@ -116,7 +116,7 @@ export function DiaryPage({ locale }: { locale: ToolLocale }) {
           </section>
         </div>
       </main>
-      <Footer />
+      <Footer localePaths={toolPaths(DIARY)} />
     </>
   );
 }

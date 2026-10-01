@@ -14,9 +14,11 @@ type Props = {
   pillar: PillarId;
   locale: BlogLocale;
   articles: Article[];
+  // This pillar's path in every language where it is live.
+  localePaths: Partial<Record<BlogLocale, string>>;
 };
 
-export function PillarPage({ pillar, locale, articles }: Props) {
+export function PillarPage({ pillar, locale, articles, localePaths }: Props) {
   const t = useTranslations("blog");
   const tc = useTranslations("courses");
   const copy = PILLARS[pillar][locale];
@@ -74,7 +76,7 @@ export function PillarPage({ pillar, locale, articles }: Props) {
           <BlogCta />
         </div>
       </main>
-      <Footer />
+      <Footer localePaths={localePaths} />
     </>
   );
 }

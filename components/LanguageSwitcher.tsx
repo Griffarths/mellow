@@ -7,9 +7,19 @@ import { LOCALES, LOCALE_LABELS, type Locale } from "@/i18n/routing";
 
 type Props = {
   direction?: "down" | "up";
+  // This page's path in each language, for pages whose URL changes with the
+  // language (tools, articles, About). A language missing from the map has
+  // no version of the page. Without a map, the path stays the same.
+  paths?: Partial<Record<Locale, string>>;
 };
 
-export function LanguageSwitcher({ direction = "down" }: Props = {}) {
+// Where to go when the page doesn't exist in the chosen language: the blog
+// index for blog pages, the home page otherwise.
+function fallbackPath(pathname: string) {
+  return pathname.startsWith("/blog") ? "/blog" : "/";
+}
+
+export function LanguageSwitcher({ direction = "down", paths }: Props = {}) {
   const [open, setOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
   const ref = useRef<HTMLDivElement>(null);
@@ -39,7 +49,8 @@ export function LanguageSwitcher({ direction = "down" }: Props = {}) {
     setOpen(false);
     if (next === locale) return;
     startTransition(() => {
-      router.replace(pathname, { locale: next });
+      const target = paths ? (paths[next] ?? fallbackPath(pathname)) : pathname;
+      router.replace(target, { locale: next });
     });
   }
 
