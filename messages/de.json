@@ -39,6 +39,22 @@
     "title": "Nimm die Kontrolle über deine Migräne zurück.",
     "subtitle": "Mellow hilft dir, sie besser zu verstehen und durchzustehen."
   },
+  "features": {
+    "title": "Dein Migränetagebuch, immer dabei.",
+    "subtitle": "Mellow ist eine App zum Erfassen deiner Migräne, so einfach, dass sie sogar während einer Attacke funktioniert.",
+    "log": {
+      "title": "Erfasse eine Attacke mit zwei Taps",
+      "text": "Stärke, Medikamente, Auslöser: Alles ist in wenigen Sekunden notiert, selbst mitten im Schmerz."
+    },
+    "understand": {
+      "title": "Verstehe, was sie auslöst",
+      "text": "Dein Kalender, deine Auslöser, was dir wirklich hilft und das Wetter: Mellow hilft dir, die Zusammenhänge zu erkennen."
+    },
+    "doctor": {
+      "title": "Bereite deinen Arzttermin vor",
+      "text": "Ein übersichtlicher PDF-Bericht mit deinen Attacken und Behandlungen, den du deinem Arzt zeigen kannst."
+    }
+  },
   "mellows": {
     "title": "Lerne die Mellows kennen.",
     "subtitle": "Jeder Mellow begleitet dich in einem anderen Moment.",

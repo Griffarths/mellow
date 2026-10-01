@@ -39,6 +39,22 @@
     "title": "Riprendi il controllo delle tue emicranie.",
     "subtitle": "Mellow ti accompagna per capirle meglio e affrontarle."
   },
+  "features": {
+    "title": "Il tuo diario dell'emicrania, sempre in tasca.",
+    "subtitle": "Mellow è un'app per tenere traccia delle tue emicranie, pensata per restare semplice anche durante un attacco.",
+    "log": {
+      "title": "Registra un attacco con due tap",
+      "text": "Intensità, farmaci, fattori scatenanti: si annota tutto in pochi secondi, anche nel mezzo del dolore."
+    },
+    "understand": {
+      "title": "Capisci cosa le scatena",
+      "text": "Il tuo calendario, i tuoi fattori scatenanti, cosa ti dà davvero sollievo e il meteo: Mellow ti aiuta a collegare i punti."
+    },
+    "doctor": {
+      "title": "Prepara la tua visita",
+      "text": "Un report PDF chiaro, con i tuoi attacchi e le tue terapie, da mostrare al tuo medico."
+    }
+  },
   "mellows": {
     "title": "Ecco i Mellow.",
     "subtitle": "Ogni Mellow ti accompagna in un momento diverso.",

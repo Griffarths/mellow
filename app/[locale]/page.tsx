@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/sections/Hero";
+import { Features } from "@/components/sections/Features";
 import { MellowsSlider } from "@/components/sections/MellowsSlider";
 import { Courses } from "@/components/sections/Courses";
 import { LatestArticles } from "@/components/sections/LatestArticles";
@@ -22,9 +23,10 @@ export default async function HomePage({
       <Nav />
       <main>
         <Hero />
-        <MellowsSlider />
+        <Features />
         <Screenshots />
         <SocialProof />
+        <MellowsSlider />
         <Courses />
         <LatestArticles />
         <FinalCta />
