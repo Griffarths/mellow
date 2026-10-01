@@ -76,7 +76,7 @@ export function PillarPage({ pillar, locale, articles, localePaths }: Props) {
           ))}
         </div>
 
-        <div className="mx-auto max-w-[65ch]">
+        <div className="max-w-[65ch]">
           <BlogCta />
         </div>
       </main>

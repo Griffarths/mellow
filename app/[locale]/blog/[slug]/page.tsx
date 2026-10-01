@@ -265,7 +265,7 @@ export default async function ArticlePage({ params }: Props) {
         <div className="mt-8 lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-12">
           <article className="min-w-0">
             <ArticleHeader article={article} pillar={pillarLink} />
-            <div className="mx-auto mt-10 max-w-[65ch]">
+            <div className="mt-10 max-w-[65ch]">
               <MDXRemote
                 source={article.content}
                 components={components}
