@@ -47,7 +47,7 @@ export const diary: DiaryCopy = {
     "Die Zahl der Tage mit Medikament, um einen Medikamentenübergebrauch zu erkennen.",
     "Wiederkehrende Auslöser und einen möglichen Zusammenhang mit deiner Periode.",
   ],
-  appTitle: "Einfacher: Mellow füllt es mit dir aus",
+  appTitle: "Mellow füllt es mit dir aus",
   appText:
     "Erfasse eine Attacke mit zwei Taps auf deinem Handy. Mellow berechnet deine Migränetage, zählt deine Medikamente, verfolgt das Wetter und erstellt einen PDF-Bericht für deinen Arzt.",
   faqTitle: "Häufige Fragen",

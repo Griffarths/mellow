@@ -24,7 +24,7 @@ export function BlogCta({ title, text }: Props) {
         alt=""
         aria-hidden
         draggable={false}
-        className="pointer-events-none absolute -bottom-8 -right-6 h-32 w-32 select-none md:-bottom-10 md:right-4 md:h-52 md:w-52"
+        className="pointer-events-none absolute -bottom-8 -right-6 h-32 w-32 select-none md:-bottom-10 md:-right-8 md:h-52 md:w-52"
       />
     </aside>
   );

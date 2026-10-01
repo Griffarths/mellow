@@ -47,7 +47,7 @@ export const diary: DiaryCopy = {
     "Il numero di giorni con farmaci, per individuare un uso eccessivo.",
     "I fattori scatenanti che si ripetono, ed eventuali legami con il ciclo.",
   ],
-  appTitle: "Più semplice: Mellow lo compila con te",
+  appTitle: "Mellow lo compila con te",
   appText:
     "Registra un attacco con due tap sul telefono. Mellow calcola i tuoi giorni di emicrania, conta i farmaci, segue il meteo e prepara un report PDF per il tuo medico.",
   faqTitle: "Domande frequenti",

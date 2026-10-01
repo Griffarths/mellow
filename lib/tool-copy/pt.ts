@@ -47,7 +47,7 @@ export const diary: DiaryCopy = {
     "O número de dias com medicação, para detetar um uso excessivo.",
     "Os fatores desencadeantes que se repetem, e uma eventual relação com o período.",
   ],
-  appTitle: "Mais simples: a Mellow preenche-o contigo",
+  appTitle: "A Mellow preenche-o contigo",
   appText:
     "Regista uma crise em dois toques no telemóvel. A Mellow calcula os teus dias de enxaqueca, conta a tua medicação, acompanha a meteorologia e prepara um relatório PDF para o teu médico.",
   faqTitle: "Perguntas frequentes",

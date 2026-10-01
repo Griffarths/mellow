@@ -116,7 +116,7 @@ export const DIARY: Record<ToolLocale, DiaryCopy> = {
       "Le nombre de jours avec un médicament, pour repérer un abus médicamenteux.",
       "Les déclencheurs qui reviennent, et un éventuel lien avec les règles.",
     ],
-    appTitle: "Plus simple : Mellow le remplit avec toi",
+    appTitle: "Mellow le remplit avec toi",
     appText:
       "Note une crise en deux taps sur ton téléphone. Mellow calcule tes jours de migraine, compte tes médicaments, suit la météo et prépare un rapport PDF pour ton médecin.",
     faqTitle: "Questions fréquentes",
@@ -182,7 +182,7 @@ export const DIARY: Record<ToolLocale, DiaryCopy> = {
       "Days with medication, to spot medication overuse.",
       "Recurring triggers, and any link with your period.",
     ],
-    appTitle: "Easier: let Mellow fill it in with you",
+    appTitle: "Let Mellow fill it in with you",
     appText:
       "Log an attack in two taps on your phone. Mellow counts your migraine days and medication, tracks the weather and prepares a PDF report for your doctor.",
     faqTitle: "Frequently asked questions",

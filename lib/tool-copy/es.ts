@@ -47,7 +47,7 @@ export const diary: DiaryCopy = {
     "El número de días con medicamento, para detectar un abuso de medicación.",
     "Los desencadenantes que se repiten, y una posible relación con la regla.",
   ],
-  appTitle: "Más fácil: Mellow lo rellena contigo",
+  appTitle: "Mellow lo rellena contigo",
   appText:
     "Registra una crisis en dos toques desde tu móvil. Mellow calcula tus días de migraña, cuenta tus medicamentos, sigue la meteorología y prepara un informe PDF para tu médico.",
   faqTitle: "Preguntas frecuentes",
