@@ -40,6 +40,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "mal-de-tete-tous-les-jours",
         "migraine-en-chiffres",
         "glossaire-migraine",
+        "migraine-hereditaire-genetique-transmission",
       ],
     },
     en: {
@@ -60,6 +61,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "headache-every-day",
         "migraine-by-the-numbers",
         "migraine-glossary",
+        "is-migraine-hereditary",
       ],
     },
     de: {
@@ -72,7 +74,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Migräne ist nicht einfach nur starker Kopfschmerz. Sie ist eine neurologische Erkrankung mit eigenen Mechanismen, Phasen und besonderen Formen wie der Aura. Wer sie versteht, lebt schon besser mit ihr: Du weißt, was mit dir passiert, erkennst die Anzeichen und sprichst leichter mit deiner Ärztin oder deinem Arzt darüber.",
         "Diese Artikel erklären dir einfach, was vor, während und nach einer Attacke passiert, wie du Migräne von Spannungskopfschmerz unterscheidest, wie lange eine Attacke dauert und wann dich tägliche Kopfschmerzen aufhorchen lassen sollten.",
       ],
-      articles: [],
+      articles: ["migraene-erblich"],
     },
     it: {
       slug: "capire-emicrania",
@@ -84,7 +86,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "L'emicrania non è un semplice mal di testa. È una malattia neurologica, con i suoi meccanismi, le sue fasi e forme particolari come l'aura. Capirla significa già viverla meglio: sai cosa ti succede, riconosci i segnali e ne parli più facilmente con il tuo medico.",
         "Questi articoli ti spiegano in modo semplice cosa succede prima, durante e dopo un attacco, come distinguere l'emicrania da una cefalea tensiva, quanto dura un attacco e quando un mal di testa quotidiano deve metterti in allerta.",
       ],
-      articles: [],
+      articles: ["emicrania-ereditaria"],
     },
     es: {
       slug: "comprender-migrana",
@@ -96,7 +98,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "La migraña no es un simple dolor de cabeza. Es una enfermedad neurológica, con sus mecanismos, sus fases y formas particulares como el aura. Comprenderla ya es vivirla mejor: sabes lo que te pasa, reconoces las señales y hablas de ello con más facilidad con tu médico.",
         "Estos artículos te explican de forma sencilla qué ocurre antes, durante y después de una crisis, cómo distinguir una migraña de una cefalea tensional, cuánto dura una crisis y cuándo un dolor de cabeza diario debe ponerte en alerta.",
       ],
-      articles: [],
+      articles: ["migrana-hereditaria-genetica"],
     },
     "es-419": {
       slug: "comprender-migrana",
@@ -108,7 +110,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "La migraña no es un simple dolor de cabeza. Es una enfermedad neurológica, con sus mecanismos, sus fases y formas particulares como el aura. Entenderla ya es vivirla mejor: sabes lo que te está pasando, reconoces las señales y te resulta más fácil hablarlo con tu médico.",
         "Estos artículos te explican de forma sencilla qué pasa antes, durante y después de una crisis, cómo diferenciar una migraña de una cefalea tensional, cuánto dura una crisis y cuándo un dolor de cabeza diario debe preocuparte.",
       ],
-      articles: [],
+      articles: ["la-migrana-es-hereditaria"],
     },
     pt: {
       slug: "compreender-enxaqueca",
@@ -120,7 +122,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "A enxaqueca não é uma simples dor de cabeça. É uma doença neurológica, com os seus mecanismos, as suas fases e formas particulares, como a aura. Compreendê-la já é vivê-la melhor: sabes o que te está a acontecer, reconheces os sinais e falas sobre isso mais facilmente com o teu médico.",
         "Estes artigos explicam-te de forma simples o que acontece antes, durante e depois de uma crise, como distinguir uma enxaqueca de uma cefaleia de tensão, quanto tempo dura uma crise e quando uma dor de cabeça diária deve alertar-te.",
       ],
-      articles: [],
+      articles: ["enxaqueca-hereditaria"],
     },
     "pt-BR": {
       slug: "entender-enxaqueca",
@@ -132,7 +134,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "A enxaqueca não é uma simples dor de cabeça. É uma doença neurológica, com seus mecanismos, suas fases e formas específicas, como a aura. Entender a enxaqueca já é conviver melhor com ela: você sabe o que está acontecendo, reconhece os sinais e conversa com mais facilidade com o seu médico.",
         "Estes artigos explicam de forma simples o que acontece antes, durante e depois de uma crise, como diferenciar uma enxaqueca de uma cefaleia tensional, quanto tempo dura uma crise e quando uma dor de cabeça diária deve acender um alerta.",
       ],
-      articles: [],
+      articles: ["enxaqueca-e-hereditaria"],
     },
   },
   prevent: {
