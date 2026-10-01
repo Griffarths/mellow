@@ -36,7 +36,8 @@
     "themes": "Themen",
     "startHere": "Hier anfangen",
     "metaTitle": "Mellow Blog: Migräne verstehen, vorbeugen und bewältigen",
-    "metaDescription": "Fundierte, einfach erklärte Artikel über Migräne: Symptome, Aura, Auslöser, Schlaf, Ernährung, Akut- und Prophylaxebehandlungen."
+    "metaDescription": "Fundierte, einfach erklärte Artikel über Migräne: Symptome, Aura, Auslöser, Schlaf, Ernährung, Akut- und Prophylaxebehandlungen.",
+    "updatedOn": "Aktualisiert am {date}"
   },
   "hero": {
     "title": "Nimm die Kontrolle über deine Migräne zurück.",

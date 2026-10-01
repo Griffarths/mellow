@@ -31,7 +31,8 @@
     "themes": "Topics",
     "startHere": "Start here",
     "metaTitle": "Mellow blog: understanding, preventing and managing migraine",
-    "metaDescription": "Clear, sourced articles about migraine: symptoms, aura, triggers, sleep, food, acute and preventive treatments."
+    "metaDescription": "Clear, sourced articles about migraine: symptoms, aura, triggers, sleep, food, acute and preventive treatments.",
+    "updatedOn": "Updated {date}"
   },
   "hero": {
     "title": "Take back control of your migraines.",

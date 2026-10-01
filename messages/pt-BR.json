@@ -36,7 +36,8 @@
     "themes": "Temas",
     "startHere": "Comece aqui",
     "metaTitle": "Blog Mellow: entender, prevenir e gerenciar a enxaqueca",
-    "metaDescription": "Artigos com fontes e explicados de forma simples sobre a enxaqueca: sintomas, aura, gatilhos, sono, alimentação, tratamentos da crise e preventivos."
+    "metaDescription": "Artigos com fontes e explicados de forma simples sobre a enxaqueca: sintomas, aura, gatilhos, sono, alimentação, tratamentos da crise e preventivos.",
+    "updatedOn": "Atualizado em {date}"
   },
   "hero": {
     "title": "Retome o controle das suas enxaquecas.",

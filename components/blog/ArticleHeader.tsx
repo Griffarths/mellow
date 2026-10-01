@@ -13,10 +13,16 @@ export function ArticleHeader({
   pillar: PillarLink;
 }) {
   const tc = useTranslations("courses");
+  const tb = useTranslations("blog");
   const tone = TONES[toneForImage(article.coverImage)];
-  const formatted = new Intl.DateTimeFormat(article.locale, {
-    dateStyle: "long",
-  }).format(new Date(article.publishedAt));
+  const fmt = new Intl.DateTimeFormat(article.locale, { dateStyle: "long" });
+  const formatted = fmt.format(new Date(article.publishedAt));
+  // Shown only when the article was really updated after publication (Blog Studio
+  // moves updatedAt only for substantial changes).
+  const updated =
+    article.updatedAt && article.updatedAt.slice(0, 10) > article.publishedAt.slice(0, 10)
+      ? fmt.format(new Date(article.updatedAt))
+      : null;
   const minutes = Math.max(1, Math.round(article.readingTime.minutes));
 
   return (
@@ -53,6 +59,12 @@ export function ArticleHeader({
       <h1 className={`text-h1 text-ink ${pillar ? "mt-3" : "mt-8 md:mt-10"}`}>{typographize(article.title, article.locale)}</h1>
       <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-ink-3">
         <time dateTime={article.publishedAt}>{formatted}</time>
+        {updated && (
+          <>
+            <span aria-hidden>·</span>
+            <time dateTime={article.updatedAt}>{tb("updatedOn", { date: updated })}</time>
+          </>
+        )}
         <span aria-hidden>·</span>
         <span>{minutes} min</span>
       </div>

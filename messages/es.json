@@ -36,7 +36,8 @@
     "themes": "Temas",
     "startHere": "Empieza aquí",
     "metaTitle": "Blog de Mellow: comprender, prevenir y gestionar la migraña",
-    "metaDescription": "Artículos con fuentes y explicados de forma sencilla sobre la migraña: síntomas, aura, desencadenantes, sueño, alimentación, tratamientos de la crisis y preventivos."
+    "metaDescription": "Artículos con fuentes y explicados de forma sencilla sobre la migraña: síntomas, aura, desencadenantes, sueño, alimentación, tratamientos de la crisis y preventivos.",
+    "updatedOn": "Actualizado el {date}"
   },
   "hero": {
     "title": "Recupera el control de tus migrañas.",

@@ -36,7 +36,8 @@
     "themes": "Temi",
     "startHere": "Inizia da qui",
     "metaTitle": "Blog Mellow: capire, prevenire e gestire l'emicrania",
-    "metaDescription": "Articoli con fonti e spiegati in modo semplice sull'emicrania: sintomi, aura, fattori scatenanti, sonno, alimentazione, terapie per l'attacco e di profilassi."
+    "metaDescription": "Articoli con fonti e spiegati in modo semplice sull'emicrania: sintomi, aura, fattori scatenanti, sonno, alimentazione, terapie per l'attacco e di profilassi.",
+    "updatedOn": "Aggiornato il {date}"
   },
   "hero": {
     "title": "Riprendi il controllo delle tue emicranie.",
