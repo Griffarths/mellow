@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import type { Article } from "@/lib/blog";
+import { isMascotCover, type Article } from "@/lib/blog";
 import { TONES, toneForImage } from "@/lib/tones";
 import { typographize } from "@/lib/typography";
 
@@ -24,17 +24,28 @@ export function ArticleCard({ article, badge }: Props) {
         className={`relative flex aspect-[16/9] items-center justify-center overflow-hidden ${tone.tint}`}
       >
         {badge && (
-          <span className="absolute left-4 top-4 rounded-chip bg-white px-3 py-1.5 text-caption font-bold text-ink">
+          <span className="absolute left-4 top-4 z-10 rounded-chip bg-white px-3 py-1.5 text-caption font-bold text-ink">
             {badge}
           </span>
         )}
-        <img
-          src={article.coverImage}
-          alt=""
-          aria-hidden
-          draggable={false}
-          className="h-24 w-24 select-none transition-transform duration-300 group-hover:scale-105 md:h-28 md:w-28"
-        />
+        {isMascotCover(article.coverImage) ? (
+          <img
+            src={article.coverImage}
+            alt=""
+            aria-hidden
+            draggable={false}
+            className="h-24 w-24 select-none transition-transform duration-300 group-hover:scale-105 md:h-28 md:w-28"
+          />
+        ) : (
+          <img
+            src={article.coverImage}
+            alt=""
+            aria-hidden
+            loading="lazy"
+            draggable={false}
+            className="absolute inset-0 h-full w-full select-none object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+          />
+        )}
       </div>
       <div className="flex flex-1 flex-col p-5 md:p-6">
         <div className="flex items-center gap-2 text-caption font-semibold text-ink-3">

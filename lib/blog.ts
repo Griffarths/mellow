@@ -40,6 +40,8 @@ export type Frontmatter = {
   updatedAt: string;
   coverImage: string;
   coverBgColor?: string;
+  // Alt text of a full cover image (an illustration or photo, not a mascot).
+  coverAlt?: string;
   tags: string[];
   relatedSlugInOtherLanguage?: string;
 };
@@ -49,6 +51,20 @@ export type Article = Frontmatter & {
   content: string;
   readingTime: { text: string; minutes: number; words: number };
 };
+
+const SITE = "https://mellowmigraine.com";
+
+// Mascot covers (/blobs/*.svg) are drawn small on the tone's tint; any other
+// cover is a full image that fills the frame.
+export function isMascotCover(src: string): boolean {
+  return src.startsWith("/blobs/");
+}
+
+// Social networks and Google Discover do not read SVG: a mascot cover falls
+// back to the Mellow trio in PNG.
+export function coverOgImage(article: Article): string {
+  return `${SITE}${isMascotCover(article.coverImage) ? "/blobs/Trio.png" : article.coverImage}`;
+}
 
 const CONTENT_ROOT = path.join(process.cwd(), "content/blog");
 

@@ -22,6 +22,7 @@ import {
   type BlogLocale,
   HREFLANG,
   OG_LOCALE,
+  coverOgImage,
   getAllArticles,
   getArticleBySlug,
   getArticleVersions,
@@ -125,7 +126,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return {};
 
   const url = urlFor(locale, `/blog/${slug}`);
-  const ogImage = `${SITE_URL}${article.coverImage}`;
+  const ogImage = coverOgImage(article);
   const ogLocale = OG_LOCALE[locale];
   const languages = articleLanguages(getArticleVersions(article));
 
@@ -228,7 +229,7 @@ export default async function ArticlePage({ params }: Props) {
     "@type": "BlogPosting",
     headline: article.title,
     description: article.description,
-    image: `${SITE_URL}/logo.png`,
+    image: coverOgImage(article),
     datePublished: new Date(article.publishedAt).toISOString(),
     dateModified: new Date(article.updatedAt).toISOString(),
     inLanguage: inLanguage(locale),

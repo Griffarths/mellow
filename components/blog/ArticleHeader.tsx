@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import type { Article } from "@/lib/blog";
+import { isMascotCover, type Article } from "@/lib/blog";
 import type { PillarLink } from "@/lib/pillar-link";
 import { TONES, toneForImage } from "@/lib/tones";
 import { typographize } from "@/lib/typography";
@@ -22,15 +22,25 @@ export function ArticleHeader({
   return (
     <header>
       <div
-        className={`flex aspect-[16/9] items-center justify-center rounded-card md:aspect-[21/9] ${tone.tint}`}
+        className={`relative flex aspect-[16/9] items-center justify-center overflow-hidden rounded-card md:aspect-[21/9] ${tone.tint}`}
       >
-        <img
-          src={article.coverImage}
-          alt=""
-          aria-hidden
-          draggable={false}
-          className="breathe h-32 w-32 select-none md:h-44 md:w-44"
-        />
+        {isMascotCover(article.coverImage) ? (
+          <img
+            src={article.coverImage}
+            alt=""
+            aria-hidden
+            draggable={false}
+            className="breathe h-32 w-32 select-none md:h-44 md:w-44"
+          />
+        ) : (
+          <img
+            src={article.coverImage}
+            alt={article.coverAlt ?? ""}
+            fetchPriority="high"
+            draggable={false}
+            className="absolute inset-0 h-full w-full select-none object-cover"
+          />
+        )}
       </div>
       {pillar && (
         <Link
