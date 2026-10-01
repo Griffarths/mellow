@@ -40,6 +40,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "mal-de-tete-tous-les-jours",
         "migraine-en-chiffres",
         "glossaire-migraine",
+        "migraine-hereditaire-genetique-transmission",
       ],
     },
     en: {
