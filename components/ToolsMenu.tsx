@@ -51,7 +51,9 @@ export function ToolsMenu({ label, items, className = "" }: Props) {
         </svg>
       </button>
       {open && (
-        <div className="absolute left-0 top-full z-50 mt-3 w-64 rounded-card bg-white p-1.5 shadow-soft ring-1 ring-surface-line">
+        // Phones: spans the screen width under the nav, so it never runs off
+        // the right edge. From sm: a dropdown under the button.
+        <div className="fixed inset-x-4 top-[4.5rem] z-50 rounded-card bg-white p-1.5 shadow-soft ring-1 ring-surface-line sm:absolute sm:inset-x-auto sm:left-0 sm:top-full sm:mt-3 sm:w-64">
           {items.map((item) => (
             <Link
               key={item.href}
