@@ -3,7 +3,7 @@ import type { DiaryCopy, TestPageCopy } from "../tools";
 
 // No Italian articles yet: the texts carry no blog links, results point to
 // the diary instead. Add article links once the Italian blog exists.
-const DIARY_PATH = "/strumenti/diario-emicrania";
+const DIARY_PATH = "/risorse/diario-emicrania";
 const diaryLink = { text: "il diario dell'emicrania da stampare", href: DIARY_PATH };
 const nextStep: Rich = ["Il passo successivo: ", diaryLink, ", per annotare i tuoi attacchi in vista della visita."];
 
@@ -68,7 +68,7 @@ export const diary: DiaryCopy = {
 };
 
 export const testPage: TestPageCopy = {
-  path: "/strumenti/test-emicrania",
+  path: "/risorse/test-emicrania",
   navLabel: "Test emicrania",
   menuDescription: "Emicrania o mal di testa? 11 domande",
   metaTitle: "Test emicrania: emicrania o mal di testa? (gratis, 2 minuti)",

@@ -59,19 +59,19 @@ export function toolPaths(copy: Record<ToolLocale, { path: string }>) {
 }
 
 export const TOOLS_LABEL: Record<ToolLocale, string> = {
-  fr: "Outils",
-  en: "Tools",
-  de: "Tools",
-  it: "Strumenti",
-  es: "Herramientas",
-  "es-419": "Herramientas",
-  pt: "Ferramentas",
-  "pt-BR": "Ferramentas",
+  fr: "Ressources",
+  en: "Resources",
+  de: "Ressourcen",
+  it: "Risorse",
+  es: "Recursos",
+  "es-419": "Recursos",
+  pt: "Recursos",
+  "pt-BR": "Recursos",
 };
 
 export const DIARY: Record<ToolLocale, DiaryCopy> = {
   fr: {
-    path: "/outils/journal-de-migraine",
+    path: "/ressources/journal-de-migraine",
     navLabel: "Journal de migraine",
     menuDescription: "Calendrier et tableau des crises à imprimer",
     metaTitle: "Journal de migraine à imprimer (PDF gratuit)",
@@ -136,7 +136,7 @@ export const DIARY: Record<ToolLocale, DiaryCopy> = {
     ],
   },
   en: {
-    path: "/tools/migraine-diary",
+    path: "/resources/migraine-diary",
     navLabel: "Migraine diary",
     menuDescription: "Printable calendar and attack log",
     metaTitle: "Printable migraine diary (free PDF)",
@@ -211,7 +211,7 @@ export const DIARY: Record<ToolLocale, DiaryCopy> = {
 
 export const TEST_PAGE: Record<ToolLocale, TestPageCopy> = {
   fr: {
-    path: "/outils/test-migraine",
+    path: "/ressources/test-migraine",
     navLabel: "Test migraine",
     menuDescription: "Migraine ou mal de tête ? 11 questions",
     metaTitle: "Test migraine : migraine ou mal de tête ? (gratuit, 2 minutes)",
@@ -254,7 +254,7 @@ export const TEST_PAGE: Record<ToolLocale, TestPageCopy> = {
     ],
   },
   en: {
-    path: "/tools/migraine-test",
+    path: "/resources/migraine-test",
     navLabel: "Migraine test",
     menuDescription: "Migraine or headache? 11 questions",
     metaTitle: "Migraine test: migraine or headache? (free, 2 minutes)",

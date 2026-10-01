@@ -3,7 +3,7 @@ import type { DiaryCopy, TestPageCopy } from "../tools";
 
 // Spanish for Spain. No Spanish articles yet: the texts carry no blog links,
 // results point to the diary instead. Add article links once the blog exists.
-const DIARY_PATH = "/herramientas/diario-de-migrana";
+const DIARY_PATH = "/recursos/diario-de-migrana";
 const diaryLink = { text: "el diario de migraña para imprimir", href: DIARY_PATH };
 const nextStep: Rich = ["El siguiente paso: ", diaryLink, ", para anotar tus crisis de cara a tu consulta."];
 
@@ -68,7 +68,7 @@ export const diary: DiaryCopy = {
 };
 
 export const testPage: TestPageCopy = {
-  path: "/herramientas/test-de-migrana",
+  path: "/recursos/test-de-migrana",
   navLabel: "Test de migraña",
   menuDescription: "¿Migraña o dolor de cabeza? 11 preguntas",
   metaTitle: "Test de migraña: ¿migraña o dolor de cabeza? (gratis, 2 minutos)",

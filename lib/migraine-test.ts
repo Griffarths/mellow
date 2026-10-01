@@ -260,7 +260,7 @@ export const TEST_COPY: Record<ToolLocale, TestCopy> = {
       migraineProbable: {
         title: "Tes maux de tête ressemblent en partie à une migraine",
         text: "Tes réponses remplissent presque tous les critères de la migraine, mais pas tous. Les neurologues parlent alors de migraine probable. Noter tes crises pendant un mois aidera ton médecin à y voir plus clair.",
-        links: ["Pour commencer : ", { text: "le journal de migraine à imprimer", href: "/outils/journal-de-migraine" }, " ou ", { text: "migraine ou mal de tête, comment faire la différence", href: "/blog/migraine-ou-mal-de-tete" }, "."],
+        links: ["Pour commencer : ", { text: "le journal de migraine à imprimer", href: "/ressources/journal-de-migraine" }, " ou ", { text: "migraine ou mal de tête, comment faire la différence", href: "/blog/migraine-ou-mal-de-tete" }, "."],
       },
       tension: {
         title: "Tes maux de tête ressemblent à une céphalée de tension",
@@ -270,7 +270,7 @@ export const TEST_COPY: Record<ToolLocale, TestCopy> = {
       unclear: {
         title: "Tes réponses ne correspondent pas nettement à un profil",
         text: "Tes maux de tête ne rentrent clairement ni dans la migraine ni dans la céphalée de tension. Ce n'est pas inquiétant en soi, mais cela vaut la peine d'en parler à ton médecin, avec une trace écrite de tes crises pour l'aider.",
-        links: ["Pour t'aider : ", { text: "le journal de migraine à imprimer", href: "/outils/journal-de-migraine" }, "."],
+        links: ["Pour t'aider : ", { text: "le journal de migraine à imprimer", href: "/ressources/journal-de-migraine" }, "."],
       },
     },
     chronicNote: ["Tu as mal à la tête 15 jours ou plus par mois : on parle alors de forme chronique. Des traitements de fond existent, parles-en à ton médecin. ", { text: "Mal de tête tous les jours : les causes", href: "/blog/mal-de-tete-tous-les-jours" }],
@@ -423,7 +423,7 @@ export const TEST_COPY: Record<ToolLocale, TestCopy> = {
       migraineProbable: {
         title: "Your headaches partly look like migraine",
         text: "Your answers meet almost all the criteria for migraine, but not all of them. Neurologists call this probable migraine. Tracking your attacks for a month will help your doctor see more clearly.",
-        links: ["Start with: ", { text: "the printable migraine diary", href: "/tools/migraine-diary" }, " or ", { text: "migraine vs headache, how to tell the difference", href: "/blog/migraine-vs-headache" }, "."],
+        links: ["Start with: ", { text: "the printable migraine diary", href: "/resources/migraine-diary" }, " or ", { text: "migraine vs headache, how to tell the difference", href: "/blog/migraine-vs-headache" }, "."],
       },
       tension: {
         title: "Your headaches look like tension-type headache",
@@ -433,7 +433,7 @@ export const TEST_COPY: Record<ToolLocale, TestCopy> = {
       unclear: {
         title: "Your answers don't clearly match one profile",
         text: "Your headaches don't clearly fit migraine or tension-type headache. That is not worrying in itself, but it is worth discussing with your doctor, ideally with a written record of your attacks.",
-        links: ["To help: ", { text: "the printable migraine diary", href: "/tools/migraine-diary" }, "."],
+        links: ["To help: ", { text: "the printable migraine diary", href: "/resources/migraine-diary" }, "."],
       },
     },
     chronicNote: ["You have a headache 15 or more days a month: this is called a chronic form. Preventive treatments exist, talk to your doctor. ", { text: "Headache every day: the causes", href: "/blog/headache-every-day" }],

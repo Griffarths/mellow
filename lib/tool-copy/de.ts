@@ -3,7 +3,7 @@ import type { DiaryCopy, TestPageCopy } from "../tools";
 
 // No German articles yet: the texts carry no blog links, results point to
 // the diary instead. Add article links once the German blog exists.
-const DIARY_PATH = "/tools/migraene-tagebuch";
+const DIARY_PATH = "/ressourcen/migraene-tagebuch";
 const diaryLink = { text: "das Migränetagebuch zum Ausdrucken", href: DIARY_PATH };
 const nextStep: Rich = ["Nächster Schritt: ", diaryLink, ", um deine Attacken bis zu deinem Arzttermin festzuhalten."];
 
@@ -68,7 +68,7 @@ export const diary: DiaryCopy = {
 };
 
 export const testPage: TestPageCopy = {
-  path: "/tools/migraene-test",
+  path: "/ressourcen/migraene-test",
   navLabel: "Migräne-Test",
   menuDescription: "Migräne oder Kopfschmerz? 11 Fragen",
   metaTitle: "Migräne-Test: Migräne oder Kopfschmerz? (kostenlos, 2 Minuten)",

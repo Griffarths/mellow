@@ -3,7 +3,7 @@ import type { DiaryCopy, TestPageCopy } from "../tools";
 
 // Brazilian Portuguese (same URLs as Portugal, regional wording). No
 // articles yet: results point to the diary instead.
-const DIARY_PATH = "/ferramentas/diario-de-enxaqueca";
+const DIARY_PATH = "/recursos/diario-de-enxaqueca";
 const diaryLink = { text: "o diário de enxaqueca para imprimir", href: DIARY_PATH };
 const nextStep: Rich = ["Próximo passo: ", diaryLink, ", para anotar suas crises até a consulta."];
 
@@ -68,7 +68,7 @@ export const diary: DiaryCopy = {
 };
 
 export const testPage: TestPageCopy = {
-  path: "/ferramentas/teste-de-enxaqueca",
+  path: "/recursos/teste-de-enxaqueca",
   navLabel: "Teste de enxaqueca",
   menuDescription: "Enxaqueca ou dor de cabeça? 11 perguntas",
   metaTitle: "Teste de enxaqueca: enxaqueca ou dor de cabeça? (grátis, 2 minutos)",
