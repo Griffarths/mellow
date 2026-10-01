@@ -10,7 +10,10 @@
     "blog": "Blog",
     "androidBeta": "Android testen",
     "android": "Android-App",
-    "googlePlayAriaLabel": "Jetzt bei Google Play"
+    "googlePlayAriaLabel": "Jetzt bei Google Play",
+    "download": "Laden",
+    "menuOpen": "Menü öffnen",
+    "menuClose": "Menü schließen"
   },
   "blog": {
     "comingSoon": {
