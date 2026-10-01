@@ -81,10 +81,12 @@ export function LanguageSwitcher({ direction = "down", paths }: Props = {}) {
         </svg>
       </button>
 
+      {/* Centred under the button on phones; from md the switcher sits at
+          the right end of the footer, so the list aligns to its right edge. */}
       {open && (
         <ul
           role="listbox"
-          className={`absolute left-1/2 z-50 min-w-[220px] -translate-x-1/2 overflow-hidden rounded-card bg-white p-1.5 shadow-soft ring-1 ring-surface-line ${
+          className={`absolute left-1/2 z-50 min-w-[220px] -translate-x-1/2 overflow-hidden md:left-auto md:right-0 md:translate-x-0 rounded-card bg-white p-1.5 shadow-soft ring-1 ring-surface-line ${
             direction === "up" ? "bottom-full mb-2" : "top-full mt-2"
           }`}
         >
