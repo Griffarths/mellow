@@ -1,4 +1,5 @@
 import type { TestCopy } from "../migraine-test";
+import type { OverusePageCopy, OveruseCopy } from "../overuse";
 import type { DiaryCopy, TestPageCopy } from "../tools";
 
 export const diary: DiaryCopy = {
@@ -272,5 +273,177 @@ export const test: TestCopy = {
     },
   },
   chronicNote: ["Tu as mal à la tête 15 jours ou plus par mois : on parle alors de forme chronique. Des traitements de fond existent, parles-en à ton médecin. ", { text: "Mal de tête tous les jours : les causes", href: "/blog/mal-de-tete-tous-les-jours" }],
-  overuseNote: ["Tu prends un médicament contre la douleur 10 jours ou plus par mois. Au-delà de ce seuil, le risque d'abus médicamenteux augmente : les médicaments eux-mêmes peuvent entretenir les maux de tête. ", { text: "Comment sortir de l'abus médicamenteux", href: "/blog/mal-de-tete-tous-les-jours" }],
+  overuseNote: ["Tu prends un médicament contre la douleur 10 jours ou plus par mois. Au-delà de ce seuil, le risque d'abus médicamenteux augmente : les médicaments eux-mêmes peuvent entretenir les maux de tête. ", { text: "Vérifie où tu en es avec le calculateur", href: "/ressources/calculateur-abus-medicamenteux" }, " ou lis ", { text: "comment sortir de l'abus médicamenteux", href: "/blog/mal-de-tete-tous-les-jours" }, "."],
+};
+
+export const cycleDiary: DiaryCopy = {
+  path: "/ressources/journal-migraine-et-regles",
+  navLabel: "Journal migraine et règles",
+  menuDescription: "Tes crises et tes règles sur 3 mois, à imprimer",
+  metaTitle: "Journal de migraine menstruelle à imprimer (PDF gratuit)",
+  description:
+    "Un calendrier de 3 mois à imprimer pour noter tes règles et tes crises, et voir si tes migraines suivent ton cycle, comme le demandent les médecins.",
+  title: "Journal migraine et règles à imprimer",
+  lead: "Trois mois sur une page pour noter tes règles, tes crises et tes médicaments, et voir si tes migraines suivent ton cycle. Gratuit, sans inscription.",
+  downloads: [
+    { label: "Télécharger le PDF (A4)", href: "/downloads/journal-migraine-et-regles-mellow-a4.pdf", primary: true },
+  ],
+  downloadNote: "PDF, 2 pages, format A4.",
+  previewAlt: [
+    "Page 1 du journal : calendrier de trois mois avec, pour chaque jour, une case règles, l'intensité de la crise et une case médicament, puis un bilan cycle par cycle",
+    "Page 2 du journal : tableau des crises avec date, horaires, intensité, symptômes, déclencheurs, médicament et soulagement sans médicament",
+  ],
+  whyTitle: "Pourquoi suivre tes migraines avec ton cycle ?",
+  why: [
+    [
+      "Chez beaucoup de femmes, les crises reviennent ",
+      { text: "autour des règles", href: "/blog/migraine-et-regles" },
+      ". Les médecins parlent de ",
+      { text: "migraine menstruelle", href: "/blog/migraine-catameniale" },
+      " quand elles surviennent entre 2 jours avant et 3 jours après le début des règles, sur au moins 2 cycles sur 3.",
+    ],
+    [
+      "Pour le savoir, il faut noter tes règles et tes crises pendant au moins 3 cycles : c'est exactement ce que permet ce journal. Le confirmer peut changer ton traitement, avec par exemple un traitement ciblé sur ces quelques jours.",
+    ],
+  ],
+  howTitle: "Comment le remplir",
+  steps: [
+    "Écris le mois en début de ligne. Chaque jour de règles, coche la case « Règles ».",
+    "Chaque jour de crise, note l'intensité de 1 à 10 dans la ligne « Crise », et coche « Méd. » si tu as pris un médicament de crise.",
+    "À la fin de chaque cycle, remplis le bilan : premier jour des règles, et crise ou non entre 2 jours avant et 3 jours après.",
+    "Sur la page 2, détaille chaque crise si tu le souhaites, puis apporte le journal à ta prochaine consultation.",
+  ],
+  doctorTitle: "Ce que ton médecin va regarder",
+  doctor: [
+    "Si tes crises tombent autour des règles sur au moins 2 cycles sur 3.",
+    "Si tu as aussi des crises à d'autres moments du cycle, ce qui oriente le traitement.",
+    "La durée et l'intensité des crises de règles, souvent plus longues et plus fortes.",
+    "Tes jours de médicaments, pour éviter un abus médicamenteux.",
+  ],
+  appTitle: "Mellow le remplit avec toi",
+  appText:
+    "Note tes crises en deux taps, avec le cycle menstruel parmi les déclencheurs. Mellow te montre ce qui revient et prépare un rapport PDF pour ton médecin.",
+  faqTitle: "Questions fréquentes",
+  faq: [
+    {
+      q: "Combien de cycles faut-il suivre ?",
+      a: "Au moins 3. On parle de migraine menstruelle quand les crises tombent autour des règles sur au moins 2 cycles sur 3.",
+    },
+    {
+      q: "Et si mes cycles sont irréguliers ?",
+      a: "Le journal fonctionne quand même : il suit les jours du calendrier, pas un cycle théorique. Coche simplement tes règles quand elles arrivent.",
+    },
+    {
+      q: "Et sous pilule ?",
+      a: "Le journal marche aussi. Sous pilule, les crises tombent souvent pendant la semaine d'arrêt ou de comprimés inactifs : le journal permet de le voir. Parles-en à ton médecin, surtout si tu as des migraines avec aura.",
+    },
+  ],
+};
+
+export const overusePage: OverusePageCopy = {
+  path: "/ressources/calculateur-abus-medicamenteux",
+  navLabel: "Calculateur d'abus médicamenteux",
+  menuDescription: "Tes jours de médicaments face aux seuils",
+  metaTitle: "Abus médicamenteux : calcule si tu dépasses les seuils (gratuit)",
+  description:
+    "Indique tes jours de médicaments contre la douleur et la migraine : le calculateur les compare aux seuils médicaux de la céphalée par abus médicamenteux, 10 ou 15 jours par mois selon le médicament.",
+  title: "Calculateur d'abus médicamenteux",
+  lead: "Trop de médicaments contre la douleur peut entretenir les maux de tête. Indique tes jours de prise sur un mois : le calculateur les compare aux seuils utilisés par les neurologues.",
+  thresholdsTitle: "Les seuils, médicament par médicament",
+  thresholdsIntro: [
+    "La classification internationale des céphalées (ICHD-3) définit la ",
+    { text: "céphalée par abus médicamenteux", href: "/blog/mal-de-tete-tous-les-jours" },
+    " : des maux de tête au moins 15 jours par mois, chez une personne qui a déjà des migraines ou des céphalées, avec depuis plus de 3 mois une prise régulière de médicaments de crise au-delà de ces seuils.",
+  ],
+  table: {
+    headers: ["Médicament", "Seuil d'abus"],
+    rows: [
+      ["Paracétamol", "15 jours par mois ou plus"],
+      ["Anti-inflammatoires et aspirine (ibuprofène, kétoprofène, naproxène…)", "15 jours par mois ou plus"],
+      ["Triptans (sumatriptan, zolmitriptan, élétriptan…)", "10 jours par mois ou plus"],
+      ["Associations (paracétamol avec codéine ou caféine…) et opioïdes (tramadol, codéine…)", "10 jours par mois ou plus"],
+      ["Plusieurs de ces familles, sans dépasser le seuil d'aucune", "10 jours par mois ou plus au total"],
+    ],
+  },
+  thresholdsNote:
+    "Ces seuils comptent des jours, pas des comprimés : un jour où tu prends deux comprimés, ou deux médicaments différents, compte pour un seul jour.",
+  whatTitle: "Que faire si tu dépasses un seuil ?",
+  what: [
+    [
+      "N'arrête pas tout d'un coup de ton côté. Parles-en à ton médecin : il t'aidera à réduire ces médicaments progressivement, souvent avec un traitement de fond pour passer le cap.",
+    ],
+    [
+      "Bonne nouvelle : chez beaucoup de personnes, les maux de tête diminuent nettement quand la prise de médicaments redescend sous les seuils, en général en quelques semaines à quelques mois.",
+    ],
+    [
+      "Pour suivre tes jours de prise au fil du mois, utilise ",
+      { text: "le journal de migraine à imprimer", href: "/ressources/journal-de-migraine" },
+      ".",
+    ],
+  ],
+  faqTitle: "Questions fréquentes",
+  faq: [
+    {
+      q: "Je compte les jours ou les comprimés ?",
+      a: "Les jours. Un jour où tu prends deux comprimés, ou deux médicaments différents, compte pour un seul jour.",
+    },
+    {
+      q: "Les traitements de fond comptent-ils ?",
+      a: "Non. Seuls les médicaments de crise, pris pour calmer une douleur, entrent dans le calcul. Les traitements de fond pris chaque jour pour prévenir les crises ne comptent pas.",
+    },
+    {
+      q: "Ce calculateur pose-t-il un diagnostic ?",
+      a: "Non. Il compare tes réponses aux seuils médicaux pour t'aider à en parler à ton médecin. Seul un médecin peut confirmer une céphalée par abus médicamenteux.",
+    },
+  ],
+};
+
+export const overuse: OveruseCopy = {
+  intro: "Sur un mois habituel :",
+  headache: { label: "Jours avec mal de tête" },
+  medsTitle: "Médicaments de crise",
+  fields: {
+    paracetamol: { label: "Jours avec du paracétamol" },
+    nsaid: { label: "Jours avec un anti-inflammatoire ou de l'aspirine", hint: "Ibuprofène, kétoprofène, naproxène…" },
+    triptan: { label: "Jours avec un triptan", hint: "Sumatriptan, zolmitriptan, élétriptan…" },
+    combo: { label: "Jours avec une association ou un opioïde", hint: "Paracétamol avec codéine ou caféine, tramadol…" },
+    total: { label: "Au total, jours avec au moins un médicament", hint: "Un jour où tu en prends plusieurs ne compte qu'une fois." },
+  },
+  durationLabel: "Depuis combien de temps prends-tu des médicaments à ce rythme ?",
+  durationOptions: ["Moins de 3 mois", "3 mois ou plus"],
+  decrease: "Un jour de moins",
+  increase: "Un jour de plus",
+  resultEyebrow: "Ton résultat",
+  empty: "Indique tes jours de prise pour voir où tu en es.",
+  findingLabel: {
+    paracetamol: "Paracétamol",
+    nsaid: "Anti-inflammatoires et aspirine",
+    triptan: "Triptans",
+    combo: "Associations et opioïdes",
+    total: "Tous médicaments confondus",
+  },
+  findingValue: "{days} jours · seuil {limit}",
+  results: {
+    below: {
+      title: "Tu es sous les seuils",
+      text: "Tes jours de médicaments restent sous les seuils de l'abus médicamenteux. Continue à les compter : c'est le meilleur moyen de voir venir un changement.",
+    },
+    near: {
+      title: "Tu approches d'un seuil",
+      text: "Tu es à un ou deux jours d'un seuil. Ce n'est pas un abus médicamenteux, mais c'est le bon moment pour en parler à ton médecin, notamment d'un traitement de fond si tes crises sont fréquentes.",
+    },
+    over: {
+      title: "Tu dépasses un seuil",
+      text: "À ce rythme, les médicaments eux-mêmes peuvent entretenir les maux de tête. Parles-en à ton médecin, sans tout arrêter d'un coup de ton côté : il t'aidera à réduire progressivement.",
+    },
+    moh: {
+      title: "Ton profil correspond à une céphalée par abus médicamenteux",
+      text: "Mal de tête 15 jours par mois ou plus, et des médicaments au-dessus du seuil depuis 3 mois ou plus : ce sont les critères de la céphalée par abus médicamenteux. Seul un médecin peut le confirmer. Parles-en rapidement : c'est fréquent, et ça se soigne.",
+    },
+  },
+  appTitle: "Laisse Mellow compter pour toi",
+  appText:
+    "Note chaque crise et chaque médicament en deux taps. Mellow compte tes jours de médicaments et prépare un rapport PDF pour ton médecin.",
+  disclaimer:
+    "Ce calculateur ne pose pas de diagnostic. Il t'aide à y voir plus clair et à préparer une consultation. En cas de doute, parles-en à ton médecin.",
 };

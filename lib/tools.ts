@@ -79,5 +79,13 @@ function byLocale<T>(pick: (copy: (typeof COPY)[ToolLocale]) => T): Record<ToolL
 }
 
 export const DIARY = byLocale((c) => c.diary);
+export const CYCLE_DIARY = byLocale((c) => c.cycleDiary);
 export const TEST_PAGE = byLocale((c) => c.testPage);
 export const TEST_COPY = byLocale((c) => c.test);
+export const OVERUSE_PAGE = byLocale((c) => c.overusePage);
+export const OVERUSE_COPY = byLocale((c) => c.overuse);
+
+// Order of the Resources menu and the footer links.
+export function toolsMenu(locale: ToolLocale) {
+  return [DIARY, CYCLE_DIARY, TEST_PAGE, OVERUSE_PAGE].map((copy) => copy[locale]);
+}

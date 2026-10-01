@@ -4,7 +4,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import type { Article, BlogLocale } from "@/lib/blog";
 import { PILLARS, type PillarId } from "@/lib/pillars";
-import { DIARY, TEST_PAGE, isToolLocale } from "@/lib/tools";
+import { DIARY, OVERUSE_PAGE, TEST_PAGE, isToolLocale } from "@/lib/tools";
 import { typographize } from "@/lib/typography";
 import { ArticleCard } from "./ArticleCard";
 import { BlogCta } from "./BlogCta";
@@ -22,7 +22,11 @@ export function PillarPage({ pillar, locale, articles, localePaths }: Props) {
   const t = useTranslations("blog");
   const tc = useTranslations("courses");
   const copy = PILLARS[pillar][locale];
-  const tool = !isToolLocale(locale) ? null : pillar === "understand" ? TEST_PAGE[locale] : DIARY[locale];
+  // One resource per topic: the test to understand, the diary to prevent,
+  // the medication overuse calculator to manage.
+  const tool = !isToolLocale(locale)
+    ? null
+    : { understand: TEST_PAGE, prevent: DIARY, manage: OVERUSE_PAGE }[pillar][locale];
 
   return (
     <>

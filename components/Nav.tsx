@@ -2,7 +2,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { PLAY_STORE_URL } from "@/lib/stores";
 import { isToolLocale } from "@/lib/tools";
-import { DIARY, TEST_PAGE, TOOLS_LABEL } from "@/lib/tools";
+import { TOOLS_LABEL, toolsMenu } from "@/lib/tools";
 import { ToolsMenu } from "./ToolsMenu";
 import { StoreBadges } from "./StoreBadges";
 
@@ -37,7 +37,7 @@ export function Nav() {
           {isToolLocale(locale) && (
             <ToolsMenu
               label={TOOLS_LABEL[locale]}
-              items={[DIARY[locale], TEST_PAGE[locale]].map((tool) => ({
+              items={toolsMenu(locale).map((tool) => ({
                 href: tool.path,
                 label: tool.navLabel,
                 description: tool.menuDescription,

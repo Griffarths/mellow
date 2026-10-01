@@ -1,4 +1,5 @@
 import type { Rich, TestCopy } from "../migraine-test";
+import type { OverusePageCopy, OveruseCopy } from "../overuse";
 import type { DiaryCopy, TestPageCopy } from "../tools";
 
 // No Italian articles yet: the texts carry no blog links, results point to
@@ -269,6 +270,174 @@ export const test: TestCopy = {
     "Hai mal di testa 15 giorni o più al mese: in questo caso si parla di forma cronica. Esistono terapie di profilassi, parlane con il tuo medico.",
   ],
   overuseNote: [
-    "Prendi un farmaco contro il dolore 10 giorni o più al mese. Oltre questa soglia aumenta il rischio di uso eccessivo di farmaci: i farmaci stessi possono mantenere il mal di testa.",
+    "Prendi un farmaco contro il dolore 10 giorni o più al mese. Oltre questa soglia aumenta il rischio di uso eccessivo di farmaci: i farmaci stessi possono mantenere il mal di testa. ",
+    { text: "Verifica a che punto sei con il calcolatore", href: "/risorse/calcolatore-abuso-farmaci" },
+    ".",
   ],
+};
+
+export const cycleDiary: DiaryCopy = {
+  path: "/risorse/diario-emicrania-mestruale",
+  navLabel: "Diario dell'emicrania mestruale",
+  menuDescription: "Attacchi e ciclo su 3 mesi, da stampare",
+  metaTitle: "Diario dell'emicrania mestruale da stampare (PDF gratuito)",
+  description:
+    "Un calendario di 3 mesi da stampare per annotare mestruazioni e attacchi, e capire se le tue emicranie seguono il ciclo, come chiedono i medici.",
+  title: "Diario dell'emicrania mestruale da stampare",
+  lead: "Tre mesi su una pagina per annotare mestruazioni, attacchi e farmaci, e capire se le tue emicranie seguono il ciclo. Gratis, senza registrazione.",
+  downloads: [
+    { label: "Scarica il PDF (A4)", href: "/downloads/diario-emicrania-mestruale-mellow-a4.pdf", primary: true },
+  ],
+  downloadNote: "PDF, 2 pagine, formato A4.",
+  previewAlt: [
+    "Pagina 1 del diario: calendario di tre mesi con, per ogni giorno, una casella per le mestruazioni, l'intensità dell'attacco e una casella per il farmaco, poi un bilancio ciclo per ciclo",
+    "Pagina 2 del diario: tabella degli attacchi con data, orari, intensità, sintomi, fattori scatenanti, farmaco e sollievo senza farmaci",
+  ],
+  whyTitle: "Perché seguire l'emicrania insieme al ciclo?",
+  why: [
+    [
+      "In molte donne gli attacchi tornano intorno alle mestruazioni. I medici parlano di emicrania mestruale quando compaiono tra 2 giorni prima e 3 giorni dopo l'inizio delle mestruazioni, in almeno 2 cicli su 3.",
+    ],
+    [
+      "Per saperlo, bisogna annotare mestruazioni e attacchi per almeno 3 cicli: è proprio ciò che permette questo diario. Confermarlo può cambiare la terapia, per esempio con un trattamento mirato su quei pochi giorni.",
+    ],
+  ],
+  howTitle: "Come compilarlo",
+  steps: [
+    "Scrivi il mese all'inizio di ogni riga. In ogni giorno di mestruazioni, spunta la casella «Mestruazioni».",
+    "In ogni giorno di attacco, annota l'intensità da 1 a 10 nella riga «Attacco» e spunta «Farm.» se hai preso un farmaco per l'attacco.",
+    "Alla fine di ogni ciclo, compila il bilancio: primo giorno delle mestruazioni e se c'è stato un attacco tra 2 giorni prima e 3 giorni dopo.",
+    "A pagina 2 puoi descrivere ogni attacco nel dettaglio, poi porta il diario alla prossima visita.",
+  ],
+  doctorTitle: "Cosa guarderà il tuo medico",
+  doctor: [
+    "Se i tuoi attacchi cadono intorno alle mestruazioni in almeno 2 cicli su 3.",
+    "Se hai attacchi anche in altri momenti del ciclo, cosa che orienta la terapia.",
+    "La durata e l'intensità degli attacchi mestruali, spesso più lunghi e più forti.",
+    "I giorni con farmaci, per evitare un uso eccessivo.",
+  ],
+  appTitle: "Mellow lo compila con te",
+  appText:
+    "Registra i tuoi attacchi con due tap, con il ciclo mestruale tra i fattori scatenanti. Mellow ti mostra cosa si ripete e prepara un report PDF per il tuo medico.",
+  faqTitle: "Domande frequenti",
+  faq: [
+    {
+      q: "Quanti cicli bisogna seguire?",
+      a: "Almeno 3. Si parla di emicrania mestruale quando gli attacchi cadono intorno alle mestruazioni in almeno 2 cicli su 3.",
+    },
+    {
+      q: "E se il mio ciclo è irregolare?",
+      a: "Il diario funziona lo stesso: segue i giorni del calendario, non un ciclo teorico. Spunta semplicemente le mestruazioni quando arrivano.",
+    },
+    {
+      q: "E con la pillola?",
+      a: "Il diario funziona anche in questo caso. Con la pillola gli attacchi cadono spesso nella settimana di pausa o di compresse inattive, e il diario lo mostra. Parlane con il tuo medico, soprattutto se hai l'emicrania con aura.",
+    },
+  ],
+};
+
+export const overusePage: OverusePageCopy = {
+  path: "/risorse/calcolatore-abuso-farmaci",
+  navLabel: "Calcolatore di abuso di farmaci",
+  menuDescription: "I tuoi giorni con farmaci rispetto alle soglie",
+  metaTitle: "Abuso di farmaci: calcola se superi le soglie (gratis)",
+  description:
+    "Indica i giorni in cui prendi farmaci contro il dolore e l'emicrania: il calcolatore li confronta con le soglie mediche della cefalea da uso eccessivo di farmaci, 10 o 15 giorni al mese a seconda del farmaco.",
+  title: "Calcolatore di abuso di farmaci",
+  lead: "Troppi antidolorifici possono mantenere il mal di testa. Indica in quanti giorni al mese li prendi: il calcolatore li confronta con le soglie usate dai neurologi.",
+  thresholdsTitle: "Le soglie, farmaco per farmaco",
+  thresholdsIntro: [
+    "La Classificazione internazionale delle cefalee (ICHD-3) definisce la cefalea da uso eccessivo di farmaci così: mal di testa almeno 15 giorni al mese in una persona che ha già l'emicrania o un'altra cefalea, con un'assunzione regolare di farmaci per l'attacco oltre queste soglie da più di 3 mesi.",
+  ],
+  table: {
+    headers: ["Farmaco", "Soglia"],
+    rows: [
+      ["Paracetamolo", "15 giorni al mese o più"],
+      ["Antinfiammatori e aspirina (ibuprofene, ketoprofene, naprossene…)", "15 giorni al mese o più"],
+      ["Triptani (sumatriptan, rizatriptan, eletriptan…)", "10 giorni al mese o più"],
+      ["Associazioni (con caffeina o codeina…) e oppioidi (tramadolo, codeina…)", "10 giorni al mese o più"],
+      ["Più di queste famiglie, senza superare la soglia di nessuna", "10 giorni al mese o più in totale"],
+    ],
+  },
+  thresholdsNote:
+    "Queste soglie contano i giorni, non le compresse: un giorno in cui prendi due compresse, o due farmaci diversi, conta come un solo giorno.",
+  whatTitle: "Cosa fare se superi una soglia?",
+  what: [
+    [
+      "Non smettere tutto di colpo di tua iniziativa. Parlane con il tuo medico: ti aiuterà a ridurre questi farmaci gradualmente, spesso con una terapia di profilassi per superare questa fase.",
+    ],
+    [
+      "La buona notizia: in molte persone il mal di testa diminuisce nettamente quando i giorni con farmaci tornano sotto le soglie, di solito nel giro di qualche settimana o qualche mese.",
+    ],
+    [
+      "Per tenere il conto dei giorni con farmaci nel corso del mese, usa ",
+      { text: "il diario dell'emicrania da stampare", href: "/risorse/diario-emicrania" },
+      ".",
+    ],
+  ],
+  faqTitle: "Domande frequenti",
+  faq: [
+    {
+      q: "Conto i giorni o le compresse?",
+      a: "I giorni. Un giorno in cui prendi due compresse, o due farmaci diversi, conta come un solo giorno.",
+    },
+    {
+      q: "Le terapie di profilassi contano?",
+      a: "No. Contano solo i farmaci per l'attacco, presi per calmare il dolore. Le terapie di profilassi prese ogni giorno per prevenire gli attacchi non contano.",
+    },
+    {
+      q: "Questo calcolatore fa una diagnosi?",
+      a: "No. Confronta le tue risposte con le soglie mediche per aiutarti a parlarne con il tuo medico. Solo un medico può confermare una cefalea da uso eccessivo di farmaci.",
+    },
+  ],
+};
+
+export const overuse: OveruseCopy = {
+  intro: "In un mese tipico:",
+  headache: { label: "Giorni con mal di testa" },
+  medsTitle: "Farmaci per l'attacco",
+  fields: {
+    paracetamol: { label: "Giorni con paracetamolo" },
+    nsaid: { label: "Giorni con un antinfiammatorio o aspirina", hint: "Ibuprofene, ketoprofene, naprossene…" },
+    triptan: { label: "Giorni con un triptano", hint: "Sumatriptan, rizatriptan, eletriptan…" },
+    combo: { label: "Giorni con un'associazione o un oppioide", hint: "Con caffeina o codeina, tramadolo…" },
+    total: { label: "In totale, giorni con almeno un farmaco", hint: "Un giorno in cui ne prendi più di uno conta una sola volta." },
+  },
+  durationLabel: "Da quanto tempo prendi farmaci con questa frequenza?",
+  durationOptions: ["Da meno di 3 mesi", "Da 3 mesi o più"],
+  decrease: "Un giorno in meno",
+  increase: "Un giorno in più",
+  resultEyebrow: "Il tuo risultato",
+  empty: "Indica i giorni con farmaci per vedere a che punto sei.",
+  findingLabel: {
+    paracetamol: "Paracetamolo",
+    nsaid: "Antinfiammatori e aspirina",
+    triptan: "Triptani",
+    combo: "Associazioni e oppioidi",
+    total: "Tutti i farmaci insieme",
+  },
+  findingValue: "{days} giorni · soglia {limit}",
+  results: {
+    below: {
+      title: "Sei sotto le soglie",
+      text: "I tuoi giorni con farmaci restano sotto le soglie dell'uso eccessivo. Continua a contarli: è il modo migliore per accorgerti in tempo di un cambiamento.",
+    },
+    near: {
+      title: "Ti stai avvicinando a una soglia",
+      text: "Sei a uno o due giorni da una soglia. Non è un uso eccessivo, ma è il momento giusto per parlarne con il tuo medico, soprattutto di una terapia di profilassi se i tuoi attacchi sono frequenti.",
+    },
+    over: {
+      title: "Superi una soglia",
+      text: "Con questo ritmo, i farmaci stessi possono mantenere il mal di testa. Parlane con il tuo medico, senza smettere tutto di colpo di tua iniziativa: ti aiuterà a ridurli gradualmente.",
+    },
+    moh: {
+      title: "Il tuo profilo corrisponde a una cefalea da uso eccessivo di farmaci",
+      text: "Mal di testa 15 giorni al mese o più, e farmaci oltre la soglia da 3 mesi o più: sono i criteri della cefalea da uso eccessivo di farmaci. Solo un medico può confermarlo. Parlane presto: è frequente, e si cura.",
+    },
+  },
+  appTitle: "Lascia che Mellow conti per te",
+  appText:
+    "Registra ogni attacco e ogni farmaco con due tap. Mellow conta i tuoi giorni con farmaci e prepara un report PDF per il tuo medico.",
+  disclaimer:
+    "Questo calcolatore non fa una diagnosi. Ti aiuta a vederci più chiaro e a preparare una visita. In caso di dubbio, parlane con il tuo medico.",
 };

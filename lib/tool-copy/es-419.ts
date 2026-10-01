@@ -1,4 +1,5 @@
 import type { Rich, TestCopy } from "../migraine-test";
+import type { OverusePageCopy, OveruseCopy } from "../overuse";
 import type { DiaryCopy, TestPageCopy } from "../tools";
 
 // Spanish for Latin America (same URLs as Spain, regional wording, Letter
@@ -270,6 +271,175 @@ export const test: TestCopy = {
     "Te duele la cabeza 15 días o más al mes: en ese caso se habla de una forma crónica. Existen tratamientos preventivos, coméntalo con tu médico.",
   ],
   overuseNote: [
-    "Tomas un medicamento para el dolor 10 días o más al mes. Más allá de ese umbral, aumenta el riesgo de uso excesivo de medicamentos: los propios medicamentos pueden mantener los dolores de cabeza.",
+    "Tomas un medicamento para el dolor 10 días o más al mes. Más allá de ese umbral, aumenta el riesgo de uso excesivo de medicamentos: los propios medicamentos pueden mantener los dolores de cabeza. ",
+    { text: "Revisa cómo estás con la calculadora", href: "/recursos/calculadora-abuso-medicamentos" },
+    ".",
   ],
+};
+
+export const cycleDiary: DiaryCopy = {
+  path: "/recursos/diario-migrana-menstrual",
+  navLabel: "Diario de migraña menstrual",
+  menuDescription: "Crisis y periodo durante 3 meses, para imprimir",
+  metaTitle: "Diario de migraña menstrual para imprimir (PDF gratis)",
+  description:
+    "Un calendario de 3 meses para imprimir y anotar tu periodo y tus crisis, y ver si tus migrañas siguen tu ciclo, como lo piden los médicos.",
+  title: "Diario de migraña menstrual para imprimir",
+  lead: "Tres meses en una página para anotar tu periodo, tus crisis y tus medicamentos, y ver si tus migrañas siguen tu ciclo. Gratis y sin registrarte.",
+  downloads: [
+    { label: "Descargar el PDF (tamaño carta)", href: "/downloads/diario-migrana-menstrual-mellow-latam-carta.pdf", primary: true },
+    { label: "Versión A4", href: "/downloads/diario-migrana-menstrual-mellow-latam-a4.pdf" },
+  ],
+  downloadNote: "PDF, 2 páginas.",
+  previewAlt: [
+    "Página 1 del diario: calendario de tres meses con, para cada día, una casilla de periodo, la intensidad de la crisis y una casilla de medicamento, y luego un resumen ciclo por ciclo",
+    "Página 2 del diario: registro de crisis con fecha, horarios, intensidad, síntomas, desencadenantes, medicamento y alivio sin medicamentos",
+  ],
+  whyTitle: "¿Por qué seguir tus migrañas junto con tu ciclo?",
+  why: [
+    [
+      "En muchas mujeres, las crisis regresan alrededor del periodo. Los médicos hablan de migraña menstrual cuando aparecen entre 2 días antes y 3 días después del inicio del periodo, en al menos 2 de cada 3 ciclos.",
+    ],
+    [
+      "Para saberlo, hay que anotar el periodo y las crisis durante al menos 3 ciclos: justo para eso sirve este diario. Confirmarlo puede cambiar el tratamiento, por ejemplo con un tratamiento enfocado en esos pocos días.",
+    ],
+  ],
+  howTitle: "Cómo llenarlo",
+  steps: [
+    "Escribe el mes al inicio de cada fila. Cada día de periodo, marca la casilla “Periodo”.",
+    "Cada día de crisis, anota la intensidad del 1 al 10 en la fila “Crisis” y marca “Med.” si tomaste un medicamento para la crisis.",
+    "Al final de cada ciclo, llena el resumen: primer día del periodo y si hubo crisis entre 2 días antes y 3 días después.",
+    "En la página 2 puedes detallar cada crisis y luego llevar el diario a tu próxima cita médica.",
+  ],
+  doctorTitle: "Lo que va a revisar tu médico",
+  doctor: [
+    "Si tus crisis coinciden con el periodo en al menos 2 de cada 3 ciclos.",
+    "Si también tienes crisis en otros momentos del ciclo, lo que orienta el tratamiento.",
+    "La duración y la intensidad de las crisis del periodo, que suelen ser más largas e intensas.",
+    "Tus días con medicamento, para evitar un uso excesivo.",
+  ],
+  appTitle: "Mellow lo llena contigo",
+  appText:
+    "Registra tus crisis con dos toques, con el ciclo menstrual entre los desencadenantes. Mellow te muestra lo que se repite y prepara un informe en PDF para tu médico.",
+  faqTitle: "Preguntas frecuentes",
+  faq: [
+    {
+      q: "¿Cuántos ciclos hay que seguir?",
+      a: "Al menos 3. Se habla de migraña menstrual cuando las crisis coinciden con el periodo en al menos 2 de cada 3 ciclos.",
+    },
+    {
+      q: "¿Y si mis ciclos son irregulares?",
+      a: "El diario funciona igual: sigue los días del calendario, no un ciclo teórico. Marca tu periodo cuando llegue.",
+    },
+    {
+      q: "¿Y si tomo pastillas anticonceptivas?",
+      a: "El diario también sirve. Con las pastillas, las crisis suelen aparecer en la semana de descanso o de pastillas sin hormonas, y el diario lo muestra. Coméntalo con tu médico, sobre todo si tienes migraña con aura.",
+    },
+  ],
+};
+
+export const overusePage: OverusePageCopy = {
+  path: "/recursos/calculadora-abuso-medicamentos",
+  navLabel: "Calculadora de abuso de medicamentos",
+  menuDescription: "Tus días con medicamentos frente a los umbrales",
+  metaTitle: "Abuso de medicamentos: calcula si superas los umbrales (gratis)",
+  description:
+    "Indica tus días con medicamentos para el dolor y la migraña: la calculadora los compara con los umbrales médicos de la cefalea por uso excesivo de medicamentos, 10 o 15 días al mes según el medicamento.",
+  title: "Calculadora de abuso de medicamentos",
+  lead: "Demasiados analgésicos pueden mantener los dolores de cabeza. Indica cuántos días al mes los tomas: la calculadora los compara con los umbrales que usan los neurólogos.",
+  thresholdsTitle: "Los umbrales, medicamento por medicamento",
+  thresholdsIntro: [
+    "La Clasificación Internacional de las Cefaleas (ICHD-3) define la cefalea por uso excesivo de medicamentos así: dolor de cabeza al menos 15 días al mes en una persona que ya tiene migraña u otra cefalea, con una toma regular de medicamentos para la crisis por encima de estos umbrales desde hace más de 3 meses.",
+  ],
+  table: {
+    headers: ["Medicamento", "Umbral"],
+    rows: [
+      ["Paracetamol (acetaminofén)", "15 días al mes o más"],
+      ["Antiinflamatorios y aspirina (ibuprofeno, naproxeno, ketorolaco…)", "15 días al mes o más"],
+      ["Triptanes (sumatriptán, rizatriptán, eletriptán…)", "10 días al mes o más"],
+      ["Combinaciones (con cafeína, codeína o ergotamina…) y opioides (tramadol, codeína…)", "10 días al mes o más"],
+      ["Varias de estas familias, sin superar el umbral de ninguna", "10 días al mes o más en total"],
+    ],
+  },
+  thresholdsNote:
+    "Estos umbrales cuentan días, no pastillas: un día en que tomas dos pastillas, o dos medicamentos distintos, cuenta como un solo día.",
+  whatTitle: "¿Qué hacer si superas un umbral?",
+  what: [
+    [
+      "No dejes todo de golpe por tu cuenta. Coméntalo con tu médico: te ayudará a reducir estos medicamentos poco a poco, muchas veces con un tratamiento preventivo para pasar esa etapa.",
+    ],
+    [
+      "La buena noticia: en muchas personas, los dolores de cabeza bajan claramente cuando los días con medicamentos vuelven a estar por debajo de los umbrales, normalmente en unas semanas o unos meses.",
+    ],
+    [
+      "Para llevar la cuenta de tus días con medicamentos durante el mes, usa ",
+      { text: "el diario de migraña para imprimir", href: "/recursos/diario-de-migrana" },
+      ".",
+    ],
+  ],
+  faqTitle: "Preguntas frecuentes",
+  faq: [
+    {
+      q: "¿Cuento días o pastillas?",
+      a: "Días. Un día en que tomas dos pastillas, o dos medicamentos distintos, cuenta como un solo día.",
+    },
+    {
+      q: "¿Cuentan los tratamientos preventivos?",
+      a: "No. Solo cuentan los medicamentos para la crisis, que tomas para calmar el dolor. Los tratamientos preventivos que tomas todos los días para evitar las crisis no cuentan.",
+    },
+    {
+      q: "¿Esta calculadora da un diagnóstico?",
+      a: "No. Compara tus respuestas con los umbrales médicos para ayudarte a hablarlo con tu médico. Solo un médico puede confirmar una cefalea por uso excesivo de medicamentos.",
+    },
+  ],
+};
+
+export const overuse: OveruseCopy = {
+  intro: "En un mes normal:",
+  headache: { label: "Días con dolor de cabeza" },
+  medsTitle: "Medicamentos para la crisis",
+  fields: {
+    paracetamol: { label: "Días con paracetamol (acetaminofén)" },
+    nsaid: { label: "Días con un antiinflamatorio o aspirina", hint: "Ibuprofeno, naproxeno, ketorolaco…" },
+    triptan: { label: "Días con un triptán", hint: "Sumatriptán, rizatriptán, eletriptán…" },
+    combo: { label: "Días con una combinación o un opioide", hint: "Con cafeína, codeína o ergotamina, tramadol…" },
+    total: { label: "En total, días con al menos un medicamento", hint: "Un día en que tomas varios cuenta una sola vez." },
+  },
+  durationLabel: "¿Desde cuándo tomas medicamentos con esta frecuencia?",
+  durationOptions: ["Desde hace menos de 3 meses", "Desde hace 3 meses o más"],
+  decrease: "Un día menos",
+  increase: "Un día más",
+  resultEyebrow: "Tu resultado",
+  empty: "Indica tus días con medicamentos para ver cómo estás.",
+  findingLabel: {
+    paracetamol: "Paracetamol",
+    nsaid: "Antiinflamatorios y aspirina",
+    triptan: "Triptanes",
+    combo: "Combinaciones y opioides",
+    total: "Todos los medicamentos",
+  },
+  findingValue: "{days} días · umbral {limit}",
+  results: {
+    below: {
+      title: "Estás por debajo de los umbrales",
+      text: "Tus días con medicamentos siguen por debajo de los umbrales del uso excesivo. Sigue contándolos: es la mejor forma de detectar un cambio a tiempo.",
+    },
+    near: {
+      title: "Te estás acercando a un umbral",
+      text: "Estás a uno o dos días de un umbral. No es un uso excesivo, pero es buen momento para hablarlo con tu médico, sobre todo de un tratamiento preventivo si tus crisis son frecuentes.",
+    },
+    over: {
+      title: "Superas un umbral",
+      text: "A este ritmo, los propios medicamentos pueden mantener los dolores de cabeza. Coméntalo con tu médico, sin dejar todo de golpe por tu cuenta: te ayudará a reducirlos poco a poco.",
+    },
+    moh: {
+      title: "Tu perfil corresponde a una cefalea por uso excesivo de medicamentos",
+      text: "Dolor de cabeza 15 días al mes o más, y medicamentos por encima del umbral desde hace 3 meses o más: son los criterios de la cefalea por uso excesivo de medicamentos. Solo un médico puede confirmarlo. Coméntalo pronto: es frecuente y tiene tratamiento.",
+    },
+  },
+  appTitle: "Deja que Mellow cuente por ti",
+  appText:
+    "Registra cada crisis y cada medicamento con dos toques. Mellow cuenta tus días con medicamentos y prepara un informe en PDF para tu médico.",
+  disclaimer:
+    "Esta calculadora no da un diagnóstico. Te ayuda a verlo con más claridad y a preparar una consulta. Si tienes dudas, habla con tu médico.",
 };

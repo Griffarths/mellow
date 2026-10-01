@@ -1,4 +1,5 @@
 import type { TestCopy } from "../migraine-test";
+import type { OverusePageCopy, OveruseCopy } from "../overuse";
 import type { DiaryCopy, TestPageCopy } from "../tools";
 
 export const diary: DiaryCopy = {
@@ -273,5 +274,178 @@ export const test: TestCopy = {
     },
   },
   chronicNote: ["You have a headache 15 or more days a month: this is called a chronic form. Preventive treatments exist, talk to your doctor. ", { text: "Headache every day: the causes", href: "/blog/headache-every-day" }],
-  overuseNote: ["You take a painkiller 10 or more days a month. Beyond that threshold, the risk of medication overuse rises: the medication itself can keep the headaches going. ", { text: "How to get out of medication overuse", href: "/blog/headache-every-day" }],
+  overuseNote: ["You take a painkiller 10 or more days a month. Beyond that threshold, the risk of medication overuse rises: the medication itself can keep the headaches going. ", { text: "Check where you stand with the calculator", href: "/resources/medication-overuse-calculator" }, " or read ", { text: "how to get out of medication overuse", href: "/blog/headache-every-day" }, "."],
+};
+
+export const cycleDiary: DiaryCopy = {
+  path: "/resources/menstrual-migraine-diary",
+  navLabel: "Menstrual migraine diary",
+  menuDescription: "Your attacks and periods over 3 months, printable",
+  metaTitle: "Printable menstrual migraine diary (free PDF)",
+  description:
+    "A printable 3-month calendar to log your periods and your attacks, and see whether your migraines follow your cycle, as doctors ask.",
+  title: "Printable menstrual migraine diary",
+  lead: "Three months on one page to log your periods, attacks and medication, and see whether your migraines follow your cycle. Free, no sign-up.",
+  downloads: [
+    { label: "Download the PDF (US Letter)", href: "/downloads/menstrual-migraine-diary-mellow-letter.pdf", primary: true },
+    { label: "A4 version", href: "/downloads/menstrual-migraine-diary-mellow-a4.pdf" },
+  ],
+  downloadNote: "PDF, 2 pages.",
+  previewAlt: [
+    "Diary page 1: a three-month calendar with, for each day, a period box, the attack intensity and a medication box, then a cycle-by-cycle summary",
+    "Diary page 2: an attack log with date, times, intensity, symptoms, triggers, medication and drug-free relief",
+  ],
+  whyTitle: "Why track your migraines with your cycle?",
+  why: [
+    [
+      "For many women, attacks come back ",
+      { text: "around their period", href: "/blog/migraine-and-periods" },
+      ". Doctors call it ",
+      { text: "menstrual migraine", href: "/blog/menstrual-migraine" },
+      " when attacks start between 2 days before and 3 days after the first day of the period, in at least 2 cycles out of 3.",
+    ],
+    [
+      "To find out, you need to log your periods and attacks for at least 3 cycles: that is exactly what this diary is for. Confirming it can change your treatment, for example with a treatment targeted on those few days.",
+    ],
+  ],
+  howTitle: "How to fill it in",
+  steps: [
+    "Write the month at the start of each row. On each period day, tick the “Period” box.",
+    "On each attack day, write the intensity from 1 to 10 in the “Attack” row, and tick “Med” if you took an acute medication.",
+    "At the end of each cycle, fill in the summary: first day of your period, and whether you had an attack between 2 days before and 3 days after.",
+    "On page 2, add details for each attack if you like, then bring the diary to your next appointment.",
+  ],
+  doctorTitle: "What your doctor will look at",
+  doctor: [
+    "Whether your attacks fall around your period in at least 2 cycles out of 3.",
+    "Whether you also have attacks at other times of the cycle, which guides the treatment.",
+    "How long and how strong period attacks are, as they are often longer and more severe.",
+    "Your medication days, to avoid medication overuse.",
+  ],
+  appTitle: "Let Mellow fill it in with you",
+  appText:
+    "Log your attacks in two taps, with your menstrual cycle among the triggers. Mellow shows you what keeps coming back and prepares a PDF report for your doctor.",
+  faqTitle: "Frequently asked questions",
+  faq: [
+    {
+      q: "How many cycles should I track?",
+      a: "At least 3. Doctors speak of menstrual migraine when attacks fall around the period in at least 2 cycles out of 3.",
+    },
+    {
+      q: "What if my cycles are irregular?",
+      a: "The diary still works: it follows calendar days, not a theoretical cycle. Just tick your period days when they come.",
+    },
+    {
+      q: "What about the pill?",
+      a: "The diary works too. On the pill, attacks often fall in the pill-free or placebo week, and the diary will show it. Talk to your doctor, especially if you have migraine with aura.",
+    },
+  ],
+};
+
+export const overusePage: OverusePageCopy = {
+  path: "/resources/medication-overuse-calculator",
+  navLabel: "Medication overuse calculator",
+  menuDescription: "Your medication days against the thresholds",
+  metaTitle: "Medication overuse headache: check your thresholds (free calculator)",
+  description:
+    "Enter your days of pain and migraine medication: the calculator compares them with the medical thresholds for medication overuse headache, 10 or 15 days a month depending on the drug.",
+  title: "Medication overuse calculator",
+  lead: "Too much pain medication can keep headaches going. Enter how many days a month you take it: the calculator compares them with the thresholds neurologists use.",
+  thresholdsTitle: "The thresholds, drug by drug",
+  thresholdsIntro: [
+    "The International Classification of Headache Disorders (ICHD-3) defines ",
+    { text: "medication overuse headache", href: "/blog/headache-every-day" },
+    " as headache on at least 15 days a month in someone who already has migraine or another headache disorder, with regular use of acute medication above these thresholds for more than 3 months.",
+  ],
+  table: {
+    headers: ["Medication", "Overuse threshold"],
+    rows: [
+      ["Acetaminophen (paracetamol)", "15 days a month or more"],
+      ["Anti-inflammatories and aspirin (ibuprofen, naproxen, ketoprofen…)", "15 days a month or more"],
+      ["Triptans (sumatriptan, rizatriptan, zolmitriptan…)", "10 days a month or more"],
+      ["Combination painkillers (with codeine or caffeine…) and opioids (tramadol, codeine…)", "10 days a month or more"],
+      ["Several of these classes, none above its own threshold", "10 days a month or more in total"],
+    ],
+  },
+  thresholdsNote:
+    "These thresholds count days, not pills: a day when you take two pills, or two different drugs, counts as one day.",
+  whatTitle: "What to do if you are above a threshold?",
+  what: [
+    [
+      "Don't stop everything at once on your own. Talk to your doctor: they will help you cut down gradually, often with a preventive treatment to get through it.",
+    ],
+    [
+      "The good news: for many people, headaches clearly improve once medication days drop back below the thresholds, usually within a few weeks to a few months.",
+    ],
+    [
+      "To keep track of your medication days through the month, use ",
+      { text: "the printable migraine diary", href: "/resources/migraine-diary" },
+      ".",
+    ],
+  ],
+  faqTitle: "Frequently asked questions",
+  faq: [
+    {
+      q: "Do I count days or pills?",
+      a: "Days. A day when you take two pills, or two different drugs, counts as one day.",
+    },
+    {
+      q: "Do preventive treatments count?",
+      a: "No. Only acute medication, taken to ease the pain, counts. Preventive treatments taken every day to prevent attacks do not.",
+    },
+    {
+      q: "Does this calculator give a diagnosis?",
+      a: "No. It compares your answers with the medical thresholds to help you talk to your doctor. Only a doctor can confirm medication overuse headache.",
+    },
+  ],
+};
+
+export const overuse: OveruseCopy = {
+  intro: "In a typical month:",
+  headache: { label: "Days with a headache" },
+  medsTitle: "Acute medication",
+  fields: {
+    paracetamol: { label: "Days with acetaminophen (paracetamol)" },
+    nsaid: { label: "Days with an anti-inflammatory or aspirin", hint: "Ibuprofen, naproxen, ketoprofen…" },
+    triptan: { label: "Days with a triptan", hint: "Sumatriptan, rizatriptan, zolmitriptan…" },
+    combo: { label: "Days with a combination painkiller or an opioid", hint: "With codeine or caffeine, tramadol…" },
+    total: { label: "In total, days with at least one medication", hint: "A day when you take several counts once." },
+  },
+  durationLabel: "For how long have you been taking medication this often?",
+  durationOptions: ["Less than 3 months", "3 months or more"],
+  decrease: "One day less",
+  increase: "One day more",
+  resultEyebrow: "Your result",
+  empty: "Enter your medication days to see where you stand.",
+  findingLabel: {
+    paracetamol: "Acetaminophen",
+    nsaid: "Anti-inflammatories and aspirin",
+    triptan: "Triptans",
+    combo: "Combinations and opioids",
+    total: "All medication combined",
+  },
+  findingValue: "{days} days · limit {limit}",
+  results: {
+    below: {
+      title: "You are below the thresholds",
+      text: "Your medication days stay below the medication overuse thresholds. Keep counting them: it is the best way to spot a change early.",
+    },
+    near: {
+      title: "You are close to a threshold",
+      text: "You are one or two days from a threshold. This is not medication overuse, but it is a good time to talk to your doctor, especially about a preventive treatment if your attacks are frequent.",
+    },
+    over: {
+      title: "You are above a threshold",
+      text: "At this pace, the medication itself can keep the headaches going. Talk to your doctor, without stopping everything at once on your own: they will help you cut down gradually.",
+    },
+    moh: {
+      title: "Your profile matches medication overuse headache",
+      text: "Headache on 15 or more days a month, and medication above the threshold for 3 months or more: these are the criteria for medication overuse headache. Only a doctor can confirm it. Talk to them soon: it is common, and it can be treated.",
+    },
+  },
+  appTitle: "Let Mellow do the counting",
+  appText:
+    "Log each attack and each medication in two taps. Mellow counts your medication days and prepares a PDF report for your doctor.",
+  disclaimer:
+    "This calculator is not a diagnosis. It helps you see more clearly and prepare for an appointment. If in doubt, talk to your doctor.",
 };

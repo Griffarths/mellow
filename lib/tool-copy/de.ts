@@ -1,4 +1,5 @@
 import type { Rich, TestCopy } from "../migraine-test";
+import type { OverusePageCopy, OveruseCopy } from "../overuse";
 import type { DiaryCopy, TestPageCopy } from "../tools";
 
 // No German articles yet: the texts carry no blog links, results point to
@@ -269,6 +270,174 @@ export const test: TestCopy = {
     "Du hast an 15 oder mehr Tagen im Monat Kopfschmerzen: Dann spricht man von einer chronischen Form. Es gibt vorbeugende Behandlungen, sprich mit deinem Arzt darüber.",
   ],
   overuseNote: [
-    "Du nimmst an 10 oder mehr Tagen im Monat ein Schmerzmittel. Ab dieser Schwelle steigt das Risiko eines Medikamentenübergebrauchs: Die Medikamente selbst können die Kopfschmerzen dann aufrechterhalten.",
+    "Du nimmst an 10 oder mehr Tagen im Monat ein Schmerzmittel. Ab dieser Schwelle steigt das Risiko eines Medikamentenübergebrauchs: Die Medikamente selbst können die Kopfschmerzen dann aufrechterhalten. ",
+    { text: "Prüfe mit dem Rechner, wo du stehst", href: "/ressourcen/medikamentenuebergebrauch-rechner" },
+    ".",
   ],
+};
+
+export const cycleDiary: DiaryCopy = {
+  path: "/ressourcen/menstruationsmigraene-tagebuch",
+  navLabel: "Tagebuch für Menstruationsmigräne",
+  menuDescription: "Attacken und Periode über 3 Monate, zum Ausdrucken",
+  metaTitle: "Tagebuch für Menstruationsmigräne zum Ausdrucken (kostenloses PDF)",
+  description:
+    "Ein Kalender über 3 Monate zum Ausdrucken: Trage deine Periode und deine Attacken ein und sieh, ob deine Migräne deinem Zyklus folgt, wie es Ärzte empfehlen.",
+  title: "Tagebuch für Menstruationsmigräne",
+  lead: "Drei Monate auf einer Seite: Trage deine Periode, deine Attacken und deine Medikamente ein und sieh, ob deine Migräne deinem Zyklus folgt. Kostenlos, ohne Anmeldung.",
+  downloads: [
+    { label: "PDF herunterladen (A4)", href: "/downloads/menstruationsmigraene-tagebuch-mellow-a4.pdf", primary: true },
+  ],
+  downloadNote: "PDF, 2 Seiten, Format A4.",
+  previewAlt: [
+    "Seite 1 des Tagebuchs: Kalender über drei Monate mit, für jeden Tag, einem Kästchen für die Periode, der Stärke der Attacke und einem Kästchen für Medikamente, danach eine Auswertung Zyklus für Zyklus",
+    "Seite 2 des Tagebuchs: Attackenprotokoll mit Datum, Uhrzeiten, Stärke, Symptomen, Auslösern, Medikament und Linderung ohne Medikament",
+  ],
+  whyTitle: "Warum die Migräne zusammen mit dem Zyklus verfolgen?",
+  why: [
+    [
+      "Bei vielen Frauen kommen die Attacken rund um die Periode. Ärzte sprechen von Menstruationsmigräne, wenn sie zwischen 2 Tagen vor und 3 Tagen nach Beginn der Periode auftreten, in mindestens 2 von 3 Zyklen.",
+    ],
+    [
+      "Um das herauszufinden, musst du deine Periode und deine Attacken mindestens 3 Zyklen lang aufschreiben: Genau dafür ist dieses Tagebuch da. Eine Bestätigung kann die Behandlung verändern, zum Beispiel mit einer Behandlung, die gezielt auf diese wenigen Tage ausgerichtet ist.",
+    ],
+  ],
+  howTitle: "So füllst du es aus",
+  steps: [
+    "Schreib den Monat an den Anfang jeder Zeile. Kreuze an jedem Tag deiner Periode das Kästchen „Periode“ an.",
+    "Trage an jedem Attackentag die Stärke von 1 bis 10 in die Zeile „Attacke“ ein und kreuze „Med.“ an, wenn du ein Akutmedikament genommen hast.",
+    "Fülle am Ende jedes Zyklus die Auswertung aus: erster Tag der Periode und ob du zwischen 2 Tagen davor und 3 Tagen danach eine Attacke hattest.",
+    "Auf Seite 2 kannst du jede Attacke genauer beschreiben. Nimm das Tagebuch dann zu deinem nächsten Arzttermin mit.",
+  ],
+  doctorTitle: "Worauf dein Arzt achten wird",
+  doctor: [
+    "Ob deine Attacken in mindestens 2 von 3 Zyklen rund um die Periode auftreten.",
+    "Ob du auch zu anderen Zeiten im Zyklus Attacken hast, was die Behandlung beeinflusst.",
+    "Dauer und Stärke der Attacken während der Periode, die oft länger und stärker sind.",
+    "Deine Tage mit Medikamenten, um einen Medikamentenübergebrauch zu vermeiden.",
+  ],
+  appTitle: "Mellow füllt es mit dir aus",
+  appText:
+    "Erfasse deine Attacken mit zwei Taps, mit dem Menstruationszyklus als möglichem Auslöser. Mellow zeigt dir, was immer wiederkommt, und erstellt einen PDF-Bericht für deinen Arzt.",
+  faqTitle: "Häufige Fragen",
+  faq: [
+    {
+      q: "Wie viele Zyklen sollte man verfolgen?",
+      a: "Mindestens 3. Von Menstruationsmigräne spricht man, wenn die Attacken in mindestens 2 von 3 Zyklen rund um die Periode auftreten.",
+    },
+    {
+      q: "Und wenn mein Zyklus unregelmäßig ist?",
+      a: "Das Tagebuch funktioniert trotzdem: Es folgt den Kalendertagen, nicht einem theoretischen Zyklus. Kreuze deine Periode einfach an, wenn sie kommt.",
+    },
+    {
+      q: "Und mit der Pille?",
+      a: "Das Tagebuch funktioniert auch dann. Mit der Pille treten die Attacken oft in der Pillenpause oder der Woche mit wirkstofffreien Tabletten auf, und das Tagebuch macht das sichtbar. Sprich mit deinem Arzt darüber, vor allem wenn du Migräne mit Aura hast.",
+    },
+  ],
+};
+
+export const overusePage: OverusePageCopy = {
+  path: "/ressourcen/medikamentenuebergebrauch-rechner",
+  navLabel: "Rechner für Medikamentenübergebrauch",
+  menuDescription: "Deine Medikamententage im Vergleich zu den Schwellen",
+  metaTitle: "Medikamentenübergebrauch: Prüfe, ob du die Schwellen überschreitest (kostenlos)",
+  description:
+    "Gib deine Tage mit Schmerz- und Migränemitteln ein: Der Rechner vergleicht sie mit den medizinischen Schwellen für Kopfschmerz bei Medikamentenübergebrauch, je nach Medikament 10 oder 15 Tage pro Monat.",
+  title: "Rechner für Medikamentenübergebrauch",
+  lead: "Zu viele Schmerzmittel können Kopfschmerzen aufrechterhalten. Gib an, an wie vielen Tagen im Monat du sie nimmst: Der Rechner vergleicht das mit den Schwellen, mit denen Neurologen arbeiten.",
+  thresholdsTitle: "Die Schwellen, Medikament für Medikament",
+  thresholdsIntro: [
+    "Die Internationale Klassifikation von Kopfschmerzerkrankungen (ICHD-3) definiert den Kopfschmerz bei Medikamentenübergebrauch so: Kopfschmerzen an mindestens 15 Tagen im Monat bei einer Person, die bereits Migräne oder einen anderen Kopfschmerz hat, mit einer regelmäßigen Einnahme von Akutmedikamenten über diesen Schwellen seit mehr als 3 Monaten.",
+  ],
+  table: {
+    headers: ["Medikament", "Schwelle"],
+    rows: [
+      ["Paracetamol", "15 Tage im Monat oder mehr"],
+      ["Entzündungshemmer und Aspirin (Ibuprofen, Naproxen, Diclofenac…)", "15 Tage im Monat oder mehr"],
+      ["Triptane (Sumatriptan, Rizatriptan, Zolmitriptan…)", "10 Tage im Monat oder mehr"],
+      ["Kombinationspräparate (mit Koffein oder Codein…) und Opioide (Tramadol, Codein…)", "10 Tage im Monat oder mehr"],
+      ["Mehrere dieser Gruppen, ohne dass eine allein ihre Schwelle überschreitet", "10 Tage im Monat oder mehr insgesamt"],
+    ],
+  },
+  thresholdsNote:
+    "Diese Schwellen zählen Tage, nicht Tabletten: Ein Tag, an dem du zwei Tabletten oder zwei verschiedene Medikamente nimmst, zählt als ein Tag.",
+  whatTitle: "Was tun, wenn du eine Schwelle überschreitest?",
+  what: [
+    [
+      "Setze nicht alles auf einmal auf eigene Faust ab. Sprich mit deinem Arzt: Er hilft dir, diese Medikamente schrittweise zu reduzieren, oft mit einer vorbeugenden Behandlung, um die Zeit zu überbrücken.",
+    ],
+    [
+      "Die gute Nachricht: Bei vielen Menschen gehen die Kopfschmerzen deutlich zurück, sobald die Medikamententage wieder unter den Schwellen liegen, meist innerhalb von einigen Wochen bis Monaten.",
+    ],
+    [
+      "Um deine Medikamententage im Lauf des Monats festzuhalten, nutze ",
+      { text: "das Migränetagebuch zum Ausdrucken", href: "/ressourcen/migraene-tagebuch" },
+      ".",
+    ],
+  ],
+  faqTitle: "Häufige Fragen",
+  faq: [
+    {
+      q: "Zähle ich Tage oder Tabletten?",
+      a: "Tage. Ein Tag, an dem du zwei Tabletten oder zwei verschiedene Medikamente nimmst, zählt als ein Tag.",
+    },
+    {
+      q: "Zählen vorbeugende Behandlungen mit?",
+      a: "Nein. Nur Akutmedikamente, die du gegen den Schmerz nimmst, zählen. Vorbeugende Behandlungen, die du täglich nimmst, um Attacken zu verhindern, zählen nicht.",
+    },
+    {
+      q: "Stellt dieser Rechner eine Diagnose?",
+      a: "Nein. Er vergleicht deine Antworten mit den medizinischen Schwellen, damit du mit deinem Arzt darüber sprechen kannst. Nur ein Arzt kann einen Kopfschmerz bei Medikamentenübergebrauch bestätigen.",
+    },
+  ],
+};
+
+export const overuse: OveruseCopy = {
+  intro: "In einem typischen Monat:",
+  headache: { label: "Tage mit Kopfschmerzen" },
+  medsTitle: "Akutmedikamente",
+  fields: {
+    paracetamol: { label: "Tage mit Paracetamol" },
+    nsaid: { label: "Tage mit einem Entzündungshemmer oder Aspirin", hint: "Ibuprofen, Naproxen, Diclofenac…" },
+    triptan: { label: "Tage mit einem Triptan", hint: "Sumatriptan, Rizatriptan, Zolmitriptan…" },
+    combo: { label: "Tage mit einem Kombinationspräparat oder Opioid", hint: "Mit Koffein oder Codein, Tramadol…" },
+    total: { label: "Insgesamt: Tage mit mindestens einem Medikament", hint: "Ein Tag mit mehreren Medikamenten zählt nur einmal." },
+  },
+  durationLabel: "Seit wann nimmst du Medikamente so häufig?",
+  durationOptions: ["Seit weniger als 3 Monaten", "Seit 3 Monaten oder länger"],
+  decrease: "Ein Tag weniger",
+  increase: "Ein Tag mehr",
+  resultEyebrow: "Dein Ergebnis",
+  empty: "Gib deine Medikamententage ein, um zu sehen, wo du stehst.",
+  findingLabel: {
+    paracetamol: "Paracetamol",
+    nsaid: "Entzündungshemmer und Aspirin",
+    triptan: "Triptane",
+    combo: "Kombinationen und Opioide",
+    total: "Alle Medikamente zusammen",
+  },
+  findingValue: "{days} Tage · Schwelle {limit}",
+  results: {
+    below: {
+      title: "Du liegst unter den Schwellen",
+      text: "Deine Medikamententage bleiben unter den Schwellen für einen Medikamentenübergebrauch. Zähle sie weiter: So bemerkst du eine Veränderung am besten früh.",
+    },
+    near: {
+      title: "Du näherst dich einer Schwelle",
+      text: "Du bist ein oder zwei Tage von einer Schwelle entfernt. Das ist noch kein Medikamentenübergebrauch, aber ein guter Zeitpunkt, mit deinem Arzt zu sprechen, vor allem über eine vorbeugende Behandlung, wenn deine Attacken häufig sind.",
+    },
+    over: {
+      title: "Du überschreitest eine Schwelle",
+      text: "In diesem Rhythmus können die Medikamente selbst die Kopfschmerzen aufrechterhalten. Sprich mit deinem Arzt, ohne auf eigene Faust alles auf einmal abzusetzen: Er hilft dir, schrittweise zu reduzieren.",
+    },
+    moh: {
+      title: "Dein Profil entspricht einem Kopfschmerz bei Medikamentenübergebrauch",
+      text: "Kopfschmerzen an 15 oder mehr Tagen im Monat und Medikamente über der Schwelle seit 3 Monaten oder länger: Das sind die Kriterien für einen Kopfschmerz bei Medikamentenübergebrauch. Nur ein Arzt kann das bestätigen. Sprich bald mit ihm: Das ist häufig, und es lässt sich behandeln.",
+    },
+  },
+  appTitle: "Lass Mellow für dich zählen",
+  appText:
+    "Erfasse jede Attacke und jedes Medikament mit zwei Taps. Mellow zählt deine Medikamententage und erstellt einen PDF-Bericht für deinen Arzt.",
+  disclaimer:
+    "Dieser Rechner stellt keine Diagnose. Er hilft dir, klarer zu sehen und einen Arzttermin vorzubereiten. Im Zweifel sprich mit deinem Arzt.",
 };

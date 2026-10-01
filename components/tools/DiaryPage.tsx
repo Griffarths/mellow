@@ -3,13 +3,24 @@ import { Footer } from "@/components/Footer";
 import { BlogCta } from "@/components/blog/BlogCta";
 import { buttonClass } from "@/components/ui/Button";
 import type { ToolLocale } from "@/lib/tools";
-import { DIARY, toolPaths } from "@/lib/tools";
+import { CYCLE_DIARY, DIARY, toolPaths } from "@/lib/tools";
+import { previewUrl } from "@/lib/tools-seo";
 import { versioned } from "@/lib/diary-assets";
 import { typographize } from "@/lib/typography";
 import { RichText } from "./RichText";
 
-export function DiaryPage({ locale }: { locale: ToolLocale }) {
-  const c = DIARY[locale];
+type Props = {
+  locale: ToolLocale;
+  // The monthly diary, or the three-month diary that follows the cycle.
+  tool?: "diary" | "cycleDiary";
+};
+
+export function DiaryPage({ locale, tool = "diary" }: Props) {
+  const all = tool === "cycleDiary" ? CYCLE_DIARY : DIARY;
+  const c = all[locale];
+  // The monthly diary opens on a portrait calendar; the cycle diary's two
+  // pages are both landscape.
+  const portraitFirst = tool === "diary";
   const ty = (s: string) => typographize(s, locale);
 
   return (
@@ -42,20 +53,22 @@ export function DiaryPage({ locale }: { locale: ToolLocale }) {
 
           {/* Straight previews (no rotation, which blurs thin lines): the
               calendar behind, the landscape log in front, fully readable. */}
-          <div className="relative mx-auto aspect-[1/1.08] w-full max-w-lg">
+          <div
+            className={`relative mx-auto w-full max-w-lg ${portraitFirst ? "aspect-[1/1.08]" : "aspect-[1/0.9]"}`}
+          >
             <img
-              src={versioned(`/tools/diary-${locale}-p1.png`)}
+              src={previewUrl(tool, locale, 1)}
               alt={c.previewAlt[0]}
-              width={1588}
-              height={2245}
-              className="absolute left-0 top-0 w-[68%] rounded-btn shadow-soft ring-1 ring-surface-line"
+              width={portraitFirst ? 1588 : 2245}
+              height={portraitFirst ? 2245 : 1588}
+              className={`absolute left-0 top-0 rounded-btn shadow-soft ring-1 ring-surface-line ${portraitFirst ? "w-[68%]" : "w-[84%]"}`}
             />
             <img
-              src={versioned(`/tools/diary-${locale}-p2.png`)}
+              src={previewUrl(tool, locale, 2)}
               alt={c.previewAlt[1]}
               width={2245}
               height={1588}
-              className="absolute bottom-0 right-0 w-[78%] rounded-btn shadow-[0_24px_48px_-20px_rgb(0_0_0/0.28)] ring-1 ring-surface-line"
+              className={`absolute bottom-0 right-0 rounded-btn shadow-[0_24px_48px_-20px_rgb(0_0_0/0.28)] ring-1 ring-surface-line ${portraitFirst ? "w-[78%]" : "w-[84%]"}`}
             />
           </div>
         </div>
@@ -116,7 +129,7 @@ export function DiaryPage({ locale }: { locale: ToolLocale }) {
           </section>
         </div>
       </main>
-      <Footer localePaths={toolPaths(DIARY)} />
+      <Footer localePaths={toolPaths(all)} />
     </>
   );
 }

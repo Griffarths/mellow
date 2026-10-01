@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { isToolLocale } from "@/lib/tools";
-import { DIARY, TEST_PAGE } from "@/lib/tools";
+import { toolsMenu } from "@/lib/tools";
 
 type Props = {
   // This page's path in each language, when it differs (see LanguageSwitcher).
@@ -40,14 +40,11 @@ export function Footer({ localePaths }: Props = {}) {
             </Link>
           )}
           {isToolLocale(locale) && (
-            <>
-              <Link href={DIARY[locale].path} className="transition hover:text-ink">
-                {DIARY[locale].navLabel}
+            toolsMenu(locale).map((tool) => (
+              <Link key={tool.path} href={tool.path} className="transition hover:text-ink">
+                {tool.navLabel}
               </Link>
-              <Link href={TEST_PAGE[locale].path} className="transition hover:text-ink">
-                {TEST_PAGE[locale].navLabel}
-              </Link>
-            </>
+            ))
           )}
           <Link href="/confidentialite" className="transition hover:text-ink">
             {t("privacy")}

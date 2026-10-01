@@ -1,4 +1,5 @@
 import type { Rich, TestCopy } from "../migraine-test";
+import type { OverusePageCopy, OveruseCopy } from "../overuse";
 import type { DiaryCopy, TestPageCopy } from "../tools";
 
 // Portuguese for Portugal. No Portuguese articles yet: the texts carry no
@@ -269,6 +270,174 @@ export const test: TestCopy = {
     "Tens dor de cabeça 15 dias ou mais por mês: fala-se então de uma forma crónica. Existem tratamentos preventivos, fala sobre isso com o teu médico.",
   ],
   overuseNote: [
-    "Tomas um medicamento para a dor 10 dias ou mais por mês. Acima deste limiar, aumenta o risco de uso excessivo de medicação: os próprios medicamentos podem manter as dores de cabeça.",
+    "Tomas um medicamento para a dor 10 dias ou mais por mês. Acima deste limiar, aumenta o risco de uso excessivo de medicação: os próprios medicamentos podem manter as dores de cabeça. ",
+    { text: "Verifica em que ponto estás com a calculadora", href: "/recursos/calculadora-abuso-medicamentos" },
+    ".",
   ],
+};
+
+export const cycleDiary: DiaryCopy = {
+  path: "/recursos/diario-enxaqueca-menstrual",
+  navLabel: "Diário de enxaqueca menstrual",
+  menuDescription: "Crises e período durante 3 meses, para imprimir",
+  metaTitle: "Diário de enxaqueca menstrual para imprimir (PDF gratuito)",
+  description:
+    "Um calendário de 3 meses para imprimir e registar o teu período e as tuas crises, e perceber se as tuas enxaquecas acompanham o ciclo, como pedem os médicos.",
+  title: "Diário de enxaqueca menstrual para imprimir",
+  lead: "Três meses numa página para registar o período, as crises e a medicação, e perceber se as tuas enxaquecas acompanham o ciclo. Grátis, sem criar conta.",
+  downloads: [
+    { label: "Descarregar o PDF (A4)", href: "/downloads/diario-enxaqueca-menstrual-mellow-a4.pdf", primary: true },
+  ],
+  downloadNote: "PDF, 2 páginas, formato A4.",
+  previewAlt: [
+    "Página 1 do diário: calendário de três meses com, para cada dia, uma caixa para o período, a intensidade da crise e uma caixa para a medicação, seguido de um balanço ciclo a ciclo",
+    "Página 2 do diário: tabela das crises com data, horas, intensidade, sintomas, fatores desencadeantes, medicamento e alívio sem medicamentos",
+  ],
+  whyTitle: "Porquê acompanhar as enxaquecas com o ciclo?",
+  why: [
+    [
+      "Em muitas mulheres, as crises voltam à volta do período. Os médicos falam de enxaqueca menstrual quando surgem entre 2 dias antes e 3 dias depois do início do período, em pelo menos 2 ciclos em cada 3.",
+    ],
+    [
+      "Para o saberes, tens de registar o período e as crises durante pelo menos 3 ciclos: é exatamente para isso que serve este diário. Confirmá-lo pode mudar o tratamento, por exemplo com um tratamento dirigido a esses poucos dias.",
+    ],
+  ],
+  howTitle: "Como preencher",
+  steps: [
+    "Escreve o mês no início de cada linha. Em cada dia de período, assinala a caixa «Período».",
+    "Em cada dia de crise, anota a intensidade de 1 a 10 na linha «Crise» e assinala «Med.» se tomaste um medicamento para a crise.",
+    "No fim de cada ciclo, preenche o balanço: primeiro dia do período e se houve crise entre 2 dias antes e 3 dias depois.",
+    "Na página 2 podes detalhar cada crise e depois levar o diário à tua próxima consulta.",
+  ],
+  doctorTitle: "O que o teu médico vai observar",
+  doctor: [
+    "Se as tuas crises coincidem com o período em pelo menos 2 ciclos em cada 3.",
+    "Se também tens crises noutros momentos do ciclo, o que orienta o tratamento.",
+    "A duração e a intensidade das crises do período, muitas vezes mais longas e mais fortes.",
+    "Os teus dias com medicação, para evitar um uso excessivo.",
+  ],
+  appTitle: "A Mellow preenche-o contigo",
+  appText:
+    "Regista as tuas crises em dois toques, com o ciclo menstrual entre os fatores desencadeantes. A Mellow mostra-te o que se repete e prepara um relatório PDF para o teu médico.",
+  faqTitle: "Perguntas frequentes",
+  faq: [
+    {
+      q: "Quantos ciclos é preciso acompanhar?",
+      a: "Pelo menos 3. Fala-se de enxaqueca menstrual quando as crises coincidem com o período em pelo menos 2 ciclos em cada 3.",
+    },
+    {
+      q: "E se os meus ciclos forem irregulares?",
+      a: "O diário funciona na mesma: segue os dias do calendário, não um ciclo teórico. Assinala simplesmente o período quando chegar.",
+    },
+    {
+      q: "E se tomar a pílula?",
+      a: "O diário também serve. Com a pílula, as crises surgem muitas vezes na semana de pausa ou de comprimidos sem hormonas, e o diário mostra-o. Fala com o teu médico, sobretudo se tiveres enxaqueca com aura.",
+    },
+  ],
+};
+
+export const overusePage: OverusePageCopy = {
+  path: "/recursos/calculadora-abuso-medicamentos",
+  navLabel: "Calculadora de abuso de medicamentos",
+  menuDescription: "Os teus dias com medicação face aos limiares",
+  metaTitle: "Abuso de medicamentos: calcula se ultrapassas os limiares (grátis)",
+  description:
+    "Indica os teus dias com medicamentos para a dor e a enxaqueca: a calculadora compara-os com os limiares médicos da cefaleia por uso excessivo de medicação, 10 ou 15 dias por mês consoante o medicamento.",
+  title: "Calculadora de abuso de medicamentos",
+  lead: "Demasiados analgésicos podem manter as dores de cabeça. Indica em quantos dias por mês os tomas: a calculadora compara-os com os limiares usados pelos neurologistas.",
+  thresholdsTitle: "Os limiares, medicamento a medicamento",
+  thresholdsIntro: [
+    "A Classificação Internacional das Cefaleias (ICHD-3) define a cefaleia por uso excessivo de medicação assim: dor de cabeça em pelo menos 15 dias por mês numa pessoa que já tem enxaqueca ou outra cefaleia, com uma toma regular de medicamentos para a crise acima destes limiares há mais de 3 meses.",
+  ],
+  table: {
+    headers: ["Medicamento", "Limiar"],
+    rows: [
+      ["Paracetamol", "15 dias por mês ou mais"],
+      ["Anti-inflamatórios e aspirina (ibuprofeno, naproxeno, cetoprofeno…)", "15 dias por mês ou mais"],
+      ["Triptanos (sumatriptano, rizatriptano, eletriptano…)", "10 dias por mês ou mais"],
+      ["Associações (com cafeína ou codeína…) e opioides (tramadol, codeína…)", "10 dias por mês ou mais"],
+      ["Várias destas famílias, sem ultrapassar o limiar de nenhuma", "10 dias por mês ou mais no total"],
+    ],
+  },
+  thresholdsNote:
+    "Estes limiares contam dias, não comprimidos: um dia em que tomas dois comprimidos, ou dois medicamentos diferentes, conta como um só dia.",
+  whatTitle: "O que fazer se ultrapassares um limiar?",
+  what: [
+    [
+      "Não pares tudo de repente por tua conta. Fala com o teu médico: vai ajudar-te a reduzir estes medicamentos aos poucos, muitas vezes com um tratamento preventivo para passar esta fase.",
+    ],
+    [
+      "A boa notícia: em muitas pessoas, as dores de cabeça diminuem claramente quando os dias com medicação voltam a ficar abaixo dos limiares, normalmente em algumas semanas a alguns meses.",
+    ],
+    [
+      "Para contares os teus dias com medicação ao longo do mês, usa ",
+      { text: "o diário de enxaqueca para imprimir", href: "/recursos/diario-de-enxaqueca" },
+      ".",
+    ],
+  ],
+  faqTitle: "Perguntas frequentes",
+  faq: [
+    {
+      q: "Conto dias ou comprimidos?",
+      a: "Dias. Um dia em que tomas dois comprimidos, ou dois medicamentos diferentes, conta como um só dia.",
+    },
+    {
+      q: "Os tratamentos preventivos contam?",
+      a: "Não. Só contam os medicamentos para a crise, tomados para aliviar a dor. Os tratamentos preventivos tomados todos os dias para evitar as crises não contam.",
+    },
+    {
+      q: "Esta calculadora faz um diagnóstico?",
+      a: "Não. Compara as tuas respostas com os limiares médicos para te ajudar a falar com o teu médico. Só um médico pode confirmar uma cefaleia por uso excessivo de medicação.",
+    },
+  ],
+};
+
+export const overuse: OveruseCopy = {
+  intro: "Num mês habitual:",
+  headache: { label: "Dias com dor de cabeça" },
+  medsTitle: "Medicamentos para a crise",
+  fields: {
+    paracetamol: { label: "Dias com paracetamol" },
+    nsaid: { label: "Dias com um anti-inflamatório ou aspirina", hint: "Ibuprofeno, naproxeno, cetoprofeno…" },
+    triptan: { label: "Dias com um triptano", hint: "Sumatriptano, rizatriptano, eletriptano…" },
+    combo: { label: "Dias com uma associação ou um opioide", hint: "Com cafeína ou codeína, tramadol…" },
+    total: { label: "No total, dias com pelo menos um medicamento", hint: "Um dia em que tomas vários conta só uma vez." },
+  },
+  durationLabel: "Há quanto tempo tomas medicamentos com esta frequência?",
+  durationOptions: ["Há menos de 3 meses", "Há 3 meses ou mais"],
+  decrease: "Menos um dia",
+  increase: "Mais um dia",
+  resultEyebrow: "O teu resultado",
+  empty: "Indica os teus dias com medicação para veres em que ponto estás.",
+  findingLabel: {
+    paracetamol: "Paracetamol",
+    nsaid: "Anti-inflamatórios e aspirina",
+    triptan: "Triptanos",
+    combo: "Associações e opioides",
+    total: "Todos os medicamentos",
+  },
+  findingValue: "{days} dias · limiar {limit}",
+  results: {
+    below: {
+      title: "Estás abaixo dos limiares",
+      text: "Os teus dias com medicação continuam abaixo dos limiares do uso excessivo. Continua a contá-los: é a melhor forma de detetar uma mudança a tempo.",
+    },
+    near: {
+      title: "Estás perto de um limiar",
+      text: "Estás a um ou dois dias de um limiar. Não é um uso excessivo, mas é uma boa altura para falares com o teu médico, sobretudo sobre um tratamento preventivo se as tuas crises forem frequentes.",
+    },
+    over: {
+      title: "Ultrapassas um limiar",
+      text: "A este ritmo, os próprios medicamentos podem manter as dores de cabeça. Fala com o teu médico, sem parares tudo de repente por tua conta: vai ajudar-te a reduzi-los aos poucos.",
+    },
+    moh: {
+      title: "O teu perfil corresponde a uma cefaleia por uso excessivo de medicação",
+      text: "Dor de cabeça 15 dias por mês ou mais, e medicamentos acima do limiar há 3 meses ou mais: são os critérios da cefaleia por uso excessivo de medicação. Só um médico pode confirmá-lo. Fala com ele em breve: é frequente e tem tratamento.",
+    },
+  },
+  appTitle: "Deixa a Mellow contar por ti",
+  appText:
+    "Regista cada crise e cada medicamento em dois toques. A Mellow conta os teus dias com medicação e prepara um relatório PDF para o teu médico.",
+  disclaimer:
+    "Esta calculadora não faz um diagnóstico. Ajuda-te a ver as coisas com mais clareza e a preparar uma consulta. Em caso de dúvida, fala com o teu médico.",
 };

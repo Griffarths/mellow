@@ -11,7 +11,7 @@ import {
 } from "@/lib/blog";
 import { PILLARS, PILLAR_IDS } from "@/lib/pillars";
 import { TOOL_LOCALES } from "@/lib/tools";
-import { toolAlternates, toolUrl } from "@/lib/tools-seo";
+import { TOOL_IDS, toolAlternates, toolUrl } from "@/lib/tools-seo";
 
 const SITE_URL = "https://mellowmigraine.com";
 
@@ -69,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Free tools, in every language, cross-linked via hreflang
-  for (const tool of ["diary", "test"] as const) {
+  for (const tool of TOOL_IDS) {
     const languages = toolAlternates(tool);
     for (const locale of TOOL_LOCALES) {
       entries.push({

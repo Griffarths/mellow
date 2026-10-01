@@ -41,6 +41,22 @@ const T = {
     reliefLabel: "Soulagements fréquents",
     relief: ["Repos dans le noir", "Froid sur le front", "Respiration lente", "Sommeil", "Boire de l'eau", "Manger un peu"],
     footer: "Reprends le contrôle de tes migraines avec l'application",
+    cycle: {
+      title: "Migraine et règles",
+      docTitle: "Journal migraine et règles · Mellow",
+      intro: "Une ligne par mois. Coche « Règles » les jours de règles, note l'intensité de chaque crise de 1 à 10 et coche « Méd. » si tu as pris un médicament de crise.",
+      month: "Mois",
+      periods: "Règles",
+      attack: "Crise /10",
+      med: "Méd.",
+      summaryTitle: "Bilan, cycle par cycle",
+      cycle: "Cycle",
+      firstDay: "Premier jour des règles",
+      window: "Crise entre 2 jours avant et 3 jours après ?",
+      yes: "Oui",
+      no: "Non",
+      conclusion: "Oui pour au moins 2 cycles sur 3 ? Parles-en à ton médecin : c'est la définition de la migraine menstruelle.",
+    },
   },
   en: {
     title: "Migraine diary",
@@ -68,6 +84,22 @@ const T = {
     reliefLabel: "Common relief",
     relief: ["Rest in the dark", "Cold on the forehead", "Slow breathing", "Sleep", "Drinking water", "Eating a little"],
     footer: "Take back control of your migraines with the app",
+    cycle: {
+      title: "Migraine and periods",
+      docTitle: "Menstrual migraine diary · Mellow",
+      intro: "One row per month. Tick “Period” on period days, write the intensity of each attack from 1 to 10 and tick “Med” if you took an acute medication.",
+      month: "Month",
+      periods: "Period",
+      attack: "Attack /10",
+      med: "Med",
+      summaryTitle: "Cycle-by-cycle summary",
+      cycle: "Cycle",
+      firstDay: "First day of period",
+      window: "Attack between 2 days before and 3 days after?",
+      yes: "Yes",
+      no: "No",
+      conclusion: "Yes for at least 2 cycles out of 3? Talk to your doctor: that is the definition of menstrual migraine.",
+    },
   },
   de: {
     title: "Migränetagebuch",
@@ -95,6 +127,22 @@ const T = {
     reliefLabel: "Häufige Linderung",
     relief: ["Ruhe im Dunkeln", "Kälte auf der Stirn", "Langsames Atmen", "Schlaf", "Wasser trinken", "Etwas essen"],
     footer: "Nimm mit der App die Kontrolle über deine Migräne zurück",
+    cycle: {
+      title: "Migräne und Periode",
+      docTitle: "Tagebuch für Menstruationsmigräne · Mellow",
+      intro: "Eine Zeile pro Monat. Kreuze an den Tagen deiner Periode „Periode“ an, trage die Stärke jeder Attacke von 1 bis 10 ein und kreuze „Med.“ an, wenn du ein Akutmedikament genommen hast.",
+      month: "Monat",
+      periods: "Periode",
+      attack: "Attacke /10",
+      med: "Med.",
+      summaryTitle: "Auswertung, Zyklus für Zyklus",
+      cycle: "Zyklus",
+      firstDay: "Erster Tag der Periode",
+      window: "Attacke zwischen 2 Tagen davor und 3 Tagen danach?",
+      yes: "Ja",
+      no: "Nein",
+      conclusion: "Ja in mindestens 2 von 3 Zyklen? Sprich mit deinem Arzt darüber: Das ist die Definition der Menstruationsmigräne.",
+    },
   },
   it: {
     title: "Diario dell'emicrania",
@@ -122,6 +170,22 @@ const T = {
     reliefLabel: "Sollievi frequenti",
     relief: ["Riposo al buio", "Freddo sulla fronte", "Respirazione lenta", "Sonno", "Bere acqua", "Mangiare qualcosa"],
     footer: "Riprendi il controllo delle tue emicranie con l'app",
+    cycle: {
+      title: "Emicrania e ciclo",
+      docTitle: "Diario dell'emicrania mestruale · Mellow",
+      intro: "Una riga per mese. Spunta «Mestruazioni» nei giorni di mestruazioni, annota l'intensità di ogni attacco da 1 a 10 e spunta «Farm.» se hai preso un farmaco per l'attacco.",
+      month: "Mese",
+      periods: "Mestruazioni",
+      attack: "Attacco /10",
+      med: "Farm.",
+      summaryTitle: "Bilancio, ciclo per ciclo",
+      cycle: "Ciclo",
+      firstDay: "Primo giorno delle mestruazioni",
+      window: "Attacco tra 2 giorni prima e 3 giorni dopo?",
+      yes: "Sì",
+      no: "No",
+      conclusion: "Sì in almeno 2 cicli su 3? Parlane con il tuo medico: è la definizione dell'emicrania mestruale.",
+    },
   },
   es: {
     title: "Diario de migraña",
@@ -149,6 +213,22 @@ const T = {
     reliefLabel: "Alivios frecuentes",
     relief: ["Descanso a oscuras", "Frío en la frente", "Respiración lenta", "Dormir", "Beber agua", "Comer algo"],
     footer: "Recupera el control de tus migrañas con la app",
+    cycle: {
+      title: "Migraña y regla",
+      docTitle: "Diario de migraña menstrual · Mellow",
+      intro: "Una fila por mes. Marca «Regla» los días de regla, anota la intensidad de cada crisis del 1 al 10 y marca «Med.» si has tomado un medicamento para la crisis.",
+      month: "Mes",
+      periods: "Regla",
+      attack: "Crisis /10",
+      med: "Med.",
+      summaryTitle: "Balance, ciclo a ciclo",
+      cycle: "Ciclo",
+      firstDay: "Primer día de la regla",
+      window: "¿Crisis entre 2 días antes y 3 días después?",
+      yes: "Sí",
+      no: "No",
+      conclusion: "¿Sí en al menos 2 de cada 3 ciclos? Coméntalo con tu médico: es la definición de la migraña menstrual.",
+    },
   },
   "es-419": {
     title: "Diario de migraña",
@@ -176,6 +256,22 @@ const T = {
     reliefLabel: "Alivios frecuentes",
     relief: ["Descansar a oscuras", "Frío en la frente", "Respiración lenta", "Dormir", "Tomar agua", "Comer algo"],
     footer: "Recupera el control de tus migrañas con la app",
+    cycle: {
+      title: "Migraña y periodo",
+      docTitle: "Diario de migraña menstrual · Mellow",
+      intro: "Una fila por mes. Marca “Periodo” los días de periodo, anota la intensidad de cada crisis del 1 al 10 y marca “Med.” si tomaste un medicamento para la crisis.",
+      month: "Mes",
+      periods: "Periodo",
+      attack: "Crisis /10",
+      med: "Med.",
+      summaryTitle: "Resumen, ciclo por ciclo",
+      cycle: "Ciclo",
+      firstDay: "Primer día del periodo",
+      window: "¿Crisis entre 2 días antes y 3 días después?",
+      yes: "Sí",
+      no: "No",
+      conclusion: "¿Sí en al menos 2 de cada 3 ciclos? Coméntalo con tu médico: es la definición de la migraña menstrual.",
+    },
   },
   pt: {
     title: "Diário de enxaqueca",
@@ -203,6 +299,22 @@ const T = {
     reliefLabel: "Alívios frequentes",
     relief: ["Repouso no escuro", "Frio na testa", "Respiração lenta", "Dormir", "Beber água", "Comer alguma coisa"],
     footer: "Retoma o controlo das tuas enxaquecas com a app",
+    cycle: {
+      title: "Enxaqueca e período",
+      docTitle: "Diário de enxaqueca menstrual · Mellow",
+      intro: "Uma linha por mês. Assinala «Período» nos dias de período, anota a intensidade de cada crise de 1 a 10 e assinala «Med.» se tomaste um medicamento para a crise.",
+      month: "Mês",
+      periods: "Período",
+      attack: "Crise /10",
+      med: "Med.",
+      summaryTitle: "Balanço, ciclo a ciclo",
+      cycle: "Ciclo",
+      firstDay: "Primeiro dia do período",
+      window: "Crise entre 2 dias antes e 3 dias depois?",
+      yes: "Sim",
+      no: "Não",
+      conclusion: "Sim em pelo menos 2 ciclos em cada 3? Fala com o teu médico: é a definição de enxaqueca menstrual.",
+    },
   },
   "pt-BR": {
     title: "Diário de enxaqueca",
@@ -230,6 +342,22 @@ const T = {
     reliefLabel: "Alívios comuns",
     relief: ["Descanso no escuro", "Gelo na testa", "Respiração lenta", "Dormir", "Beber água", "Comer alguma coisa"],
     footer: "Retome o controle das suas enxaquecas com o app",
+    cycle: {
+      title: "Enxaqueca e menstruação",
+      docTitle: "Diário de enxaqueca menstrual · Mellow",
+      intro: "Uma linha por mês. Marque “Menstruação” nos dias de menstruação, anote a intensidade de cada crise de 1 a 10 e marque “Med.” se você tomou um medicamento para a crise.",
+      month: "Mês",
+      periods: "Menstruação",
+      attack: "Crise /10",
+      med: "Med.",
+      summaryTitle: "Resumo, ciclo a ciclo",
+      cycle: "Ciclo",
+      firstDay: "Primeiro dia da menstruação",
+      window: "Crise entre 2 dias antes e 3 dias depois?",
+      yes: "Sim",
+      no: "Não",
+      conclusion: "Sim em pelo menos 2 de cada 3 ciclos? Converse com o seu médico: essa é a definição de enxaqueca menstrual.",
+    },
   },
 };
 
@@ -299,6 +427,33 @@ function css(paper) {
   .chips { margin-top: 3.5mm; display: grid; grid-template-columns: auto 1fr; gap: 1.2mm 4mm; font-size: 7.5pt; }
   .chips .k { font-weight: 700; color: #333; white-space: nowrap; }
   .chips .v { color: #555; }
+  /* Cycle diary, page 1: three months, one framed grid per month. */
+  .page.land header .fields { margin: 0 0 0 auto; }
+  /* The three grids share the page height: rows grow to fill it, whatever
+     the length of the intro in each language. */
+  .months { margin-top: 3.5mm; flex: 1; display: flex; flex-direction: column; gap: 3mm; }
+  .cyc { flex: 1; display: flex; border: 0.4mm solid ${LINE}; border-radius: 2.5mm; overflow: hidden; }
+  .cyc table { width: 100%; height: 100%; border-collapse: collapse; table-layout: fixed; }
+  .cyc th, .cyc td { padding: 0; text-align: center; vertical-align: middle; border-top: 0.3mm solid ${GRID}; border-right: 0.3mm solid ${GRID}; background: none; border-bottom: none; }
+  .cyc tr:first-child th { border-top: none; background: #F2F2F2; height: 5.5mm; font-size: 6.5pt; font-weight: 700; color: #555; line-height: 1; }
+  .cyc th:last-child, .cyc td:last-child { border-right: none; }
+  .cyc .lab { width: 25mm; text-align: left; padding: 0 2mm; font-size: 7.5pt; font-weight: 700; color: #333; white-space: nowrap; }
+  .cyc tr:first-child th.lab { font-size: 7.5pt; color: #222; }
+  .cyc th.lab .line { display: inline-block; width: 12mm; height: 3.2mm; margin-left: 1mm; border-bottom: 0.35mm solid #999; vertical-align: bottom; }
+  .cyc tr.box td { height: 8mm; }
+  .cyc tr.int td { height: 9.5mm; }
+  .cyc td b { display: inline-block; width: 3.2mm; height: 3.2mm; border: 0.35mm solid #888; border-radius: 0.6mm; vertical-align: middle; }
+  .cycles { margin-top: 3.5mm; border-radius: 2.5mm; background: #FFEEF3; padding: 3mm 4mm; }
+  .cycles .h { font-size: 8pt; text-transform: uppercase; letter-spacing: 0.08em; color: #B8505F; font-weight: 700; }
+  .cycles .three { margin-top: 2mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; }
+  .cy { display: flex; flex-direction: column; gap: 1.8mm; font-size: 8pt; color: #333; }
+  .cy strong { font-size: 8.5pt; color: #000; }
+  .cy .row { display: flex; align-items: flex-end; gap: 1.5mm; }
+  .cy .row .line { flex: 1; height: 3.6mm; border-bottom: 0.35mm solid #C47A88; }
+  .cy .opts { display: flex; gap: 4mm; font-weight: 600; }
+  .cy .opts span { display: inline-flex; align-items: center; gap: 1mm; }
+  .cy .opts b { display: inline-block; width: 3mm; height: 3mm; border: 0.35mm solid #888; border-radius: 0.6mm; background: #fff; }
+  .cycles .concl { margin-top: 2.5mm; font-size: 8pt; color: #444; line-height: 1.4; }
   footer { margin-top: 5mm; display: flex; align-items: center; gap: 2mm; font-size: 8pt; color: #767676; }
   footer svg { width: 5mm; height: 5mm; }
   footer strong { color: #000; }
@@ -357,12 +512,44 @@ function page2(t) {
   </section>`;
 }
 
+// Cycle diary, page 1: three months of days 1 to 31, each with a period box,
+// the attack intensity and a medication box, then a cycle-by-cycle check of
+// the menstrual migraine window (2 days before to 3 days after day 1).
+function pageCycle(t) {
+  const c = t.cycle;
+  const days = Array.from({ length: 31 }, (_, i) => i + 1);
+  const month = `
+    <div class="cyc"><table>
+      <tr><th class="lab">${c.month}<span class="line"></span></th>${days.map((d) => `<th>${d}</th>`).join("")}</tr>
+      <tr class="box"><td class="lab">${c.periods}</td>${days.map(() => "<td><b></b></td>").join("")}</tr>
+      <tr class="int"><td class="lab">${c.attack}</td>${days.map(() => "<td></td>").join("")}</tr>
+      <tr class="box"><td class="lab">${c.med}</td>${days.map(() => "<td><b></b></td>").join("")}</tr>
+    </table></div>`;
+  const cycle = (n) => `
+    <div class="cy"><strong>${c.cycle} ${n}</strong>
+      <div class="row">${c.firstDay} <span class="line"></span></div>
+      <span>${c.window}</span>
+      <div class="opts"><span><b></b>${c.yes}</span><span><b></b>${c.no}</span></div>
+    </div>`;
+  return `
+  <section class="page land">
+    <header>${logo()}<h1>${c.title}</h1><div class="fields"><div class="field long">${t.name} <span class="line"></span></div><div class="field short">${t.year} <span class="line"></span></div></div></header>
+    <p class="intro">${c.intro}</p>
+    <div class="months">${month}${month}${month}</div>
+    <div class="cycles"><span class="h">${c.summaryTitle}</span>
+      <div class="three">${cycle(1)}${cycle(2)}${cycle(3)}</div>
+      <p class="concl">${c.conclusion}</p>
+    </div>
+    ${footer(t)}
+  </section>`;
+}
+
 function footer(t) {
   return `<footer>${logo()}<strong>Mellow</strong><span>${t.footer}</span><span class="site">mellowmigraine.com</span></footer>`;
 }
 
-function html(locale, paper, pages) {
-  return `<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><title>${T[locale].docTitle}</title>
+function html(locale, paper, pages, title = T[locale].docTitle) {
+  return `<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><title>${title}</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=block">
 <style>${css(paper)}</style></head><body>${pages.join("")}</body></html>`;
 }
@@ -379,6 +566,9 @@ mkdirSync(work, { recursive: true });
 mkdirSync(path.join(ROOT, "public/downloads"), { recursive: true });
 mkdirSync(path.join(ROOT, "public/tools"), { recursive: true });
 
+// kind "diary" (default): monthly calendar + attack log. kind "cycle": three
+// months with the period + attack log. Previews are PNGs of each page of the
+// first output of a locale; the cycle diary's page 2 reuses the diary's.
 const OUTPUTS = [
   { locale: "fr", paper: "a4", file: "journal-de-migraine-mellow-a4.pdf", preview: "fr" },
   { locale: "en", paper: "letter", file: "migraine-diary-mellow-letter.pdf", preview: "en" },
@@ -390,27 +580,49 @@ const OUTPUTS = [
   { locale: "es-419", paper: "a4", file: "diario-de-migrana-mellow-latam-a4.pdf" },
   { locale: "pt", paper: "a4", file: "diario-de-enxaqueca-mellow-a4.pdf", preview: "pt" },
   { locale: "pt-BR", paper: "a4", file: "diario-de-enxaqueca-mellow-brasil-a4.pdf", preview: "pt-BR" },
+  { kind: "cycle", locale: "fr", paper: "a4", file: "journal-migraine-et-regles-mellow-a4.pdf", preview: "fr" },
+  { kind: "cycle", locale: "en", paper: "letter", file: "menstrual-migraine-diary-mellow-letter.pdf", preview: "en" },
+  { kind: "cycle", locale: "en", paper: "a4", file: "menstrual-migraine-diary-mellow-a4.pdf" },
+  { kind: "cycle", locale: "de", paper: "a4", file: "menstruationsmigraene-tagebuch-mellow-a4.pdf", preview: "de" },
+  { kind: "cycle", locale: "it", paper: "a4", file: "diario-emicrania-mestruale-mellow-a4.pdf", preview: "it" },
+  { kind: "cycle", locale: "es", paper: "a4", file: "diario-migrana-menstrual-mellow-a4.pdf", preview: "es" },
+  { kind: "cycle", locale: "es-419", paper: "letter", file: "diario-migrana-menstrual-mellow-latam-carta.pdf", preview: "es-419" },
+  { kind: "cycle", locale: "es-419", paper: "a4", file: "diario-migrana-menstrual-mellow-latam-a4.pdf" },
+  { kind: "cycle", locale: "pt", paper: "a4", file: "diario-enxaqueca-menstrual-mellow-a4.pdf", preview: "pt" },
+  { kind: "cycle", locale: "pt-BR", paper: "a4", file: "diario-enxaqueca-menstrual-mellow-brasil-a4.pdf", preview: "pt-BR" },
 ];
 
+// Optional filter: `node scripts/diary/build.mjs cycle` rebuilds one kind
+// only (PDFs embed their build date, so the others stay untouched).
+const only = process.argv[2];
+
 for (const o of OUTPUTS) {
+  const kind = o.kind ?? "diary";
+  if (only && only !== kind) continue;
   const t = T[o.locale];
+  const cycle = kind === "cycle";
+  const first = cycle ? pageCycle(t) : page1(t);
+  const title = cycle ? t.cycle.docTitle : t.docTitle;
   const src = path.join(work, `${o.file}.html`);
-  writeFileSync(src, html(o.locale, o.paper, [page1(t), page2(t)]));
+  writeFileSync(src, html(o.locale, o.paper, [first, page2(t)], title));
   chrome(["--no-pdf-header-footer", `--print-to-pdf=${path.join(ROOT, "public/downloads", o.file)}`, pathToFileURL(src).href]);
 
   if (o.preview) {
     const { w, h } = PAPER[o.paper];
     const px = (mm) => Math.round((mm / 25.4) * 96);
-    for (const [n, body, width, height] of [
-      [1, page1(t), px(w), px(h)],
-      [2, page2(t), px(h), px(w)],
-    ]) {
-      const one = path.join(work, `${o.preview}-p${n}.html`);
-      writeFileSync(one, html(o.locale, o.paper, [body]));
+    const pages = cycle
+      ? [[1, first, px(h), px(w)]]
+      : [
+          [1, first, px(w), px(h)],
+          [2, page2(t), px(h), px(w)],
+        ];
+    for (const [n, body, width, height] of pages) {
+      const one = path.join(work, `${kind}-${o.preview}-p${n}.html`);
+      writeFileSync(one, html(o.locale, o.paper, [body], title));
       chrome([
         `--window-size=${width},${height}`,
         "--force-device-scale-factor=2",
-        `--screenshot=${path.join(ROOT, "public/tools", `diary-${o.preview}-p${n}.png`)}`,
+        `--screenshot=${path.join(ROOT, "public/tools", `${kind}-${o.preview}-p${n}.png`)}`,
         pathToFileURL(one).href,
       ]);
     }
