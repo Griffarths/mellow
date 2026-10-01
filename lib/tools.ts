@@ -1,10 +1,18 @@
-// Free tools exist in French and English only (the blog can have more languages).
-export const TOOL_LOCALES = ["fr", "en"] as const;
+import type { Rich } from "./migraine-test";
+import * as de from "./tool-copy/de";
+import * as es from "./tool-copy/es";
+import * as es419 from "./tool-copy/es-419";
+import * as it from "./tool-copy/it";
+import * as pt from "./tool-copy/pt";
+import * as ptBR from "./tool-copy/pt-BR";
+
+// Free tools exist in every site language. FR and EN are the source texts and
+// live here; the other languages live in lib/tool-copy/.
+export const TOOL_LOCALES = ["fr", "en", "de", "it", "es", "es-419", "pt", "pt-BR"] as const;
 export type ToolLocale = (typeof TOOL_LOCALES)[number];
 export function isToolLocale(locale: string): locale is ToolLocale {
   return (TOOL_LOCALES as readonly string[]).includes(locale);
 }
-import type { Rich } from "./migraine-test";
 
 type Faq = { q: string; a: string };
 
@@ -45,7 +53,16 @@ export type TestPageCopy = {
   faq: Faq[];
 };
 
-export const TOOLS_LABEL: Record<ToolLocale, string> = { fr: "Outils", en: "Tools" };
+export const TOOLS_LABEL: Record<ToolLocale, string> = {
+  fr: "Outils",
+  en: "Tools",
+  de: "Tools",
+  it: "Strumenti",
+  es: "Herramientas",
+  "es-419": "Herramientas",
+  pt: "Ferramentas",
+  "pt-BR": "Ferramentas",
+};
 
 export const DIARY: Record<ToolLocale, DiaryCopy> = {
   fr: {
@@ -179,6 +196,12 @@ export const DIARY: Record<ToolLocale, DiaryCopy> = {
       },
     ],
   },
+  de: de.diary,
+  it: it.diary,
+  es: es.diary,
+  "es-419": es419.diary,
+  pt: pt.diary,
+  "pt-BR": ptBR.diary,
 };
 
 export const TEST_PAGE: Record<ToolLocale, TestPageCopy> = {
@@ -268,4 +291,10 @@ export const TEST_PAGE: Record<ToolLocale, TestPageCopy> = {
       },
     ],
   },
+  de: de.testPage,
+  it: it.testPage,
+  es: es.testPage,
+  "es-419": es419.testPage,
+  pt: pt.testPage,
+  "pt-BR": ptBR.testPage,
 };

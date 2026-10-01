@@ -10,7 +10,8 @@ import {
   liveBlogLocales,
 } from "@/lib/blog";
 import { PILLARS, PILLAR_IDS } from "@/lib/pillars";
-import { toolUrl } from "@/lib/tools-seo";
+import { TOOL_LOCALES } from "@/lib/tools";
+import { toolAlternates, toolUrl } from "@/lib/tools-seo";
 
 const SITE_URL = "https://mellowmigraine.com";
 
@@ -67,12 +68,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Free tools (FR and EN only)
+  // Free tools, in every language, cross-linked via hreflang
   for (const tool of ["diary", "test"] as const) {
-    const languages = { fr: toolUrl(tool, "fr"), en: toolUrl(tool, "en") };
-    for (const locale of ["fr", "en"] as const) {
+    const languages = toolAlternates(tool);
+    for (const locale of TOOL_LOCALES) {
       entries.push({
-        url: languages[locale],
+        url: toolUrl(tool, locale),
         changeFrequency: "monthly",
         priority: 0.8,
         alternates: { languages },

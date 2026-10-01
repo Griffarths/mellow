@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { DIARY, TEST_PAGE, type ToolLocale } from "./tools";
+import { DIARY, TEST_PAGE, TOOL_LOCALES, type ToolLocale } from "./tools";
+import { HREFLANG, OG_LOCALE } from "./blog";
 import { versioned } from "./diary-assets";
 
 const SITE_URL = "https://mellowmigraine.com";
@@ -12,6 +13,14 @@ export function toolUrl(tool: ToolId, locale: ToolLocale) {
   return locale === "en" ? `${SITE_URL}${path}` : `${SITE_URL}/${locale}${path}`;
 }
 
+// hreflang → URL for every language version of a tool, plus x-default.
+export function toolAlternates(tool: ToolId): Record<string, string> {
+  return {
+    ...Object.fromEntries(TOOL_LOCALES.map((l) => [HREFLANG[l], toolUrl(tool, l)])),
+    "x-default": toolUrl(tool, "en"),
+  };
+}
+
 export function toolMetadata(tool: ToolId, locale: ToolLocale): Metadata {
   const c = COPY[tool][locale];
   const url = toolUrl(tool, locale);
@@ -20,14 +29,14 @@ export function toolMetadata(tool: ToolId, locale: ToolLocale): Metadata {
     description: c.description,
     alternates: {
       canonical: url,
-      languages: { "fr-FR": toolUrl(tool, "fr"), en: toolUrl(tool, "en") },
+      languages: toolAlternates(tool),
     },
     openGraph: {
       type: "website",
       title: c.metaTitle,
       description: c.description,
       url,
-      locale: locale === "fr" ? "fr_FR" : "en_US",
+      locale: OG_LOCALE[locale],
       images: tool === "diary" ? [{ url: `${SITE_URL}${versioned(`/tools/diary-${locale}-p1.png`)}` }] : undefined,
     },
   };

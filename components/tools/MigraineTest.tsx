@@ -3,18 +3,19 @@
 import { useRef, useState, type ReactNode } from "react";
 import { buttonClass } from "@/components/ui/Button";
 import type { ToolLocale } from "@/lib/tools";
-import { score, TEST_COPY, type Answers } from "@/lib/migraine-test";
+import { score, type Answers, type TestCopy } from "@/lib/migraine-test";
 import { typographize } from "@/lib/typography";
 import { RichText } from "./RichText";
 
 type Props = {
   locale: ToolLocale;
+  // Only this language's texts, so the client bundle doesn't carry all eight.
+  copy: TestCopy;
   // Store badges rendered on the server.
   badges: ReactNode;
 };
 
-export function MigraineTest({ locale, badges }: Props) {
-  const c = TEST_COPY[locale];
+export function MigraineTest({ locale, copy: c, badges }: Props) {
   const ty = (s: string) => typographize(s, locale);
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Answers>({});
@@ -88,9 +89,11 @@ export function MigraineTest({ locale, badges }: Props) {
               <RichText parts={n} locale={locale} />
             </p>
           ))}
-        <p className="mt-5 max-w-[65ch] text-[15px] leading-relaxed text-ink-2">
-          <RichText parts={r.links} locale={locale} />
-        </p>
+        {r.links.length > 0 && (
+          <p className="mt-5 max-w-[65ch] text-[15px] leading-relaxed text-ink-2">
+            <RichText parts={r.links} locale={locale} />
+          </p>
+        )}
 
         <div className="mt-8 border-t border-surface-line pt-8">
           <p className="text-lg font-bold tracking-tight text-ink">{ty(c.appTitle)}</p>

@@ -26,6 +26,7 @@ export function TestPage({ locale }: { locale: ToolLocale }) {
           <div className="mt-10">
             <MigraineTest
               locale={locale}
+              copy={TEST_COPY[locale]}
               badges={<StoreBadges align="start" sizeClass="h-11 w-auto select-none md:h-12" />}
             />
           </div>

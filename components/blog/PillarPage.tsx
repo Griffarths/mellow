@@ -20,7 +20,6 @@ export function PillarPage({ pillar, locale, articles }: Props) {
   const t = useTranslations("blog");
   const tc = useTranslations("courses");
   const copy = PILLARS[pillar][locale];
-  // Free tools exist in FR and EN only: no tool block in the other languages.
   const tool = !isToolLocale(locale) ? null : pillar === "understand" ? TEST_PAGE[locale] : DIARY[locale];
 
   return (

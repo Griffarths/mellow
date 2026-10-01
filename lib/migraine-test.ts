@@ -1,4 +1,10 @@
 import type { ToolLocale } from "./tools";
+import * as de from "./tool-copy/de";
+import * as es from "./tool-copy/es";
+import * as es419 from "./tool-copy/es-419";
+import * as it from "./tool-copy/it";
+import * as pt from "./tool-copy/pt";
+import * as ptBR from "./tool-copy/pt-BR";
 
 // Screening quiz inspired by the ICHD-3 criteria for migraine without aura
 // (1.1), migraine with aura (1.2), probable migraine (1.5), tension-type
@@ -433,4 +439,10 @@ export const TEST_COPY: Record<ToolLocale, TestCopy> = {
     chronicNote: ["You have a headache 15 or more days a month: this is called a chronic form. Preventive treatments exist, talk to your doctor. ", { text: "Headache every day: the causes", href: "/blog/headache-every-day" }],
     overuseNote: ["You take a painkiller 10 or more days a month. Beyond that threshold, the risk of medication overuse rises: the medication itself can keep the headaches going. ", { text: "How to get out of medication overuse", href: "/blog/headache-every-day" }],
   },
+  de: de.test,
+  it: it.test,
+  es: es.test,
+  "es-419": es419.test,
+  pt: pt.test,
+  "pt-BR": ptBR.test,
 };
