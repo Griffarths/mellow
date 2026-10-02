@@ -39,11 +39,9 @@
     "metaDescription": "Artículos con fuentes y explicados de forma sencilla sobre la migraña: síntomas, aura, desencadenantes, sueño, alimentación, tratamientos para la crisis y preventivos.",
     "updatedOn": "Actualizado el {date}",
     "byAuthor": "Por {name}",
-    "authorRole": "Fundadora de Mellow",
-    "authorBio": "Vivo con migraña desde los 21 años. Creé Mellow porque yo misma necesitaba esta app.",
     "authorMore": "Saber más",
-    "authorTitle": "Sobre la autora",
-    "editorialLink": "Cómo escribimos nuestros artículos"
+    "editorialLink": "Cómo escribimos nuestros artículos",
+    "authorLine": "Escrito por <b>{name}</b>, fundadora de Mellow, que vive con migraña desde los 21 años."
   },
   "hero": {
     "title": "Recupera el control de tus migrañas.",

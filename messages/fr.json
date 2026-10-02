@@ -34,11 +34,9 @@
     "metaDescription": "Des articles sourcés et expliqués simplement sur la migraine : symptômes, aura, déclencheurs, sommeil, alimentation, traitements de crise et de fond.",
     "updatedOn": "Mis à jour le {date}",
     "byAuthor": "Par {name}",
-    "authorRole": "Fondatrice de Mellow",
-    "authorBio": "Je vis avec la migraine depuis mes 21 ans. J'ai créé Mellow parce que j'avais besoin de cette app pour moi-même.",
     "authorMore": "En savoir plus",
-    "authorTitle": "À propos de l'auteure",
-    "editorialLink": "Comment nous écrivons nos articles"
+    "editorialLink": "Comment nous écrivons nos articles",
+    "authorLine": "Écrit par <b>{name}</b>, fondatrice de Mellow, qui vit avec la migraine depuis ses 21 ans."
   },
   "hero": {
     "title": "Reprends le contrôle de tes migraines.",

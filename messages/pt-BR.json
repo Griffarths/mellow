@@ -39,11 +39,9 @@
     "metaDescription": "Artigos com fontes e explicados de forma simples sobre a enxaqueca: sintomas, aura, gatilhos, sono, alimentação, tratamentos da crise e preventivos.",
     "updatedOn": "Atualizado em {date}",
     "byAuthor": "Por {name}",
-    "authorRole": "Fundadora da Mellow",
-    "authorBio": "Convivo com a enxaqueca desde os 21 anos. Criei a Mellow porque eu mesma precisava deste app.",
     "authorMore": "Saiba mais",
-    "authorTitle": "Sobre a autora",
-    "editorialLink": "Como escrevemos nossos artigos"
+    "editorialLink": "Como escrevemos nossos artigos",
+    "authorLine": "Escrito por <b>{name}</b>, fundadora da Mellow, que convive com a enxaqueca desde os 21 anos."
   },
   "hero": {
     "title": "Retome o controle das suas enxaquecas.",

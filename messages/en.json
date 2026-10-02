@@ -34,11 +34,9 @@
     "metaDescription": "Clear, sourced articles about migraine: symptoms, aura, triggers, sleep, food, acute and preventive treatments.",
     "updatedOn": "Updated {date}",
     "byAuthor": "By {name}",
-    "authorRole": "Founder of Mellow",
-    "authorBio": "I've lived with migraine since I was 21. I built Mellow because I needed this app myself.",
     "authorMore": "Learn more",
-    "authorTitle": "About the author",
-    "editorialLink": "How we write our articles"
+    "editorialLink": "How we write our articles",
+    "authorLine": "Written by <b>{name}</b>, founder of Mellow, who has lived with migraine since she was 21."
   },
   "hero": {
     "title": "Take back control of your migraines.",

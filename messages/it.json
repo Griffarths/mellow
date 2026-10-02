@@ -39,11 +39,9 @@
     "metaDescription": "Articoli con fonti e spiegati in modo semplice sull'emicrania: sintomi, aura, fattori scatenanti, sonno, alimentazione, terapie per l'attacco e di profilassi.",
     "updatedOn": "Aggiornato il {date}",
     "byAuthor": "Di {name}",
-    "authorRole": "Fondatrice di Mellow",
-    "authorBio": "Convivo con l'emicrania da quando avevo 21 anni. Ho creato Mellow perché avevo bisogno io stessa di questa app.",
     "authorMore": "Scopri di più",
-    "authorTitle": "L'autrice",
-    "editorialLink": "Come scriviamo i nostri articoli"
+    "editorialLink": "Come scriviamo i nostri articoli",
+    "authorLine": "Scritto da <b>{name}</b>, fondatrice di Mellow, che convive con l'emicrania da quando aveva 21 anni."
   },
   "hero": {
     "title": "Riprendi il controllo delle tue emicranie.",

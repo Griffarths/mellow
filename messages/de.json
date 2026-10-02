@@ -39,11 +39,9 @@
     "metaDescription": "Fundierte, einfach erklärte Artikel über Migräne: Symptome, Aura, Auslöser, Schlaf, Ernährung, Akut- und Prophylaxebehandlungen.",
     "updatedOn": "Aktualisiert am {date}",
     "byAuthor": "Von {name}",
-    "authorRole": "Gründerin von Mellow",
-    "authorBio": "Ich lebe seit meinem 21. Lebensjahr mit Migräne. Ich habe Mellow entwickelt, weil ich diese App selbst gebraucht habe.",
     "authorMore": "Mehr erfahren",
-    "authorTitle": "Über die Autorin",
-    "editorialLink": "So schreiben wir unsere Artikel"
+    "editorialLink": "So schreiben wir unsere Artikel",
+    "authorLine": "Geschrieben von <b>{name}</b>, Gründerin von Mellow, die seit ihrem 21. Lebensjahr mit Migräne lebt."
   },
   "hero": {
     "title": "Nimm die Kontrolle über deine Migräne zurück.",
