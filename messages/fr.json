@@ -32,7 +32,13 @@
     "startHere": "Pour commencer",
     "metaTitle": "Blog Mellow : comprendre, prévenir et gérer la migraine",
     "metaDescription": "Des articles sourcés et expliqués simplement sur la migraine : symptômes, aura, déclencheurs, sommeil, alimentation, traitements de crise et de fond.",
-    "updatedOn": "Mis à jour le {date}"
+    "updatedOn": "Mis à jour le {date}",
+    "byAuthor": "Par {name}",
+    "authorRole": "Fondatrice de Mellow",
+    "authorBio": "Je vis avec la migraine depuis mes 21 ans. J'ai créé Mellow parce que j'avais besoin de cette app pour moi-même.",
+    "authorMore": "En savoir plus",
+    "authorTitle": "À propos de l'auteure",
+    "editorialLink": "Comment nous écrivons nos articles"
   },
   "hero": {
     "title": "Reprends le contrôle de tes migraines.",
@@ -123,7 +129,8 @@
     "legal": "Mentions légales",
     "legalTitle": "Légal",
     "contact": "Contact",
-    "accountDeletion": "Supprimer mon compte"
+    "accountDeletion": "Supprimer mon compte",
+    "editorial": "Comment nous écrivons nos articles"
   },
   "common": {
     "back": "← Retour"
@@ -143,5 +150,23 @@
   "accountDeletionPage": {
     "metaTitle": "Suppression de compte — Mellow",
     "metaDescription": "Comment supprimer votre compte et vos données depuis l'application Mellow ou par e-mail."
+  },
+  "editorialPage": {
+    "metaTitle": "Comment nous écrivons nos articles — Mellow",
+    "metaDescription": "Qui écrit le blog de Mellow, quelles sources nous utilisons, ce que nous ne faisons pas et comment les articles sont tenus à jour.",
+    "title": "Comment nous écrivons nos articles",
+    "intro": "Le blog de Mellow aide les personnes migraineuses à comprendre leurs crises et à mieux vivre avec. Voici comment chaque article est préparé, vérifié et tenu à jour.",
+    "whoTitle": "Qui écrit",
+    "whoText": "Les articles sont publiés sous la responsabilité de Laurine Nicoletti, fondatrice de Mellow, qui vit avec la migraine. Nous ne sommes pas médecins : nous expliquons, avec des mots simples, ce que disent les organismes de santé et la recherche.",
+    "sourcesTitle": "Nos sources",
+    "sourcesText": "Chaque chiffre et chaque affirmation de santé renvoie à sa source, directement dans la phrase : organismes publics (Inserm, Assurance Maladie, HAS, OMS, NHS…), sociétés savantes et études publiées. Nous privilégions des sources dans la langue de l'article et nous vérifions que chaque lien fonctionne avant de publier. La liste complète figure à la fin de chaque article.",
+    "limitsTitle": "Ce que nous ne faisons pas",
+    "limitsText": "Pas de posologie, pas de diagnostic, pas de conseil de traitement personnalisé, pas de promesse de guérison. Les traitements sont expliqués à titre d'information, en renvoyant toujours vers ton médecin.",
+    "updatesTitle": "Mises à jour",
+    "updatesText": "Nous relisons régulièrement nos articles : liens et sources vérifiés, nouvelles études, questions fréquentes des lecteurs. Quand un article change vraiment, la date de mise à jour est indiquée sous son titre.",
+    "errorTitle": "Une erreur, une question ?",
+    "errorText": "Écris-nous depuis la page contact : nous corrigeons rapidement.",
+    "contact": "Nous contacter",
+    "disclaimer": "Ces articles sont informatifs et ne remplacent pas l'avis d'un professionnel de santé."
   }
 }

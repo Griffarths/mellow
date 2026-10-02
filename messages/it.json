@@ -37,7 +37,13 @@
     "startHere": "Inizia da qui",
     "metaTitle": "Blog Mellow: capire, prevenire e gestire l'emicrania",
     "metaDescription": "Articoli con fonti e spiegati in modo semplice sull'emicrania: sintomi, aura, fattori scatenanti, sonno, alimentazione, terapie per l'attacco e di profilassi.",
-    "updatedOn": "Aggiornato il {date}"
+    "updatedOn": "Aggiornato il {date}",
+    "byAuthor": "Di {name}",
+    "authorRole": "Fondatrice di Mellow",
+    "authorBio": "Convivo con l'emicrania da quando avevo 21 anni. Ho creato Mellow perché avevo bisogno io stessa di questa app.",
+    "authorMore": "Scopri di più",
+    "authorTitle": "L'autrice",
+    "editorialLink": "Come scriviamo i nostri articoli"
   },
   "hero": {
     "title": "Riprendi il controllo delle tue emicranie.",
@@ -127,7 +133,8 @@
     "legal": "Note legali",
     "legalTitle": "Informazioni legali",
     "contact": "Contatti",
-    "accountDeletion": "Elimina account"
+    "accountDeletion": "Elimina account",
+    "editorial": "Come scriviamo i nostri articoli"
   },
   "common": {
     "back": "← Indietro"
@@ -147,5 +154,23 @@
   "accountDeletionPage": {
     "metaTitle": "Eliminazione account — Mellow",
     "metaDescription": "Come eliminare il tuo account e i tuoi dati dall'app Mellow o via e-mail."
+  },
+  "editorialPage": {
+    "metaTitle": "Come scriviamo i nostri articoli — Mellow",
+    "metaDescription": "Chi scrive il blog di Mellow, quali fonti usiamo, cosa non facciamo e come teniamo aggiornati gli articoli.",
+    "title": "Come scriviamo i nostri articoli",
+    "intro": "Il blog di Mellow aiuta chi soffre di emicrania a capire i propri attacchi e a conviverci meglio. Ecco come ogni articolo viene preparato, verificato e tenuto aggiornato.",
+    "whoTitle": "Chi scrive",
+    "whoText": "Gli articoli sono pubblicati sotto la responsabilità di Laurine Nicoletti, fondatrice di Mellow, che convive con l'emicrania. Non siamo medici: spieghiamo, con parole semplici, cosa dicono gli enti sanitari e la ricerca.",
+    "sourcesTitle": "Le nostre fonti",
+    "sourcesText": "Ogni dato e ogni affermazione sulla salute rimanda alla sua fonte, direttamente nella frase: enti pubblici (ISS, Ministero della Salute, OMS…), società scientifiche e studi pubblicati. Privilegiamo fonti nella lingua dell'articolo e verifichiamo che ogni link funzioni prima di pubblicare. L'elenco completo è alla fine di ogni articolo.",
+    "limitsTitle": "Cosa non facciamo",
+    "limitsText": "Niente dosaggi, niente diagnosi, niente consigli di terapia personalizzati, nessuna promessa di guarigione. Le terapie sono spiegate a scopo informativo e rimandiamo sempre al tuo medico.",
+    "updatesTitle": "Aggiornamenti",
+    "updatesText": "Rileggiamo regolarmente i nostri articoli: link e fonti verificati, nuovi studi, domande frequenti dei lettori. Quando un articolo cambia davvero, la data di aggiornamento compare sotto il titolo.",
+    "errorTitle": "Un errore, una domanda?",
+    "errorText": "Scrivici dalla pagina contatti: correggiamo in fretta.",
+    "contact": "Contattaci",
+    "disclaimer": "Questi articoli hanno scopo informativo e non sostituiscono il parere di un professionista sanitario."
   }
 }

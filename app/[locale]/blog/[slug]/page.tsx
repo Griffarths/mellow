@@ -18,6 +18,9 @@ import { RelatedArticles } from "@/components/blog/RelatedArticles";
 import { PillarPage } from "@/components/blog/PillarPage";
 import { mdxComponents } from "@/lib/mdx-components";
 import { AppCta } from "@/components/blog/AppCta";
+import { AuthorBox } from "@/components/blog/AuthorBox";
+import { AUTHOR, aboutUrl } from "@/lib/author";
+import { extractFaq } from "@/lib/faq";
 import {
   type BlogLocale,
   HREFLANG,
@@ -235,9 +238,10 @@ export default async function ArticlePage({ params }: Props) {
     inLanguage: inLanguage(locale),
     keywords: article.tags.join(", "),
     author: {
-      "@type": "Organization",
-      name: "Mellow",
-      url: SITE_URL,
+      "@type": "Person",
+      name: AUTHOR.name,
+      url: aboutUrl(locale),
+      worksFor: { "@type": "Organization", name: "Mellow", url: SITE_URL },
     },
     publisher: {
       "@type": "Organization",
@@ -255,6 +259,22 @@ export default async function ArticlePage({ params }: Props) {
       "@id": articleUrl,
     },
   };
+
+  // FAQ of the article (when it has one), declared to search engines.
+  const faq = extractFaq(article.content);
+  const faqJsonLd =
+    faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          inLanguage: inLanguage(locale),
+          mainEntity: faq.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: { "@type": "Answer", text: f.answer },
+          })),
+        }
+      : null;
 
   return (
     <>
@@ -285,6 +305,7 @@ export default async function ArticlePage({ params }: Props) {
                   },
                 }}
               />
+              <AuthorBox />
               {!hasEndCta && <BlogCta />}
               <RelatedArticles articles={related} pillar={pillarLink} />
             </div>
@@ -300,6 +321,12 @@ export default async function ArticlePage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
     </>
   );
 }

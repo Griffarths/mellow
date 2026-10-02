@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { isMascotCover, type Article } from "@/lib/blog";
 import type { PillarLink } from "@/lib/pillar-link";
 import { TONES, toneForImage } from "@/lib/tones";
+import { AUTHOR } from "@/lib/author";
 import { typographize } from "@/lib/typography";
 
 export function ArticleHeader({
@@ -58,6 +59,8 @@ export function ArticleHeader({
       )}
       <h1 className={`text-h1 text-ink ${pillar ? "mt-3" : "mt-8 md:mt-10"}`}>{typographize(article.title, article.locale)}</h1>
       <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-ink-3">
+        <span>{tb("byAuthor", { name: AUTHOR.name })}</span>
+        <span aria-hidden>·</span>
         <time dateTime={article.publishedAt}>{formatted}</time>
         {updated && (
           <>

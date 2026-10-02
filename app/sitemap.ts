@@ -100,7 +100,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Localized legal pages
-  for (const suffix of ["/contact", "/confidentialite", "/mentions-legales"]) {
+  for (const suffix of ["/contact", "/editorial", "/confidentialite", "/mentions-legales"]) {
     const languages = Object.fromEntries(
       routing.locales.map((l) => [l, url(l, suffix)]),
     );

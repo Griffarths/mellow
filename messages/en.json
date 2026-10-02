@@ -32,7 +32,13 @@
     "startHere": "Start here",
     "metaTitle": "Mellow blog: understanding, preventing and managing migraine",
     "metaDescription": "Clear, sourced articles about migraine: symptoms, aura, triggers, sleep, food, acute and preventive treatments.",
-    "updatedOn": "Updated {date}"
+    "updatedOn": "Updated {date}",
+    "byAuthor": "By {name}",
+    "authorRole": "Founder of Mellow",
+    "authorBio": "I've lived with migraine since I was 21. I built Mellow because I needed this app myself.",
+    "authorMore": "Learn more",
+    "authorTitle": "About the author",
+    "editorialLink": "How we write our articles"
   },
   "hero": {
     "title": "Take back control of your migraines.",
@@ -123,7 +129,8 @@
     "legal": "Legal Notice",
     "legalTitle": "Legal",
     "contact": "Contact",
-    "accountDeletion": "Delete account"
+    "accountDeletion": "Delete account",
+    "editorial": "How we write our articles"
   },
   "common": {
     "back": "← Back"
@@ -143,5 +150,23 @@
   "accountDeletionPage": {
     "metaTitle": "Account deletion — Mellow",
     "metaDescription": "How to delete your account and data from the Mellow app or by email."
+  },
+  "editorialPage": {
+    "metaTitle": "How we write our articles — Mellow",
+    "metaDescription": "Who writes the Mellow blog, which sources we use, what we don't do, and how articles are kept up to date.",
+    "title": "How we write our articles",
+    "intro": "The Mellow blog helps people with migraine understand their attacks and live better with them. Here is how each article is prepared, checked and kept up to date.",
+    "whoTitle": "Who writes",
+    "whoText": "Articles are published under the responsibility of Laurine Nicoletti, founder of Mellow, who lives with migraine. We are not doctors: we explain, in plain words, what health organisations and research say.",
+    "sourcesTitle": "Our sources",
+    "sourcesText": "Every figure and health claim links to its source, right in the sentence: public bodies (NHS, NIH, WHO, American Migraine Foundation…), medical societies and published studies. We favour sources in the article's language and check that every link works before publishing. The full list is at the end of each article.",
+    "limitsTitle": "What we don't do",
+    "limitsText": "No dosages, no diagnosis, no personalised treatment advice, no promise of a cure. Treatments are explained for information only, and we always point you to your doctor.",
+    "updatesTitle": "Updates",
+    "updatesText": "We review our articles regularly: links and sources checked, new studies, readers' frequent questions. When an article really changes, the update date is shown under its title.",
+    "errorTitle": "Spotted a mistake, or have a question?",
+    "errorText": "Write to us from the contact page: we fix things quickly.",
+    "contact": "Contact us",
+    "disclaimer": "These articles are for information and do not replace the advice of a healthcare professional."
   }
 }

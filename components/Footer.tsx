@@ -72,6 +72,9 @@ export function Footer({ localePaths }: Props = {}) {
                 {nav("androidBeta")}
               </Link>
             )}
+            <Link href="/editorial" className={LINK}>
+              {t("editorial")}
+            </Link>
             <Link href="/contact" className={LINK}>
               {t("contact")}
             </Link>

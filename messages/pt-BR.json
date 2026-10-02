@@ -37,7 +37,13 @@
     "startHere": "Comece aqui",
     "metaTitle": "Blog Mellow: entender, prevenir e gerenciar a enxaqueca",
     "metaDescription": "Artigos com fontes e explicados de forma simples sobre a enxaqueca: sintomas, aura, gatilhos, sono, alimentação, tratamentos da crise e preventivos.",
-    "updatedOn": "Atualizado em {date}"
+    "updatedOn": "Atualizado em {date}",
+    "byAuthor": "Por {name}",
+    "authorRole": "Fundadora da Mellow",
+    "authorBio": "Convivo com a enxaqueca desde os 21 anos. Criei a Mellow porque eu mesma precisava deste app.",
+    "authorMore": "Saiba mais",
+    "authorTitle": "Sobre a autora",
+    "editorialLink": "Como escrevemos nossos artigos"
   },
   "hero": {
     "title": "Retome o controle das suas enxaquecas.",
@@ -127,7 +133,8 @@
     "legal": "Aviso legal",
     "legalTitle": "Legal",
     "contact": "Contato",
-    "accountDeletion": "Excluir conta"
+    "accountDeletion": "Excluir conta",
+    "editorial": "Como escrevemos nossos artigos"
   },
   "common": {
     "back": "← Voltar"
@@ -147,5 +154,23 @@
   "accountDeletionPage": {
     "metaTitle": "Exclusão de conta — Mellow",
     "metaDescription": "Como excluir sua conta e seus dados no aplicativo Mellow ou por e-mail."
+  },
+  "editorialPage": {
+    "metaTitle": "Como escrevemos nossos artigos — Mellow",
+    "metaDescription": "Quem escreve o blog da Mellow, quais fontes usamos, o que não fazemos e como mantemos os artigos atualizados.",
+    "title": "Como escrevemos nossos artigos",
+    "intro": "O blog da Mellow ajuda quem tem enxaqueca a entender suas crises e a viver melhor com elas. Veja como cada artigo é preparado, verificado e mantido atualizado.",
+    "whoTitle": "Quem escreve",
+    "whoText": "Os artigos são publicados sob a responsabilidade de Laurine Nicoletti, fundadora da Mellow, que convive com a enxaqueca. Não somos médicos: explicamos, com palavras simples, o que dizem os órgãos de saúde e a pesquisa.",
+    "sourcesTitle": "Nossas fontes",
+    "sourcesText": "Cada número e cada afirmação de saúde aponta para sua fonte, na própria frase: órgãos públicos (SUS, Ministério da Saúde, OMS…), sociedades científicas e estudos publicados. Damos prioridade a fontes no idioma do artigo e verificamos se cada link funciona antes de publicar. A lista completa está no fim de cada artigo.",
+    "limitsTitle": "O que não fazemos",
+    "limitsText": "Sem posologias, sem diagnósticos, sem orientações de tratamento personalizadas, sem promessas de cura. Os tratamentos são explicados a título informativo e sempre indicamos que você procure seu médico.",
+    "updatesTitle": "Atualizações",
+    "updatesText": "Revisamos nossos artigos com regularidade: links e fontes verificados, novos estudos, perguntas frequentes dos leitores. Quando um artigo muda de fato, a data de atualização aparece abaixo do título.",
+    "errorTitle": "Um erro, uma dúvida?",
+    "errorText": "Escreva para nós pela página de contato: corrigimos rapidamente.",
+    "contact": "Fale conosco",
+    "disclaimer": "Estes artigos são informativos e não substituem o parecer de um profissional de saúde."
   }
 }

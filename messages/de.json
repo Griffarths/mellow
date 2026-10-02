@@ -37,7 +37,13 @@
     "startHere": "Hier anfangen",
     "metaTitle": "Mellow Blog: Migräne verstehen, vorbeugen und bewältigen",
     "metaDescription": "Fundierte, einfach erklärte Artikel über Migräne: Symptome, Aura, Auslöser, Schlaf, Ernährung, Akut- und Prophylaxebehandlungen.",
-    "updatedOn": "Aktualisiert am {date}"
+    "updatedOn": "Aktualisiert am {date}",
+    "byAuthor": "Von {name}",
+    "authorRole": "Gründerin von Mellow",
+    "authorBio": "Ich lebe seit meinem 21. Lebensjahr mit Migräne. Ich habe Mellow entwickelt, weil ich diese App selbst gebraucht habe.",
+    "authorMore": "Mehr erfahren",
+    "authorTitle": "Über die Autorin",
+    "editorialLink": "So schreiben wir unsere Artikel"
   },
   "hero": {
     "title": "Nimm die Kontrolle über deine Migräne zurück.",
@@ -127,7 +133,8 @@
     "legal": "Impressum",
     "legalTitle": "Rechtliches",
     "contact": "Kontakt",
-    "accountDeletion": "Konto löschen"
+    "accountDeletion": "Konto löschen",
+    "editorial": "So schreiben wir unsere Artikel"
   },
   "common": {
     "back": "← Zurück"
@@ -147,5 +154,23 @@
   "accountDeletionPage": {
     "metaTitle": "Konto löschen — Mellow",
     "metaDescription": "So löschen Sie Ihr Konto und Ihre Daten über die Mellow-App oder per E-Mail."
+  },
+  "editorialPage": {
+    "metaTitle": "So schreiben wir unsere Artikel — Mellow",
+    "metaDescription": "Wer den Mellow-Blog schreibt, welche Quellen wir nutzen, was wir nicht tun und wie die Artikel aktuell bleiben.",
+    "title": "So schreiben wir unsere Artikel",
+    "intro": "Der Mellow-Blog hilft Menschen mit Migräne, ihre Attacken zu verstehen und besser damit zu leben. So wird jeder Artikel vorbereitet, geprüft und aktuell gehalten.",
+    "whoTitle": "Wer schreibt",
+    "whoText": "Die Artikel erscheinen unter der Verantwortung von Laurine Nicoletti, Gründerin von Mellow, die selbst mit Migräne lebt. Wir sind keine Ärzte: Wir erklären in einfachen Worten, was Gesundheitsorganisationen und die Forschung sagen.",
+    "sourcesTitle": "Unsere Quellen",
+    "sourcesText": "Jede Zahl und jede Gesundheitsaussage verweist direkt im Satz auf ihre Quelle: öffentliche Stellen (DMKG, gesund.bund.de, WHO…), Fachgesellschaften und veröffentlichte Studien. Wir bevorzugen Quellen in der Sprache des Artikels und prüfen vor der Veröffentlichung, ob jeder Link funktioniert. Die vollständige Liste steht am Ende jedes Artikels.",
+    "limitsTitle": "Was wir nicht tun",
+    "limitsText": "Keine Dosierungen, keine Diagnosen, keine persönliche Therapieberatung, keine Heilversprechen. Behandlungen werden nur zur Information erklärt, und wir verweisen immer an deine Ärztin oder deinen Arzt.",
+    "updatesTitle": "Aktualisierungen",
+    "updatesText": "Wir überprüfen unsere Artikel regelmäßig: Links und Quellen geprüft, neue Studien, häufige Fragen der Leserinnen und Leser. Wenn sich ein Artikel wirklich ändert, steht das Aktualisierungsdatum unter dem Titel.",
+    "errorTitle": "Ein Fehler, eine Frage?",
+    "errorText": "Schreib uns über die Kontaktseite: Wir korrigieren schnell.",
+    "contact": "Kontakt",
+    "disclaimer": "Diese Artikel dienen der Information und ersetzen nicht den Rat einer medizinischen Fachperson."
   }
 }
