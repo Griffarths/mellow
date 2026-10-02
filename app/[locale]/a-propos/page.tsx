@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: "À propos — Mellow",
     description:
-      "L'histoire de Mellow, app de tracking de migraines créée par Laurine Nicoletti, développeur solo basé à Bordeaux. Une app pensée par un migraineux, pas par un comité marketing.",
+      "L'histoire de Mellow, app de tracking de migraines créée par Laurine Nicoletti, développeuse solo basée à Bordeaux. Une app pensée par une migraineuse, pas par un comité marketing.",
     alternates: {
       canonical: PAGE_URL,
       languages: {
@@ -57,9 +57,9 @@ export default async function AboutPage({ params }: Props) {
     mainEntity: {
       "@type": "Person",
       name: "Laurine Nicoletti",
-      jobTitle: "Développeur indépendant",
+      jobTitle: "Développeuse indépendante",
       description:
-        "Créateur de Mellow, application de tracking de migraines",
+        "Créatrice de Mellow, application de tracking de migraines",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Bordeaux",
@@ -84,7 +84,7 @@ export default async function AboutPage({ params }: Props) {
           </h2>
           <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Je suis <strong className="font-semibold text-ink">Laurine Nicoletti</strong>,
-            développeur indépendant basé à Bordeaux, et je suis migraineux.
+            développeuse indépendante basée à Bordeaux, et je suis migraineuse.
           </p>
           <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             J&apos;ai créé Mellow parce que{" "}
@@ -107,7 +107,7 @@ export default async function AboutPage({ params }: Props) {
             .
           </p>
           <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
-            Je suis migraineux <strong className="font-semibold text-ink">sans aura</strong>.
+            Je suis migraineuse <strong className="font-semibold text-ink">sans aura</strong>.
             La douleur s&apos;installe progressivement, d&apos;un côté de la tête,
             jusqu&apos;à devenir pulsatile et invalidante. Avec elle viennent les{" "}
             <strong className="font-semibold text-ink">nausées</strong>, l&apos;
@@ -147,7 +147,7 @@ export default async function AboutPage({ params }: Props) {
             Avoir des données concrètes à montrer à mon médecin.
           </p>
           <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
-            Ce que j&apos;ai trouvé m&apos;a frustré. Des apps complexes qui demandent
+            Ce que j&apos;ai trouvé m&apos;a frustrée. Des apps complexes qui demandent
             5 minutes pour logger une crise quand t&apos;as déjà mal au crâne. Des
             designs datés, sortis tout droit de 2010. Des prix élevés ou des paywalls
             agressifs sur des fonctionnalités basiques. Des apps qui ressemblent à des
@@ -156,7 +156,7 @@ export default async function AboutPage({ params }: Props) {
           <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Alors j&apos;ai décidé d&apos;en faire une moi-même. Une app{" "}
             <strong className="font-semibold text-ink">
-              pensée par un migraineux, pas par un comité marketing.
+              pensée par une migraineuse, pas par un comité marketing.
             </strong>
           </p>
 
@@ -211,7 +211,7 @@ export default async function AboutPage({ params }: Props) {
             Et maintenant ?
           </h2>
           <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
-            Mellow est encore jeune. Je le développe seul, à mon rythme, en écoutant les
+            Mellow est encore jeune. Je le développe seule, à mon rythme, en écoutant les
             retours des migraineux qui l&apos;utilisent.
           </p>
           <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
