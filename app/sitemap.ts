@@ -10,6 +10,7 @@ import {
   liveBlogLocales,
 } from "@/lib/blog";
 import { PILLARS, PILLAR_IDS } from "@/lib/pillars";
+import { withDefault } from "@/lib/hreflang";
 import { TOOL_LOCALES } from "@/lib/tools";
 import { TOOL_IDS, toolAlternates, toolUrl } from "@/lib/tools-seo";
 
@@ -27,8 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   // Home: one entry per locale, with hreflang alternates pointing to all locales
-  const homeAlternates = Object.fromEntries(
-    routing.locales.map((l) => [l, url(l, "")]),
+  const homeAlternates = withDefault(
+    Object.fromEntries(routing.locales.map((l) => [l, url(l, "")])),
   );
   for (const locale of routing.locales) {
     entries.push({
@@ -40,8 +41,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Blog index: one entry per locale (every locale has /blog — coming-soon for non-FR/EN)
-  const blogIndexAlternates = Object.fromEntries(
-    routing.locales.map((l) => [l, url(l, "/blog")]),
+  const blogIndexAlternates = withDefault(
+    Object.fromEntries(routing.locales.map((l) => [l, url(l, "/blog")])),
   );
   for (const locale of routing.locales) {
     entries.push({
@@ -55,8 +56,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Pillar pages, in every language where the pillar has articles, cross-linked via hreflang
   for (const id of PILLAR_IDS) {
     const live = liveBlogLocales().filter((l) => getPillarArticles(l, id).length > 0);
-    const languages = Object.fromEntries(
-      live.map((l) => [HREFLANG[l], url(l, `/blog/${PILLARS[id][l].slug}`)]),
+    const languages = withDefault(
+      Object.fromEntries(
+        live.map((l) => [HREFLANG[l], url(l, `/blog/${PILLARS[id][l].slug}`)]),
+      ),
     );
     for (const locale of live) {
       entries.push({
@@ -84,9 +87,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Articles in every language, with hreflang to all their language versions
   for (const locale of BLOG_LOCALES) {
     for (const article of getAllArticles(locale)) {
-      const languages = Object.fromEntries(
-        (Object.entries(getArticleVersions(article)) as [BlogLocale, string][]).map(
-          ([l, s]) => [HREFLANG[l], url(l, `/blog/${s}`)],
+      const languages = withDefault(
+        Object.fromEntries(
+          (Object.entries(getArticleVersions(article)) as [BlogLocale, string][]).map(
+            ([l, s]) => [HREFLANG[l], url(l, `/blog/${s}`)],
+          ),
         ),
       );
       entries.push({
@@ -101,8 +106,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Localized legal pages
   for (const suffix of ["/contact", "/editorial", "/confidentialite", "/mentions-legales"]) {
-    const languages = Object.fromEntries(
-      routing.locales.map((l) => [l, url(l, suffix)]),
+    const languages = withDefault(
+      Object.fromEntries(routing.locales.map((l) => [l, url(l, suffix)])),
     );
     for (const locale of routing.locales) {
       entries.push({
@@ -118,6 +123,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const aboutLanguages = {
     "fr-FR": `${SITE_URL}/fr/a-propos`,
     en: `${SITE_URL}/about`,
+    "x-default": `${SITE_URL}/about`,
   };
   entries.push({
     url: `${SITE_URL}/fr/a-propos`,

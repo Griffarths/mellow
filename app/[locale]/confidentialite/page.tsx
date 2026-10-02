@@ -14,6 +14,7 @@ import Es from "./content/es";
 import Es419 from "./content/es-419";
 import Pt from "./content/pt";
 import PtBr from "./content/pt-BR";
+import { pageAlternates } from "@/lib/hreflang";
 
 const CONTENT: Record<Locale, () => React.ReactNode> = {
   fr: Fr,
@@ -36,6 +37,7 @@ export async function generateMetadata({
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
+    alternates: pageAlternates(locale, "/confidentialite"),
   };
 }
 

@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import type { Locale } from "@/i18n/routing";
 import { buttonClass } from "@/components/ui/Button";
 import { typographize } from "@/lib/typography";
+import { pageAlternates } from "@/lib/hreflang";
 
 const STEP1_URL = "https://groups.google.com/g/testeurs-mellow/about";
 const STEP2_URL =
@@ -279,7 +280,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = TRANSLATIONS[(locale as Locale)] ?? TRANSLATIONS.en;
-  return { title: t.meta.title, description: t.meta.description };
+  return {
+    title: t.meta.title,
+    description: t.meta.description,
+    alternates: pageAlternates(locale, "/android"),
+  };
 }
 
 export default async function AndroidPage({

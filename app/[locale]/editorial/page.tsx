@@ -7,6 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { pageAlternates } from "@/lib/hreflang";
 
 const SITE_URL = "https://mellowmigraine.com";
 const pageUrl = (locale: string) =>
@@ -21,10 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
-    alternates: {
-      canonical: pageUrl(locale),
-      languages: Object.fromEntries(routing.locales.map((l) => [l, pageUrl(l)])),
-    },
+    alternates: pageAlternates(locale, "/editorial"),
   };
 }
 

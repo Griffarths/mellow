@@ -28,4 +28,7 @@ export const routing = defineRouting({
   locales: LOCALES,
   defaultLocale: "en",
   localePrefix: "as-needed",
+  // hreflang is declared page by page (lib/hreflang.ts): slugs differ between
+  // languages, so the automatic Link headers would point to pages that don't exist.
+  alternateLinks: false,
 });

@@ -9,6 +9,7 @@ import { ArticleCard } from "@/components/blog/ArticleCard";
 import { PillarNav } from "@/components/blog/PillarNav";
 import { HREFLANG, getAllArticles, hasBlog } from "@/lib/blog";
 import { ComingSoon } from "./coming-soon";
+import { pageAlternates } from "@/lib/hreflang";
 
 const SITE_URL = "https://mellowmigraine.com";
 
@@ -35,10 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: {
-      canonical: blogUrl(locale),
-      languages: Object.fromEntries(routing.locales.map((l) => [l, blogUrl(l)])),
-    },
+    alternates: pageAlternates(locale, "/blog"),
     openGraph: { type: "website", title, description, url: blogUrl(locale) },
   };
 }

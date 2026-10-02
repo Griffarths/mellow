@@ -21,6 +21,7 @@ import { AppCta } from "@/components/blog/AppCta";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { AUTHOR, aboutUrl } from "@/lib/author";
 import { extractFaq } from "@/lib/faq";
+import { breadcrumbJsonLd, withDefault } from "@/lib/hreflang";
 import {
   type BlogLocale,
   HREFLANG,
@@ -70,11 +71,11 @@ export function generateStaticParams() {
 }
 
 function pillarLanguages(pillar: PillarId) {
-  return Object.fromEntries(
+  return withDefault(Object.fromEntries(
     liveBlogLocales()
       .filter((l) => pillarIsLive(pillar, l))
       .map((l) => [HREFLANG[l], urlFor(l, `/blog/${PILLARS[pillar][l].slug}`)]),
-  );
+  ));
 }
 
 // Paths for the language switcher, { locale: "/blog/<slug>" }.
@@ -93,12 +94,12 @@ function articlePaths(versions: Partial<Record<BlogLocale, string>>) {
 // hreflang alternates of an article: every language version found through
 // relatedSlugInOtherLanguage (see getArticleVersions).
 function articleLanguages(versions: Partial<Record<BlogLocale, string>>) {
-  return Object.fromEntries(
+  return withDefault(Object.fromEntries(
     (Object.entries(versions) as [BlogLocale, string][]).map(([l, s]) => [
       HREFLANG[l],
       urlFor(l, `/blog/${s}`),
     ]),
-  );
+  ));
 }
 
 const inLanguage = (locale: BlogLocale) => (locale === "en" ? "en-US" : HREFLANG[locale]);
@@ -188,6 +189,11 @@ export default async function ArticlePage({ params }: Props) {
         })),
       },
     };
+    const pillarBreadcrumb = breadcrumbJsonLd([
+      ["Mellow", urlFor(locale, "")],
+      ["Blog", urlFor(locale, "/blog")],
+      [copy.title, pillarUrl],
+    ]);
     return (
       <>
         <PillarPage
@@ -199,6 +205,10 @@ export default async function ArticlePage({ params }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pillarJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(pillarBreadcrumb) }}
         />
       </>
     );
@@ -260,6 +270,21 @@ export default async function ArticlePage({ params }: Props) {
     },
   };
 
+  // Home › Blog › (topic) › article, shown by Google in place of the raw address.
+  const breadcrumb = breadcrumbJsonLd([
+    ["Mellow", urlFor(locale, "")],
+    ["Blog", urlFor(locale, "/blog")],
+    ...(articlePillar
+      ? [
+          [
+            PILLARS[articlePillar][locale].title,
+            urlFor(locale, `/blog/${PILLARS[articlePillar][locale].slug}`),
+          ] as [string, string],
+        ]
+      : []),
+    [article.title, articleUrl],
+  ]);
+
   // FAQ of the article (when it has one), declared to search engines.
   const faq = extractFaq(article.content);
   const faqJsonLd =
@@ -320,6 +345,10 @@ export default async function ArticlePage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
       {faqJsonLd && (
         <script
