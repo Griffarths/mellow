@@ -96,16 +96,27 @@ function readArticle(locale: BlogLocale, file: string): Article {
   };
 }
 
+// Articles don't change during a build: they are read and parsed once, then
+// kept in memory. Without this every page (and the sitemap, once per article)
+// re-read every file. In development nothing is kept, so edits show at once.
+const KEEP = process.env.NODE_ENV === "production";
+const articlesCache = new Map<BlogLocale, Article[]>();
+let versionsCache: Map<string, Partial<Record<BlogLocale, string>>> | null = null;
+
 export function getAllArticles(locale: BlogLocale): Article[] {
+  const kept = KEEP ? articlesCache.get(locale) : undefined;
+  if (kept) return kept;
   const dir = path.join(CONTENT_ROOT, locale);
   if (!fs.existsSync(dir)) return [];
   const files = fs.readdirSync(dir).filter((f) => f.endsWith(".mdx"));
-  return files
+  const articles = files
     .map((f) => readArticle(locale, f))
     .sort(
       (a, b) =>
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
     );
+  if (KEEP) articlesCache.set(locale, articles);
+  return articles;
 }
 
 export function getArticleBySlug(
@@ -140,7 +151,25 @@ export function getRelatedArticles(article: Article, max = 3): Article[] {
 // relatedSlugInOtherLanguage links versions pairwise and may chain
 // (de → fr → en): versions are the connected group of these links.
 export function getArticleVersions(article: Article): Partial<Record<BlogLocale, string>> {
+  const key = (a: Article) => `${a.locale}/${a.slug}`;
+  if (KEEP && versionsCache) return versionsCache.get(key(article)) ?? { [article.locale]: article.slug };
   const all = BLOG_LOCALES.flatMap((l) => getAllArticles(l));
+  if (KEEP) {
+    // Every group of versions, computed once for the whole build.
+    const cache = new Map<string, Partial<Record<BlogLocale, string>>>();
+    for (const a of all) {
+      if (cache.has(key(a))) continue;
+      const versions = versionsOf(a, all);
+      for (const [l, s] of Object.entries(versions)) cache.set(`${l}/${s}`, versions);
+      cache.set(key(a), versions);
+    }
+    versionsCache = cache;
+    return cache.get(key(article)) ?? { [article.locale]: article.slug };
+  }
+  return versionsOf(article, all);
+}
+
+function versionsOf(article: Article, all: Article[]): Partial<Record<BlogLocale, string>> {
   const key = (a: Article) => `${a.locale}/${a.slug}`;
   const target = (a: Article): Article | undefined => {
     const s = a.relatedSlugInOtherLanguage;
