@@ -253,7 +253,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Uma crise de enxaqueca raramente aparece do nada. Sono irregular, uma refeição pulada, uma semana estressante, uma queda na pressão atmosférica ou a chegada da menstruação podem desequilibrar um cérebro com enxaqueca, que é mais sensível que os outros.",
         "Prevenir é, antes de tudo, identificar os seus próprios gatilhos, que não são necessariamente os de outras pessoas, e depois ajustar o que for possível. Estes artigos mostram o que dizem os estudos, os mitos que você pode esquecer e os hábitos que realmente ajudam a espaçar as crises.",
       ],
-      articles: ["luz-azul-enxaqueca-telas", "magnesio-para-enxaqueca", "enxaqueca-de-fim-de-semana", "dor-de-cabeca-ao-acordar-enxaqueca-sono", "alimentos-que-causam-enxaqueca", "pressao-atmosferica-e-enxaqueca", "estresse-e-enxaqueca-ciclo-vicioso", "gatilhos-da-enxaqueca-como-identificar", "enxaqueca-menstrual-2"],
+      articles: ["luz-azul-enxaqueca-telas", "magnesio-para-enxaqueca", "enxaqueca-de-fim-de-semana", "dor-de-cabeca-ao-acordar-enxaqueca-sono", "alimentos-que-causam-enxaqueca", "pressao-atmosferica-e-enxaqueca", "estresse-e-enxaqueca-ciclo-vicioso", "gatilhos-da-enxaqueca-como-identificar", "enxaqueca-menstrual-2", "enxaqueca-menstrual-ciclo-crises"],
     },
   },
   manage: {
