@@ -115,11 +115,16 @@ export default async function BlogIndexPage({ params }: Props) {
         {articles.length === 0 ? (
           <p className="text-ink-3">{t("emptyState")}</p>
         ) : (
-          <div className="grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
-            {articles.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
-            ))}
-          </div>
+          <>
+            <p className="text-sm font-semibold text-ink-3">
+              {t("pillarCount", { count: articles.length })}
+            </p>
+            <div className="mt-4 grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
+              {articles.map((article) => (
+                <ArticleCard key={article.slug} article={article} />
+              ))}
+            </div>
+          </>
         )}
       </main>
       <Footer />
