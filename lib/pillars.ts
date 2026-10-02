@@ -74,7 +74,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Migräne ist nicht einfach nur starker Kopfschmerz. Sie ist eine neurologische Erkrankung mit eigenen Mechanismen, Phasen und besonderen Formen wie der Aura. Wer sie versteht, lebt schon besser mit ihr: Du weißt, was mit dir passiert, erkennst die Anzeichen und sprichst leichter mit deiner Ärztin oder deinem Arzt darüber.",
         "Diese Artikel erklären dir einfach, was vor, während und nach einer Attacke passiert, wie du Migräne von Spannungskopfschmerz unterscheidest, wie lange eine Attacke dauert und wann dich tägliche Kopfschmerzen aufhorchen lassen sollten.",
       ],
-      articles: ["migraene-erblich"],
+      articles: ["migraene-erblich", "migraene-glossar", "jeden-tag-kopfschmerzen", "augenmigraene", "migraene-statistik-zahlen", "migraene-mit-aura", "wie-lange-dauert-eine-migraene", "migraene-oder-kopfschmerzen-unterschied"],
     },
     it: {
       slug: "capire-emicrania",
@@ -86,7 +86,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "L'emicrania non è un semplice mal di testa. È una malattia neurologica, con i suoi meccanismi, le sue fasi e forme particolari come l'aura. Capirla significa già viverla meglio: sai cosa ti succede, riconosci i segnali e ne parli più facilmente con il tuo medico.",
         "Questi articoli ti spiegano in modo semplice cosa succede prima, durante e dopo un attacco, come distinguere l'emicrania da una cefalea tensiva, quanto dura un attacco e quando un mal di testa quotidiano deve metterti in allerta.",
       ],
-      articles: ["emicrania-ereditaria"],
+      articles: ["emicrania-ereditaria", "glossario-emicrania", "mal-di-testa-tutti-i-giorni", "emicrania-oftalmica", "emicrania-statistiche-mondo-italia", "emicrania-con-aura-sintomi", "quanto-dura-emicrania", "differenza-tra-emicrania-e-mal-di-testa"],
     },
     es: {
       slug: "comprender-migrana",
@@ -98,7 +98,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "La migraña no es un simple dolor de cabeza. Es una enfermedad neurológica, con sus mecanismos, sus fases y formas particulares como el aura. Comprenderla ya es vivirla mejor: sabes lo que te pasa, reconoces las señales y hablas de ello con más facilidad con tu médico.",
         "Estos artículos te explican de forma sencilla qué ocurre antes, durante y después de una crisis, cómo distinguir una migraña de una cefalea tensional, cuánto dura una crisis y cuándo un dolor de cabeza diario debe ponerte en alerta.",
       ],
-      articles: ["migrana-hereditaria-genetica"],
+      articles: ["migrana-hereditaria-genetica", "glosario-de-migrana", "dolor-de-cabeza-todos-los-dias", "migrana-ocular-que-es-sintomas", "migrana-en-cifras", "migrana-con-aura-sintomas", "cuanto-dura-una-migrana", "diferencia-migrana-dolor-de-cabeza"],
     },
     "es-419": {
       slug: "comprender-migrana",
@@ -110,7 +110,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "La migraña no es un simple dolor de cabeza. Es una enfermedad neurológica, con sus mecanismos, sus fases y formas particulares como el aura. Entenderla ya es vivirla mejor: sabes lo que te está pasando, reconoces las señales y te resulta más fácil hablarlo con tu médico.",
         "Estos artículos te explican de forma sencilla qué pasa antes, durante y después de una crisis, cómo diferenciar una migraña de una cefalea tensional, cuánto dura una crisis y cuándo un dolor de cabeza diario debe preocuparte.",
       ],
-      articles: ["la-migrana-es-hereditaria"],
+      articles: ["la-migrana-es-hereditaria", "glosario-de-migrana", "dolor-de-cabeza-todos-los-dias", "migrana-ocular-que-es-sintomas", "estadisticas-de-migrana", "migrana-con-aura-senales-antes-de-la-crisis", "cuanto-dura-una-migrana", "diferencia-migrana-dolor-de-cabeza"],
     },
     pt: {
       slug: "compreender-enxaqueca",
@@ -122,7 +122,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "A enxaqueca não é uma simples dor de cabeça. É uma doença neurológica, com os seus mecanismos, as suas fases e formas particulares, como a aura. Compreendê-la já é vivê-la melhor: sabes o que te está a acontecer, reconheces os sinais e falas sobre isso mais facilmente com o teu médico.",
         "Estes artigos explicam-te de forma simples o que acontece antes, durante e depois de uma crise, como distinguir uma enxaqueca de uma cefaleia de tensão, quanto tempo dura uma crise e quando uma dor de cabeça diária deve alertar-te.",
       ],
-      articles: ["enxaqueca-hereditaria"],
+      articles: ["enxaqueca-hereditaria", "glossario-enxaqueca", "dor-de-cabeca-todos-os-dias", "enxaqueca-ocular-oftalmica", "enxaqueca-em-numeros", "enxaqueca-com-aura-sinais-antes-da-crise", "quanto-tempo-dura-uma-enxaqueca", "diferenca-entre-enxaqueca-e-dor-de-cabeca"],
     },
     "pt-BR": {
       slug: "entender-enxaqueca",
@@ -134,7 +134,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "A enxaqueca não é uma simples dor de cabeça. É uma doença neurológica, com seus mecanismos, suas fases e formas específicas, como a aura. Entender a enxaqueca já é conviver melhor com ela: você sabe o que está acontecendo, reconhece os sinais e conversa com mais facilidade com o seu médico.",
         "Estes artigos explicam de forma simples o que acontece antes, durante e depois de uma crise, como diferenciar uma enxaqueca de uma cefaleia tensional, quanto tempo dura uma crise e quando uma dor de cabeça diária deve acender um alerta.",
       ],
-      articles: ["enxaqueca-e-hereditaria"],
+      articles: ["enxaqueca-e-hereditaria", "glossario-da-enxaqueca", "dor-de-cabeca-todos-os-dias", "enxaqueca-ocular-aura-visual", "enxaqueca-em-numeros", "enxaqueca-com-aura-sinais-antes-da-crise", "quanto-tempo-dura-uma-crise-de-enxaqueca", "diferenca-entre-enxaqueca-e-dor-de-cabeca"],
     },
   },
   prevent: {
@@ -193,7 +193,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Eine Migräneattacke kommt selten aus dem Nichts. Unregelmäßiger Schlaf, eine ausgelassene Mahlzeit, eine stressige Woche, ein Luftdruckabfall oder die nahende Periode können ein Migränegehirn, das empfindlicher ist als andere, aus dem Gleichgewicht bringen.",
         "Vorbeugen heißt zuerst, deine eigenen Auslöser zu erkennen, die nicht unbedingt die der anderen sind, und dann anzupassen, was sich anpassen lässt. Diese Artikel zeigen, was Studien sagen, welche Mythen du vergessen kannst und welche Gewohnheiten wirklich helfen, Attacken seltener zu machen.",
       ],
-      articles: ["migraene-bildschirm-blaulicht"],
+      articles: ["migraene-bildschirm-blaulicht", "magnesium-bei-migraene", "migraene-am-wochenende", "migraene-am-morgen-schlaf", "migraene-ernaehrung-ausloeser", "luftdruck-migraene", "stress-und-migraene", "migraene-ausloeser-erkennen", "migraene-und-periode"],
     },
     it: {
       slug: "prevenire-emicrania",
@@ -205,7 +205,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Un attacco di emicrania raramente arriva per caso. Un sonno irregolare, un pasto saltato, una settimana stressante, un calo di pressione atmosferica o l'arrivo del ciclo possono far vacillare un cervello emicranico, più sensibile degli altri.",
         "Prevenire significa prima di tutto individuare i tuoi fattori scatenanti, che non sono per forza quelli degli altri, e poi modificare ciò che si può. Questi articoli fanno il punto su cosa dicono gli studi, sui falsi miti da dimenticare e sulle abitudini che aiutano davvero a diradare gli attacchi.",
       ],
-      articles: ["emicrania-e-schermi-luce-blu"],
+      articles: ["emicrania-e-schermi-luce-blu", "magnesio-emicrania", "emicrania-del-weekend", "mal-di-testa-al-risveglio-emicrania-sonno", "emicrania-e-alimentazione", "pressione-atmosferica-emicrania", "emicrania-da-stress", "fattori-scatenanti-emicrania", "emicrania-mestruale-ciclo-perche"],
     },
     es: {
       slug: "prevenir-migrana",
@@ -217,7 +217,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Una crisis de migraña rara vez llega por casualidad. Un sueño irregular, una comida saltada, una semana estresante, una bajada de la presión atmosférica o la llegada de la regla pueden desestabilizar un cerebro migrañoso, más sensible que los demás.",
         "Prevenir es, ante todo, identificar tus propios desencadenantes, que no son necesariamente los de los demás, y después ajustar lo que se pueda. Estos artículos repasan lo que dicen los estudios, los mitos que conviene olvidar y los hábitos que de verdad ayudan a espaciar las crisis.",
       ],
-      articles: ["migrana-y-pantallas-luz-azul"],
+      articles: ["migrana-y-pantallas-luz-azul", "magnesio-para-la-migrana", "migrana-de-fin-de-semana", "dolor-de-cabeza-al-despertar-migrana-sueno", "alimentos-que-provocan-migrana", "migrana-presion-atmosferica", "migrana-por-estres-circulo-vicioso", "desencadenantes-de-la-migrana-como-identificarlos", "migrana-menstrual-ciclo-crisis"],
     },
     "es-419": {
       slug: "prevenir-migrana",
@@ -229,7 +229,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Una crisis de migraña rara vez llega de la nada. Dormir a deshoras, saltarte una comida, una semana estresante, un descenso de la presión atmosférica o la llegada de tu periodo pueden desestabilizar un cerebro con migraña, que es más sensible que otros.",
         "Prevenir es, antes que nada, identificar tus propios desencadenantes, que no tienen por qué ser los de otras personas, y luego ajustar lo que se pueda. Estos artículos repasan lo que dicen los estudios, los mitos que puedes olvidar y los hábitos que de verdad ayudan a espaciar las crisis.",
       ],
-      articles: ["luz-azul-y-migrana"],
+      articles: ["luz-azul-y-migrana", "magnesio-para-la-migrana", "migrana-de-fin-de-semana", "dolor-de-cabeza-al-despertar-migrana-sueno", "alimentos-que-provocan-migrana", "migrana-presion-atmosferica", "migrana-por-estres-circulo-vicioso", "desencadenantes-de-la-migrana-como-identificarlos", "migrana-menstrual-ciclo-desencadena-crisis"],
     },
     pt: {
       slug: "prevenir-enxaqueca",
@@ -241,7 +241,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Uma crise de enxaqueca raramente surge por acaso. Um sono irregular, uma refeição saltada, uma semana stressante, uma descida da pressão atmosférica ou a chegada da menstruação podem desequilibrar um cérebro com enxaqueca, mais sensível do que os outros.",
         "Prevenir é, antes de mais, identificar os teus próprios fatores desencadeantes, que não são necessariamente os dos outros, e depois ajustar o que for possível. Estes artigos fazem o ponto da situação sobre o que dizem os estudos, os mitos a esquecer e os hábitos que ajudam mesmo a espaçar as crises.",
       ],
-      articles: ["enxaqueca-e-ecras-luz-azul"],
+      articles: ["enxaqueca-e-ecras-luz-azul", "magnesio-para-enxaqueca-forma-dose", "enxaqueca-ao-fim-de-semana", "dor-de-cabeca-ao-acordar-enxaqueca-sono", "alimentos-que-causam-enxaqueca", "pressao-atmosferica-enxaqueca", "enxaqueca-e-stress", "desencadeantes-da-enxaqueca", "enxaqueca-menstrual-ciclo-crises"],
     },
     "pt-BR": {
       slug: "prevenir-enxaqueca",
@@ -253,7 +253,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Uma crise de enxaqueca raramente aparece do nada. Sono irregular, uma refeição pulada, uma semana estressante, uma queda na pressão atmosférica ou a chegada da menstruação podem desequilibrar um cérebro com enxaqueca, que é mais sensível que os outros.",
         "Prevenir é, antes de tudo, identificar os seus próprios gatilhos, que não são necessariamente os de outras pessoas, e depois ajustar o que for possível. Estes artigos mostram o que dizem os estudos, os mitos que você pode esquecer e os hábitos que realmente ajudam a espaçar as crises.",
       ],
-      articles: ["luz-azul-enxaqueca-telas"],
+      articles: ["luz-azul-enxaqueca-telas", "magnesio-para-enxaqueca", "enxaqueca-de-fim-de-semana", "dor-de-cabeca-ao-acordar-enxaqueca-sono", "alimentos-que-causam-enxaqueca", "pressao-atmosferica-e-enxaqueca", "estresse-e-enxaqueca-ciclo-vicioso", "gatilhos-da-enxaqueca-como-identificar", "enxaqueca-menstrual-2"],
     },
   },
   manage: {
@@ -306,7 +306,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Wenn die Attacke da ist, zählt jede Minute. Die richtige Behandlung zu wählen und richtig einzunehmen, zu wissen, was ohne Medikamente hilft, und Medikamentenübergebrauch zu vermeiden, macht einen großen Unterschied.",
         "Wenn die Attacken häufig sind, gibt es weitere Möglichkeiten: vorbeugende Behandlungen wie CGRP-Therapien oder Botox und Strategien für menstruelle Migräne oder Migräne im Kindesalter. Diese Artikel helfen dir, diese Behandlungen zu verstehen, um mit deiner Ärztin oder deinem Arzt darüber zu sprechen. Sie ersetzen keinen ärztlichen Rat.",
       ],
-      articles: ["migraene-bei-kindern", "botox-migraene-preempt-schema"],
+      articles: ["migraene-bei-kindern", "botox-migraene-preempt-schema", "cgrp-antikoerper-migraene", "menstruelle-migraene", "triptane-bei-migraene", "migraene-hausmittel-ohne-medikamente"],
     },
     it: {
       slug: "gestire-emicrania",
@@ -318,7 +318,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Quando l'attacco arriva, ogni minuto conta. Scegliere e assumere bene la terapia, sapere cosa fare senza farmaci ed evitare l'abuso di farmaci fa davvero la differenza.",
         "Quando gli attacchi sono frequenti, esistono altre opzioni: terapie di profilassi come gli anti-CGRP o il Botox e strategie adatte all'emicrania mestruale o infantile. Questi articoli ti aiutano a capire queste terapie per parlarne con il tuo medico. Non sostituiscono il suo parere.",
       ],
-      articles: ["emicrania-nei-bambini", "botox-emicrania-cronica-protocollo-preempt"],
+      articles: ["emicrania-nei-bambini", "botox-emicrania-cronica-protocollo-preempt", "anticorpi-monoclonali-emicrania-anti-cgrp", "emicrania-mestruale", "triptani-emicrania", "rimedi-emicrania-senza-farmaci"],
     },
     es: {
       slug: "gestionar-migrana",
@@ -330,7 +330,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Cuando llega la crisis, cada minuto cuenta. Elegir bien el tratamiento y tomarlo correctamente, saber qué hacer sin medicamentos y evitar el abuso de medicación marca una gran diferencia.",
         "Cuando las crisis son frecuentes, existen otras opciones: tratamientos preventivos como los anti-CGRP o el bótox, y estrategias adaptadas a la migraña menstrual o infantil. Estos artículos te ayudan a entender estos tratamientos para hablarlo con tu médico. No sustituyen su opinión.",
       ],
-      articles: ["migrana-infantil-guia-para-padres", "botox-migrana-cronica-protocolo-preempt"],
+      articles: ["migrana-infantil-guia-para-padres", "botox-migrana-cronica-protocolo-preempt", "anti-cgrp-migrana-tratamiento-preventivo", "migrana-menstrual-regla", "triptanes-para-la-migrana", "como-aliviar-una-migrana-sin-medicamentos"],
     },
     "es-419": {
       slug: "manejar-migrana",
@@ -342,7 +342,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Cuando llega la crisis, cada minuto cuenta. Elegir bien tu tratamiento y tomarlo de la forma correcta, saber qué hacer sin medicamentos y evitar el uso excesivo de medicamentos hace una gran diferencia.",
         "Cuando las crisis son frecuentes, hay otras opciones: tratamientos preventivos como los anti-CGRP o el bótox, y estrategias pensadas para la migraña menstrual o la migraña en niños. Estos artículos te ayudan a entender estos tratamientos para que los platiques con tu médico. No reemplazan su opinión.",
       ],
-      articles: ["migrana-en-ninos-guia-para-padres", "botox-para-migrana-cronica-protocolo-preempt"],
+      articles: ["migrana-en-ninos-guia-para-padres", "botox-para-migrana-cronica-protocolo-preempt", "anti-cgrp-migrana-tratamiento-preventivo", "migrana-menstrual", "triptanes-para-la-migrana", "como-aliviar-una-migrana-sin-medicamentos"],
     },
     pt: {
       slug: "gerir-enxaqueca",
@@ -354,7 +354,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Quando a crise chega, cada minuto conta. Escolher e tomar bem o tratamento, saber o que fazer sem medicamentos e evitar o uso excessivo de medicação faz toda a diferença.",
         "Quando as crises são frequentes, existem outras opções: tratamentos preventivos como os anti-CGRP ou o Botox, e estratégias adaptadas à enxaqueca menstrual ou infantil. Estes artigos ajudam-te a compreender estes tratamentos para falares sobre eles com o teu médico. Não substituem a opinião dele.",
       ],
-      articles: ["enxaqueca-em-criancas-guia-para-pais", "botox-enxaqueca-cronica-protocolo-preempt"],
+      articles: ["enxaqueca-em-criancas-guia-para-pais", "botox-enxaqueca-cronica-protocolo-preempt", "anti-cgrp-enxaqueca-tratamento-preventivo", "enxaqueca-menstrual", "triptanos-enxaqueca", "aliviar-enxaqueca-sem-medicamentos"],
     },
     "pt-BR": {
       slug: "gerenciar-enxaqueca",
@@ -366,7 +366,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Quando a crise chega, cada minuto conta. Escolher bem o tratamento e tomá-lo do jeito certo, saber o que fazer sem remédio e evitar o uso excessivo de medicamentos faz muita diferença.",
         "Quando as crises são frequentes, existem outras opções: tratamentos preventivos como os anti-CGRP ou o Botox, e estratégias pensadas para a enxaqueca menstrual ou infantil. Estes artigos ajudam você a entender esses tratamentos para conversar com o seu médico. Eles não substituem a orientação médica.",
       ],
-      articles: ["enxaqueca-infantil-guia-para-pais", "botox-para-enxaqueca-cronica-protocolo-preempt"],
+      articles: ["enxaqueca-infantil-guia-para-pais", "botox-para-enxaqueca-cronica-protocolo-preempt", "anti-cgrp-enxaqueca-tratamento-preventivo", "enxaqueca-menstrual", "triptanos-para-enxaqueca", "como-aliviar-enxaqueca-sem-remedio"],
     },
   },
 };
