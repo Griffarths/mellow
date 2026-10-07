@@ -279,6 +279,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "botox-migraine-chronique",
         "migraine-catameniale",
         "migraine-enfant-adolescent",
+        "mal-de-tete-quand-aller-aux-urgences",
       ],
     },
     en: {
@@ -298,6 +299,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "botox-for-chronic-migraine",
         "menstrual-migraine",
         "migraine-in-children-and-teens",
+        "when-to-go-to-the-er-for-a-migraine",
       ],
     },
     de: {
@@ -310,7 +312,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Wenn die Attacke da ist, zählt jede Minute. Die richtige Behandlung zu wählen und richtig einzunehmen, zu wissen, was ohne Medikamente hilft, und Medikamentenübergebrauch zu vermeiden, macht einen großen Unterschied.",
         "Wenn die Attacken häufig sind, gibt es weitere Möglichkeiten: vorbeugende Behandlungen wie CGRP-Therapien oder Botox und Strategien für menstruelle Migräne oder Migräne im Kindesalter. Diese Artikel helfen dir, diese Behandlungen zu verstehen, um mit deiner Ärztin oder deinem Arzt darüber zu sprechen. Sie ersetzen keinen ärztlichen Rat.",
       ],
-      articles: ["migraene-bei-kindern", "botox-migraene-preempt-schema", "cgrp-antikoerper-migraene", "menstruelle-migraene", "triptane-bei-migraene", "migraene-hausmittel-ohne-medikamente"],
+      articles: ["migraene-bei-kindern", "botox-migraene-preempt-schema", "cgrp-antikoerper-migraene", "menstruelle-migraene", "triptane-bei-migraene", "migraene-hausmittel-ohne-medikamente", "kopfschmerzen-wann-zum-notarzt"],
     },
     it: {
       slug: "gestire-emicrania",
@@ -322,7 +324,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Quando l'attacco arriva, ogni minuto conta. Scegliere e assumere bene la terapia, sapere cosa fare senza farmaci ed evitare l'abuso di farmaci fa davvero la differenza.",
         "Quando gli attacchi sono frequenti, esistono altre opzioni: terapie di profilassi come gli anti-CGRP o il Botox e strategie adatte all'emicrania mestruale o infantile. Questi articoli ti aiutano a capire queste terapie per parlarne con il tuo medico. Non sostituiscono il suo parere.",
       ],
-      articles: ["emicrania-nei-bambini", "botox-emicrania-cronica-protocollo-preempt", "anticorpi-monoclonali-emicrania-anti-cgrp", "emicrania-mestruale", "triptani-emicrania", "rimedi-emicrania-senza-farmaci"],
+      articles: ["emicrania-nei-bambini", "botox-emicrania-cronica-protocollo-preempt", "anticorpi-monoclonali-emicrania-anti-cgrp", "emicrania-mestruale", "triptani-emicrania", "rimedi-emicrania-senza-farmaci", "mal-di-testa-quando-andare-al-pronto-soccorso"],
     },
     es: {
       slug: "gestionar-migrana",
@@ -334,7 +336,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Cuando llega la crisis, cada minuto cuenta. Elegir bien el tratamiento y tomarlo correctamente, saber qué hacer sin medicamentos y evitar el abuso de medicación marca una gran diferencia.",
         "Cuando las crisis son frecuentes, existen otras opciones: tratamientos preventivos como los anti-CGRP o el bótox, y estrategias adaptadas a la migraña menstrual o infantil. Estos artículos te ayudan a entender estos tratamientos para hablarlo con tu médico. No sustituyen su opinión.",
       ],
-      articles: ["migrana-infantil-guia-para-padres", "botox-migrana-cronica-protocolo-preempt", "anti-cgrp-migrana-tratamiento-preventivo", "migrana-menstrual-regla", "triptanes-para-la-migrana", "como-aliviar-una-migrana-sin-medicamentos"],
+      articles: ["migrana-infantil-guia-para-padres", "botox-migrana-cronica-protocolo-preempt", "anti-cgrp-migrana-tratamiento-preventivo", "migrana-menstrual-regla", "triptanes-para-la-migrana", "como-aliviar-una-migrana-sin-medicamentos", "cuando-ir-a-urgencias-por-dolor-de-cabeza"],
     },
     "es-419": {
       slug: "manejar-migrana",
@@ -346,7 +348,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Cuando llega la crisis, cada minuto cuenta. Elegir bien tu tratamiento y tomarlo de la forma correcta, saber qué hacer sin medicamentos y evitar el uso excesivo de medicamentos hace una gran diferencia.",
         "Cuando las crisis son frecuentes, hay otras opciones: tratamientos preventivos como los anti-CGRP o el bótox, y estrategias pensadas para la migraña menstrual o la migraña en niños. Estos artículos te ayudan a entender estos tratamientos para que los platiques con tu médico. No reemplazan su opinión.",
       ],
-      articles: ["migrana-en-ninos-guia-para-padres", "botox-para-migrana-cronica-protocolo-preempt", "anti-cgrp-migrana-tratamiento-preventivo", "migrana-menstrual", "triptanes-para-la-migrana", "como-aliviar-una-migrana-sin-medicamentos"],
+      articles: ["migrana-en-ninos-guia-para-padres", "botox-para-migrana-cronica-protocolo-preempt", "anti-cgrp-migrana-tratamiento-preventivo", "migrana-menstrual", "triptanes-para-la-migrana", "como-aliviar-una-migrana-sin-medicamentos", "cuando-ir-a-urgencias-por-dolor-de-cabeza"],
     },
     pt: {
       slug: "gerir-enxaqueca",
@@ -358,7 +360,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Quando a crise chega, cada minuto conta. Escolher e tomar bem o tratamento, saber o que fazer sem medicamentos e evitar o uso excessivo de medicação faz toda a diferença.",
         "Quando as crises são frequentes, existem outras opções: tratamentos preventivos como os anti-CGRP ou o Botox, e estratégias adaptadas à enxaqueca menstrual ou infantil. Estes artigos ajudam-te a compreender estes tratamentos para falares sobre eles com o teu médico. Não substituem a opinião dele.",
       ],
-      articles: ["enxaqueca-em-criancas-guia-para-pais", "botox-enxaqueca-cronica-protocolo-preempt", "anti-cgrp-enxaqueca-tratamento-preventivo", "enxaqueca-menstrual", "triptanos-enxaqueca", "aliviar-enxaqueca-sem-medicamentos"],
+      articles: ["enxaqueca-em-criancas-guia-para-pais", "botox-enxaqueca-cronica-protocolo-preempt", "anti-cgrp-enxaqueca-tratamento-preventivo", "enxaqueca-menstrual", "triptanos-enxaqueca", "aliviar-enxaqueca-sem-medicamentos", "dor-de-cabeca-quando-ir-as-urgencias"],
     },
     "pt-BR": {
       slug: "gerenciar-enxaqueca",
@@ -370,7 +372,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Quando a crise chega, cada minuto conta. Escolher bem o tratamento e tomá-lo do jeito certo, saber o que fazer sem remédio e evitar o uso excessivo de medicamentos faz muita diferença.",
         "Quando as crises são frequentes, existem outras opções: tratamentos preventivos como os anti-CGRP ou o Botox, e estratégias pensadas para a enxaqueca menstrual ou infantil. Estes artigos ajudam você a entender esses tratamentos para conversar com o seu médico. Eles não substituem a orientação médica.",
       ],
-      articles: ["enxaqueca-infantil-guia-para-pais", "botox-para-enxaqueca-cronica-protocolo-preempt", "anti-cgrp-enxaqueca-tratamento-preventivo", "enxaqueca-menstrual", "triptanos-para-enxaqueca", "como-aliviar-enxaqueca-sem-remedio"],
+      articles: ["enxaqueca-infantil-guia-para-pais", "botox-para-enxaqueca-cronica-protocolo-preempt", "anti-cgrp-enxaqueca-tratamento-preventivo", "enxaqueca-menstrual", "triptanos-para-enxaqueca", "como-aliviar-enxaqueca-sem-remedio", "dor-de-cabeca-quando-ir-ao-pronto-socorro"],
     },
   },
 };
