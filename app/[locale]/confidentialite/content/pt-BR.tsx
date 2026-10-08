@@ -4,7 +4,7 @@ export default function PrivacyContentPtBr() {
     <>
       <h1>Política de privacidade — Mellow</h1>
       <p>
-        <strong>Última atualização: 18 de abril de 2026</strong>
+        <strong>Última atualização: 8 de outubro de 2026</strong>
       </p>
 
       <p>
@@ -20,7 +20,7 @@ export default function PrivacyContentPtBr() {
           outro aplicativo nosso que aponte para esta política
         </li>
         <li>
-          Utiliza o Mellow. O Mellow é um aplicativo iOS para
+          Utiliza o Mellow. O Mellow é um aplicativo móvel para
           acompanhamento e gestão de enxaquecas. Permite que os usuários
           registrem episódios de enxaqueca, acompanhem gatilhos e
           tratamentos, monitorem a pressão atmosférica e acessem
@@ -151,6 +151,14 @@ export default function PrivacyContentPtBr() {
         <li>Dados de saúde</li>
       </ul>
       <p>
+        <em>Abraços entre usuários.</em> Se você ativar «Receber abraços» nas
+        configurações do aplicativo (desativado por padrão), outros usuários
+        do Mellow podem ver seu primeiro nome e há quanto tempo dura sua
+        enxaqueca atual, para poderem enviar um abraço a você. Nada mais sobre
+        você ou suas enxaquecas é mostrado. Também armazenamos os abraços que
+        você envia e recebe, e os usuários que você bloqueia.
+      </p>
+      <p>
         <strong>Dados de pagamento.</strong> Podemos coletar os dados
         necessários para processar seu pagamento se você optar por
         fazer compras, como o número do seu instrumento de pagamento e
@@ -193,10 +201,11 @@ export default function PrivacyContentPtBr() {
           dispositivo e informações sobre as funcionalidades acessadas.
         </li>
         <li>
-          <em>Notificações push.</em> Podemos solicitar enviar
-          notificações push sobre sua conta ou determinadas
-          funcionalidades. Se desejar não receber, pode desativá-las nas
-          configurações do dispositivo.
+          <em>Notificações push.</em> Podemos solicitar enviar notificações
+          push sobre sua conta ou determinadas funcionalidades, por exemplo
+          quando outro usuário envia um abraço para você. Para isso,
+          armazenamos um token de notificação do seu dispositivo. Se desejar
+          não receber, pode desativá-las nas configurações do dispositivo.
         </li>
       </ul>
       <p>
@@ -294,6 +303,14 @@ export default function PrivacyContentPtBr() {
             Para entregar e facilitar a entrega de serviços ao usuário.
           </strong>{" "}
           Podemos tratar seus dados para fornecer o serviço solicitado.
+        </li>
+        <li>
+          <strong>
+            Para permitir que os usuários se apoiem.
+          </strong>{" "}
+          Se você quiser, tratamos seu primeiro nome e a duração da sua
+          enxaqueca atual para que outros usuários possam enviar abraços a
+          você, e enviamos uma notificação quando você recebe um.
         </li>
         <li>
           <strong>
@@ -491,6 +508,10 @@ export default function PrivacyContentPtBr() {
         </li>
         <li>Faturamento e assinaturas: RevenueCat</li>
         <li>
+          Notificações push: Apple Push Notification service, Google Firebase
+          Cloud Messaging
+        </li>
+        <li>
           Cadastro e autenticação de conta: Apple (Sign In with Apple)
         </li>
         <li>Análise web e mobile: PostHog</li>
@@ -509,6 +530,15 @@ export default function PrivacyContentPtBr() {
           por outra empresa.
         </li>
       </ul>
+      <p>
+        <strong>Outros usuários do Mellow.</strong> Se você ativar «Receber
+        abraços», seu primeiro nome e a duração da sua enxaqueca atual ficam
+        visíveis para outros usuários do Mellow enquanto a enxaqueca durar.
+        Quando você envia um abraço, quem o recebe vê seu primeiro nome. Você
+        pode deixar de receber abraços a qualquer momento nas configurações do
+        aplicativo e bloquear um usuário que tenha enviado um abraço para
+        você.
+      </p>
 
       <h2>5. Seus dados são transferidos internacionalmente?</h2>
       <p>
@@ -646,6 +676,9 @@ export default function PrivacyContentPtBr() {
         seu consentimento, você tem o direito de retirá-lo a qualquer
         momento entrando em contato pelos meios da seção 13. Note que
         isso não afeta a legalidade do tratamento anterior à retirada.
+        Você pode deixar de compartilhar seu primeiro nome e sua enxaqueca
+        atual com outros usuários a qualquer momento, desativando «Receber
+        abraços» nas configurações do aplicativo.
       </p>
       <p>
         <strong>Informações da conta:</strong> Se a qualquer momento

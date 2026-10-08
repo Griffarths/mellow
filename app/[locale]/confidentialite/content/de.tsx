@@ -5,7 +5,7 @@ export default function PrivacyContentDe() {
     <>
       <h1>Datenschutzerklärung — Mellow</h1>
       <p>
-        <strong>Letzte Aktualisierung: 18. April 2026</strong>
+        <strong>Letzte Aktualisierung: 8. Oktober 2026</strong>
       </p>
 
       <p>
@@ -22,7 +22,7 @@ export default function PrivacyContentDe() {
           herunterlädst und nutzt
         </li>
         <li>
-          Mellow nutzt. Mellow ist eine iOS-App zur Nachverfolgung und
+          Mellow nutzt. Mellow ist eine mobile App zur Nachverfolgung und
           Verwaltung von Migräne. Sie ermöglicht es Nutzern,
           Migräneepisoden zu erfassen, Auslöser und Behandlungen zu
           verfolgen, den Luftdruck zu überwachen und auf Bildungsinhalte zu
@@ -167,6 +167,15 @@ export default function PrivacyContentDe() {
         <li>Gesundheitsdaten</li>
       </ul>
       <p>
+        <em>Umarmungen zwischen Nutzern.</em> Wenn du in den App-Einstellungen
+        „Umarmungen empfangen" aktivierst (standardmäßig ausgeschaltet),
+        können andere Mellow-Nutzer deinen Vornamen sehen und wie lange deine
+        aktuelle Migräne schon dauert, damit sie dir eine Umarmung schicken
+        können. Sonst wird nichts über dich oder deine Migräne angezeigt.
+        Außerdem speichern wir die Umarmungen, die du sendest und empfängst,
+        sowie die Nutzer, die du blockierst.
+      </p>
+      <p>
         <strong>Zahlungsdaten.</strong> Wir können die zur Bearbeitung
         deiner Zahlung erforderlichen Daten erheben, wenn du Käufe tätigst,
         z.&nbsp;B. die Nummer deines Zahlungsmittels und den zugehörigen
@@ -207,9 +216,11 @@ export default function PrivacyContentDe() {
         </li>
         <li>
           <em>Push-Benachrichtigungen.</em> Wir können dir
-          Push-Benachrichtigungen zu deinem Konto oder bestimmten
-          Funktionen senden. Du kannst sie in den Geräteeinstellungen
-          deaktivieren.
+          Push-Benachrichtigungen zu deinem Konto oder bestimmten Funktionen
+          der App senden, zum Beispiel wenn dir ein anderer Nutzer eine
+          Umarmung schickt. Dafür speichern wir ein Benachrichtigungs-Token
+          für dein Gerät. Du kannst die Benachrichtigungen in den
+          Geräteeinstellungen deaktivieren.
         </li>
       </ul>
       <p>
@@ -309,6 +320,14 @@ export default function PrivacyContentDe() {
           </strong>{" "}
           Wir können deine Daten verarbeiten, um dir den angeforderten
           Dienst bereitzustellen.
+        </li>
+        <li>
+          <strong>
+            Damit sich Nutzer gegenseitig unterstützen können.
+          </strong>{" "}
+          Wenn du es möchtest, verarbeiten wir deinen Vornamen und die Dauer
+          deiner aktuellen Migräne, damit andere Nutzer dir Umarmungen
+          schicken können, und benachrichtigen dich, wenn du eine erhältst.
         </li>
         <li>
           <strong>
@@ -516,6 +535,10 @@ export default function PrivacyContentDe() {
         </li>
         <li>Rechnungsstellung und Abrechnung: RevenueCat</li>
         <li>
+          Push-Benachrichtigungen: Apple Push Notification service, Google
+          Firebase Cloud Messaging
+        </li>
+        <li>
           Kontoregistrierung und -authentifizierung: Apple (Sign In with
           Apple)
         </li>
@@ -535,6 +558,15 @@ export default function PrivacyContentDe() {
           anderes Unternehmen teilen oder übertragen.
         </li>
       </ul>
+      <p>
+        <strong>Andere Mellow-Nutzer.</strong> Wenn du „Umarmungen empfangen"
+        aktivierst, sind dein Vorname und die Dauer deiner aktuellen Migräne
+        für andere Mellow-Nutzer sichtbar, solange deine Migräne andauert.
+        Wenn du eine Umarmung sendest, sieht die Person, die sie erhält,
+        deinen Vornamen. Du kannst in den App-Einstellungen jederzeit
+        aufhören, Umarmungen zu empfangen, und einen Nutzer blockieren, der
+        dir eine Umarmung geschickt hat.
+      </p>
 
       <h2>5. Werden deine Daten international übermittelt?</h2>
       <p>
@@ -675,6 +707,9 @@ export default function PrivacyContentDe() {
         Abschnitt 13 angegebenen Kontaktdaten widerrufen. Beachte, dass
         dies die Rechtmäßigkeit der Verarbeitung vor dem Widerruf nicht
         beeinträchtigt.
+        Du kannst jederzeit aufhören, deinen Vornamen und deine aktuelle
+        Migräne mit anderen Nutzern zu teilen, indem du „Umarmungen empfangen"
+        in den App-Einstellungen deaktivierst.
       </p>
       <p>
         <strong>Kontoinformationen:</strong> Wenn du jederzeit deine

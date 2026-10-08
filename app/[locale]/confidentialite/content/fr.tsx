@@ -5,7 +5,7 @@ export default function PrivacyContentFr() {
     <>
       <h1>Politique de confidentialité — Mellow</h1>
       <p>
-        <strong>Dernière mise à jour : 18 avril 2026</strong>
+        <strong>Dernière mise à jour : 8 octobre 2026</strong>
       </p>
 
       <p>
@@ -22,7 +22,7 @@ export default function PrivacyContentFr() {
           autre application qui renvoie à la présente politique
         </li>
         <li>
-          Utilises Mellow. Mellow est une application iOS de suivi et de
+          Utilises Mellow. Mellow est une application mobile de suivi et de
           gestion des migraines. Elle permet d&apos;enregistrer les épisodes
           migraineux, de suivre les déclencheurs et les traitements, de
           surveiller la pression atmosphérique et d&apos;accéder à du contenu
@@ -156,6 +156,15 @@ export default function PrivacyContentFr() {
         <li>Données de santé</li>
       </ul>
       <p>
+        <em>Câlins entre utilisateurs.</em> Si tu actives «&nbsp;Recevoir des
+        câlins&nbsp;» dans les réglages de l&apos;application (désactivé par
+        défaut), les autres utilisateurs de Mellow peuvent voir ton prénom et
+        depuis combien de temps dure ta migraine en cours, pour pouvoir
+        t&apos;envoyer un câlin. Rien d&apos;autre sur toi ou sur tes
+        migraines n&apos;est affiché. Nous conservons aussi les câlins que tu
+        envoies et que tu reçois, ainsi que les utilisateurs que tu bloques.
+      </p>
+      <p>
         <strong>Données de paiement.</strong> Nous pouvons collecter les
         données nécessaires au traitement de tes paiements si tu choisis
         d&apos;effectuer des achats, comme le numéro de ton instrument de
@@ -202,7 +211,9 @@ export default function PrivacyContentFr() {
         <li>
           <em>Notifications push.</em> Nous pouvons demander à t&apos;envoyer
           des notifications push concernant ton compte ou certaines
-          fonctionnalités de l&apos;application. Si tu souhaites te
+          fonctionnalités de l&apos;application, par exemple quand un autre
+          utilisateur t&apos;envoie un câlin. Pour cela, nous enregistrons un
+          jeton de notification pour ton appareil. Si tu souhaites te
           désinscrire, tu peux les désactiver depuis les réglages de ton
           appareil.
         </li>
@@ -309,6 +320,15 @@ export default function PrivacyContentFr() {
           </strong>{" "}
           Nous pouvons traiter tes informations pour te fournir le service
           demandé.
+        </li>
+        <li>
+          <strong>
+            Pour permettre aux utilisateurs de se soutenir.
+          </strong>{" "}
+          Si tu le choisis, nous traitons ton prénom et la durée de ta
+          migraine en cours pour permettre à d&apos;autres utilisateurs de
+          t&apos;envoyer des câlins, et nous t&apos;envoyons une notification
+          quand tu en reçois un.
         </li>
         <li>
           <strong>
@@ -525,6 +545,10 @@ export default function PrivacyContentFr() {
         </li>
         <li>Facturation et abonnements : RevenueCat</li>
         <li>
+          Notifications push : Apple Push Notification service, Google
+          Firebase Cloud Messaging
+        </li>
+        <li>
           Inscription et authentification de compte utilisateur : Apple (Sign
           In with Apple)
         </li>
@@ -544,6 +568,15 @@ export default function PrivacyContentFr() {
           société.
         </li>
       </ul>
+      <p>
+        <strong>Autres utilisateurs de Mellow.</strong> Si tu actives
+        «&nbsp;Recevoir des câlins&nbsp;», ton prénom et la durée de ta
+        migraine en cours sont visibles par les autres utilisateurs de Mellow
+        tant que ta migraine dure. Quand tu envoies un câlin, la personne qui
+        le reçoit voit ton prénom. Tu peux arrêter de recevoir des câlins à
+        tout moment dans les réglages de l&apos;application, et bloquer un
+        utilisateur qui t&apos;a envoyé un câlin.
+      </p>
 
       <h2>5. Tes informations sont-elles transférées à l&apos;international ?</h2>
       <p>
@@ -692,6 +725,9 @@ export default function PrivacyContentFr() {
         contactant via les coordonnées de la section 13 ci-dessous. Note que
         cela n&apos;affectera pas la légalité du traitement antérieur au
         retrait.
+        Tu peux arrêter à tout moment de partager ton prénom et ta migraine en
+        cours avec les autres utilisateurs en désactivant «&nbsp;Recevoir des
+        câlins&nbsp;» dans les réglages de l&apos;application.
       </p>
       <p>
         <strong>Informations du compte :</strong> Si tu souhaites à tout

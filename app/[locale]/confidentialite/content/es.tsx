@@ -4,7 +4,7 @@ export default function PrivacyContentEs() {
     <>
       <h1>Política de privacidad — Mellow</h1>
       <p>
-        <strong>Última actualización: 18 de abril de 2026</strong>
+        <strong>Última actualización: 8 de octubre de 2026</strong>
       </p>
 
       <p>
@@ -20,7 +20,7 @@ export default function PrivacyContentEs() {
           cualquier otra aplicación nuestra que enlace con esta política
         </li>
         <li>
-          Utilizas Mellow. Mellow es una aplicación iOS para el seguimiento
+          Utilizas Mellow. Mellow es una aplicación móvil para el seguimiento
           y la gestión de migrañas. Permite a los usuarios registrar
           episodios migrañosos, hacer seguimiento de desencadenantes y
           tratamientos, monitorear la presión atmosférica y acceder a
@@ -158,6 +158,14 @@ export default function PrivacyContentEs() {
         <li>Datos de salud</li>
       </ul>
       <p>
+        <em>Abrazos entre usuarios.</em> Si activas «Recibir abrazos» en los
+        ajustes de la app (desactivado por defecto), otros usuarios de Mellow
+        pueden ver tu nombre y cuánto dura ya tu migraña en curso, para poder
+        enviarte un abrazo. No se muestra nada más sobre ti ni sobre tus
+        migrañas. También guardamos los abrazos que envías y recibes, y los
+        usuarios que bloqueas.
+      </p>
+      <p>
         <strong>Datos de pago.</strong> Podemos recopilar los datos
         necesarios para procesar tu pago si decides realizar compras, como
         el número de tu instrumento de pago y el código de seguridad
@@ -200,9 +208,10 @@ export default function PrivacyContentEs() {
         </li>
         <li>
           <em>Notificaciones push.</em> Podemos solicitar enviarte
-          notificaciones push sobre tu cuenta o ciertas funciones de la
-          app. Si deseas no recibirlas, puedes desactivarlas desde los
-          ajustes del dispositivo.
+          notificaciones push sobre tu cuenta o ciertas funciones de la app,
+          por ejemplo cuando otro usuario te envía un abrazo. Para ello,
+          guardamos un token de notificación de tu dispositivo. Si deseas no
+          recibirlas, puedes desactivarlas desde los ajustes del dispositivo.
         </li>
       </ul>
       <p>
@@ -298,6 +307,14 @@ export default function PrivacyContentEs() {
           </strong>{" "}
           Podemos tratar tus datos para proporcionarte el servicio
           solicitado.
+        </li>
+        <li>
+          <strong>
+            Para que los usuarios puedan apoyarse.
+          </strong>{" "}
+          Si así lo eliges, tratamos tu nombre y la duración de tu migraña en
+          curso para que otros usuarios puedan enviarte abrazos, y te enviamos
+          una notificación cuando recibes uno.
         </li>
         <li>
           <strong>
@@ -500,6 +517,10 @@ export default function PrivacyContentEs() {
         </li>
         <li>Facturación y suscripciones: RevenueCat</li>
         <li>
+          Notificaciones push: Apple Push Notification service, Google
+          Firebase Cloud Messaging
+        </li>
+        <li>
           Registro y autenticación de cuenta: Apple (Sign In with Apple)
         </li>
         <li>Analítica web y móvil: PostHog</li>
@@ -517,6 +538,14 @@ export default function PrivacyContentEs() {
           adquisición total o parcial de nuestro negocio por otra empresa.
         </li>
       </ul>
+      <p>
+        <strong>Otros usuarios de Mellow.</strong> Si activas «Recibir
+        abrazos», tu nombre y la duración de tu migraña en curso se muestran a
+        otros usuarios de Mellow mientras dura la migraña. Cuando envías un
+        abrazo, quien lo recibe ve tu nombre. Puedes dejar de recibir abrazos
+        en cualquier momento desde los ajustes de la app y bloquear a un
+        usuario que te haya enviado un abrazo.
+      </p>
 
       <h2>5. ¿Se transfieren tus datos a nivel internacional?</h2>
       <p>
@@ -655,6 +684,9 @@ export default function PrivacyContentEs() {
         momento contactándonos mediante los datos de la sección 13. Ten
         en cuenta que esto no afectará a la legalidad del tratamiento
         previo a la retirada.
+        Puedes dejar de compartir tu nombre y tu migraña en curso con otros
+        usuarios en cualquier momento desactivando «Recibir abrazos» en los
+        ajustes de la app.
       </p>
       <p>
         <strong>Información de la cuenta:</strong> Si en algún momento

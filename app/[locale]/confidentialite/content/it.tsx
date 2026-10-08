@@ -5,7 +5,7 @@ export default function PrivacyContentIt() {
     <>
       <h1>Informativa sulla privacy — Mellow</h1>
       <p>
-        <strong>Ultimo aggiornamento: 18 aprile 2026</strong>
+        <strong>Ultimo aggiornamento: 8 ottobre 2026</strong>
       </p>
 
       <p>
@@ -22,7 +22,7 @@ export default function PrivacyContentIt() {
           informativa
         </li>
         <li>
-          Utilizzi Mellow. Mellow è un&apos;applicazione iOS per il
+          Utilizzi Mellow. Mellow è un&apos;applicazione mobile per il
           monitoraggio e la gestione delle emicranie. Permette agli utenti
           di registrare gli episodi di emicrania, monitorare i trigger e i
           trattamenti, controllare la pressione atmosferica e accedere a
@@ -157,6 +157,15 @@ export default function PrivacyContentIt() {
         <li>Dati sanitari</li>
       </ul>
       <p>
+        <em>Abbracci tra utenti.</em> Se attivi «Ricevere abbracci» nelle
+        impostazioni dell&apos;app (disattivato per impostazione predefinita),
+        gli altri utenti di Mellow possono vedere il tuo nome e da quanto
+        tempo dura la tua emicrania in corso, per poterti inviare un
+        abbraccio. Non viene mostrato nient&apos;altro su di te o sulle tue
+        emicranie. Conserviamo inoltre gli abbracci che invii e ricevi e gli
+        utenti che blocchi.
+      </p>
+      <p>
         <strong>Dati di pagamento.</strong> Possiamo raccogliere i dati
         necessari per elaborare i tuoi pagamenti se scegli di effettuare
         acquisti, come il numero del tuo strumento di pagamento e il codice
@@ -199,9 +208,10 @@ export default function PrivacyContentIt() {
         </li>
         <li>
           <em>Notifiche push.</em> Possiamo richiedere di inviarti notifiche
-          push relative al tuo account o ad alcune funzionalità. Se
-          desideri non riceverle, puoi disattivarle dalle impostazioni del
-          dispositivo.
+          push relative al tuo account o ad alcune funzionalità, ad esempio
+          quando un altro utente ti invia un abbraccio. Per farlo, conserviamo
+          un token di notifica per il tuo dispositivo. Se desideri non
+          riceverle, puoi disattivarle dalle impostazioni del dispositivo.
         </li>
       </ul>
       <p>
@@ -298,6 +308,14 @@ export default function PrivacyContentIt() {
             all&apos;utente.
           </strong>{" "}
           Possiamo trattare i tuoi dati per fornirti il servizio richiesto.
+        </li>
+        <li>
+          <strong>
+            Per permettere agli utenti di sostenersi a vicenda.
+          </strong>{" "}
+          Se lo scegli, trattiamo il tuo nome e la durata della tua emicrania
+          in corso per permettere ad altri utenti di inviarti abbracci, e ti
+          inviamo una notifica quando ne ricevi uno.
         </li>
         <li>
           <strong>
@@ -493,6 +511,10 @@ export default function PrivacyContentIt() {
         </li>
         <li>Fatturazione e abbonamenti: RevenueCat</li>
         <li>
+          Notifiche push: Apple Push Notification service, Google Firebase
+          Cloud Messaging
+        </li>
+        <li>
           Registrazione e autenticazione account: Apple (Sign In with
           Apple)
         </li>
@@ -512,6 +534,14 @@ export default function PrivacyContentIt() {
           società.
         </li>
       </ul>
+      <p>
+        <strong>Altri utenti di Mellow.</strong> Se attivi «Ricevere
+        abbracci», il tuo nome e la durata della tua emicrania in corso sono
+        visibili agli altri utenti di Mellow finché l&apos;emicrania è in
+        corso. Quando invii un abbraccio, chi lo riceve vede il tuo nome. Puoi
+        smettere di ricevere abbracci in qualsiasi momento nelle impostazioni
+        dell&apos;app e bloccare un utente che ti ha inviato un abbraccio.
+      </p>
 
       <h2>5. I tuoi dati vengono trasferiti all&apos;estero?</h2>
       <p>
@@ -652,6 +682,9 @@ export default function PrivacyContentIt() {
         contattandoci tramite i recapiti della sezione 13. Tieni presente
         che ciò non incide sulla legalità del trattamento precedente alla
         revoca.
+        Puoi smettere in qualsiasi momento di condividere il tuo nome e la tua
+        emicrania in corso con gli altri utenti disattivando «Ricevere
+        abbracci» nelle impostazioni dell&apos;app.
       </p>
       <p>
         <strong>Informazioni sull&apos;account:</strong> Se desideri in

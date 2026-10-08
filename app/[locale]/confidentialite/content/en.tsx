@@ -5,7 +5,7 @@ export default function PrivacyContentEn() {
     <>
       <h1>Privacy Policy — Mellow</h1>
       <p>
-        <strong>Last updated: April 18, 2026</strong>
+        <strong>Last updated: October 8, 2026</strong>
       </p>
 
       <p>
@@ -21,7 +21,7 @@ export default function PrivacyContentEn() {
           application of ours that links to this Privacy Notice
         </li>
         <li>
-          Use Mellow. Mellow is an iOS app for tracking and managing
+          Use Mellow. Mellow is a mobile app for tracking and managing
           migraines. It allows users to log migraine episodes, track triggers
           and treatments, monitor atmospheric pressure, and access educational
           content about migraines.
@@ -152,6 +152,14 @@ export default function PrivacyContentEn() {
         <li>Health data</li>
       </ul>
       <p>
+        <em>Hugs between users.</em> If you turn on &quot;Receive hugs&quot;
+        in the app settings (this is off by default), other Mellow users can
+        see your first name and how long your current migraine has lasted, so
+        they can send you a hug. Nothing else about you or your migraines is
+        shown. We also store the hugs you send and receive, and the users you
+        block.
+      </p>
+      <p>
         <strong>Payment Data.</strong> We may collect data necessary to
         process your payment if you choose to make purchases, such as your
         payment instrument number, and the security code associated with your
@@ -197,9 +205,10 @@ export default function PrivacyContentEn() {
         <li>
           <em>Push Notifications.</em> We may request to send you push
           notifications regarding your account or certain features of the
-          application(s). If you wish to opt out from receiving these types
-          of communications, you may turn them off in your device&apos;s
-          settings.
+          application(s), such as when another user sends you a hug. To do so,
+          we store a notification token for your device. If you wish to opt
+          out from receiving these types of communications, you may turn them
+          off in your device&apos;s settings.
         </li>
       </ul>
       <p>
@@ -295,6 +304,14 @@ export default function PrivacyContentEn() {
           </strong>{" "}
           We may process your information to provide you with the requested
           service.
+        </li>
+        <li>
+          <strong>
+            To let users support each other.
+          </strong>{" "}
+          If you choose to, we process your first name and the duration of
+          your current migraine to let other users send you hugs, and we send
+          you a notification when you receive one.
         </li>
         <li>
           <strong>To respond to user inquiries/offer support to users.</strong>{" "}
@@ -482,6 +499,10 @@ export default function PrivacyContentEn() {
         </li>
         <li>Invoice and Billing: RevenueCat</li>
         <li>
+          Push Notifications: Apple Push Notification service, Google Firebase
+          Cloud Messaging
+        </li>
+        <li>
           User Account Registration and Authentication: Apple (Sign In with
           Apple)
         </li>
@@ -500,6 +521,14 @@ export default function PrivacyContentEn() {
           a portion of our business to another company.
         </li>
       </ul>
+      <p>
+        <strong>Other Mellow users.</strong> If you turn on &quot;Receive
+        hugs&quot;, your first name and the duration of your current migraine
+        are shown to other Mellow users while your migraine is ongoing. When
+        you send a hug, the recipient sees your first name. You can stop
+        receiving hugs at any time in the app settings, and block a user who
+        sent you a hug.
+      </p>
 
       <h2>5. Is your information transferred internationally?</h2>
       <p>
@@ -639,6 +668,9 @@ export default function PrivacyContentEn() {
         any time by contacting us using the contact details provided in
         section 13 below. Please note that this will not affect the
         lawfulness of the processing before its withdrawal.
+        You can stop sharing your first name and current migraine with other
+        users at any time by turning off &quot;Receive hugs&quot; in the app
+        settings.
       </p>
       <p>
         <strong>Account Information:</strong> If you would at any time like
