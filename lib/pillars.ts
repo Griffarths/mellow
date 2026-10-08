@@ -42,6 +42,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "glossaire-migraine",
         "migraine-hereditaire-genetique-transmission",
         "migraine-sans-aura",
+        "types-de-migraine",
       ],
     },
     en: {
@@ -64,6 +65,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-glossary",
         "is-migraine-hereditary",
         "migraine-without-aura",
+        "types-of-migraine",
       ],
     },
     de: {
@@ -76,7 +78,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "Migräne ist nicht einfach nur starker Kopfschmerz. Sie ist eine neurologische Erkrankung mit eigenen Mechanismen, Phasen und besonderen Formen wie der Aura. Wer sie versteht, lebt schon besser mit ihr: Du weißt, was mit dir passiert, erkennst die Anzeichen und sprichst leichter mit deiner Ärztin oder deinem Arzt darüber.",
         "Diese Artikel erklären dir einfach, was vor, während und nach einer Attacke passiert, wie du Migräne von Spannungskopfschmerz unterscheidest, wie lange eine Attacke dauert und wann dich tägliche Kopfschmerzen aufhorchen lassen sollten.",
       ],
-      articles: ["migraene-erblich", "migraene-glossar", "jeden-tag-kopfschmerzen", "augenmigraene", "migraene-statistik-zahlen", "migraene-mit-aura", "wie-lange-dauert-eine-migraene", "migraene-oder-kopfschmerzen-unterschied", "migraene-ohne-aura"],
+      articles: ["migraene-erblich", "migraene-glossar", "jeden-tag-kopfschmerzen", "augenmigraene", "migraene-statistik-zahlen", "migraene-mit-aura", "wie-lange-dauert-eine-migraene", "migraene-oder-kopfschmerzen-unterschied", "migraene-ohne-aura", "migraene-arten-formen-ueberblick"],
     },
     it: {
       slug: "capire-emicrania",
@@ -88,7 +90,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "L'emicrania non è un semplice mal di testa. È una malattia neurologica, con i suoi meccanismi, le sue fasi e forme particolari come l'aura. Capirla significa già viverla meglio: sai cosa ti succede, riconosci i segnali e ne parli più facilmente con il tuo medico.",
         "Questi articoli ti spiegano in modo semplice cosa succede prima, durante e dopo un attacco, come distinguere l'emicrania da una cefalea tensiva, quanto dura un attacco e quando un mal di testa quotidiano deve metterti in allerta.",
       ],
-      articles: ["emicrania-ereditaria", "glossario-emicrania", "mal-di-testa-tutti-i-giorni", "emicrania-oftalmica", "emicrania-statistiche-mondo-italia", "emicrania-con-aura-sintomi", "quanto-dura-emicrania", "differenza-tra-emicrania-e-mal-di-testa", "emicrania-senza-aura-sintomi-durata"],
+      articles: ["emicrania-ereditaria", "glossario-emicrania", "mal-di-testa-tutti-i-giorni", "emicrania-oftalmica", "emicrania-statistiche-mondo-italia", "emicrania-con-aura-sintomi", "quanto-dura-emicrania", "differenza-tra-emicrania-e-mal-di-testa", "emicrania-senza-aura-sintomi-durata", "tipi-di-emicrania"],
     },
     es: {
       slug: "comprender-migrana",
@@ -100,7 +102,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "La migraña no es un simple dolor de cabeza. Es una enfermedad neurológica, con sus mecanismos, sus fases y formas particulares como el aura. Comprenderla ya es vivirla mejor: sabes lo que te pasa, reconoces las señales y hablas de ello con más facilidad con tu médico.",
         "Estos artículos te explican de forma sencilla qué ocurre antes, durante y después de una crisis, cómo distinguir una migraña de una cefalea tensional, cuánto dura una crisis y cuándo un dolor de cabeza diario debe ponerte en alerta.",
       ],
-      articles: ["migrana-hereditaria-genetica", "glosario-de-migrana", "dolor-de-cabeza-todos-los-dias", "migrana-ocular-que-es-sintomas", "migrana-en-cifras", "migrana-con-aura-sintomas", "cuanto-dura-una-migrana", "diferencia-migrana-dolor-de-cabeza", "migrana-sin-aura-sintomas-duracion"],
+      articles: ["migrana-hereditaria-genetica", "glosario-de-migrana", "dolor-de-cabeza-todos-los-dias", "migrana-ocular-que-es-sintomas", "migrana-en-cifras", "migrana-con-aura-sintomas", "cuanto-dura-una-migrana", "diferencia-migrana-dolor-de-cabeza", "migrana-sin-aura-sintomas-duracion", "tipos-de-migrana"],
     },
     "es-419": {
       slug: "comprender-migrana",
@@ -112,7 +114,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "La migraña no es un simple dolor de cabeza. Es una enfermedad neurológica, con sus mecanismos, sus fases y formas particulares como el aura. Entenderla ya es vivirla mejor: sabes lo que te está pasando, reconoces las señales y te resulta más fácil hablarlo con tu médico.",
         "Estos artículos te explican de forma sencilla qué pasa antes, durante y después de una crisis, cómo diferenciar una migraña de una cefalea tensional, cuánto dura una crisis y cuándo un dolor de cabeza diario debe preocuparte.",
       ],
-      articles: ["la-migrana-es-hereditaria", "glosario-de-migrana", "dolor-de-cabeza-todos-los-dias", "migrana-ocular-que-es-sintomas", "estadisticas-de-migrana", "migrana-con-aura-senales-antes-de-la-crisis", "cuanto-dura-una-migrana", "diferencia-migrana-dolor-de-cabeza", "migrana-sin-aura-sintomas-duracion"],
+      articles: ["la-migrana-es-hereditaria", "glosario-de-migrana", "dolor-de-cabeza-todos-los-dias", "migrana-ocular-que-es-sintomas", "estadisticas-de-migrana", "migrana-con-aura-senales-antes-de-la-crisis", "cuanto-dura-una-migrana", "diferencia-migrana-dolor-de-cabeza", "migrana-sin-aura-sintomas-duracion", "tipos-de-migrana"],
     },
     pt: {
       slug: "compreender-enxaqueca",
@@ -124,7 +126,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "A enxaqueca não é uma simples dor de cabeça. É uma doença neurológica, com os seus mecanismos, as suas fases e formas particulares, como a aura. Compreendê-la já é vivê-la melhor: sabes o que te está a acontecer, reconheces os sinais e falas sobre isso mais facilmente com o teu médico.",
         "Estes artigos explicam-te de forma simples o que acontece antes, durante e depois de uma crise, como distinguir uma enxaqueca de uma cefaleia de tensão, quanto tempo dura uma crise e quando uma dor de cabeça diária deve alertar-te.",
       ],
-      articles: ["enxaqueca-hereditaria", "glossario-enxaqueca", "dor-de-cabeca-todos-os-dias", "enxaqueca-ocular-oftalmica", "enxaqueca-em-numeros", "enxaqueca-com-aura-sinais-antes-da-crise", "quanto-tempo-dura-uma-enxaqueca", "diferenca-entre-enxaqueca-e-dor-de-cabeca", "enxaqueca-sem-aura-sintomas-duracao"],
+      articles: ["enxaqueca-hereditaria", "glossario-enxaqueca", "dor-de-cabeca-todos-os-dias", "enxaqueca-ocular-oftalmica", "enxaqueca-em-numeros", "enxaqueca-com-aura-sinais-antes-da-crise", "quanto-tempo-dura-uma-enxaqueca", "diferenca-entre-enxaqueca-e-dor-de-cabeca", "enxaqueca-sem-aura-sintomas-duracao", "tipos-de-enxaqueca"],
     },
     "pt-BR": {
       slug: "entender-enxaqueca",
@@ -136,7 +138,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "A enxaqueca não é uma simples dor de cabeça. É uma doença neurológica, com seus mecanismos, suas fases e formas específicas, como a aura. Entender a enxaqueca já é conviver melhor com ela: você sabe o que está acontecendo, reconhece os sinais e conversa com mais facilidade com o seu médico.",
         "Estes artigos explicam de forma simples o que acontece antes, durante e depois de uma crise, como diferenciar uma enxaqueca de uma cefaleia tensional, quanto tempo dura uma crise e quando uma dor de cabeça diária deve acender um alerta.",
       ],
-      articles: ["enxaqueca-e-hereditaria", "glossario-da-enxaqueca", "dor-de-cabeca-todos-os-dias", "enxaqueca-ocular-aura-visual", "enxaqueca-em-numeros", "enxaqueca-com-aura-sinais-antes-da-crise", "quanto-tempo-dura-uma-crise-de-enxaqueca", "diferenca-entre-enxaqueca-e-dor-de-cabeca", "enxaqueca-sem-aura-sintomas-duracao"],
+      articles: ["enxaqueca-e-hereditaria", "glossario-da-enxaqueca", "dor-de-cabeca-todos-os-dias", "enxaqueca-ocular-aura-visual", "enxaqueca-em-numeros", "enxaqueca-com-aura-sinais-antes-da-crise", "quanto-tempo-dura-uma-crise-de-enxaqueca", "diferenca-entre-enxaqueca-e-dor-de-cabeca", "enxaqueca-sem-aura-sintomas-duracao", "tipos-de-enxaqueca"],
     },
   },
   prevent: {
