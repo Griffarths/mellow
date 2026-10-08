@@ -347,6 +347,14 @@ export default function PrivacyContentIt() {
         </li>
         <li>
           <strong>
+            Per misurare l&apos;efficacia delle nostre campagne pubblicitarie.
+          </strong>{" "}
+          Se autorizzi il tracciamento nella richiesta di iOS, trasmettiamo a
+          Meta e TikTok i dati descritti nella sezione 4, per capire quali
+          campagne portano a installazioni e abbonamenti.
+        </li>
+        <li>
+          <strong>
             Per salvaguardare o proteggere gli interessi vitali di una
             persona.
           </strong>{" "}
@@ -519,8 +527,30 @@ export default function PrivacyContentIt() {
           Apple)
         </li>
         <li>Analisi web e mobile: PostHog</li>
+        <li>
+          Misurazione delle campagne pubblicitarie: Meta (Facebook SDK, API
+          Conversions)
+        </li>
+        <li>
+          Misurazione delle campagne pubblicitarie: TikTok (TikTok Business
+          SDK)
+        </li>
         <li>Test dell&apos;applicazione: TestFlight</li>
       </ul>
+      <p>
+        <strong>Misurazione delle campagne pubblicitarie.</strong> Usiamo Meta
+        e TikTok per misurare l&apos;efficacia delle nostre campagne
+        pubblicitarie, solo se lo accetti. Finché non autorizzi il
+        tracciamento nella richiesta di iOS, i loro SDK non sono attivati e
+        non viene trasmesso loro alcun dato. Se autorizzi il tracciamento,
+        trasmettiamo loro il tuo identificativo pubblicitario, il tuo
+        indirizzo IP, informazioni sul tuo dispositivo (modello, versione del
+        sistema) e gli eventi di installazione, apertura dell&apos;app, inizio
+        della prova e abbonamento. Nessun dato sanitario che inserisci
+        nell&apos;app (attacchi, sintomi, fattori scatenanti, note) viene
+        trasmesso loro, in nessun caso. Puoi revocare il consenso in qualsiasi
+        momento in Impostazioni &gt; Privacy e sicurezza &gt; Tracciamento.
+      </p>
       <p>
         Potremmo anche dover condividere i tuoi dati personali nelle
         seguenti situazioni:
@@ -554,6 +584,11 @@ export default function PrivacyContentIt() {
         trasferiti, archiviati e trattati nelle nostre strutture e in
         quelle dei terzi con cui possiamo condividerli, comprese strutture
         negli Stati Uniti.
+      </p>
+      <p>
+        Se autorizzi il tracciamento, i dati trasmessi a Meta e TikTok per
+        misurare le nostre campagne pubblicitarie possono essere trattati da
+        queste società negli Stati Uniti e in altri paesi in cui operano.
       </p>
       <p>
         Se risiedi nello Spazio economico europeo (SEE), nel Regno Unito

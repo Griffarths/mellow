@@ -367,6 +367,15 @@ export default function PrivacyContentFr() {
         </li>
         <li>
           <strong>
+            Pour mesurer l&apos;efficacité de nos campagnes publicitaires.
+          </strong>{" "}
+          Si tu autorises le suivi dans la demande d&apos;iOS, nous
+          transmettons à Meta et TikTok les informations décrites dans la
+          section 4, pour savoir quelles campagnes mènent à des installations
+          et des abonnements.
+        </li>
+        <li>
+          <strong>
             Pour sauvegarder ou protéger les intérêts vitaux d&apos;une
             personne.
           </strong>{" "}
@@ -553,8 +562,30 @@ export default function PrivacyContentFr() {
           In with Apple)
         </li>
         <li>Analyse web et mobile : PostHog</li>
+        <li>
+          Mesure des campagnes publicitaires : Meta (Facebook SDK, API
+          Conversions)
+        </li>
+        <li>
+          Mesure des campagnes publicitaires : TikTok (TikTok Business SDK)
+        </li>
         <li>Tests applicatifs : TestFlight</li>
       </ul>
+      <p>
+        <strong>Mesure des campagnes publicitaires.</strong> Nous utilisons
+        Meta et TikTok pour mesurer l&apos;efficacité de nos campagnes
+        publicitaires, uniquement si tu l&apos;acceptes. Tant que tu n&apos;as
+        pas autorisé le suivi dans la demande d&apos;iOS, leurs SDK ne sont
+        pas activés et aucune donnée ne leur est transmise. Si tu autorises le
+        suivi, nous leur transmettons ton identifiant publicitaire, ton
+        adresse IP, des informations sur ton appareil (modèle, version du
+        système) et les événements d&apos;installation, d&apos;ouverture de
+        l&apos;application, de début d&apos;essai et d&apos;abonnement. Aucune
+        donnée de santé que tu saisis dans l&apos;application (crises,
+        symptômes, déclencheurs, notes) ne leur est transmise, dans aucun cas.
+        Tu peux retirer ton accord à tout moment dans Réglages &gt;
+        Confidentialité et sécurité &gt; Suivi.
+      </p>
       <p>
         Nous pouvons également avoir besoin de partager tes données
         personnelles dans les situations suivantes :
@@ -589,6 +620,11 @@ export default function PrivacyContentFr() {
         stockées et traitées par nous dans nos installations et dans celles
         des tiers avec lesquels nous pouvons partager tes données
         personnelles, y compris des installations aux États-Unis.
+      </p>
+      <p>
+        Si tu autorises le suivi, les données transmises à Meta et TikTok pour
+        mesurer nos campagnes publicitaires peuvent être traitées par ces
+        sociétés aux États-Unis et dans d&apos;autres pays où elles opèrent.
       </p>
       <p>
         Si tu résides dans l&apos;Espace économique européen (EEE), au

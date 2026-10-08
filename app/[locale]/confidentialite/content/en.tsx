@@ -342,6 +342,14 @@ export default function PrivacyContentEn() {
         </li>
         <li>
           <strong>
+            To measure the effectiveness of our advertising campaigns.
+          </strong>{" "}
+          If you allow tracking in the iOS request, we share the information
+          described in section 4 with Meta and TikTok to find out which
+          campaigns lead to installs and subscriptions.
+        </li>
+        <li>
+          <strong>
             To save or protect an individual&apos;s vital interest.
           </strong>{" "}
           We may process your information when necessary to save or protect
@@ -507,8 +515,22 @@ export default function PrivacyContentEn() {
           Apple)
         </li>
         <li>Web and Mobile Analytics: PostHog</li>
+        <li>Advertising Measurement: Meta (Facebook SDK, Conversions API)</li>
+        <li>Advertising Measurement: TikTok (TikTok Business SDK)</li>
         <li>Website Testing: TestFlight</li>
       </ul>
+      <p>
+        <strong>Advertising campaign measurement.</strong> We use Meta and
+        TikTok to measure the effectiveness of our advertising campaigns, only
+        if you agree. Until you allow tracking in the iOS request, their SDKs
+        are not activated and no data is sent to them. If you allow tracking,
+        we share with them your advertising identifier, your IP address,
+        information about your device (model, operating system version) and
+        install, app open, trial start and subscription events. No health data
+        you enter in the app (attacks, symptoms, triggers, notes) is ever sent
+        to them. You can withdraw your permission at any time in Settings &gt;
+        Privacy & Security &gt; Tracking.
+      </p>
       <p>
         We also may need to share your personal information in the following
         situations:
@@ -541,6 +563,11 @@ export default function PrivacyContentEn() {
         to, stored by, and processed by us in our facilities and in the
         facilities of the third parties with whom we may share your personal
         information, including facilities in the United States.
+      </p>
+      <p>
+        If you allow tracking, the data shared with Meta and TikTok to measure
+        our advertising campaigns may be processed by these companies in the
+        United States and in other countries where they operate.
       </p>
       <p>
         If you are a resident in the European Economic Area (EEA), United

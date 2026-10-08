@@ -362,6 +362,14 @@ export default function PrivacyContentDe() {
         </li>
         <li>
           <strong>
+            Um die Wirksamkeit unserer Werbekampagnen zu messen.
+          </strong>{" "}
+          Wenn du das Tracking in der Anfrage von iOS erlaubst, übermitteln
+          wir Meta und TikTok die in Abschnitt 4 beschriebenen Daten, um zu
+          erfahren, welche Kampagnen zu Installationen und Abonnements führen.
+        </li>
+        <li>
+          <strong>
             Um lebenswichtige Interessen einer Person zu schützen.
           </strong>{" "}
           Wir können deine Daten verarbeiten, wenn dies notwendig ist, um
@@ -543,8 +551,26 @@ export default function PrivacyContentDe() {
           Apple)
         </li>
         <li>Web- und Mobile-Analytics: PostHog</li>
+        <li>
+          Messung von Werbekampagnen: Meta (Facebook SDK, Conversions API)
+        </li>
+        <li>Messung von Werbekampagnen: TikTok (TikTok Business SDK)</li>
         <li>App-Tests: TestFlight</li>
       </ul>
+      <p>
+        <strong>Messung von Werbekampagnen.</strong> Wir nutzen Meta und
+        TikTok, um die Wirksamkeit unserer Werbekampagnen zu messen, aber nur,
+        wenn du zustimmst. Solange du das Tracking in der Anfrage von iOS
+        nicht erlaubt hast, sind ihre SDKs nicht aktiviert und es werden keine
+        Daten an sie übermittelt. Wenn du das Tracking erlaubst, übermitteln
+        wir ihnen deine Werbe-ID, deine IP-Adresse, Informationen zu deinem
+        Gerät (Modell, Systemversion) sowie die Ereignisse Installation,
+        Öffnen der App, Beginn eines Probezeitraums und Abschluss eines
+        Abonnements. Gesundheitsdaten, die du in der App eingibst (Attacken,
+        Symptome, Auslöser, Notizen), werden ihnen in keinem Fall übermittelt.
+        Du kannst deine Zustimmung jederzeit unter Einstellungen &gt;
+        Datenschutz & Sicherheit &gt; Tracking widerrufen.
+      </p>
       <p>
         Wir können deine personenbezogenen Daten auch in folgenden
         Situationen teilen:
@@ -579,6 +605,12 @@ export default function PrivacyContentDe() {
         die Einrichtungen unserer Drittanbieter übermittelt, dort
         gespeichert und verarbeitet werden, einschließlich Einrichtungen in
         den USA.
+      </p>
+      <p>
+        Wenn du das Tracking erlaubst, können die Daten, die wir zur Messung
+        unserer Werbekampagnen an Meta und TikTok übermitteln, von diesen
+        Unternehmen in den USA und in anderen Ländern verarbeitet werden, in
+        denen sie tätig sind.
       </p>
       <p>
         Wenn du im Europäischen Wirtschaftsraum (EWR), im Vereinigten

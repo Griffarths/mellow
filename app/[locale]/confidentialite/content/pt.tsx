@@ -351,6 +351,14 @@ export default function PrivacyContentPt() {
         </li>
         <li>
           <strong>
+            Para medir a eficácia das nossas campanhas publicitárias.
+          </strong>{" "}
+          Se autorizares o rastreamento no pedido do iOS, transmitimos à Meta
+          e ao TikTok os dados descritos na secção 4, para saber que campanhas
+          levam a instalações e subscrições.
+        </li>
+        <li>
+          <strong>
             Para salvaguardar ou proteger interesses vitais de uma
             pessoa.
           </strong>{" "}
@@ -526,8 +534,30 @@ export default function PrivacyContentPt() {
           Registo e autenticação de conta: Apple (Sign In with Apple)
         </li>
         <li>Análise web e móvel: PostHog</li>
+        <li>
+          Medição de campanhas publicitárias: Meta (Facebook SDK, API de
+          Conversões)
+        </li>
+        <li>
+          Medição de campanhas publicitárias: TikTok (TikTok Business SDK)
+        </li>
         <li>Testes da aplicação: TestFlight</li>
       </ul>
+      <p>
+        <strong>Medição de campanhas publicitárias.</strong> Usamos a Meta e o
+        TikTok para medir a eficácia das nossas campanhas publicitárias,
+        apenas se aceitares. Enquanto não autorizares o rastreamento no pedido
+        do iOS, os SDK destes serviços não são ativados e não lhes é
+        transmitido nenhum dado. Se autorizares o rastreamento,
+        transmitimos-lhes o teu identificador de publicidade, o teu endereço
+        IP, informações sobre o teu dispositivo (modelo, versão do sistema) e
+        os eventos de instalação, abertura da aplicação, início do período
+        experimental e subscrição. Nenhum dado de saúde que introduzes na
+        aplicação (crises, sintomas, fatores desencadeantes, notas) lhes é
+        transmitido, em caso algum. Podes retirar o teu consentimento a
+        qualquer momento em Definições &gt; Privacidade e segurança &gt;
+        Rastreamento.
+      </p>
       <p>
         Podemos também precisar de partilhar os teus dados pessoais nas
         seguintes situações:
@@ -562,6 +592,11 @@ export default function PrivacyContentPt() {
         nossas instalações e nas dos terceiros com quem possamos
         partilhar os teus dados pessoais, incluindo instalações nos
         EUA.
+      </p>
+      <p>
+        Se autorizares o rastreamento, os dados transmitidos à Meta e ao
+        TikTok para medir as nossas campanhas publicitárias podem ser tratados
+        por estas empresas nos Estados Unidos e noutros países onde operam.
       </p>
       <p>
         Se resides no Espaço Económico Europeu (EEE), Reino Unido (UK)
