@@ -2,13 +2,14 @@ import { useLocale, useTranslations } from "next-intl";
 import { Tile } from "../ui/Tile";
 import type { Tone } from "@/lib/tones";
 import { getPillarArticles, hasBlog } from "@/lib/blog";
-import { PILLARS } from "@/lib/pillars";
+import { PILLARS, type PillarId } from "@/lib/pillars";
 
-const COURSES: Array<{ id: "understand" | "prevent" | "manage"; tone: Tone }> =
+// Three entry points into the blog, each leading to the matching category.
+const COURSES: Array<{ id: "understand" | "prevent" | "manage"; category: PillarId; tone: Tone }> =
   [
-    { id: "understand", tone: "fleur" },
-    { id: "prevent", tone: "tagada" },
-    { id: "manage", tone: "sable" },
+    { id: "understand", category: "symptoms", tone: "fleur" },
+    { id: "prevent", category: "triggers", tone: "tagada" },
+    { id: "manage", category: "treatments", tone: "sable" },
   ];
 
 export function Courses() {
@@ -28,8 +29,8 @@ export function Courses() {
             <Tile
               key={c.id}
               href={
-                hasBlog(locale) && getPillarArticles(locale, c.id).length > 0
-                  ? `/blog/${PILLARS[c.id][locale].slug}`
+                hasBlog(locale) && getPillarArticles(locale, c.category).length > 0
+                  ? `/blog/${PILLARS[c.category][locale].slug}`
                   : "/blog"
               }
               tone={c.tone}

@@ -11,7 +11,6 @@ type Props = {
 
 export function RelatedArticles({ articles, pillar }: Props) {
   const t = useTranslations("blog");
-  const tc = useTranslations("courses");
   if (articles.length === 0) return null;
 
   return (
@@ -27,7 +26,7 @@ export function RelatedArticles({ articles, pillar }: Props) {
           href={pillar.href}
           className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-croix-ink underline decoration-croix-ink/30 decoration-2 underline-offset-[3px] transition hover:decoration-croix-ink"
         >
-          {t("allInPillar", { pillar: tc(`${pillar.id}.title`) })}
+          {t("allInPillar", { pillar: pillar.label })}
           <span aria-hidden>→</span>
         </Link>
       )}

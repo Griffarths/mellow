@@ -54,11 +54,8 @@ export type Article = Frontmatter & {
 
 const SITE = "https://mellowmigraine.com";
 
-// Mascot covers (/blobs/*.svg) are drawn small on the tone's tint; any other
-// cover is a full image that fills the frame.
-export function isMascotCover(src: string): boolean {
-  return src.startsWith("/blobs/");
-}
+export { isMascotCover } from "./blog-card";
+import { isMascotCover } from "./blog-card";
 
 // Social networks and Google Discover do not read SVG: a mascot cover falls
 // back to the Mellow trio in PNG.
@@ -203,11 +200,35 @@ function versionsOf(article: Article, all: Article[]): Partial<Record<BlogLocale
   return versions;
 }
 
+// Articles of a category, newest first (getAllArticles is already sorted).
 export function getPillarArticles(locale: BlogLocale, pillar: PillarId): Article[] {
-  const all = getAllArticles(locale);
-  return (PILLARS[pillar][locale]?.articles ?? [])
-    .map((slug) => all.find((a) => a.slug === slug))
-    .filter((a): a is Article => a !== undefined);
+  const slugs = new Set(PILLARS[pillar][locale]?.articles ?? []);
+  return getAllArticles(locale).filter((a) => slugs.has(a.slug));
+}
+
+// Articles per page in the blog lists (all articles and each category).
+export const PAGE_SIZE = 12;
+export function pageCount(total: number): number {
+  return Math.max(1, Math.ceil(total / PAGE_SIZE));
+}
+export function pageOf<T>(items: T[], page: number): T[] {
+  return items.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+}
+
+export type { CardArticle } from "./blog-card";
+import type { CardArticle } from "./blog-card";
+
+export function toCard(article: Article, category?: string): CardArticle {
+  return {
+    slug: article.slug,
+    title: article.title,
+    description: article.description,
+    coverImage: article.coverImage,
+    publishedAt: article.publishedAt,
+    locale: article.locale,
+    readingTime: { minutes: article.readingTime.minutes },
+    ...(category ? { category } : {}),
+  };
 }
 
 export type TocHeading = { level: 2 | 3; text: string; slug: string };

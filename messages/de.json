@@ -41,7 +41,18 @@
     "byAuthor": "Von {name}",
     "authorMore": "Mehr erfahren",
     "editorialLink": "So schreiben wir unsere Artikel",
-    "authorLine": "Geschrieben von <b>{name}</b>, Gründerin von Mellow, die seit ihrem 21. Lebensjahr mit Migräne lebt."
+    "authorLine": "Geschrieben von <b>{name}</b>, Gründerin von Mellow, die seit ihrem 21. Lebensjahr mit Migräne lebt.",
+    "allArticles": "Alle Artikel",
+    "moreCategories": "Weitere Kategorien",
+    "searchPlaceholder": "Suchen…",
+    "searchLabel": "Im Blog suchen",
+    "searchResults": "{count, plural, =0 {Kein Artikel passt zu „{query}“.} one {# Artikel zu „{query}“} other {# Artikel zu „{query}“}}",
+    "featured": "Im Fokus",
+    "readMore": "Weiterlesen",
+    "pagination": "Blogseiten",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "pageN": "Seite {n}"
   },
   "hero": {
     "title": "Nimm die Kontrolle über deine Migräne zurück.",

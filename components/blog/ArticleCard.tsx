@@ -1,10 +1,10 @@
 import { Link } from "@/i18n/navigation";
-import { isMascotCover, type Article } from "@/lib/blog";
+import { isMascotCover, type CardArticle } from "@/lib/blog-card";
 import { TONES, toneForImage } from "@/lib/tones";
 import { typographize } from "@/lib/typography";
 
 type Props = {
-  article: Article;
+  article: CardArticle;
   badge?: string;
 };
 
@@ -48,6 +48,11 @@ export function ArticleCard({ article, badge }: Props) {
         )}
       </div>
       <div className="flex flex-1 flex-col p-5 md:p-6">
+        {article.category && (
+          <span className="mb-2 text-caption font-bold uppercase tracking-[0.08em] text-croix-ink">
+            {article.category}
+          </span>
+        )}
         <div className="flex items-center gap-2 text-caption font-semibold text-ink-3">
           <time dateTime={article.publishedAt}>{formatted}</time>
           <span aria-hidden>·</span>

@@ -5,8 +5,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { ArticleCard } from "@/components/blog/ArticleCard";
-import { PillarNav } from "@/components/blog/PillarNav";
+import { BlogIndex } from "@/components/blog/BlogIndex";
 import { HREFLANG, getAllArticles, hasBlog } from "@/lib/blog";
 import { ComingSoon } from "./coming-soon";
 import { pageAlternates } from "@/lib/hreflang";
@@ -68,7 +67,7 @@ export default async function BlogIndexPage({ params }: Props) {
     "@type": "Blog",
     "@id": blogUrl,
     url: blogUrl,
-    name: `Mellow — ${t("indexTitle")}`,
+    name: `Mellow · ${t("indexTitle")}`,
     description: t("indexSubtitle"),
     inLanguage: locale === "en" ? "en-US" : HREFLANG[locale],
     publisher: {
@@ -101,33 +100,7 @@ export default async function BlogIndexPage({ params }: Props) {
 
   return (
     <>
-      <Nav />
-      <header>
-        <div className="mx-auto max-w-6xl px-6 pb-10 pt-12 md:pb-14 md:pt-20">
-          <h1 className="text-display text-ink">{t("indexTitle")}</h1>
-          <p className="mt-4 max-w-2xl text-lg text-ink-2 md:text-xl">
-            {t("indexSubtitle")}
-          </p>
-          <PillarNav locale={locale} className="mt-7" />
-        </div>
-      </header>
-      <main className="mx-auto max-w-6xl px-6 pb-20 md:pb-28">
-        {articles.length === 0 ? (
-          <p className="text-ink-3">{t("emptyState")}</p>
-        ) : (
-          <>
-            <p className="text-sm font-semibold text-ink-3">
-              {t("pillarCount", { count: articles.length })}
-            </p>
-            <div className="mt-4 grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
-              {articles.map((article) => (
-                <ArticleCard key={article.slug} article={article} />
-              ))}
-            </div>
-          </>
-        )}
-      </main>
-      <Footer />
+      <BlogIndex locale={locale} page={1} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

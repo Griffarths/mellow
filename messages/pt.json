@@ -41,7 +41,18 @@
     "byAuthor": "Por {name}",
     "authorMore": "Saber mais",
     "editorialLink": "Como escrevemos os nossos artigos",
-    "authorLine": "Escrito por <b>{name}</b>, fundadora da Mellow, que vive com enxaqueca desde os 21 anos."
+    "authorLine": "Escrito por <b>{name}</b>, fundadora da Mellow, que vive com enxaqueca desde os 21 anos.",
+    "allArticles": "Todos os artigos",
+    "moreCategories": "Mais categorias",
+    "searchPlaceholder": "Pesquisar…",
+    "searchLabel": "Pesquisar no blog",
+    "searchResults": "{count, plural, =0 {Nenhum artigo corresponde a «{query}».} one {# artigo para «{query}»} other {# artigos para «{query}»}}",
+    "featured": "Em destaque",
+    "readMore": "Ler mais",
+    "pagination": "Páginas do blog",
+    "previous": "Anterior",
+    "next": "Seguinte",
+    "pageN": "Página {n}"
   },
   "hero": {
     "title": "Retoma o controlo das tuas enxaquecas.",

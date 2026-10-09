@@ -41,7 +41,18 @@
     "byAuthor": "Di {name}",
     "authorMore": "Scopri di più",
     "editorialLink": "Come scriviamo i nostri articoli",
-    "authorLine": "Scritto da <b>{name}</b>, fondatrice di Mellow, che convive con l'emicrania da quando aveva 21 anni."
+    "authorLine": "Scritto da <b>{name}</b>, fondatrice di Mellow, che convive con l'emicrania da quando aveva 21 anni.",
+    "allArticles": "Tutti gli articoli",
+    "moreCategories": "Altre categorie",
+    "searchPlaceholder": "Cerca…",
+    "searchLabel": "Cerca nel blog",
+    "searchResults": "{count, plural, =0 {Nessun articolo corrisponde a «{query}».} one {# articolo per «{query}»} other {# articoli per «{query}»}}",
+    "featured": "In evidenza",
+    "readMore": "Leggi tutto",
+    "pagination": "Pagine del blog",
+    "previous": "Precedente",
+    "next": "Successiva",
+    "pageN": "Pagina {n}"
   },
   "hero": {
     "title": "Riprendi il controllo delle tue emicranie.",

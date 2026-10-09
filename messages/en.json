@@ -36,7 +36,18 @@
     "byAuthor": "By {name}",
     "authorMore": "Learn more",
     "editorialLink": "How we write our articles",
-    "authorLine": "Written by <b>{name}</b>, founder of Mellow, who has lived with migraine since she was 21."
+    "authorLine": "Written by <b>{name}</b>, founder of Mellow, who has lived with migraine since she was 21.",
+    "allArticles": "All articles",
+    "moreCategories": "More categories",
+    "searchPlaceholder": "Search…",
+    "searchLabel": "Search the blog",
+    "searchResults": "{count, plural, =0 {No article matches “{query}”.} one {# article for “{query}”} other {# articles for “{query}”}}",
+    "featured": "Featured",
+    "readMore": "Read more",
+    "pagination": "Blog pages",
+    "previous": "Previous",
+    "next": "Next",
+    "pageN": "Page {n}"
   },
   "hero": {
     "title": "Take back control of your migraines.",

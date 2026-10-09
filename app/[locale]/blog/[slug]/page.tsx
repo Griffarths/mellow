@@ -192,16 +192,11 @@ export default async function ArticlePage({ params }: Props) {
     const pillarBreadcrumb = breadcrumbJsonLd([
       ["Mellow", urlFor(locale, "")],
       ["Blog", urlFor(locale, "/blog")],
-      [copy.title, pillarUrl],
+      [copy.label, pillarUrl],
     ]);
     return (
       <>
-        <PillarPage
-          pillar={pillar}
-          locale={locale}
-          articles={articles}
-          localePaths={pillarPaths(pillar)}
-        />
+        <PillarPage pillar={pillar} locale={locale} page={1} localePaths={pillarPaths(pillar)} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pillarJsonLd) }}
@@ -222,6 +217,7 @@ export default async function ArticlePage({ params }: Props) {
     ? {
         href: `/blog/${PILLARS[articlePillar][locale].slug}`,
         id: articlePillar,
+        label: PILLARS[articlePillar][locale].label,
       }
     : null;
   // The mid-article app card takes the colour of the article's topic.
@@ -277,7 +273,7 @@ export default async function ArticlePage({ params }: Props) {
     ...(articlePillar
       ? [
           [
-            PILLARS[articlePillar][locale].title,
+            PILLARS[articlePillar][locale].label,
             urlFor(locale, `/blog/${PILLARS[articlePillar][locale].slug}`),
           ] as [string, string],
         ]

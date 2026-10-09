@@ -41,7 +41,18 @@
     "byAuthor": "Por {name}",
     "authorMore": "Saber más",
     "editorialLink": "Cómo escribimos nuestros artículos",
-    "authorLine": "Escrito por <b>{name}</b>, fundadora de Mellow, que vive con migraña desde los 21 años."
+    "authorLine": "Escrito por <b>{name}</b>, fundadora de Mellow, que vive con migraña desde los 21 años.",
+    "allArticles": "Todos los artículos",
+    "moreCategories": "Más categorías",
+    "searchPlaceholder": "Buscar…",
+    "searchLabel": "Buscar en el blog",
+    "searchResults": "{count, plural, =0 {Ningún artículo coincide con “{query}”.} one {# artículo para “{query}”} other {# artículos para “{query}”}}",
+    "featured": "Destacado",
+    "readMore": "Leer más",
+    "pagination": "Páginas del blog",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "pageN": "Página {n}"
   },
   "hero": {
     "title": "Recupera el control de tus migrañas.",

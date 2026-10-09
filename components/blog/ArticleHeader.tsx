@@ -13,7 +13,6 @@ export function ArticleHeader({
   article: Article;
   pillar: PillarLink;
 }) {
-  const tc = useTranslations("courses");
   const tb = useTranslations("blog");
   const tone = TONES[toneForImage(article.coverImage)];
   const fmt = new Intl.DateTimeFormat(article.locale, { dateStyle: "long" });
@@ -54,7 +53,7 @@ export function ArticleHeader({
           href={pillar.href}
           className="mt-8 inline-block text-caption font-bold uppercase tracking-[0.08em] text-croix-ink transition hover:text-ink md:mt-10"
         >
-          {tc(`${pillar.id}.title`)}
+          {pillar.label}
         </Link>
       )}
       <h1 className={`text-h1 text-ink ${pillar ? "mt-3" : "mt-8 md:mt-10"}`}>{typographize(article.title, article.locale)}</h1>
