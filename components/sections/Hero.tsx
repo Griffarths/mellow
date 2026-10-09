@@ -1,33 +1,38 @@
 import { useTranslations } from "next-intl";
 import { StoreBadges } from "../StoreBadges";
-import { Clouds } from "../ui/Clouds";
 
+// Pink hero filling the screen under the nav, content centred, clouds
+// drifting along the bottom. Height, background and clouds: .home-hero and
+// .hero-clouds in globals.css.
 export function Hero() {
   const t = useTranslations("hero");
   return (
-    <section id="download" className="relative overflow-hidden bg-hero">
-      <div className="mx-auto flex max-w-6xl flex-col items-center px-6 pt-12 text-center md:pt-14">
-        <h1 className="max-w-[15ch] text-display text-ink">{t("title")}</h1>
-        <p className="mt-5 max-w-xl text-lg text-ink-2 md:mt-4 md:max-w-3xl md:text-xl">
-          {t("subtitle")}
-        </p>
-        <StoreBadges className="mt-7" />
+    <section
+      id="download"
+      className="home-hero relative flex flex-col items-center justify-center overflow-hidden px-6 pt-8 text-center"
+    >
+      <div className="relative z-[3] flex w-full max-w-6xl flex-col items-center">
         <img
           src="/blobs/Fleur1.svg"
           alt=""
           aria-hidden
           draggable={false}
-          className="breathe mt-10 w-[190px] select-none md:mt-8 md:w-[340px]"
+          width={462}
+          height={500}
+          className="mb-[clamp(14px,1.8vw,24px)] h-auto w-[clamp(72px,7.5vw,112px)] select-none"
         />
+        <h1 className="max-w-[15ch] text-display text-white">{t("title")}</h1>
+        <p className="mt-5 max-w-xl text-lg text-white md:mt-4 md:max-w-3xl md:text-xl">
+          {t("subtitle")}
+        </p>
+        <StoreBadges className="mt-7" />
       </div>
-      {/* Pulled up past the valley (60% of the cloud's height) so the bottom
-          third of Fleur sinks into the cloud, as in the app. The cloud's
-          height is rarely a whole pixel: it overhangs the section by 1px
-          (clipped) so neither Fleur nor the pink shows as a hairline under it. */}
-      <Clouds
-        maxHeight={240}
-        className="relative z-10 -mb-px -mt-[calc(1.1*min(31.55vw,240px))] md:-mt-[calc(1.2*min(31.55vw,240px))]"
-      />
+      <div className="hero-clouds" aria-hidden>
+        <div className="l1" />
+        <div className="l2" />
+        <div className="l3" />
+        <div className="l4" />
+      </div>
     </section>
   );
 }

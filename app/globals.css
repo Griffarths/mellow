@@ -48,3 +48,103 @@ h3 {
     animation: none;
   }
 }
+
+/* Home hero: pink, fills the screen under the nav (never taller than 780px
+   so the clouds stay in view), with four layers of clouds drifting along
+   the bottom (public/nuages-1.svg to nuages-4.svg). */
+.home-hero {
+  /* The nav's real height: h-16 (64px) plus its 1px bottom border, the
+     same on phones and desktop (components/Nav.tsx). */
+  --nav-h: 65px;
+  /* Size of the clouds; 1 = App Store video scale. */
+  --cloud-scale: 0.42;
+  /* Height of the cloud band. */
+  --band: calc(576px * var(--cloud-scale));
+  background: #ff62a9;
+  min-height: min(calc(100vh - var(--nav-h)), 780px);
+  min-height: min(calc(100svh - var(--nav-h)), 780px);
+  padding-bottom: calc(var(--band) * 0.78);
+}
+
+.hero-clouds {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: var(--band);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Each layer is one cloud tile repeated, one tile wider than the hero, and
+   slides left by exactly one tile so the loop is seamless. */
+.hero-clouds div {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: calc(100% + var(--p));
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-size: var(--p) 100%;
+  will-change: transform;
+}
+
+.hero-clouds .l1 {
+  --p: calc(1280px * var(--cloud-scale));
+  background-image: url("/nuages-1.svg");
+  animation: drift-1 20s linear infinite;
+}
+
+.hero-clouds .l2 {
+  --p: calc(1920px * var(--cloud-scale));
+  background-image: url("/nuages-2.svg");
+  animation: drift-2 20s linear infinite;
+}
+
+.hero-clouds .l3 {
+  --p: calc(1280px * var(--cloud-scale));
+  background-image: url("/nuages-3.svg");
+  animation: drift-3 10s linear infinite;
+}
+
+.hero-clouds .l4 {
+  --p: calc(1920px * var(--cloud-scale));
+  background-image: url("/nuages-4.svg");
+  animation: drift-4 10s linear infinite;
+}
+
+@keyframes drift-1 {
+  to {
+    transform: translate3d(calc(-1280px * var(--cloud-scale)), 0, 0);
+  }
+}
+
+@keyframes drift-2 {
+  to {
+    transform: translate3d(calc(-1920px * var(--cloud-scale)), 0, 0);
+  }
+}
+
+@keyframes drift-3 {
+  to {
+    transform: translate3d(calc(-1280px * var(--cloud-scale)), 0, 0);
+  }
+}
+
+@keyframes drift-4 {
+  to {
+    transform: translate3d(calc(-1920px * var(--cloud-scale)), 0, 0);
+  }
+}
+
+@media (max-width: 700px) {
+  .home-hero {
+    --cloud-scale: 0.3;
+  }
+}
+
+/* Migraine-friendly: no motion if the visitor asked for less. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-clouds div {
+    animation: none;
+  }
+}
