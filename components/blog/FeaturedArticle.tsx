@@ -26,14 +26,9 @@ export function FeaturedArticle({ article }: { article: CardArticle }) {
         <p className="mt-4 line-clamp-3 text-[17px] leading-relaxed text-ink-2">
           {typographize(article.description, article.locale)}
         </p>
-        <span className="mt-7 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.06em] text-ink">
+        <span className="mt-7 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.06em] text-ink">
           {t("readMore")}
-          <span
-            aria-hidden
-            className="grid h-9 w-9 place-items-center rounded-full bg-ink text-white transition-transform group-hover:translate-x-1"
-          >
-            →
-          </span>
+          <span aria-hidden className="text-base">→</span>
         </span>
       </div>
       <div className={`relative order-1 aspect-[16/9] overflow-hidden md:order-2 md:aspect-auto md:min-h-[360px] ${tone.tint}`}>
@@ -52,7 +47,7 @@ export function FeaturedArticle({ article }: { article: CardArticle }) {
             aria-hidden
             fetchPriority="high"
             draggable={false}
-            className="absolute inset-0 h-full w-full select-none object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+            className="absolute inset-0 h-full w-full select-none object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
           />
         )}
       </div>

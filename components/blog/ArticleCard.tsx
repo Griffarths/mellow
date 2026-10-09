@@ -34,7 +34,7 @@ export function ArticleCard({ article, badge }: Props) {
             alt=""
             aria-hidden
             draggable={false}
-            className="h-24 w-24 select-none transition-transform duration-300 group-hover:scale-105 md:h-28 md:w-28"
+            className="h-24 w-24 select-none transition-transform duration-700 ease-out group-hover:scale-105 md:h-28 md:w-28"
           />
         ) : (
           <img
@@ -43,7 +43,7 @@ export function ArticleCard({ article, badge }: Props) {
             aria-hidden
             loading="lazy"
             draggable={false}
-            className="absolute inset-0 h-full w-full select-none object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+            className="absolute inset-0 h-full w-full select-none object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
           />
         )}
       </div>

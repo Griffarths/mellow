@@ -75,9 +75,8 @@ export async function PillarPage({ pillar, locale, page, localePaths }: Props) {
           </BlogBrowser>
         </div>
 
-        <div className="max-w-[65ch]">
-          <BlogCta />
-        </div>
+        {/* Full width, aligned with the list above. */}
+        <BlogCta />
       </main>
       <Footer localePaths={localePaths} />
     </>

@@ -9,12 +9,15 @@ import type { BlogTab } from "./BlogBrowser";
 export async function blogTabs(locale: BlogLocale, current: PillarId | null): Promise<BlogTab[]> {
   const t = await getTranslations({ locale, namespace: "blog" });
   return [
-    { href: "/blog", label: t("allArticles"), active: current === null },
-    ...PILLAR_IDS.filter((id) => getPillarArticles(locale, id).length > 0).map((id) => ({
-      href: `/blog/${PILLARS[id][locale].slug}`,
-      label: PILLARS[id][locale].label,
-      active: id === current,
-    })),
+    { href: "/blog", label: t("allArticles"), count: getAllArticles(locale).length, active: current === null },
+    ...PILLAR_IDS.map((id) => ({ id, count: getPillarArticles(locale, id).length }))
+      .filter((c) => c.count > 0)
+      .map(({ id, count }) => ({
+        href: `/blog/${PILLARS[id][locale].slug}`,
+        label: PILLARS[id][locale].label,
+        count,
+        active: id === current,
+      })),
   ];
 }
 
