@@ -158,6 +158,17 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-on-hero:hover {
   color: rgb(255 255 255 / 0.8);
 }
 
+/* The burger's light grey hover circle would hide the white icon: over the
+   hero it is a see-through white one, with a white focus ring. */
+header[data-solid="false"]:not(:has(#mobile-menu)) .nav-burger:hover {
+  color: #fff;
+  background-color: rgb(255 255 255 / 0.2);
+}
+
+header[data-solid="false"]:not(:has(#mobile-menu)) .nav-burger:focus-visible {
+  outline-color: #fff;
+}
+
 /* The nav's download badge (desktop) and button (phones) wait for the white
    nav: the hero right below has its own App Store badge. They keep their
    space so nothing moves when they fade in. */
