@@ -25,14 +25,19 @@ export function NavShell({ overHero, children }: Props) {
 
   const solid = !overHero || scrolled;
 
+  // Over the bright pink hero a backdrop blur fades out at the screen edges
+  // and makes the top corners look rounded, so the home page goes plain
+  // white instead (it looks the same over white content).
+  const look = !overHero
+    ? "border-surface-line bg-white/85 backdrop-blur"
+    : scrolled
+      ? "border-surface-line bg-white"
+      : "border-transparent bg-transparent has-[#mobile-menu]:border-surface-line has-[#mobile-menu]:bg-white";
+
   return (
     <header
       data-solid={solid}
-      className={`group/nav sticky top-0 z-50 w-full border-b transition-[background-color,border-color] duration-300 ${
-        solid
-          ? "border-surface-line bg-white/85 backdrop-blur"
-          : "border-transparent bg-transparent has-[#mobile-menu]:border-surface-line has-[#mobile-menu]:bg-white"
-      }`}
+      className={`group/nav sticky top-0 z-50 w-full border-b transition-[background-color,border-color] duration-300 ${look}`}
     >
       {children}
     </header>
