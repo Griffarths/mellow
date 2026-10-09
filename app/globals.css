@@ -49,9 +49,9 @@ h3 {
   }
 }
 
-/* Home hero: pink, fills the screen under the nav (never taller than 780px
-   so the clouds stay in view), with four layers of clouds drifting along
-   the bottom (public/nuages-1.svg to nuages-4.svg). */
+/* Home hero: pink, fills the screen (the part under the nav is never
+   taller than 780px, so the clouds stay in view), with four layers of
+   clouds drifting along the bottom (public/nuages-1.svg to nuages-4.svg). */
 .home-hero {
   /* The nav's real height: h-16 (64px) plus its 1px bottom border, the
      same on phones and desktop (components/Nav.tsx). */
@@ -61,8 +61,13 @@ h3 {
   /* Height of the cloud band. */
   --band: calc(576px * var(--cloud-scale));
   background: #ff62a9;
-  min-height: min(calc(100vh - var(--nav-h)), 780px);
-  min-height: min(calc(100svh - var(--nav-h)), 780px);
+  /* The nav is transparent over the hero at the top of the page: the hero
+     starts behind it and keeps the same visible area below it (at most
+     780px). */
+  margin-top: calc(-1 * var(--nav-h));
+  min-height: min(100vh, calc(780px + var(--nav-h)));
+  min-height: min(100svh, calc(780px + var(--nav-h)));
+  padding-top: calc(var(--nav-h) + 32px);
   padding-bottom: calc(var(--band) * 0.78);
 }
 

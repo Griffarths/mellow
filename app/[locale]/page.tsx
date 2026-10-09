@@ -32,7 +32,7 @@ export default async function HomePage({
 
   return (
     <>
-      <Nav />
+      <Nav overHero />
       <main>
         <Hero />
         <Features />

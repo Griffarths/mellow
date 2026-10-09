@@ -4,15 +4,19 @@ import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/stores";
 import { isToolLocale } from "@/lib/tools";
 import { TOOLS_LABEL, toolsMenu } from "@/lib/tools";
 import { MobileMenu } from "./MobileMenu";
+import { NavShell } from "./NavShell";
 import { ToolsMenu } from "./ToolsMenu";
 import { StoreBadges } from "./StoreBadges";
 
-const LINK_CLASS =
-  "whitespace-nowrap text-sm font-semibold text-ink-2 transition hover:text-ink";
+// Grey links, black while the nav is transparent over the pink hero.
+export const NAV_LINK_CLASS =
+  "whitespace-nowrap text-sm font-semibold text-ink-2 transition hover:text-ink group-data-[solid=false]/nav:text-ink";
+const LINK_CLASS = NAV_LINK_CLASS;
 
 // From md: logo, Resources menu, Blog, Android and the store badges. Below:
-// logo, a download button and a burger (MobileMenu).
-export function Nav() {
+// logo, a download button and a burger (MobileMenu). On the home page
+// (overHero) it starts transparent over the hero (NavShell).
+export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
   const t = useTranslations("nav");
   const locale = useLocale();
   const resources = isToolLocale(locale)
@@ -27,7 +31,7 @@ export function Nav() {
     : { href: "/android", label: t("androidBeta"), external: false };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-surface-line bg-white/85 backdrop-blur">
+    <NavShell overHero={overHero}>
       <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
         <div className="flex min-w-0 items-center gap-10">
           <Link
@@ -79,6 +83,6 @@ export function Nav() {
           badges={<StoreBadges align="start" sizeClass="h-11 w-auto select-none" />}
         />
       </div>
-    </header>
+    </NavShell>
   );
 }
