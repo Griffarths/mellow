@@ -1,9 +1,11 @@
 import type { ReactNode } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { TONES, type Tone } from "@/lib/tones";
 
-// Right under the hero: says plainly what the app is and does, before the
-// screenshots show it. White background, columns split by thin rules.
+// Right under the hero: says plainly what the app is and does. Two tilted
+// phones with real app screens (public/app-screens/<locale>, exported from
+// Frame Studio) next to the title and the three benefits, split by thin
+// rules. White background.
 const FEATURES: Array<{ id: "log" | "understand" | "doctor"; tone: Tone; icon: ReactNode }> = [
   {
     id: "log",
@@ -43,26 +45,39 @@ const FEATURES: Array<{ id: "log" | "understand" | "doctor"; tone: Tone; icon: R
 
 export function Features() {
   const t = useTranslations("features");
+  const shots = useTranslations("screenshots");
+  const locale = useLocale();
 
   return (
-    <section id="features" className="pb-4 pt-10 md:pb-0 md:pt-14">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto max-w-3xl text-center">
+    <section id="features" className="pt-12 lg:pt-20">
+      {/* Phones and tablets: title, phones, list, one column. From lg the
+          phones take the left column across both rows, the title and the
+          list sit on the right. */}
+      <div className="mx-auto grid max-w-6xl gap-x-20 px-6 lg:grid-cols-[1fr_1.05fr]">
+        <div className="mx-auto max-w-2xl text-center lg:col-start-2 lg:row-start-1 lg:mx-0 lg:self-end lg:text-left">
           <h2 className="text-h2 text-ink">{t("title")}</h2>
           <p className="mt-4 text-balance text-lg text-ink-2">{t("subtitle")}</p>
         </div>
 
-        {/* From md, the columns share their rows (subgrid) so icons, titles
-            and texts line up even when a title wraps in one language. */}
-        <div className="mt-10 grid divide-y divide-surface-line md:mt-14 md:grid-cols-3 md:grid-rows-[auto_auto_auto] md:divide-x md:divide-y-0">
+        <div className="relative mx-auto mt-10 aspect-[4/5] w-full max-w-[360px] md:max-w-[440px] lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:max-w-[480px] lg:self-center">
+          <Phone
+            src={`/app-screens/${locale}/calendar.jpg`}
+            alt={shots("alt.03")}
+            className="left-[3%] top-[2%]"
+          />
+          <Phone
+            src={`/app-screens/${locale}/log.jpg`}
+            alt={shots("alt.02")}
+            className="right-[3%] top-[11%]"
+          />
+        </div>
+
+        <ul className="mx-auto mt-10 w-full max-w-xl divide-y divide-surface-line lg:col-start-2 lg:row-start-2 lg:mx-0 lg:mt-8 lg:max-w-none lg:self-start">
           {FEATURES.map((f) => (
-            <div
-              key={f.id}
-              className="py-8 first:pt-0 last:pb-0 md:row-span-3 md:grid md:grid-rows-subgrid md:px-8 md:py-0 md:first:pl-0 md:last:pr-0 lg:px-10"
-            >
+            <li key={f.id} className="flex gap-5 py-6 first:pt-0 last:pb-0">
               <span
                 aria-hidden
-                className={`grid h-12 w-12 place-items-center rounded-btn text-ink ${TONES[f.tone].tint}`}
+                className={`grid h-14 w-14 shrink-0 place-items-center rounded-full text-ink ${TONES[f.tone].tint}`}
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -76,12 +91,34 @@ export function Features() {
                   {f.icon}
                 </svg>
               </span>
-              <h3 className="mt-5 text-balance text-h3 text-ink">{t(`${f.id}.title`)}</h3>
-              <p className="mt-2 text-[17px] leading-[1.7] text-ink-body">{t(`${f.id}.text`)}</p>
-            </div>
+              <div className="min-w-0">
+                <h3 className="text-balance text-h3 text-ink">{t(`${f.id}.title`)}</h3>
+                <p className="mt-1.5 text-[17px] leading-[1.65] text-ink-body">{t(`${f.id}.text`)}</p>
+              </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
+  );
+}
+
+// A raw app screen (status bar and island included) in a thin black frame,
+// tilted like the phones on the App Store page.
+function Phone({ src, alt, className }: { src: string; alt: string; className: string }) {
+  return (
+    <div
+      className={`absolute w-[50%] -rotate-[8deg] rounded-[13%/6%] bg-ink p-[2.2%] shadow-[0_28px_50px_-18px_rgb(0_0_0/0.35)] ${className}`}
+    >
+      <img
+        src={src}
+        alt={alt}
+        width={600}
+        height={1304}
+        loading="lazy"
+        draggable={false}
+        className="block h-auto w-full select-none rounded-[11%/5%]"
+      />
+    </div>
   );
 }
