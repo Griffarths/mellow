@@ -8,10 +8,10 @@ import { NavShell } from "./NavShell";
 import { ToolsMenu } from "./ToolsMenu";
 import { StoreBadges } from "./StoreBadges";
 
-// Grey links, black while the nav is transparent over the pink hero.
-export const NAV_LINK_CLASS =
-  "whitespace-nowrap text-sm font-semibold text-ink-2 transition hover:text-ink group-data-[solid=false]/nav:text-ink";
-const LINK_CLASS = NAV_LINK_CLASS;
+// nav-on-hero: white while the nav is transparent over the pink hero
+// (globals.css).
+const LINK_CLASS =
+  "nav-on-hero whitespace-nowrap text-sm font-semibold text-ink-2 transition hover:text-ink";
 
 // From md: logo, Resources menu, Blog, Android and the store badges. Below:
 // logo, a download button and a burger (MobileMenu). On the home page
@@ -46,7 +46,7 @@ export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
               className="h-8 w-8 select-none sm:h-9 sm:w-9"
               draggable={false}
             />
-            <span>Mellow</span>
+            <span className="nav-on-hero transition-colors">Mellow</span>
           </Link>
           <div className="hidden items-center gap-10 md:flex">
             {isToolLocale(locale) && <ToolsMenu label={TOOLS_LABEL[locale]} items={resources} />}

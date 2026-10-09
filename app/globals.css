@@ -147,6 +147,17 @@ h3 {
   }
 }
 
+/* While the nav is transparent over the hero (top of the home page, mobile
+   menu closed), its wordmark, links and burger are white like the hero
+   text. NavShell sets data-solid. */
+header[data-solid="false"]:not(:has(#mobile-menu)) .nav-on-hero {
+  color: #fff;
+}
+
+header[data-solid="false"]:not(:has(#mobile-menu)) .nav-on-hero:hover {
+  color: rgb(255 255 255 / 0.8);
+}
+
 /* Migraine-friendly: no motion if the visitor asked for less. */
 @media (prefers-reduced-motion: reduce) {
   .hero-clouds div {

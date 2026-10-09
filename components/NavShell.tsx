@@ -10,8 +10,9 @@ type Props = {
 
 // The nav's <header>. Solid (white, blurred, with a border) on every page,
 // except at the top of the home page where it lets the hero show through.
-// It also turns solid when the mobile menu is open. Links read the state
-// through the "nav" group's data-solid attribute.
+// It also turns white when the mobile menu is open. While transparent, the
+// .nav-on-hero elements (wordmark, links, burger) turn white (globals.css,
+// through data-solid).
 export function NavShell({ overHero, children }: Props) {
   const [scrolled, setScrolled] = useState(false);
 
@@ -37,7 +38,7 @@ export function NavShell({ overHero, children }: Props) {
   return (
     <header
       data-solid={solid}
-      className={`group/nav sticky top-0 z-50 w-full border-b transition-[background-color,border-color] duration-300 ${look}`}
+      className={`sticky top-0 z-50 w-full border-b transition-[background-color,border-color] duration-300 ${look}`}
     >
       {children}
     </header>
