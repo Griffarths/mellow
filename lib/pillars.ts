@@ -1,10 +1,11 @@
 import type { BlogLocale } from "./blog";
 import type { Tone } from "./tones";
 
-// Blog categories. Each one has its own page (/blog/{slug}), a tab in the blog
-// navigation and a label on the article cards.
+// Blog categories, in the order of the blog navigation (a reader's path: the
+// basics, recognize, know, avoid, treat, live with it). Each one has its own page
+// (/blog/{slug}), an entry in the blog navigation and a label on the article cards.
 export type PillarId = "triggers" | "symptoms" | "treatments" | "diagnosis" | "living" | "general";
-export const PILLAR_IDS: PillarId[] = ["triggers", "symptoms", "treatments", "diagnosis", "living", "general"];
+export const PILLAR_IDS: PillarId[] = ["general", "symptoms", "diagnosis", "triggers", "treatments", "living"];
 
 type PillarCopy = {
   slug: string;
@@ -772,7 +773,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
     tone: "fleur",
     fr: {
       slug: "tout-sur-la-migraine",
-      label: "Général",
+      label: "Les bases",
       title: "Tout savoir sur la migraine",
       metaTitle: "Tout savoir sur la migraine : chiffres et vocabulaire",
       description: "Combien de personnes vivent avec la migraine, les mots à connaître pour en parler avec ton médecin : les repères essentiels sur la migraine.",
@@ -787,7 +788,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
     },
     en: {
       slug: "all-about-migraine",
-      label: "General",
+      label: "Basics",
       title: "All about migraine",
       metaTitle: "All about migraine: key figures and vocabulary",
       description: "How many people live with migraine and the words to know to talk about it with your doctor: the essential basics about migraine.",
@@ -802,7 +803,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
     },
     es: {
       slug: "todo-sobre-la-migrana",
-      label: "General",
+      label: "Lo básico",
       title: "Todo sobre la migraña",
       metaTitle: "Todo sobre la migraña: cifras y vocabulario",
       description: "Cuántas personas viven con migraña y las palabras que conviene conocer para hablar con tu médico: lo esencial sobre la migraña.",
@@ -817,7 +818,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
     },
     "es-419": {
       slug: "todo-sobre-la-migrana",
-      label: "General",
+      label: "Lo básico",
       title: "Todo sobre la migraña",
       metaTitle: "Todo sobre la migraña: cifras y vocabulario",
       description: "Cuántas personas viven con migraña y las palabras que conviene conocer para hablar con tu médico: lo esencial sobre la migraña.",
@@ -832,7 +833,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
     },
     de: {
       slug: "alles-ueber-migraene",
-      label: "Allgemein",
+      label: "Grundlagen",
       title: "Alles über Migräne",
       metaTitle: "Alles über Migräne: Zahlen und Begriffe",
       description: "Wie viele Menschen mit Migräne leben und welche Begriffe du für das Gespräch mit deiner Ärztin kennen solltest: das Wichtigste über Migräne.",
@@ -847,7 +848,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
     },
     it: {
       slug: "tutto-sull-emicrania",
-      label: "Generale",
+      label: "Le basi",
       title: "Tutto sull'emicrania",
       metaTitle: "Tutto sull'emicrania: numeri e vocabolario",
       description: "Quante persone convivono con l'emicrania e le parole da conoscere per parlarne con il medico: le basi essenziali sull'emicrania.",
@@ -862,7 +863,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
     },
     pt: {
       slug: "tudo-sobre-enxaqueca",
-      label: "Geral",
+      label: "O essencial",
       title: "Tudo sobre a enxaqueca",
       metaTitle: "Tudo sobre a enxaqueca: números e vocabulário",
       description: "Quantas pessoas vivem com enxaqueca e as palavras a conhecer para falar com o teu médico: o essencial sobre a enxaqueca.",
@@ -877,7 +878,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
     },
     "pt-BR": {
       slug: "tudo-sobre-enxaqueca",
-      label: "Geral",
+      label: "O essencial",
       title: "Tudo sobre enxaqueca",
       metaTitle: "Tudo sobre enxaqueca: números e vocabulário",
       description: "Quantas pessoas convivem com enxaqueca e as palavras que você precisa conhecer para falar com o seu médico: o essencial sobre a enxaqueca.",

@@ -9,7 +9,6 @@ import { PILLARS, type PillarId } from "@/lib/pillars";
 import { DIARY, OVERUSE_PAGE, TEST_PAGE, isToolLocale } from "@/lib/tools";
 import { typographize } from "@/lib/typography";
 import { BlogBrowser } from "./BlogBrowser";
-import { BlogCta } from "./BlogCta";
 import { Pagination } from "./Pagination";
 import { blogTabs, cardOf, searchIndex } from "./blog-lists";
 
@@ -75,8 +74,6 @@ export async function PillarPage({ pillar, locale, page, localePaths }: Props) {
           </BlogBrowser>
         </div>
 
-        {/* Full width, aligned with the list above. */}
-        <BlogCta />
       </main>
       <Footer localePaths={localePaths} />
     </>
