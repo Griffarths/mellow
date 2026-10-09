@@ -15,7 +15,8 @@ const LINK_CLASS =
 
 // From md: logo, Resources menu, Blog, Android and the store badges. Below:
 // logo, a download button and a burger (MobileMenu). On the home page
-// (overHero) it starts transparent over the hero (NavShell).
+// (overHero) it starts transparent over the hero (NavShell), without the
+// download badge or button (nav-cta, globals.css): the hero has its own.
 export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
   const t = useTranslations("nav");
   const locale = useLocale();
@@ -65,7 +66,7 @@ export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
           </div>
         </div>
         <StoreBadges
-          className="hidden shrink-0 flex-nowrap gap-2 md:flex"
+          className="nav-cta hidden shrink-0 flex-nowrap gap-2 md:flex"
           sizeClass="h-10 w-auto select-none"
         />
         <MobileMenu

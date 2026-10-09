@@ -158,6 +158,21 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-on-hero:hover {
   color: rgb(255 255 255 / 0.8);
 }
 
+/* The nav's download badge (desktop) and button (phones) wait for the white
+   nav: the hero right below has its own App Store badge. They keep their
+   space so nothing moves when they fade in. */
+.nav-cta {
+  transition:
+    opacity 0.3s,
+    visibility 0.3s,
+    background-color 0.15s;
+}
+
+header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* Migraine-friendly: no motion if the visitor asked for less. */
 @media (prefers-reduced-motion: reduce) {
   .hero-clouds div {

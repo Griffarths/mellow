@@ -60,7 +60,7 @@ export function MobileMenu({
 
   const close = () => setOpen(false);
   const downloadClass =
-    "inline-flex h-9 items-center whitespace-nowrap rounded-full bg-ink px-4 text-sm font-semibold text-white transition hover:bg-ink/85";
+    "nav-cta inline-flex h-9 items-center whitespace-nowrap rounded-full bg-ink px-4 text-sm font-semibold text-white transition hover:bg-ink/85";
 
   return (
     <div className="flex shrink-0 items-center gap-1.5 md:hidden">
