@@ -56,17 +56,18 @@
   "features": {
     "title": "Tout pour suivre tes migraines.",
     "subtitle": "Mellow est une app de suivi des migraines, pensée pour rester simple même pendant une crise.",
+    "phoneAlt": "Écran d'accueil de l'app Mellow : jours sans migraine, migraines du mois et raccourcis",
     "log": {
       "title": "Note une crise en deux taps",
-      "text": "Intensité, médicaments, déclencheurs : tout se note en quelques secondes."
+      "text": "Sur le moment, note juste le début et l'intensité. Le reste, tu le complètes plus tard, quand ça va mieux."
     },
     "understand": {
       "title": "Comprends ce qui les déclenche",
-      "text": "Ton calendrier, tes déclencheurs, ce qui te soulage vraiment et la météo : Mellow t'aide à relier les points."
+      "text": "Tes symptômes, tes déclencheurs, ce qui te soulage vraiment : Mellow t'aide à y voir plus clair dans tes migraines."
     },
     "doctor": {
       "title": "Prépare ton rendez-vous",
-      "text": "Un rapport PDF clair, avec tes crises et tes traitements, à montrer à ton médecin."
+      "text": "Trois rapports PDF clairs et complets à montrer à ton médecin : l'analyse, l'historique de tes crises et ton score MIDAS."
     }
   },
   "mellows": {

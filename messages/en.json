@@ -56,17 +56,18 @@
   "features": {
     "title": "Everything you need to keep track of your migraines.",
     "subtitle": "Mellow is a migraine tracking app, designed to stay simple even during an attack.",
+    "phoneAlt": "Mellow app home screen: migraine-free days, migraines this month and shortcuts",
     "log": {
       "title": "Log an attack in two taps",
-      "text": "Intensity, medication, triggers: it all takes a few seconds to log."
+      "text": "In the moment, just log when it started and how intense it is. You can fill in the rest later, once you feel better."
     },
     "understand": {
       "title": "Understand what triggers them",
-      "text": "Your calendar, your triggers, what really brings relief and the weather: Mellow helps you connect the dots."
+      "text": "Your symptoms, your triggers, what really brings relief: Mellow helps you see your migraines more clearly."
     },
     "doctor": {
       "title": "Prepare for your appointment",
-      "text": "A clear PDF report of your attacks and treatments, to show your doctor."
+      "text": "Three clear, complete PDF reports to show your doctor: your analysis, the history of your attacks and your MIDAS score."
     }
   },
   "mellows": {

@@ -3,9 +3,9 @@ import { useLocale, useTranslations } from "next-intl";
 import { TONES, type Tone } from "@/lib/tones";
 
 // Right under the hero: says plainly what the app is and does. A phone
-// showing the real "log a migraine" screen (public/app-screens/<locale>,
-// exported from Frame Studio) next to the three benefits, split by thin
-// rules. White background.
+// showing the app's real home screen (public/app-screens/<locale>/home.jpg,
+// iPhone 17 Pro simulator, demo account) next to the three benefits, split
+// by thin rules. White background.
 const FEATURES: Array<{ id: "log" | "understand" | "doctor"; tone: Tone; icon: ReactNode }> = [
   {
     id: "log",
@@ -45,7 +45,6 @@ const FEATURES: Array<{ id: "log" | "understand" | "doctor"; tone: Tone; icon: R
 
 export function Features() {
   const t = useTranslations("features");
-  const shots = useTranslations("screenshots");
   const locale = useLocale();
 
   return (
@@ -65,7 +64,7 @@ export function Features() {
               aria-hidden
               className="absolute left-1/2 top-1/2 aspect-square w-[200%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(255_98_169/0.22),rgb(255_98_169/0)_75%)]"
             />
-            <Phone src={`/app-screens/${locale}/log.jpg`} alt={shots("alt.02")} />
+            <Phone src={`/app-screens/${locale}/home.jpg`} alt={t("phoneAlt")} />
           </div>
 
           <ul className="mx-auto mt-10 w-full max-w-xl divide-y divide-surface-line md:mx-0 md:mt-0 md:max-w-none">
