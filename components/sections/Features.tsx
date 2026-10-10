@@ -63,12 +63,12 @@ export function Features() {
           <Phone
             src={`/app-screens/${locale}/calendar.jpg`}
             alt={shots("alt.03")}
-            className="left-[3%] top-[2%]"
+            className="left-[8%] top-[2%]"
           />
           <Phone
             src={`/app-screens/${locale}/log.jpg`}
             alt={shots("alt.02")}
-            className="right-[3%] top-[11%]"
+            className="right-[8%] top-[11%]"
           />
         </div>
 
