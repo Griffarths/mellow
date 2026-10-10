@@ -128,22 +128,6 @@
       "subtitle": "Os métodos que realmente funcionam durante a crise."
     }
   },
-  "screenshots": {
-    "title": "Descobre a app.",
-    "prev": "Captura anterior",
-    "next": "Captura seguinte",
-    "alt": {
-      "02": "Registo de uma enxaqueca com a sua intensidade de 1 a 10",
-      "03": "Calendário de enxaquecas, mês a mês",
-      "04": "Escolha dos fatores desencadeantes: stress, falta de sono, ecrãs e mais",
-      "05": "O que te alivia: medicamentos e métodos, do mais ao menos eficaz",
-      "06": "Análise detalhada dos últimos 30 dias com as observações do Mellow",
-      "07": "Cursos sobre a enxaqueca: Compreender, Prevenir, Gerir",
-      "08": "Previsão a sete dias da pressão atmosférica e da humidade",
-      "09": "Perfil com tratamentos, consultas médicas e medalhas",
-      "10": "Exportação de um relatório PDF para o teu médico"
-    }
-  },
   "socialProof": {
     "title": "O que dizem.",
     "outOf": "em 5",

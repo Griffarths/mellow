@@ -128,22 +128,6 @@
       "subtitle": "Los métodos que realmente funcionan durante la crisis."
     }
   },
-  "screenshots": {
-    "title": "Descubre la app.",
-    "prev": "Captura anterior",
-    "next": "Captura siguiente",
-    "alt": {
-      "02": "Registro de una migraña con su intensidad del 1 al 10",
-      "03": "Calendario de migrañas, mes a mes",
-      "04": "Elección de desencadenantes: estrés, falta de sueño, pantallas y más",
-      "05": "Lo que te alivia: medicamentos y métodos, del más al menos eficaz",
-      "06": "Análisis detallado de los últimos 30 días con las observaciones de Mellow",
-      "07": "Cursos sobre la migraña: Comprender, Prevenir, Manejar",
-      "08": "Pronóstico a siete días de la presión atmosférica y la humedad",
-      "09": "Perfil con tratamientos, citas médicas e insignias",
-      "10": "Exportación de un informe PDF para tu médico"
-    }
-  },
   "socialProof": {
     "title": "Lo que opinan.",
     "outOf": "de 5",

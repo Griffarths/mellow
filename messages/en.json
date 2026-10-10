@@ -123,22 +123,6 @@
       "subtitle": "The methods that truly work during an attack."
     }
   },
-  "screenshots": {
-    "title": "Discover the app.",
-    "prev": "Previous screenshot",
-    "next": "Next screenshot",
-    "alt": {
-      "02": "Logging a migraine with its intensity from 1 to 10",
-      "03": "Migraine calendar, month by month",
-      "04": "Choosing triggers: stress, lack of sleep, screens and more",
-      "05": "What brings relief: medications and methods, from most to least effective",
-      "06": "Detailed analysis of the last 30 days with Mellow's observations",
-      "07": "Migraine courses: Understand, Prevent, Manage",
-      "08": "Seven-day forecast of atmospheric pressure and humidity",
-      "09": "Profile with treatments, medical appointments and badges",
-      "10": "Exporting a PDF report for your doctor"
-    }
-  },
   "socialProof": {
     "title": "What people say.",
     "outOf": "out of 5",

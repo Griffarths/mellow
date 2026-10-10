@@ -128,22 +128,6 @@
       "subtitle": "I metodi che funzionano davvero durante la crisi."
     }
   },
-  "screenshots": {
-    "title": "Scopri l'app.",
-    "prev": "Schermata precedente",
-    "next": "Schermata successiva",
-    "alt": {
-      "02": "Registrazione di un'emicrania con la sua intensità da 1 a 10",
-      "03": "Calendario delle emicranie, mese per mese",
-      "04": "Scelta dei fattori scatenanti: stress, mancanza di sonno, schermi e altro",
-      "05": "Cosa dà sollievo: farmaci e metodi, dal più al meno efficace",
-      "06": "Analisi dettagliata degli ultimi 30 giorni con le osservazioni di Mellow",
-      "07": "Corsi sull'emicrania: Capire, Prevenire, Gestire",
-      "08": "Previsioni a sette giorni di pressione atmosferica e umidità",
-      "09": "Profilo con trattamenti, appuntamenti medici e badge",
-      "10": "Esportazione di un report PDF per il tuo medico"
-    }
-  },
   "socialProof": {
     "title": "Cosa ne pensano.",
     "outOf": "su 5",

@@ -123,22 +123,6 @@
       "subtitle": "Les méthodes qui marchent vraiment pendant la crise."
     }
   },
-  "screenshots": {
-    "title": "Découvre l'app.",
-    "prev": "Capture précédente",
-    "next": "Capture suivante",
-    "alt": {
-      "02": "Enregistrement d'une migraine avec son intensité de 1 à 10",
-      "03": "Calendrier des migraines, mois par mois",
-      "04": "Choix des déclencheurs : stress, manque de sommeil, écrans et autres",
-      "05": "Ce qui soulage : médicaments et méthodes, du plus efficace au moins efficace",
-      "06": "Analyse détaillée des 30 derniers jours avec les remarques de Mellow",
-      "07": "Cours sur la migraine : Comprendre, Prévenir, Gérer",
-      "08": "Prévisions de pression atmosphérique et d'humidité sur sept jours",
-      "09": "Profil avec les traitements, les rendez-vous médicaux et les badges",
-      "10": "Export d'un rapport PDF pour ton médecin"
-    }
-  },
   "socialProof": {
     "title": "Ce qu'ils en pensent.",
     "outOf": "sur 5",

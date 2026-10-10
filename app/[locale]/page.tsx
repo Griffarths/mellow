@@ -8,7 +8,6 @@ import { WhyMellow } from "@/components/sections/WhyMellow";
 import { MellowsSlider } from "@/components/sections/MellowsSlider";
 import { Courses } from "@/components/sections/Courses";
 import { LatestArticles } from "@/components/sections/LatestArticles";
-import { Screenshots } from "@/components/sections/Screenshots";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/Footer";
@@ -38,7 +37,6 @@ export default async function HomePage({
         <Hero />
         <Features />
         <WhyMellow />
-        <Screenshots />
         <SocialProof />
         <MellowsSlider />
         <Courses />
