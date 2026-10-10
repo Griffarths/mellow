@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 
-// After the phone section: three reasons to pick Mellow, in columns split
-// by thin rules, each opened by a 3D emoji from Microsoft's Fluent Emoji
+// After the phone section: three reasons to pick Mellow, one row each,
+// split by thin rules, each with a 3D emoji from Microsoft's Fluent Emoji
 // (public/emoji; MIT licence, Copyright (c) Microsoft Corporation).
 const REASONS: Array<{ id: "free" | "founder" | "doctor"; emoji: string }> = [
   { id: "free", emoji: "/emoji/mobile_phone_3d.png" },
@@ -20,27 +20,29 @@ export function WhyMellow() {
           <p className="mt-4 text-balance text-lg text-ink-2">{t("subtitle")}</p>
         </div>
 
-        {/* Stacked under one another (rules between them) until there is
-            room for three readable columns, then side by side with rules
-            between the columns. */}
-        <ul className="mx-auto mt-10 grid max-w-2xl divide-y divide-surface-line md:mt-14 min-[900px]:max-w-none min-[900px]:grid-cols-3 min-[900px]:divide-x min-[900px]:divide-y-0">
+        {/* One row per reason, split by thin rules: emoji and title on the
+            left, the text on the right with room to breathe. Phones: the
+            text goes under the title. */}
+        <ul className="mx-auto mt-10 max-w-5xl border-t border-surface-line md:mt-14">
           {REASONS.map((r) => (
             <li
               key={r.id}
-              className="py-8 first:pt-0 last:pb-0 min-[900px]:px-8 min-[900px]:py-0 min-[900px]:first:pl-0 min-[900px]:last:pr-0 lg:px-10"
+              className="grid gap-4 border-b border-surface-line py-8 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-12 md:py-10"
             >
-              <img
-                src={r.emoji}
-                alt=""
-                aria-hidden
-                width={256}
-                height={256}
-                loading="lazy"
-                draggable={false}
-                className="h-16 w-16 select-none"
-              />
-              <h3 className="mt-5 text-balance text-h3 text-ink">{t(`${r.id}.title`)}</h3>
-              <p className="mt-2 text-[17px] leading-[1.7] text-ink-body">{t(`${r.id}.text`)}</p>
+              <div className="flex items-center gap-5">
+                <img
+                  src={r.emoji}
+                  alt=""
+                  aria-hidden
+                  width={256}
+                  height={256}
+                  loading="lazy"
+                  draggable={false}
+                  className="h-14 w-14 shrink-0 select-none"
+                />
+                <h3 className="text-balance text-h3 text-ink">{t(`${r.id}.title`)}</h3>
+              </div>
+              <p className="text-[17px] leading-[1.7] text-ink-body">{t(`${r.id}.text`)}</p>
             </li>
           ))}
         </ul>
