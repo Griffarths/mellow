@@ -18,10 +18,12 @@ export function LatestArticles() {
           <h2 className="text-center text-h2 text-ink md:text-left">{t("latestTitle")}</h2>
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-croix-ink underline decoration-croix-ink/30 decoration-2 underline-offset-[3px] transition hover:decoration-croix-ink"
+            className="group inline-flex items-center gap-2 text-sm font-semibold text-croix-ink"
           >
             {t("seeAll")}
-            <span aria-hidden>→</span>
+            <span aria-hidden className="transition-transform group-hover:translate-x-1">
+              →
+            </span>
           </Link>
         </div>
         <div className="mt-8 grid gap-4 md:mt-10 md:grid-cols-3 md:gap-5">
