@@ -50,55 +50,56 @@ export function Features() {
 
   return (
     <section id="features" className="pt-12 lg:pt-20">
-      {/* Phones: title, phones, list, one column. From md the phones take
-          the left column across both rows, the title and the list sit on
-          the right. */}
-      <div className="mx-auto grid max-w-6xl gap-x-10 px-6 md:grid-cols-2 lg:grid-cols-[1fr_1.05fr] lg:gap-x-20">
-        <div className="mx-auto max-w-2xl text-center md:col-start-2 md:row-start-1 md:mx-0 md:self-end md:text-left">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-h2 text-ink">{t("title")}</h2>
           <p className="mt-4 text-balance text-lg text-ink-2">{t("subtitle")}</p>
         </div>
 
-        {/* Two upright phones side by side, the right one set lower. */}
-        <div className="relative mx-auto mt-10 aspect-[5/6] w-full max-w-[360px] md:col-start-1 md:row-span-2 md:row-start-1 md:mt-0 md:max-w-[480px] md:self-center">
-          <Phone
-            src={`/app-screens/${locale}/calendar.jpg`}
-            alt={shots("alt.03")}
-            className="left-[1%] top-0"
-          />
-          <Phone
-            src={`/app-screens/${locale}/log.jpg`}
-            alt={shots("alt.02")}
-            className="right-[1%] top-[14%]"
-          />
-        </div>
+        {/* Phones: phones above the list. From md, phones on the left, the
+            list on the right. */}
+        <div className="mt-10 grid items-center gap-x-10 md:mt-14 md:grid-cols-2 lg:grid-cols-[1fr_1.05fr] lg:gap-x-20">
+          {/* Two upright phones side by side, the right one set lower. */}
+          <div className="relative mx-auto aspect-[5/6] w-full max-w-[360px] md:max-w-[480px]">
+            <Phone
+              src={`/app-screens/${locale}/calendar.jpg`}
+              alt={shots("alt.03")}
+              className="left-[1%] top-0"
+            />
+            <Phone
+              src={`/app-screens/${locale}/log.jpg`}
+              alt={shots("alt.02")}
+              className="right-[1%] top-[14%]"
+            />
+          </div>
 
-        <ul className="mx-auto mt-10 w-full max-w-xl divide-y divide-surface-line md:col-start-2 md:row-start-2 md:mx-0 md:mt-8 md:max-w-none md:self-start">
-          {FEATURES.map((f) => (
-            <li key={f.id} className="flex gap-5 py-6 first:pt-0 last:pb-0">
-              <span
-                aria-hidden
-                className={`grid h-14 w-14 shrink-0 place-items-center rounded-full text-ink ${TONES[f.tone].tint}`}
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+          <ul className="mx-auto mt-10 w-full max-w-xl divide-y divide-surface-line md:mx-0 md:mt-0 md:max-w-none">
+            {FEATURES.map((f) => (
+              <li key={f.id} className="flex gap-5 py-6 first:pt-0 last:pb-0">
+                <span
+                  aria-hidden
+                  className={`grid h-14 w-14 shrink-0 place-items-center rounded-full text-ink ${TONES[f.tone].tint}`}
                 >
-                  {f.icon}
-                </svg>
-              </span>
-              <div className="min-w-0">
-                <h3 className="text-balance text-h3 text-ink">{t(`${f.id}.title`)}</h3>
-                <p className="mt-1.5 text-[17px] leading-[1.65] text-ink-body">{t(`${f.id}.text`)}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    {f.icon}
+                  </svg>
+                </span>
+                <div className="min-w-0">
+                  <h3 className="text-balance text-h3 text-ink">{t(`${f.id}.title`)}</h3>
+                  <p className="mt-1.5 text-[17px] leading-[1.65] text-ink-body">{t(`${f.id}.text`)}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
