@@ -91,6 +91,127 @@
       "text": "Mellow reúne lo que tu médico o tu neurólogo necesita ver: la frecuencia de tus crisis, tus tratamientos, lo que te alivia y tu puntuación MIDAS. Tus datos se pueden exportar en PDF y compartir con tu médico, para que tenga una mejor visión general de tu situación."
     }
   },
+  "appPage": {
+    "metaTitle": "App para el registro de migrañas · Mellow",
+    "metaDescription": "Mellow, la app para llevar el registro de tus migrañas: registra una crisis con dos toques, sigue tu calendario, entiende tus desencadenantes y prepara tus citas médicas. Gratis en iPhone.",
+    "title": "La app Mellow",
+    "subtitle": "Registra tus crisis en segundos, entiende qué las desencadena y prepara tus citas médicas.",
+    "premium": "Premium",
+    "blocks": {
+      "log": {
+        "kicker": "Durante la crisis",
+        "title": "Registra una crisis con dos toques",
+        "text": "En el momento, anota solo el inicio y la intensidad, del 1 al 10. ¿Se te olvidó una? También puedes registrarla después."
+      },
+      "widget": {
+        "kicker": "Sin abrir la app",
+        "title": "Un widget siempre a la mano",
+        "text": "Desde la pantalla de inicio, la pantalla de bloqueo o el centro de control, registras una migraña con un gesto."
+      },
+      "complete": {
+        "kicker": "Cuando te sientas mejor",
+        "title": "Completa tu crisis a tu ritmo",
+        "text": "Cuando la crisis haya pasado, agrega tus síntomas, los posibles desencadenantes, tus medicamentos y lo que te alivió. Mellow recuerda tus hábitos para ir más rápido."
+      },
+      "calendar": {
+        "kicker": "Mes a mes",
+        "title": "Todas tus crisis en un calendario",
+        "text": "Cada crisis aparece con el color de su intensidad, mes a mes, con el número de migrañas del mes. Y todo tu historial, una crisis por línea."
+      },
+      "understand": {
+        "kicker": "Entender",
+        "title": "Lo que realmente te alivia, y lo que desencadena tus crisis",
+        "text": "Mellow analiza tus últimos 30 días y te dice lo que observa: tus medicamentos y tus métodos, del más al menos eficaz, tus desencadenantes e incluso la relación con tu sueño, gracias a Apple Salud."
+      },
+      "weather": {
+        "kicker": "Anticiparte",
+        "title": "La presión y la humedad de los próximos siete días",
+        "text": "Mellow sigue el clima donde estás y compara tus crisis con los cambios de presión, para ayudarte a detectar los días a vigilar."
+      },
+      "care": {
+        "kicker": "Cuidarte",
+        "title": "No solo durante las crisis",
+        "text": "Anota tu estado de ánimo, respira con un ejercicio guiado, aprende con los cursos sobre la migraña y envía un abrazo a quienes tienen una migraña en este momento."
+      },
+      "doctor": {
+        "kicker": "Con tu médico",
+        "title": "Informes listos para tu cita",
+        "text": "Exporta en PDF el análisis de tus crisis, tu historial y tu puntuación MIDAS, para mostrarle datos claros a tu médico o a tu neurólogo."
+      }
+    },
+    "plans": {
+      "title": "Gratis o Premium",
+      "subtitle": "Mellow es gratis para registrar y seguir tus crisis. Premium agrega los análisis y las herramientas para ir más allá.",
+      "free": {
+        "title": "Gratis",
+        "items": [
+          "Registrar tus crisis, también desde el widget",
+          "Calendario e historial",
+          "Estado de ánimo, respiración guiada y abrazos",
+          "Algunos cursos sobre la migraña",
+          "Respaldo en la nube"
+        ]
+      },
+      "premium": {
+        "title": "Premium",
+        "items": [
+          "Análisis detallado y observaciones de Mellow",
+          "Desencadenantes y alivios",
+          "Clima y sueño",
+          "Todos los cursos",
+          "Informes PDF y exportación de la puntuación MIDAS"
+        ]
+      }
+    },
+    "data": {
+      "title": "Tus datos, bien cuidados",
+      "cloud": {
+        "title": "Guardados en la nube",
+        "text": "Todo lo que registras te acompaña de un dispositivo a otro."
+      },
+      "sold": {
+        "title": "Nunca vendidos",
+        "text": "Tus datos de salud nunca se venden."
+      },
+      "languages": {
+        "title": "En tu idioma",
+        "text": "Mellow está disponible en francés, inglés, alemán, italiano, español y portugués."
+      }
+    },
+    "ui": {
+      "recordQuestion": "¿Tienes migraña?",
+      "save": "Guardar",
+      "mild": "Leve",
+      "moderate": "Moderada",
+      "intense": "Intensa",
+      "symptoms": "Síntomas",
+      "triggers": "Desencadenantes",
+      "meds": "Medicamentos",
+      "nausea": "Náuseas",
+      "light": "Sensibilidad a la luz",
+      "stress": "Estrés",
+      "sleep": "Falta de sueño",
+      "darkRest": "Reposo en la oscuridad",
+      "reliefHigh": "Muy eficaz",
+      "reliefMid": "Bastante eficaz",
+      "reliefNone": "Sin efecto",
+      "statMigraines": "Migrañas",
+      "statDays": "Días afectados",
+      "statIntensity": "Intensidad media",
+      "weatherDays": "Los próximos siete días",
+      "hugs": "{count} personas tienen migraña",
+      "hugsAction": "Envíales un abrazo",
+      "reportAnalysis": "Análisis",
+      "reportHistory": "Historial",
+      "reportMidas": "Puntuación MIDAS",
+      "export": "Exportar como PDF",
+      "calendar": "Calendario",
+      "widgetTitle": "¿Una migraña?",
+      "widgetSave": "Registrar",
+      "times": "{count, plural, one {# vez} other {# veces}}",
+      "monthMigraines": "{count, plural, one {# migraña} other {# migrañas}}"
+    }
+  },
   "mellows": {
     "title": "Una app amable,<br></br>no un expediente médico.",
     "subtitle": "Cada Mellow te acompaña en un momento distinto de tu migraña, desde los días normales hasta las crisis más fuertes.",

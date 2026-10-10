@@ -8,6 +8,7 @@ import { routing } from "./routing";
 // plain.
 function typographizeMessages(value: unknown, locale: string): unknown {
   if (typeof value === "string") return typographize(value, locale);
+  if (Array.isArray(value)) return value.map((v) => typographizeMessages(v, locale));
   if (value && typeof value === "object") {
     return Object.fromEntries(
       Object.entries(value).map(([key, v]) => [key, typographizeMessages(v, locale)]),

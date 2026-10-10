@@ -40,6 +40,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  // The app in detail: same path in every locale
+  const appAlternates = withDefault(
+    Object.fromEntries(routing.locales.map((l) => [l, url(l, "/app")])),
+  );
+  for (const locale of routing.locales) {
+    entries.push({
+      url: url(locale, "/app"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: { languages: appAlternates },
+    });
+  }
+
   // Blog index: one entry per locale (every locale has /blog — coming-soon for non-FR/EN)
   const blogIndexAlternates = withDefault(
     Object.fromEntries(routing.locales.map((l) => [l, url(l, "/blog")])),

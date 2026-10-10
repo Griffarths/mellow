@@ -91,6 +91,127 @@
       "text": "A Mellow reúne o que o teu médico ou o teu neurologista precisa de ver: a frequência das tuas crises, os teus tratamentos, o que te alivia e a tua pontuação MIDAS. Os teus dados podem ser exportados em PDF e partilhados com o teu médico, para que tenha uma visão de conjunto mais clara da tua situação."
     }
   },
+  "appPage": {
+    "metaTitle": "App de registo de enxaquecas · Mellow",
+    "metaDescription": "A Mellow é a app para acompanhares as tuas enxaquecas: regista uma crise em dois toques, segue o teu calendário, percebe os teus fatores desencadeantes e prepara as tuas consultas. Gratuita no iPhone.",
+    "title": "A app Mellow",
+    "subtitle": "Regista as tuas crises em segundos, percebe o que as desencadeia e prepara as tuas consultas.",
+    "premium": "Premium",
+    "blocks": {
+      "log": {
+        "kicker": "Durante a crise",
+        "title": "Regista uma crise em dois toques",
+        "text": "No momento, regista só o início e a intensidade, de 1 a 10. Esqueceste-te de uma? Também a podes registar depois."
+      },
+      "widget": {
+        "kicker": "Sem abrir a app",
+        "title": "Um widget sempre à mão",
+        "text": "No ecrã principal, no ecrã bloqueado ou na central de controlo, registas uma enxaqueca com um gesto."
+      },
+      "complete": {
+        "kicker": "Quando estiveres melhor",
+        "title": "Termina a tua crise ao teu ritmo",
+        "text": "Quando a crise passar, acrescenta os sintomas, os possíveis fatores desencadeantes, a medicação e o que te aliviou. A Mellow lembra-se dos teus hábitos para ir mais depressa."
+      },
+      "calendar": {
+        "kicker": "Mês após mês",
+        "title": "Todas as tuas crises num calendário",
+        "text": "Cada crise aparece com a cor da sua intensidade, mês após mês, com o número de enxaquecas do mês. E todo o teu histórico, uma crise por linha."
+      },
+      "understand": {
+        "kicker": "Perceber",
+        "title": "O que te alivia de verdade, e o que desencadeia as tuas crises",
+        "text": "A Mellow analisa os teus últimos 30 dias e diz-te o que repara: a tua medicação e os teus métodos, do mais ao menos eficaz, os teus fatores desencadeantes e até a ligação ao teu sono, graças à app Saúde da Apple."
+      },
+      "weather": {
+        "kicker": "Antecipar",
+        "title": "A pressão e a humidade dos próximos sete dias",
+        "text": "A Mellow acompanha a meteorologia onde estás e compara as tuas crises com as variações de pressão, para te ajudar a identificar os dias a vigiar."
+      },
+      "care": {
+        "kicker": "Cuidar de ti",
+        "title": "Não só durante as crises",
+        "text": "Regista o teu humor, respira com um exercício guiado, aprende com os cursos sobre enxaqueca e envia um abraço a quem tem uma enxaqueca neste momento."
+      },
+      "doctor": {
+        "kicker": "No médico",
+        "title": "Relatórios prontos para a tua consulta",
+        "text": "Exporta em PDF a análise das tuas crises, o teu histórico e a tua pontuação MIDAS, para mostrares dados claros ao teu médico ou ao teu neurologista."
+      }
+    },
+    "plans": {
+      "title": "Gratuito ou Premium",
+      "subtitle": "A Mellow é gratuita para registares e acompanhares as tuas crises. O Premium acrescenta as análises e as ferramentas para ires mais longe.",
+      "free": {
+        "title": "Gratuito",
+        "items": [
+          "Registar as tuas crises, também pelo widget",
+          "Calendário e histórico",
+          "Humor, respiração guiada e abraços",
+          "Alguns cursos sobre enxaqueca",
+          "Cópia de segurança na nuvem"
+        ]
+      },
+      "premium": {
+        "title": "Premium",
+        "items": [
+          "Análise detalhada e observações da Mellow",
+          "Fatores desencadeantes e alívio",
+          "Meteorologia e sono",
+          "Todos os cursos",
+          "Relatórios PDF e exportação da pontuação MIDAS"
+        ]
+      }
+    },
+    "data": {
+      "title": "Os teus dados, bem guardados",
+      "cloud": {
+        "title": "Guardados na nuvem",
+        "text": "Tudo o que registas acompanha-te de um dispositivo para outro."
+      },
+      "sold": {
+        "title": "Nunca vendidos",
+        "text": "Os teus dados de saúde nunca são vendidos."
+      },
+      "languages": {
+        "title": "Na tua língua",
+        "text": "A Mellow existe em francês, inglês, alemão, italiano, espanhol e português."
+      }
+    },
+    "ui": {
+      "recordQuestion": "Tens uma enxaqueca?",
+      "save": "Guardar",
+      "mild": "Leve",
+      "moderate": "Moderada",
+      "intense": "Intensa",
+      "symptoms": "Sintomas",
+      "triggers": "Gatilhos",
+      "meds": "Medicamentos",
+      "nausea": "Náuseas",
+      "light": "Sensibilidade à luz",
+      "stress": "Stress",
+      "sleep": "Falta de sono",
+      "darkRest": "Repouso no escuro",
+      "reliefHigh": "Muito eficaz",
+      "reliefMid": "Razoável",
+      "reliefNone": "Sem efeito",
+      "statMigraines": "Enxaquecas",
+      "statDays": "Dias afetados",
+      "statIntensity": "Intensidade média",
+      "weatherDays": "Os próximos sete dias",
+      "hugs": "{count} pessoas têm uma enxaqueca",
+      "hugsAction": "Envia-lhes um abraço",
+      "reportAnalysis": "Análise",
+      "reportHistory": "Histórico",
+      "reportMidas": "Pontuação MIDAS",
+      "export": "Exportar como PDF",
+      "calendar": "Calendário",
+      "widgetTitle": "Uma enxaqueca?",
+      "widgetSave": "Registar",
+      "times": "{count, plural, one {# vez} other {# vezes}}",
+      "monthMigraines": "{count, plural, one {# enxaqueca} other {# enxaquecas}}"
+    }
+  },
   "mellows": {
     "title": "Uma app suave,<br></br>não um processo clínico.",
     "subtitle": "Cada Mellow acompanha-te num momento diferente da tua enxaqueca, dos dias normais às crises mais fortes.",

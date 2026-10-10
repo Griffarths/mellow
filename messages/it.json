@@ -91,6 +91,127 @@
       "text": "Mellow riunisce ciò che il tuo medico o il tuo neurologo ha bisogno di vedere: la frequenza dei tuoi attacchi, le tue terapie, cosa ti dà sollievo e il tuo punteggio MIDAS. I tuoi dati sono esportabili in PDF e puoi condividerli con il tuo medico, per dargli una visione d'insieme più chiara della tua situazione."
     }
   },
+  "appPage": {
+    "metaTitle": "App per tenere traccia dell'emicrania · Mellow",
+    "metaDescription": "Mellow, l'app per tenere traccia delle tue emicranie: registra un attacco con due tap, segui il tuo calendario, capisci i tuoi fattori scatenanti e prepara le tue visite. Gratis su iPhone.",
+    "title": "L'app Mellow",
+    "subtitle": "Registra i tuoi attacchi in pochi secondi, capisci cosa li scatena e prepara le tue visite.",
+    "premium": "Premium",
+    "blocks": {
+      "log": {
+        "kicker": "Durante l'attacco",
+        "title": "Registra un attacco con due tap",
+        "text": "Sul momento, annota solo l'inizio e l'intensità, da 1 a 10. Hai dimenticato un attacco? Puoi registrarlo anche dopo."
+      },
+      "widget": {
+        "kicker": "Senza aprire l'app",
+        "title": "Un widget sempre a portata di mano",
+        "text": "Dalla schermata Home, dalla schermata di blocco o dal Centro di Controllo, registri un'emicrania con un gesto."
+      },
+      "complete": {
+        "kicker": "Quando va meglio",
+        "title": "Completa l'attacco con calma",
+        "text": "Quando l'attacco è passato, aggiungi i sintomi, i possibili fattori scatenanti, i farmaci e cosa ti ha dato sollievo. Mellow ricorda le tue abitudini per fare prima."
+      },
+      "calendar": {
+        "kicker": "Mese dopo mese",
+        "title": "Tutti i tuoi attacchi in un calendario",
+        "text": "Ogni attacco compare con il colore della sua intensità, mese dopo mese, con il numero di emicranie del mese. E tutto il tuo storico, un attacco per riga."
+      },
+      "understand": {
+        "kicker": "Capire",
+        "title": "Cosa ti dà davvero sollievo, e cosa scatena i tuoi attacchi",
+        "text": "Mellow analizza i tuoi ultimi 30 giorni e ti dice cosa nota: i tuoi farmaci e i tuoi metodi, dal più al meno efficace, i tuoi fattori scatenanti e persino il legame con il sonno, grazie ad Apple Salute."
+      },
+      "weather": {
+        "kicker": "Prevedere",
+        "title": "Pressione e umidità dei prossimi sette giorni",
+        "text": "Mellow segue il meteo dove ti trovi e confronta i tuoi attacchi con le variazioni di pressione, per aiutarti a individuare i giorni da tenere d'occhio."
+      },
+      "care": {
+        "kicker": "Prenditi cura di te",
+        "title": "Non solo durante gli attacchi",
+        "text": "Annota il tuo umore, respira con un esercizio guidato, impara con i corsi sull'emicrania e manda un abbraccio a chi ha un'emicrania in questo momento."
+      },
+      "doctor": {
+        "kicker": "Dal medico",
+        "title": "Report pronti per la tua visita",
+        "text": "Esporta in PDF l'analisi dei tuoi attacchi, il tuo storico e il tuo punteggio MIDAS, per mostrare dati chiari al tuo medico o al tuo neurologo."
+      }
+    },
+    "plans": {
+      "title": "Gratis o Premium",
+      "subtitle": "Mellow è gratis per registrare e seguire i tuoi attacchi. Premium aggiunge le analisi e gli strumenti per andare oltre.",
+      "free": {
+        "title": "Gratis",
+        "items": [
+          "Registrare gli attacchi, anche dal widget",
+          "Calendario e storico",
+          "Umore, respirazione guidata e abbracci",
+          "Alcuni corsi sull'emicrania",
+          "Backup nel cloud"
+        ]
+      },
+      "premium": {
+        "title": "Premium",
+        "items": [
+          "Analisi dettagliata e osservazioni di Mellow",
+          "Fattori scatenanti e sollievo",
+          "Meteo e sonno",
+          "Tutti i corsi",
+          "Report PDF ed esportazione del punteggio MIDAS"
+        ]
+      }
+    },
+    "data": {
+      "title": "I tuoi dati, ben custoditi",
+      "cloud": {
+        "title": "Salvati nel cloud",
+        "text": "Tutto ciò che registri ti segue da un dispositivo all'altro."
+      },
+      "sold": {
+        "title": "Mai venduti",
+        "text": "I tuoi dati sanitari non vengono mai venduti."
+      },
+      "languages": {
+        "title": "Nella tua lingua",
+        "text": "Mellow è disponibile in francese, inglese, tedesco, italiano, spagnolo e portoghese."
+      }
+    },
+    "ui": {
+      "recordQuestion": "Hai un'emicrania?",
+      "save": "Salva",
+      "mild": "Lieve",
+      "moderate": "Moderata",
+      "intense": "Intensa",
+      "symptoms": "Sintomi",
+      "triggers": "Fattori scatenanti",
+      "meds": "Farmaci",
+      "nausea": "Nausea",
+      "light": "Sensibilità alla luce",
+      "stress": "Stress",
+      "sleep": "Mancanza di sonno",
+      "darkRest": "Riposo al buio",
+      "reliefHigh": "Molto efficace",
+      "reliefMid": "Abbastanza efficace",
+      "reliefNone": "Senza effetto",
+      "statMigraines": "Emicranie",
+      "statDays": "Giorni colpiti",
+      "statIntensity": "Intensità media",
+      "weatherDays": "I prossimi sette giorni",
+      "hugs": "{count} persone hanno un'emicrania",
+      "hugsAction": "Manda loro un abbraccio",
+      "reportAnalysis": "Analisi",
+      "reportHistory": "Storico",
+      "reportMidas": "Punteggio MIDAS",
+      "export": "Esporta in PDF",
+      "calendar": "Calendario",
+      "widgetTitle": "Un'emicrania?",
+      "widgetSave": "Registra",
+      "times": "{count, plural, one {# volta} other {# volte}}",
+      "monthMigraines": "{count, plural, one {# emicrania} other {# emicranie}}"
+    }
+  },
   "mellows": {
     "title": "Un'app delicata,<br></br>non una cartella clinica.",
     "subtitle": "Ogni Mellow ti accompagna in un momento diverso della tua emicrania, dai giorni normali agli attacchi più forti.",

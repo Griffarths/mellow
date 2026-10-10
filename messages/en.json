@@ -86,6 +86,127 @@
       "text": "Mellow brings together what your doctor or neurologist needs to see: how often your attacks happen, your treatments, what brings relief and your MIDAS score. Your data can be exported as a PDF and shared with your doctor, giving them a better overview of your situation."
     }
   },
+  "appPage": {
+    "metaTitle": "Migraine tracking app · Mellow",
+    "metaDescription": "Mellow, the migraine tracking app: log an attack in two taps, follow your calendar, understand your triggers and prepare for your appointments. Free on iPhone.",
+    "title": "The Mellow app",
+    "subtitle": "Log your attacks in seconds, understand what triggers them and prepare for your appointments.",
+    "premium": "Premium",
+    "blocks": {
+      "log": {
+        "kicker": "During an attack",
+        "title": "Log an attack in two taps",
+        "text": "In the moment, just note when it started and how intense it is, from 1 to 10. Forgot one? You can also log it afterwards."
+      },
+      "widget": {
+        "kicker": "Without opening the app",
+        "title": "A widget always within reach",
+        "text": "From your Home Screen, Lock Screen or Control Center, log a migraine in one tap."
+      },
+      "complete": {
+        "kicker": "Once it eases",
+        "title": "Finish your attack at your own pace",
+        "text": "Once the attack is over, add your symptoms, possible triggers, medication and what brought relief. Mellow remembers your habits to make it quicker."
+      },
+      "calendar": {
+        "kicker": "Month after month",
+        "title": "All your attacks in a calendar",
+        "text": "Each attack shows up in the color of its intensity, month after month, with the number of migraines that month. Plus your full history, one attack per line."
+      },
+      "understand": {
+        "kicker": "Understand",
+        "title": "What really brings relief, and what triggers your attacks",
+        "text": "Mellow analyzes your last 30 days and tells you what it notices: your medication and methods, from most to least effective, your triggers, and even the link with your sleep through Apple Health."
+      },
+      "weather": {
+        "kicker": "Anticipate",
+        "title": "Pressure and humidity for the next seven days",
+        "text": "Mellow follows the weather where you are and compares your attacks with pressure changes, to help you spot the days to watch."
+      },
+      "care": {
+        "kicker": "Take care of yourself",
+        "title": "Not just during attacks",
+        "text": "Log your mood, breathe with a guided exercise, learn with migraine courses, and send a hug to people who have a migraine right now."
+      },
+      "doctor": {
+        "kicker": "At the doctor's",
+        "title": "Reports ready for your appointment",
+        "text": "Export your attack analysis, your history and your MIDAS score as PDFs, to show your doctor or neurologist clear data."
+      }
+    },
+    "plans": {
+      "title": "Free or Premium",
+      "subtitle": "Mellow is free to log and track your attacks. Premium adds the analyses and tools to go further.",
+      "free": {
+        "title": "Free",
+        "items": [
+          "Log your attacks, also from the widget",
+          "Calendar and history",
+          "Mood, guided breathing and hugs",
+          "Some migraine courses",
+          "Cloud backup"
+        ]
+      },
+      "premium": {
+        "title": "Premium",
+        "items": [
+          "Detailed analysis and Mellow's insights",
+          "Triggers and relief",
+          "Weather and sleep",
+          "All courses",
+          "PDF reports and MIDAS score export"
+        ]
+      }
+    },
+    "data": {
+      "title": "Your data, well kept",
+      "cloud": {
+        "title": "Backed up in the cloud",
+        "text": "Everything you log follows you from one device to another."
+      },
+      "sold": {
+        "title": "Never sold",
+        "text": "Your health data is never sold."
+      },
+      "languages": {
+        "title": "In your language",
+        "text": "Mellow is available in French, English, German, Italian, Spanish and Portuguese."
+      }
+    },
+    "ui": {
+      "recordQuestion": "Do you have a migraine?",
+      "save": "Save",
+      "mild": "Mild",
+      "moderate": "Moderate",
+      "intense": "Intense",
+      "symptoms": "Symptoms",
+      "triggers": "Triggers",
+      "meds": "Medications",
+      "nausea": "Nausea",
+      "light": "Light sensitivity",
+      "stress": "Stress",
+      "sleep": "Lack of sleep",
+      "darkRest": "Rest in the dark",
+      "reliefHigh": "Very effective",
+      "reliefMid": "Fairly effective",
+      "reliefNone": "No effect",
+      "statMigraines": "Migraines",
+      "statDays": "Days affected",
+      "statIntensity": "Avg. intensity",
+      "weatherDays": "The next seven days",
+      "hugs": "{count} people have a migraine",
+      "hugsAction": "Send them a hug",
+      "reportAnalysis": "Analysis",
+      "reportHistory": "History",
+      "reportMidas": "MIDAS score",
+      "export": "Export as PDF",
+      "calendar": "Calendar",
+      "widgetTitle": "A migraine?",
+      "widgetSave": "Log",
+      "times": "{count, plural, one {# time} other {# times}}",
+      "monthMigraines": "{count, plural, one {# migraine} other {# migraines}}"
+    }
+  },
   "mellows": {
     "title": "A gentle app,<br></br>not a medical record.",
     "subtitle": "Each Mellow is there for a different moment of your migraine, from ordinary days to the worst attacks.",

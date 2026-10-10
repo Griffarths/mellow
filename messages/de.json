@@ -91,6 +91,127 @@
       "text": "Mellow bündelt, was dein Arzt oder dein Neurologe sehen muss: die Häufigkeit deiner Attacken, deine Behandlungen, was dir Linderung verschafft, und deinen MIDAS-Score. Deine Daten lassen sich als PDF exportieren und mit deinem Arzt teilen, damit er einen besseren Überblick über deine Situation bekommt."
     }
   },
+  "appPage": {
+    "metaTitle": "Migräne-Tracker-App · Mellow",
+    "metaDescription": "Mellow, die App zum Erfassen deiner Migräne: Erfasse eine Attacke mit zwei Taps, behalte deinen Kalender im Blick, verstehe deine Auslöser und bereite deine Arzttermine vor. Kostenlos auf dem iPhone.",
+    "title": "Die Mellow-App",
+    "subtitle": "Erfasse deine Attacken in Sekunden, verstehe, was sie auslöst, und bereite deine Arzttermine vor.",
+    "premium": "Premium",
+    "blocks": {
+      "log": {
+        "kicker": "Während der Attacke",
+        "title": "Erfasse eine Attacke mit zwei Taps",
+        "text": "Im Moment notierst du nur den Beginn und die Stärke, von 1 bis 10. Eine Attacke vergessen? Du kannst sie auch nachträglich eintragen."
+      },
+      "widget": {
+        "kicker": "Ohne die App zu öffnen",
+        "title": "Ein Widget, immer griffbereit",
+        "text": "Vom Home-Bildschirm, vom Sperrbildschirm oder aus dem Kontrollzentrum erfasst du eine Migräne mit einem Tipp."
+      },
+      "complete": {
+        "kicker": "Wenn es besser wird",
+        "title": "Schließe deine Attacke in deinem Tempo ab",
+        "text": "Wenn die Attacke vorbei ist, ergänzt du deine Symptome, mögliche Auslöser, deine Medikamente und was dir geholfen hat. Mellow merkt sich deine Gewohnheiten, damit es schneller geht."
+      },
+      "calendar": {
+        "kicker": "Monat für Monat",
+        "title": "Alle deine Attacken in einem Kalender",
+        "text": "Jede Attacke erscheint in der Farbe ihrer Stärke, Monat für Monat, mit der Zahl der Migränen im Monat. Dazu dein ganzer Verlauf, eine Attacke pro Zeile."
+      },
+      "understand": {
+        "kicker": "Verstehen",
+        "title": "Was dir wirklich hilft, und was deine Attacken auslöst",
+        "text": "Mellow analysiert deine letzten 30 Tage und sagt dir, was ihm auffällt: deine Medikamente und Methoden, von der wirksamsten bis zur unwirksamsten, deine Auslöser und sogar den Zusammenhang mit deinem Schlaf, dank Apple Health."
+      },
+      "weather": {
+        "kicker": "Vorausschauen",
+        "title": "Luftdruck und Luftfeuchtigkeit der nächsten sieben Tage",
+        "text": "Mellow verfolgt das Wetter dort, wo du bist, und vergleicht deine Attacken mit den Luftdruckschwankungen, damit du die Tage erkennst, auf die du achten solltest."
+      },
+      "care": {
+        "kicker": "Kümmere dich um dich",
+        "title": "Nicht nur während der Attacken",
+        "text": "Halte deine Stimmung fest, atme mit einer geführten Übung, lerne mit Kursen über Migräne und schick eine Umarmung an Menschen, die gerade Migräne haben."
+      },
+      "doctor": {
+        "kicker": "Beim Arzt",
+        "title": "Berichte, bereit für deinen Termin",
+        "text": "Exportiere die Analyse deiner Attacken, deinen Verlauf und deinen MIDAS-Score als PDF, um deinem Arzt oder Neurologen klare Daten zu zeigen."
+      }
+    },
+    "plans": {
+      "title": "Kostenlos oder Premium",
+      "subtitle": "Mellow ist kostenlos, um deine Attacken zu erfassen und zu verfolgen. Premium bringt die Analysen und Werkzeuge, um weiterzugehen.",
+      "free": {
+        "title": "Kostenlos",
+        "items": [
+          "Attacken erfassen, auch über das Widget",
+          "Kalender und Verlauf",
+          "Stimmung, geführtes Atmen und Umarmungen",
+          "Einige Kurse über Migräne",
+          "Sicherung in der Cloud"
+        ]
+      },
+      "premium": {
+        "title": "Premium",
+        "items": [
+          "Detaillierte Analyse und Hinweise von Mellow",
+          "Auslöser und Linderung",
+          "Wetter und Schlaf",
+          "Alle Kurse",
+          "PDF-Berichte und Export des MIDAS-Scores"
+        ]
+      }
+    },
+    "data": {
+      "title": "Deine Daten, gut aufgehoben",
+      "cloud": {
+        "title": "In der Cloud gesichert",
+        "text": "Alles, was du erfasst, begleitet dich von einem Gerät zum anderen."
+      },
+      "sold": {
+        "title": "Niemals verkauft",
+        "text": "Deine Gesundheitsdaten werden niemals verkauft."
+      },
+      "languages": {
+        "title": "In deiner Sprache",
+        "text": "Mellow gibt es auf Französisch, Englisch, Deutsch, Italienisch, Spanisch und Portugiesisch."
+      }
+    },
+    "ui": {
+      "recordQuestion": "Hast du Migräne?",
+      "save": "Speichern",
+      "mild": "Leicht",
+      "moderate": "Mittel",
+      "intense": "Stark",
+      "symptoms": "Symptome",
+      "triggers": "Auslöser",
+      "meds": "Medikamente",
+      "nausea": "Übelkeit",
+      "light": "Lichtempfindlichkeit",
+      "stress": "Stress",
+      "sleep": "Schlafmangel",
+      "darkRest": "Ruhe im Dunkeln",
+      "reliefHigh": "Sehr wirksam",
+      "reliefMid": "Eher wirksam",
+      "reliefNone": "Ohne Wirkung",
+      "statMigraines": "Migränen",
+      "statDays": "Betroffene Tage",
+      "statIntensity": "Ø Intensität",
+      "weatherDays": "Die nächsten sieben Tage",
+      "hugs": "{count} Personen haben Migräne",
+      "hugsAction": "Schick ihnen eine Umarmung",
+      "reportAnalysis": "Analyse",
+      "reportHistory": "Verlauf",
+      "reportMidas": "MIDAS-Score",
+      "export": "Als PDF exportieren",
+      "calendar": "Kalender",
+      "widgetTitle": "Migräne?",
+      "widgetSave": "Erfassen",
+      "times": "{count, plural, one {# Mal} other {# Mal}}",
+      "monthMigraines": "{count, plural, one {# Migräne} other {# Migränen}}"
+    }
+  },
   "mellows": {
     "title": "Eine sanfte App,<br></br>keine Krankenakte.",
     "subtitle": "Jeder Mellow begleitet dich in einem anderen Moment deiner Migräne, von ganz normalen Tagen bis zu den stärksten Attacken.",
