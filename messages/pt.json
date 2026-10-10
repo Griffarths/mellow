@@ -97,6 +97,24 @@
     "title": "A app Mellow",
     "subtitle": "Regista as tuas crises em segundos, percebe o que as desencadeia e prepara as tuas consultas.",
     "premium": "Premium",
+    "stats": [
+      {
+        "value": "2 toques",
+        "label": "para registar uma crise"
+      },
+      {
+        "value": "7 dias",
+        "label": "de pressão e humidade com antecedência"
+      },
+      {
+        "value": "3 relatórios",
+        "label": "em PDF para o teu médico"
+      },
+      {
+        "value": "4 Mellows",
+        "label": "para te acompanhar"
+      }
+    ],
     "blocks": {
       "log": {
         "kicker": "Durante a crise",

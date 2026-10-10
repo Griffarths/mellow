@@ -97,6 +97,24 @@
     "title": "La app Mellow",
     "subtitle": "Registra tus crisis en segundos, entiende qué las desencadena y prepara tus citas médicas.",
     "premium": "Premium",
+    "stats": [
+      {
+        "value": "2 toques",
+        "label": "para registrar una crisis"
+      },
+      {
+        "value": "7 días",
+        "label": "de presión y humedad por adelantado"
+      },
+      {
+        "value": "3 informes",
+        "label": "en PDF para tu médico"
+      },
+      {
+        "value": "4 Mellows",
+        "label": "para acompañarte"
+      }
+    ],
     "blocks": {
       "log": {
         "kicker": "Durante la crisis",

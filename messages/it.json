@@ -97,6 +97,24 @@
     "title": "L'app Mellow",
     "subtitle": "Registra i tuoi attacchi in pochi secondi, capisci cosa li scatena e prepara le tue visite.",
     "premium": "Premium",
+    "stats": [
+      {
+        "value": "2 tap",
+        "label": "per registrare un attacco"
+      },
+      {
+        "value": "7 giorni",
+        "label": "di pressione e umidità in anticipo"
+      },
+      {
+        "value": "3 report",
+        "label": "in PDF per il tuo medico"
+      },
+      {
+        "value": "4 Mellow",
+        "label": "per accompagnarti"
+      }
+    ],
     "blocks": {
       "log": {
         "kicker": "Durante l'attacco",

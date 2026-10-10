@@ -92,6 +92,24 @@
     "title": "L'app Mellow",
     "subtitle": "Note tes crises en quelques secondes, comprends ce qui les déclenche et prépare tes rendez-vous.",
     "premium": "Premium",
+    "stats": [
+      {
+        "value": "2 taps",
+        "label": "pour noter une crise"
+      },
+      {
+        "value": "7 jours",
+        "label": "de pression et d'humidité à l'avance"
+      },
+      {
+        "value": "3 rapports",
+        "label": "PDF pour ton médecin"
+      },
+      {
+        "value": "4 Mellows",
+        "label": "pour t'accompagner"
+      }
+    ],
     "blocks": {
       "log": {
         "kicker": "Pendant la crise",

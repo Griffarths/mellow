@@ -97,6 +97,24 @@
     "title": "Die Mellow-App",
     "subtitle": "Erfasse deine Attacken in Sekunden, verstehe, was sie auslöst, und bereite deine Arzttermine vor.",
     "premium": "Premium",
+    "stats": [
+      {
+        "value": "2 Taps",
+        "label": "um eine Attacke zu erfassen"
+      },
+      {
+        "value": "7 Tage",
+        "label": "Luftdruck und Luftfeuchtigkeit im Voraus"
+      },
+      {
+        "value": "3 Berichte",
+        "label": "als PDF für deinen Arzt"
+      },
+      {
+        "value": "4 Mellows",
+        "label": "die dich begleiten"
+      }
+    ],
     "blocks": {
       "log": {
         "kicker": "Während der Attacke",

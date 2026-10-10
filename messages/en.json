@@ -92,6 +92,24 @@
     "title": "The Mellow app",
     "subtitle": "Log your attacks in seconds, understand what triggers them and prepare for your appointments.",
     "premium": "Premium",
+    "stats": [
+      {
+        "value": "2 taps",
+        "label": "to log an attack"
+      },
+      {
+        "value": "7 days",
+        "label": "of pressure and humidity ahead"
+      },
+      {
+        "value": "3 reports",
+        "label": "as PDFs for your doctor"
+      },
+      {
+        "value": "4 Mellows",
+        "label": "to keep you company"
+      }
+    ],
     "blocks": {
       "log": {
         "kicker": "During an attack",
