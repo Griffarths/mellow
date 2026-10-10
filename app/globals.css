@@ -184,19 +184,9 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
   visibility: hidden;
 }
 
-/* /app page: the cards around the phone float gently, and the drawings of
-   the app come to life once scrolled into view (Reveal sets data-shown).
-   Only decorative drawings use it: the text is always visible. */
-@keyframes app-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
+/* /app page: the drawings of the app come to life once scrolled into view
+   (Reveal sets data-shown). Only decorative drawings use it: the text is
+   always visible. */
 @keyframes app-pop {
   from {
     opacity: 0;
@@ -205,17 +195,6 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
   to {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@keyframes app-rise {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
   }
 }
 
@@ -228,15 +207,6 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
   }
 }
 
-.app-float {
-  animation: app-float 6s ease-in-out infinite;
-}
-
-.app-float-slow {
-  animation: app-float 8s ease-in-out infinite;
-}
-
-.app-rise,
 .app-pop {
   opacity: 0;
 }
@@ -244,10 +214,6 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
 .app-grow-x {
   transform: scaleX(0);
   transform-origin: left;
-}
-
-[data-shown="true"] .app-rise {
-  animation: app-rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 [data-shown="true"] .app-pop {
@@ -263,9 +229,6 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
   .hero-clouds div {
     animation: none;
   }
-  .app-float,
-  .app-float-slow,
-  [data-shown] .app-rise,
   [data-shown] .app-pop,
   [data-shown] .app-grow-x {
     animation: none !important;

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
 import { hasLocale, useLocale, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -8,29 +7,28 @@ import { pageAlternates } from "@/lib/hreflang";
 import { APP_STORE_RATING } from "@/content/reviews";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { Phone } from "@/components/PhoneFrame";
 import { StoreBadges } from "@/components/StoreBadges";
-import { Blob } from "@/components/phones/Blob";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Stars } from "@/components/sections/SocialProof";
 import { IntensityDemo } from "@/components/app-page/IntensityDemo";
 import { Reveal } from "@/components/app-page/Reveal";
 import {
-  CalendarVisual,
-  CareVisual,
-  CompleteVisual,
-  DoctorVisual,
-  HeroVisual,
-  UnderstandVisual,
-  WeatherVisual,
-  WidgetVisual,
+  BigCalendar,
+  BigStats,
+  MellowsCare,
+  ReliefBars,
+  ReportsList,
+  TagCloud,
+  WeatherBand,
 } from "@/components/app-page/AppVisuals";
 
 type Props = { params: Promise<{ locale: string }> };
 
-// The app in detail: a header with the phone and floating cards, key
-// figures, then what the app does at each moment of an attack (drawings that
-// come to life on scroll, an intensity picker to play with), what is free or
-// Premium, and the data.
+// The app in detail, one moment of an attack per section, each laid out its
+// own way with the app's elements right on the page: the intensity to play
+// with, the tags, the calendar, the analysis, the weather, the Mellows, the
+// reports. Then free or Premium, and the data.
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "appPage" });
@@ -48,103 +46,57 @@ export default async function AppPage({ params }: Props) {
   return <AppContent />;
 }
 
-type Tone = "fleur" | "tagada" | "croix" | "sable";
-type BlockId = "log" | "widget" | "complete" | "calendar" | "understand" | "weather" | "care" | "doctor";
-
-const TONE_BG: Record<Tone, string> = {
-  fleur: "bg-fleur",
-  tagada: "bg-tagada",
-  croix: "bg-croix",
-  sable: "bg-sable",
-};
-// Darker shades of the four colours, readable as text on white.
-const STAT_COLORS = ["text-[#C2477F]", "text-[#3F6FB0]", "text-croix-ink", "text-[#9A6326]"];
-
-// In the order of an attack, from the first minutes to the appointment.
-const BLOCKS: Array<{ id: BlockId; tone: Tone; premium?: boolean }> = [
-  { id: "log", tone: "croix" },
-  { id: "widget", tone: "fleur" },
-  { id: "complete", tone: "tagada" },
-  { id: "calendar", tone: "fleur" },
-  { id: "understand", tone: "sable", premium: true },
-  { id: "weather", tone: "tagada", premium: true },
-  { id: "care", tone: "fleur" },
-  { id: "doctor", tone: "sable", premium: true },
-];
+const KICKER = "text-sm font-semibold uppercase tracking-[0.08em] text-croix-ink";
+const H2 = "mt-3 text-balance text-h2 text-ink";
+const TEXT = "mt-4 text-[17px] leading-[1.7] text-ink-body md:text-lg";
 
 function PremiumTag({ label }: { label: string }) {
   return (
-    <span className="ml-2 inline-block rounded-full bg-sable-tint px-2.5 py-0.5 align-middle text-xs font-semibold text-[#8A5A1F]">
+    <span className="ml-3 inline-block -translate-y-1 rounded-full bg-sable-tint px-3 py-1 align-middle text-xs font-semibold text-[#8A5A1F]">
       {label}
     </span>
   );
 }
 
-function Check() {
+function Heading({ id, premium }: { id: string; premium?: boolean }) {
+  const t = useTranslations("appPage");
   return (
-    <svg viewBox="0 0 20 20" className="mt-1 h-4 w-4 shrink-0 text-success" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <path d="m4 10.5 4 4 8-9" />
-    </svg>
+    <>
+      <p className={KICKER}>{t(`blocks.${id}.kicker`)}</p>
+      <h2 className={H2}>
+        {t(`blocks.${id}.title`)}
+        {premium && <PremiumTag label={t("premium")} />}
+      </h2>
+      <p className={TEXT}>{t(`blocks.${id}.text`)}</p>
+    </>
   );
 }
 
-// Line icons for the data section.
-const DATA_ICONS: Record<"cloud" | "sold" | "languages", ReactNode> = {
-  cloud: (
-    <>
-      <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
-      <path d="m9.5 14 2 2 3.5-3.5" />
-    </>
-  ),
-  sold: (
-    <>
-      <rect x="4.5" y="10.5" width="15" height="10" rx="2.5" />
-      <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" />
-    </>
-  ),
-  languages: (
-    <>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M3 12h18M12 3c2.5 2.6 3.7 5.6 3.7 9s-1.2 6.4-3.7 9c-2.5-2.6-3.7-5.6-3.7-9S9.5 5.6 12 3z" />
-    </>
-  ),
-};
+function Cell({ value }: { value: string }) {
+  if (value === "yes")
+    return (
+      <svg viewBox="0 0 20 20" className="mx-auto h-5 w-5 text-success" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-label="✓">
+        <path d="m4 10.5 4 4 8-9" />
+      </svg>
+    );
+  if (value === "no") return <span className="text-ink-mute" aria-label="–">–</span>;
+  return <span className="text-sm font-semibold text-ink">{value}</span>;
+}
 
 function AppContent() {
   const t = useTranslations("appPage");
   const ui = useTranslations("appPage.ui");
   const tCta = useTranslations("finalCta");
   const tStars = useTranslations("socialProof");
+  const tFeatures = useTranslations("features");
   const locale = useLocale();
-  const stats = t.raw("stats") as Array<{ value: string; label: string }>;
-  const free = t.raw("plans.free.items") as string[];
-  const premium = t.raw("plans.premium.items") as string[];
+  const careItems = t.raw("blocks.care.items") as Array<{ title: string; text: string }>;
+  const rows = t.raw("plans.rows") as Array<{ label: string; free: string; premium: string }>;
   const rating = APP_STORE_RATING
     ? new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(
         APP_STORE_RATING.value,
       )
     : null;
-
-  const visuals: Record<BlockId, ReactNode> = {
-    log: (
-      <IntensityDemo
-        labels={{
-          question: ui("recordQuestion"),
-          mild: ui("mild"),
-          moderate: ui("moderate"),
-          intense: ui("intense"),
-          save: ui("save"),
-        }}
-      />
-    ),
-    widget: <WidgetVisual />,
-    complete: <CompleteVisual />,
-    calendar: <CalendarVisual />,
-    understand: <UnderstandVisual />,
-    weather: <WeatherVisual />,
-    care: <CareVisual />,
-    doctor: <DoctorVisual />,
-  };
 
   return (
     <>
@@ -152,12 +104,13 @@ function AppContent() {
       {/* Without JavaScript the drawings show as they end up. */}
       <noscript
         dangerouslySetInnerHTML={{
-          __html: "<style>.app-rise,.app-pop{opacity:1}.app-grow-x{transform:none}</style>",
+          __html: "<style>.app-pop{opacity:1}.app-grow-x{transform:none}</style>",
         }}
       />
       <main className="overflow-x-clip">
+        {/* Header: the text and the phone with the app's home screen. */}
         <section className="bg-gradient-to-b from-hero to-white">
-          <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 pb-16 pt-12 md:grid-cols-2 md:pb-24 md:pt-16">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-16 pt-12 md:grid-cols-2 md:pb-20 md:pt-16">
             <div className="text-center md:text-left">
               <h1 className="text-h1 text-ink">{t("title")}</h1>
               <p className="mx-auto mt-5 max-w-md text-balance text-lg text-ink-2 md:mx-0">{t("subtitle")}</p>
@@ -173,104 +126,131 @@ function AppContent() {
                   </span>
                 </div>
               )}
-              <StoreBadges
-                className="mt-4 md:justify-start"
-                sizeClass="h-11 w-auto select-none md:h-12"
-              />
+              <StoreBadges className="mt-4 md:justify-start" sizeClass="h-11 w-auto select-none md:h-12" />
             </div>
-            <HeroVisual />
+            <div className="mx-auto w-[230px] md:w-[270px]">
+              <Phone src={`/app-screens/${locale}/home.jpg`} alt={tFeatures("phoneAlt")} />
+            </div>
           </div>
         </section>
 
-        {/* Key figures, each in one of the Mellows' colours. */}
-        <section className="mx-auto max-w-5xl px-6">
-          <div className="grid grid-cols-2 gap-y-10 md:grid-cols-4 md:divide-x md:divide-surface-line">
-            {stats.map((s, i) => (
-              <div key={s.value} className="px-3 text-center">
-                <p className={`text-[32px] font-extrabold leading-none tracking-tight md:text-[40px] ${STAT_COLORS[i]}`}>
-                  {s.value}
-                </p>
-                <p className="mx-auto mt-2 max-w-[16ch] text-sm leading-snug text-ink-2">{s.label}</p>
-              </div>
-            ))}
+        {/* 1. Centred: the title, then the intensity to play with. */}
+        <section className="mx-auto max-w-3xl px-6 py-20 text-center md:py-28">
+          <Heading id="log" />
+          <div className="mt-12">
+            <IntensityDemo
+              labels={{
+                question: ui("recordQuestion"),
+                mild: ui("mild"),
+                moderate: ui("moderate"),
+                intense: ui("intense"),
+                save: ui("save"),
+                hint: t("blocks.log.hint"),
+              }}
+            />
           </div>
         </section>
 
-        {/* One step per moment, numbered; the drawing alternates sides from
-            md and sits on a soft glow of the step's colour. On phones the
-            text comes first. */}
-        <div className="mx-auto max-w-5xl px-6 pt-12 md:pt-20">
-          {BLOCKS.map(({ id, tone, premium: isPremium }, i) => (
-            <section key={id} className="grid items-center gap-10 py-12 md:grid-cols-2 md:gap-16 md:py-16">
-              <div className={i % 2 ? "md:order-2" : ""}>
-                <p className="flex items-center gap-2.5 text-sm font-semibold text-croix-ink">
-                  <span className={`grid h-7 w-7 place-items-center rounded-full text-xs font-bold text-ink ${TONE_BG[tone]}`}>
-                    {i + 1}
-                  </span>
-                  {t(`blocks.${id}.kicker`)}
-                </p>
-                <h2 className="mt-3 text-balance text-h3 text-ink md:text-[30px] md:leading-tight">
-                  {t(`blocks.${id}.title`)}
-                  {isPremium && <PremiumTag label={t("premium")} />}
-                </h2>
-                <p className="mt-3 text-[17px] leading-[1.7] text-ink-body">{t(`blocks.${id}.text`)}</p>
-              </div>
-              <Reveal className={`relative flex justify-center ${i % 2 ? "md:order-1" : ""}`}>
-                <span
-                  aria-hidden
-                  className={`absolute left-1/2 top-1/2 h-[85%] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60 blur-3xl ${TONE_BG[tone]}`}
-                />
-                <div className="app-rise relative">{visuals[id]}</div>
-              </Reveal>
-            </section>
-          ))}
-        </div>
+        {/* 2. Text on the left, the app's tags on the right. */}
+        <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-20 md:py-24">
+          <div>
+            <Heading id="complete" />
+          </div>
+          <Reveal>
+            <TagCloud />
+          </Reveal>
+        </section>
 
-        <section className="mx-auto max-w-5xl px-6 py-14 md:py-20">
-          <div className="mx-auto max-w-3xl text-center">
+        {/* 3. Centred and wide: the calendar. */}
+        <section className="mx-auto max-w-4xl px-6 py-16 md:py-24">
+          <div className="mx-auto max-w-2xl text-center">
+            <Heading id="calendar" />
+          </div>
+          <Reveal className="mt-12">
+            <BigCalendar />
+          </Reveal>
+        </section>
+
+        {/* 4. The text and the relief bars, the big figures beside them. */}
+        <section className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-16 md:grid-cols-2 md:gap-20 md:py-24">
+          <Reveal>
+            <Heading id="understand" premium />
+            <div className="mt-10">
+              <ReliefBars />
+            </div>
+          </Reveal>
+          <Reveal className="md:order-first">
+            <BigStats />
+          </Reveal>
+        </section>
+
+        {/* 5. The text left-aligned, the seven days across the page. */}
+        <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+          <div className="max-w-2xl">
+            <Heading id="weather" premium />
+          </div>
+          <Reveal className="mt-12">
+            <p className="mb-4 text-sm font-semibold text-ink-3">{ui("weatherDays")}</p>
+            <WeatherBand />
+          </Reveal>
+        </section>
+
+        {/* 6. Centred: the four Mellows, each with what it brings. */}
+        <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+          <div className="mx-auto max-w-2xl text-center">
+            <Heading id="care" />
+          </div>
+          <Reveal className="mt-14">
+            <MellowsCare items={careItems} />
+          </Reveal>
+        </section>
+
+        {/* 7. The reports on the left, the text on the right. */}
+        <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-20 md:py-24">
+          <div className="md:order-2">
+            <Heading id="doctor" premium />
+          </div>
+          <Reveal className="md:order-1">
+            <ReportsList />
+          </Reveal>
+        </section>
+
+        {/* Free or Premium, as a comparison table. */}
+        <section className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+          <div className="text-center">
             <h2 className="text-h2 text-ink">{t("plans.title")}</h2>
             <p className="mt-4 text-balance text-lg text-ink-2">{t("plans.subtitle")}</p>
           </div>
-          <div className="mx-auto mt-10 grid max-w-3xl gap-5 md:grid-cols-2">
-            {(
-              [
-                ["free", free, "Fleur1", "ring-1 ring-surface-line"],
-                ["premium", premium, "Croix1", "ring-2 ring-croix"],
-              ] as const
-            ).map(([plan, items, mascot, ring]) => (
-              <div key={plan} className={`relative rounded-card bg-white p-6 shadow-soft ${ring}`}>
-                <Blob name={mascot} className="absolute -top-5 right-5 h-11 w-11" />
-                <p className="text-h3 text-ink">{t(`plans.${plan}.title`)}</p>
-                <ul className="mt-4 space-y-2.5">
-                  {items.map((item) => (
-                    <li key={item} className="flex gap-2.5 text-[16px] leading-snug text-ink-body">
-                      <Check />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <table className="mt-10 w-full text-left">
+            <thead>
+              <tr className="border-b border-ink">
+                <th className="py-3" />
+                <th className="w-24 py-3 text-center font-bold text-ink md:w-32">{t("plans.freeTitle")}</th>
+                <th className="w-24 py-3 text-center font-bold text-croix-ink md:w-32">{t("plans.premiumTitle")}</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-surface-line">
+              {rows.map((row) => (
+                <tr key={row.label}>
+                  <td className="py-3.5 pr-3 text-[16px] leading-snug text-ink-body">{row.label}</td>
+                  <td className="py-3.5 text-center">
+                    <Cell value={row.free} />
+                  </td>
+                  <td className="py-3.5 text-center">
+                    <Cell value={row.premium} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </section>
 
         <section className="mx-auto max-w-5xl px-6 pb-16 md:pb-24">
           <h2 className="text-center text-h2 text-ink">{t("data.title")}</h2>
           <div className="mt-10 grid divide-y divide-surface-line md:grid-cols-3 md:divide-x md:divide-y-0">
-            {(
-              [
-                ["cloud", "bg-tagada-tint"],
-                ["sold", "bg-fleur-tint"],
-                ["languages", "bg-sable-tint"],
-              ] as const
-            ).map(([id, tint]) => (
+            {(["cloud", "sold", "languages"] as const).map((id) => (
               <div key={id} className="py-6 first:pt-0 last:pb-0 md:px-8 md:py-0 md:first:pl-0 md:last:pr-0">
-                <span aria-hidden className={`grid h-12 w-12 place-items-center rounded-full text-ink ${tint}`}>
-                  <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    {DATA_ICONS[id]}
-                  </svg>
-                </span>
-                <h3 className="mt-4 text-h3 text-ink">{t(`data.${id}.title`)}</h3>
+                <h3 className="text-h3 text-ink">{t(`data.${id}.title`)}</h3>
                 <p className="mt-2 text-[17px] leading-[1.7] text-ink-body">{t(`data.${id}.text`)}</p>
               </div>
             ))}

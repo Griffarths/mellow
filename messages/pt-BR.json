@@ -97,34 +97,12 @@
     "title": "O app Mellow",
     "subtitle": "Registre suas crises em segundos, entenda o que as desencadeia e prepare suas consultas.",
     "premium": "Premium",
-    "stats": [
-      {
-        "value": "2 toques",
-        "label": "para registrar uma crise"
-      },
-      {
-        "value": "7 dias",
-        "label": "de pressão e umidade com antecedência"
-      },
-      {
-        "value": "3 relatórios",
-        "label": "em PDF para seu médico"
-      },
-      {
-        "value": "4 Mellows",
-        "label": "para acompanhar você"
-      }
-    ],
     "blocks": {
       "log": {
         "kicker": "Durante a crise",
         "title": "Registre uma crise com dois toques",
-        "text": "Na hora, anote só o início e a intensidade, de 1 a 10. Esqueceu uma? Você também pode registrar depois."
-      },
-      "widget": {
-        "kicker": "Sem abrir o app",
-        "title": "Um widget sempre à mão",
-        "text": "Na tela de início, na tela bloqueada ou na central de controle, você registra uma enxaqueca com um toque."
+        "text": "Na hora, anote só o início e a intensidade, de 1 a 10, até pelo widget, sem abrir o app.",
+        "hint": "Toque em uma barra para mudar a intensidade."
       },
       "complete": {
         "kicker": "Quando melhorar",
@@ -149,7 +127,25 @@
       "care": {
         "kicker": "Cuidar de você",
         "title": "Não só durante as crises",
-        "text": "Registre seu humor, respire com um exercício guiado, aprenda com os cursos sobre enxaqueca e mande um abraço para quem está com enxaqueca agora."
+        "text": "O Mellow também acompanha você entre as crises.",
+        "items": [
+          {
+            "title": "Seu humor",
+            "text": "Registre como você se sente todo dia, mesmo sem crise."
+          },
+          {
+            "title": "Respiração guiada",
+            "text": "Um exercício simples para recuperar um pouco de calma."
+          },
+          {
+            "title": "Cursos",
+            "text": "Entender, prevenir e lidar com a enxaqueca, no seu ritmo."
+          },
+          {
+            "title": "Abraços",
+            "text": "Mande seu apoio para quem está com enxaqueca agora."
+          }
+        ]
       },
       "doctor": {
         "kicker": "No médico",
@@ -160,26 +156,55 @@
     "plans": {
       "title": "Grátis ou Premium",
       "subtitle": "O Mellow é grátis para registrar e acompanhar suas crises. O Premium adiciona as análises e as ferramentas para ir mais longe.",
-      "free": {
-        "title": "Grátis",
-        "items": [
-          "Registrar suas crises, também pelo widget",
-          "Calendário e histórico",
-          "Humor, respiração guiada e abraços",
-          "Alguns cursos sobre enxaqueca",
-          "Backup na nuvem"
-        ]
-      },
-      "premium": {
-        "title": "Premium",
-        "items": [
-          "Análise detalhada e observações do Mellow",
-          "Gatilhos e alívio",
-          "Clima e sono",
-          "Todos os cursos",
-          "Relatórios PDF e exportação da pontuação MIDAS"
-        ]
-      }
+      "freeTitle": "Grátis",
+      "premiumTitle": "Premium",
+      "rows": [
+        {
+          "label": "Registrar suas crises, também pelo widget",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Calendário e histórico",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Humor, respiração guiada e abraços",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Backup na nuvem",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Cursos sobre enxaqueca",
+          "free": "Alguns",
+          "premium": "Todos"
+        },
+        {
+          "label": "Análise detalhada e observações do Mellow",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Gatilhos e alívio",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Clima e sono",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Relatórios PDF e exportação da pontuação MIDAS",
+          "free": "no",
+          "premium": "yes"
+        }
+      ]
     },
     "data": {
       "title": "Seus dados, bem guardados",
@@ -205,11 +230,22 @@
       "symptoms": "Sintomas",
       "triggers": "Gatilhos",
       "meds": "Medicamentos",
+      "reliefs": "Métodos de alívio",
       "nausea": "Náuseas",
       "light": "Sensibilidade à luz",
+      "sound": "Sensibilidade ao barulho",
+      "visual": "Distúrbios visuais",
+      "dizziness": "Vertigens",
+      "throbbing": "Dor pulsátil",
       "stress": "Estresse",
       "sleep": "Falta de sono",
+      "screens": "Telas",
+      "menstrual": "Ciclo menstrual",
+      "skippedMeal": "Refeição pulada",
+      "caffeine": "Cafeína",
       "darkRest": "Repouso no escuro",
+      "icePack": "Bolsa de gelo",
+      "meditation": "Meditação",
       "reliefHigh": "Muito eficaz",
       "reliefMid": "Razoável",
       "reliefNone": "Sem efeito",
@@ -217,15 +253,12 @@
       "statDays": "Dias afetados",
       "statIntensity": "Intensidade média",
       "weatherDays": "Os próximos sete dias",
-      "hugs": "{count} pessoas estão com enxaqueca",
-      "hugsAction": "Mande um abraço para elas",
       "reportAnalysis": "Análise",
       "reportHistory": "Histórico",
       "reportMidas": "Pontuação MIDAS",
-      "export": "Exportar como PDF",
-      "calendar": "Calendário",
-      "widgetTitle": "Uma enxaqueca?",
-      "widgetSave": "Registrar",
+      "reportAnalysisSub": "Frequência, gatilhos, o que te alivia",
+      "reportHistorySub": "Todas as suas enxaquecas, uma por linha",
+      "reportMidasSub": "Sua incapacidade nos últimos 3 meses",
       "times": "{count, plural, one {# vez} other {# vezes}}",
       "monthMigraines": "{count, plural, one {# enxaqueca} other {# enxaquecas}}"
     }

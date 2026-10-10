@@ -97,34 +97,12 @@
     "title": "Die Mellow-App",
     "subtitle": "Erfasse deine Attacken in Sekunden, verstehe, was sie auslöst, und bereite deine Arzttermine vor.",
     "premium": "Premium",
-    "stats": [
-      {
-        "value": "2 Taps",
-        "label": "um eine Attacke zu erfassen"
-      },
-      {
-        "value": "7 Tage",
-        "label": "Luftdruck und Luftfeuchtigkeit im Voraus"
-      },
-      {
-        "value": "3 Berichte",
-        "label": "als PDF für deinen Arzt"
-      },
-      {
-        "value": "4 Mellows",
-        "label": "die dich begleiten"
-      }
-    ],
     "blocks": {
       "log": {
         "kicker": "Während der Attacke",
         "title": "Erfasse eine Attacke mit zwei Taps",
-        "text": "Im Moment notierst du nur den Beginn und die Stärke, von 1 bis 10. Eine Attacke vergessen? Du kannst sie auch nachträglich eintragen."
-      },
-      "widget": {
-        "kicker": "Ohne die App zu öffnen",
-        "title": "Ein Widget, immer griffbereit",
-        "text": "Vom Home-Bildschirm, vom Sperrbildschirm oder aus dem Kontrollzentrum erfasst du eine Migräne mit einem Tipp."
+        "text": "Im Moment notierst du nur den Beginn und die Stärke, von 1 bis 10, sogar über das Widget, ohne die App zu öffnen.",
+        "hint": "Tippe auf einen Balken, um die Stärke zu ändern."
       },
       "complete": {
         "kicker": "Wenn es besser wird",
@@ -149,7 +127,25 @@
       "care": {
         "kicker": "Kümmere dich um dich",
         "title": "Nicht nur während der Attacken",
-        "text": "Halte deine Stimmung fest, atme mit einer geführten Übung, lerne mit Kursen über Migräne und schick eine Umarmung an Menschen, die gerade Migräne haben."
+        "text": "Mellow begleitet dich auch zwischen den Attacken.",
+        "items": [
+          {
+            "title": "Deine Stimmung",
+            "text": "Halte jeden Tag fest, wie du dich fühlst, auch ohne Attacke."
+          },
+          {
+            "title": "Geführtes Atmen",
+            "text": "Eine einfache Übung, um etwas Ruhe zu finden."
+          },
+          {
+            "title": "Kurse",
+            "text": "Migräne verstehen, vorbeugen und damit umgehen, in deinem Tempo."
+          },
+          {
+            "title": "Umarmungen",
+            "text": "Schick Menschen, die gerade Migräne haben, deine Unterstützung."
+          }
+        ]
       },
       "doctor": {
         "kicker": "Beim Arzt",
@@ -160,26 +156,55 @@
     "plans": {
       "title": "Kostenlos oder Premium",
       "subtitle": "Mellow ist kostenlos, um deine Attacken zu erfassen und zu verfolgen. Premium bringt die Analysen und Werkzeuge, um weiterzugehen.",
-      "free": {
-        "title": "Kostenlos",
-        "items": [
-          "Attacken erfassen, auch über das Widget",
-          "Kalender und Verlauf",
-          "Stimmung, geführtes Atmen und Umarmungen",
-          "Einige Kurse über Migräne",
-          "Sicherung in der Cloud"
-        ]
-      },
-      "premium": {
-        "title": "Premium",
-        "items": [
-          "Detaillierte Analyse und Hinweise von Mellow",
-          "Auslöser und Linderung",
-          "Wetter und Schlaf",
-          "Alle Kurse",
-          "PDF-Berichte und Export des MIDAS-Scores"
-        ]
-      }
+      "freeTitle": "Kostenlos",
+      "premiumTitle": "Premium",
+      "rows": [
+        {
+          "label": "Attacken erfassen, auch über das Widget",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Kalender und Verlauf",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Stimmung, geführtes Atmen und Umarmungen",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Sicherung in der Cloud",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Kurse über Migräne",
+          "free": "Einige",
+          "premium": "Alle"
+        },
+        {
+          "label": "Detaillierte Analyse und Hinweise von Mellow",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Auslöser und Linderung",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Wetter und Schlaf",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "PDF-Berichte und Export des MIDAS-Scores",
+          "free": "no",
+          "premium": "yes"
+        }
+      ]
     },
     "data": {
       "title": "Deine Daten, gut aufgehoben",
@@ -205,11 +230,22 @@
       "symptoms": "Symptome",
       "triggers": "Auslöser",
       "meds": "Medikamente",
+      "reliefs": "Linderungsmethoden",
       "nausea": "Übelkeit",
       "light": "Lichtempfindlichkeit",
+      "sound": "Lärmempfindlichkeit",
+      "visual": "Sehstörungen",
+      "dizziness": "Schwindel",
+      "throbbing": "Pochender Schmerz",
       "stress": "Stress",
       "sleep": "Schlafmangel",
+      "screens": "Bildschirme",
+      "menstrual": "Menstruationszyklus",
+      "skippedMeal": "Ausgelassene Mahlzeit",
+      "caffeine": "Koffein",
       "darkRest": "Ruhe im Dunkeln",
+      "icePack": "Kältebeutel",
+      "meditation": "Meditation",
       "reliefHigh": "Sehr wirksam",
       "reliefMid": "Eher wirksam",
       "reliefNone": "Ohne Wirkung",
@@ -217,15 +253,12 @@
       "statDays": "Betroffene Tage",
       "statIntensity": "Ø Intensität",
       "weatherDays": "Die nächsten sieben Tage",
-      "hugs": "{count} Personen haben Migräne",
-      "hugsAction": "Schick ihnen eine Umarmung",
       "reportAnalysis": "Analyse",
       "reportHistory": "Verlauf",
       "reportMidas": "MIDAS-Score",
-      "export": "Als PDF exportieren",
-      "calendar": "Kalender",
-      "widgetTitle": "Migräne?",
-      "widgetSave": "Erfassen",
+      "reportAnalysisSub": "Häufigkeit, Auslöser, was dir hilft",
+      "reportHistorySub": "Alle deine Migränen, eine pro Zeile",
+      "reportMidasSub": "Deine Beeinträchtigung der letzten 3 Monate",
       "times": "{count, plural, one {# Mal} other {# Mal}}",
       "monthMigraines": "{count, plural, one {# Migräne} other {# Migränen}}"
     }

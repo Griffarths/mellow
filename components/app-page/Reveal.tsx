@@ -2,9 +2,8 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-// Sets data-shown once the block is a third into view, so the .app-rise,
-// .app-pop and .app-grow-x drawings inside play their animation once
-// (globals.css).
+// Sets data-shown once the block is a third into view, so the .app-pop and
+// .app-grow-x drawings inside play their animation once (globals.css).
 export function Reveal({ className = "", children }: { className?: string; children: ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-type Labels = { question: string; mild: string; moderate: string; intense: string; save: string };
+type Labels = { question: string; mild: string; moderate: string; intense: string; save: string; hint: string };
 
 // As in the app (CalendrierView): 1 to 3 is the pink Mellow, 4 to 6 the blue
 // one, 7 to 10 the red one, each with its colour.
@@ -12,9 +12,9 @@ function level(n: number) {
   return { blob: "Croix2", bar: "bg-croix", key: "intense" } as const;
 }
 
-// "Do you have a migraine?" to play with: tap or hover a bar to set the
-// intensity. Once in view it climbs alone from 1 to 8, unless the visitor
-// asked for less motion.
+// The app's "Do you have a migraine?" screen, large and right on the page:
+// tap or hover a bar to set the intensity and the Mellow changes. Once in
+// view it climbs alone from 1 to 8, unless the visitor asked for less motion.
 export function IntensityDemo({ labels }: { labels: Labels }) {
   const [value, setValue] = useState(8);
   const ref = useRef<HTMLDivElement>(null);
@@ -52,19 +52,16 @@ export function IntensityDemo({ labels }: { labels: Labels }) {
   const current = level(value);
 
   return (
-    <div
-      ref={ref}
-      className="w-[290px] rounded-card bg-white p-5 text-center shadow-soft ring-1 ring-surface-line"
-    >
-      <p className="text-[17px] font-bold text-ink">{labels.question}</p>
+    <div ref={ref} className="flex flex-col items-center text-center">
+      <p className="text-xl font-bold text-ink md:text-2xl">{labels.question}</p>
       <img
         src={`/blobs/${current.blob}.svg`}
         alt=""
         aria-hidden
         draggable={false}
-        className="mx-auto mt-4 h-20 w-20 select-none transition-transform duration-300 hover:scale-105"
+        className="mt-6 h-36 w-36 select-none md:h-44 md:w-44"
       />
-      <div className="mt-5 flex items-end justify-center gap-1.5">
+      <div className="mt-8 flex items-end gap-2 md:gap-2.5">
         {Array.from({ length: 10 }, (_, i) => {
           const n = i + 1;
           return (
@@ -75,19 +72,17 @@ export function IntensityDemo({ labels }: { labels: Labels }) {
               aria-pressed={n === value}
               onClick={() => set(n)}
               onMouseEnter={() => set(n)}
-              className={`w-4 rounded-md transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-hot ${n <= value ? current.bar : "bg-surface-soft"}`}
-              style={{ height: 12 + i * 4 }}
+              className={`w-6 rounded-lg transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-hot md:w-8 ${n <= value ? current.bar : "bg-surface-soft"}`}
+              style={{ height: 22 + i * 8 }}
             />
           );
         })}
       </div>
-      <p className="mt-3" aria-live="polite">
-        <span className="text-3xl font-extrabold tabular-nums text-ink">{value}</span>{" "}
-        <span className="text-ink-3">{labels[current.key]}</span>
+      <p className="mt-5" aria-live="polite">
+        <span className="text-5xl font-extrabold tabular-nums tracking-tight text-ink">{value}</span>{" "}
+        <span className="text-lg text-ink-3">{labels[current.key]}</span>
       </p>
-      <span className="mt-4 block rounded-xl bg-ink py-2.5 text-sm font-semibold text-white">
-        {labels.save}
-      </span>
+      <p className="mt-4 text-sm text-ink-3">{labels.hint}</p>
     </div>
   );
 }

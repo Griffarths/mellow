@@ -1,142 +1,70 @@
-import type { ReactNode } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Blob } from "../phones/Blob";
-import { Phone } from "../PhoneFrame";
 
-// Simplified drawings of the app's screens for the /app page: only the key
-// element of each screen, with the app's colours, mascots and wording
-// (labels copied from the iOS app's strings, messages appPage.ui). The
-// .app-pop and .app-grow-x parts play once the drawing is in view (Reveal).
+// Drawings of the app for the /app page, laid right on the page (no card):
+// the key element of each screen, with the app's colours, mascots and
+// wording (labels copied from the iOS app's strings, messages appPage.ui).
+// The .app-pop and .app-grow-x parts play once in view (Reveal).
 
 // Intl locale for dates: the site's "pt" is Portugal.
 const intlLocale = (locale: string) => (locale === "pt" ? "pt-PT" : locale);
-const delay = (i: number, step = 90, start = 150) => ({ animationDelay: `${start + i * step}ms` });
+const delay = (i: number, step = 70, start = 100) => ({ animationDelay: `${start + i * step}ms` });
 
-function Card({ className = "", children }: { className?: string; children: ReactNode }) {
-  return (
-    <div
-      aria-hidden
-      className={`rounded-card bg-white p-5 shadow-soft ring-1 ring-surface-line ${className}`}
-    >
-      {children}
-    </div>
-  );
-}
+// Completing an attack: the tags of the app, coloured by group.
+const TAGS: Array<["symptoms" | "triggers" | "reliefs" | "meds", string]> = [
+  ["symptoms", "nausea"],
+  ["triggers", "stress"],
+  ["symptoms", "light"],
+  ["reliefs", "darkRest"],
+  ["triggers", "sleep"],
+  ["symptoms", "throbbing"],
+  ["meds", "Sumatriptan 50 mg"],
+  ["triggers", "screens"],
+  ["symptoms", "sound"],
+  ["reliefs", "icePack"],
+  ["triggers", "menstrual"],
+  ["symptoms", "dizziness"],
+  ["triggers", "skippedMeal"],
+  ["reliefs", "meditation"],
+  ["symptoms", "visual"],
+  ["triggers", "caffeine"],
+];
+const GROUP_BG = {
+  symptoms: "bg-fleur",
+  triggers: "bg-tagada",
+  reliefs: "bg-sable",
+  meds: "bg-croix",
+};
 
-// The header: the app's home screen in the iPhone, with small cards from the
-// app floating around it (widget, an attack, the month) on pink and blue
-// glows.
-export function HeroVisual() {
+export function TagCloud() {
   const ui = useTranslations("appPage.ui");
-  const tFeatures = useTranslations("features");
-  const locale = useLocale();
   return (
-    <div className="relative mx-auto w-[230px] sm:w-[260px] lg:w-[280px]">
-      <span aria-hidden className="absolute -left-16 top-10 h-72 w-72 rounded-full bg-fleur opacity-80 blur-3xl" />
-      <span aria-hidden className="absolute -right-20 bottom-6 h-72 w-72 rounded-full bg-tagada opacity-80 blur-3xl" />
-      <div className="relative">
-        <Phone src={`/app-screens/${locale}/home.jpg`} alt={tFeatures("phoneAlt")} />
-      </div>
-
-      {/* The widget, top left. */}
-      <div aria-hidden className="app-float absolute -left-14 top-[14%] sm:-left-24">
-        <div className="grid h-[104px] w-[104px] content-between rounded-[24px] bg-white p-3 shadow-soft ring-1 ring-surface-line">
-          <div className="flex items-start justify-between gap-1">
-            <p className="text-[11px] font-bold leading-tight text-ink">{ui("widgetTitle")}</p>
-            <Blob name="Fleur1" className="h-6 w-6 shrink-0" />
-          </div>
-          <span className="block rounded-full bg-ink py-1.5 text-center text-[10px] font-semibold text-white">
-            {ui("widgetSave")}
+    <div aria-hidden>
+      <div className="flex flex-wrap gap-2.5">
+        {TAGS.map(([group, key], i) => (
+          <span
+            key={key}
+            className={`app-pop rounded-full px-4 py-2 text-[15px] font-semibold text-ink ${GROUP_BG[group]}`}
+            style={delay(i, 45)}
+          >
+            {key.includes(" ") ? key : ui(key)}
           </span>
-        </div>
+        ))}
       </div>
-
-      {/* An attack being logged, bottom left. */}
-      <div
-        aria-hidden
-        className="app-float-slow absolute -left-10 bottom-[18%] flex items-center gap-2.5 rounded-2xl bg-white py-2.5 pl-2.5 pr-4 shadow-soft ring-1 ring-surface-line sm:-left-20"
-      >
-        <Blob name="Croix2" className="h-9 w-9" />
-        <p className="leading-none">
-          <span className="text-xl font-extrabold text-ink">8</span>{" "}
-          <span className="text-xs text-ink-3">{ui("intense")}</span>
-        </p>
-      </div>
-
-      {/* The month in the calendar, right: its attacks as coloured dots. */}
-      <div
-        aria-hidden
-        className="app-float absolute -right-8 top-[44%] hidden items-center gap-3 rounded-2xl bg-white px-3.5 py-3 shadow-soft ring-1 ring-surface-line sm:-right-20 sm:flex"
-        style={{ animationDelay: "-3s" }}
-      >
-        <div className="flex -space-x-1.5">
-          {["bg-croix", "bg-tagada", "bg-fleur", "bg-croix"].map((bg, i) => (
-            <span key={i} className={`h-5 w-5 rounded-full ring-2 ring-white ${bg}`} />
-          ))}
-        </div>
-        <p className="text-[12px] font-bold text-ink">{ui("monthMigraines", { count: 8 })}</p>
+      <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-2">
+        {(["symptoms", "triggers", "reliefs", "meds"] as const).map((group) => (
+          <span key={group} className="flex items-center gap-2">
+            <span className={`h-3 w-3 rounded-full ${GROUP_BG[group]}`} />
+            {ui(group)}
+          </span>
+        ))}
       </div>
     </div>
   );
 }
 
-function Heart({ className }: { className: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden>
-      <path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" />
-    </svg>
-  );
-}
-
-// The small home screen widget.
-export function WidgetVisual() {
-  const ui = useTranslations("appPage.ui");
-  return (
-    <Card className="app-float grid h-[180px] w-[180px] content-between !rounded-[30px] !p-4">
-      <div className="flex items-start justify-between gap-2">
-        <p className="text-[15px] font-bold leading-tight text-ink">{ui("widgetTitle")}</p>
-        <Blob name="Fleur1" className="h-9 w-9 shrink-0" />
-      </div>
-      <span className="block rounded-full bg-ink py-2.5 text-center text-sm font-semibold text-white">
-        {ui("widgetSave")}
-      </span>
-    </Card>
-  );
-}
-
-// Completing an attack: a few tags per group, popping in one by one.
-export function CompleteVisual() {
-  const ui = useTranslations("appPage.ui");
-  const groups: Array<[string, string[], string]> = [
-    [ui("symptoms"), [ui("nausea"), ui("light")], "bg-fleur-tint"],
-    [ui("triggers"), [ui("stress"), ui("sleep")], "bg-tagada-tint"],
-    [ui("meds"), ["Sumatriptan 50 mg"], "bg-sable-tint"],
-  ];
-  let n = 0;
-  return (
-    <Card className="w-[300px] space-y-4">
-      {groups.map(([label, tags, tint]) => (
-        <div key={label}>
-          <p className="text-sm font-semibold text-ink-3">{label}</p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className={`app-pop rounded-full px-3 py-1.5 text-sm font-semibold text-ink ${tint}`}
-                style={delay(n++, 120)}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      ))}
-    </Card>
-  );
-}
-
-// One month of the calendar, attacks coloured by intensity (August 2026,
-// as on the App Store screenshots: 8 migraines), popping in one by one.
+// One month of the calendar, large: attacks coloured by intensity (August
+// 2026, as on the App Store screenshots: 8 migraines), popping in.
 const ATTACKS: Record<number, "mild" | "moderate" | "intense"> = {
   2: "intense",
   5: "moderate",
@@ -149,7 +77,7 @@ const ATTACKS: Record<number, "mild" | "moderate" | "intense"> = {
 };
 const INTENSITY_BG = { mild: "bg-fleur", moderate: "bg-tagada", intense: "bg-croix" };
 
-export function CalendarVisual() {
+export function BigCalendar() {
   const ui = useTranslations("appPage.ui");
   const locale = intlLocale(useLocale());
   const month = new Intl.DateTimeFormat(locale, { month: "long", year: "numeric" }).format(
@@ -162,14 +90,14 @@ export function CalendarVisual() {
   const offset = 5; // 1 August 2026 is a Saturday.
   let n = 0;
   return (
-    <Card className="w-[310px]">
-      <div className="flex items-baseline justify-between">
-        <p className="font-bold text-ink first-letter:uppercase">{month}</p>
-        <p className="text-sm text-ink-3">{ui("monthMigraines", { count: 8 })}</p>
+    <div aria-hidden className="mx-auto w-full max-w-xl">
+      <div className="flex items-baseline justify-between px-2">
+        <p className="text-xl font-bold text-ink first-letter:uppercase">{month}</p>
+        <p className="text-ink-3">{ui("monthMigraines", { count: 8 })}</p>
       </div>
-      <div className="mt-3 grid grid-cols-7 gap-y-1.5 text-center text-xs">
+      <div className="mt-5 grid grid-cols-7 gap-y-2 text-center">
         {weekdays.map((d, i) => (
-          <span key={i} className="text-ink-4">
+          <span key={i} className="pb-1 text-sm text-ink-4">
             {d}
           </span>
         ))}
@@ -180,11 +108,14 @@ export function CalendarVisual() {
           const day = i + 1;
           const level = ATTACKS[day];
           return (
-            <span key={day} className="relative mx-auto grid h-7 w-7 place-items-center text-[13px] text-ink">
+            <span
+              key={day}
+              className="relative mx-auto grid h-10 w-10 place-items-center text-[15px] text-ink md:h-14 md:w-14 md:text-lg"
+            >
               {level && (
                 <span
                   className={`app-pop absolute inset-0 rounded-full ${INTENSITY_BG[level]}`}
-                  style={delay(n++, 110, 250)}
+                  style={delay(n++, 110, 200)}
                 />
               )}
               <span className="relative">{day}</span>
@@ -192,54 +123,62 @@ export function CalendarVisual() {
           );
         })}
       </div>
-      <div className="mt-4 flex justify-center gap-4 text-xs text-ink-2">
+      <div className="mt-6 flex justify-center gap-6 text-sm text-ink-2">
         {(["mild", "moderate", "intense"] as const).map((level) => (
-          <span key={level} className="flex items-center gap-1.5">
-            <span className={`h-2.5 w-2.5 rounded-full ${INTENSITY_BG[level]}`} />
+          <span key={level} className="flex items-center gap-2">
+            <span className={`h-3 w-3 rounded-full ${INTENSITY_BG[level]}`} />
             {ui(level)}
           </span>
         ))}
       </div>
-    </Card>
+    </div>
   );
 }
 
-// The analysis: three figures, then what brings relief, bars filling in.
-export function UnderstandVisual() {
+// The analysis: three large figures.
+export function BigStats() {
   const ui = useTranslations("appPage.ui");
   const stats: Array<[string, string]> = [
     ["7", ui("statMigraines")],
     ["7", ui("statDays")],
     ["6", ui("statIntensity")],
   ];
+  return (
+    <div aria-hidden className="grid grid-cols-3 divide-x divide-surface-line">
+      {stats.map(([value, label], i) => (
+        <div key={label} className="app-pop px-2 text-center" style={delay(i, 140)}>
+          <p className="text-6xl font-extrabold tracking-tight text-ink md:text-7xl">{value}</p>
+          <p className="mt-2 text-sm text-ink-3">{label}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// What brings relief, bars filling in by efficacy.
+export function ReliefBars() {
+  const ui = useTranslations("appPage.ui");
   const reliefs: Array<[string, number, string, string]> = [
     [ui("darkRest"), 4, "w-full", "bg-success"],
     ["Sumatriptan 50 mg", 3, "w-3/4", "bg-success/45"],
+    [ui("icePack"), 1, "w-1/4", "bg-surface-line"],
   ];
   return (
-    <Card className="w-[310px]">
-      <div className="grid grid-cols-3 divide-x divide-surface-line text-center">
-        {stats.map(([value, label], i) => (
-          <div key={label} className="app-pop px-1" style={delay(i, 120)}>
-            <p className="text-2xl font-extrabold text-ink">{value}</p>
-            <p className="text-[11px] leading-tight text-ink-3">{label}</p>
-          </div>
-        ))}
-      </div>
-      <div className="mt-5 space-y-3">
+    <div aria-hidden>
+      <div className="space-y-5">
         {reliefs.map(([name, times, width, color], i) => (
           <div key={name}>
-            <div className="flex justify-between text-sm">
+            <div className="flex justify-between">
               <span className="font-semibold text-ink">{name}</span>
               <span className="text-ink-3">{ui("times", { count: times })}</span>
             </div>
-            <div className="mt-1.5 h-2 rounded-full bg-surface-soft">
-              <div className={`app-grow-x h-2 rounded-full ${width} ${color}`} style={delay(i, 250, 450)} />
+            <div className="mt-2 h-3 rounded-full bg-surface-soft">
+              <div className={`app-grow-x h-3 rounded-full ${width} ${color}`} style={delay(i, 220, 300)} />
             </div>
           </div>
         ))}
       </div>
-      <div className="mt-4 flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-ink-2">
+      <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1 text-sm text-ink-2">
         {(
           [
             ["reliefHigh", "bg-success"],
@@ -247,17 +186,18 @@ export function UnderstandVisual() {
             ["reliefNone", "bg-surface-line"],
           ] as const
         ).map(([key, color]) => (
-          <span key={key} className="flex items-center gap-1.5">
-            <span className={`h-2 w-2 rounded-full ${color}`} />
+          <span key={key} className="flex items-center gap-2">
+            <span className={`h-3 w-3 rounded-full ${color}`} />
             {ui(key)}
           </span>
         ))}
       </div>
-    </Card>
+    </div>
   );
 }
 
-// Pressure over the next seven days, the arrow coloured by the change.
+// Pressure over the next seven days, across the page: one column per day,
+// the arrow coloured by the change.
 const PRESSURE: Array<[number, "up" | "down" | "drop"]> = [
   [1016, "up"],
   [1012, "down"],
@@ -274,76 +214,66 @@ const ARROW = {
   drop: "rotate-[135deg] text-croix-accent",
 };
 
-export function WeatherVisual() {
-  const ui = useTranslations("appPage.ui");
+export function WeatherBand() {
   const locale = intlLocale(useLocale());
   const day = new Intl.DateTimeFormat(locale, { weekday: "short" });
   return (
-    <Card className="w-[320px]">
-      <p className="font-bold text-ink">{ui("weatherDays")}</p>
-      <div className="mt-4 grid grid-cols-7 text-center">
-        {PRESSURE.map(([hpa, trend], i) => (
-          <div key={i} className="app-pop flex flex-col items-center gap-1.5" style={delay(i, 100)}>
-            <span className="text-[11px] text-ink-3 first-letter:uppercase">
-              {day.format(new Date(2026, 7, 3 + i)).replace(".", "")}
-            </span>
-            <svg viewBox="0 0 16 16" className={`h-5 w-5 ${ARROW[trend]}`} fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M8 13V3M4 7l4-4 4 4" />
-            </svg>
-            <span className="text-[13px] font-semibold tabular-nums text-ink">{hpa}</span>
-          </div>
-        ))}
-      </div>
-      <p className="mt-2 text-right text-[11px] text-ink-4">hPa</p>
-    </Card>
-  );
-}
-
-// The four Mellows popping in, over the hugs line of the home screen.
-export function CareVisual() {
-  const ui = useTranslations("appPage.ui");
-  return (
-    <div aria-hidden className="w-[310px]">
-      <div className="flex justify-center gap-3">
-        {(["Fleur1", "Tagada1", "Croix1", "Humeur1"] as const).map((name, i) => (
-          <span key={name} className="app-pop" style={delay(i, 130)}>
-            <Blob name={name} className="h-14 w-14" />
+    <div aria-hidden className="grid grid-cols-7 divide-x divide-surface-line">
+      {PRESSURE.map(([hpa, trend], i) => (
+        <div key={i} className="app-pop flex flex-col items-center gap-3 py-2" style={delay(i, 100)}>
+          <span className="text-sm text-ink-3 first-letter:uppercase">
+            {day.format(new Date(2026, 7, 3 + i)).replace(".", "")}
           </span>
-        ))}
-      </div>
-      <Card className="app-pop mt-5 flex items-center gap-3">
-        <Heart className="h-5 w-5 shrink-0 text-fleur-accent" />
-        <div className="min-w-0 flex-1">
-          <p className="text-sm font-bold text-ink">{ui("hugs", { count: 14 })}</p>
-          <p className="text-sm text-ink-3">{ui("hugsAction")}</p>
+          <svg viewBox="0 0 16 16" className={`h-8 w-8 md:h-10 md:w-10 ${ARROW[trend]}`} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M8 13V3M4 7l4-4 4 4" />
+          </svg>
+          <span className="text-base font-bold tabular-nums text-ink md:text-xl">{hpa}</span>
         </div>
-        <span className="text-ink-4">→</span>
-      </Card>
+      ))}
     </div>
   );
 }
 
-// The reports screen: the three PDFs and the export button.
-export function DoctorVisual() {
-  const ui = useTranslations("appPage.ui");
-  const reports = [ui("reportAnalysis"), ui("reportHistory"), ui("reportMidas")];
+// The four Mellows, each with something the app does between attacks.
+const CARE_MELLOWS = ["Fleur1", "Tagada1", "Croix1", "Humeur1"] as const;
+
+export function MellowsCare({ items }: { items: Array<{ title: string; text: string }> }) {
   return (
-    <Card className="w-[300px]">
-      <ul className="divide-y divide-surface-line">
-        {reports.map((name, i) => (
-          <li key={name} className="app-pop flex items-center gap-3 py-3 first:pt-0" style={delay(i, 140)}>
-            <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-croix-accent" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M14 2.5H7a2.5 2.5 0 0 0-2.5 2.5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z" />
-              <path d="M14 2.5V8h5.5" />
-            </svg>
-            <span className="flex-1 font-semibold text-ink">{name}</span>
-            {i === 0 && <span className="text-ink">✓</span>}
-          </li>
-        ))}
-      </ul>
-      <span className="mt-4 block rounded-xl bg-ink py-2.5 text-center text-sm font-semibold text-white">
-        {ui("export")}
-      </span>
-    </Card>
+    <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
+      {items.map((item, i) => (
+        <div key={item.title} className="text-center">
+          <span className="app-pop inline-block" style={delay(i, 140)}>
+            <Blob name={CARE_MELLOWS[i]} className="mx-auto h-24 w-24 md:h-28 md:w-28" />
+          </span>
+          <h3 className="mt-4 text-lg font-bold text-ink">{item.title}</h3>
+          <p className="mt-1.5 text-[15px] leading-relaxed text-ink-2">{item.text}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// The three reports, as in the app's Reports screen.
+export function ReportsList() {
+  const ui = useTranslations("appPage.ui");
+  const reports: Array<[string, string]> = [
+    [ui("reportAnalysis"), ui("reportAnalysisSub")],
+    [ui("reportHistory"), ui("reportHistorySub")],
+    [ui("reportMidas"), ui("reportMidasSub")],
+  ];
+  return (
+    <ul aria-hidden className="divide-y divide-surface-line">
+      {reports.map(([name, sub], i) => (
+        <li key={name} className="app-pop flex items-center gap-5 py-5" style={delay(i, 140)}>
+          <span className="grid h-14 w-12 shrink-0 place-items-center rounded-lg bg-croix text-[11px] font-bold tracking-wide text-ink">
+            PDF
+          </span>
+          <span>
+            <span className="block text-lg font-bold text-ink">{name}</span>
+            <span className="block text-ink-3">{sub}</span>
+          </span>
+        </li>
+      ))}
+    </ul>
   );
 }

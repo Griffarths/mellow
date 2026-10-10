@@ -97,34 +97,12 @@
     "title": "La app Mellow",
     "subtitle": "Registra tus crisis en segundos, entiende qué las desencadena y prepara tus citas médicas.",
     "premium": "Premium",
-    "stats": [
-      {
-        "value": "2 toques",
-        "label": "para registrar una crisis"
-      },
-      {
-        "value": "7 días",
-        "label": "de presión y humedad por adelantado"
-      },
-      {
-        "value": "3 informes",
-        "label": "en PDF para tu médico"
-      },
-      {
-        "value": "4 Mellows",
-        "label": "para acompañarte"
-      }
-    ],
     "blocks": {
       "log": {
         "kicker": "Durante la crisis",
         "title": "Registra una crisis con dos toques",
-        "text": "En el momento, anota solo el inicio y la intensidad, del 1 al 10. ¿Se te olvidó una? También puedes registrarla después."
-      },
-      "widget": {
-        "kicker": "Sin abrir la app",
-        "title": "Un widget siempre a la mano",
-        "text": "Desde la pantalla de inicio, la pantalla de bloqueo o el centro de control, registras una migraña con un gesto."
+        "text": "En el momento, anota solo el inicio y la intensidad, del 1 al 10, incluso desde el widget, sin abrir la app.",
+        "hint": "Toca una barra para cambiar la intensidad."
       },
       "complete": {
         "kicker": "Cuando te sientas mejor",
@@ -149,7 +127,25 @@
       "care": {
         "kicker": "Cuidarte",
         "title": "No solo durante las crisis",
-        "text": "Anota tu estado de ánimo, respira con un ejercicio guiado, aprende con los cursos sobre la migraña y envía un abrazo a quienes tienen una migraña en este momento."
+        "text": "Mellow también te acompaña entre crisis.",
+        "items": [
+          {
+            "title": "Tu estado de ánimo",
+            "text": "Anota cómo te sientes cada día, aunque no tengas crisis."
+          },
+          {
+            "title": "Respiración guiada",
+            "text": "Un ejercicio sencillo para recuperar un poco de calma."
+          },
+          {
+            "title": "Cursos",
+            "text": "Entender, prevenir y manejar la migraña, a tu ritmo."
+          },
+          {
+            "title": "Abrazos",
+            "text": "Envía tu apoyo a quienes tienen una migraña en este momento."
+          }
+        ]
       },
       "doctor": {
         "kicker": "Con tu médico",
@@ -160,26 +156,55 @@
     "plans": {
       "title": "Gratis o Premium",
       "subtitle": "Mellow es gratis para registrar y seguir tus crisis. Premium agrega los análisis y las herramientas para ir más allá.",
-      "free": {
-        "title": "Gratis",
-        "items": [
-          "Registrar tus crisis, también desde el widget",
-          "Calendario e historial",
-          "Estado de ánimo, respiración guiada y abrazos",
-          "Algunos cursos sobre la migraña",
-          "Respaldo en la nube"
-        ]
-      },
-      "premium": {
-        "title": "Premium",
-        "items": [
-          "Análisis detallado y observaciones de Mellow",
-          "Desencadenantes y alivios",
-          "Clima y sueño",
-          "Todos los cursos",
-          "Informes PDF y exportación de la puntuación MIDAS"
-        ]
-      }
+      "freeTitle": "Gratis",
+      "premiumTitle": "Premium",
+      "rows": [
+        {
+          "label": "Registrar tus crisis, también desde el widget",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Calendario e historial",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Estado de ánimo, respiración guiada y abrazos",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Respaldo en la nube",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Cursos sobre la migraña",
+          "free": "Algunos",
+          "premium": "Todos"
+        },
+        {
+          "label": "Análisis detallado y observaciones de Mellow",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Desencadenantes y alivios",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Clima y sueño",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Informes PDF y exportación de la puntuación MIDAS",
+          "free": "no",
+          "premium": "yes"
+        }
+      ]
     },
     "data": {
       "title": "Tus datos, bien cuidados",
@@ -205,11 +230,22 @@
       "symptoms": "Síntomas",
       "triggers": "Desencadenantes",
       "meds": "Medicamentos",
+      "reliefs": "Métodos de alivio",
       "nausea": "Náuseas",
       "light": "Sensibilidad a la luz",
+      "sound": "Sensibilidad al ruido",
+      "visual": "Trastornos visuales",
+      "dizziness": "Vértigos",
+      "throbbing": "Dolor pulsátil",
       "stress": "Estrés",
       "sleep": "Falta de sueño",
+      "screens": "Pantallas",
+      "menstrual": "Ciclo menstrual",
+      "skippedMeal": "Comida omitida",
+      "caffeine": "Cafeína",
       "darkRest": "Reposo en la oscuridad",
+      "icePack": "Bolsa de hielo",
+      "meditation": "Meditación",
       "reliefHigh": "Muy eficaz",
       "reliefMid": "Bastante eficaz",
       "reliefNone": "Sin efecto",
@@ -217,15 +253,12 @@
       "statDays": "Días afectados",
       "statIntensity": "Intensidad media",
       "weatherDays": "Los próximos siete días",
-      "hugs": "{count} personas tienen migraña",
-      "hugsAction": "Envíales un abrazo",
       "reportAnalysis": "Análisis",
       "reportHistory": "Historial",
       "reportMidas": "Puntuación MIDAS",
-      "export": "Exportar como PDF",
-      "calendar": "Calendario",
-      "widgetTitle": "¿Una migraña?",
-      "widgetSave": "Registrar",
+      "reportAnalysisSub": "Frecuencia, desencadenantes, lo que te alivia",
+      "reportHistorySub": "Todas tus migrañas, una por línea",
+      "reportMidasSub": "Tu discapacidad en los últimos 3 meses",
       "times": "{count, plural, one {# vez} other {# veces}}",
       "monthMigraines": "{count, plural, one {# migraña} other {# migrañas}}"
     }

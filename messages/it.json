@@ -97,34 +97,12 @@
     "title": "L'app Mellow",
     "subtitle": "Registra i tuoi attacchi in pochi secondi, capisci cosa li scatena e prepara le tue visite.",
     "premium": "Premium",
-    "stats": [
-      {
-        "value": "2 tap",
-        "label": "per registrare un attacco"
-      },
-      {
-        "value": "7 giorni",
-        "label": "di pressione e umidità in anticipo"
-      },
-      {
-        "value": "3 report",
-        "label": "in PDF per il tuo medico"
-      },
-      {
-        "value": "4 Mellow",
-        "label": "per accompagnarti"
-      }
-    ],
     "blocks": {
       "log": {
         "kicker": "Durante l'attacco",
         "title": "Registra un attacco con due tap",
-        "text": "Sul momento, annota solo l'inizio e l'intensità, da 1 a 10. Hai dimenticato un attacco? Puoi registrarlo anche dopo."
-      },
-      "widget": {
-        "kicker": "Senza aprire l'app",
-        "title": "Un widget sempre a portata di mano",
-        "text": "Dalla schermata Home, dalla schermata di blocco o dal Centro di Controllo, registri un'emicrania con un gesto."
+        "text": "Sul momento, annota solo l'inizio e l'intensità, da 1 a 10, anche dal widget, senza aprire l'app.",
+        "hint": "Tocca una barra per cambiare l'intensità."
       },
       "complete": {
         "kicker": "Quando va meglio",
@@ -149,7 +127,25 @@
       "care": {
         "kicker": "Prenditi cura di te",
         "title": "Non solo durante gli attacchi",
-        "text": "Annota il tuo umore, respira con un esercizio guidato, impara con i corsi sull'emicrania e manda un abbraccio a chi ha un'emicrania in questo momento."
+        "text": "Mellow ti accompagna anche tra un attacco e l'altro.",
+        "items": [
+          {
+            "title": "Il tuo umore",
+            "text": "Annota come ti senti ogni giorno, anche senza attacchi."
+          },
+          {
+            "title": "Respirazione guidata",
+            "text": "Un esercizio semplice per ritrovare un po' di calma."
+          },
+          {
+            "title": "Corsi",
+            "text": "Capire, prevenire e gestire l'emicrania, con i tuoi tempi."
+          },
+          {
+            "title": "Abbracci",
+            "text": "Manda il tuo sostegno a chi ha un'emicrania in questo momento."
+          }
+        ]
       },
       "doctor": {
         "kicker": "Dal medico",
@@ -160,26 +156,55 @@
     "plans": {
       "title": "Gratis o Premium",
       "subtitle": "Mellow è gratis per registrare e seguire i tuoi attacchi. Premium aggiunge le analisi e gli strumenti per andare oltre.",
-      "free": {
-        "title": "Gratis",
-        "items": [
-          "Registrare gli attacchi, anche dal widget",
-          "Calendario e storico",
-          "Umore, respirazione guidata e abbracci",
-          "Alcuni corsi sull'emicrania",
-          "Backup nel cloud"
-        ]
-      },
-      "premium": {
-        "title": "Premium",
-        "items": [
-          "Analisi dettagliata e osservazioni di Mellow",
-          "Fattori scatenanti e sollievo",
-          "Meteo e sonno",
-          "Tutti i corsi",
-          "Report PDF ed esportazione del punteggio MIDAS"
-        ]
-      }
+      "freeTitle": "Gratis",
+      "premiumTitle": "Premium",
+      "rows": [
+        {
+          "label": "Registrare gli attacchi, anche dal widget",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Calendario e storico",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Umore, respirazione guidata e abbracci",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Backup nel cloud",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Corsi sull'emicrania",
+          "free": "Alcuni",
+          "premium": "Tutti"
+        },
+        {
+          "label": "Analisi dettagliata e osservazioni di Mellow",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Fattori scatenanti e sollievo",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Meteo e sonno",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Report PDF ed esportazione del punteggio MIDAS",
+          "free": "no",
+          "premium": "yes"
+        }
+      ]
     },
     "data": {
       "title": "I tuoi dati, ben custoditi",
@@ -205,11 +230,22 @@
       "symptoms": "Sintomi",
       "triggers": "Fattori scatenanti",
       "meds": "Farmaci",
+      "reliefs": "Metodi di sollievo",
       "nausea": "Nausea",
       "light": "Sensibilità alla luce",
+      "sound": "Sensibilità al rumore",
+      "visual": "Disturbi visivi",
+      "dizziness": "Vertigini",
+      "throbbing": "Dolore pulsante",
       "stress": "Stress",
       "sleep": "Mancanza di sonno",
+      "screens": "Schermi",
+      "menstrual": "Ciclo mestruale",
+      "skippedMeal": "Pasto saltato",
+      "caffeine": "Caffeina",
       "darkRest": "Riposo al buio",
+      "icePack": "Borsa del ghiaccio",
+      "meditation": "Meditazione",
       "reliefHigh": "Molto efficace",
       "reliefMid": "Abbastanza efficace",
       "reliefNone": "Senza effetto",
@@ -217,15 +253,12 @@
       "statDays": "Giorni colpiti",
       "statIntensity": "Intensità media",
       "weatherDays": "I prossimi sette giorni",
-      "hugs": "{count} persone hanno un'emicrania",
-      "hugsAction": "Manda loro un abbraccio",
       "reportAnalysis": "Analisi",
       "reportHistory": "Storico",
       "reportMidas": "Punteggio MIDAS",
-      "export": "Esporta in PDF",
-      "calendar": "Calendario",
-      "widgetTitle": "Un'emicrania?",
-      "widgetSave": "Registra",
+      "reportAnalysisSub": "Frequenza, fattori scatenanti, cosa ti dà sollievo",
+      "reportHistorySub": "Tutte le tue emicranie, una per riga",
+      "reportMidasSub": "La tua disabilità negli ultimi 3 mesi",
       "times": "{count, plural, one {# volta} other {# volte}}",
       "monthMigraines": "{count, plural, one {# emicrania} other {# emicranie}}"
     }

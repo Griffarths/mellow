@@ -92,34 +92,12 @@
     "title": "The Mellow app",
     "subtitle": "Log your attacks in seconds, understand what triggers them and prepare for your appointments.",
     "premium": "Premium",
-    "stats": [
-      {
-        "value": "2 taps",
-        "label": "to log an attack"
-      },
-      {
-        "value": "7 days",
-        "label": "of pressure and humidity ahead"
-      },
-      {
-        "value": "3 reports",
-        "label": "as PDFs for your doctor"
-      },
-      {
-        "value": "4 Mellows",
-        "label": "to keep you company"
-      }
-    ],
     "blocks": {
       "log": {
         "kicker": "During an attack",
         "title": "Log an attack in two taps",
-        "text": "In the moment, just note when it started and how intense it is, from 1 to 10. Forgot one? You can also log it afterwards."
-      },
-      "widget": {
-        "kicker": "Without opening the app",
-        "title": "A widget always within reach",
-        "text": "From your Home Screen, Lock Screen or Control Center, log a migraine in one tap."
+        "text": "In the moment, just note when it started and how intense it is, from 1 to 10, even from the widget, without opening the app.",
+        "hint": "Tap a bar to change the intensity."
       },
       "complete": {
         "kicker": "Once it eases",
@@ -144,7 +122,25 @@
       "care": {
         "kicker": "Take care of yourself",
         "title": "Not just during attacks",
-        "text": "Log your mood, breathe with a guided exercise, learn with migraine courses, and send a hug to people who have a migraine right now."
+        "text": "Mellow is there between attacks too.",
+        "items": [
+          {
+            "title": "Your mood",
+            "text": "Log how you feel every day, even without an attack."
+          },
+          {
+            "title": "Guided breathing",
+            "text": "A simple exercise to find a bit of calm."
+          },
+          {
+            "title": "Courses",
+            "text": "Understand, prevent and manage migraine, at your own pace."
+          },
+          {
+            "title": "Hugs",
+            "text": "Send your support to people who have a migraine right now."
+          }
+        ]
       },
       "doctor": {
         "kicker": "At the doctor's",
@@ -155,26 +151,55 @@
     "plans": {
       "title": "Free or Premium",
       "subtitle": "Mellow is free to log and track your attacks. Premium adds the analyses and tools to go further.",
-      "free": {
-        "title": "Free",
-        "items": [
-          "Log your attacks, also from the widget",
-          "Calendar and history",
-          "Mood, guided breathing and hugs",
-          "Some migraine courses",
-          "Cloud backup"
-        ]
-      },
-      "premium": {
-        "title": "Premium",
-        "items": [
-          "Detailed analysis and Mellow's insights",
-          "Triggers and relief",
-          "Weather and sleep",
-          "All courses",
-          "PDF reports and MIDAS score export"
-        ]
-      }
+      "freeTitle": "Free",
+      "premiumTitle": "Premium",
+      "rows": [
+        {
+          "label": "Log your attacks, also from the widget",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Calendar and history",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Mood, guided breathing and hugs",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Cloud backup",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Migraine courses",
+          "free": "Some",
+          "premium": "All"
+        },
+        {
+          "label": "Detailed analysis and Mellow's insights",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Triggers and relief",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Weather and sleep",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "PDF reports and MIDAS score export",
+          "free": "no",
+          "premium": "yes"
+        }
+      ]
     },
     "data": {
       "title": "Your data, well kept",
@@ -200,11 +225,22 @@
       "symptoms": "Symptoms",
       "triggers": "Triggers",
       "meds": "Medications",
+      "reliefs": "Relief methods",
       "nausea": "Nausea",
       "light": "Light sensitivity",
+      "sound": "Sound sensitivity",
+      "visual": "Visual disturbances",
+      "dizziness": "Dizziness",
+      "throbbing": "Throbbing pain",
       "stress": "Stress",
       "sleep": "Lack of sleep",
+      "screens": "Screens",
+      "menstrual": "Menstrual cycle",
+      "skippedMeal": "Skipped meal",
+      "caffeine": "Caffeine",
       "darkRest": "Rest in the dark",
+      "icePack": "Ice pack",
+      "meditation": "Meditation",
       "reliefHigh": "Very effective",
       "reliefMid": "Fairly effective",
       "reliefNone": "No effect",
@@ -212,15 +248,12 @@
       "statDays": "Days affected",
       "statIntensity": "Avg. intensity",
       "weatherDays": "The next seven days",
-      "hugs": "{count} people have a migraine",
-      "hugsAction": "Send them a hug",
       "reportAnalysis": "Analysis",
       "reportHistory": "History",
       "reportMidas": "MIDAS score",
-      "export": "Export as PDF",
-      "calendar": "Calendar",
-      "widgetTitle": "A migraine?",
-      "widgetSave": "Log",
+      "reportAnalysisSub": "Frequency, triggers, what relieves you",
+      "reportHistorySub": "All your migraines, one per line",
+      "reportMidasSub": "Your disability over the last 3 months",
       "times": "{count, plural, one {# time} other {# times}}",
       "monthMigraines": "{count, plural, one {# migraine} other {# migraines}}"
     }

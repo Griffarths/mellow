@@ -97,34 +97,12 @@
     "title": "A app Mellow",
     "subtitle": "Regista as tuas crises em segundos, percebe o que as desencadeia e prepara as tuas consultas.",
     "premium": "Premium",
-    "stats": [
-      {
-        "value": "2 toques",
-        "label": "para registar uma crise"
-      },
-      {
-        "value": "7 dias",
-        "label": "de pressão e humidade com antecedência"
-      },
-      {
-        "value": "3 relatórios",
-        "label": "em PDF para o teu médico"
-      },
-      {
-        "value": "4 Mellows",
-        "label": "para te acompanhar"
-      }
-    ],
     "blocks": {
       "log": {
         "kicker": "Durante a crise",
         "title": "Regista uma crise em dois toques",
-        "text": "No momento, regista só o início e a intensidade, de 1 a 10. Esqueceste-te de uma? Também a podes registar depois."
-      },
-      "widget": {
-        "kicker": "Sem abrir a app",
-        "title": "Um widget sempre à mão",
-        "text": "No ecrã principal, no ecrã bloqueado ou na central de controlo, registas uma enxaqueca com um gesto."
+        "text": "No momento, regista só o início e a intensidade, de 1 a 10, até pelo widget, sem abrir a app.",
+        "hint": "Toca numa barra para mudar a intensidade."
       },
       "complete": {
         "kicker": "Quando estiveres melhor",
@@ -149,7 +127,25 @@
       "care": {
         "kicker": "Cuidar de ti",
         "title": "Não só durante as crises",
-        "text": "Regista o teu humor, respira com um exercício guiado, aprende com os cursos sobre enxaqueca e envia um abraço a quem tem uma enxaqueca neste momento."
+        "text": "A Mellow também te acompanha entre as crises.",
+        "items": [
+          {
+            "title": "O teu humor",
+            "text": "Regista como te sentes todos os dias, mesmo sem crise."
+          },
+          {
+            "title": "Respiração guiada",
+            "text": "Um exercício simples para recuperar um pouco de calma."
+          },
+          {
+            "title": "Cursos",
+            "text": "Perceber, prevenir e gerir a enxaqueca, ao teu ritmo."
+          },
+          {
+            "title": "Abraços",
+            "text": "Envia o teu apoio a quem tem uma enxaqueca neste momento."
+          }
+        ]
       },
       "doctor": {
         "kicker": "No médico",
@@ -160,26 +156,55 @@
     "plans": {
       "title": "Gratuito ou Premium",
       "subtitle": "A Mellow é gratuita para registares e acompanhares as tuas crises. O Premium acrescenta as análises e as ferramentas para ires mais longe.",
-      "free": {
-        "title": "Gratuito",
-        "items": [
-          "Registar as tuas crises, também pelo widget",
-          "Calendário e histórico",
-          "Humor, respiração guiada e abraços",
-          "Alguns cursos sobre enxaqueca",
-          "Cópia de segurança na nuvem"
-        ]
-      },
-      "premium": {
-        "title": "Premium",
-        "items": [
-          "Análise detalhada e observações da Mellow",
-          "Fatores desencadeantes e alívio",
-          "Meteorologia e sono",
-          "Todos os cursos",
-          "Relatórios PDF e exportação da pontuação MIDAS"
-        ]
-      }
+      "freeTitle": "Gratuito",
+      "premiumTitle": "Premium",
+      "rows": [
+        {
+          "label": "Registar as tuas crises, também pelo widget",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Calendário e histórico",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Humor, respiração guiada e abraços",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Cópia de segurança na nuvem",
+          "free": "yes",
+          "premium": "yes"
+        },
+        {
+          "label": "Cursos sobre enxaqueca",
+          "free": "Alguns",
+          "premium": "Todos"
+        },
+        {
+          "label": "Análise detalhada e observações da Mellow",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Fatores desencadeantes e alívio",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Meteorologia e sono",
+          "free": "no",
+          "premium": "yes"
+        },
+        {
+          "label": "Relatórios PDF e exportação da pontuação MIDAS",
+          "free": "no",
+          "premium": "yes"
+        }
+      ]
     },
     "data": {
       "title": "Os teus dados, bem guardados",
@@ -205,11 +230,22 @@
       "symptoms": "Sintomas",
       "triggers": "Gatilhos",
       "meds": "Medicamentos",
+      "reliefs": "Métodos de alívio",
       "nausea": "Náuseas",
       "light": "Sensibilidade à luz",
+      "sound": "Sensibilidade ao ruído",
+      "visual": "Perturbações visuais",
+      "dizziness": "Vertigens",
+      "throbbing": "Dor pulsátil",
       "stress": "Stress",
       "sleep": "Falta de sono",
+      "screens": "Ecrãs",
+      "menstrual": "Ciclo menstrual",
+      "skippedMeal": "Refeição saltada",
+      "caffeine": "Cafeína",
       "darkRest": "Repouso no escuro",
+      "icePack": "Saco de gelo",
+      "meditation": "Meditação",
       "reliefHigh": "Muito eficaz",
       "reliefMid": "Razoável",
       "reliefNone": "Sem efeito",
@@ -217,15 +253,12 @@
       "statDays": "Dias afetados",
       "statIntensity": "Intensidade média",
       "weatherDays": "Os próximos sete dias",
-      "hugs": "{count} pessoas têm uma enxaqueca",
-      "hugsAction": "Envia-lhes um abraço",
       "reportAnalysis": "Análise",
       "reportHistory": "Histórico",
       "reportMidas": "Pontuação MIDAS",
-      "export": "Exportar como PDF",
-      "calendar": "Calendário",
-      "widgetTitle": "Uma enxaqueca?",
-      "widgetSave": "Registar",
+      "reportAnalysisSub": "Frequência, gatilhos, o que te alivia",
+      "reportHistorySub": "Todas as tuas enxaquecas, uma por linha",
+      "reportMidasSub": "A tua incapacidade nos últimos 3 meses",
       "times": "{count, plural, one {# vez} other {# vezes}}",
       "monthMigraines": "{count, plural, one {# enxaqueca} other {# enxaquecas}}"
     }
