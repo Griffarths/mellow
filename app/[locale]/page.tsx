@@ -37,8 +37,8 @@ export default async function HomePage({
         <Hero />
         <Features />
         <WhyMellow />
-        <SocialProof />
         <MellowsSlider />
+        <SocialProof />
         <Courses />
         <LatestArticles />
         <FinalCta />

@@ -44,7 +44,9 @@ export function MellowsSlider() {
     <section className="py-14 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-h2 text-ink">{t("title")}</h2>
+          {/* The title breaks after its comma: "A gentle app, / not a
+              medical record." */}
+          <h2 className="text-h2 text-ink">{t.rich("title", { br: () => <br /> })}</h2>
           <p className="mt-4 text-lg text-ink-2">{t("subtitle")}</p>
         </div>
 
