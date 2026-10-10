@@ -70,6 +70,22 @@
       "text": "Three clear, complete PDF reports to show your doctor: your analysis, the history of your attacks and your MIDAS score."
     }
   },
+  "why": {
+    "title": "Why Mellow?",
+    "subtitle": "Your companion to learn about and understand your migraines.",
+    "free": {
+      "title": "Free, easy to use and reliable",
+      "text": "Mellow gives you a simple, clear and well-organized app that tracks every aspect of your migraines: intensity, medication, symptoms and triggers. Available on iPhone and in beta on Android, it saves your data in the cloud, so you can find your history on all your devices whenever you need it."
+    },
+    "founder": {
+      "title": "Developed by someone with migraine",
+      "text": "Laurine, who lives with migraine herself, created Mellow to meet her own needs, which are probably yours too. The app brings together everything that matters with migraine: tracking medication, symptoms and triggers. And she keeps improving it by listening to the people with migraine who use it."
+    },
+    "doctor": {
+      "title": "Designed for your doctor and your neurologist",
+      "text": "Mellow brings together what your doctor or neurologist needs to see: how often your attacks happen, your treatments, what brings relief and your MIDAS score. Your data can be exported as a PDF and shared with your doctor, giving them a better overview of your situation."
+    }
+  },
   "mellows": {
     "title": "Meet the Mellows.",
     "subtitle": "Each Mellow is there for a different moment.",

@@ -75,6 +75,22 @@
       "text": "Drei übersichtliche, vollständige PDF-Berichte, die du deinem Arzt zeigen kannst: die Analyse, der Verlauf deiner Attacken und dein MIDAS-Score."
     }
   },
+  "why": {
+    "title": "Warum Mellow?",
+    "subtitle": "Dein Begleiter, um deine Migräne kennenzulernen und zu verstehen.",
+    "free": {
+      "title": "Kostenlos, einfach und zuverlässig",
+      "text": "Mellow ist eine einfache, übersichtliche und gut strukturierte App, die alle Aspekte deiner Migräne erfasst: Stärke, Medikamente, Symptome und Auslöser. Verfügbar auf dem iPhone und im Test auf Android, speichert sie deine Daten in der Cloud, damit du deinen Verlauf auf all deinen Geräten wiederfindest, wann immer du ihn brauchst."
+    },
+    "founder": {
+      "title": "Entwickelt von einer Migränebetroffenen",
+      "text": "Laurine, selbst von Migräne betroffen, hat Mellow für ihre eigenen Bedürfnisse entwickelt, die wahrscheinlich auch deine sind. Die App vereint alles, was bei Migräne zählt: das Erfassen von Medikamenten, Symptomen und Auslösern. Und sie entwickelt sie weiter, indem sie den Menschen mit Migräne zuhört, die sie nutzen."
+    },
+    "doctor": {
+      "title": "Gemacht für deinen Arzt und deinen Neurologen",
+      "text": "Mellow bündelt, was dein Arzt oder dein Neurologe sehen muss: die Häufigkeit deiner Attacken, deine Behandlungen, was dir Linderung verschafft, und deinen MIDAS-Score. Deine Daten lassen sich als PDF exportieren und mit deinem Arzt teilen, damit er einen besseren Überblick über deine Situation bekommt."
+    }
+  },
   "mellows": {
     "title": "Lerne die Mellows kennen.",
     "subtitle": "Jeder Mellow begleitet dich in einem anderen Moment.",

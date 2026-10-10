@@ -75,6 +75,22 @@
       "text": "Três relatórios em PDF claros e completos para mostrar ao seu médico: a análise, o histórico das suas crises e sua pontuação MIDAS."
     }
   },
+  "why": {
+    "title": "Por que o Mellow?",
+    "subtitle": "Seu companheiro para conhecer e entender suas enxaquecas.",
+    "free": {
+      "title": "Gratuito, fácil de usar e confiável",
+      "text": "O Mellow oferece um app simples, claro e bem organizado, que acompanha todos os aspectos das suas enxaquecas: intensidade, medicamentos, sintomas e gatilhos. Disponível para iPhone e em teste no Android, ele salva seus dados na nuvem, para que você encontre seu histórico em todos os seus aparelhos, sempre que precisar."
+    },
+    "founder": {
+      "title": "Desenvolvido por uma pessoa com enxaqueca",
+      "text": "Laurine, que também tem enxaqueca, criou o Mellow para atender às próprias necessidades, que provavelmente também são as suas. O app reúne tudo o que importa diante da enxaqueca: o acompanhamento de medicamentos, sintomas e gatilhos. E ela continua a melhorá-lo ouvindo as pessoas com enxaqueca que o usam."
+    },
+    "doctor": {
+      "title": "Pensado para seu médico e seu neurologista",
+      "text": "O Mellow reúne o que seu médico ou seu neurologista precisa ver: a frequência das suas crises, seus tratamentos, o que alivia e sua pontuação MIDAS. Seus dados podem ser exportados em PDF e compartilhados com seu médico, para que ele tenha uma visão geral melhor da sua situação."
+    }
+  },
   "mellows": {
     "title": "Conheça os Mellows.",
     "subtitle": "Cada Mellow acompanha você em um momento diferente.",

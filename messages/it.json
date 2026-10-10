@@ -75,6 +75,22 @@
       "text": "Tre report PDF chiari e completi da mostrare al tuo medico: l'analisi, lo storico dei tuoi attacchi e il tuo punteggio MIDAS."
     }
   },
+  "why": {
+    "title": "Perché Mellow?",
+    "subtitle": "Il tuo compagno per conoscere e capire le tue emicranie.",
+    "free": {
+      "title": "Gratuita, facile da usare e affidabile",
+      "text": "Mellow ti offre un'app semplice, chiara e ben organizzata, che tiene traccia di ogni aspetto delle tue emicranie: intensità, farmaci, sintomi e fattori scatenanti. Disponibile su iPhone e in test su Android, salva i tuoi dati nel cloud, così ritrovi il tuo storico su tutti i tuoi dispositivi, ogni volta che ti serve."
+    },
+    "founder": {
+      "title": "Sviluppata da una persona con emicrania",
+      "text": "Laurine, che soffre lei stessa di emicrania, ha creato Mellow per rispondere alle proprie esigenze, che probabilmente sono anche le tue. L'app riunisce tutto ciò che conta di fronte all'emicrania: il monitoraggio di farmaci, sintomi e fattori scatenanti. E continua a migliorarla ascoltando le persone con emicrania che la usano."
+    },
+    "doctor": {
+      "title": "Pensata per il tuo medico e il tuo neurologo",
+      "text": "Mellow riunisce ciò che il tuo medico o il tuo neurologo ha bisogno di vedere: la frequenza dei tuoi attacchi, le tue terapie, cosa ti dà sollievo e il tuo punteggio MIDAS. I tuoi dati sono esportabili in PDF e puoi condividerli con il tuo medico, per dargli una visione d'insieme più chiara della tua situazione."
+    }
+  },
   "mellows": {
     "title": "Ecco i Mellow.",
     "subtitle": "Ogni Mellow ti accompagna in un momento diverso.",

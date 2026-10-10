@@ -75,6 +75,22 @@
       "text": "Tres informes en PDF claros y completos para mostrárselos a tu médico: el análisis, el historial de tus crisis y tu puntuación MIDAS."
     }
   },
+  "why": {
+    "title": "¿Por qué Mellow?",
+    "subtitle": "Tu compañero para aprender sobre tus migrañas y entenderlas.",
+    "free": {
+      "title": "Gratis, fácil de usar y confiable",
+      "text": "Mellow te ofrece una app sencilla, clara y bien organizada, que registra todos los aspectos de tus migrañas: intensidad, medicamentos, síntomas y desencadenantes. Disponible en iPhone y en pruebas en Android, guarda tus datos en la nube para que encuentres tu historial en todos tus dispositivos, cada vez que lo necesites."
+    },
+    "founder": {
+      "title": "Desarrollada por alguien con migraña",
+      "text": "Laurine, que también tiene migraña, creó Mellow para responder a sus propias necesidades, que seguramente también son las tuyas. La app reúne todo lo que importa frente a la migraña: el registro de medicamentos, síntomas y desencadenantes. Y la sigue mejorando escuchando a las personas con migraña que la usan."
+    },
+    "doctor": {
+      "title": "Pensada para tu médico y tu neurólogo",
+      "text": "Mellow reúne lo que tu médico o tu neurólogo necesita ver: la frecuencia de tus crisis, tus tratamientos, lo que te alivia y tu puntuación MIDAS. Tus datos se pueden exportar en PDF y compartir con tu médico, para que tenga una mejor visión general de tu situación."
+    }
+  },
   "mellows": {
     "title": "Conoce a los Mellows.",
     "subtitle": "Cada Mellow te acompaña en un momento distinto.",

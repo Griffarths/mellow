@@ -4,6 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/sections/Hero";
 import { Features } from "@/components/sections/Features";
+import { WhyMellow } from "@/components/sections/WhyMellow";
 import { MellowsSlider } from "@/components/sections/MellowsSlider";
 import { Courses } from "@/components/sections/Courses";
 import { LatestArticles } from "@/components/sections/LatestArticles";
@@ -36,6 +37,7 @@ export default async function HomePage({
       <main>
         <Hero />
         <Features />
+        <WhyMellow />
         <Screenshots />
         <SocialProof />
         <MellowsSlider />
