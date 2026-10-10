@@ -48,7 +48,7 @@ export function Features() {
   const locale = useLocale();
 
   return (
-    <section id="features" className="overflow-hidden pt-12 lg:pt-20">
+    <section id="features" className="overflow-x-clip pt-12 lg:pt-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-h2 text-ink">{t("title")}</h2>
@@ -59,7 +59,9 @@ export function Features() {
             list on the right. */}
         <div className="mt-10 grid items-center gap-x-10 md:mt-14 md:grid-cols-2 lg:grid-cols-[1fr_1.05fr] lg:gap-x-20">
           <div className="relative mx-auto w-[240px] md:w-[260px] lg:w-[290px]">
-            {/* Soft pink glow behind the phone, the hero's pink fading out. */}
+            {/* Soft pink glow behind the phone, the hero's pink fading out.
+                Wider than a phone screen: the section clips it sideways only
+                (overflow-x-clip), so the phone's shadow still shows below. */}
             <div
               aria-hidden
               className="absolute left-1/2 top-1/2 aspect-square w-[200%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(255_98_169/0.22),rgb(255_98_169/0)_75%)]"
