@@ -2,9 +2,9 @@ import type { ReactNode } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { TONES, type Tone } from "@/lib/tones";
 
-// Right under the hero: says plainly what the app is and does. Two
-// phones with real app screens (public/app-screens/<locale>, exported from
-// Frame Studio) next to the title and the three benefits, split by thin
+// Right under the hero: says plainly what the app is and does. A phone
+// showing the real "log a migraine" screen (public/app-screens/<locale>,
+// exported from Frame Studio) next to the three benefits, split by thin
 // rules. White background.
 const FEATURES: Array<{ id: "log" | "understand" | "doctor"; tone: Tone; icon: ReactNode }> = [
   {
@@ -49,7 +49,7 @@ export function Features() {
   const locale = useLocale();
 
   return (
-    <section id="features" className="pt-12 lg:pt-20">
+    <section id="features" className="overflow-hidden pt-12 lg:pt-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-h2 text-ink">{t("title")}</h2>
@@ -59,18 +59,13 @@ export function Features() {
         {/* Phones: phones above the list. From md, phones on the left, the
             list on the right. */}
         <div className="mt-10 grid items-center gap-x-10 md:mt-14 md:grid-cols-2 lg:grid-cols-[1fr_1.05fr] lg:gap-x-20">
-          {/* Two upright phones side by side, the right one set lower. */}
-          <div className="relative mx-auto aspect-[5/6] w-full max-w-[360px] md:max-w-[480px]">
-            <Phone
-              src={`/app-screens/${locale}/calendar.jpg`}
-              alt={shots("alt.03")}
-              className="left-[1%] top-0"
+          <div className="relative mx-auto w-[240px] md:w-[260px] lg:w-[290px]">
+            {/* Soft pink glow behind the phone, the hero's pink fading out. */}
+            <div
+              aria-hidden
+              className="absolute left-1/2 top-1/2 aspect-square w-[200%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(255_98_169/0.22),rgb(255_98_169/0)_75%)]"
             />
-            <Phone
-              src={`/app-screens/${locale}/log.jpg`}
-              alt={shots("alt.02")}
-              className="right-[1%] top-[14%]"
-            />
+            <Phone src={`/app-screens/${locale}/log.jpg`} alt={shots("alt.02")} />
           </div>
 
           <ul className="mx-auto mt-10 w-full max-w-xl divide-y divide-surface-line md:mx-0 md:mt-0 md:max-w-none">
@@ -105,21 +100,31 @@ export function Features() {
   );
 }
 
-// A raw app screen (status bar and island included) in a thin black frame.
-function Phone({ src, alt, className }: { src: string; alt: string; className: string }) {
+// A raw app screen (status bar and island included) in an iPhone: a thin
+// titanium band with a soft highlight, the black bezel, the side buttons.
+// Its width comes from the parent.
+const BUTTON = "absolute w-[1.6%] bg-gradient-to-r from-[#4a4a50] to-[#26262a]";
+
+function Phone({ src, alt }: { src: string; alt: string }) {
   return (
-    <div
-      className={`absolute w-[47%] rounded-[13%/6%] bg-ink p-[2.2%] shadow-[0_28px_50px_-18px_rgb(0_0_0/0.35)] ${className}`}
-    >
-      <img
-        src={src}
-        alt={alt}
-        width={600}
-        height={1304}
-        loading="lazy"
-        draggable={false}
-        className="block h-auto w-full select-none rounded-[11%/5%]"
-      />
+    <div className="relative">
+      <span aria-hidden className={`${BUTTON} -left-[1.2%] top-[17%] h-[3.4%] rounded-l-sm`} />
+      <span aria-hidden className={`${BUTTON} -left-[1.2%] top-[23.5%] h-[6.5%] rounded-l-sm`} />
+      <span aria-hidden className={`${BUTTON} -left-[1.2%] top-[31.5%] h-[6.5%] rounded-l-sm`} />
+      <span aria-hidden className={`${BUTTON} -right-[1.2%] top-[26%] h-[10%] rotate-180 rounded-l-sm`} />
+      <div className="relative rounded-[16%/7.7%] bg-gradient-to-br from-[#5b5b61] via-[#2c2c30] to-[#4a4a50] p-[1.4%] shadow-[0_2px_6px_rgb(0_0_0/0.08),0_40px_70px_-28px_rgb(0_0_0/0.45)]">
+        <div className="rounded-[15%/7.1%] bg-black p-[2.6%] shadow-[inset_0_0_0_1px_rgb(255_255_255/0.08)]">
+          <img
+            src={src}
+            alt={alt}
+            width={600}
+            height={1304}
+            loading="lazy"
+            draggable={false}
+            className="block h-auto w-full select-none rounded-[12.5%/5.75%]"
+          />
+        </div>
+      </div>
     </div>
   );
 }
