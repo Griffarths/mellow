@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { TONES, type Tone } from "@/lib/tones";
 
-// Right under the hero: says plainly what the app is and does. Two tilted
+// Right under the hero: says plainly what the app is and does. Two
 // phones with real app screens (public/app-screens/<locale>, exported from
 // Frame Studio) next to the title and the three benefits, split by thin
 // rules. White background.
@@ -50,29 +50,30 @@ export function Features() {
 
   return (
     <section id="features" className="pt-12 lg:pt-20">
-      {/* Phones and tablets: title, phones, list, one column. From lg the
-          phones take the left column across both rows, the title and the
-          list sit on the right. */}
-      <div className="mx-auto grid max-w-6xl gap-x-20 px-6 lg:grid-cols-[1fr_1.05fr]">
-        <div className="mx-auto max-w-2xl text-center lg:col-start-2 lg:row-start-1 lg:mx-0 lg:self-end lg:text-left">
+      {/* Phones: title, phones, list, one column. From md the phones take
+          the left column across both rows, the title and the list sit on
+          the right. */}
+      <div className="mx-auto grid max-w-6xl gap-x-10 px-6 md:grid-cols-2 lg:grid-cols-[1fr_1.05fr] lg:gap-x-20">
+        <div className="mx-auto max-w-2xl text-center md:col-start-2 md:row-start-1 md:mx-0 md:self-end md:text-left">
           <h2 className="text-h2 text-ink">{t("title")}</h2>
           <p className="mt-4 text-balance text-lg text-ink-2">{t("subtitle")}</p>
         </div>
 
-        <div className="relative mx-auto mt-10 aspect-[4/5] w-full max-w-[360px] md:max-w-[440px] lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:max-w-[480px] lg:self-center">
+        {/* Two upright phones side by side, the right one set lower. */}
+        <div className="relative mx-auto mt-10 aspect-[5/6] w-full max-w-[360px] md:col-start-1 md:row-span-2 md:row-start-1 md:mt-0 md:max-w-[480px] md:self-center">
           <Phone
             src={`/app-screens/${locale}/calendar.jpg`}
             alt={shots("alt.03")}
-            className="left-[8%] top-[2%]"
+            className="left-[1%] top-0"
           />
           <Phone
             src={`/app-screens/${locale}/log.jpg`}
             alt={shots("alt.02")}
-            className="right-[8%] top-[11%]"
+            className="right-[1%] top-[14%]"
           />
         </div>
 
-        <ul className="mx-auto mt-10 w-full max-w-xl divide-y divide-surface-line lg:col-start-2 lg:row-start-2 lg:mx-0 lg:mt-8 lg:max-w-none lg:self-start">
+        <ul className="mx-auto mt-10 w-full max-w-xl divide-y divide-surface-line md:col-start-2 md:row-start-2 md:mx-0 md:mt-8 md:max-w-none md:self-start">
           {FEATURES.map((f) => (
             <li key={f.id} className="flex gap-5 py-6 first:pt-0 last:pb-0">
               <span
@@ -103,12 +104,11 @@ export function Features() {
   );
 }
 
-// A raw app screen (status bar and island included) in a thin black frame,
-// tilted like the phones on the App Store page.
+// A raw app screen (status bar and island included) in a thin black frame.
 function Phone({ src, alt, className }: { src: string; alt: string; className: string }) {
   return (
     <div
-      className={`absolute w-[50%] -rotate-[8deg] rounded-[13%/6%] bg-ink p-[2.2%] shadow-[0_28px_50px_-18px_rgb(0_0_0/0.35)] ${className}`}
+      className={`absolute w-[47%] rounded-[13%/6%] bg-ink p-[2.2%] shadow-[0_28px_50px_-18px_rgb(0_0_0/0.35)] ${className}`}
     >
       <img
         src={src}
