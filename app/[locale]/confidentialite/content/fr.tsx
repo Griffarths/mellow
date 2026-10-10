@@ -5,7 +5,7 @@ export default function PrivacyContentFr() {
     <>
       <h1>Politique de confidentialité · Mellow</h1>
       <p>
-        <strong>Dernière mise à jour : 8 octobre 2026</strong>
+        <strong>Dernière mise à jour&nbsp;: 8 octobre 2026</strong>
       </p>
 
       <p>
@@ -14,7 +14,7 @@ export default function PrivacyContentFr() {
         comment et pourquoi nous pouvons accéder, collecter, stocker, utiliser
         et/ou partager («&nbsp;traiter&nbsp;») tes données personnelles
         lorsque tu utilises nos services («&nbsp;Services&nbsp;»), notamment
-        lorsque tu :
+        lorsque tu&nbsp;:
       </p>
       <ul>
         <li>
@@ -34,7 +34,7 @@ export default function PrivacyContentFr() {
         </li>
       </ul>
       <p>
-        Une question ? La lecture de cette politique t&apos;aidera à
+        Une question&nbsp;? La lecture de cette politique t&apos;aidera à
         comprendre tes droits et tes choix en matière de confidentialité.
         Nous sommes responsables des décisions concernant le traitement de
         tes données. Si tu n&apos;acceptes pas nos pratiques, n&apos;utilise
@@ -45,24 +45,24 @@ export default function PrivacyContentFr() {
       <h2>Résumé des points clés</h2>
       <p>Voici les points clés de notre politique de confidentialité.</p>
       <p>
-        <strong>Quelles données personnelles traitons-nous ?</strong> Lorsque
+        <strong>Quelles données personnelles traitons-nous&nbsp;?</strong> Lorsque
         tu visites, utilises ou navigues dans nos Services, nous pouvons
         traiter des données personnelles selon la manière dont tu interagis
         avec nous, tes choix et les fonctionnalités utilisées.
       </p>
       <p>
-        <strong>Traitons-nous des données sensibles ?</strong> Certaines
+        <strong>Traitons-nous des données sensibles&nbsp;?</strong> Certaines
         informations peuvent être considérées comme «&nbsp;particulières&nbsp;»
         ou «&nbsp;sensibles&nbsp;» dans certaines juridictions, par exemple
         tes données de santé. Nous traitons ces données uniquement avec ton
         consentement ou dans les cas autorisés par la loi.
       </p>
       <p>
-        <strong>Collectons-nous des informations auprès de tiers ?</strong>{" "}
+        <strong>Collectons-nous des informations auprès de tiers&nbsp;?</strong>{" "}
         Non, nous ne collectons aucune information auprès de tiers.
       </p>
       <p>
-        <strong>Comment traitons-nous tes informations ?</strong> Nous
+        <strong>Comment traitons-nous tes informations&nbsp;?</strong> Nous
         traitons tes informations pour fournir, améliorer et administrer nos
         Services, communiquer avec toi, assurer la sécurité, prévenir la
         fraude et respecter la loi. Nous pouvons également traiter tes
@@ -72,13 +72,13 @@ export default function PrivacyContentFr() {
       <p>
         <strong>
           Dans quelles situations et avec quelles parties partageons-nous tes
-          données personnelles ?
+          données personnelles&nbsp;?
         </strong>{" "}
         Nous pouvons partager des informations dans des situations spécifiques
         et avec des tiers spécifiques.
       </p>
       <p>
-        <strong>Comment protégeons-nous tes informations ?</strong> Nous avons
+        <strong>Comment protégeons-nous tes informations&nbsp;?</strong> Nous avons
         mis en place des procédures organisationnelles et techniques adéquates
         pour protéger tes données personnelles. Cependant, aucune transmission
         électronique sur Internet ni aucune technologie de stockage ne peut
@@ -88,12 +88,12 @@ export default function PrivacyContentFr() {
         tes informations de manière inappropriée.
       </p>
       <p>
-        <strong>Quels sont tes droits ?</strong> Selon ta localisation
+        <strong>Quels sont tes droits&nbsp;?</strong> Selon ta localisation
         géographique, la loi applicable peut te conférer certains droits sur
         tes données personnelles.
       </p>
       <p>
-        <strong>Comment exercer tes droits ?</strong> Le moyen le plus simple
+        <strong>Comment exercer tes droits&nbsp;?</strong> Le moyen le plus simple
         est de nous contacter à{" "}
         <a href="mailto:contact.mellow@proton.me">contact.mellow@proton.me</a>.
         Nous traiterons toute demande conformément aux lois applicables en
@@ -102,32 +102,32 @@ export default function PrivacyContentFr() {
 
       <h2>Sommaire</h2>
       <ol>
-        <li>Quelles informations collectons-nous ?</li>
-        <li>Comment traitons-nous tes informations ?</li>
+        <li>Quelles informations collectons-nous&nbsp;?</li>
+        <li>Comment traitons-nous tes informations&nbsp;?</li>
         <li>
           Sur quelles bases légales reposons-nous pour traiter tes données
-          personnelles ?
+          personnelles&nbsp;?
         </li>
-        <li>Quand et avec qui partageons-nous tes données personnelles ?</li>
-        <li>Tes informations sont-elles transférées à l&apos;international ?</li>
-        <li>Combien de temps conservons-nous tes informations ?</li>
-        <li>Comment sécurisons-nous tes informations ?</li>
-        <li>Collectons-nous des informations auprès de mineurs ?</li>
-        <li>Quels sont tes droits en matière de confidentialité ?</li>
+        <li>Quand et avec qui partageons-nous tes données personnelles&nbsp;?</li>
+        <li>Tes informations sont-elles transférées à l&apos;international&nbsp;?</li>
+        <li>Combien de temps conservons-nous tes informations&nbsp;?</li>
+        <li>Comment sécurisons-nous tes informations&nbsp;?</li>
+        <li>Collectons-nous des informations auprès de mineurs&nbsp;?</li>
+        <li>Quels sont tes droits en matière de confidentialité&nbsp;?</li>
         <li>Contrôles pour les fonctionnalités Do-Not-Track</li>
-        <li>Les résidents des États-Unis ont-ils des droits spécifiques ?</li>
-        <li>Mettons-nous à jour cette politique ?</li>
-        <li>Comment nous contacter au sujet de cette politique ?</li>
+        <li>Les résidents des États-Unis ont-ils des droits spécifiques&nbsp;?</li>
+        <li>Mettons-nous à jour cette politique&nbsp;?</li>
+        <li>Comment nous contacter au sujet de cette politique&nbsp;?</li>
         <li>
           Comment consulter, mettre à jour ou supprimer les données que nous
-          collectons sur toi ?
+          collectons sur toi&nbsp;?
         </li>
       </ol>
 
-      <h2>1. Quelles informations collectons-nous ?</h2>
+      <h2>1. Quelles informations collectons-nous&nbsp;?</h2>
       <h3>Informations personnelles que tu nous fournis</h3>
       <p>
-        <em>En bref :</em> Nous collectons les données personnelles que tu
+        <em>En bref&nbsp;:</em> Nous collectons les données personnelles que tu
         nous fournis.
       </p>
       <p>
@@ -140,7 +140,7 @@ export default function PrivacyContentFr() {
         <strong>Données fournies par toi.</strong> Les informations
         personnelles que nous collectons dépendent du contexte de tes
         interactions avec nous, de tes choix et des fonctionnalités utilisées.
-        Elles peuvent inclure :
+        Elles peuvent inclure&nbsp;:
       </p>
       <ul>
         <li>Nom</li>
@@ -150,7 +150,7 @@ export default function PrivacyContentFr() {
       <p>
         <strong>Informations sensibles.</strong> Si nécessaire, et avec ton
         consentement ou dans les cas permis par la loi, nous traitons les
-        catégories suivantes de données sensibles :
+        catégories suivantes de données sensibles&nbsp;:
       </p>
       <ul>
         <li>Données de santé</li>
@@ -170,7 +170,7 @@ export default function PrivacyContentFr() {
         d&apos;effectuer des achats, comme le numéro de ton instrument de
         paiement et le code de sécurité associé. Toutes les données de
         paiement sont gérées et stockées par RevenueCat. Leur politique de
-        confidentialité est disponible ici :{" "}
+        confidentialité est disponible ici&nbsp;:{" "}
         <a
           href="https://www.revenuecat.com/privacy"
           target="_blank"
@@ -183,7 +183,7 @@ export default function PrivacyContentFr() {
       <p>
         <strong>Données d&apos;application.</strong> Si tu utilises notre
         application, nous pouvons collecter les éléments suivants si tu nous
-        en donnes l&apos;autorisation :
+        en donnes l&apos;autorisation&nbsp;:
       </p>
       <ul>
         <li>
@@ -231,7 +231,7 @@ export default function PrivacyContentFr() {
 
       <h3>Informations collectées automatiquement</h3>
       <p>
-        <em>En bref :</em> Certaines informations, comme ton adresse IP et/ou
+        <em>En bref&nbsp;:</em> Certaines informations, comme ton adresse IP et/ou
         les caractéristiques de ton navigateur et appareil, sont collectées
         automatiquement lorsque tu visites nos Services.
       </p>
@@ -249,7 +249,7 @@ export default function PrivacyContentFr() {
         nécessaires au maintien de la sécurité et du fonctionnement de nos
         Services et à nos besoins internes d&apos;analyse.
       </p>
-      <p>Les informations que nous collectons incluent :</p>
+      <p>Les informations que nous collectons incluent&nbsp;:</p>
       <ul>
         <li>
           <em>Données de log et d&apos;utilisation.</em> Informations de
@@ -293,15 +293,15 @@ export default function PrivacyContentFr() {
         </li>
       </ul>
 
-      <h2>2. Comment traitons-nous tes informations ?</h2>
+      <h2>2. Comment traitons-nous tes informations&nbsp;?</h2>
       <p>
-        <em>En bref :</em> Nous traitons tes informations pour fournir,
+        <em>En bref&nbsp;:</em> Nous traitons tes informations pour fournir,
         améliorer et administrer nos Services, communiquer avec toi, assurer
         la sécurité, prévenir la fraude et respecter la loi.
       </p>
       <p>
         Nous traitons tes données personnelles pour diverses raisons, selon la
-        manière dont tu interagis avec nos Services :
+        manière dont tu interagis avec nos Services&nbsp;:
       </p>
       <ul>
         <li>
@@ -387,10 +387,10 @@ export default function PrivacyContentFr() {
 
       <h2>
         3. Sur quelles bases légales reposons-nous pour traiter tes données
-        personnelles ?
+        personnelles&nbsp;?
       </h2>
       <p>
-        <em>En bref :</em> Nous ne traitons tes données personnelles que
+        <em>En bref&nbsp;:</em> Nous ne traitons tes données personnelles que
         lorsque cela est nécessaire et que nous avons une base légale valide
         en vertu de la loi applicable.
       </p>
@@ -402,7 +402,7 @@ export default function PrivacyContentFr() {
         Le Règlement Général sur la Protection des Données (RGPD) et le RGPD
         UK exigent que nous expliquions les bases légales valides sur
         lesquelles nous nous appuyons pour traiter tes données personnelles.
-        Nous pouvons donc nous appuyer sur les bases légales suivantes :
+        Nous pouvons donc nous appuyer sur les bases légales suivantes&nbsp;:
       </p>
       <ul>
         <li>
@@ -424,7 +424,7 @@ export default function PrivacyContentFr() {
           informations lorsque cela est raisonnablement nécessaire pour
           atteindre nos intérêts commerciaux légitimes et que ces intérêts ne
           prévalent pas sur tes intérêts et libertés fondamentales. Par
-          exemple, nous pouvons traiter tes données personnelles pour :
+          exemple, nous pouvons traiter tes données personnelles pour&nbsp;:
           <ul>
             <li>
               Analyser comment nos Services sont utilisés afin de les
@@ -466,7 +466,7 @@ export default function PrivacyContentFr() {
       <p>
         Dans certains cas exceptionnels, la loi applicable peut nous
         autoriser à traiter tes informations sans ton consentement, par
-        exemple :
+        exemple&nbsp;:
       </p>
       <ul>
         <li>
@@ -520,9 +520,9 @@ export default function PrivacyContentFr() {
         </li>
       </ul>
 
-      <h2>4. Quand et avec qui partageons-nous tes données personnelles ?</h2>
+      <h2>4. Quand et avec qui partageons-nous tes données personnelles&nbsp;?</h2>
       <p>
-        <em>En bref :</em> Nous pouvons partager des informations dans les
+        <em>En bref&nbsp;:</em> Nous pouvons partager des informations dans les
         situations spécifiques décrites dans cette section et/ou avec les
         tiers suivants.
       </p>
@@ -544,32 +544,32 @@ export default function PrivacyContentFr() {
       </p>
       <p>
         Les tiers avec lesquels nous pouvons partager des données
-        personnelles sont :
+        personnelles sont&nbsp;:
       </p>
       <ul>
-        <li>Services de cloud computing : Supabase</li>
+        <li>Services de cloud computing&nbsp;: Supabase</li>
         <li>
-          Optimisation des fonctionnalités et de l&apos;infrastructure :
+          Optimisation des fonctionnalités et de l&apos;infrastructure&nbsp;:
           Supabase et WeatherKit (Apple)
         </li>
-        <li>Facturation et abonnements : RevenueCat</li>
+        <li>Facturation et abonnements&nbsp;: RevenueCat</li>
         <li>
-          Notifications push : Apple Push Notification service, Google
+          Notifications push&nbsp;: Apple Push Notification service, Google
           Firebase Cloud Messaging
         </li>
         <li>
-          Inscription et authentification de compte utilisateur : Apple (Sign
+          Inscription et authentification de compte utilisateur&nbsp;: Apple (Sign
           In with Apple)
         </li>
-        <li>Analyse web et mobile : PostHog</li>
+        <li>Analyse web et mobile&nbsp;: PostHog</li>
         <li>
-          Mesure des campagnes publicitaires : Meta (Facebook SDK, API
+          Mesure des campagnes publicitaires&nbsp;: Meta (Facebook SDK, API
           Conversions)
         </li>
         <li>
-          Mesure des campagnes publicitaires : TikTok (TikTok Business SDK)
+          Mesure des campagnes publicitaires&nbsp;: TikTok (TikTok Business SDK)
         </li>
-        <li>Tests applicatifs : TestFlight</li>
+        <li>Tests applicatifs&nbsp;: TestFlight</li>
       </ul>
       <p>
         <strong>Mesure des campagnes publicitaires.</strong> Nous utilisons
@@ -588,7 +588,7 @@ export default function PrivacyContentFr() {
       </p>
       <p>
         Nous pouvons également avoir besoin de partager tes données
-        personnelles dans les situations suivantes :
+        personnelles dans les situations suivantes&nbsp;:
       </p>
       <ul>
         <li>
@@ -609,9 +609,9 @@ export default function PrivacyContentFr() {
         utilisateur qui t&apos;a envoyé un câlin.
       </p>
 
-      <h2>5. Tes informations sont-elles transférées à l&apos;international ?</h2>
+      <h2>5. Tes informations sont-elles transférées à l&apos;international&nbsp;?</h2>
       <p>
-        <em>En bref :</em> Nous pouvons transférer, stocker et traiter tes
+        <em>En bref&nbsp;:</em> Nous pouvons transférer, stocker et traiter tes
         informations dans des pays autres que le tien.
       </p>
       <p>
@@ -636,7 +636,7 @@ export default function PrivacyContentFr() {
       </p>
       <p>
         <strong>
-          Clauses Contractuelles Types de la Commission européenne :
+          Clauses Contractuelles Types de la Commission européenne&nbsp;:
         </strong>{" "}
         Nous avons mis en œuvre des mesures pour protéger tes données
         personnelles, notamment en utilisant les Clauses Contractuelles Types
@@ -648,9 +648,9 @@ export default function PrivacyContentFr() {
         Clauses Contractuelles Types peuvent être fournies sur demande.
       </p>
 
-      <h2>6. Combien de temps conservons-nous tes informations ?</h2>
+      <h2>6. Combien de temps conservons-nous tes informations&nbsp;?</h2>
       <p>
-        <em>En bref :</em> Nous conservons tes informations aussi longtemps
+        <em>En bref&nbsp;:</em> Nous conservons tes informations aussi longtemps
         que nécessaire aux finalités décrites dans cette politique, sauf
         obligation légale contraire.
       </p>
@@ -672,9 +672,9 @@ export default function PrivacyContentFr() {
         jusqu&apos;à ce que la suppression soit possible.
       </p>
 
-      <h2>7. Comment sécurisons-nous tes informations ?</h2>
+      <h2>7. Comment sécurisons-nous tes informations&nbsp;?</h2>
       <p>
-        <em>En bref :</em> Nous visons à protéger tes données personnelles
+        <em>En bref&nbsp;:</em> Nous visons à protéger tes données personnelles
         grâce à un système de mesures de sécurité organisationnelles et
         techniques.
       </p>
@@ -694,9 +694,9 @@ export default function PrivacyContentFr() {
         Services que dans un environnement sécurisé.
       </p>
 
-      <h2>8. Collectons-nous des informations auprès de mineurs ?</h2>
+      <h2>8. Collectons-nous des informations auprès de mineurs&nbsp;?</h2>
       <p>
-        <em>En bref :</em> Nous ne collectons pas sciemment de données auprès
+        <em>En bref&nbsp;:</em> Nous ne collectons pas sciemment de données auprès
         de personnes de moins de 18 ans et ne leur destinons aucun
         marketing.
       </p>
@@ -717,9 +717,9 @@ export default function PrivacyContentFr() {
         <a href="mailto:contact.mellow@proton.me">contact.mellow@proton.me</a>.
       </p>
 
-      <h2>9. Quels sont tes droits en matière de confidentialité ?</h2>
+      <h2>9. Quels sont tes droits en matière de confidentialité&nbsp;?</h2>
       <p>
-        <em>En bref :</em> Selon ton État de résidence aux États-Unis ou
+        <em>En bref&nbsp;:</em> Selon ton État de résidence aux États-Unis ou
         certaines régions comme l&apos;Espace économique européen (EEE), le
         Royaume-Uni (UK), la Suisse et le Canada, tu disposes de droits qui
         te permettent un meilleur accès et un meilleur contrôle sur tes
@@ -755,7 +755,7 @@ export default function PrivacyContentFr() {
         la protection des données et à la transparence.
       </p>
       <p>
-        <strong>Retrait du consentement :</strong> Si nous nous appuyons sur
+        <strong>Retrait du consentement&nbsp;:</strong> Si nous nous appuyons sur
         ton consentement pour traiter tes données personnelles, tu as le
         droit de le retirer à tout moment. Tu peux le faire en nous
         contactant via les coordonnées de la section 13 ci-dessous. Note que
@@ -766,9 +766,9 @@ export default function PrivacyContentFr() {
         câlins&nbsp;» dans les réglages de l&apos;application.
       </p>
       <p>
-        <strong>Informations du compte :</strong> Si tu souhaites à tout
+        <strong>Informations du compte&nbsp;:</strong> Si tu souhaites à tout
         moment consulter ou modifier les informations de ton compte, ou
-        résilier ton compte, tu peux :
+        résilier ton compte, tu peux&nbsp;:
       </p>
       <ul>
         <li>
@@ -819,9 +819,9 @@ export default function PrivacyContentFr() {
         actuellement.
       </p>
 
-      <h2>11. Les résidents des États-Unis ont-ils des droits spécifiques ?</h2>
+      <h2>11. Les résidents des États-Unis ont-ils des droits spécifiques&nbsp;?</h2>
       <p>
-        <em>En bref :</em> Si tu résides en Californie, Colorado,
+        <em>En bref&nbsp;:</em> Si tu résides en Californie, Colorado,
         Connecticut, Delaware, Floride, Indiana, Iowa, Kentucky, Maryland,
         Minnesota, Montana, Nebraska, New Hampshire, New Jersey, Oregon,
         Rhode Island, Tennessee, Texas, Utah ou Virginie, tu peux avoir le
@@ -832,7 +832,7 @@ export default function PrivacyContentFr() {
       </p>
       <p>
         <strong>
-          Catégories de données personnelles collectées (12 derniers mois) :
+          Catégories de données personnelles collectées (12 derniers mois)&nbsp;:
         </strong>
       </p>
       <ul>
@@ -860,29 +860,28 @@ export default function PrivacyContentFr() {
       </ul>
       <p>
         Nous utiliserons et conserverons les données personnelles collectées
-        selon les besoins pour fournir les Services ou pour :
+        selon les besoins pour fournir les Services ou pour&nbsp;:
       </p>
       <ul>
         <li>
-          Catégorie A : tant que l&apos;utilisateur a un compte chez nous
+          Catégorie A&nbsp;: tant que l&apos;utilisateur a un compte chez nous
         </li>
         <li>
-          Catégorie B : tant que l&apos;utilisateur a un compte chez nous
+          Catégorie B&nbsp;: tant que l&apos;utilisateur a un compte chez nous
         </li>
         <li>
-          Catégorie D : tant que l&apos;utilisateur a un compte chez nous
+          Catégorie D&nbsp;: tant que l&apos;utilisateur a un compte chez nous
         </li>
         <li>
-          Catégorie G : tant que l&apos;utilisateur a un compte chez nous
+          Catégorie G&nbsp;: tant que l&apos;utilisateur a un compte chez nous
         </li>
         <li>
-          Catégorie L : tant que l&apos;utilisateur a un compte chez nous
+          Catégorie L&nbsp;: tant que l&apos;utilisateur a un compte chez nous
         </li>
       </ul>
       <p>
-        <strong>Tes droits :</strong> Tu disposes de droits au titre de
-        certaines lois étatiques américaines de protection des données, dont
-        :
+        <strong>Tes droits&nbsp;:</strong> Tu disposes de droits au titre de
+        certaines lois étatiques américaines de protection des données, dont&nbsp;:
       </p>
       <ul>
         <li>
@@ -903,17 +902,17 @@ export default function PrivacyContentFr() {
         </li>
       </ul>
       <p>
-        <strong>Comment exercer tes droits :</strong> Tu peux nous contacter
+        <strong>Comment exercer tes droits&nbsp;:</strong> Tu peux nous contacter
         en nous envoyant un e-mail à{" "}
         <a href="mailto:contact.mellow@proton.me">contact.mellow@proton.me</a>.
       </p>
       <p>
-        <strong>Vérification de la demande :</strong> À réception de ta
+        <strong>Vérification de la demande&nbsp;:</strong> À réception de ta
         demande, nous devrons vérifier ton identité pour déterminer que tu
         es bien la personne sur laquelle nous détenons des informations.
       </p>
       <p>
-        <strong>Recours :</strong> En vertu de certaines lois étatiques
+        <strong>Recours&nbsp;:</strong> En vertu de certaines lois étatiques
         américaines, si nous refusons de donner suite à ta demande, tu peux
         faire appel de notre décision en nous écrivant à{" "}
         <a href="mailto:contact.mellow@proton.me">contact.mellow@proton.me</a>.
@@ -923,7 +922,7 @@ export default function PrivacyContentFr() {
       </p>
       <p>
         <strong>
-          Loi «&nbsp;Shine The Light&nbsp;» de Californie :
+          Loi «&nbsp;Shine The Light&nbsp;» de Californie&nbsp;:
         </strong>{" "}
         La section 1798.83 du Code civil californien, également connue sous
         le nom de loi «&nbsp;Shine The Light&nbsp;», permet à nos
@@ -938,9 +937,9 @@ export default function PrivacyContentFr() {
         ci-dessous.
       </p>
 
-      <h2>12. Mettons-nous à jour cette politique ?</h2>
+      <h2>12. Mettons-nous à jour cette politique&nbsp;?</h2>
       <p>
-        <em>En bref :</em> Oui, nous mettrons à jour cette politique au
+        <em>En bref&nbsp;:</em> Oui, nous mettrons à jour cette politique au
         besoin pour rester conformes aux lois applicables.
       </p>
       <p>
@@ -954,11 +953,11 @@ export default function PrivacyContentFr() {
         être informé de la manière dont nous protégeons tes informations.
       </p>
 
-      <h2>13. Comment nous contacter au sujet de cette politique ?</h2>
+      <h2>13. Comment nous contacter au sujet de cette politique&nbsp;?</h2>
       <p>
         Pour toute question ou commentaire, écris-nous à{" "}
         <a href="mailto:contact.mellow@proton.me">contact.mellow@proton.me</a>{" "}
-        ou par courrier à :
+        ou par courrier à&nbsp;:
       </p>
       <p>
         Laurine Nicoletti
@@ -972,7 +971,7 @@ export default function PrivacyContentFr() {
 
       <h2>
         14. Comment consulter, mettre à jour ou supprimer les données que nous
-        collectons sur toi ?
+        collectons sur toi&nbsp;?
       </h2>
       <p>
         En fonction des lois applicables dans ton pays ou ton État de
@@ -983,7 +982,7 @@ export default function PrivacyContentFr() {
         également avoir le droit de retirer ton consentement à notre
         traitement de tes données. Ces droits peuvent être limités dans
         certains cas par la loi applicable. Pour faire une demande de
-        consultation, modification ou suppression, contacte-nous à :{" "}
+        consultation, modification ou suppression, contacte-nous à&nbsp;:{" "}
         <a href="mailto:contact.mellow@proton.me">contact.mellow@proton.me</a>.
       </p>
     </>

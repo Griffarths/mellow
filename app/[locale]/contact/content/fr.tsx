@@ -6,7 +6,7 @@ export default function ContactContentFr() {
       <h1>Support Mellow</h1>
 
       <h2>Contact</h2>
-      <p>Pour toute question, signalement de bug ou retour, contacte-nous à :</p>
+      <p>Pour toute question, signalement de bug ou retour, contacte-nous à&nbsp;:</p>
       <p>
         <a href="mailto:contact.mellow@proton.me">
           <strong>contact.mellow@proton.me</strong>
@@ -39,7 +39,7 @@ export default function ContactContentFr() {
       </p>
 
       <h3>Gérer ou annuler ton abonnement</h3>
-      <p>Les abonnements sont gérés via ton identifiant Apple :</p>
+      <p>Les abonnements sont gérés via ton identifiant Apple&nbsp;:</p>
       <ol>
         <li>
           Ouvre <strong>Réglages</strong> sur ton iPhone

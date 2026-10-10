@@ -4,6 +4,7 @@ import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { remarkTypographize } from "@/lib/typography";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -312,7 +313,7 @@ export default async function ArticlePage({ params }: Props) {
                 components={components}
                 options={{
                   mdxOptions: {
-                    remarkPlugins: [remarkGfm],
+                    remarkPlugins: [remarkGfm, remarkTypographize(article.locale)],
                     rehypePlugins: [
                       rehypeSlug,
                       [

@@ -209,7 +209,7 @@ export default async function AboutPage({ params }: Props) {
           </p>
 
           <h2 className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
-            Et maintenant ?
+            Et maintenant&nbsp;?
           </h2>
           <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
             Mellow est encore jeune. Je le développe seule, à mon rythme, en écoutant les

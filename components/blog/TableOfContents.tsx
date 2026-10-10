@@ -1,8 +1,10 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { extractHeadings } from "@/lib/blog";
+import { typographize } from "@/lib/typography";
 
 export function TableOfContents({ content }: { content: string }) {
   const t = useTranslations("blog");
+  const locale = useLocale();
   const headings = extractHeadings(content);
   if (headings.length === 0) return null;
 
@@ -21,7 +23,7 @@ export function TableOfContents({ content }: { content: string }) {
               href={`#${h.slug}`}
               className="block leading-snug text-ink-2 transition hover:text-ink"
             >
-              {h.text}
+              {typographize(h.text, locale)}
             </a>
           </li>
         ))}

@@ -5,23 +5,23 @@ export default function LegalContentFr() {
     <>
       <h1>Mentions légales · Mellow</h1>
       <p>
-        <strong>Dernière mise à jour : 18 avril 2026</strong>
+        <strong>Dernière mise à jour&nbsp;: 18 avril 2026</strong>
       </p>
 
       <h2>1. Éditeur de l&apos;application</h2>
       <p>
-        L&apos;application mobile <strong>Mellow</strong> est éditée par :
+        L&apos;application mobile <strong>Mellow</strong> est éditée par&nbsp;:
       </p>
       <p>
         <strong>Laurine Nicoletti</strong>
         <br />
         Entrepreneur individuel (auto-entrepreneur)
         <br />
-        Adresse : 120 rue du Palais Gallien, 33000 Bordeaux, France
+        Adresse&nbsp;: 120 rue du Palais Gallien, 33000 Bordeaux, France
         <br />
-        SIREN : 891 744 377
+        SIREN&nbsp;: 891 744 377
         <br />
-        Contact :{" "}
+        Contact&nbsp;:{" "}
         <a href="mailto:contact.mellow@proton.me">contact.mellow@proton.me</a>
       </p>
       <p>TVA non applicable, article 293 B du Code général des impôts.</p>
@@ -34,7 +34,7 @@ export default function LegalContentFr() {
       <h2>3. Hébergement et traitement des données utilisateurs</h2>
       <p>
         Les données collectées via l&apos;application Mellow sont hébergées et
-        traitées par les prestataires suivants :
+        traitées par les prestataires suivants&nbsp;:
       </p>
 
       <h3>Base de données et authentification</h3>
@@ -105,7 +105,7 @@ export default function LegalContentFr() {
       <p>
         Les présentes mentions légales, la politique de confidentialité et tout
         autre document légal relatif à l&apos;application Mellow sont hébergés
-        par :
+        par&nbsp;:
       </p>
       <p>
         <strong>Notion Labs, Inc.</strong>
@@ -126,7 +126,7 @@ export default function LegalContentFr() {
       <h2>5. Distribution de l&apos;application</h2>
       <p>
         L&apos;application Mellow est distribuée exclusivement via l&apos;App
-        Store, exploité par :
+        Store, exploité par&nbsp;:
       </p>
       <p>
         <strong>Apple Inc.</strong>
@@ -143,8 +143,7 @@ export default function LegalContentFr() {
           Contrat de Licence Utilisateur Final Standard (Apple Standard EULA)
         </strong>{" "}
         d&apos;Apple Inc., applicable à toute application distribuée via
-        l&apos;App Store. Ce contrat est consultable à l&apos;adresse suivante
-        :{" "}
+        l&apos;App Store. Ce contrat est consultable à l&apos;adresse suivante&nbsp;:{" "}
         <a
           href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
           target="_blank"

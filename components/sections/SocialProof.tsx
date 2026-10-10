@@ -1,6 +1,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import type { Locale } from "@/i18n/routing";
 import { APP_STORE_RATING, REVIEWS, type Review } from "@/content/reviews";
+import { typographize } from "@/lib/typography";
 
 const PREVIEW = process.env.NODE_ENV === "development";
 const SAMPLE_RATING = { value: 4.8, count: 120 };
@@ -99,11 +100,11 @@ export function SocialProof() {
                   <blockquote className="mt-3">
                     {review.title && (
                       <p className="text-lg font-bold tracking-tight text-ink">
-                        {review.title}
+                        {typographize(review.title, locale)}
                       </p>
                     )}
                     <p className="mt-2 whitespace-pre-line text-[17px] leading-[1.7] text-ink-body">
-                      {review.text}
+                      {typographize(review.text, locale)}
                     </p>
                   </blockquote>
                   <figcaption className="mt-4 text-sm text-ink-3">

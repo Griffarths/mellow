@@ -3,9 +3,9 @@ export default function AccountDeletionFr() {
     <>
       <h1>Supprimer votre compte Mellow</h1>
       <p>
-        <strong>Application :</strong>{" "}Mellow Migraine
+        <strong>Application&nbsp;:</strong>{" "}Mellow Migraine
         <br />
-        <strong>Éditeur :</strong> Mellow
+        <strong>Éditeur&nbsp;:</strong> Mellow
       </p>
 
       <h2>1. Depuis l&apos;application</h2>
@@ -20,7 +20,7 @@ export default function AccountDeletionFr() {
         Envoyez un e-mail à{" "}
         <a href="mailto:contact.mellow@proton.me">contact.mellow@proton.me</a>{" "}
         depuis l&apos;adresse associée à votre compte, avec pour objet{" "}
-        <strong>« Suppression de compte »</strong>. Votre compte est supprimé
+        <strong>«&nbsp;Suppression de compte&nbsp;»</strong>. Votre compte est supprimé
         sous 30 jours.
       </p>
 
@@ -44,8 +44,8 @@ export default function AccountDeletionFr() {
       <p>
         Vous pouvez supprimer individuellement chaque migraine, humeur,
         traitement ou rendez-vous directement dans l&apos;application, sans
-        supprimer votre compte : ouvrez l&apos;élément concerné et choisissez{" "}
-        <strong>« Supprimer »</strong>.
+        supprimer votre compte&nbsp;: ouvrez l&apos;élément concerné et choisissez{" "}
+        <strong>«&nbsp;Supprimer&nbsp;»</strong>.
       </p>
       <p>
         Pour toute autre demande de suppression partielle, écrivez à{" "}

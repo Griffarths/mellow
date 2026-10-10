@@ -56,34 +56,34 @@
   "features": {
     "title": "Tout pour suivre tes migraines.",
     "subtitle": "Mellow est une app de suivi des migraines, pensée pour rester simple même pendant une crise.",
-    "phoneAlt": "Écran d'accueil de l'app Mellow\u00a0: jours sans migraine, migraines du mois et raccourcis",
+    "phoneAlt": "Écran d'accueil de l'app Mellow : jours sans migraine, migraines du mois et raccourcis",
     "log": {
       "title": "Note une crise en deux taps",
       "text": "Sur le moment, note juste le début et l'intensité. Le reste, tu le complètes plus tard, quand ça va mieux."
     },
     "understand": {
       "title": "Comprends ce qui les déclenche",
-      "text": "Tes symptômes, tes déclencheurs, ce qui te soulage vraiment\u00a0: Mellow t'aide à y voir plus clair dans tes migraines."
+      "text": "Tes symptômes, tes déclencheurs, ce qui te soulage vraiment : Mellow t'aide à y voir plus clair dans tes migraines."
     },
     "doctor": {
       "title": "Prépare ton rendez-vous",
-      "text": "Trois rapports PDF clairs et complets à montrer à ton médecin\u00a0: l'analyse, l'historique de tes crises et ton score MIDAS."
+      "text": "Trois rapports PDF clairs et complets à montrer à ton médecin : l'analyse, l'historique de tes crises et ton score MIDAS."
     }
   },
   "why": {
-    "title": "Pourquoi Mellow\u00a0?",
+    "title": "Pourquoi Mellow ?",
     "subtitle": "Ton compagnon pour apprendre et comprendre tes migraines.",
     "free": {
       "title": "Gratuit, facile à utiliser et fiable",
-      "text": "Mellow t'offre une app simple, claire et bien organisée, qui suit tous les aspects de tes migraines\u00a0: intensité, médicaments, symptômes et déclencheurs. Disponible sur iPhone et en test sur Android, elle sauvegarde tes données dans le cloud, pour que tu retrouves ton historique sur tous tes appareils, dès que tu en as besoin."
+      "text": "Mellow t'offre une app simple, claire et bien organisée, qui suit tous les aspects de tes migraines : intensité, médicaments, symptômes et déclencheurs. Disponible sur iPhone et en test sur Android, elle sauvegarde tes données dans le cloud, pour que tu retrouves ton historique sur tous tes appareils, dès que tu en as besoin."
     },
     "founder": {
       "title": "Développé par une migraineuse",
-      "text": "Laurine, elle-même migraineuse, a créé Mellow pour répondre à ses propres besoins, qui sont sûrement aussi les tiens. L'app réunit tout ce qui compte face à la migraine\u00a0: le suivi des médicaments, des symptômes et des déclencheurs. Et elle continue de la faire évoluer en écoutant les personnes migraineuses qui l'utilisent."
+      "text": "Laurine, elle-même migraineuse, a créé Mellow pour répondre à ses propres besoins, qui sont sûrement aussi les tiens. L'app réunit tout ce qui compte face à la migraine : le suivi des médicaments, des symptômes et des déclencheurs. Et elle continue de la faire évoluer en écoutant les personnes migraineuses qui l'utilisent."
     },
     "doctor": {
       "title": "Pensé pour ton médecin et ton neurologue",
-      "text": "Mellow rassemble ce que ton médecin ou ton neurologue a besoin de voir\u00a0: la fréquence de tes crises, tes traitements, ce qui te soulage et ton score MIDAS. Tes données sont exportables en PDF et tu peux les partager avec ton médecin, pour qu'il ait une meilleure vue d'ensemble de ta situation."
+      "text": "Mellow rassemble ce que ton médecin ou ton neurologue a besoin de voir : la fréquence de tes crises, tes traitements, ce qui te soulage et ton score MIDAS. Tes données sont exportables en PDF et tu peux les partager avec ton médecin, pour qu'il ait une meilleure vue d'ensemble de ta situation."
     }
   },
   "mellows": {
