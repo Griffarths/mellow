@@ -5,7 +5,7 @@
     "ogDescription": "Take back control of your migraines. A calm, free app to support you every day."
   },
   "nav": {
-    "homeAriaLabel": "Mellow — back to home",
+    "homeAriaLabel": "Mellow, back to home",
     "appStoreAriaLabel": "Download on the App Store",
     "blog": "Blog",
     "androidBeta": "Test on Android",
@@ -146,23 +146,23 @@
     "back": "← Back"
   },
   "contactPage": {
-    "metaTitle": "Support — Mellow",
+    "metaTitle": "Support · Mellow",
     "metaDescription": "Contact, subscription management and support for the Mellow app."
   },
   "privacyPage": {
-    "metaTitle": "Privacy Policy — Mellow",
-    "metaDescription": "Mellow's privacy policy — how we collect, use and protect your data."
+    "metaTitle": "Privacy Policy · Mellow",
+    "metaDescription": "Mellow's privacy policy: how we collect, use and protect your data."
   },
   "legalPage": {
-    "metaTitle": "Legal Notice — Mellow",
-    "metaDescription": "Mellow's legal notice — publisher, hosting, intellectual property and liability."
+    "metaTitle": "Legal Notice · Mellow",
+    "metaDescription": "Mellow's legal notice: publisher, hosting, intellectual property and liability."
   },
   "accountDeletionPage": {
-    "metaTitle": "Account deletion — Mellow",
+    "metaTitle": "Account deletion · Mellow",
     "metaDescription": "How to delete your account and data from the Mellow app or by email."
   },
   "editorialPage": {
-    "metaTitle": "How we write our articles — Mellow",
+    "metaTitle": "How we write our articles · Mellow",
     "metaDescription": "Who writes the Mellow blog, which sources we use, what we don't do, and how articles are kept up to date.",
     "title": "How we write our articles",
     "intro": "The Mellow blog helps people with migraine understand their attacks and live better with them. Here is how each article is prepared, checked and kept up to date.",

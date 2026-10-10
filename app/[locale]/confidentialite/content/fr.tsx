@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 export default function PrivacyContentFr() {
   return (
     <>
-      <h1>Politique de confidentialité — Mellow</h1>
+      <h1>Politique de confidentialité · Mellow</h1>
       <p>
         <strong>Dernière mise à jour : 8 octobre 2026</strong>
       </p>
@@ -231,8 +231,8 @@ export default function PrivacyContentFr() {
 
       <h3>Informations collectées automatiquement</h3>
       <p>
-        <em>En bref :</em> Certaines informations — comme ton adresse IP et/ou
-        les caractéristiques de ton navigateur et appareil — sont collectées
+        <em>En bref :</em> Certaines informations, comme ton adresse IP et/ou
+        les caractéristiques de ton navigateur et appareil, sont collectées
         automatiquement lorsque tu visites nos Services.
       </p>
       <p>
@@ -864,19 +864,19 @@ export default function PrivacyContentFr() {
       </p>
       <ul>
         <li>
-          Catégorie A — Tant que l&apos;utilisateur a un compte chez nous
+          Catégorie A : tant que l&apos;utilisateur a un compte chez nous
         </li>
         <li>
-          Catégorie B — Tant que l&apos;utilisateur a un compte chez nous
+          Catégorie B : tant que l&apos;utilisateur a un compte chez nous
         </li>
         <li>
-          Catégorie D — Tant que l&apos;utilisateur a un compte chez nous
+          Catégorie D : tant que l&apos;utilisateur a un compte chez nous
         </li>
         <li>
-          Catégorie G — Tant que l&apos;utilisateur a un compte chez nous
+          Catégorie G : tant que l&apos;utilisateur a un compte chez nous
         </li>
         <li>
-          Catégorie L — Tant que l&apos;utilisateur a un compte chez nous
+          Catégorie L : tant que l&apos;utilisateur a un compte chez nous
         </li>
       </ul>
       <p>

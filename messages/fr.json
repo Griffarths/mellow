@@ -5,7 +5,7 @@
     "ogDescription": "Reprends le contrôle de tes migraines. Une app calme, gratuite, pour t'accompagner au quotidien."
   },
   "nav": {
-    "homeAriaLabel": "Mellow — retour à l'accueil",
+    "homeAriaLabel": "Mellow, retour à l'accueil",
     "appStoreAriaLabel": "Télécharger dans l'App Store",
     "blog": "Blog",
     "androidBeta": "Tester Android",
@@ -146,23 +146,23 @@
     "back": "← Retour"
   },
   "contactPage": {
-    "metaTitle": "Support — Mellow",
+    "metaTitle": "Support · Mellow",
     "metaDescription": "Contact, gestion d'abonnement et support pour l'application Mellow."
   },
   "privacyPage": {
-    "metaTitle": "Politique de confidentialité — Mellow",
-    "metaDescription": "Politique de confidentialité de Mellow — comment nous collectons, utilisons et protégeons tes données."
+    "metaTitle": "Politique de confidentialité · Mellow",
+    "metaDescription": "Politique de confidentialité de Mellow : comment nous collectons, utilisons et protégeons tes données."
   },
   "legalPage": {
-    "metaTitle": "Mentions légales — Mellow",
-    "metaDescription": "Mentions légales de Mellow — éditeur, hébergement, propriété intellectuelle et responsabilité."
+    "metaTitle": "Mentions légales · Mellow",
+    "metaDescription": "Mentions légales de Mellow : éditeur, hébergement, propriété intellectuelle et responsabilité."
   },
   "accountDeletionPage": {
-    "metaTitle": "Suppression de compte — Mellow",
+    "metaTitle": "Suppression de compte · Mellow",
     "metaDescription": "Comment supprimer votre compte et vos données depuis l'application Mellow ou par e-mail."
   },
   "editorialPage": {
-    "metaTitle": "Comment nous écrivons nos articles — Mellow",
+    "metaTitle": "Comment nous écrivons nos articles · Mellow",
     "metaDescription": "Qui écrit le blog de Mellow, quelles sources nous utilisons, ce que nous ne faisons pas et comment les articles sont tenus à jour.",
     "title": "Comment nous écrivons nos articles",
     "intro": "Le blog de Mellow aide les personnes migraineuses à comprendre leurs crises et à mieux vivre avec. Voici comment chaque article est préparé, vérifié et tenu à jour.",

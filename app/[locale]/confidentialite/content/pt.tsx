@@ -2,7 +2,7 @@ import { Link } from "@/i18n/navigation";
 export default function PrivacyContentPt() {
   return (
     <>
-      <h1>Política de privacidade — Mellow</h1>
+      <h1>Política de privacidade · Mellow</h1>
       <p>
         <strong>Última atualização: 8 de outubro de 2026</strong>
       </p>
@@ -227,8 +227,8 @@ export default function PrivacyContentPt() {
 
       <h3>Informações recolhidas automaticamente</h3>
       <p>
-        <em>Em resumo:</em> Algumas informações — como o teu endereço IP
-        e/ou as características do navegador e do dispositivo — são
+        <em>Em resumo:</em> Algumas informações, como o teu endereço IP
+        e/ou as características do navegador e do dispositivo, são
         recolhidas automaticamente quando visitas os nossos Serviços.
       </p>
       <p>
@@ -257,8 +257,8 @@ export default function PrivacyContentPt() {
           data/hora associados à utilização, páginas e ficheiros
           visualizados, pesquisas e outras ações como funcionalidades
           utilizadas), informações de eventos do dispositivo (atividade
-          do sistema, relatórios de erro — por vezes chamados «crash
-          dumps» — e definições de hardware).
+          do sistema, relatórios de erro, por vezes chamados «crash
+          dumps», e definições de hardware).
         </li>
         <li>
           <em>Dados do dispositivo.</em> Recolhemos dados do dispositivo
@@ -828,11 +828,11 @@ export default function PrivacyContentPt() {
         conforme necessário para prestar os Serviços ou para:
       </p>
       <ul>
-        <li>Categoria A — Enquanto o utilizador tiver uma conta connosco</li>
-        <li>Categoria B — Enquanto o utilizador tiver uma conta connosco</li>
-        <li>Categoria D — Enquanto o utilizador tiver uma conta connosco</li>
-        <li>Categoria G — Enquanto o utilizador tiver uma conta connosco</li>
-        <li>Categoria L — Enquanto o utilizador tiver uma conta connosco</li>
+        <li>Categoria A: enquanto o utilizador tiver uma conta connosco</li>
+        <li>Categoria B: enquanto o utilizador tiver uma conta connosco</li>
+        <li>Categoria D: enquanto o utilizador tiver uma conta connosco</li>
+        <li>Categoria G: enquanto o utilizador tiver uma conta connosco</li>
+        <li>Categoria L: enquanto o utilizador tiver uma conta connosco</li>
       </ul>
       <p>
         <strong>Os teus direitos:</strong> Tens direitos ao abrigo de

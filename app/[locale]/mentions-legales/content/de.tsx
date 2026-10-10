@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 export default function LegalContentDe() {
   return (
     <>
-      <h1>Impressum — Mellow</h1>
+      <h1>Impressum · Mellow</h1>
       <p>
         <strong>Letzte Aktualisierung: 18. April 2026</strong>
       </p>
@@ -157,9 +157,9 @@ export default function LegalContentDe() {
 
       <h2>7. Geistiges Eigentum</h2>
       <p>
-        Sämtliche Bestandteile der Mellow-Anwendung — insbesondere Texte,
+        Sämtliche Bestandteile der Mellow-Anwendung (insbesondere Texte,
         Grafiken, Logos, Icons, Illustrationen, Benutzeroberflächen, visuelle
-        Identität und Quellcode — sind das ausschließliche Eigentum von Laurine
+        Identität und Quellcode) sind das ausschließliche Eigentum von Laurine
         Nicoletti, sofern nicht ausdrücklich anders angegeben.
       </p>
       <p>
@@ -183,7 +183,7 @@ export default function LegalContentDe() {
         ist.
       </p>
       <p>
-        Gemäß der Datenschutz-Grundverordnung (DSGVO — Verordnung (EU)
+        Gemäß der Datenschutz-Grundverordnung (DSGVO, Verordnung (EU)
         2016/679) und dem geänderten französischen Datenschutzgesetz hat der
         Nutzer das Recht auf Auskunft, Berichtigung, Löschung,
         Datenübertragbarkeit, Einschränkung und Widerspruch hinsichtlich seiner
@@ -193,7 +193,7 @@ export default function LegalContentDe() {
       </p>
       <p>
         Der Nutzer hat zudem das Recht, eine Beschwerde bei der französischen
-        Datenschutzbehörde (CNIL —{" "}
+        Datenschutzbehörde (CNIL,{" "}
         <a
           href="https://www.cnil.fr"
           target="_blank"

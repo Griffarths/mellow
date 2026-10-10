@@ -5,7 +5,7 @@
     "ogDescription": "Nimm die Kontrolle über deine Migräne zurück. Eine ruhige, kostenlose App, die dich im Alltag begleitet."
   },
   "nav": {
-    "homeAriaLabel": "Mellow — zurück zur Startseite",
+    "homeAriaLabel": "Mellow, zurück zur Startseite",
     "appStoreAriaLabel": "Im App Store laden",
     "blog": "Blog",
     "androidBeta": "Android testen",
@@ -150,23 +150,23 @@
     "back": "← Zurück"
   },
   "contactPage": {
-    "metaTitle": "Support — Mellow",
+    "metaTitle": "Support · Mellow",
     "metaDescription": "Kontakt, Abo-Verwaltung und Support für die Mellow-App."
   },
   "privacyPage": {
-    "metaTitle": "Datenschutzerklärung — Mellow",
-    "metaDescription": "Datenschutzerklärung von Mellow — wie wir deine Daten erheben, verwenden und schützen."
+    "metaTitle": "Datenschutzerklärung · Mellow",
+    "metaDescription": "Datenschutzerklärung von Mellow: wie wir deine Daten erheben, verwenden und schützen."
   },
   "legalPage": {
-    "metaTitle": "Impressum — Mellow",
-    "metaDescription": "Impressum von Mellow — Anbieter, Hosting, geistiges Eigentum und Haftung."
+    "metaTitle": "Impressum · Mellow",
+    "metaDescription": "Impressum von Mellow: Anbieter, Hosting, geistiges Eigentum und Haftung."
   },
   "accountDeletionPage": {
-    "metaTitle": "Konto löschen — Mellow",
+    "metaTitle": "Konto löschen · Mellow",
     "metaDescription": "So löschen Sie Ihr Konto und Ihre Daten über die Mellow-App oder per E-Mail."
   },
   "editorialPage": {
-    "metaTitle": "So schreiben wir unsere Artikel — Mellow",
+    "metaTitle": "So schreiben wir unsere Artikel · Mellow",
     "metaDescription": "Wer den Mellow-Blog schreibt, welche Quellen wir nutzen, was wir nicht tun und wie die Artikel aktuell bleiben.",
     "title": "So schreiben wir unsere Artikel",
     "intro": "Der Mellow-Blog hilft Menschen mit Migräne, ihre Attacken zu verstehen und besser damit zu leben. So wird jeder Artikel vorbereitet, geprüft und aktuell gehalten.",

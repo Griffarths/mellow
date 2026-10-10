@@ -21,7 +21,7 @@ export default function ContactContentDe() {
       <p>
         Mellow ist ein ruhiges, durchdacht gestaltetes Migräne- und
         Kopfschmerztagebuch für iOS. Erfasse Episoden in Sekunden, beobachte
-        Auslöser wie Stress, Schlaf, Hormone und Wetter — und erkenne die
+        Auslöser wie Stress, Schlaf, Hormone und Wetter, und erkenne die
         Muster hinter deinen Schmerzen.
       </p>
       <p>

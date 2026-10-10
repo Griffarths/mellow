@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (locale !== PAGE_LOCALE) return {};
   return {
-    title: "À propos — Mellow",
+    title: "À propos · Mellow",
     description:
       "L'histoire de Mellow, app de tracking de migraines créée par Laurine Nicoletti, développeuse solo basée à Bordeaux. Une app pensée par une migraineuse, pas par un comité marketing.",
     alternates: {
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       type: "website",
-      title: "À propos — Mellow",
+      title: "À propos · Mellow",
       description:
         "L'histoire de Mellow, app de tracking de migraines créée par Laurine Nicoletti.",
       url: PAGE_URL,
@@ -54,7 +54,7 @@ export default async function AboutPage({ params }: Props) {
     "@type": "AboutPage",
     url: PAGE_URL,
     inLanguage: "fr-FR",
-    name: "À propos — Mellow",
+    name: "À propos · Mellow",
     mainEntity: {
       "@type": "Person",
       name: "Laurine Nicoletti",

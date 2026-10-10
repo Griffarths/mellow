@@ -5,7 +5,7 @@
     "ogDescription": "Riprendi il controllo delle tue emicranie. Un'app calma e gratuita per accompagnarti ogni giorno."
   },
   "nav": {
-    "homeAriaLabel": "Mellow — torna alla home",
+    "homeAriaLabel": "Mellow, torna alla home",
     "appStoreAriaLabel": "Scarica su App Store",
     "blog": "Blog",
     "androidBeta": "Testa Android",
@@ -150,23 +150,23 @@
     "back": "← Indietro"
   },
   "contactPage": {
-    "metaTitle": "Supporto — Mellow",
+    "metaTitle": "Supporto · Mellow",
     "metaDescription": "Contatti, gestione dell'abbonamento e supporto per l'app Mellow."
   },
   "privacyPage": {
-    "metaTitle": "Informativa sulla privacy — Mellow",
-    "metaDescription": "Informativa sulla privacy di Mellow — come raccogliamo, usiamo e proteggiamo i tuoi dati."
+    "metaTitle": "Informativa sulla privacy · Mellow",
+    "metaDescription": "Informativa sulla privacy di Mellow: come raccogliamo, usiamo e proteggiamo i tuoi dati."
   },
   "legalPage": {
-    "metaTitle": "Note legali — Mellow",
-    "metaDescription": "Note legali di Mellow — editore, hosting, proprietà intellettuale e responsabilità."
+    "metaTitle": "Note legali · Mellow",
+    "metaDescription": "Note legali di Mellow: editore, hosting, proprietà intellettuale e responsabilità."
   },
   "accountDeletionPage": {
-    "metaTitle": "Eliminazione account — Mellow",
+    "metaTitle": "Eliminazione account · Mellow",
     "metaDescription": "Come eliminare il tuo account e i tuoi dati dall'app Mellow o via e-mail."
   },
   "editorialPage": {
-    "metaTitle": "Come scriviamo i nostri articoli — Mellow",
+    "metaTitle": "Come scriviamo i nostri articoli · Mellow",
     "metaDescription": "Chi scrive il blog di Mellow, quali fonti usiamo, cosa non facciamo e come teniamo aggiornati gli articoli.",
     "title": "Come scriviamo i nostri articoli",
     "intro": "Il blog di Mellow aiuta chi soffre di emicrania a capire i propri attacchi e a conviverci meglio. Ecco come ogni articolo viene preparato, verificato e tenuto aggiornato.",

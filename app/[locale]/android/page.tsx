@@ -69,7 +69,7 @@ const TRANSLATIONS: Record<Locale, T> = {
       body: [
         "This gives you access to the test version.",
         "First sign in to your Google account, and use the same account as the Play Store on your phone. With a different address, step 2 will tell you that you are not a tester. To check which one: open the Play Store, tap your profile photo in the top right corner, and your address will be shown.",
-        'You will then land on a Google Groups page. Click "Join group" — that\'s it. No emails will be sent to you.',
+        'You will then land on a Google Groups page. Click "Join group". That\'s it. No emails will be sent to you.',
       ],
       btn: "Join the group",
     },
@@ -100,7 +100,7 @@ const TRANSLATIONS: Record<Locale, T> = {
       body: [
         "Das gibt dir Zugang zur Testversion.",
         "Melde dich zunächst bei deinem Google-Konto an und verwende dasselbe Konto wie der Play Store auf deinem Telefon. Mit einer anderen Adresse wird dir Schritt 2 mitteilen, dass du kein Tester bist. Um nachzuprüfen welches: Öffne den Play Store, tippe auf dein Profilbild oben rechts, und deine Adresse wird angezeigt.",
-        `Du landest dann auf einer Google Groups-Seite. Klicke auf „Gruppe beitreten" — das war's. Du erhältst keine E-Mails.`,
+        `Du landest dann auf einer Google Groups-Seite. Klicke auf „Gruppe beitreten". Das war's. Du erhältst keine E-Mails.`,
       ],
       btn: "Gruppe beitreten",
     },
@@ -131,7 +131,7 @@ const TRANSLATIONS: Record<Locale, T> = {
       body: [
         "Questo ti dà accesso alla versione di test.",
         "Prima accedi al tuo account Google e usa lo stesso account del Play Store sul tuo telefono. Con un indirizzo diverso, il passo 2 ti dirà che non sei un tester. Per verificare quale: apri il Play Store, tocca la tua foto profilo in alto a destra e il tuo indirizzo verrà mostrato.",
-        "Arriverai quindi su una pagina di Google Gruppi. Clicca su «Unisciti al gruppo» — è tutto. Non riceverai alcuna e-mail.",
+        "Arriverai quindi su una pagina di Google Gruppi. Clicca su «Unisciti al gruppo». È tutto. Non riceverai alcuna e-mail.",
       ],
       btn: "Unisciti al gruppo",
     },
@@ -162,7 +162,7 @@ const TRANSLATIONS: Record<Locale, T> = {
       body: [
         "Esto te da acceso a la versión de prueba.",
         "Primero inicia sesión en tu cuenta de Google y usa la misma cuenta que el Play Store en tu teléfono. Con otra dirección, el paso 2 te dirá que no eres tester. Para comprobarlo: abre el Play Store, toca tu foto de perfil en la esquina superior derecha y se mostrará tu dirección.",
-        "Llegarás entonces a una página de Google Grupos. Haz clic en «Unirte al grupo» — eso es todo. No recibirás ningún correo electrónico.",
+        "Llegarás entonces a una página de Google Grupos. Haz clic en «Unirte al grupo». Eso es todo. No recibirás ningún correo electrónico.",
       ],
       btn: "Unirse al grupo",
     },
@@ -193,7 +193,7 @@ const TRANSLATIONS: Record<Locale, T> = {
       body: [
         "Esto te da acceso a la versión de prueba.",
         "Primero inicia sesión en tu cuenta de Google y usa la misma cuenta que el Play Store en tu teléfono. Con otra dirección, el paso 2 te dirá que no eres tester. Para comprobarlo: abre el Play Store, toca tu foto de perfil en la esquina superior derecha y se mostrará tu dirección.",
-        "Llegarás entonces a una página de Google Grupos. Toca «Unirte al grupo» — eso es todo. No recibirás ningún correo electrónico.",
+        "Llegarás entonces a una página de Google Grupos. Toca «Unirte al grupo». Eso es todo. No recibirás ningún correo electrónico.",
       ],
       btn: "Unirse al grupo",
     },
@@ -224,7 +224,7 @@ const TRANSLATIONS: Record<Locale, T> = {
       body: [
         "É o que te dá acesso à versão de teste.",
         "Inicia sessão primeiro na tua conta Google e utiliza a mesma conta do Play Store no teu telefone. Com outro endereço, o passo 2 dir-te-á que não és tester. Para verificar qual: abre o Play Store, toca na tua foto de perfil no canto superior direito e o teu endereço será apresentado.",
-        "Chegarás depois a uma página do Google Grupos. Clica em «Juntar-me ao grupo» — é tudo. Não receberás nenhum e-mail.",
+        "Chegarás depois a uma página do Google Grupos. Clica em «Juntar-me ao grupo». É tudo. Não receberás nenhum e-mail.",
       ],
       btn: "Juntar ao grupo",
     },
@@ -255,7 +255,7 @@ const TRANSLATIONS: Record<Locale, T> = {
       body: [
         "É o que dá acesso à versão de teste.",
         "Primeiro faça login na sua conta Google e use a mesma conta do Play Store no seu telefone. Com outro endereço, o passo 2 dirá que você não é testador. Para verificar qual: abra o Play Store, toque na sua foto de perfil no canto superior direito e seu endereço será exibido.",
-        "Você chegará então a uma página do Google Grupos. Clique em «Entrar no grupo» — é só isso. Nenhum e-mail será enviado para você.",
+        "Você chegará então a uma página do Google Grupos. Clique em «Entrar no grupo». É só isso. Nenhum e-mail será enviado para você.",
       ],
       btn: "Entrar no grupo",
     },

@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 export default function PrivacyContentIt() {
   return (
     <>
-      <h1>Informativa sulla privacy — Mellow</h1>
+      <h1>Informativa sulla privacy · Mellow</h1>
       <p>
         <strong>Ultimo aggiornamento: 8 ottobre 2026</strong>
       </p>
@@ -227,8 +227,8 @@ export default function PrivacyContentIt() {
 
       <h3>Informazioni raccolte automaticamente</h3>
       <p>
-        <em>In sintesi:</em> Alcune informazioni — come il tuo indirizzo IP
-        e/o le caratteristiche del browser e del dispositivo — vengono
+        <em>In sintesi:</em> Alcune informazioni, come il tuo indirizzo IP
+        e/o le caratteristiche del browser e del dispositivo, vengono
         raccolte automaticamente quando visiti i nostri Servizi.
       </p>
       <p>
@@ -256,8 +256,8 @@ export default function PrivacyContentIt() {
           sulla tua attività nei Servizi (data/ora associate al tuo
           utilizzo, pagine e file visualizzati, ricerche e altre azioni
           come le funzionalità utilizzate), informazioni sugli eventi del
-          dispositivo (attività di sistema, segnalazioni di errore — talora
-          chiamate «crash dump» — e impostazioni hardware).
+          dispositivo (attività di sistema, segnalazioni di errore, talora
+          chiamate «crash dump», e impostazioni hardware).
         </li>
         <li>
           <em>Dati del dispositivo.</em> Raccogliamo dati del dispositivo
@@ -816,11 +816,11 @@ export default function PrivacyContentIt() {
         necessario per fornire i Servizi o per:
       </p>
       <ul>
-        <li>Categoria A — Finché l&apos;utente ha un account presso di noi</li>
-        <li>Categoria B — Finché l&apos;utente ha un account presso di noi</li>
-        <li>Categoria D — Finché l&apos;utente ha un account presso di noi</li>
-        <li>Categoria G — Finché l&apos;utente ha un account presso di noi</li>
-        <li>Categoria L — Finché l&apos;utente ha un account presso di noi</li>
+        <li>Categoria A: finché l&apos;utente ha un account presso di noi</li>
+        <li>Categoria B: finché l&apos;utente ha un account presso di noi</li>
+        <li>Categoria D: finché l&apos;utente ha un account presso di noi</li>
+        <li>Categoria G: finché l&apos;utente ha un account presso di noi</li>
+        <li>Categoria L: finché l&apos;utente ha un account presso di noi</li>
       </ul>
       <p>
         <strong>I tuoi diritti:</strong> Hai diritti ai sensi di alcune

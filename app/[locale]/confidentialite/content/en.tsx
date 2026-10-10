@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 export default function PrivacyContentEn() {
   return (
     <>
-      <h1>Privacy Policy — Mellow</h1>
+      <h1>Privacy Policy · Mellow</h1>
       <p>
         <strong>Last updated: October 8, 2026</strong>
       </p>
@@ -224,8 +224,8 @@ export default function PrivacyContentEn() {
 
       <h3>Information automatically collected</h3>
       <p>
-        <em>In Short:</em> Some information — such as your Internet Protocol
-        (IP) address and/or browser and device characteristics — is collected
+        <em>In Short:</em> Some information, such as your Internet Protocol
+        (IP) address and/or browser and device characteristics, is collected
         automatically when you visit our Services.
       </p>
       <p>

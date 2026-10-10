@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 export default function PrivacyContentDe() {
   return (
     <>
-      <h1>Datenschutzerklärung — Mellow</h1>
+      <h1>Datenschutzerklärung · Mellow</h1>
       <p>
         <strong>Letzte Aktualisierung: 8. Oktober 2026</strong>
       </p>
@@ -236,9 +236,9 @@ export default function PrivacyContentDe() {
 
       <h3>Automatisch erfasste Informationen</h3>
       <p>
-        <em>Kurz gesagt:</em> Einige Informationen — wie deine
+        <em>Kurz gesagt:</em> Einige Informationen, wie deine
         Internet-Protokoll-(IP-)Adresse und/oder Browser- und
-        Geräteeigenschaften — werden automatisch erfasst, wenn du unsere
+        Geräteeigenschaften, werden automatisch erfasst, wenn du unsere
         Dienste besuchst.
       </p>
       <p>
@@ -266,8 +266,8 @@ export default function PrivacyContentDe() {
           Diensten umfassen (z.&nbsp;B. Datum/Uhrzeit-Stempel,
           aufgerufene Seiten und Dateien, Suchanfragen, durchgeführte
           Aktionen wie genutzte Funktionen), Geräteereignisinformationen
-          (Systemaktivität, Fehlermeldungen — manchmal „Crash Dumps"
-          genannt — und Hardware-Einstellungen).
+          (Systemaktivität, Fehlermeldungen, manchmal „Crash Dumps"
+          genannt, und Hardware-Einstellungen).
         </li>
         <li>
           <em>Gerätedaten.</em> Wir erfassen Gerätedaten wie Informationen
@@ -841,11 +841,11 @@ export default function PrivacyContentDe() {
         nach Bedarf zur Bereitstellung der Dienste oder für:
       </p>
       <ul>
-        <li>Kategorie A — Solange der Nutzer ein Konto bei uns hat</li>
-        <li>Kategorie B — Solange der Nutzer ein Konto bei uns hat</li>
-        <li>Kategorie D — Solange der Nutzer ein Konto bei uns hat</li>
-        <li>Kategorie G — Solange der Nutzer ein Konto bei uns hat</li>
-        <li>Kategorie L — Solange der Nutzer ein Konto bei uns hat</li>
+        <li>Kategorie A: solange der Nutzer ein Konto bei uns hat</li>
+        <li>Kategorie B: solange der Nutzer ein Konto bei uns hat</li>
+        <li>Kategorie D: solange der Nutzer ein Konto bei uns hat</li>
+        <li>Kategorie G: solange der Nutzer ein Konto bei uns hat</li>
+        <li>Kategorie L: solange der Nutzer ein Konto bei uns hat</li>
       </ul>
       <p>
         <strong>Deine Rechte:</strong> Du hast Rechte nach bestimmten

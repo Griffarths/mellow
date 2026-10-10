@@ -2,7 +2,7 @@ import { Link } from "@/i18n/navigation";
 export default function PrivacyContentEs419() {
   return (
     <>
-      <h1>Política de privacidad — Mellow</h1>
+      <h1>Política de privacidad · Mellow</h1>
       <p>
         <strong>Última actualización: 8 de octubre de 2026</strong>
       </p>
@@ -228,8 +228,8 @@ export default function PrivacyContentEs419() {
 
       <h3>Información recopilada automáticamente</h3>
       <p>
-        <em>En resumen:</em> Algunas informaciones —como tu dirección IP
-        y/o las características de tu navegador y dispositivo— se
+        <em>En resumen:</em> Algunas informaciones, como tu dirección IP
+        y/o las características de tu navegador y dispositivo, se
         recopilan automáticamente cuando visitas nuestros Servicios.
       </p>
       <p>
@@ -258,7 +258,7 @@ export default function PrivacyContentEs419() {
           fecha/hora asociadas a tu uso, páginas y archivos visualizados,
           búsquedas y otras acciones como funciones utilizadas),
           información de eventos del dispositivo (actividad del sistema,
-          informes de errores —a veces llamados «crash dumps»— y
+          informes de errores, a veces llamados «crash dumps», y
           configuración de hardware).
         </li>
         <li>
@@ -832,19 +832,19 @@ export default function PrivacyContentEs419() {
       </p>
       <ul>
         <li>
-          Categoría A — Mientras el usuario tenga una cuenta con nosotros
+          Categoría A: mientras el usuario tenga una cuenta con nosotros
         </li>
         <li>
-          Categoría B — Mientras el usuario tenga una cuenta con nosotros
+          Categoría B: mientras el usuario tenga una cuenta con nosotros
         </li>
         <li>
-          Categoría D — Mientras el usuario tenga una cuenta con nosotros
+          Categoría D: mientras el usuario tenga una cuenta con nosotros
         </li>
         <li>
-          Categoría G — Mientras el usuario tenga una cuenta con nosotros
+          Categoría G: mientras el usuario tenga una cuenta con nosotros
         </li>
         <li>
-          Categoría L — Mientras el usuario tenga una cuenta con nosotros
+          Categoría L: mientras el usuario tenga una cuenta con nosotros
         </li>
       </ul>
       <p>

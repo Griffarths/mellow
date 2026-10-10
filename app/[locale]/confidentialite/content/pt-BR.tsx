@@ -2,7 +2,7 @@ import { Link } from "@/i18n/navigation";
 export default function PrivacyContentPtBr() {
   return (
     <>
-      <h1>Política de privacidade — Mellow</h1>
+      <h1>Política de privacidade · Mellow</h1>
       <p>
         <strong>Última atualização: 8 de outubro de 2026</strong>
       </p>
@@ -222,8 +222,8 @@ export default function PrivacyContentPtBr() {
 
       <h3>Informações coletadas automaticamente</h3>
       <p>
-        <em>Em resumo:</em> Algumas informações — como seu endereço IP
-        e/ou as características do navegador e dispositivo — são
+        <em>Em resumo:</em> Algumas informações, como seu endereço IP
+        e/ou as características do navegador e dispositivo, são
         coletadas automaticamente quando você visita nossos Serviços.
       </p>
       <p>
@@ -252,7 +252,7 @@ export default function PrivacyContentPtBr() {
           associados ao uso, páginas e arquivos visualizados, pesquisas
           e outras ações como funcionalidades utilizadas), informações
           de eventos do dispositivo (atividade do sistema, relatórios de
-          erro — às vezes chamados de «crash dumps» — e configurações
+          erro, às vezes chamados de «crash dumps», e configurações
           de hardware).
         </li>
         <li>
@@ -814,11 +814,11 @@ export default function PrivacyContentPtBr() {
         necessário para prestar os Serviços ou para:
       </p>
       <ul>
-        <li>Categoria A — Enquanto o usuário tiver uma conta conosco</li>
-        <li>Categoria B — Enquanto o usuário tiver uma conta conosco</li>
-        <li>Categoria D — Enquanto o usuário tiver uma conta conosco</li>
-        <li>Categoria G — Enquanto o usuário tiver uma conta conosco</li>
-        <li>Categoria L — Enquanto o usuário tiver uma conta conosco</li>
+        <li>Categoria A: enquanto o usuário tiver uma conta conosco</li>
+        <li>Categoria B: enquanto o usuário tiver uma conta conosco</li>
+        <li>Categoria D: enquanto o usuário tiver uma conta conosco</li>
+        <li>Categoria G: enquanto o usuário tiver uma conta conosco</li>
+        <li>Categoria L: enquanto o usuário tiver uma conta conosco</li>
       </ul>
       <p>
         <strong>Seus direitos:</strong> Você tem direitos sob certas

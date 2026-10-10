@@ -5,7 +5,7 @@
     "ogDescription": "Recupera el control de tus migrañas. Una app calma y gratuita para acompañarte cada día."
   },
   "nav": {
-    "homeAriaLabel": "Mellow — volver al inicio",
+    "homeAriaLabel": "Mellow, volver al inicio",
     "appStoreAriaLabel": "Descargar en el App Store",
     "blog": "Blog",
     "androidBeta": "Probar Android",
@@ -150,23 +150,23 @@
     "back": "← Volver"
   },
   "contactPage": {
-    "metaTitle": "Soporte — Mellow",
+    "metaTitle": "Soporte · Mellow",
     "metaDescription": "Contacto, gestión de suscripciones y soporte para la app Mellow."
   },
   "privacyPage": {
-    "metaTitle": "Política de privacidad — Mellow",
-    "metaDescription": "Política de privacidad de Mellow — cómo recopilamos, usamos y protegemos tus datos."
+    "metaTitle": "Política de privacidad · Mellow",
+    "metaDescription": "Política de privacidad de Mellow: cómo recopilamos, usamos y protegemos tus datos."
   },
   "legalPage": {
-    "metaTitle": "Aviso legal — Mellow",
-    "metaDescription": "Aviso legal de Mellow — editor, alojamiento, propiedad intelectual y responsabilidad."
+    "metaTitle": "Aviso legal · Mellow",
+    "metaDescription": "Aviso legal de Mellow: editor, alojamiento, propiedad intelectual y responsabilidad."
   },
   "accountDeletionPage": {
-    "metaTitle": "Eliminación de cuenta — Mellow",
+    "metaTitle": "Eliminación de cuenta · Mellow",
     "metaDescription": "Cómo eliminar tu cuenta y tus datos desde la app Mellow o por correo electrónico."
   },
   "editorialPage": {
-    "metaTitle": "Cómo escribimos nuestros artículos — Mellow",
+    "metaTitle": "Cómo escribimos nuestros artículos · Mellow",
     "metaDescription": "Quién escribe el blog de Mellow, qué fuentes usamos, qué no hacemos y cómo mantenemos los artículos al día.",
     "title": "Cómo escribimos nuestros artículos",
     "intro": "El blog de Mellow ayuda a las personas con migraña a entender sus crisis y a vivir mejor con ellas. Así se prepara, se comprueba y se mantiene al día cada artículo.",

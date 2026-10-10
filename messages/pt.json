@@ -5,7 +5,7 @@
     "ogDescription": "Retoma o controlo das tuas enxaquecas. Uma app calma e gratuita para te acompanhar todos os dias."
   },
   "nav": {
-    "homeAriaLabel": "Mellow — voltar ao início",
+    "homeAriaLabel": "Mellow, voltar ao início",
     "appStoreAriaLabel": "Descarregar na App Store",
     "blog": "Blog",
     "androidBeta": "Testar Android",
@@ -150,23 +150,23 @@
     "back": "← Voltar"
   },
   "contactPage": {
-    "metaTitle": "Suporte — Mellow",
+    "metaTitle": "Suporte · Mellow",
     "metaDescription": "Contacto, gestão de subscrições e suporte para a aplicação Mellow."
   },
   "privacyPage": {
-    "metaTitle": "Política de privacidade — Mellow",
-    "metaDescription": "Política de privacidade da Mellow — como recolhemos, usamos e protegemos os teus dados."
+    "metaTitle": "Política de privacidade · Mellow",
+    "metaDescription": "Política de privacidade da Mellow: como recolhemos, usamos e protegemos os teus dados."
   },
   "legalPage": {
-    "metaTitle": "Aviso legal — Mellow",
-    "metaDescription": "Aviso legal da Mellow — editor, alojamento, propriedade intelectual e responsabilidade."
+    "metaTitle": "Aviso legal · Mellow",
+    "metaDescription": "Aviso legal da Mellow: editor, alojamento, propriedade intelectual e responsabilidade."
   },
   "accountDeletionPage": {
-    "metaTitle": "Eliminação de conta — Mellow",
+    "metaTitle": "Eliminação de conta · Mellow",
     "metaDescription": "Como eliminar a sua conta e os seus dados na aplicação Mellow ou por e-mail."
   },
   "editorialPage": {
-    "metaTitle": "Como escrevemos os nossos artigos — Mellow",
+    "metaTitle": "Como escrevemos os nossos artigos · Mellow",
     "metaDescription": "Quem escreve o blog da Mellow, que fontes usamos, o que não fazemos e como mantemos os artigos atualizados.",
     "title": "Como escrevemos os nossos artigos",
     "intro": "O blog da Mellow ajuda quem tem enxaqueca a compreender as suas crises e a viver melhor com elas. Eis como cada artigo é preparado, verificado e mantido atualizado.",

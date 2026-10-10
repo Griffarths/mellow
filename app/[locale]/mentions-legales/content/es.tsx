@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 export default function LegalContentEs() {
   return (
     <>
-      <h1>Aviso legal — Mellow</h1>
+      <h1>Aviso legal · Mellow</h1>
       <p>
         <strong>Última actualización: 18 de abril de 2026</strong>
       </p>
@@ -159,9 +159,9 @@ export default function LegalContentEs() {
 
       <h2>7. Propiedad intelectual</h2>
       <p>
-        El conjunto de elementos que componen la aplicación Mellow —incluidos
+        El conjunto de elementos que componen la aplicación Mellow (incluidos
         en particular los textos, gráficos, logotipos, iconos, ilustraciones,
-        interfaces, identidad visual y código fuente— son propiedad exclusiva
+        interfaces, identidad visual y código fuente) son propiedad exclusiva
         de Laurine Nicoletti, salvo mención explícita en contrario.
       </p>
       <p>
@@ -184,8 +184,8 @@ export default function LegalContentEs() {
         , accesible desde la aplicación y desde la ficha de la App Store.
       </p>
       <p>
-        De conformidad con el Reglamento General de Protección de Datos (RGPD
-        — Reglamento UE 2016/679) y la ley francesa Informatique et Libertés
+        De conformidad con el Reglamento General de Protección de Datos (RGPD,
+        Reglamento UE 2016/679) y la ley francesa Informatique et Libertés
         modificada, el usuario dispone de un derecho de acceso, rectificación,
         supresión, portabilidad, limitación y oposición respecto a sus datos
         personales. Estos derechos pueden ejercerse contactando al editor en la
@@ -193,7 +193,7 @@ export default function LegalContentEs() {
       </p>
       <p>
         El usuario también dispone del derecho a presentar una reclamación
-        ante la autoridad francesa de protección de datos (CNIL —{" "}
+        ante la autoridad francesa de protección de datos (CNIL,{" "}
         <a
           href="https://www.cnil.fr"
           target="_blank"
