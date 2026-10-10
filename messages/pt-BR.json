@@ -121,6 +121,7 @@
   "finalCta": {
     "title": "Baixe o Mellow",
     "subtitle": "Gratuito para baixar. Registre sua primeira crise em poucos segundos.",
+    "rating": "{rating} em {count, plural, one {# avaliação} other {# avaliações}}",
     "scan": "Escaneie com seu iPhone",
     "qrAlt": "QR code do Mellow na App Store"
   },

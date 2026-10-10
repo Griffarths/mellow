@@ -121,6 +121,7 @@
   "finalCta": {
     "title": "Scarica Mellow",
     "subtitle": "Gratis da scaricare. Registra il tuo primo attacco in pochi secondi.",
+    "rating": "{rating} su {count, plural, one {# valutazione} other {# valutazioni}}",
     "scan": "Inquadra con il tuo iPhone",
     "qrAlt": "Codice QR per Mellow sull'App Store"
   },

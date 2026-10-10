@@ -12,7 +12,7 @@ const SAMPLE_REVIEWS: Review[] = [1, 2].map((n) => ({
   text: "Exemple d'avis. Remplace-le par un vrai avis App Store dans content/reviews.ts.",
 }));
 
-function Stars({ rating, label, size }: { rating: number; label: string; size: string }) {
+export function Stars({ rating, label, size }: { rating: number; label: string; size: string }) {
   return (
     <div role="img" aria-label={label} className="flex gap-0.5 text-ink">
       {[1, 2, 3, 4, 5].map((i) => (
