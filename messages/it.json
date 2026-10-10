@@ -119,7 +119,10 @@
     "starsLabel": "{rating} stelle su 5"
   },
   "finalCta": {
-    "title": "Scarica Mellow"
+    "title": "Scarica Mellow",
+    "subtitle": "Gratis da scaricare. Registra il tuo primo attacco in pochi secondi.",
+    "scan": "Inquadra con il tuo iPhone",
+    "qrAlt": "Codice QR per Mellow sull'App Store"
   },
   "footer": {
     "privacy": "Privacy",

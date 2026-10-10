@@ -119,7 +119,10 @@
     "starsLabel": "{rating} de 5 estrelas"
   },
   "finalCta": {
-    "title": "Baixe o Mellow"
+    "title": "Baixe o Mellow",
+    "subtitle": "Gratuito para baixar. Registre sua primeira crise em poucos segundos.",
+    "scan": "Escaneie com seu iPhone",
+    "qrAlt": "QR code do Mellow na App Store"
   },
   "footer": {
     "privacy": "Privacidade",

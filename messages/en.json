@@ -114,7 +114,10 @@
     "starsLabel": "{rating} out of 5 stars"
   },
   "finalCta": {
-    "title": "Download Mellow"
+    "title": "Download Mellow",
+    "subtitle": "Free to download. Log your first attack in a few seconds.",
+    "scan": "Scan with your iPhone",
+    "qrAlt": "QR code to Mellow on the App Store"
   },
   "footer": {
     "about": "About",

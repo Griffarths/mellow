@@ -119,7 +119,10 @@
     "starsLabel": "{rating} von 5 Sternen"
   },
   "finalCta": {
-    "title": "Lade Mellow herunter"
+    "title": "Lade Mellow herunter",
+    "subtitle": "Kostenlos herunterladen. Erfasse deine erste Attacke in wenigen Sekunden.",
+    "scan": "Mit dem iPhone scannen",
+    "qrAlt": "QR-Code zu Mellow im App Store"
   },
   "footer": {
     "privacy": "Datenschutz",
