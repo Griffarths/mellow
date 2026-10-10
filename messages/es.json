@@ -112,22 +112,6 @@
     },
     "dotAriaLabel": "Ver {name}"
   },
-  "courses": {
-    "title": "Aprende a vivir mejor con la migraña.",
-    "subtitle": "Todo lo que necesitas saber sobre la migraña, explicado de forma sencilla.",
-    "understand": {
-      "title": "Comprender",
-      "subtitle": "Los mecanismos, las fases y lo que ocurre en tu cerebro."
-    },
-    "prevent": {
-      "title": "Prevenir",
-      "subtitle": "Rutinas, hábitos de vida y señales de alerta a reconocer."
-    },
-    "manage": {
-      "title": "Gestionar",
-      "subtitle": "Los métodos que funcionan de verdad durante la crisis."
-    }
-  },
   "socialProof": {
     "title": "Lo que opinan.",
     "outOf": "de 5",

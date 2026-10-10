@@ -107,22 +107,6 @@
     },
     "dotAriaLabel": "Voir {name}"
   },
-  "courses": {
-    "title": "Apprends à mieux vivre avec la migraine.",
-    "subtitle": "Tout ce qu'il faut savoir sur la migraine, expliqué simplement.",
-    "understand": {
-      "title": "Comprendre",
-      "subtitle": "Les mécanismes, les phases et ce qui se passe dans ton cerveau."
-    },
-    "prevent": {
-      "title": "Prévenir",
-      "subtitle": "Routines, hygiène de vie et signaux d'alerte à reconnaître."
-    },
-    "manage": {
-      "title": "Gérer",
-      "subtitle": "Les méthodes qui marchent vraiment pendant la crise."
-    }
-  },
   "socialProof": {
     "title": "Ce qu'ils en pensent.",
     "outOf": "sur 5",

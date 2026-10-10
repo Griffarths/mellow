@@ -112,22 +112,6 @@
     },
     "dotAriaLabel": "Ver {name}"
   },
-  "courses": {
-    "title": "Aprende a viver melhor com a enxaqueca.",
-    "subtitle": "Tudo o que precisas de saber sobre a enxaqueca, explicado de forma simples.",
-    "understand": {
-      "title": "Compreender",
-      "subtitle": "Os mecanismos, as fases e o que se passa no teu cérebro."
-    },
-    "prevent": {
-      "title": "Prevenir",
-      "subtitle": "Rotinas, estilo de vida e sinais de alerta a reconhecer."
-    },
-    "manage": {
-      "title": "Gerir",
-      "subtitle": "Os métodos que realmente funcionam durante a crise."
-    }
-  },
   "socialProof": {
     "title": "O que dizem.",
     "outOf": "em 5",

@@ -6,7 +6,6 @@ import { Hero } from "@/components/sections/Hero";
 import { Features } from "@/components/sections/Features";
 import { WhyMellow } from "@/components/sections/WhyMellow";
 import { MellowsSlider } from "@/components/sections/MellowsSlider";
-import { Courses } from "@/components/sections/Courses";
 import { LatestArticles } from "@/components/sections/LatestArticles";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -39,7 +38,6 @@ export default async function HomePage({
         <WhyMellow />
         <MellowsSlider />
         <SocialProof />
-        <Courses />
         <LatestArticles />
         <FinalCta />
       </main>

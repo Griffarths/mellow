@@ -112,22 +112,6 @@
     },
     "dotAriaLabel": "{name} ansehen"
   },
-  "courses": {
-    "title": "Lerne, besser mit Migräne zu leben.",
-    "subtitle": "Alles, was du über Migräne wissen musst, einfach erklärt.",
-    "understand": {
-      "title": "Verstehen",
-      "subtitle": "Die Mechanismen, die Phasen und was in deinem Gehirn passiert."
-    },
-    "prevent": {
-      "title": "Vorbeugen",
-      "subtitle": "Routinen, Lebensstil und Warnsignale, die du erkennen solltest."
-    },
-    "manage": {
-      "title": "Bewältigen",
-      "subtitle": "Methoden, die wirklich wirken, wenn der Anfall da ist."
-    }
-  },
   "socialProof": {
     "title": "Was Nutzer sagen.",
     "outOf": "von 5",

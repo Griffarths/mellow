@@ -112,22 +112,6 @@
     },
     "dotAriaLabel": "Vedi {name}"
   },
-  "courses": {
-    "title": "Impara a vivere meglio con l'emicrania.",
-    "subtitle": "Tutto quello che c'è da sapere sull'emicrania, spiegato in modo semplice.",
-    "understand": {
-      "title": "Capire",
-      "subtitle": "I meccanismi, le fasi e cosa succede nel tuo cervello."
-    },
-    "prevent": {
-      "title": "Prevenire",
-      "subtitle": "Routine, stile di vita e segnali d'allarme da riconoscere."
-    },
-    "manage": {
-      "title": "Gestire",
-      "subtitle": "I metodi che funzionano davvero durante la crisi."
-    }
-  },
   "socialProof": {
     "title": "Cosa ne pensano.",
     "outOf": "su 5",
