@@ -1,46 +1,15 @@
-import type { ReactNode } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { TONES, type Tone } from "@/lib/tones";
 
 // Right under the hero: says plainly what the app is and does. A phone
 // showing the app's real home screen (public/app-screens/<locale>/home.jpg,
 // iPhone 17 Pro simulator, demo account) next to the three benefits, split
-// by thin rules. White background.
-const FEATURES: Array<{ id: "log" | "understand" | "doctor"; tone: Tone; icon: ReactNode }> = [
-  {
-    id: "log",
-    tone: "fleur",
-    // A phone with a plus: adding an attack.
-    icon: (
-      <>
-        <rect x="5" y="2.5" width="14" height="19" rx="3" />
-        <path d="M12 9v6M9 12h6" />
-      </>
-    ),
-  },
-  {
-    id: "understand",
-    tone: "tagada",
-    // A rising trend line.
-    icon: (
-      <>
-        <path d="M3.5 19.5h17" />
-        <path d="m4.5 15 4.5-4.5 3.5 3 7-7" />
-        <path d="M15 6.5h4.5V11" />
-      </>
-    ),
-  },
-  {
-    id: "doctor",
-    tone: "sable",
-    // A report page.
-    icon: (
-      <>
-        <path d="M14 2.5H7a2.5 2.5 0 0 0-2.5 2.5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z" />
-        <path d="M14 2.5V8h5.5M8.5 13h7M8.5 17h5" />
-      </>
-    ),
-  },
+// by thin rules, each with a 3D emoji from Microsoft's Fluent Emoji
+// (public/emoji; MIT licence, Copyright (c) Microsoft Corporation). White
+// background.
+const FEATURES: Array<{ id: "log" | "understand" | "doctor"; emoji: string }> = [
+  { id: "log", emoji: "/emoji/backhand_index_pointing_up_3d_default.png" },
+  { id: "understand", emoji: "/emoji/magnifying_glass_tilted_left_3d.png" },
+  { id: "doctor", emoji: "/emoji/clipboard_3d.png" },
 ];
 
 export function Features() {
@@ -72,22 +41,16 @@ export function Features() {
           <ul className="mx-auto mt-10 w-full max-w-xl divide-y divide-surface-line md:mx-0 md:mt-0 md:max-w-none">
             {FEATURES.map((f) => (
               <li key={f.id} className="flex gap-5 py-6 first:pt-0 last:pb-0">
-                <span
+                <img
+                  src={f.emoji}
+                  alt=""
                   aria-hidden
-                  className={`grid h-14 w-14 shrink-0 place-items-center rounded-full text-ink ${TONES[f.tone].tint}`}
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    {f.icon}
-                  </svg>
-                </span>
+                  width={256}
+                  height={256}
+                  loading="lazy"
+                  draggable={false}
+                  className="h-14 w-14 shrink-0 select-none"
+                />
                 <div className="min-w-0">
                   <h3 className="text-balance text-h3 text-ink">{t(`${f.id}.title`)}</h3>
                   <p className="mt-1.5 text-[17px] leading-[1.65] text-ink-body">{t(`${f.id}.text`)}</p>
