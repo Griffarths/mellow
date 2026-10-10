@@ -1,9 +1,10 @@
 import { useLocale, useTranslations } from "next-intl";
 import { StoreBadges } from "../StoreBadges";
+import { Blob } from "../phones/Blob";
 import { APP_STORE_RATING } from "@/content/reviews";
 
-// Last call to download: the text and badge on the left, and on computers an
-// App Store-like card with a QR code to scan with the iPhone
+// Last call to download: the mascot, text and badge on the left, and on
+// computers an App Store-like card with a QR code to scan with the iPhone
 // (public/qr-app-store.svg, generated with macOS CoreImage, points to the
 // App Store page). Phones only get the badge: they cannot scan themselves.
 export function FinalCta() {
@@ -20,7 +21,10 @@ export function FinalCta() {
     <section className="bg-hero">
       <div className="mx-auto grid max-w-4xl items-center gap-12 px-6 py-20 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:py-24">
         <div className="text-center md:text-left">
-          <h2 className="text-h2 text-ink">{t("title")}</h2>
+          <div className="flex justify-center md:justify-start">
+            <Blob name="Fleur1" className="breathe h-20 w-20 md:h-24 md:w-24" />
+          </div>
+          <h2 className="mt-6 text-h2 text-ink">{t("title")}</h2>
           <p className="mt-4 text-balance text-lg text-ink-2">{t("subtitle")}</p>
           <StoreBadges className="mt-8 md:justify-start" sizeClass="h-11 w-auto select-none md:h-12" />
         </div>
