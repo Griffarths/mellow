@@ -20,14 +20,14 @@ export function WhyMellow() {
           <p className="mt-4 text-balance text-lg text-ink-2">{t("subtitle")}</p>
         </div>
 
-        {/* One row per reason, split by thin rules: emoji and title on the
-            left, the text on the right with room to breathe. Phones: the
-            text goes under the title. */}
-        <ul className="mx-auto mt-10 max-w-5xl border-t border-surface-line md:mt-14">
+        {/* One row per reason, thin rules between rows only: emoji and
+            title on the left, the text on the right with room to breathe.
+            Phones: the text goes under the title. */}
+        <ul className="mx-auto mt-10 max-w-5xl divide-y divide-surface-line md:mt-14">
           {REASONS.map((r) => (
             <li
               key={r.id}
-              className="grid gap-4 border-b border-surface-line py-8 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-12 md:py-10"
+              className="grid gap-4 py-8 first:pt-0 last:pb-0 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-12 md:py-10"
             >
               <div className="flex items-center gap-5">
                 <img
