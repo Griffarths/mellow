@@ -12,19 +12,22 @@ const SAMPLE_REVIEWS: Review[] = [1, 2].map((n) => ({
   text: "Exemple d'avis. Remplace-le par un vrai avis App Store dans content/reviews.ts.",
 }));
 
+// Fluent Emoji 3D star (public/emoji; MIT licence, Copyright (c) Microsoft
+// Corporation). Missing stars are greyed out.
 export function Stars({ rating, label, size }: { rating: number; label: string; size: string }) {
   return (
-    <div role="img" aria-label={label} className="flex gap-0.5 text-ink">
+    <div role="img" aria-label={label} className="flex gap-0.5">
       {[1, 2, 3, 4, 5].map((i) => (
-        <svg
+        <img
           key={i}
-          viewBox="0 0 20 20"
-          className={`${size} ${i <= Math.round(rating) ? "" : "opacity-20"}`}
-          fill="currentColor"
+          src="/emoji/star_3d.png"
+          alt=""
           aria-hidden
-        >
-          <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9L10 1.5z" />
-        </svg>
+          width={256}
+          height={256}
+          draggable={false}
+          className={`${size} select-none ${i <= Math.round(rating) ? "" : "opacity-30 grayscale"}`}
+        />
       ))}
     </div>
   );
