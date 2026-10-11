@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Blob } from "../phones/Blob";
 
@@ -181,28 +182,107 @@ export function TriggerList() {
   );
 }
 
-// What you feel: three answers in large, side by side.
+// What you feel: three answers in large, each over its little chart from the
+// app (the durations bar, the intensities from 1 to 10, the symptoms). Side
+// by side on a computer; on a phone one answer per row, the chart beside it.
+const DURATIONS: Array<["durShort" | "durDay" | "durLong", number, string]> = [
+  ["durShort", 5, "bg-surface-grouped"],
+  ["durDay", 2, "bg-tagada"],
+  ["durLong", 1, "bg-danger/75"],
+];
+// How many of the 8 migraines got each score, 1 to 10 (the calendar's ones).
+const INTENSITIES = [0, 1, 1, 0, 1, 1, 1, 2, 1, 0];
+const intensityBg = (score: number) => (score <= 3 ? "bg-fleur" : score <= 6 ? "bg-tagada" : "bg-croix");
+
+function Feel({
+  value,
+  suffix,
+  caption,
+  index,
+  children,
+}: {
+  value: string;
+  suffix?: string;
+  caption: string;
+  index: number;
+  children: ReactNode;
+}) {
+  return (
+    <div className="grid grid-cols-[7.5rem_minmax(0,1fr)] items-center gap-x-6 py-7 first:pt-0 last:pb-0 md:block md:px-8 md:py-0 md:first:pl-0 md:last:pr-0">
+      <div className="app-pop" style={delay(index, 140)}>
+        <p className="whitespace-nowrap text-4xl font-extrabold tracking-tight text-ink md:text-6xl">
+          {value}
+          {suffix && <span className="ml-1.5 text-lg font-bold tracking-normal text-ink-3 md:text-2xl">{suffix}</span>}
+        </p>
+        <p className="mt-2 text-sm leading-snug text-ink-3 md:text-base">{caption}</p>
+      </div>
+      <div className="md:mt-6">{children}</div>
+    </div>
+  );
+}
+
 export function FeelFigures() {
   const ui = useTranslations("appPage.ui");
   const locale = intlLocale(useLocale());
   const hours = new Intl.NumberFormat(locale, { style: "unit", unit: "hour", unitDisplay: "short" });
   const percent = new Intl.NumberFormat(locale, { style: "percent" });
-  const figures: Array<[string, string | null, string]> = [
-    [hours.format(9), null, ui("perAttack")],
-    ["4", ui("outOfTotal", { total: TOTAL }), ui("intenseAttacks")],
-    [percent.format(6 / TOTAL), null, ui("withNausea")],
-  ];
   return (
-    <div aria-hidden className="grid grid-cols-3 divide-x divide-surface-line">
-      {figures.map(([value, suffix, caption], i) => (
-        <div key={caption} className="app-pop px-2 text-center md:px-6" style={delay(i, 140)}>
-          <p className="whitespace-nowrap text-4xl font-extrabold tracking-tight text-ink md:text-6xl">
-            {value}
-            {suffix && <span className="ml-1.5 text-lg font-bold tracking-normal text-ink-3 md:text-2xl">{suffix}</span>}
-          </p>
-          <p className="mt-3 text-balance text-sm text-ink-3 md:text-base">{caption}</p>
+    <div aria-hidden className="grid divide-y divide-surface-line md:grid-cols-3 md:divide-x md:divide-y-0">
+      <Feel value={hours.format(9)} caption={ui("perAttack")} index={0}>
+        <div className="flex h-3 gap-[3px]">
+          {DURATIONS.map(([key, count, bg], i) => (
+            <div
+              key={key}
+              className={`app-grow-x rounded ${bg}`}
+              style={{ flex: `${count} 1 0`, ...delay(i, 150, 300) }}
+            />
+          ))}
         </div>
-      ))}
+        <ul className="mt-3 space-y-1.5 text-sm">
+          {DURATIONS.map(([key, count, bg]) => (
+            <li key={key} className="flex items-center gap-2">
+              <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${bg}`} />
+              <span className="text-ink-2">{ui(key)}</span>
+              <span className="ml-auto font-semibold tabular-nums text-ink-3">{count}</span>
+            </li>
+          ))}
+        </ul>
+      </Feel>
+
+      <Feel value="4" suffix={ui("outOfTotal", { total: TOTAL })} caption={ui("intenseAttacks")} index={1}>
+        <div className="flex h-16 items-end gap-1">
+          {INTENSITIES.map((count, i) => (
+            <div
+              key={i}
+              className={`flex-1 rounded-[3px] ${count ? `app-grow-y ${intensityBg(i + 1)}` : "bg-surface-grouped"}`}
+              style={count ? { height: `${(count / 2) * 100}%`, ...delay(i, 60, 300) } : { height: 4 }}
+            />
+          ))}
+        </div>
+        <div className="mt-1.5 flex gap-1 text-center text-xs tabular-nums text-ink-4">
+          {INTENSITIES.map((_, i) => (
+            <span key={i} className="flex-1">
+              {i + 1}
+            </span>
+          ))}
+        </div>
+      </Feel>
+
+      <Feel value={percent.format(6 / TOTAL)} caption={ui("withNausea")} index={2}>
+        <ul className="divide-y divide-surface-line text-sm md:text-[15px]">
+          {(
+            [
+              ["lightSensitivity", 5],
+              ["soundSensitivity", 4],
+            ] as const
+          ).map(([key, count]) => (
+            <li key={key} className="flex items-baseline justify-between gap-3 py-2 first:pt-0">
+              <span className="text-ink-2">{ui(key)}</span>
+              <span className="font-semibold tabular-nums text-ink-3">{percent.format(count / TOTAL)}</span>
+            </li>
+          ))}
+        </ul>
+      </Feel>
     </div>
   );
 }

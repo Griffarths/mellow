@@ -181,8 +181,9 @@ function AppContent() {
           </Reveal>
         </section>
 
-        {/* 5. Centred: what the attacks are like, three answers in large. */}
-        <section className="mx-auto max-w-4xl px-6 py-16 md:py-24">
+        {/* 5. Centred: what the attacks are like, three answers in large,
+            each with its little chart from the app. */}
+        <section className="mx-auto max-w-5xl px-6 py-16 md:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="feel" />
           </div>
