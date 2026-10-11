@@ -8,7 +8,7 @@ type Props = {
   children: ReactNode;
 };
 
-// The nav's <header>. Solid (white, blurred, with a border) on every page,
+// The nav's <header>. Solid (plain white, with a border) on every page,
 // except at the top of the home page where it lets the hero show through.
 // It also turns white when the mobile menu is open. While transparent, the
 // .nav-on-hero elements (wordmark, links, burger) turn white (globals.css,
@@ -26,14 +26,10 @@ export function NavShell({ overHero, children }: Props) {
 
   const solid = !overHero || scrolled;
 
-  // Over the bright pink hero a backdrop blur fades out at the screen edges
-  // and makes the top corners look rounded, so the home page goes plain
-  // white instead (it looks the same over white content).
-  const look = !overHero
-    ? "border-surface-line bg-white/85 backdrop-blur"
-    : scrolled
-      ? "border-surface-line bg-white"
-      : "border-transparent bg-transparent has-[#mobile-menu]:border-surface-line has-[#mobile-menu]:bg-white";
+  // The same plain white everywhere, no blur.
+  const look = solid
+    ? "border-surface-line bg-white"
+    : "border-transparent bg-transparent has-[#mobile-menu]:border-surface-line has-[#mobile-menu]:bg-white";
 
   return (
     <header

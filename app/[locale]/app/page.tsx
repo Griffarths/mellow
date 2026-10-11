@@ -109,7 +109,7 @@ function AppContent() {
       />
       <main className="overflow-x-clip">
         {/* Header: the text and the phone with the app's home screen. */}
-        <section className="bg-gradient-to-b from-hero to-white">
+        <section>
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-16 pt-12 md:grid-cols-2 md:pb-20 md:pt-16">
             <div className="text-center md:text-left">
               <h1 className="text-h1 text-ink">{t("title")}</h1>

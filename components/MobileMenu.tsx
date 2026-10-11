@@ -92,9 +92,8 @@ export function MobileMenu({
         </svg>
       </button>
 
-      {/* The header's backdrop blur makes it the containing block of fixed
-          children: top-16 is right under it, and the height is set
-          explicitly. */}
+      {/* The header is sticky at the top of the screen: top-16 is right
+          under it, and the height is set explicitly. */}
       {open && (
         <nav
           id="mobile-menu"
