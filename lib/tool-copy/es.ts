@@ -11,7 +11,7 @@ const nextStep: Rich = ["El siguiente paso: ", diaryLink, ", para anotar tus cri
 export const diary: DiaryCopy = {
   path: DIARY_PATH,
   navLabel: "Diario de migraña",
-  menuDescription: "Tu mes de crisis, para imprimir",
+  menuDescription: "¿Prefieres anotar en papel?",
   metaTitle: "Diario de migraña para imprimir (PDF gratis)",
   description:
     "Descarga gratis un diario de migraña para imprimir: calendario del mes, intensidad, medicamentos y una tabla de crisis para enseñar a tu médico.",
@@ -71,7 +71,7 @@ export const diary: DiaryCopy = {
 export const testPage: TestPageCopy = {
   path: "/recursos/test-de-migrana",
   navLabel: "Test de migraña",
-  menuDescription: "¿Migraña o dolor de cabeza? 11 preguntas",
+  menuDescription: "¿Migraña o dolor de cabeza?",
   metaTitle: "Test de migraña: ¿migraña o dolor de cabeza? (gratis, 2 minutos)",
   description:
     "Responde a 11 preguntas basadas en los criterios médicos de la migraña y descubre si tus dolores de cabeza se parecen a una migraña, a una cefalea tensional o a otra cosa.",
@@ -279,7 +279,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/recursos/diario-migrana-menstrual",
   navLabel: "Diario de migraña menstrual",
-  menuDescription: "Para ver si tus crisis siguen tu ciclo",
+  menuDescription: "¿Tus crisis siguen tu ciclo?",
   metaTitle: "Diario de migraña menstrual para imprimir (PDF gratis)",
   description:
     "Un calendario de 3 meses para imprimir y anotar tu regla y tus crisis, y ver si tus migrañas siguen tu ciclo, como piden los médicos.",
@@ -339,7 +339,7 @@ export const cycleDiary: DiaryCopy = {
 export const overusePage: OverusePageCopy = {
   path: "/recursos/calculadora-abuso-medicamentos",
   navLabel: "Calculadora de abuso de medicación",
-  menuDescription: "Tus días con medicamentos frente a los umbrales",
+  menuDescription: "¿Tomas demasiados medicamentos?",
   metaTitle: "Abuso de medicación: calcula si superas los umbrales (gratis)",
   description:
     "Indica tus días con medicamentos para el dolor y la migraña: la calculadora los compara con los umbrales médicos de la cefalea por abuso de medicación, 10 o 15 días al mes según el medicamento.",

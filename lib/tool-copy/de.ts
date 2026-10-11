@@ -11,7 +11,7 @@ const nextStep: Rich = ["Nächster Schritt: ", diaryLink, ", um deine Attacken b
 export const diary: DiaryCopy = {
   path: DIARY_PATH,
   navLabel: "Migränetagebuch",
-  menuDescription: "Dein Migränemonat zum Ausdrucken",
+  menuDescription: "Lieber auf Papier notieren?",
   metaTitle: "Migränetagebuch zum Ausdrucken (kostenloses PDF)",
   description:
     "Lade dir kostenlos ein Migränetagebuch zum Ausdrucken herunter: Monatskalender, Schmerzstärke, Medikamente und ein Protokoll deiner Attacken für deinen Arzt.",
@@ -71,7 +71,7 @@ export const diary: DiaryCopy = {
 export const testPage: TestPageCopy = {
   path: "/ressourcen/migraene-test",
   navLabel: "Migräne-Test",
-  menuDescription: "Migräne oder Kopfschmerz? 11 Fragen",
+  menuDescription: "Migräne oder Kopfschmerz?",
   metaTitle: "Migräne-Test: Migräne oder Kopfschmerz? (kostenlos, 2 Minuten)",
   description:
     "Beantworte 11 Fragen auf Grundlage der medizinischen Kriterien für Migräne und finde heraus, ob deine Kopfschmerzen eher nach Migräne, Spannungskopfschmerz oder etwas anderem aussehen.",
@@ -279,7 +279,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/ressourcen/menstruationsmigraene-tagebuch",
   navLabel: "Tagebuch für Menstruationsmigräne",
-  menuDescription: "Um zu sehen, ob deine Attacken deinem Zyklus folgen",
+  menuDescription: "Folgen deine Attacken deinem Zyklus?",
   metaTitle: "Tagebuch für Menstruationsmigräne zum Ausdrucken (kostenloses PDF)",
   description:
     "Ein Kalender über 3 Monate zum Ausdrucken: Trage deine Periode und deine Attacken ein und sieh, ob deine Migräne deinem Zyklus folgt, wie es Ärzte empfehlen.",
@@ -339,7 +339,7 @@ export const cycleDiary: DiaryCopy = {
 export const overusePage: OverusePageCopy = {
   path: "/ressourcen/medikamentenuebergebrauch-rechner",
   navLabel: "Rechner für Medikamentenübergebrauch",
-  menuDescription: "Deine Medikamententage im Vergleich zu den Schwellen",
+  menuDescription: "Nimmst du zu viele Medikamente?",
   metaTitle: "Medikamentenübergebrauch: Prüfe, ob du die Schwellen überschreitest (kostenlos)",
   description:
     "Gib deine Tage mit Schmerz- und Migränemitteln ein: Der Rechner vergleicht sie mit den medizinischen Schwellen für Kopfschmerz bei Medikamentenübergebrauch, je nach Medikament 10 oder 15 Tage pro Monat.",

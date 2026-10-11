@@ -5,7 +5,7 @@ import type { DiaryCopy, TestPageCopy } from "../tools";
 export const diary: DiaryCopy = {
   path: "/resources/migraine-diary",
   navLabel: "Migraine diary",
-  menuDescription: "Your month of attacks, to print",
+  menuDescription: "Prefer to keep notes on paper?",
   metaTitle: "Printable migraine diary (free PDF)",
   description:
     "Download a free printable migraine diary: a monthly calendar, intensity, medication days and an attack log to show your doctor.",
@@ -72,7 +72,7 @@ export const diary: DiaryCopy = {
 export const testPage: TestPageCopy = {
   path: "/resources/migraine-test",
   navLabel: "Migraine test",
-  menuDescription: "Migraine or headache? 11 questions",
+  menuDescription: "Migraine or headache?",
   metaTitle: "Migraine test: migraine or headache? (free, 2 minutes)",
   description:
     "Answer 11 questions based on the medical criteria for migraine and find out whether your headaches look like migraine, tension-type headache or something else.",
@@ -280,7 +280,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/resources/menstrual-migraine-diary",
   navLabel: "Menstrual migraine diary",
-  menuDescription: "To see if your attacks follow your cycle",
+  menuDescription: "Do your attacks follow your cycle?",
   metaTitle: "Printable menstrual migraine diary (free PDF)",
   description:
     "A printable 3-month calendar to log your periods and your attacks, and see whether your migraines follow your cycle, as doctors ask.",
@@ -345,7 +345,7 @@ export const cycleDiary: DiaryCopy = {
 export const overusePage: OverusePageCopy = {
   path: "/resources/medication-overuse-calculator",
   navLabel: "Medication overuse calculator",
-  menuDescription: "Your medication days against the thresholds",
+  menuDescription: "Taking too much medication?",
   metaTitle: "Medication overuse headache: check your thresholds (free calculator)",
   description:
     "Enter your days of pain and migraine medication: the calculator compares them with the medical thresholds for medication overuse headache, 10 or 15 days a month depending on the drug.",

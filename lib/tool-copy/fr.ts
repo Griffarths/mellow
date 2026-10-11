@@ -5,7 +5,7 @@ import type { DiaryCopy, TestPageCopy } from "../tools";
 export const diary: DiaryCopy = {
   path: "/ressources/journal-de-migraine",
   navLabel: "Journal de migraine",
-  menuDescription: "Ton mois de crises, à imprimer",
+  menuDescription: "Tu préfères noter sur papier ?",
   metaTitle: "Journal de migraine à imprimer (PDF gratuit)",
   description:
     "Télécharge gratuitement un journal de migraine à imprimer : calendrier du mois, intensité, médicaments et tableau des crises à montrer à ton médecin.",
@@ -71,7 +71,7 @@ export const diary: DiaryCopy = {
 export const testPage: TestPageCopy = {
   path: "/ressources/test-migraine",
   navLabel: "Test migraine",
-  menuDescription: "Migraine ou mal de tête ? 11 questions",
+  menuDescription: "Migraine ou mal de tête ?",
   metaTitle: "Test migraine : migraine ou mal de tête ? (gratuit, 2 minutes)",
   description:
     "Réponds à 11 questions basées sur les critères médicaux de la migraine et découvre si tes maux de tête ressemblent à une migraine, à une céphalée de tension ou à autre chose.",
@@ -279,7 +279,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/ressources/journal-migraine-et-regles",
   navLabel: "Journal migraine et règles",
-  menuDescription: "Pour voir si tes crises suivent ton cycle",
+  menuDescription: "Tes crises suivent-elles ton cycle ?",
   metaTitle: "Journal de migraine menstruelle à imprimer (PDF gratuit)",
   description:
     "Un calendrier de 3 mois à imprimer pour noter tes règles et tes crises, et voir si tes migraines suivent ton cycle, comme le demandent les médecins.",
@@ -343,7 +343,7 @@ export const cycleDiary: DiaryCopy = {
 export const overusePage: OverusePageCopy = {
   path: "/ressources/calculateur-abus-medicamenteux",
   navLabel: "Calculateur d'abus médicamenteux",
-  menuDescription: "Tes jours de médicaments face aux seuils",
+  menuDescription: "Prends-tu trop de médicaments ?",
   metaTitle: "Abus médicamenteux : calcule si tu dépasses les seuils (gratuit)",
   description:
     "Indique tes jours de médicaments contre la douleur et la migraine : le calculateur les compare aux seuils médicaux de la céphalée par abus médicamenteux, 10 ou 15 jours par mois selon le médicament.",

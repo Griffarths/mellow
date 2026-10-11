@@ -11,7 +11,7 @@ const nextStep: Rich = ["Il passo successivo: ", diaryLink, ", per annotare i tu
 export const diary: DiaryCopy = {
   path: DIARY_PATH,
   navLabel: "Diario dell'emicrania",
-  menuDescription: "Il tuo mese di attacchi, da stampare",
+  menuDescription: "Preferisci annotare su carta?",
   metaTitle: "Diario dell'emicrania da stampare (PDF gratuito)",
   description:
     "Scarica gratis un diario dell'emicrania da stampare: calendario del mese, intensità, farmaci e una tabella degli attacchi da mostrare al tuo medico.",
@@ -71,7 +71,7 @@ export const diary: DiaryCopy = {
 export const testPage: TestPageCopy = {
   path: "/risorse/test-emicrania",
   navLabel: "Test emicrania",
-  menuDescription: "Emicrania o mal di testa? 11 domande",
+  menuDescription: "Emicrania o mal di testa?",
   metaTitle: "Test emicrania: emicrania o mal di testa? (gratis, 2 minuti)",
   description:
     "Rispondi a 11 domande basate sui criteri medici dell'emicrania e scopri se il tuo mal di testa somiglia a un'emicrania, a una cefalea tensiva o a qualcos'altro.",
@@ -279,7 +279,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/risorse/diario-emicrania-mestruale",
   navLabel: "Diario dell'emicrania mestruale",
-  menuDescription: "Per vedere se i tuoi attacchi seguono il tuo ciclo",
+  menuDescription: "I tuoi attacchi seguono il tuo ciclo?",
   metaTitle: "Diario dell'emicrania mestruale da stampare (PDF gratuito)",
   description:
     "Un calendario di 3 mesi da stampare per annotare mestruazioni e attacchi, e capire se le tue emicranie seguono il ciclo, come chiedono i medici.",
@@ -339,7 +339,7 @@ export const cycleDiary: DiaryCopy = {
 export const overusePage: OverusePageCopy = {
   path: "/risorse/calcolatore-abuso-farmaci",
   navLabel: "Calcolatore di abuso di farmaci",
-  menuDescription: "I tuoi giorni con farmaci rispetto alle soglie",
+  menuDescription: "Prendi troppi farmaci?",
   metaTitle: "Abuso di farmaci: calcola se superi le soglie (gratis)",
   description:
     "Indica i giorni in cui prendi farmaci contro il dolore e l'emicrania: il calcolatore li confronta con le soglie mediche della cefalea da uso eccessivo di farmaci, 10 o 15 giorni al mese a seconda del farmaco.",

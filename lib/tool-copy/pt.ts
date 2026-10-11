@@ -11,7 +11,7 @@ const nextStep: Rich = ["O passo seguinte: ", diaryLink, ", para registares as t
 export const diary: DiaryCopy = {
   path: DIARY_PATH,
   navLabel: "Diário de enxaqueca",
-  menuDescription: "O teu mês de crises, para imprimir",
+  menuDescription: "Preferes anotar em papel?",
   metaTitle: "Diário de enxaqueca para imprimir (PDF gratuito)",
   description:
     "Descarrega grátis um diário de enxaqueca para imprimir: calendário do mês, intensidade, medicação e um registo das crises para mostrares ao teu médico.",
@@ -71,7 +71,7 @@ export const diary: DiaryCopy = {
 export const testPage: TestPageCopy = {
   path: "/recursos/teste-de-enxaqueca",
   navLabel: "Teste de enxaqueca",
-  menuDescription: "Enxaqueca ou dor de cabeça? 11 perguntas",
+  menuDescription: "Enxaqueca ou dor de cabeça?",
   metaTitle: "Teste de enxaqueca: enxaqueca ou dor de cabeça? (grátis, 2 minutos)",
   description:
     "Responde a 11 perguntas baseadas nos critérios médicos da enxaqueca e descobre se as tuas dores de cabeça se parecem com enxaqueca, cefaleia de tensão ou outra coisa.",
@@ -279,7 +279,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/recursos/diario-enxaqueca-menstrual",
   navLabel: "Diário de enxaqueca menstrual",
-  menuDescription: "Para ver se as tuas crises seguem o teu ciclo",
+  menuDescription: "As tuas crises seguem o teu ciclo?",
   metaTitle: "Diário de enxaqueca menstrual para imprimir (PDF gratuito)",
   description:
     "Um calendário de 3 meses para imprimir e registar o teu período e as tuas crises, e perceber se as tuas enxaquecas acompanham o ciclo, como pedem os médicos.",
@@ -339,7 +339,7 @@ export const cycleDiary: DiaryCopy = {
 export const overusePage: OverusePageCopy = {
   path: "/recursos/calculadora-abuso-medicamentos",
   navLabel: "Calculadora de abuso de medicamentos",
-  menuDescription: "Os teus dias com medicação face aos limiares",
+  menuDescription: "Tomas demasiados medicamentos?",
   metaTitle: "Abuso de medicamentos: calcula se ultrapassas os limiares (grátis)",
   description:
     "Indica os teus dias com medicamentos para a dor e a enxaqueca: a calculadora compara-os com os limiares médicos da cefaleia por uso excessivo de medicação, 10 ou 15 dias por mês consoante o medicamento.",

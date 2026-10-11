@@ -11,7 +11,7 @@ const nextStep: Rich = ["Próximo passo: ", diaryLink, ", para anotar suas crise
 export const diary: DiaryCopy = {
   path: DIARY_PATH,
   navLabel: "Diário de enxaqueca",
-  menuDescription: "Seu mês de crises, para imprimir",
+  menuDescription: "Prefere anotar no papel?",
   metaTitle: "Diário de enxaqueca para imprimir (PDF grátis)",
   description:
     "Baixe grátis um diário de enxaqueca para imprimir: calendário do mês, intensidade, medicamentos e um registro das crises para mostrar ao seu médico.",
@@ -71,7 +71,7 @@ export const diary: DiaryCopy = {
 export const testPage: TestPageCopy = {
   path: "/recursos/teste-de-enxaqueca",
   navLabel: "Teste de enxaqueca",
-  menuDescription: "Enxaqueca ou dor de cabeça? 11 perguntas",
+  menuDescription: "Enxaqueca ou dor de cabeça?",
   metaTitle: "Teste de enxaqueca: enxaqueca ou dor de cabeça? (grátis, 2 minutos)",
   description:
     "Responda a 11 perguntas baseadas nos critérios médicos da enxaqueca e descubra se suas dores de cabeça se parecem com enxaqueca, cefaleia tensional ou outra coisa.",
@@ -279,7 +279,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/recursos/diario-enxaqueca-menstrual",
   navLabel: "Diário de enxaqueca menstrual",
-  menuDescription: "Para ver se suas crises seguem seu ciclo",
+  menuDescription: "Suas crises seguem seu ciclo?",
   metaTitle: "Diário de enxaqueca menstrual para imprimir (PDF grátis)",
   description:
     "Um calendário de 3 meses para imprimir e anotar sua menstruação e suas crises, e ver se suas enxaquecas acompanham o ciclo, como os médicos pedem.",
@@ -339,7 +339,7 @@ export const cycleDiary: DiaryCopy = {
 export const overusePage: OverusePageCopy = {
   path: "/recursos/calculadora-abuso-medicamentos",
   navLabel: "Calculadora de abuso de medicamentos",
-  menuDescription: "Seus dias com remédio em relação aos limites",
+  menuDescription: "Você toma remédios demais?",
   metaTitle: "Abuso de medicamentos: calcule se você passa dos limites (grátis)",
   description:
     "Informe seus dias com remédio para dor e enxaqueca: a calculadora compara com os limites médicos da cefaleia por uso excessivo de medicamentos, 10 ou 15 dias por mês dependendo do remédio.",

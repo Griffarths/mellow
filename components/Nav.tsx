@@ -2,6 +2,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/stores";
 import { DOCTOR_PATH } from "@/lib/doctor";
+import { typographize } from "@/lib/typography";
 import { TOOLS_LABEL, isToolLocale, toolsMenu } from "@/lib/tools";
 import { MobileMenu } from "./MobileMenu";
 import { NavShell } from "./NavShell";
@@ -25,7 +26,8 @@ export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
     ? toolsMenu(locale).map((tool) => ({
         href: tool.path,
         label: tool.navLabel,
-        description: tool.menuDescription,
+        // French: a non-breaking space before "?".
+        description: typographize(tool.menuDescription, locale),
       }))
     : [];
   const doctor = DOCTOR_PATH[locale] ?? DOCTOR_PATH.en;
