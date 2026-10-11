@@ -275,14 +275,15 @@ function AppContent() {
         </section>
 
         {/* The data: the title centred, then one row per promise, the name
-            large on the left and its text on the right (stacked on a phone). */}
+            large on the left and its text on the right (stacked on a phone),
+            a rule between rows only. */}
         <section className="mx-auto max-w-4xl px-6 pb-16 md:pb-24">
           <h2 className="text-center text-h2 text-ink">{t("data.title")}</h2>
           <div className="mt-10">
             {(["cloud", "sold", "languages"] as const).map((id) => (
               <div
                 key={id}
-                className="grid gap-2 border-t border-surface-line py-6 md:grid-cols-2 md:items-baseline md:gap-10 md:py-7"
+                className="grid gap-2 border-t border-surface-line py-6 first:border-t-0 first:pt-0 md:grid-cols-2 md:items-baseline md:gap-10 md:py-7 md:first:pt-0"
               >
                 <h3 className="text-balance text-h3 text-ink md:text-[26px] md:leading-tight">{t(`data.${id}.title`)}</h3>
                 <p className="text-[17px] leading-[1.7] text-ink-body">{t(`data.${id}.text`)}</p>
