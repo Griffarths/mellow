@@ -242,12 +242,6 @@
       "pressure": "Pressão",
       "humidity": "Humidade",
       "points": "{value} pontos",
-      "reportAnalysis": "Análise",
-      "reportHistory": "Histórico",
-      "reportMidas": "Pontuação MIDAS",
-      "reportAnalysisSub": "Frequência, gatilhos, o que te alivia",
-      "reportHistorySub": "Todas as tuas enxaquecas, uma por linha",
-      "reportMidasSub": "A tua incapacidade nos últimos 3 meses",
       "monthMigraines": "{count, plural, one {# enxaqueca} other {# enxaquecas}}",
       "range": "de {from} a {to}",
       "steps": [
@@ -309,6 +303,30 @@
       "noEffect": "Sem efeito {count} vezes em {total}.",
       "medsTitle": "As tuas tomas de medicamento",
       "medsLine": "A linha marca 10 tomas por mês, o limite a não passar."
+    },
+    "pdf": {
+      "analysisTitle": "Acompanhamento das enxaquecas",
+      "historyTitle": "Histórico de enxaquecas",
+      "midasTitle": "Relatório MIDAS",
+      "period": "de {from} a {to}",
+      "midasPeriod": "período de {from} a {to} (90 dias)",
+      "numbersTitle": "O período em números",
+      "numDays": "dias afetados\nno período",
+      "numCrises": "crises\nno total",
+      "numIntensity": "intensidade\nmédia",
+      "numDuration": "duração mediana\nde uma crise",
+      "evolutionTitle": "Evolução",
+      "triggersTitle": "Fatores desencadeantes relatados",
+      "colDate": "DATA",
+      "colIntensity": "INT.",
+      "colDuration": "DURAÇÃO",
+      "colTriggers": "DESENCADEADORES",
+      "scoreLabel": "Score MIDAS",
+      "gradeLabel": "Grau",
+      "disability": "Incapacidade moderada",
+      "calendarTitle": "Dias perdidos ou reduzidos",
+      "missed": "Perdido",
+      "reduced": "Reduzido"
     }
   },
   "mellows": {

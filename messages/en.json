@@ -237,12 +237,6 @@
       "pressure": "Pressure",
       "humidity": "Humidity",
       "points": "{value} points",
-      "reportAnalysis": "Analysis",
-      "reportHistory": "History",
-      "reportMidas": "MIDAS score",
-      "reportAnalysisSub": "Frequency, triggers, what relieves you",
-      "reportHistorySub": "All your migraines, one per line",
-      "reportMidasSub": "Your disability over the last 3 months",
       "monthMigraines": "{count, plural, one {# migraine} other {# migraines}}",
       "range": "{from} to {to}",
       "steps": [
@@ -304,6 +298,30 @@
       "noEffect": "No effect {count} times out of {total}.",
       "medsTitle": "Your medication doses",
       "medsLine": "The line marks 10 doses a month, the limit not to cross."
+    },
+    "pdf": {
+      "analysisTitle": "Migraine tracking",
+      "historyTitle": "Migraine history",
+      "midasTitle": "MIDAS Report",
+      "period": "from {from} to {to}",
+      "midasPeriod": "period from {from} to {to} (90 days)",
+      "numbersTitle": "The period in figures",
+      "numDays": "affected days\nover the period",
+      "numCrises": "attacks\nin total",
+      "numIntensity": "average\nintensity",
+      "numDuration": "median length\nof an attack",
+      "evolutionTitle": "Trend",
+      "triggersTitle": "Reported triggers",
+      "colDate": "DATE",
+      "colIntensity": "INT.",
+      "colDuration": "DURATION",
+      "colTriggers": "TRIGGERS",
+      "scoreLabel": "MIDAS score",
+      "gradeLabel": "Grade",
+      "disability": "Moderate disability",
+      "calendarTitle": "Days missed or slowed",
+      "missed": "Missed",
+      "reduced": "Slowed"
     }
   },
   "mellows": {

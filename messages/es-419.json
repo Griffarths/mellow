@@ -242,12 +242,6 @@
       "pressure": "Presión",
       "humidity": "Humedad",
       "points": "{value} puntos",
-      "reportAnalysis": "Análisis",
-      "reportHistory": "Historial",
-      "reportMidas": "Puntuación MIDAS",
-      "reportAnalysisSub": "Frecuencia, desencadenantes, lo que te alivia",
-      "reportHistorySub": "Todas tus migrañas, una por línea",
-      "reportMidasSub": "Tu discapacidad en los últimos 3 meses",
       "monthMigraines": "{count, plural, one {# migraña} other {# migrañas}}",
       "range": "del {from} al {to}",
       "steps": [
@@ -309,6 +303,30 @@
       "noEffect": "Sin efecto {count} veces de {total}.",
       "medsTitle": "Tus tomas de medicamento",
       "medsLine": "La línea marca 10 tomas al mes, el límite que no conviene pasar."
+    },
+    "pdf": {
+      "analysisTitle": "Seguimiento de migrañas",
+      "historyTitle": "Historial de migrañas",
+      "midasTitle": "Reporte MIDAS",
+      "period": "del {from} al {to}",
+      "midasPeriod": "periodo del {from} al {to} (90 días)",
+      "numbersTitle": "El periodo en cifras",
+      "numDays": "días afectados\nen el periodo",
+      "numCrises": "crisis\nen total",
+      "numIntensity": "intensidad\npromedio",
+      "numDuration": "duración mediana\nde una crisis",
+      "evolutionTitle": "Evolución",
+      "triggersTitle": "Desencadenantes declarados",
+      "colDate": "FECHA",
+      "colIntensity": "INT.",
+      "colDuration": "DURACIÓN",
+      "colTriggers": "DESENCADENANTES",
+      "scoreLabel": "Score MIDAS",
+      "gradeLabel": "Grado",
+      "disability": "Discapacidad moderada",
+      "calendarTitle": "Días perdidos o ralentizados",
+      "missed": "Perdido",
+      "reduced": "Ralentizado"
     }
   },
   "mellows": {

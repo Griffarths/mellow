@@ -242,12 +242,6 @@
       "pressure": "Druck",
       "humidity": "Feuchtigkeit",
       "points": "{value} Punkte",
-      "reportAnalysis": "Analyse",
-      "reportHistory": "Verlauf",
-      "reportMidas": "MIDAS-Score",
-      "reportAnalysisSub": "Häufigkeit, Auslöser, was dir hilft",
-      "reportHistorySub": "Alle deine Migränen, eine pro Zeile",
-      "reportMidasSub": "Deine Beeinträchtigung der letzten 3 Monate",
       "monthMigraines": "{count, plural, one {# Migräne} other {# Migränen}}",
       "range": "{from} bis {to}",
       "steps": [
@@ -309,6 +303,30 @@
       "noEffect": "{count} von {total} Malen ohne Wirkung.",
       "medsTitle": "Deine Medikamenteneinnahmen",
       "medsLine": "Die Linie markiert 10 Einnahmen pro Monat, die Grenze, die du nicht überschreiten solltest."
+    },
+    "pdf": {
+      "analysisTitle": "Migräne-Tagebuch",
+      "historyTitle": "Migräne-Verlauf",
+      "midasTitle": "MIDAS-Bericht",
+      "period": "vom {from} bis {to}",
+      "midasPeriod": "Zeitraum vom {from} bis {to} (90 Tage)",
+      "numbersTitle": "Der Zeitraum in Zahlen",
+      "numDays": "betroffene Tage\nim Zeitraum",
+      "numCrises": "Attacken\ninsgesamt",
+      "numIntensity": "durchschnittliche\nStärke",
+      "numDuration": "mediane Dauer\neiner Attacke",
+      "evolutionTitle": "Verlauf",
+      "triggersTitle": "Berichtete Auslöser",
+      "colDate": "DATUM",
+      "colIntensity": "INT.",
+      "colDuration": "DAUER",
+      "colTriggers": "AUSLÖSER",
+      "scoreLabel": "MIDAS-Score",
+      "gradeLabel": "Grad",
+      "disability": "Mäßige Beeinträchtigung",
+      "calendarTitle": "Verpasste oder verlangsamte Tage",
+      "missed": "Verpasst",
+      "reduced": "Verlangsamt"
     }
   },
   "mellows": {

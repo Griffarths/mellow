@@ -392,27 +392,202 @@ export function MellowsCare({ items }: { items: Array<{ title: string; text: str
   );
 }
 
-// The three reports, as in the app's Reports screen.
-export function ReportsList() {
-  const ui = useTranslations("appPage.ui");
-  const reports: Array<[string, string]> = [
-    [ui("reportAnalysis"), ui("reportAnalysisSub")],
-    [ui("reportHistory"), ui("reportHistorySub")],
-    [ui("reportMidas"), ui("reportMidasSub")],
-  ];
+// The three PDF reports of the app, drawn small and fanned out as if laid on
+// a table: the analysis in front, the history on the left, MIDAS on the
+// right. Same layout, colours and wording as the real PDFs (RapportAnalysePDF,
+// RapportHistoriquePDF, MidasReportService), filled with the example month of
+// the calendar above: 8 attacks in August 2026.
+const ATTACKS_LOG: Array<[number, string, number, number, Array<"stress" | "sleepLack" | "screens">]> = [
+  [2, "08:10", 8, 13, ["stress"]],
+  [5, "17:40", 5, 5, ["stress", "screens"]],
+  [9, "07:30", 2, 3, []],
+  [15, "06:50", 9, 25, ["stress", "sleepLack"]],
+  [19, "14:20", 6, 7, ["sleepLack", "screens"]],
+  [23, "09:05", 8, 12, ["stress", "sleepLack"]],
+  [26, "18:30", 3, 2, ["screens"]],
+  [30, "07:15", 7, 5, ["stress", "sleepLack"]],
+];
+// Attacks per month, March to August, for the analysis' trend.
+const MONTHLY = [5, 6, 4, 7, 6, 8];
+// The MIDAS grades' colours (MidasService), the third one being this score's.
+const GRADES = ["#8BC889", "#F1C45E", "#F29E4C", "#D87070"];
+// 90 days, 5 missed and 9 slowed: a score of 14, grade III.
+const MISSED = new Set([31, 47, 62, 75, 84]);
+const SLOWED = new Set([8, 19, 32, 48, 55, 63, 70, 76, 89]);
+
+const SHEET =
+  "absolute h-[354px] w-[250px] overflow-hidden rounded-md bg-white p-5 text-left shadow-[0_2px_6px_rgb(0_0_0/0.06),0_28px_50px_-24px_rgb(0_0_0/0.3)] ring-1 ring-black/[0.04] transition-transform duration-500 ease-out motion-reduce:transition-none";
+
+function SheetHeader({ title, period }: { title: string; period: string }) {
   return (
-    <ul aria-hidden className="divide-y divide-surface-line">
-      {reports.map(([name, sub], i) => (
-        <li key={name} className="app-pop flex items-center gap-5 py-5" style={delay(i, 140)}>
-          <span className="grid h-14 w-12 shrink-0 place-items-center rounded-lg bg-croix text-[11px] font-bold tracking-wide text-ink">
-            PDF
-          </span>
-          <span>
-            <span className="block text-lg font-bold text-ink">{name}</span>
-            <span className="block text-ink-3">{sub}</span>
-          </span>
-        </li>
-      ))}
-    </ul>
+    <>
+      <div className="flex items-center gap-1.5">
+        <Blob name="Fleur1" className="h-4 w-4" />
+        <span className="text-[11px] font-bold text-ink">Mellow</span>
+        <span className="ml-auto text-[8px] font-semibold text-[#6B6B6B]">{title}</span>
+      </div>
+      <div className="mt-2 h-[1.5px] bg-ink" />
+      <p className="mt-1.5 text-[7px] text-[#6B6B6B]">{period}</p>
+    </>
+  );
+}
+
+function SheetTitle({ children }: { children: ReactNode }) {
+  return (
+    <p className="mt-4 border-b-[1.5px] border-fleur pb-1 text-[6.5px] font-semibold uppercase tracking-[0.12em] text-[#6B6B6B]">
+      {children}
+    </p>
+  );
+}
+
+export function ReportsFan() {
+  const ui = useTranslations("appPage.ui");
+  const pdf = useTranslations("appPage.pdf");
+  const locale = intlLocale(useLocale());
+  const long = new Intl.DateTimeFormat(locale, { day: "numeric", month: "long", year: "numeric" });
+  const short = new Intl.DateTimeFormat(locale, { day: "numeric", month: "short" });
+  const monthName = new Intl.DateTimeFormat(locale, { month: "narrow" });
+  const hours = new Intl.NumberFormat(locale, { style: "unit", unit: "hour", unitDisplay: "short" });
+  const percent = new Intl.NumberFormat(locale, { style: "percent" });
+  const august = pdf("period", { from: long.format(new Date(2026, 7, 1)), to: long.format(new Date(2026, 7, 31)) });
+
+  return (
+    <div aria-hidden className="relative mx-auto h-[200px] max-w-[720px] sm:h-[350px] md:h-[440px]">
+      <div className="group absolute left-1/2 top-0 h-[420px] w-[720px] origin-top -translate-x-1/2 scale-[0.45] sm:scale-[0.8] md:scale-100">
+        {/* The history, on the left. */}
+        <div className={`${SHEET} left-[10px] top-[24px] -rotate-[7deg] group-hover:-translate-x-6 group-hover:-rotate-[10deg]`}>
+          <div className="app-pop" style={delay(1, 160)}>
+            <SheetHeader title={pdf("historyTitle")} period={august} />
+            <div className="mt-4 grid grid-cols-[26%_12%_16%_1fr] border-b-[1.5px] border-fleur pb-1 text-[6px] font-semibold tracking-[0.08em] text-[#6B6B6B]">
+              <span>{pdf("colDate")}</span>
+              <span className="pr-2 text-right">{pdf("colIntensity")}</span>
+              <span className="pr-2 text-right">{pdf("colDuration")}</span>
+              <span>{pdf("colTriggers")}</span>
+            </div>
+            {ATTACKS_LOG.map(([day, time, score, length, triggers]) => (
+              <div key={day} className="grid grid-cols-[26%_12%_16%_1fr] items-start border-b border-[#E6E6E6] py-[5px] text-[7.5px]">
+                <span>
+                  <span className="block font-semibold text-ink">{short.format(new Date(2026, 7, day))}</span>
+                  <span className="block text-[6.5px] text-[#A0A0A0]">{time}</span>
+                </span>
+                <span className="pr-2 text-right font-semibold text-ink">{score}</span>
+                <span className="pr-2 text-right text-ink">{hours.format(length)}</span>
+                <span className={triggers.length ? "text-[#6B6B6B]" : "text-[#E6E6E6]"}>
+                  {triggers.length ? triggers.map((t) => ui(t)).join(", ") : "\u2013"}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* MIDAS, on the right. */}
+        <div className={`${SHEET} right-[10px] top-[24px] rotate-[7deg] group-hover:translate-x-6 group-hover:rotate-[10deg]`}>
+          <div className="app-pop" style={delay(2, 160)}>
+            <div className="flex items-baseline gap-2">
+              <span className="text-[13px] font-bold text-ink">Mellow</span>
+              <span className="text-[9px] font-bold text-ink">{pdf("midasTitle")}</span>
+            </div>
+            <p className="mt-1 text-[6.5px] text-[#767676]">
+              {pdf("midasPeriod", { from: long.format(new Date(2026, 5, 3)), to: long.format(new Date(2026, 7, 31)) })}
+            </p>
+            <div className="mt-2 h-px bg-[#EEEEEE]" />
+            <p className="mt-4 text-[6.5px] font-semibold uppercase tracking-[0.08em] text-[#767676]">{pdf("scoreLabel")}</p>
+            <div className="mt-1 flex items-end gap-3">
+              <span className="text-[46px] font-bold leading-none text-ink">14</span>
+              <span className="pb-1">
+                <span className="block text-[9px] font-bold text-[#8F4A0E]">{pdf("gradeLabel")} III</span>
+                <span className="block text-[8px] text-ink">{pdf("disability")}</span>
+              </span>
+            </div>
+            <div className="mt-3 flex gap-[3px]">
+              {["I", "II", "III", "IV"].map((grade, i) => (
+                <span
+                  key={grade}
+                  className={`flex-1 rounded-sm py-[3px] text-center text-[6.5px] ${i === 2 ? "font-bold text-ink" : "text-[#767676]"}`}
+                  style={{ backgroundColor: GRADES[i], opacity: i === 2 ? 1 : 0.3 }}
+                >
+                  {grade}
+                </span>
+              ))}
+            </div>
+            <p className="mt-5 text-[8px] font-bold text-ink">{pdf("calendarTitle")}</p>
+            <div className="mt-2 grid grid-cols-[repeat(15,minmax(0,1fr))] gap-[3px]">
+              {Array.from({ length: 90 }, (_, i) => (
+                <span
+                  key={i}
+                  className="aspect-square rounded-full"
+                  style={{ backgroundColor: MISSED.has(i) ? GRADES[2] : SLOWED.has(i) ? "#F8C99B" : "#EDEDED" }}
+                />
+              ))}
+            </div>
+            <div className="mt-2 flex gap-3 text-[6.5px] text-[#767676]">
+              <span className="flex items-center gap-1">
+                <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: GRADES[2] }} />
+                {pdf("missed")}
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#F8C99B]" />
+                {pdf("reduced")}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* The analysis, in front. */}
+        <div className={`${SHEET} left-[235px] top-[44px] z-10 group-hover:-translate-y-2`}>
+          <div className="app-pop" style={delay(0, 160)}>
+            <SheetHeader title={pdf("analysisTitle")} period={august} />
+            <SheetTitle>{pdf("numbersTitle")}</SheetTitle>
+            <div className="mt-2 grid grid-cols-4 gap-1">
+              {(
+                [
+                  ["9", "numDays"],
+                  ["8", "numCrises"],
+                  ["6 / 10", "numIntensity"],
+                  [hours.format(7), "numDuration"],
+                ] as const
+              ).map(([value, key]) => (
+                <span key={key}>
+                  <span className="block whitespace-nowrap text-[14px] font-bold leading-tight text-ink">{value}</span>
+                  <span className="mt-0.5 block whitespace-pre-line text-[5.5px] leading-tight text-[#6B6B6B]">{pdf(key)}</span>
+                </span>
+              ))}
+            </div>
+            <SheetTitle>{pdf("evolutionTitle")}</SheetTitle>
+            <div className="mt-2 flex h-14 items-end gap-2">
+              {MONTHLY.map((count, i) => (
+                <span key={i} className="flex flex-1 flex-col items-center gap-1">
+                  <span className="text-[6px] font-semibold text-[#6B6B6B]">{count}</span>
+                  <span
+                    className={`w-full rounded-[2px] ${i === MONTHLY.length - 1 ? "bg-croix" : "bg-fleur"}`}
+                    style={{ height: count * 4 }}
+                  />
+                </span>
+              ))}
+            </div>
+            <div className="mt-1 flex gap-2 text-center text-[6px] text-[#A0A0A0]">
+              {MONTHLY.map((_, i) => (
+                <span key={i} className="flex-1 uppercase">
+                  {monthName.format(new Date(2026, 2 + i, 1))}
+                </span>
+              ))}
+            </div>
+            <SheetTitle>{pdf("triggersTitle")}</SheetTitle>
+            {(
+              [
+                ["stress", 5],
+                ["sleepLack", 4],
+                ["screens", 3],
+              ] as const
+            ).map(([key, count]) => (
+              <div key={key} className="flex justify-between border-b border-[#E6E6E6] py-[4px] text-[7.5px] last:border-0">
+                <span className="text-ink">{ui(key)}</span>
+                <span className="font-semibold tabular-nums text-ink">{percent.format(count / TOTAL)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

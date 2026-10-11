@@ -242,12 +242,6 @@
       "pressure": "Pressione",
       "humidity": "Umidità",
       "points": "{value} punti",
-      "reportAnalysis": "Analisi",
-      "reportHistory": "Storico",
-      "reportMidas": "Punteggio MIDAS",
-      "reportAnalysisSub": "Frequenza, fattori scatenanti, cosa ti dà sollievo",
-      "reportHistorySub": "Tutte le tue emicranie, una per riga",
-      "reportMidasSub": "La tua disabilità negli ultimi 3 mesi",
       "monthMigraines": "{count, plural, one {# emicrania} other {# emicranie}}",
       "range": "da {from} a {to}",
       "steps": [
@@ -309,6 +303,30 @@
       "noEffect": "Senza effetto {count} volte su {total}.",
       "medsTitle": "Le tue assunzioni di farmaci",
       "medsLine": "La linea segna 10 assunzioni al mese, la soglia da non superare."
+    },
+    "pdf": {
+      "analysisTitle": "Monitoraggio dell'emicrania",
+      "historyTitle": "Storico delle emicranie",
+      "midasTitle": "Rapporto MIDAS",
+      "period": "dal {from} al {to}",
+      "midasPeriod": "periodo dal {from} al {to} (90 giorni)",
+      "numbersTitle": "Il periodo in cifre",
+      "numDays": "giorni interessati\nnel periodo",
+      "numCrises": "attacchi\nin totale",
+      "numIntensity": "intensità\nmedia",
+      "numDuration": "durata mediana\ndi un attacco",
+      "evolutionTitle": "Andamento",
+      "triggersTitle": "Fattori scatenanti riferiti",
+      "colDate": "DATA",
+      "colIntensity": "INT.",
+      "colDuration": "DURATA",
+      "colTriggers": "FATTORI SCATENANTI",
+      "scoreLabel": "Score MIDAS",
+      "gradeLabel": "Grado",
+      "disability": "Disabilità moderata",
+      "calendarTitle": "Giorni saltati o rallentati",
+      "missed": "Saltato",
+      "reduced": "Rallentato"
     }
   },
   "mellows": {

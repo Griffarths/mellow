@@ -21,7 +21,7 @@ import {
   MedsChart,
   MellowsCare,
   ReliefList,
-  ReportsList,
+  ReportsFan,
   TriggerList,
 } from "@/components/app-page/AppVisuals";
 
@@ -253,13 +253,14 @@ function AppContent() {
           </div>
         </section>
 
-        {/* 8. The reports on the left, the text on the right. */}
-        <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-20 md:py-24">
-          <div className="md:order-2">
+        {/* 8. Centred: the title, then the three PDF reports of the app
+            fanned out below it. */}
+        <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+          <div className="mx-auto max-w-2xl text-center">
             <Heading id="doctor" />
           </div>
-          <Reveal className="md:order-1">
-            <ReportsList />
+          <Reveal className="mt-12">
+            <ReportsFan />
           </Reveal>
         </section>
 
