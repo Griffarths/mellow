@@ -95,19 +95,19 @@
     "metaTitle": "App de registo de enxaquecas · Mellow",
     "metaDescription": "A Mellow é a app para acompanhares as tuas enxaquecas: regista uma crise em dois toques, segue o teu calendário, percebe os teus fatores desencadeantes e prepara as tuas consultas. Gratuita no iPhone.",
     "title": "A app Mellow",
-    "subtitle": "Regista as tuas crises em segundos, percebe o que as desencadeia e prepara as tuas consultas.",
+    "subtitle": "Retoma o controlo das tuas enxaquecas.",
     "promises": [
-      {
-        "title": "Retoma o controlo das tuas enxaquecas.",
-        "text": "Todo o teu acompanhamento num só sítio, dia após dia."
-      },
       {
         "title": "Regista uma crise em dois toques.",
         "text": "Até a partir do widget, sem abrir a app."
       },
       {
-        "title": "Percebe o que as desencadeia.",
-        "text": "Os teus fatores desencadeantes, o que te alivia, o tempo."
+        "title": "Percebe o que desencadeia as tuas crises.",
+        "text": "Os teus fatores desencadeantes e o que te alivia mesmo."
+      },
+      {
+        "title": "Antecipa os dias de risco.",
+        "text": "A pressão e a humidade dos próximos sete dias."
       },
       {
         "title": "Prepara as tuas consultas sem stress.",
