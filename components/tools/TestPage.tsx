@@ -30,7 +30,7 @@ export function TestPage({ locale }: { locale: ToolLocale }) {
             />
           </div>
 
-          <div className="mx-auto mt-20 max-w-[65ch]">
+          <div className="mt-20 max-w-[65ch]">
             <section>
               <h2 className="text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
                 {ty(c.howTitle)}

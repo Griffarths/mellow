@@ -33,7 +33,7 @@ export function OverusePage({ locale }: { locale: ToolLocale }) {
           />
         </div>
 
-        <div className="mx-auto mt-20 max-w-[65ch]">
+        <div className="mx-auto mt-20 max-w-3xl [&>*]:max-w-[65ch]">
           <section>
             <h2 className={H2}>{ty(c.thresholdsTitle)}</h2>
             <p className="mt-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
