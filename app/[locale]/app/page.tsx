@@ -99,30 +99,35 @@ function AppContent() {
         }}
       />
       <main className="overflow-x-clip">
-        {/* Header: the text and the phone with the app's home screen. */}
-        <section>
-          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-16 pt-12 md:grid-cols-2 md:pb-20 md:pt-16">
-            <div className="text-center md:text-left">
-              <h1 className="text-h1 text-ink">{t("title")}</h1>
-              <p className="mx-auto mt-5 max-w-md text-balance text-lg text-ink-2 md:mx-0">{t("subtitle")}</p>
-              {rating && APP_STORE_RATING && (
-                <div className="mt-8 flex items-center justify-center gap-3 md:justify-start">
-                  <Stars
-                    rating={APP_STORE_RATING.value}
-                    label={tStars("starsLabel", { rating })}
-                    size="h-5 w-5"
-                  />
-                  <span className="text-ink-2">
-                    {tCta("rating", { rating, count: APP_STORE_RATING.count })}
-                  </span>
-                </div>
-              )}
-              <StoreBadges className="mt-4 md:justify-start" sizeClass="h-11 w-auto select-none md:h-12" />
-            </div>
-            <div className="mx-auto w-[230px] md:w-[270px]">
-              <Phone src={`/app-screens/${locale}/home.jpg`} alt={tFeatures("phoneAlt")} />
+        {/* Header, centred: the text, then the phone with the app's home
+            screen, cut by the bottom of the section and fading into the
+            page, as on a product page. */}
+        <section className="relative overflow-hidden">
+          <div className="mx-auto max-w-3xl px-6 pt-12 text-center md:pt-16">
+            <h1 className="text-h1 text-ink">{t("title")}</h1>
+            <p className="mx-auto mt-5 max-w-xl text-balance text-lg text-ink-2">{t("subtitle")}</p>
+            {rating && APP_STORE_RATING && (
+              <div className="mt-8 flex items-center justify-center gap-3">
+                <Stars
+                  rating={APP_STORE_RATING.value}
+                  label={tStars("starsLabel", { rating })}
+                  size="h-5 w-5"
+                />
+                <span className="text-ink-2">
+                  {tCta("rating", { rating, count: APP_STORE_RATING.count })}
+                </span>
+              </div>
+            )}
+            <StoreBadges className="mt-4" sizeClass="h-11 w-auto select-none md:h-12" />
+          </div>
+          {/* Wider than the phone, so only the bottom is cut, not the side
+              buttons. */}
+          <div className="mt-12 h-[330px] overflow-hidden md:mt-14 md:h-[420px]">
+            <div className="mx-auto w-[270px] md:w-[340px]">
+              <Phone src={`/app-screens/${locale}/home.jpg`} alt={tFeatures("phoneAlt")} eager />
             </div>
           </div>
+          <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white" />
         </section>
 
         {/* 1. Centred: the title, then the three Mellows of the intensity

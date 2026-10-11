@@ -1,9 +1,10 @@
 // A raw app screen (status bar and island included) in an iPhone: a thin
 // titanium band with a soft highlight, the black bezel, the side buttons.
-// Its width comes from the parent.
+// Its width comes from the parent. `eager` for a phone seen on arrival, so
+// its screen is not left black while it loads.
 const BUTTON = "absolute w-[1.6%] bg-gradient-to-r from-[#4a4a50] to-[#26262a]";
 
-export function Phone({ src, alt }: { src: string; alt: string }) {
+export function Phone({ src, alt, eager = false }: { src: string; alt: string; eager?: boolean }) {
   return (
     <div className="relative">
       <span aria-hidden className={`${BUTTON} -left-[1.2%] top-[17%] h-[3.4%] rounded-l-sm`} />
@@ -17,7 +18,8 @@ export function Phone({ src, alt }: { src: string; alt: string }) {
             alt={alt}
             width={600}
             height={1304}
-            loading="lazy"
+            loading={eager ? "eager" : "lazy"}
+            fetchPriority={eager ? "high" : undefined}
             draggable={false}
             className="block h-auto w-full select-none rounded-[12.5%/5.75%]"
           />
