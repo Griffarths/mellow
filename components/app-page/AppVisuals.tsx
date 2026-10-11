@@ -415,9 +415,24 @@ const GRADES = ["#8BC889", "#F1C45E", "#F29E4C", "#D87070"];
 const MISSED = new Set([31, 47, 62, 75, 84]);
 const SLOWED = new Set([8, 19, 32, 48, 55, 63, 70, 76, 89]);
 
-const SHEET =
-  "absolute h-[354px] w-[250px] overflow-hidden rounded-md bg-white p-5 text-left shadow-[0_2px_6px_rgb(0_0_0/0.06),0_28px_50px_-24px_rgb(0_0_0/0.3)] ring-1 ring-black/[0.04] transition-transform duration-500 ease-out motion-reduce:transition-none";
+// A sheet of paper: white with a soft shadow, like the phone at the top.
+const PAPER =
+  "h-[354px] w-[250px] overflow-hidden rounded-md bg-white p-5 text-left shadow-[0_2px_6px_rgb(0_0_0/0.06),0_28px_50px_-24px_rgb(0_0_0/0.3)] ring-1 ring-black/[0.04]";
+const SHEET = `${PAPER} absolute transition-transform duration-500 ease-out motion-reduce:transition-none`;
 
+// What the three reports share: the dates and numbers in the visitor's language.
+function useReportFormat() {
+  const locale = intlLocale(useLocale());
+  const long = new Intl.DateTimeFormat(locale, { day: "numeric", month: "long", year: "numeric" });
+  return {
+    locale,
+    long,
+    hours: new Intl.NumberFormat(locale, { style: "unit", unit: "hour", unitDisplay: "short" }),
+    august: { from: long.format(new Date(2026, 7, 1)), to: long.format(new Date(2026, 7, 31)) },
+  };
+}
+
+// The same header on the three: the Mellow, the name of the report, the period.
 function SheetHeader({ title, period }: { title: string; period: string }) {
   return (
     <>
@@ -440,160 +455,191 @@ function SheetTitle({ children }: { children: ReactNode }) {
   );
 }
 
-export function ReportsFan() {
+function HistorySheet() {
   const ui = useTranslations("appPage.ui");
   const pdf = useTranslations("appPage.pdf");
-  const locale = intlLocale(useLocale());
-  const long = new Intl.DateTimeFormat(locale, { day: "numeric", month: "long", year: "numeric" });
+  const { locale, hours, august } = useReportFormat();
   const short = new Intl.DateTimeFormat(locale, { day: "numeric", month: "short" });
-  const monthName = new Intl.DateTimeFormat(locale, { month: "narrow" });
-  const hours = new Intl.NumberFormat(locale, { style: "unit", unit: "hour", unitDisplay: "short" });
-  const percent = new Intl.NumberFormat(locale, { style: "percent" });
-  const august = pdf("period", { from: long.format(new Date(2026, 7, 1)), to: long.format(new Date(2026, 7, 31)) });
-
   return (
-    <div aria-hidden className="relative mx-auto h-[195px] max-w-[760px] sm:h-[340px] md:h-[440px]">
-      <div className="group absolute left-1/2 top-0 h-[420px] w-[760px] origin-top -translate-x-1/2 scale-[0.43] sm:scale-[0.78] md:scale-100">
-        {/* The history, on the left. */}
-        <div className={`${SHEET} left-[10px] top-[24px] -rotate-[7deg] group-hover:-translate-x-6 group-hover:-rotate-[10deg]`}>
-          <div className="app-pop" style={delay(1, 160)}>
-            <SheetHeader title={pdf("historyTitle")} period={august} />
-            <div className="mt-4 grid grid-cols-[26%_12%_16%_1fr] border-b-[1.5px] border-fleur pb-1 text-[6px] font-semibold tracking-[0.08em] text-[#6B6B6B]">
-              <span>{pdf("colDate")}</span>
-              <span className="pr-2 text-right">{pdf("colIntensity")}</span>
-              <span className="pr-2 text-right">{pdf("colDuration")}</span>
-              <span>{pdf("colTriggers")}</span>
-            </div>
-            {ATTACKS_LOG.map(([day, time, score, length, triggers]) => (
-              <div key={day} className="grid grid-cols-[26%_12%_16%_1fr] items-start border-b border-[#E6E6E6] py-[5px] text-[7.5px]">
-                <span>
-                  <span className="block font-semibold text-ink">{short.format(new Date(2026, 7, day))}</span>
-                  <span className="block text-[6.5px] text-[#A0A0A0]">{time}</span>
-                </span>
-                <span className="pr-2 text-right font-semibold text-ink">{score}</span>
-                <span className="pr-2 text-right text-ink">{hours.format(length)}</span>
-                <span className={triggers.length ? "text-[#6B6B6B]" : "text-[#E6E6E6]"}>
-                  {triggers.length ? triggers.map((t) => ui(t)).join(", ") : "\u2013"}
-                </span>
-              </div>
-            ))}
-          </div>
+    <>
+      <SheetHeader title={pdf("historyTitle")} period={pdf("period", august)} />
+      <div className="mt-4 grid grid-cols-[26%_12%_16%_1fr] border-b-[1.5px] border-fleur pb-1 text-[6px] font-semibold tracking-[0.08em] text-[#6B6B6B]">
+        <span>{pdf("colDate")}</span>
+        <span className="pr-2 text-right">{pdf("colIntensity")}</span>
+        <span className="pr-2 text-right">{pdf("colDuration")}</span>
+        <span>{pdf("colTriggers")}</span>
+      </div>
+      {ATTACKS_LOG.map(([day, time, score, length, triggers]) => (
+        <div key={day} className="grid grid-cols-[26%_12%_16%_1fr] items-start border-b border-[#E6E6E6] py-[5px] text-[7.5px]">
+          <span>
+            <span className="block font-semibold text-ink">{short.format(new Date(2026, 7, day))}</span>
+            <span className="block text-[6.5px] text-[#A0A0A0]">{time}</span>
+          </span>
+          <span className="pr-2 text-right font-semibold text-ink">{score}</span>
+          <span className="pr-2 text-right text-ink">{hours.format(length)}</span>
+          <span className={triggers.length ? "text-[#6B6B6B]" : "text-[#E6E6E6]"}>
+            {triggers.length ? triggers.map((t) => ui(t)).join(", ") : "\u2013"}
+          </span>
         </div>
+      ))}
+    </>
+  );
+}
 
-        {/* MIDAS, on the right. */}
-        <div className={`${SHEET} right-[10px] top-[24px] rotate-[7deg] group-hover:translate-x-6 group-hover:rotate-[10deg]`}>
-          <div className="app-pop" style={delay(2, 160)}>
-            <div className="flex items-center gap-1.5">
-              <Blob name="Fleur1" className="h-5 w-5" />
-              <span className="text-[13px] font-bold text-ink">Mellow</span>
-              <span className="ml-auto text-right">
-                <span className="block text-[9px] font-bold text-ink">{pdf("midasTitle")}</span>
-                <span className="block text-[6px] text-[#767676]">
-                  {pdf("generated", { date: long.format(new Date(2026, 7, 31)) })}
-                </span>
-              </span>
-            </div>
-            <div className="mt-2 h-px bg-[#EEEEEE]" />
-            <p className="mt-1.5 text-[6.5px] text-[#767676]">
-              {pdf("midasPeriod", { from: long.format(new Date(2026, 5, 3)), to: long.format(new Date(2026, 7, 31)) })}
-            </p>
-            <p className="mt-4 text-[6.5px] font-semibold uppercase tracking-[0.08em] text-[#767676]">{pdf("scoreLabel")}</p>
-            <div className="mt-1 flex items-end gap-3">
-              <span className="text-[46px] font-bold leading-none text-ink">14</span>
-              <span className="pb-1">
-                <span className="block text-[9px] font-bold text-[#8F4A0E]">{pdf("gradeLabel")} III</span>
-                <span className="block text-[8px] text-ink">{pdf("disability")}</span>
-              </span>
-            </div>
-            <div className="mt-3 flex gap-[3px]">
-              {["I", "II", "III", "IV"].map((grade, i) => (
-                <span
-                  key={grade}
-                  className={`flex-1 rounded-sm py-[3px] text-center text-[6.5px] ${i === 2 ? "font-bold text-ink" : "text-[#767676]"}`}
-                  style={{ backgroundColor: GRADES[i], opacity: i === 2 ? 1 : 0.3 }}
-                >
-                  {grade}
-                </span>
-              ))}
-            </div>
-            <p className="mt-5 text-[8px] font-bold text-ink">{pdf("calendarTitle")}</p>
-            <div className="mt-2 grid grid-cols-[repeat(15,minmax(0,1fr))] gap-[3px]">
-              {Array.from({ length: 90 }, (_, i) => (
-                <span
-                  key={i}
-                  className="aspect-square rounded-full"
-                  style={{ backgroundColor: MISSED.has(i) ? GRADES[2] : SLOWED.has(i) ? "#F8C99B" : "#EDEDED" }}
-                />
-              ))}
-            </div>
-            <div className="mt-2 flex gap-3 text-[6.5px] text-[#767676]">
-              <span className="flex items-center gap-1">
-                <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: GRADES[2] }} />
-                {pdf("missed")}
-              </span>
-              <span className="flex items-center gap-1">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#F8C99B]" />
-                {pdf("reduced")}
-              </span>
+function MidasSheet() {
+  const pdf = useTranslations("appPage.pdf");
+  const { long } = useReportFormat();
+  return (
+    <>
+      <SheetHeader
+        title={pdf("midasTitle")}
+        period={pdf("midasPeriod", { from: long.format(new Date(2026, 5, 3)), to: long.format(new Date(2026, 7, 31)) })}
+      />
+      <p className="mt-4 text-[6.5px] font-semibold uppercase tracking-[0.08em] text-[#767676]">{pdf("scoreLabel")}</p>
+      <div className="mt-1 flex items-end gap-3">
+        <span className="text-[46px] font-bold leading-none text-ink">14</span>
+        <span className="pb-1">
+          <span className="block text-[9px] font-bold text-[#8F4A0E]">{pdf("gradeLabel")} III</span>
+          <span className="block text-[8px] text-ink">{pdf("disability")}</span>
+        </span>
+      </div>
+      <div className="mt-3 flex gap-[3px]">
+        {["I", "II", "III", "IV"].map((grade, i) => (
+          <span
+            key={grade}
+            className={`flex-1 rounded-sm py-[3px] text-center text-[6.5px] ${i === 2 ? "font-bold text-ink" : "text-[#767676]"}`}
+            style={{ backgroundColor: GRADES[i], opacity: i === 2 ? 1 : 0.3 }}
+          >
+            {grade}
+          </span>
+        ))}
+      </div>
+      <p className="mt-5 text-[8px] font-bold text-ink">{pdf("calendarTitle")}</p>
+      <div className="mt-2 grid grid-cols-[repeat(15,minmax(0,1fr))] gap-[3px]">
+        {Array.from({ length: 90 }, (_, i) => (
+          <span
+            key={i}
+            className="aspect-square rounded-full"
+            style={{ backgroundColor: MISSED.has(i) ? GRADES[2] : SLOWED.has(i) ? "#F8C99B" : "#EDEDED" }}
+          />
+        ))}
+      </div>
+      <div className="mt-2 flex gap-3 text-[6.5px] text-[#767676]">
+        <span className="flex items-center gap-1">
+          <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: GRADES[2] }} />
+          {pdf("missed")}
+        </span>
+        <span className="flex items-center gap-1">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#F8C99B]" />
+          {pdf("reduced")}
+        </span>
+      </div>
+    </>
+  );
+}
+
+function AnalysisSheet() {
+  const ui = useTranslations("appPage.ui");
+  const pdf = useTranslations("appPage.pdf");
+  const { locale, hours, august } = useReportFormat();
+  const monthName = new Intl.DateTimeFormat(locale, { month: "narrow" });
+  const percent = new Intl.NumberFormat(locale, { style: "percent" });
+  return (
+    <>
+      <SheetHeader title={pdf("analysisTitle")} period={pdf("period", august)} />
+      <SheetTitle>{pdf("numbersTitle")}</SheetTitle>
+      <div className="mt-2 grid grid-cols-4 gap-1">
+        {(
+          [
+            ["9", "numDays"],
+            ["8", "numCrises"],
+            ["6 / 10", "numIntensity"],
+            [hours.format(7), "numDuration"],
+          ] as const
+        ).map(([value, key]) => (
+          <span key={key}>
+            <span className="block whitespace-nowrap text-[14px] font-bold leading-tight text-ink">{value}</span>
+            <span className="mt-0.5 block whitespace-pre-line text-[5.5px] leading-tight text-[#6B6B6B]">{pdf(key)}</span>
+          </span>
+        ))}
+      </div>
+      <SheetTitle>{pdf("evolutionTitle")}</SheetTitle>
+      <div className="mt-2 flex h-14 items-end gap-2">
+        {MONTHLY.map((count, i) => (
+          <span key={i} className="flex flex-1 flex-col items-center gap-1">
+            <span className="text-[6px] font-semibold text-[#6B6B6B]">{count}</span>
+            <span
+              className={`w-full rounded-[2px] ${i === MONTHLY.length - 1 ? "bg-croix" : "bg-fleur"}`}
+              style={{ height: count * 4 }}
+            />
+          </span>
+        ))}
+      </div>
+      <div className="mt-1 flex gap-2 text-center text-[6px] text-[#A0A0A0]">
+        {MONTHLY.map((_, i) => (
+          <span key={i} className="flex-1 uppercase">
+            {monthName.format(new Date(2026, 2 + i, 1))}
+          </span>
+        ))}
+      </div>
+      <SheetTitle>{pdf("triggersTitle")}</SheetTitle>
+      {(
+        [
+          ["stress", 5],
+          ["sleepLack", 4],
+          ["screens", 3],
+        ] as const
+      ).map(([key, count]) => (
+        <div key={key} className="flex justify-between border-b border-[#E6E6E6] py-[4px] text-[7.5px] last:border-0">
+          <span className="text-ink">{ui(key)}</span>
+          <span className="font-semibold tabular-nums text-ink">{percent.format(count / TOTAL)}</span>
+        </div>
+      ))}
+    </>
+  );
+}
+
+export function ReportsFan() {
+  return (
+    <>
+      {/* On a phone the fan does not fit: the three sheets in a row, swiped
+          one after the other, the next one peeking out. */}
+      <div
+        aria-hidden
+        className="-mx-6 flex snap-x snap-mandatory scroll-pl-6 gap-4 overflow-x-auto px-6 pb-10 pt-2 [scrollbar-width:none] sm:hidden [&::-webkit-scrollbar]:hidden"
+      >
+        {[AnalysisSheet, HistorySheet, MidasSheet].map((Sheet, i) => (
+          <div key={i} className={`${PAPER} shrink-0 snap-start`}>
+            <div className="app-pop" style={delay(i, 160)}>
+              <Sheet />
             </div>
           </div>
-        </div>
+        ))}
+      </div>
 
-        {/* The analysis, in front. */}
-        <div className={`${SHEET} left-[255px] top-[18px] z-10 scale-[1.08] group-hover:-translate-y-2`}>
-          <div className="app-pop" style={delay(0, 160)}>
-            <SheetHeader title={pdf("analysisTitle")} period={august} />
-            <SheetTitle>{pdf("numbersTitle")}</SheetTitle>
-            <div className="mt-2 grid grid-cols-4 gap-1">
-              {(
-                [
-                  ["9", "numDays"],
-                  ["8", "numCrises"],
-                  ["6 / 10", "numIntensity"],
-                  [hours.format(7), "numDuration"],
-                ] as const
-              ).map(([value, key]) => (
-                <span key={key}>
-                  <span className="block whitespace-nowrap text-[14px] font-bold leading-tight text-ink">{value}</span>
-                  <span className="mt-0.5 block whitespace-pre-line text-[5.5px] leading-tight text-[#6B6B6B]">{pdf(key)}</span>
-                </span>
-              ))}
+      {/* From a tablet up, the fan, scaled to the width. */}
+      <div aria-hidden className="relative mx-auto hidden h-[320px] max-w-[760px] sm:block md:h-[380px] lg:h-[440px]">
+        <div className="group absolute left-1/2 top-0 h-[420px] w-[760px] origin-top -translate-x-1/2 scale-[0.72] md:scale-[0.85] lg:scale-100">
+          {/* The history, on the left. */}
+          <div className={`${SHEET} left-[10px] top-[24px] -rotate-[7deg] group-hover:-translate-x-6 group-hover:-rotate-[10deg]`}>
+            <div className="app-pop" style={delay(1, 160)}>
+              <HistorySheet />
             </div>
-            <SheetTitle>{pdf("evolutionTitle")}</SheetTitle>
-            <div className="mt-2 flex h-14 items-end gap-2">
-              {MONTHLY.map((count, i) => (
-                <span key={i} className="flex flex-1 flex-col items-center gap-1">
-                  <span className="text-[6px] font-semibold text-[#6B6B6B]">{count}</span>
-                  <span
-                    className={`w-full rounded-[2px] ${i === MONTHLY.length - 1 ? "bg-croix" : "bg-fleur"}`}
-                    style={{ height: count * 4 }}
-                  />
-                </span>
-              ))}
+          </div>
+          {/* MIDAS, on the right. */}
+          <div className={`${SHEET} right-[10px] top-[24px] rotate-[7deg] group-hover:translate-x-6 group-hover:rotate-[10deg]`}>
+            <div className="app-pop" style={delay(2, 160)}>
+              <MidasSheet />
             </div>
-            <div className="mt-1 flex gap-2 text-center text-[6px] text-[#A0A0A0]">
-              {MONTHLY.map((_, i) => (
-                <span key={i} className="flex-1 uppercase">
-                  {monthName.format(new Date(2026, 2 + i, 1))}
-                </span>
-              ))}
+          </div>
+          {/* The analysis, in front, a little bigger. */}
+          <div className={`${SHEET} left-[255px] top-[18px] z-10 scale-[1.08] group-hover:-translate-y-2`}>
+            <div className="app-pop" style={delay(0, 160)}>
+              <AnalysisSheet />
             </div>
-            <SheetTitle>{pdf("triggersTitle")}</SheetTitle>
-            {(
-              [
-                ["stress", 5],
-                ["sleepLack", 4],
-                ["screens", 3],
-              ] as const
-            ).map(([key, count]) => (
-              <div key={key} className="flex justify-between border-b border-[#E6E6E6] py-[4px] text-[7.5px] last:border-0">
-                <span className="text-ink">{ui(key)}</span>
-                <span className="font-semibold tabular-nums text-ink">{percent.format(count / TOTAL)}</span>
-              </div>
-            ))}
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

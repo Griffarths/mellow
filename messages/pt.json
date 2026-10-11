@@ -310,7 +310,6 @@
       "midasTitle": "Relatório MIDAS",
       "period": "de {from} a {to}",
       "midasPeriod": "período de {from} a {to} (90 dias)",
-      "generated": "Gerado a {date}",
       "numbersTitle": "O período em números",
       "numDays": "dias afetados\nno período",
       "numCrises": "crises\nno total",

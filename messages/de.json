@@ -310,7 +310,6 @@
       "midasTitle": "MIDAS-Bericht",
       "period": "vom {from} bis {to}",
       "midasPeriod": "Zeitraum vom {from} bis {to} (90 Tage)",
-      "generated": "Erstellt am {date}",
       "numbersTitle": "Der Zeitraum in Zahlen",
       "numDays": "betroffene Tage\nim Zeitraum",
       "numCrises": "Attacken\ninsgesamt",
