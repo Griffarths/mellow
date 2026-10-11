@@ -190,8 +190,9 @@ const DURATIONS: Array<["durShort" | "durDay" | "durLong", number, string]> = [
   ["durDay", 2, "bg-tagada"],
   ["durLong", 1, "bg-danger/75"],
 ];
-// How many of the 8 migraines got each score, 1 to 10 (the calendar's ones).
-const INTENSITIES = [0, 1, 1, 0, 1, 1, 1, 2, 1, 0];
+// How many of the 8 migraines got each score, 1 to 10 (the calendar's ones):
+// the 4 intense ones each have their own score, so 4 red bars for "4 out of 8".
+const INTENSITIES = [0, 0, 2, 0, 1, 1, 1, 1, 1, 1];
 const intensityBg = (score: number) => (score <= 3 ? "bg-fleur" : score <= 6 ? "bg-tagada" : "bg-croix");
 
 function Feel({
