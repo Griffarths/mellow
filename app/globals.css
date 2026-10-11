@@ -256,6 +256,74 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
   animation: chart-fade 0.4s ease both;
 }
 
+/* /app page header (RisingHero): driven by the page's scroll, from the top
+   until the header has stayed pinned for --pinned pixels. The phone rises by
+   --rise (measured in JavaScript), the text fades out and goes up a little,
+   the white fade goes, the promises come (each with its own range, inline). */
+@keyframes hero-rise {
+  to {
+    transform: translateY(calc(var(--rise, 0px) * -1));
+  }
+}
+
+@keyframes hero-text {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes hero-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-rise,
+    .hero-text,
+    .hero-fade,
+    .hero-promise {
+      animation-duration: auto;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: scroll(root);
+    }
+    .hero-rise {
+      animation-name: hero-rise;
+      animation-range: 0px var(--pinned);
+    }
+    .hero-text {
+      animation-name: hero-text;
+      animation-range: 0px var(--pinned);
+    }
+    .hero-fade {
+      animation-name: hero-out;
+      animation-range: 0px var(--pinned);
+    }
+    .hero-promise {
+      animation-name: hero-in;
+    }
+  }
+}
+
 /* /app page: the intensity slider, filled up to the value in the colour of
    its level (IntensityDemo sets --fill and --color). */
 .intensity-range {
