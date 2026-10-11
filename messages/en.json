@@ -305,6 +305,7 @@
       "midasTitle": "MIDAS Report",
       "period": "from {from} to {to}",
       "midasPeriod": "period from {from} to {to} (90 days)",
+      "generated": "Generated on {date}",
       "numbersTitle": "The period in figures",
       "numDays": "affected days\nover the period",
       "numCrises": "attacks\nin total",

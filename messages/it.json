@@ -310,6 +310,7 @@
       "midasTitle": "Rapporto MIDAS",
       "period": "dal {from} al {to}",
       "midasPeriod": "periodo dal {from} al {to} (90 giorni)",
+      "generated": "Generato il {date}",
       "numbersTitle": "Il periodo in cifre",
       "numDays": "giorni interessati\nnel periodo",
       "numCrises": "attacchi\nin totale",

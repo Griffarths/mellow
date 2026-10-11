@@ -452,8 +452,8 @@ export function ReportsFan() {
   const august = pdf("period", { from: long.format(new Date(2026, 7, 1)), to: long.format(new Date(2026, 7, 31)) });
 
   return (
-    <div aria-hidden className="relative mx-auto h-[200px] max-w-[720px] sm:h-[350px] md:h-[440px]">
-      <div className="group absolute left-1/2 top-0 h-[420px] w-[720px] origin-top -translate-x-1/2 scale-[0.45] sm:scale-[0.8] md:scale-100">
+    <div aria-hidden className="relative mx-auto h-[195px] max-w-[760px] sm:h-[340px] md:h-[440px]">
+      <div className="group absolute left-1/2 top-0 h-[420px] w-[760px] origin-top -translate-x-1/2 scale-[0.43] sm:scale-[0.78] md:scale-100">
         {/* The history, on the left. */}
         <div className={`${SHEET} left-[10px] top-[24px] -rotate-[7deg] group-hover:-translate-x-6 group-hover:-rotate-[10deg]`}>
           <div className="app-pop" style={delay(1, 160)}>
@@ -483,14 +483,20 @@ export function ReportsFan() {
         {/* MIDAS, on the right. */}
         <div className={`${SHEET} right-[10px] top-[24px] rotate-[7deg] group-hover:translate-x-6 group-hover:rotate-[10deg]`}>
           <div className="app-pop" style={delay(2, 160)}>
-            <div className="flex items-baseline gap-2">
+            <div className="flex items-center gap-1.5">
+              <Blob name="Fleur1" className="h-5 w-5" />
               <span className="text-[13px] font-bold text-ink">Mellow</span>
-              <span className="text-[9px] font-bold text-ink">{pdf("midasTitle")}</span>
+              <span className="ml-auto text-right">
+                <span className="block text-[9px] font-bold text-ink">{pdf("midasTitle")}</span>
+                <span className="block text-[6px] text-[#767676]">
+                  {pdf("generated", { date: long.format(new Date(2026, 7, 31)) })}
+                </span>
+              </span>
             </div>
-            <p className="mt-1 text-[6.5px] text-[#767676]">
+            <div className="mt-2 h-px bg-[#EEEEEE]" />
+            <p className="mt-1.5 text-[6.5px] text-[#767676]">
               {pdf("midasPeriod", { from: long.format(new Date(2026, 5, 3)), to: long.format(new Date(2026, 7, 31)) })}
             </p>
-            <div className="mt-2 h-px bg-[#EEEEEE]" />
             <p className="mt-4 text-[6.5px] font-semibold uppercase tracking-[0.08em] text-[#767676]">{pdf("scoreLabel")}</p>
             <div className="mt-1 flex items-end gap-3">
               <span className="text-[46px] font-bold leading-none text-ink">14</span>
@@ -534,7 +540,7 @@ export function ReportsFan() {
         </div>
 
         {/* The analysis, in front. */}
-        <div className={`${SHEET} left-[235px] top-[44px] z-10 group-hover:-translate-y-2`}>
+        <div className={`${SHEET} left-[255px] top-[18px] z-10 scale-[1.08] group-hover:-translate-y-2`}>
           <div className="app-pop" style={delay(0, 160)}>
             <SheetHeader title={pdf("analysisTitle")} period={august} />
             <SheetTitle>{pdf("numbersTitle")}</SheetTitle>
