@@ -2,9 +2,8 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 
-// How far the page scrolls while the header stays in place: about as far as
-// the phone rises, so the rise follows the finger instead of lagging behind.
-const PINNED = 400;
+// How far the page scrolls while the header stays in place.
+const PINNED = 520;
 
 // Where the four promises sit around the phone: left or right, the height of
 // their middle in % of the phone, and when each one appears in the rise (0 to
@@ -41,24 +40,6 @@ export function RisingHero({
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    // Where the browser can, the scroll itself drives the animations (CSS
-    // scroll-driven animations, .hero-* in globals.css): they run off the
-    // main thread, so the phone stays glued to the scroll, without jolts.
-    // JavaScript only measures how far the phone rises.
-    if (CSS.supports("animation-timeline: scroll()")) {
-      const measure = () => {
-        const [stage, windowEl, phoneEl] = [stageRef.current, windowRef.current, phoneRef.current];
-        if (!stage || !windowEl || !phoneEl) return;
-        const end = Math.max(16, (stage.offsetHeight - phoneEl.offsetHeight) / 2);
-        phoneEl.style.setProperty("--rise", `${Math.max(0, windowEl.offsetTop - end)}px`);
-      };
-      measure();
-      window.addEventListener("resize", measure);
-      return () => window.removeEventListener("resize", measure);
-    }
-
-    // Elsewhere, everything is moved on each frame.
     let frame = 0;
     const update = () => {
       frame = 0;
@@ -100,14 +81,14 @@ export function RisingHero({
     <section
       ref={sectionRef}
       className="relative motion-reduce:!h-auto"
-      style={{ height: `calc(100svh - 4rem + ${PINNED}px)`, ["--pinned" as string]: `${PINNED}px` }}
+      style={{ height: `calc(100svh - 4rem + ${PINNED}px)` }}
     >
       {/* The stage stays under the navbar (4rem) while the section scrolls by. */}
       <div
         ref={stageRef}
         className="sticky top-16 h-[calc(100svh-4rem)] overflow-hidden motion-reduce:static motion-reduce:h-auto"
       >
-        <div ref={textRef} className="hero-text mx-auto max-w-3xl px-6 pt-12 text-center md:pt-16">
+        <div ref={textRef} className="mx-auto max-w-3xl px-6 pt-12 text-center md:pt-16">
           {text}
         </div>
         {/* Wider than the phone, so its side buttons show. The phone is
@@ -117,7 +98,7 @@ export function RisingHero({
         <div ref={windowRef} className="mt-12 md:mt-14 motion-reduce:h-[330px] motion-reduce:overflow-hidden md:motion-reduce:h-[420px]">
           <div
             ref={phoneRef}
-            className="hero-rise mx-auto w-[min(270px,calc((100svh-10rem)/2.1))] will-change-transform md:w-[min(340px,calc((100svh-10rem)/2.1))] motion-reduce:w-[270px] md:motion-reduce:w-[340px]"
+            className="mx-auto w-[min(270px,calc((100svh-10rem)/2.1))] will-change-transform md:w-[min(340px,calc((100svh-10rem)/2.1))] motion-reduce:w-[270px] md:motion-reduce:w-[340px]"
           >
             <div className="relative">
               {phone}
@@ -131,13 +112,10 @@ export function RisingHero({
                     ref={(el) => {
                       promiseRefs.current[i] = el;
                     }}
-                    className={`hero-promise absolute hidden w-[270px] -translate-y-1/2 opacity-0 lg:block motion-reduce:!hidden ${
+                    className={`absolute hidden w-[270px] -translate-y-1/2 opacity-0 lg:block motion-reduce:!hidden ${
                       left ? "right-[calc(100%+3.5rem)] text-right" : "left-[calc(100%+3.5rem)]"
                     }`}
-                    style={{
-                      top: `${spot.y}%`,
-                      animationRange: `${spot.from * PINNED}px ${(spot.from + 0.15) * PINNED}px`,
-                    }}
+                    style={{ top: `${spot.y}%` }}
                   >
                     {/* Non-breaking hyphens: "rendez-vous" stays on one line. */}
                     <p className="text-balance text-xl font-bold leading-snug text-ink">
@@ -150,7 +128,7 @@ export function RisingHero({
             </div>
           </div>
         </div>
-        <div ref={fadeRef} aria-hidden className="hero-fade pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white" />
+        <div ref={fadeRef} aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white" />
       </div>
     </section>
   );
