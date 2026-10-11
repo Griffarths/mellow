@@ -134,7 +134,8 @@ function AppContent() {
           </div>
         </section>
 
-        {/* 1. Centred: the title, then the intensity to play with. */}
+        {/* 1. Centred: the title, then the three Mellows of the intensity
+            scale and the slider to play with. */}
         <section className="mx-auto max-w-3xl px-6 py-20 text-center md:py-28">
           <Heading id="log" />
           <div className="mt-12">
@@ -144,8 +145,12 @@ function AppContent() {
                 mild: ui("mild"),
                 moderate: ui("moderate"),
                 intense: ui("intense"),
-                save: ui("save"),
                 hint: t("blocks.log.hint"),
+                ranges: [
+                  ui("range", { from: 1, to: 3 }),
+                  ui("range", { from: 4, to: 6 }),
+                  ui("range", { from: 7, to: 10 }),
+                ],
               }}
             />
           </div>

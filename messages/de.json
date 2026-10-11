@@ -102,7 +102,7 @@
         "kicker": "Während der Attacke",
         "title": "Erfasse eine Attacke mit zwei Taps",
         "text": "Im Moment notierst du nur den Beginn und die Stärke, von 1 bis 10, sogar über das Widget, ohne die App zu öffnen.",
-        "hint": "Tippe auf einen Balken, um die Stärke zu ändern."
+        "hint": "Zieh den Regler oder tippe auf einen Mellow."
       },
       "complete": {
         "kicker": "Wenn es besser wird",
@@ -260,7 +260,8 @@
       "reportHistorySub": "Alle deine Migränen, eine pro Zeile",
       "reportMidasSub": "Deine Beeinträchtigung der letzten 3 Monate",
       "times": "{count, plural, one {# Mal} other {# Mal}}",
-      "monthMigraines": "{count, plural, one {# Migräne} other {# Migränen}}"
+      "monthMigraines": "{count, plural, one {# Migräne} other {# Migränen}}",
+      "range": "{from} bis {to}"
     }
   },
   "mellows": {

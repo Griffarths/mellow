@@ -97,7 +97,7 @@
         "kicker": "During an attack",
         "title": "Log an attack in two taps",
         "text": "In the moment, just note when it started and how intense it is, from 1 to 10, even from the widget, without opening the app.",
-        "hint": "Tap a bar to change the intensity."
+        "hint": "Drag the slider, or tap a Mellow."
       },
       "complete": {
         "kicker": "Once it eases",
@@ -255,7 +255,8 @@
       "reportHistorySub": "All your migraines, one per line",
       "reportMidasSub": "Your disability over the last 3 months",
       "times": "{count, plural, one {# time} other {# times}}",
-      "monthMigraines": "{count, plural, one {# migraine} other {# migraines}}"
+      "monthMigraines": "{count, plural, one {# migraine} other {# migraines}}",
+      "range": "{from} to {to}"
     }
   },
   "mellows": {

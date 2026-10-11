@@ -102,7 +102,7 @@
         "kicker": "Durante la crisis",
         "title": "Registra una crisis en dos toques",
         "text": "En el momento, apunta solo el inicio y la intensidad, del 1 al 10, incluso desde el widget, sin abrir la app.",
-        "hint": "Toca una barra para cambiar la intensidad."
+        "hint": "Desliza el control o toca un Mellow."
       },
       "complete": {
         "kicker": "Cuando estés mejor",
@@ -260,7 +260,8 @@
       "reportHistorySub": "Todas tus migrañas, una por línea",
       "reportMidasSub": "Tu discapacidad en los últimos 3 meses",
       "times": "{count, plural, one {# vez} other {# veces}}",
-      "monthMigraines": "{count, plural, one {# migraña} other {# migrañas}}"
+      "monthMigraines": "{count, plural, one {# migraña} other {# migrañas}}",
+      "range": "del {from} al {to}"
     }
   },
   "mellows": {

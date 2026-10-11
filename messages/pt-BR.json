@@ -102,7 +102,7 @@
         "kicker": "Durante a crise",
         "title": "Registre uma crise com dois toques",
         "text": "Na hora, anote só o início e a intensidade, de 1 a 10, até pelo widget, sem abrir o app.",
-        "hint": "Toque em uma barra para mudar a intensidade."
+        "hint": "Arraste o controle ou toque em um Mellow."
       },
       "complete": {
         "kicker": "Quando melhorar",
@@ -260,7 +260,8 @@
       "reportHistorySub": "Todas as suas enxaquecas, uma por linha",
       "reportMidasSub": "Sua incapacidade nos últimos 3 meses",
       "times": "{count, plural, one {# vez} other {# vezes}}",
-      "monthMigraines": "{count, plural, one {# enxaqueca} other {# enxaquecas}}"
+      "monthMigraines": "{count, plural, one {# enxaqueca} other {# enxaquecas}}",
+      "range": "de {from} a {to}"
     }
   },
   "mellows": {

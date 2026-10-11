@@ -224,6 +224,41 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
   animation: app-grow-x 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
+/* /app page: the intensity slider, filled up to the value in the colour of
+   its level (IntensityDemo sets --fill and --color). */
+.intensity-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, var(--color) var(--fill), #f4f4f4 var(--fill));
+  cursor: pointer;
+}
+
+.intensity-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #000;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
+}
+
+.intensity-range::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #000;
+}
+
+.intensity-range:focus-visible {
+  outline: 3px solid #ff479a;
+  outline-offset: 6px;
+}
+
 /* Migraine-friendly: no motion if the visitor asked for less. */
 @media (prefers-reduced-motion: reduce) {
   .hero-clouds div {

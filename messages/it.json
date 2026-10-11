@@ -102,7 +102,7 @@
         "kicker": "Durante l'attacco",
         "title": "Registra un attacco con due tap",
         "text": "Sul momento, annota solo l'inizio e l'intensità, da 1 a 10, anche dal widget, senza aprire l'app.",
-        "hint": "Tocca una barra per cambiare l'intensità."
+        "hint": "Trascina il cursore o tocca un Mellow."
       },
       "complete": {
         "kicker": "Quando va meglio",
@@ -260,7 +260,8 @@
       "reportHistorySub": "Tutte le tue emicranie, una per riga",
       "reportMidasSub": "La tua disabilità negli ultimi 3 mesi",
       "times": "{count, plural, one {# volta} other {# volte}}",
-      "monthMigraines": "{count, plural, one {# emicrania} other {# emicranie}}"
+      "monthMigraines": "{count, plural, one {# emicrania} other {# emicranie}}",
+      "range": "da {from} a {to}"
     }
   },
   "mellows": {
