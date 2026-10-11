@@ -6,6 +6,8 @@ import { Link } from "@/i18n/navigation";
 type Item = { href: string; label: string; description?: string };
 
 type Props = {
+  // The app page, first in the menu.
+  app: Item;
   resourcesTitle: string;
   resources: Item[];
   // Blog and Android; external links open in a new tab.
@@ -27,6 +29,7 @@ type Props = {
 // full-height menu under the header. Hidden from md, where the nav shows its
 // links.
 export function MobileMenu({
+  app,
   resourcesTitle,
   resources,
   links,
@@ -99,7 +102,11 @@ export function MobileMenu({
           id="mobile-menu"
           className="fixed inset-x-0 top-16 h-[calc(100dvh-4rem)] overflow-y-auto border-t border-surface-line bg-white px-6 pb-10 pt-6"
         >
-          <p className="text-caption font-bold uppercase tracking-[0.08em] text-croix-ink">{resourcesTitle}</p>
+          <Link href={app.href} onClick={close} className="block border-b border-surface-line pb-3.5 text-base font-semibold text-ink">
+            {app.label}
+          </Link>
+
+          <p className="mt-6 text-caption font-bold uppercase tracking-[0.08em] text-croix-ink">{resourcesTitle}</p>
           <ul className="mt-2 divide-y divide-surface-line">
             {resources.map((item) => (
               <li key={item.href}>

@@ -13,7 +13,8 @@ import { StoreBadges } from "./StoreBadges";
 const LINK_CLASS =
   "nav-on-hero whitespace-nowrap text-sm font-semibold text-ink-2 transition hover:text-ink";
 
-// From md: logo, Resources menu, Blog, Android and the store badges. Below:
+// From md: logo, the app page, Resources menu, Blog, Android and the store
+// badges. Below:
 // logo, a download button and a burger (MobileMenu). On the home page
 // (overHero) it starts transparent over the hero (NavShell), without the
 // download badge or button (nav-cta, globals.css): the hero has its own.
@@ -50,6 +51,9 @@ export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
             <span className="nav-on-hero transition-colors">Mellow</span>
           </Link>
           <div className="hidden items-center gap-10 md:flex">
+            <Link href="/app" className={LINK_CLASS}>
+              {t("app")}
+            </Link>
             {isToolLocale(locale) && <ToolsMenu label={TOOLS_LABEL[locale]} items={resources} />}
             <Link href="/blog" className={LINK_CLASS}>
               {t("blog")}
@@ -70,6 +74,7 @@ export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
           sizeClass="h-10 w-auto select-none"
         />
         <MobileMenu
+          app={{ href: "/app", label: t("app") }}
           resourcesTitle={isToolLocale(locale) ? TOOLS_LABEL[locale] : ""}
           resources={resources}
           links={[{ href: "/blog", label: t("blog") }, android]}

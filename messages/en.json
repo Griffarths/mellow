@@ -7,6 +7,7 @@
   "nav": {
     "homeAriaLabel": "Mellow, back to home",
     "appStoreAriaLabel": "Download on the App Store",
+    "app": "The app",
     "blog": "Blog",
     "androidBeta": "Test on Android",
     "android": "Android app",
