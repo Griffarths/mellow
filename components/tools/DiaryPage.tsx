@@ -73,7 +73,7 @@ export function DiaryPage({ locale, tool = "diary" }: Props) {
           </div>
         </div>
 
-        <div className="mt-20 max-w-[65ch] md:mt-28">
+        <div className="mt-20 md:mt-28">
           <section>
             <h2 className="text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]">
               {ty(c.whyTitle)}
