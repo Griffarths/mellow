@@ -16,10 +16,10 @@ import { Reveal } from "@/components/app-page/Reveal";
 import {
   BigCalendar,
   BigStats,
+  CompleteGrid,
   MellowsCare,
   ReliefBars,
   ReportsList,
-  TagCloud,
   WeatherBand,
 } from "@/components/app-page/AppVisuals";
 
@@ -156,13 +156,14 @@ function AppContent() {
           </div>
         </section>
 
-        {/* 2. Text on the left, the app's tags on the right. */}
-        <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-20 md:py-24">
-          <div>
+        {/* 2. The title left-aligned on top, then the nine questions of the
+            app in a grid across the page (one column on phones). */}
+        <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+          <div className="max-w-2xl">
             <Heading id="complete" />
           </div>
-          <Reveal>
-            <TagCloud />
+          <Reveal className="mt-12">
+            <CompleteGrid />
           </Reveal>
         </section>
 

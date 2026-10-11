@@ -107,7 +107,7 @@
       "complete": {
         "kicker": "Quando melhorar",
         "title": "Termine sua crise no seu ritmo",
-        "text": "Quando a crise passar, adicione seus sintomas, os possíveis gatilhos, seus medicamentos e o que aliviou. O Mellow lembra seus hábitos para ir mais rápido."
+        "text": "Quando a crise passar, o Mellow faz algumas perguntas. Você responde o que quiser, e ele lembra seus hábitos para ir mais rápido."
       },
       "calendar": {
         "kicker": "Mês a mês",
@@ -227,25 +227,8 @@
       "mild": "Leve",
       "moderate": "Moderada",
       "intense": "Intensa",
-      "symptoms": "Sintomas",
-      "triggers": "Gatilhos",
-      "meds": "Medicamentos",
-      "reliefs": "Métodos de alívio",
-      "nausea": "Náuseas",
-      "light": "Sensibilidade à luz",
-      "sound": "Sensibilidade ao barulho",
-      "visual": "Distúrbios visuais",
-      "dizziness": "Vertigens",
-      "throbbing": "Dor pulsátil",
-      "stress": "Estresse",
-      "sleep": "Falta de sono",
-      "screens": "Telas",
-      "menstrual": "Ciclo menstrual",
-      "skippedMeal": "Refeição pulada",
-      "caffeine": "Cafeína",
       "darkRest": "Repouso no escuro",
       "icePack": "Bolsa de gelo",
-      "meditation": "Meditação",
       "reliefHigh": "Muito eficaz",
       "reliefMid": "Razoável",
       "reliefNone": "Sem efeito",
@@ -261,7 +244,45 @@
       "reportMidasSub": "Sua incapacidade nos últimos 3 meses",
       "times": "{count, plural, one {# vez} other {# vezes}}",
       "monthMigraines": "{count, plural, one {# enxaqueca} other {# enxaquecas}}",
-      "range": "de {from} a {to}"
+      "range": "de {from} a {to}",
+      "steps": [
+        {
+          "label": "Duração",
+          "question": "Quando você teve essa enxaqueca?"
+        },
+        {
+          "label": "Intensidade",
+          "question": "Qual foi a intensidade?"
+        },
+        {
+          "label": "Localização",
+          "question": "Onde a dor começou?"
+        },
+        {
+          "label": "Sinais premonitórios",
+          "question": "Você a sentiu chegando?"
+        },
+        {
+          "label": "Sintomas",
+          "question": "Quais sintomas você teve?"
+        },
+        {
+          "label": "Gatilhos",
+          "question": "O que pode ter desencadeado?"
+        },
+        {
+          "label": "Medicamentos",
+          "question": "Quais medicamentos você tomou?"
+        },
+        {
+          "label": "Métodos de alívio",
+          "question": "O que você tentou para aliviar a dor?"
+        },
+        {
+          "label": "Impacto",
+          "question": "Trabalho / escola · Casa · Atividades sociais"
+        }
+      ]
     }
   },
   "mellows": {

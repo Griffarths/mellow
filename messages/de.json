@@ -107,7 +107,7 @@
       "complete": {
         "kicker": "Wenn es besser wird",
         "title": "Schließe deine Attacke in deinem Tempo ab",
-        "text": "Wenn die Attacke vorbei ist, ergänzt du deine Symptome, mögliche Auslöser, deine Medikamente und was dir geholfen hat. Mellow merkt sich deine Gewohnheiten, damit es schneller geht."
+        "text": "Wenn die Attacke vorbei ist, stellt dir Mellow ein paar Fragen. Du beantwortest, was du möchtest, und Mellow merkt sich deine Gewohnheiten, damit es schneller geht."
       },
       "calendar": {
         "kicker": "Monat für Monat",
@@ -227,25 +227,8 @@
       "mild": "Leicht",
       "moderate": "Mittel",
       "intense": "Stark",
-      "symptoms": "Symptome",
-      "triggers": "Auslöser",
-      "meds": "Medikamente",
-      "reliefs": "Linderungsmethoden",
-      "nausea": "Übelkeit",
-      "light": "Lichtempfindlichkeit",
-      "sound": "Lärmempfindlichkeit",
-      "visual": "Sehstörungen",
-      "dizziness": "Schwindel",
-      "throbbing": "Pochender Schmerz",
-      "stress": "Stress",
-      "sleep": "Schlafmangel",
-      "screens": "Bildschirme",
-      "menstrual": "Menstruationszyklus",
-      "skippedMeal": "Ausgelassene Mahlzeit",
-      "caffeine": "Koffein",
       "darkRest": "Ruhe im Dunkeln",
       "icePack": "Kältebeutel",
-      "meditation": "Meditation",
       "reliefHigh": "Sehr wirksam",
       "reliefMid": "Eher wirksam",
       "reliefNone": "Ohne Wirkung",
@@ -261,7 +244,45 @@
       "reportMidasSub": "Deine Beeinträchtigung der letzten 3 Monate",
       "times": "{count, plural, one {# Mal} other {# Mal}}",
       "monthMigraines": "{count, plural, one {# Migräne} other {# Migränen}}",
-      "range": "{from} bis {to}"
+      "range": "{from} bis {to}",
+      "steps": [
+        {
+          "label": "Dauer",
+          "question": "Wann hattest du diese Migräne?"
+        },
+        {
+          "label": "Intensität",
+          "question": "Wie stark waren die Schmerzen?"
+        },
+        {
+          "label": "Lokalisation",
+          "question": "Wo begannen die Schmerzen?"
+        },
+        {
+          "label": "Vorwarnsignale",
+          "question": "Hast du sie kommen gespürt?"
+        },
+        {
+          "label": "Symptome",
+          "question": "Welche Symptome hatte dich?"
+        },
+        {
+          "label": "Auslöser",
+          "question": "Was könnte sie ausgelöst haben?"
+        },
+        {
+          "label": "Medikamente",
+          "question": "Welche Medikamente hast du genommen?"
+        },
+        {
+          "label": "Linderungsmethoden",
+          "question": "Was hast du gegen die Schmerzen versucht?"
+        },
+        {
+          "label": "Auswirkung",
+          "question": "Arbeit / Schule · Haushalt · Soziale Aktivitäten"
+        }
+      ]
     }
   },
   "mellows": {

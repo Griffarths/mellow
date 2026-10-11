@@ -10,56 +10,48 @@ import { Blob } from "../phones/Blob";
 const intlLocale = (locale: string) => (locale === "pt" ? "pt-PT" : locale);
 const delay = (i: number, step = 70, start = 100) => ({ animationDelay: `${start + i * step}ms` });
 
-// Completing an attack: the tags of the app, coloured by group.
-const TAGS: Array<["symptoms" | "triggers" | "reliefs" | "meds", string]> = [
-  ["symptoms", "nausea"],
-  ["triggers", "stress"],
-  ["symptoms", "light"],
-  ["reliefs", "darkRest"],
-  ["triggers", "sleep"],
-  ["symptoms", "throbbing"],
-  ["meds", "Sumatriptan 50 mg"],
-  ["triggers", "screens"],
-  ["symptoms", "sound"],
-  ["reliefs", "icePack"],
-  ["triggers", "menstrual"],
-  ["symptoms", "dizziness"],
-  ["triggers", "skippedMeal"],
-  ["reliefs", "meditation"],
-  ["symptoms", "visual"],
-  ["triggers", "caffeine"],
+// Completing an attack: the nine questions the app asks, in its order, each
+// with a 3D emoji from Microsoft's Fluent Emoji (public/emoji; MIT licence,
+// Copyright (c) Microsoft Corporation). Labels and questions are the app's
+// own (messages appPage.ui.steps). Only the emojis pop in: the text is
+// always visible.
+const STEP_EMOJI = [
+  "alarm_clock_3d",
+  "thermometer_3d",
+  "round_pushpin_3d",
+  "sparkles_3d",
+  "face_with_head-bandage_3d",
+  "high_voltage_3d",
+  "pill_3d",
+  "relieved_face_3d",
+  "spiral_calendar_3d",
 ];
-const GROUP_BG = {
-  symptoms: "bg-fleur",
-  triggers: "bg-tagada",
-  reliefs: "bg-sable",
-  meds: "bg-croix",
-};
 
-export function TagCloud() {
+export function CompleteGrid() {
   const ui = useTranslations("appPage.ui");
+  const steps = ui.raw("steps") as Array<{ label: string; question: string }>;
   return (
-    <div aria-hidden>
-      <div className="flex flex-wrap gap-2.5">
-        {TAGS.map(([group, key], i) => (
-          <span
-            key={key}
-            className={`app-pop rounded-full px-4 py-2 text-[15px] font-semibold text-ink ${GROUP_BG[group]}`}
-            style={delay(i, 45)}
-          >
-            {key.includes(" ") ? key : ui(key)}
-          </span>
-        ))}
-      </div>
-      <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-2">
-        {(["symptoms", "triggers", "reliefs", "meds"] as const).map((group) => (
-          <span key={group} className="flex items-center gap-2">
-            <span className={`h-3 w-3 rounded-full ${GROUP_BG[group]}`} />
-            {ui(group)}
-          </span>
-        ))}
-      </div>
-    </div>
+    <ul className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+      {steps.map((step, i) => (
+        <li key={step.label} className="flex items-center gap-4">
+          <img
+            src={`/emoji/${STEP_EMOJI[i]}.png`}
+            alt=""
+            aria-hidden
+            width={256}
+            height={256}
+            loading="lazy"
+            draggable={false}
+            className="app-pop h-12 w-12 shrink-0 select-none md:h-14 md:w-14"
+            style={delay(i, 70)}
+          />
+          <div className="min-w-0">
+            <p className="text-lg font-bold text-ink">{step.label}</p>
+            <p className="text-[15px] leading-snug text-ink-3">{step.question}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 }
 

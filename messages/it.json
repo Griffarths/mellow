@@ -107,7 +107,7 @@
       "complete": {
         "kicker": "Quando va meglio",
         "title": "Completa l'attacco con calma",
-        "text": "Quando l'attacco è passato, aggiungi i sintomi, i possibili fattori scatenanti, i farmaci e cosa ti ha dato sollievo. Mellow ricorda le tue abitudini per fare prima."
+        "text": "Quando l'attacco è passato, Mellow ti fa qualche domanda. Rispondi a quello che vuoi, e Mellow ricorda le tue abitudini per fare prima."
       },
       "calendar": {
         "kicker": "Mese dopo mese",
@@ -227,25 +227,8 @@
       "mild": "Lieve",
       "moderate": "Moderata",
       "intense": "Intensa",
-      "symptoms": "Sintomi",
-      "triggers": "Fattori scatenanti",
-      "meds": "Farmaci",
-      "reliefs": "Metodi di sollievo",
-      "nausea": "Nausea",
-      "light": "Sensibilità alla luce",
-      "sound": "Sensibilità al rumore",
-      "visual": "Disturbi visivi",
-      "dizziness": "Vertigini",
-      "throbbing": "Dolore pulsante",
-      "stress": "Stress",
-      "sleep": "Mancanza di sonno",
-      "screens": "Schermi",
-      "menstrual": "Ciclo mestruale",
-      "skippedMeal": "Pasto saltato",
-      "caffeine": "Caffeina",
       "darkRest": "Riposo al buio",
       "icePack": "Borsa del ghiaccio",
-      "meditation": "Meditazione",
       "reliefHigh": "Molto efficace",
       "reliefMid": "Abbastanza efficace",
       "reliefNone": "Senza effetto",
@@ -261,7 +244,45 @@
       "reportMidasSub": "La tua disabilità negli ultimi 3 mesi",
       "times": "{count, plural, one {# volta} other {# volte}}",
       "monthMigraines": "{count, plural, one {# emicrania} other {# emicranie}}",
-      "range": "da {from} a {to}"
+      "range": "da {from} a {to}",
+      "steps": [
+        {
+          "label": "Durata",
+          "question": "Quando hai avuto questa emicrania?"
+        },
+        {
+          "label": "Intensità",
+          "question": "Qual era l'intensità?"
+        },
+        {
+          "label": "Localizzazione",
+          "question": "Dove ha cominciato il dolore?"
+        },
+        {
+          "label": "Segnali premonitori",
+          "question": "L'hai sentita arrivare?"
+        },
+        {
+          "label": "Sintomi",
+          "question": "Quali sintomi hai avuto?"
+        },
+        {
+          "label": "Fattori scatenanti",
+          "question": "Cosa potrebbe averla scatenata?"
+        },
+        {
+          "label": "Farmaci",
+          "question": "Quali farmaci hai preso?"
+        },
+        {
+          "label": "Metodi di sollievo",
+          "question": "Cosa hai provato per alleviare il dolore?"
+        },
+        {
+          "label": "Impatto",
+          "question": "Lavoro / scuola · Faccende · Attività sociali"
+        }
+      ]
     }
   },
   "mellows": {

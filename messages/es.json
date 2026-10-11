@@ -107,7 +107,7 @@
       "complete": {
         "kicker": "Cuando estés mejor",
         "title": "Completa tu crisis a tu ritmo",
-        "text": "Cuando la crisis haya pasado, añade tus síntomas, los posibles desencadenantes, tus medicamentos y lo que te alivió. Mellow recuerda tus costumbres para ir más rápido."
+        "text": "Cuando la crisis haya pasado, Mellow te hace algunas preguntas. Respondes a lo que quieras, y recuerda tus costumbres para ir más rápido."
       },
       "calendar": {
         "kicker": "Mes a mes",
@@ -227,25 +227,8 @@
       "mild": "Leve",
       "moderate": "Moderada",
       "intense": "Intensa",
-      "symptoms": "Síntomas",
-      "triggers": "Desencadenantes",
-      "meds": "Medicamentos",
-      "reliefs": "Métodos de alivio",
-      "nausea": "Náuseas",
-      "light": "Sensibilidad a la luz",
-      "sound": "Sensibilidad al ruido",
-      "visual": "Trastornos visuales",
-      "dizziness": "Vértigos",
-      "throbbing": "Dolor pulsátil",
-      "stress": "Estrés",
-      "sleep": "Falta de sueño",
-      "screens": "Pantallas",
-      "menstrual": "Ciclo menstrual",
-      "skippedMeal": "Comida omitida",
-      "caffeine": "Cafeína",
       "darkRest": "Reposo en la oscuridad",
       "icePack": "Bolsa de hielo",
-      "meditation": "Meditación",
       "reliefHigh": "Muy eficaz",
       "reliefMid": "Bastante eficaz",
       "reliefNone": "Sin efecto",
@@ -261,7 +244,45 @@
       "reportMidasSub": "Tu discapacidad en los últimos 3 meses",
       "times": "{count, plural, one {# vez} other {# veces}}",
       "monthMigraines": "{count, plural, one {# migraña} other {# migrañas}}",
-      "range": "del {from} al {to}"
+      "range": "del {from} al {to}",
+      "steps": [
+        {
+          "label": "Duración",
+          "question": "¿Cuándo tuviste esta migraña?"
+        },
+        {
+          "label": "Intensidad",
+          "question": "¿Cuál fue la intensidad?"
+        },
+        {
+          "label": "Localización",
+          "question": "¿Dónde comenzó el dolor?"
+        },
+        {
+          "label": "Señales previas",
+          "question": "¿Lo sentiste venir?"
+        },
+        {
+          "label": "Síntomas",
+          "question": "¿Qué síntomas tuviste?"
+        },
+        {
+          "label": "Desencadenantes",
+          "question": "¿Qué pudo desencadenarla?"
+        },
+        {
+          "label": "Medicamentos",
+          "question": "¿Qué medicamentos tomaste?"
+        },
+        {
+          "label": "Métodos de alivio",
+          "question": "¿Qué probaste para aliviar el dolor?"
+        },
+        {
+          "label": "Impacto",
+          "question": "Trabajo / escuela · Hogar · Actividades sociales"
+        }
+      ]
     }
   },
   "mellows": {

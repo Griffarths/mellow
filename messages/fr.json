@@ -102,7 +102,7 @@
       "complete": {
         "kicker": "Quand ça va mieux",
         "title": "Termine ta crise à ton rythme",
-        "text": "Une fois la crise passée, ajoute tes symptômes, tes déclencheurs possibles, tes médicaments et ce qui t'a soulagé. Mellow retient tes habitudes pour aller plus vite."
+        "text": "Une fois la crise passée, Mellow te pose quelques questions. Tu réponds à ce que tu veux, et il retient tes habitudes pour aller plus vite."
       },
       "calendar": {
         "kicker": "Au fil des mois",
@@ -222,25 +222,8 @@
       "mild": "Légère",
       "moderate": "Modérée",
       "intense": "Intense",
-      "symptoms": "Symptômes",
-      "triggers": "Déclencheurs",
-      "meds": "Médicaments",
-      "reliefs": "Méthodes de soulagement",
-      "nausea": "Nausées",
-      "light": "Sensibilité à la lumière",
-      "sound": "Sensibilité au bruit",
-      "visual": "Troubles visuels",
-      "dizziness": "Vertiges",
-      "throbbing": "Douleur pulsée",
-      "stress": "Stress",
-      "sleep": "Manque de sommeil",
-      "screens": "Écrans",
-      "menstrual": "Cycle menstruel",
-      "skippedMeal": "Repas sauté",
-      "caffeine": "Caféine",
       "darkRest": "Repos dans le noir",
       "icePack": "Poche de glace",
-      "meditation": "Méditation",
       "reliefHigh": "Très efficace",
       "reliefMid": "Plutôt efficace",
       "reliefNone": "Sans effet",
@@ -256,7 +239,45 @@
       "reportMidasSub": "Ton incapacité sur les 3 derniers mois",
       "times": "{count, plural, one {# fois} other {# fois}}",
       "monthMigraines": "{count, plural, one {# migraine} other {# migraines}}",
-      "range": "{from} à {to}"
+      "range": "{from} à {to}",
+      "steps": [
+        {
+          "label": "Durée",
+          "question": "Quand as-tu eu cette migraine ?"
+        },
+        {
+          "label": "Intensité",
+          "question": "Quelle était l'intensité ?"
+        },
+        {
+          "label": "Localisation",
+          "question": "Où la douleur a-t-elle commencé ?"
+        },
+        {
+          "label": "Signes pré-migraine",
+          "question": "L'as-tu senti venir ?"
+        },
+        {
+          "label": "Symptômes",
+          "question": "Quels symptômes as-tu eu ?"
+        },
+        {
+          "label": "Déclencheurs",
+          "question": "Qu'est-ce qui a pu la déclencher ?"
+        },
+        {
+          "label": "Médicaments",
+          "question": "Quels médicaments as-tu pris ?"
+        },
+        {
+          "label": "Méthodes de soulagement",
+          "question": "Qu'as-tu essayé pour te soulager ?"
+        },
+        {
+          "label": "Impact",
+          "question": "Travail / école · Ménage · Activités sociales"
+        }
+      ]
     }
   },
   "mellows": {

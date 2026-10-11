@@ -102,7 +102,7 @@
       "complete": {
         "kicker": "Once it eases",
         "title": "Finish your attack at your own pace",
-        "text": "Once the attack is over, add your symptoms, possible triggers, medication and what brought relief. Mellow remembers your habits to make it quicker."
+        "text": "Once the attack is over, Mellow asks you a few questions. Answer what you want, and it remembers your habits to make it quicker."
       },
       "calendar": {
         "kicker": "Month after month",
@@ -222,25 +222,8 @@
       "mild": "Mild",
       "moderate": "Moderate",
       "intense": "Intense",
-      "symptoms": "Symptoms",
-      "triggers": "Triggers",
-      "meds": "Medications",
-      "reliefs": "Relief methods",
-      "nausea": "Nausea",
-      "light": "Light sensitivity",
-      "sound": "Sound sensitivity",
-      "visual": "Visual disturbances",
-      "dizziness": "Dizziness",
-      "throbbing": "Throbbing pain",
-      "stress": "Stress",
-      "sleep": "Lack of sleep",
-      "screens": "Screens",
-      "menstrual": "Menstrual cycle",
-      "skippedMeal": "Skipped meal",
-      "caffeine": "Caffeine",
       "darkRest": "Rest in the dark",
       "icePack": "Ice pack",
-      "meditation": "Meditation",
       "reliefHigh": "Very effective",
       "reliefMid": "Fairly effective",
       "reliefNone": "No effect",
@@ -256,7 +239,45 @@
       "reportMidasSub": "Your disability over the last 3 months",
       "times": "{count, plural, one {# time} other {# times}}",
       "monthMigraines": "{count, plural, one {# migraine} other {# migraines}}",
-      "range": "{from} to {to}"
+      "range": "{from} to {to}",
+      "steps": [
+        {
+          "label": "Duration",
+          "question": "When did you have this migraine?"
+        },
+        {
+          "label": "Intensity",
+          "question": "What was the intensity?"
+        },
+        {
+          "label": "Location",
+          "question": "Where did the pain begin?"
+        },
+        {
+          "label": "Warning signs",
+          "question": "Did you feel it coming?"
+        },
+        {
+          "label": "Symptoms",
+          "question": "What symptoms did you have?"
+        },
+        {
+          "label": "Triggers",
+          "question": "What might have triggered it?"
+        },
+        {
+          "label": "Medications",
+          "question": "Which medications did you take?"
+        },
+        {
+          "label": "Relief methods",
+          "question": "What did you try for relief?"
+        },
+        {
+          "label": "Impact",
+          "question": "Work / school · Household · Social activities"
+        }
+      ]
     }
   },
   "mellows": {
