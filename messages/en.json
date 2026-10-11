@@ -124,7 +124,7 @@
       "calendar": {
         "kicker": "Month after month",
         "title": "All your attacks in a calendar",
-        "text": "Each attack shows up in the color of its intensity, month after month, with the number of migraines that month. Plus your full history, one attack per line."
+        "text": "Each attack takes the color of its intensity. At a glance, you see your calm months and your hard ones."
       },
       "triggers": {
         "kicker": "What keeps coming back",

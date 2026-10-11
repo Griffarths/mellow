@@ -129,7 +129,7 @@
       "calendar": {
         "kicker": "Monat für Monat",
         "title": "Alle deine Attacken in einem Kalender",
-        "text": "Jede Attacke erscheint in der Farbe ihrer Stärke, Monat für Monat, mit der Zahl der Migränen im Monat. Dazu dein ganzer Verlauf, eine Attacke pro Zeile."
+        "text": "Jede Attacke bekommt die Farbe ihrer Stärke. Auf einen Blick siehst du deine ruhigen und deine schweren Monate."
       },
       "triggers": {
         "kicker": "Was immer wiederkehrt",

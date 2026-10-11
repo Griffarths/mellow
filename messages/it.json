@@ -129,7 +129,7 @@
       "calendar": {
         "kicker": "Mese dopo mese",
         "title": "Tutti i tuoi attacchi in un calendario",
-        "text": "Ogni attacco compare con il colore della sua intensità, mese dopo mese, con il numero di emicranie del mese. E tutto il tuo storico, un attacco per riga."
+        "text": "Ogni attacco prende il colore della sua intensità. Con un colpo d'occhio, vedi i tuoi mesi tranquilli e quelli difficili."
       },
       "triggers": {
         "kicker": "Ciò che si ripete",

@@ -124,7 +124,7 @@
       "calendar": {
         "kicker": "Au fil des mois",
         "title": "Toutes tes crises dans un calendrier",
-        "text": "Chaque crise apparaît avec la couleur de son intensité, mois après mois, avec le nombre de migraines du mois. Et tout ton historique, une crise par ligne."
+        "text": "Chaque crise prend la couleur de son intensité. En un coup d'œil, tu vois tes mois calmes et tes mois difficiles."
       },
       "triggers": {
         "kicker": "Ce qui revient",

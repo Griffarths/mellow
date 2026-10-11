@@ -129,7 +129,7 @@
       "calendar": {
         "kicker": "Mes a mes",
         "title": "Todas tus crisis en un calendario",
-        "text": "Cada crisis aparece con el color de su intensidad, mes a mes, con el número de migrañas del mes. Y todo tu historial, una crisis por línea."
+        "text": "Cada crisis toma el color de su intensidad. De un vistazo, ves tus meses tranquilos y tus meses difíciles."
       },
       "triggers": {
         "kicker": "Lo que se repite",
