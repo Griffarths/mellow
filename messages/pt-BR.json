@@ -208,6 +208,10 @@
       "humidity": "Umidade",
       "points": "{value} pontos",
       "monthMigraines": "{count, plural, one {# enxaqueca} other {# enxaquecas}}",
+      "dayIntensity": "Intensidade da enxaqueca",
+      "dayStart": "Início",
+      "dayEnd": "Fim",
+      "dayDuration": "Duração",
       "range": "de {from} a {to}",
       "steps": [
         {
