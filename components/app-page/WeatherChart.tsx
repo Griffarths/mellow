@@ -30,11 +30,13 @@ type Props = {
   humidity: Series;
 };
 
-// The app's colours for the change, with a readable text on each.
+// Green, orange, red as the app's arrows, in the site's pastels: a soft green,
+// the sable of the yellow Mellow, the pink of Croix (the intense attacks of
+// the calendar). The dot is a shade darker than its label.
 const LEVELS = [
-  { bg: "#52B788", text: "#000000" },
-  { bg: "#F4A261", text: "#000000" },
-  { bg: "#E63946", text: "#FFFFFF" },
+  { dot: "#9ED2B0", bg: "#CDEBD7" },
+  { dot: "#E8B57E", bg: "#F0CCA2" },
+  { dot: "#D9707F", bg: "#F1A6B1" },
 ];
 
 // The viewBox is stretched to the box (preserveAspectRatio none): x from 0 to
@@ -159,17 +161,11 @@ export function WeatherChart({ title, days, pressure, humidity }: Props) {
           />
           <span
             className="absolute h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-white shadow-[0_1px_3px_rgb(0_0_0/0.2)] transition-[left,top,background-color] duration-200 ease-out"
-            style={{ left, top, backgroundColor: level.bg }}
+            style={{ left, top, backgroundColor: level.dot }}
           />
           <span
-            className="absolute whitespace-nowrap rounded-full px-3 py-1 text-sm font-bold tabular-nums transition-[left,top,background-color] duration-200 ease-out"
-            style={{
-              left,
-              top,
-              transform: "translate(-50%, calc(-100% - 14px))",
-              backgroundColor: level.bg,
-              color: level.text,
-            }}
+            className="absolute whitespace-nowrap rounded-full px-3 py-1 text-sm font-bold tabular-nums text-ink transition-[left,top,background-color] duration-200 ease-out"
+            style={{ left, top, transform: "translate(-50%, calc(-100% - 14px))", backgroundColor: level.bg }}
           >
             {label}
           </span>
