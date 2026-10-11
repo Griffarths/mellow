@@ -30,7 +30,7 @@ type Props = { params: Promise<{ locale: string }> };
 // The app in detail, one moment of an attack per section, each laid out its
 // own way with the app's elements right on the page: the intensity to play
 // with, the questions, the calendar, the triggers, what the attacks are like,
-// what brings relief, the weather, the Mellows, the reports. Then free or
+// what brings relief, the weather, the reports, the Mellows. Then free or
 // Premium, and the data.
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -253,23 +253,23 @@ function AppContent() {
           </div>
         </section>
 
-        {/* 8. Centred: the four Mellows, each with what it brings. */}
-        <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-          <div className="mx-auto max-w-2xl text-center">
-            <Heading id="care" />
-          </div>
-          <Reveal className="mt-14">
-            <MellowsCare items={careItems} />
-          </Reveal>
-        </section>
-
-        {/* 9. The reports on the left, the text on the right. */}
+        {/* 8. The reports on the left, the text on the right. */}
         <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-20 md:py-24">
           <div className="md:order-2">
             <Heading id="doctor" />
           </div>
           <Reveal className="md:order-1">
             <ReportsList />
+          </Reveal>
+        </section>
+
+        {/* 9. Centred: the four Mellows, each with what it brings. */}
+        <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+          <div className="mx-auto max-w-2xl text-center">
+            <Heading id="care" />
+          </div>
+          <Reveal className="mt-14">
+            <MellowsCare items={careItems} />
           </Reveal>
         </section>
 
