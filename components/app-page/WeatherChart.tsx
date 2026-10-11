@@ -45,16 +45,26 @@ const W = 700;
 const x = (i: number, n: number) => ((i + 0.5) / n) * W;
 const y = (v: number, s: Series) => ((s.max - v) / (s.max - s.min)) * 100;
 
-// A smooth curve through the points (Catmull-Rom, as the app's chart).
+// A smooth curve through the points that never goes beyond them (monotone
+// cubic, Steffen's method): the curve only turns at a day, so the lowest and
+// highest points of the curve are the lowest and highest days.
 function curve(points: Array<[number, number]>) {
+  const n = points.length;
+  const h = points[1][0] - points[0][0];
+  const s = points.slice(1).map((p, i) => (p[1] - points[i][1]) / h);
+  const m = points.map((_, i) => {
+    if (i === 0 || i === n - 1) return NaN;
+    const [s0, s1] = [s[i - 1], s[i]];
+    const p = (s0 + s1) / 2;
+    return (Math.sign(s0) + Math.sign(s1)) * Math.min(Math.abs(s0), Math.abs(s1), 0.5 * Math.abs(p)) || 0;
+  });
+  // The ends: the slope that makes a parabola with the next point.
+  m[0] = (3 * s[0] - m[1]) / 2;
+  m[n - 1] = (3 * s[n - 2] - m[n - 2]) / 2;
   let d = `M${points[0][0]},${points[0][1]}`;
-  for (let i = 0; i < points.length - 1; i++) {
-    const p0 = points[i - 1] ?? points[i];
+  for (let i = 0; i < n - 1; i++) {
     const [p1, p2] = [points[i], points[i + 1]];
-    const p3 = points[i + 2] ?? p2;
-    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
-    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
-    d += ` C${c1[0]},${c1[1]} ${c2[0]},${c2[1]} ${p2[0]},${p2[1]}`;
+    d += ` C${p1[0] + h / 3},${p1[1] + (m[i] * h) / 3} ${p2[0] - h / 3},${p2[1] - (m[i + 1] * h) / 3} ${p2[0]},${p2[1]}`;
   }
   return d;
 }
