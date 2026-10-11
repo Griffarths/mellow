@@ -6,10 +6,12 @@ import { Link } from "@/i18n/navigation";
 type Props = {
   label: string;
   items: Array<{ href: string; label: string; description: string }>;
+  // The page grouping all the tools, last in the menu.
+  all: { href: string; label: string };
   className?: string;
 };
 
-export function ToolsMenu({ label, items, className = "" }: Props) {
+export function ToolsMenu({ label, items, all, className = "" }: Props) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -64,6 +66,16 @@ export function ToolsMenu({ label, items, className = "" }: Props) {
               <span className="mt-0.5 block text-caption text-ink-3">{item.description}</span>
             </Link>
           ))}
+          <Link
+            href={all.href}
+            onClick={() => setOpen(false)}
+            className="group mt-1 flex items-center gap-1.5 rounded-btn border-t border-surface-line px-3 py-2.5 text-sm font-semibold text-ink transition hover:bg-surface-soft"
+          >
+            {all.label}
+            <span aria-hidden className="transition-transform group-hover:translate-x-0.5">
+              →
+            </span>
+          </Link>
         </div>
       )}
     </div>

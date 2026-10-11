@@ -60,15 +60,27 @@ export function toolPaths(copy: Record<ToolLocale, { path: string }>) {
   return Object.fromEntries(TOOL_LOCALES.map((l) => [l, copy[l].path])) as Record<ToolLocale, string>;
 }
 
+// The menu's name for the tools (was "Resources").
 export const TOOLS_LABEL: Record<ToolLocale, string> = {
-  fr: "Ressources",
-  en: "Resources",
-  de: "Ressourcen",
-  it: "Risorse",
-  es: "Recursos",
-  "es-419": "Recursos",
-  pt: "Recursos",
-  "pt-BR": "Recursos",
+  fr: "Outils gratuits",
+  en: "Free tools",
+  de: "Kostenlose Tools",
+  it: "Strumenti gratuiti",
+  es: "Herramientas gratis",
+  "es-419": "Herramientas gratis",
+  pt: "Ferramentas gratuitas",
+  "pt-BR": "Ferramentas gratuitas",
+};
+
+export const ALL_TOOLS_LABEL: Record<ToolLocale, string> = {
+  fr: "Tous les outils",
+  en: "All tools",
+  de: "Alle Tools",
+  it: "Tutti gli strumenti",
+  es: "Todas las herramientas",
+  "es-419": "Todas las herramientas",
+  pt: "Todas as ferramentas",
+  "pt-BR": "Todas as ferramentas",
 };
 
 // Every language's texts, one module per language in lib/tool-copy/.
@@ -85,7 +97,13 @@ export const TEST_COPY = byLocale((c) => c.test);
 export const OVERUSE_PAGE = byLocale((c) => c.overusePage);
 export const OVERUSE_COPY = byLocale((c) => c.overuse);
 
-// Order of the Resources menu and the footer links.
+// Order of the tools menu and the footer links.
 export function toolsMenu(locale: ToolLocale) {
   return [DIARY, CYCLE_DIARY, TEST_PAGE, OVERUSE_PAGE].map((copy) => copy[locale]);
+}
+
+// The page grouping all the tools, at the root of their folder
+// (/ressources, /resources, /ressourcen…). Still to create.
+export function toolsHubPath(locale: ToolLocale) {
+  return `/${DIARY[locale].path.split("/")[1]}`;
 }

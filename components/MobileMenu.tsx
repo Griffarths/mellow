@@ -6,12 +6,16 @@ import { Link } from "@/i18n/navigation";
 type Item = { href: string; label: string; description?: string };
 
 type Props = {
-  // The app page, first in the menu.
-  app: Item;
+  // The app page and the doctor page, first in the menu.
+  top: Item[];
   resourcesTitle: string;
   resources: Item[];
-  // Blog and Android; external links open in a new tab.
-  links: Array<Item & { external?: boolean }>;
+  // The page grouping all the tools, under them.
+  allTools?: Item;
+  // The blog.
+  links: Item[];
+  // Small, under the store badges; external opens in a new tab.
+  android: Item & { external: boolean };
   download: {
     label: string;
     appStoreUrl: string;
@@ -29,10 +33,12 @@ type Props = {
 // full-height menu under the header. Hidden from md, where the nav shows its
 // links.
 export function MobileMenu({
-  app,
+  top,
   resourcesTitle,
   resources,
+  allTools,
   links,
+  android,
   download,
   openLabel,
   closeLabel,
@@ -102,9 +108,15 @@ export function MobileMenu({
           id="mobile-menu"
           className="fixed inset-x-0 top-16 h-[calc(100dvh-4rem)] overflow-y-auto border-t border-surface-line bg-white px-6 pb-10 pt-6"
         >
-          <Link href={app.href} onClick={close} className="block border-b border-surface-line pb-3.5 text-base font-semibold text-ink">
-            {app.label}
-          </Link>
+          <ul className="divide-y divide-surface-line border-b border-surface-line">
+            {top.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} onClick={close} className="block py-3.5 text-base font-semibold text-ink">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
           <p className="mt-6 text-caption font-bold uppercase tracking-[0.08em] text-croix-ink">{resourcesTitle}</p>
           <ul className="mt-2 divide-y divide-surface-line">
@@ -118,25 +130,35 @@ export function MobileMenu({
                 </Link>
               </li>
             ))}
+            {allTools && (
+              <li>
+                <Link href={allTools.href} onClick={close} className="block py-3.5 text-sm font-semibold text-ink">
+                  {allTools.label} <span aria-hidden>→</span>
+                </Link>
+              </li>
+            )}
           </ul>
 
           <ul className="mt-4 divide-y divide-surface-line border-t border-surface-line">
             {links.map((item) => (
               <li key={item.href}>
-                {item.external ? (
-                  <a href={item.href} target="_blank" rel="noopener noreferrer" onClick={close} className="block py-3.5 text-base font-semibold text-ink">
-                    {item.label}
-                  </a>
-                ) : (
-                  <Link href={item.href} onClick={close} className="block py-3.5 text-base font-semibold text-ink">
-                    {item.label}
-                  </Link>
-                )}
+                <Link href={item.href} onClick={close} className="block py-3.5 text-base font-semibold text-ink">
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
 
           <div className="mt-8">{badges}</div>
+          {android.external ? (
+            <a href={android.href} target="_blank" rel="noopener noreferrer" onClick={close} className="mt-4 inline-block text-sm font-semibold text-ink-3">
+              {android.label}
+            </a>
+          ) : (
+            <Link href={android.href} onClick={close} className="mt-4 inline-block text-sm font-semibold text-ink-3">
+              {android.label}
+            </Link>
+          )}
         </nav>
       )}
     </div>

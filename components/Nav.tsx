@@ -1,8 +1,8 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/stores";
-import { isToolLocale } from "@/lib/tools";
-import { TOOLS_LABEL, toolsMenu } from "@/lib/tools";
+import { DOCTOR_PATH } from "@/lib/doctor";
+import { ALL_TOOLS_LABEL, TOOLS_LABEL, isToolLocale, toolsHubPath, toolsMenu } from "@/lib/tools";
 import { MobileMenu } from "./MobileMenu";
 import { NavShell } from "./NavShell";
 import { ToolsMenu } from "./ToolsMenu";
@@ -13,8 +13,8 @@ import { StoreBadges } from "./StoreBadges";
 const LINK_CLASS =
   "nav-on-hero whitespace-nowrap text-sm font-semibold text-ink-2 transition hover:text-ink";
 
-// From md: logo, the app page, Resources menu, Blog, Android and the store
-// badges. Below:
+// From md: logo, then the menu (the app, for your doctor, the free tools,
+// the blog) and on the right a small Android link beside the store badge. Below:
 // logo, a download button and a burger (MobileMenu). On the home page
 // (overHero) it starts transparent over the hero (NavShell), without the
 // download badge or button (nav-cta, globals.css): the hero has its own.
@@ -28,6 +28,7 @@ export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
         description: tool.menuDescription,
       }))
     : [];
+  const doctor = DOCTOR_PATH[locale] ?? DOCTOR_PATH.en;
   const android = PLAY_STORE_URL
     ? { href: PLAY_STORE_URL, label: t("android"), external: true }
     : { href: "/android", label: t("androidBeta"), external: false };
@@ -50,34 +51,49 @@ export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
             />
             <span className="nav-on-hero transition-colors">Mellow</span>
           </Link>
-          <div className="hidden items-center gap-10 md:flex">
+          <div className="hidden items-center gap-8 md:flex lg:gap-10">
             <Link href="/app" className={LINK_CLASS}>
               {t("app")}
             </Link>
-            {isToolLocale(locale) && <ToolsMenu label={TOOLS_LABEL[locale]} items={resources} />}
+            <Link href={doctor} className={LINK_CLASS}>
+              {t("doctor")}
+            </Link>
+            {isToolLocale(locale) && (
+              <ToolsMenu
+                label={TOOLS_LABEL[locale]}
+                items={resources}
+                all={{ href: toolsHubPath(locale), label: ALL_TOOLS_LABEL[locale] }}
+              />
+            )}
             <Link href="/blog" className={LINK_CLASS}>
               {t("blog")}
             </Link>
-            {android.external ? (
-              <a href={android.href} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>
-                {android.label}
-              </a>
-            ) : (
-              <Link href={android.href} className={LINK_CLASS}>
-                {android.label}
-              </Link>
-            )}
           </div>
         </div>
-        <StoreBadges
-          className="nav-cta hidden shrink-0 flex-nowrap gap-2 md:flex"
-          sizeClass="h-10 w-auto select-none"
-        />
+        {/* Android, small, beside the badge; both hidden over the home hero
+            until the nav turns white (nav-cta). */}
+        <div className="nav-cta hidden shrink-0 items-center gap-4 md:flex">
+          {android.external ? (
+            <a href={android.href} target="_blank" rel="noopener noreferrer" className="hidden whitespace-nowrap text-xs font-semibold text-ink-3 transition hover:text-ink lg:block">
+              {android.label}
+            </a>
+          ) : (
+            <Link href={android.href} className="hidden whitespace-nowrap text-xs font-semibold text-ink-3 transition hover:text-ink lg:block">
+              {android.label}
+            </Link>
+          )}
+          <StoreBadges className="shrink-0 flex-nowrap gap-2" sizeClass="h-10 w-auto select-none" />
+        </div>
         <MobileMenu
-          app={{ href: "/app", label: t("app") }}
+          top={[
+            { href: "/app", label: t("app") },
+            { href: doctor, label: t("doctor") },
+          ]}
           resourcesTitle={isToolLocale(locale) ? TOOLS_LABEL[locale] : ""}
           resources={resources}
-          links={[{ href: "/blog", label: t("blog") }, android]}
+          allTools={isToolLocale(locale) ? { href: toolsHubPath(locale), label: ALL_TOOLS_LABEL[locale] } : undefined}
+          links={[{ href: "/blog", label: t("blog") }]}
+          android={android}
           download={{
             label: t("download"),
             appStoreUrl: APP_STORE_URL,
