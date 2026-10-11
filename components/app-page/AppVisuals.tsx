@@ -55,8 +55,9 @@ export function CompleteGrid() {
   );
 }
 
-// One month of the calendar, large: attacks coloured by intensity (August
-// 2026, as on the App Store screenshots: 8 migraines), popping in.
+// One month of the calendar: attacks coloured by intensity (August 2026, as
+// on the App Store screenshots: 8 migraines), popping in. Sized so the whole
+// section fits on a laptop screen.
 const ATTACKS: Record<number, "mild" | "moderate" | "intense"> = {
   2: "intense",
   5: "moderate",
@@ -82,14 +83,14 @@ export function BigCalendar() {
   const offset = 5; // 1 August 2026 is a Saturday.
   let n = 0;
   return (
-    <div aria-hidden className="mx-auto w-full max-w-xl">
+    <div aria-hidden className="mx-auto w-full max-w-md">
       <div className="flex items-baseline justify-between px-2">
-        <p className="text-xl font-bold text-ink first-letter:uppercase">{month}</p>
+        <p className="text-lg font-bold text-ink first-letter:uppercase">{month}</p>
         <p className="text-ink-3">{ui("monthMigraines", { count: 8 })}</p>
       </div>
-      <div className="mt-5 grid grid-cols-7 gap-y-2 text-center">
+      <div className="mt-3 grid grid-cols-7 gap-y-1 text-center">
         {weekdays.map((d, i) => (
-          <span key={i} className="pb-1 text-sm text-ink-4">
+          <span key={i} className="text-sm text-ink-4">
             {d}
           </span>
         ))}
@@ -102,7 +103,7 @@ export function BigCalendar() {
           return (
             <span
               key={day}
-              className="relative mx-auto grid h-10 w-10 place-items-center text-[15px] text-ink md:h-14 md:w-14 md:text-lg"
+              className="relative mx-auto grid h-9 w-9 place-items-center text-[15px] text-ink md:h-10 md:w-10 md:text-base"
             >
               {level && (
                 <span
@@ -115,7 +116,7 @@ export function BigCalendar() {
           );
         })}
       </div>
-      <div className="mt-6 flex justify-center gap-6 text-sm text-ink-2">
+      <div className="mt-4 flex justify-center gap-6 text-sm text-ink-2">
         {(["mild", "moderate", "intense"] as const).map((level) => (
           <span key={level} className="flex items-center gap-2">
             <span className={`h-3 w-3 rounded-full ${INTENSITY_BG[level]}`} />
