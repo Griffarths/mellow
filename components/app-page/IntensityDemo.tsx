@@ -65,22 +65,25 @@ export function IntensityDemo({ labels }: { labels: Labels }) {
 
   return (
     <div ref={ref} className="mx-auto max-w-xl">
-      <div className="flex items-end justify-center gap-4 md:gap-10">
+      {/* The Mellows keep the same box and are only zoomed (transform), so
+          switching level never changes the height of the row and nothing
+          below moves. */}
+      <div className="flex items-end justify-center gap-3 md:gap-8">
         {LEVELS.map((l, i) => (
           <button
             key={l.key}
             type="button"
             onClick={() => set(l.pick)}
             aria-label={`${labels.ranges[i]}, ${labels[l.key]}`}
-            className="flex w-24 flex-col items-center rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-hot md:w-32"
+            className="flex w-24 flex-col items-center rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-hot md:w-36"
           >
             <img
               src={`/blobs/${l.blob}.svg`}
               alt=""
               aria-hidden
               draggable={false}
-              className={`select-none transition-all duration-300 ${
-                i === active ? "h-28 w-28 opacity-100 md:h-36 md:w-36" : "h-16 w-16 opacity-35 md:h-20 md:w-20"
+              className={`h-24 w-24 origin-bottom select-none transition duration-300 md:h-36 md:w-36 ${
+                i === active ? "scale-100 opacity-100" : "scale-[0.6] opacity-35"
               }`}
             />
             <span className={`mt-3 text-sm ${i === active ? "font-bold text-ink" : "text-ink-3"}`}>
