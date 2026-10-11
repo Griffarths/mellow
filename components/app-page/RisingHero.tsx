@@ -2,8 +2,9 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 
-// How far the page scrolls while the header stays in place.
-const PINNED = 520;
+// How far the page scrolls while the header stays in place: a little more
+// than the phone rises, so the rise follows the scroll closely.
+const PINNED = 420;
 
 // Where the four promises sit around the phone: left or right, the height of
 // their middle in % of the phone, and when each one appears in the rise (0 to
@@ -40,23 +41,39 @@ export function RisingHero({
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let frame = 0;
-    const update = () => {
-      frame = 0;
-      const els = [sectionRef.current, stageRef.current, textRef.current, windowRef.current, phoneRef.current, fadeRef.current];
-      if (els.some((el) => !el)) return;
-      const [section, stage, textEl, windowEl, phoneEl, fade] = els as HTMLElement[];
-      // 0 when the header arrives, 1 when the page is about to go on.
-      const done = section.offsetHeight - stage.offsetHeight;
-      const p = done > 0 ? Math.min(1, Math.max(0, -section.getBoundingClientRect().top / done)) : 0;
+    const els = [sectionRef.current, stageRef.current, textRef.current, windowRef.current, phoneRef.current, fadeRef.current];
+    if (els.some((el) => !el)) return;
+    const [section, stage, textEl, windowEl, phoneEl, fade] = els as HTMLElement[];
+
+    // The sizes are measured once (and again on resize): on each frame only
+    // the scroll is read, so the browser never has to lay the page out again
+    // in the middle of the animation.
+    let start = 0;
+    let done = 1;
+    let rise = 0;
+    const measure = () => {
+      // The stage (at the top of the section) pins when the section reaches
+      // the navbar, 4rem from the top, and lets go `done` pixels later.
+      start = section.getBoundingClientRect().top + window.scrollY - 64;
+      done = Math.max(1, section.offsetHeight - stage.offsetHeight);
       // The phone ends whole and centred in the stage (or at its top if the
       // screen is too short for it).
       const end = Math.max(16, (stage.offsetHeight - phoneEl.offsetHeight) / 2);
-      const rise = Math.max(0, windowEl.offsetTop - end);
-      phoneEl.style.transform = `translateY(${-rise * p}px)`;
+      rise = Math.max(0, windowEl.offsetTop - end);
+    };
+
+    let frame = 0;
+    let last = -1;
+    const update = () => {
+      frame = 0;
+      // 0 when the header pins, 1 when the page is about to go on.
+      const p = Math.round(Math.min(1, Math.max(0, (window.scrollY - start) / done)) * 1000) / 1000;
+      if (p === last) return;
+      last = p;
+      phoneEl.style.transform = `translate3d(0, ${-rise * p}px, 0)`;
       // The text is gone before the phone covers it.
       textEl.style.opacity = String(1 - Math.min(1, p * 2.5));
-      textEl.style.transform = `translateY(${-40 * p}px)`;
+      textEl.style.transform = `translate3d(0, ${-40 * p}px, 0)`;
       // The white fade hides the cut; once the phone is whole, it goes.
       fade.style.opacity = String(1 - p);
       // The promises come one by one at the end of the rise.
@@ -67,12 +84,18 @@ export function RisingHero({
     const onScroll = () => {
       if (!frame) frame = requestAnimationFrame(update);
     };
+    const onResize = () => {
+      measure();
+      last = -1;
+      onScroll();
+    };
+    measure();
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
+    window.addEventListener("resize", onResize);
     return () => {
       window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
+      window.removeEventListener("resize", onResize);
       cancelAnimationFrame(frame);
     };
   }, []);
@@ -88,7 +111,7 @@ export function RisingHero({
         ref={stageRef}
         className="sticky top-16 h-[calc(100svh-4rem)] overflow-hidden motion-reduce:static motion-reduce:h-auto"
       >
-        <div ref={textRef} className="mx-auto max-w-3xl px-6 pt-12 text-center md:pt-16">
+        <div ref={textRef} className="mx-auto max-w-3xl px-6 pt-12 text-center will-change-[opacity,transform] md:pt-16">
           {text}
         </div>
         {/* Wider than the phone, so its side buttons show. The phone is
@@ -112,7 +135,7 @@ export function RisingHero({
                     ref={(el) => {
                       promiseRefs.current[i] = el;
                     }}
-                    className={`absolute hidden w-[270px] -translate-y-1/2 opacity-0 lg:block motion-reduce:!hidden ${
+                    className={`absolute hidden w-[270px] -translate-y-1/2 opacity-0 will-change-[opacity] lg:block motion-reduce:!hidden ${
                       left ? "right-[calc(100%+3.5rem)] text-right" : "left-[calc(100%+3.5rem)]"
                     }`}
                     style={{ top: `${spot.y}%` }}
@@ -128,7 +151,7 @@ export function RisingHero({
             </div>
           </div>
         </div>
-        <div ref={fadeRef} aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white" />
+        <div ref={fadeRef} aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white will-change-[opacity]" />
       </div>
     </section>
   );
