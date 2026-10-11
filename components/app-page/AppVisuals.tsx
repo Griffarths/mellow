@@ -190,9 +190,9 @@ const DURATIONS: Array<["durShort" | "durDay" | "durLong", number, string]> = [
   ["durDay", 2, "bg-tagada"],
   ["durLong", 1, "bg-danger/75"],
 ];
-// How many of the 8 migraines got each score, 1 to 10 (the calendar's ones):
-// the 4 intense ones each have their own score, so 4 red bars for "4 out of 8".
-const INTENSITIES = [0, 0, 2, 0, 1, 1, 1, 1, 1, 1];
+// How many of the 8 migraines got each score, 1 to 10 (the calendar's ones),
+// written above each bar as in the app.
+const INTENSITIES = [0, 1, 1, 0, 1, 1, 1, 2, 1, 0];
 const intensityBg = (score: number) => (score <= 3 ? "bg-fleur" : score <= 6 ? "bg-tagada" : "bg-croix");
 
 function Feel({
@@ -251,13 +251,15 @@ export function FeelFigures() {
       </Feel>
 
       <Feel value="4" suffix={ui("outOfTotal", { total: TOTAL })} caption={ui("intenseAttacks")} index={1}>
-        <div className="flex h-16 items-end gap-1">
+        <div className="flex items-end gap-1">
           {INTENSITIES.map((count, i) => (
-            <div
-              key={i}
-              className={`flex-1 rounded-[3px] ${count ? `app-grow-y ${intensityBg(i + 1)}` : "bg-surface-grouped"}`}
-              style={count ? { height: `${(count / 2) * 100}%`, ...delay(i, 60, 300) } : { height: 4 }}
-            />
+            <div key={i} className="flex flex-1 flex-col items-center gap-1">
+              <span className="text-xs font-semibold tabular-nums text-ink-3">{count || "\u00a0"}</span>
+              <div
+                className={`w-full rounded-[3px] ${count ? `app-grow-y ${intensityBg(i + 1)}` : "bg-surface-grouped"}`}
+                style={count ? { height: count * 28, ...delay(i, 60, 300) } : { height: 4 }}
+              />
+            </div>
           ))}
         </div>
         <div className="mt-1.5 flex gap-1 text-center text-xs tabular-nums text-ink-4">
