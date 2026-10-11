@@ -1,17 +1,29 @@
 // A raw app screen (status bar and island included) in an iPhone: a thin
 // titanium band with a soft highlight, the black bezel, the side buttons.
 // Its width comes from the parent. `eager` for a phone seen on arrival, so
-// its screen is not left black while it loads.
+// its screen is not left black while it loads; `shadow` to soften it.
 const BUTTON = "absolute w-[1.6%] bg-gradient-to-r from-[#4a4a50] to-[#26262a]";
 
-export function Phone({ src, alt, eager = false }: { src: string; alt: string; eager?: boolean }) {
+const SHADOW = "shadow-[0_2px_6px_rgb(0_0_0/0.06),0_32px_60px_-28px_rgb(0_0_0/0.25)]";
+
+export function Phone({
+  src,
+  alt,
+  eager = false,
+  shadow = SHADOW,
+}: {
+  src: string;
+  alt: string;
+  eager?: boolean;
+  shadow?: string;
+}) {
   return (
     <div className="relative">
       <span aria-hidden className={`${BUTTON} -left-[1.2%] top-[17%] h-[3.4%] rounded-l-sm`} />
       <span aria-hidden className={`${BUTTON} -left-[1.2%] top-[23.5%] h-[6.5%] rounded-l-sm`} />
       <span aria-hidden className={`${BUTTON} -left-[1.2%] top-[31.5%] h-[6.5%] rounded-l-sm`} />
       <span aria-hidden className={`${BUTTON} -right-[1.2%] top-[26%] h-[10%] rotate-180 rounded-l-sm`} />
-      <div className="relative rounded-[16%/7.7%] bg-gradient-to-br from-[#5b5b61] via-[#2c2c30] to-[#4a4a50] p-[1.4%] shadow-[0_2px_6px_rgb(0_0_0/0.06),0_32px_60px_-28px_rgb(0_0_0/0.25)]">
+      <div className={`relative rounded-[16%/7.7%] bg-gradient-to-br from-[#5b5b61] via-[#2c2c30] to-[#4a4a50] p-[1.4%] ${shadow}`}>
         <div className="rounded-[15%/7.1%] bg-black p-[2.6%] shadow-[inset_0_0_0_1px_rgb(255_255_255/0.08)]">
           <img
             src={src}

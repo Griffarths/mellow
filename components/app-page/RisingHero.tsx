@@ -92,12 +92,13 @@ export function RisingHero({
           {text}
         </div>
         {/* Wider than the phone, so its side buttons show. The phone is
-            never taller than the screen (its height is about 2.1 times its
-            width), so it ends whole on a short laptop too. */}
+            never taller than the screen less 10rem (its height is about 2.1
+            times its width): it ends whole on a short laptop too, with room
+            below for its shadow, which the stage would cut. */}
         <div ref={windowRef} className="mt-12 md:mt-14 motion-reduce:h-[330px] motion-reduce:overflow-hidden md:motion-reduce:h-[420px]">
           <div
             ref={phoneRef}
-            className="mx-auto w-[min(270px,calc((100svh-7rem)/2.1))] will-change-transform md:w-[min(340px,calc((100svh-7rem)/2.1))] motion-reduce:w-[270px] md:motion-reduce:w-[340px]"
+            className="mx-auto w-[min(270px,calc((100svh-10rem)/2.1))] will-change-transform md:w-[min(340px,calc((100svh-10rem)/2.1))] motion-reduce:w-[270px] md:motion-reduce:w-[340px]"
           >
             <div className="relative">
               {phone}

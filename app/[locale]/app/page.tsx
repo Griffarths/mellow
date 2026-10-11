@@ -123,7 +123,14 @@ function AppContent() {
               <StoreBadges className="mt-4" sizeClass="h-11 w-auto select-none md:h-12" />
             </>
           }
-          phone={<Phone src={`/app-screens/${locale}/home.jpg`} alt={tFeatures("phoneAlt")} eager />}
+          phone={
+            <Phone
+              src={`/app-screens/${locale}/home.jpg`}
+              alt={tFeatures("phoneAlt")}
+              eager
+              shadow="shadow-[0_1px_3px_rgb(0_0_0/0.05),0_18px_36px_-18px_rgb(0_0_0/0.14)]"
+            />
+          }
           promises={t.raw("promises") as Array<{ title: string; text: string }>}
         />
 
