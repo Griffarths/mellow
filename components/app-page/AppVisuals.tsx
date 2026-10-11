@@ -373,44 +373,6 @@ export function MedsChart() {
   );
 }
 
-// Pressure over the next seven days, across the page: one column per day,
-// the arrow coloured by the change.
-const PRESSURE: Array<[number, "up" | "down" | "drop"]> = [
-  [1016, "up"],
-  [1012, "down"],
-  [1006, "drop"],
-  [1009, "up"],
-  [1014, "up"],
-  [1013, "down"],
-  [1017, "up"],
-];
-// The arrow points up; turned to ↗ when pressure rises, ↘ when it falls.
-const ARROW = {
-  up: "rotate-45 text-tagada-accent",
-  down: "rotate-[135deg] text-sable-accent",
-  drop: "rotate-[135deg] text-croix-accent",
-};
-
-export function WeatherBand() {
-  const locale = intlLocale(useLocale());
-  const day = new Intl.DateTimeFormat(locale, { weekday: "short" });
-  return (
-    <div aria-hidden className="grid grid-cols-7 divide-x divide-surface-line">
-      {PRESSURE.map(([hpa, trend], i) => (
-        <div key={i} className="app-pop flex flex-col items-center gap-3 py-2" style={delay(i, 100)}>
-          <span className="text-sm text-ink-3 first-letter:uppercase">
-            {day.format(new Date(2026, 7, 3 + i)).replace(".", "")}
-          </span>
-          <svg viewBox="0 0 16 16" className={`h-8 w-8 md:h-10 md:w-10 ${ARROW[trend]}`} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M8 13V3M4 7l4-4 4 4" />
-          </svg>
-          <span className="text-base font-bold tabular-nums text-ink md:text-xl">{hpa}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 // The four Mellows, each with something the app does between attacks.
 const CARE_MELLOWS = ["Fleur1", "Tagada1", "Croix1", "Humeur1"] as const;
 

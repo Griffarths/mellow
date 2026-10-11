@@ -242,6 +242,20 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
   animation: app-grow-y 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
+/* /app page: the weather curve fades in when switching pressure/humidity. */
+@keyframes chart-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.chart-fade {
+  animation: chart-fade 0.4s ease both;
+}
+
 /* /app page: the intensity slider, filled up to the value in the colour of
    its level (IntensityDemo sets --fill and --color). */
 .intensity-range {
@@ -280,6 +294,9 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
 /* Migraine-friendly: no motion if the visitor asked for less. */
 @media (prefers-reduced-motion: reduce) {
   .hero-clouds div {
+    animation: none;
+  }
+  .chart-fade {
     animation: none;
   }
   [data-shown] .app-pop,

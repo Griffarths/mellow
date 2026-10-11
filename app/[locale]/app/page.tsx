@@ -13,6 +13,7 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { Stars } from "@/components/sections/SocialProof";
 import { IntensityDemo } from "@/components/app-page/IntensityDemo";
 import { Reveal } from "@/components/app-page/Reveal";
+import { WeatherChart } from "@/components/app-page/WeatherChart";
 import {
   BigCalendar,
   CompleteGrid,
@@ -22,7 +23,6 @@ import {
   ReliefList,
   ReportsList,
   TriggerList,
-  WeatherBand,
 } from "@/components/app-page/AppVisuals";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -64,6 +64,13 @@ function Heading({ id }: { id: string }) {
   );
 }
 
+// One example week for the weather chart (from Monday 3 August 2026): the
+// pressure drops by 6 hPa on Wednesday while the humidity climbs by 19 points,
+// the kind of change the app flags before attacks.
+const PRESSURE = [1016, 1014, 1008, 1010, 1012, 1013, 1015];
+const HUMIDITY = [62, 64, 83, 76, 70, 66, 63];
+const signed = (n: number) => `${n < 0 ? "\u2212" : "+"}${Math.abs(n)}`;
+
 function Cell({ value }: { value: string }) {
   if (value === "yes")
     return (
@@ -82,6 +89,10 @@ function AppContent() {
   const tStars = useTranslations("socialProof");
   const tFeatures = useTranslations("features");
   const locale = useLocale();
+  const weekday = new Intl.DateTimeFormat(locale === "pt" ? "pt-PT" : locale, { weekday: "short" });
+  const weekdays = Array.from({ length: 7 }, (_, i) =>
+    weekday.format(new Date(2026, 7, 3 + i)).replace(".", ""),
+  );
   const careItems = t.raw("blocks.care.items") as Array<{ title: string; text: string }>;
   const rows = t.raw("plans.rows") as Array<{ label: string; free: string; premium: string }>;
   const rating = APP_STORE_RATING
@@ -204,15 +215,36 @@ function AppContent() {
           </Reveal>
         </section>
 
-        {/* 7. The text left-aligned, the seven days across the page. */}
+        {/* 7. The text left-aligned, then the week's curve across the page,
+            pressure or humidity, as in the app. */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <div className="max-w-2xl">
             <Heading id="weather" />
           </div>
-          <Reveal className="mt-12">
-            <p className="mb-4 text-sm font-semibold text-ink-3">{ui("weatherDays")}</p>
-            <WeatherBand />
-          </Reveal>
+          <div className="mt-12">
+            <WeatherChart
+              title={ui("weatherDays")}
+              days={weekdays}
+              pressure={{
+                label: ui("pressure"),
+                values: PRESSURE,
+                min: 1002,
+                max: 1020,
+                color: "#F4BCC4",
+                peak: 2,
+                change: `${signed(PRESSURE[2] - PRESSURE[1])} hPa`,
+              }}
+              humidity={{
+                label: ui("humidity"),
+                values: HUMIDITY,
+                min: 45,
+                max: 100,
+                color: "#BFD4EE",
+                peak: 2,
+                change: ui("points", { value: signed(HUMIDITY[2] - HUMIDITY[1]) }),
+              }}
+            />
+          </div>
         </section>
 
         {/* 8. Centred: the four Mellows, each with what it brings. */}
