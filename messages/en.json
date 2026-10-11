@@ -144,7 +144,7 @@
       "weather": {
         "kicker": "Anticipate",
         "title": "Pressure and humidity for the next seven days",
-        "text": "Mellow follows the weather where you are and compares your attacks with pressure changes, to help you spot the days to watch."
+        "text": "A drop in pressure, a rise in humidity: Mellow shows you whether the weather plays a part in your attacks."
       },
       "care": {
         "kicker": "Between attacks",

@@ -144,7 +144,7 @@
       "weather": {
         "kicker": "Anticiper",
         "title": "La pression et l'humidité des sept prochains jours",
-        "text": "Mellow suit la météo là où tu es et compare tes crises aux variations de pression, pour t'aider à repérer les jours à surveiller."
+        "text": "Une chute de pression, une montée d'humidité : Mellow te montre si la météo joue sur tes crises."
       },
       "care": {
         "kicker": "Entre les crises",

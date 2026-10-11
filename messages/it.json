@@ -149,7 +149,7 @@
       "weather": {
         "kicker": "Prevedere",
         "title": "Pressione e umidità dei prossimi sette giorni",
-        "text": "Mellow segue il meteo dove ti trovi e confronta i tuoi attacchi con le variazioni di pressione, per aiutarti a individuare i giorni da tenere d'occhio."
+        "text": "Un calo di pressione, un aumento dell'umidità: Mellow ti mostra se il meteo influisce sui tuoi attacchi."
       },
       "care": {
         "kicker": "Tra un attacco e l'altro",

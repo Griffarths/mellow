@@ -149,7 +149,7 @@
       "weather": {
         "kicker": "Vorausschauen",
         "title": "Luftdruck und Luftfeuchtigkeit der nächsten sieben Tage",
-        "text": "Mellow verfolgt das Wetter dort, wo du bist, und vergleicht deine Attacken mit den Luftdruckschwankungen, damit du die Tage erkennst, auf die du achten solltest."
+        "text": "Ein Druckabfall, steigende Luftfeuchtigkeit: Mellow zeigt dir, ob das Wetter bei deinen Attacken eine Rolle spielt."
       },
       "care": {
         "kicker": "Zwischen den Attacken",
