@@ -66,10 +66,10 @@ function Heading({ id }: { id: string }) {
 
 // One example week for the weather chart (from Monday 3 August 2026): the
 // pressure drops by 6 hPa on Wednesday while the humidity climbs by 19 points,
-// the kind of change the app flags before attacks.
-const PRESSURE = [1016, 1014, 1008, 1010, 1012, 1013, 1015];
-const HUMIDITY = [62, 64, 83, 76, 70, 66, 63];
-const signed = (n: number) => `${n < 0 ? "\u2212" : "+"}${Math.abs(n)}`;
+// the kind of change the app flags before attacks (red), and Thursday moves
+// a little less (orange).
+const PRESSURE = [1016, 1014, 1008, 1011, 1013, 1014, 1015];
+const HUMIDITY = [62, 64, 83, 75, 70, 66, 63];
 
 function Cell({ value }: { value: string }) {
   if (value === "yes")
@@ -228,20 +228,26 @@ function AppContent() {
               pressure={{
                 label: ui("pressure"),
                 values: PRESSURE,
+                previous: 1017,
                 min: 1002,
                 max: 1020,
                 color: "#F4BCC4",
-                peak: 2,
-                change: `${signed(PRESSURE[2] - PRESSURE[1])} hPa`,
+                format: "{value} hPa",
+                medium: 3,
+                strong: 5,
+                unit: " hPa",
               }}
               humidity={{
                 label: ui("humidity"),
                 values: HUMIDITY,
+                previous: 60,
                 min: 45,
                 max: 100,
                 color: "#BFD4EE",
-                peak: 2,
-                change: ui("points", { value: signed(HUMIDITY[2] - HUMIDITY[1]) }),
+                format: ui.raw("points") as string,
+                medium: 7,
+                strong: 12,
+                unit: "%",
               }}
             />
           </div>
