@@ -16,10 +16,10 @@ import { Reveal } from "@/components/app-page/Reveal";
 import { WeatherChart } from "@/components/app-page/WeatherChart";
 import {
   BigCalendar,
+  CareGrid,
   CompleteGrid,
   FeelFigures,
   MedsChart,
-  MellowsCare,
   ReliefList,
   ReportsFan,
   TriggerList,
@@ -30,8 +30,8 @@ type Props = { params: Promise<{ locale: string }> };
 // The app in detail, one moment of an attack per section, each laid out its
 // own way with the app's elements right on the page: the intensity to play
 // with, the questions, the calendar, the triggers, what the attacks are like,
-// what brings relief, the weather, the reports, the Mellows. Then free or
-// Premium, and the data.
+// what brings relief, the weather, the reports, the rest between attacks.
+// Then free or Premium, and the data.
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "appPage" });
@@ -264,13 +264,14 @@ function AppContent() {
           </Reveal>
         </section>
 
-        {/* 9. Centred: the four Mellows, each with what it brings. */}
+        {/* 9. Centred: four things the app does between attacks, each with
+            its emoji. */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="care" />
           </div>
           <Reveal className="mt-14">
-            <MellowsCare items={careItems} />
+            <CareGrid items={careItems} />
           </Reveal>
         </section>
 

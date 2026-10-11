@@ -373,17 +373,32 @@ export function MedsChart() {
   );
 }
 
-// The four Mellows, each with something the app does between attacks.
-const CARE_MELLOWS = ["Fleur1", "Tagada1", "Croix1", "Humeur1"] as const;
+// Between attacks: four things the app does, each with a 3D emoji from
+// Microsoft's Fluent Emoji (public/emoji; MIT licence, Copyright (c)
+// Microsoft Corporation) that pops in.
+const CARE_EMOJI = [
+  "smiling_face_with_smiling_eyes_3d",
+  "leaf_fluttering_in_wind_3d",
+  "graduation_cap_3d",
+  "hugging_face_3d",
+];
 
-export function MellowsCare({ items }: { items: Array<{ title: string; text: string }> }) {
+export function CareGrid({ items }: { items: Array<{ title: string; text: string }> }) {
   return (
     <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
       {items.map((item, i) => (
         <div key={item.title} className="text-center">
-          <span className="app-pop inline-block" style={delay(i, 140)}>
-            <Blob name={CARE_MELLOWS[i]} className="mx-auto h-24 w-24 md:h-28 md:w-28" />
-          </span>
+          <img
+            src={`/emoji/${CARE_EMOJI[i]}.png`}
+            alt=""
+            aria-hidden
+            width={256}
+            height={256}
+            loading="lazy"
+            draggable={false}
+            className="app-pop mx-auto h-16 w-16 select-none md:h-20 md:w-20"
+            style={delay(i, 140)}
+          />
           <h3 className="mt-4 text-lg font-bold text-ink">{item.title}</h3>
           <p className="mt-1.5 text-[15px] leading-relaxed text-ink-2">{item.text}</p>
         </div>
