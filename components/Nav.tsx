@@ -2,7 +2,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/stores";
 import { DOCTOR_PATH } from "@/lib/doctor";
-import { ALL_TOOLS_LABEL, TOOLS_LABEL, isToolLocale, toolsHubPath, toolsMenu } from "@/lib/tools";
+import { TOOLS_LABEL, isToolLocale, toolsMenu } from "@/lib/tools";
 import { MobileMenu } from "./MobileMenu";
 import { NavShell } from "./NavShell";
 import { ToolsMenu } from "./ToolsMenu";
@@ -59,11 +59,7 @@ export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
               {t("doctor")}
             </Link>
             {isToolLocale(locale) && (
-              <ToolsMenu
-                label={TOOLS_LABEL[locale]}
-                items={resources}
-                all={{ href: toolsHubPath(locale), label: ALL_TOOLS_LABEL[locale] }}
-              />
+              <ToolsMenu label={TOOLS_LABEL[locale]} items={resources} />
             )}
             <Link href="/blog" className={LINK_CLASS}>
               {t("blog")}
@@ -91,7 +87,6 @@ export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
           ]}
           resourcesTitle={isToolLocale(locale) ? TOOLS_LABEL[locale] : ""}
           resources={resources}
-          allTools={isToolLocale(locale) ? { href: toolsHubPath(locale), label: ALL_TOOLS_LABEL[locale] } : undefined}
           links={[{ href: "/blog", label: t("blog") }]}
           android={android}
           download={{

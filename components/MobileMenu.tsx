@@ -10,8 +10,6 @@ type Props = {
   top: Item[];
   resourcesTitle: string;
   resources: Item[];
-  // The page grouping all the tools, under them.
-  allTools?: Item;
   // The blog.
   links: Item[];
   // Small, under the store badges; external opens in a new tab.
@@ -36,7 +34,6 @@ export function MobileMenu({
   top,
   resourcesTitle,
   resources,
-  allTools,
   links,
   android,
   download,
@@ -130,13 +127,6 @@ export function MobileMenu({
                 </Link>
               </li>
             ))}
-            {allTools && (
-              <li>
-                <Link href={allTools.href} onClick={close} className="block py-3.5 text-sm font-semibold text-ink">
-                  {allTools.label} <span aria-hidden>→</span>
-                </Link>
-              </li>
-            )}
           </ul>
 
           <ul className="mt-4 divide-y divide-surface-line border-t border-surface-line">
