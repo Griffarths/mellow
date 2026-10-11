@@ -118,7 +118,7 @@
       "log": {
         "kicker": "Durante a crise",
         "title": "Regista uma crise em dois toques",
-        "text": "No momento, regista só o início e a intensidade, de 1 a 10, até pelo widget, sem abrir a app.",
+        "text": "Quando a enxaqueca começa, nada de formulários: regista só a intensidade e volta para a completar quando estiveres melhor.",
         "hint": "Arrasta o cursor ou toca num Mellow."
       },
       "complete": {

@@ -118,7 +118,7 @@
       "log": {
         "kicker": "Durante la crisis",
         "title": "Registra una crisis con dos toques",
-        "text": "En el momento, anota solo el inicio y la intensidad, del 1 al 10, incluso desde el widget, sin abrir la app.",
+        "text": "Cuando empieza la migraña, nada de formularios: registra solo su intensidad y vuelve a completarla cuando te sientas mejor.",
         "hint": "Desliza el control o toca un Mellow."
       },
       "complete": {

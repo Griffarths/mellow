@@ -118,7 +118,7 @@
       "log": {
         "kicker": "Durante l'attacco",
         "title": "Registra un attacco con due tap",
-        "text": "Sul momento, annota solo l'inizio e l'intensità, da 1 a 10, anche dal widget, senza aprire l'app.",
+        "text": "Quando l'emicrania inizia, niente moduli: registra solo la sua intensità e torna a completarla quando starai meglio.",
         "hint": "Trascina il cursore o tocca un Mellow."
       },
       "complete": {

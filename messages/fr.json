@@ -113,7 +113,7 @@
       "log": {
         "kicker": "Pendant la crise",
         "title": "Enregistre une crise en deux taps",
-        "text": "Sur le moment, note juste le début et l'intensité, de 1 à 10, même depuis le widget, sans ouvrir l'app.",
+        "text": "Quand la migraine commence, pas de formulaire : note juste son intensité, et reviens la compléter quand ça ira mieux.",
         "hint": "Fais glisser le curseur, ou touche un Mellow."
       },
       "complete": {
