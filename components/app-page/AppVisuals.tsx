@@ -134,8 +134,7 @@ export function BigCalendar() {
 const TOTAL = 8;
 
 // What keeps coming back: the potential triggers, each with its share of the
-// migraines in red, paler the rarer it is (like the app's rows), then what
-// is logged together.
+// migraines in red, paler the rarer it is (like the app's rows).
 const TRIGGERS: Array<["stress" | "sleepLack" | "screens", number]> = [
   ["stress", 5],
   ["sleepLack", 4],
@@ -165,8 +164,30 @@ export function TriggerList() {
           </li>
         ))}
       </ul>
-      <p className="mt-8 text-sm font-semibold text-ink-3">{ui("together")}</p>
-      <div className="app-pop mt-3 flex items-start gap-4" style={delay(3, 140)}>
+    </div>
+  );
+}
+
+// Beside the triggers: what is logged together (the app shows a pair from
+// three times on, so only Stress and lack of sleep here) and, from Apple
+// Health, the night before an attack against the other nights.
+const SLEEP_BEFORE = 6 * 60 + 5; // minutes
+const SLEEP_OTHER = 7 * 60 + 15;
+
+export function TogetherAndSleep() {
+  const ui = useTranslations("appPage.ui");
+  const locale = intlLocale(useLocale());
+  const hours = new Intl.NumberFormat(locale, { style: "unit", unit: "hour", unitDisplay: "short" });
+  const minutes = new Intl.NumberFormat(locale, { style: "unit", unit: "minute", unitDisplay: "short" });
+  const length = (m: number) => `${hours.format(Math.floor(m / 60))} ${minutes.format(m % 60)}`;
+  const nights: Array<[string, number, string]> = [
+    [ui("sleepNightBefore"), SLEEP_BEFORE, "bg-croix"],
+    [ui("sleepOtherNights"), SLEEP_OTHER, "bg-tagada"],
+  ];
+  return (
+    <div aria-hidden>
+      <p className="text-sm font-semibold text-ink-3">{ui("together")}</p>
+      <div className="app-pop mt-2 flex items-start gap-4 border-b border-surface-line py-4" style={delay(3, 140)}>
         <svg viewBox="0 0 24 24" className="mt-0.5 h-6 w-6 shrink-0 text-ink" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M10 14a4.5 4.5 0 0 0 6.4 0l3.2-3.2a4.5 4.5 0 0 0-6.4-6.4L12 5.6" />
           <path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3.2 3.2a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2" />
@@ -178,6 +199,26 @@ export function TriggerList() {
           <span className="block text-ink-3">{ui("togetherDetail", { count: 3, total: TOTAL })}</span>
         </span>
       </div>
+      <p className="mt-8 text-sm font-semibold text-ink-3">{ui("sleepBefore")}</p>
+      <div className="mt-4 space-y-4">
+        {nights.map(([label, m, bg], i) => (
+          <div key={label}>
+            <div className="flex justify-between text-[15px]">
+              <span className="text-ink-2">{label}</span>
+              <span className="font-semibold tabular-nums text-ink">{length(m)}</span>
+            </div>
+            <div className="mt-1.5 h-3 rounded-full bg-surface-soft">
+              <div
+                className={`app-grow-x h-3 rounded-full ${bg}`}
+                style={{ width: `${(m / (8 * 60)) * 100}%`, ...delay(i, 200, 400) }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="mt-4 text-sm leading-snug text-ink-3">
+        {ui("sleepLess", { gap: length(SLEEP_OTHER - SLEEP_BEFORE), nights: 30 })}
+      </p>
     </div>
   );
 }
