@@ -11,7 +11,7 @@ const nextStep: Rich = ["El siguiente paso: ", diaryLink, ", para anotar tus cri
 export const diary: DiaryCopy = {
   path: DIARY_PATH,
   navLabel: "Diario de migraña",
-  menuDescription: "Calendario y tabla de crisis para imprimir",
+  menuDescription: "Tu mes de crisis, para imprimir",
   metaTitle: "Diario de migraña para imprimir (PDF gratis)",
   description:
     "Descarga gratis un diario de migraña para imprimir: calendario del mes, intensidad, medicamentos y una tabla de crisis para enseñar a tu médico.",
@@ -279,7 +279,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/recursos/diario-migrana-menstrual",
   navLabel: "Diario de migraña menstrual",
-  menuDescription: "Crisis y regla durante 3 meses, para imprimir",
+  menuDescription: "Para ver si tus crisis siguen tu ciclo",
   metaTitle: "Diario de migraña menstrual para imprimir (PDF gratis)",
   description:
     "Un calendario de 3 meses para imprimir y anotar tu regla y tus crisis, y ver si tus migrañas siguen tu ciclo, como piden los médicos.",

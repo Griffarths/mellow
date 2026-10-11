@@ -11,7 +11,7 @@ const nextStep: Rich = ["Il passo successivo: ", diaryLink, ", per annotare i tu
 export const diary: DiaryCopy = {
   path: DIARY_PATH,
   navLabel: "Diario dell'emicrania",
-  menuDescription: "Calendario e tabella degli attacchi da stampare",
+  menuDescription: "Il tuo mese di attacchi, da stampare",
   metaTitle: "Diario dell'emicrania da stampare (PDF gratuito)",
   description:
     "Scarica gratis un diario dell'emicrania da stampare: calendario del mese, intensità, farmaci e una tabella degli attacchi da mostrare al tuo medico.",
@@ -279,7 +279,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/risorse/diario-emicrania-mestruale",
   navLabel: "Diario dell'emicrania mestruale",
-  menuDescription: "Attacchi e ciclo su 3 mesi, da stampare",
+  menuDescription: "Per vedere se i tuoi attacchi seguono il tuo ciclo",
   metaTitle: "Diario dell'emicrania mestruale da stampare (PDF gratuito)",
   description:
     "Un calendario di 3 mesi da stampare per annotare mestruazioni e attacchi, e capire se le tue emicranie seguono il ciclo, come chiedono i medici.",

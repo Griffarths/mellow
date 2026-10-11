@@ -11,7 +11,7 @@ const nextStep: Rich = ["Nächster Schritt: ", diaryLink, ", um deine Attacken b
 export const diary: DiaryCopy = {
   path: DIARY_PATH,
   navLabel: "Migränetagebuch",
-  menuDescription: "Kalender und Attackenprotokoll zum Ausdrucken",
+  menuDescription: "Dein Migränemonat zum Ausdrucken",
   metaTitle: "Migränetagebuch zum Ausdrucken (kostenloses PDF)",
   description:
     "Lade dir kostenlos ein Migränetagebuch zum Ausdrucken herunter: Monatskalender, Schmerzstärke, Medikamente und ein Protokoll deiner Attacken für deinen Arzt.",
@@ -279,7 +279,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/ressourcen/menstruationsmigraene-tagebuch",
   navLabel: "Tagebuch für Menstruationsmigräne",
-  menuDescription: "Attacken und Periode über 3 Monate, zum Ausdrucken",
+  menuDescription: "Um zu sehen, ob deine Attacken deinem Zyklus folgen",
   metaTitle: "Tagebuch für Menstruationsmigräne zum Ausdrucken (kostenloses PDF)",
   description:
     "Ein Kalender über 3 Monate zum Ausdrucken: Trage deine Periode und deine Attacken ein und sieh, ob deine Migräne deinem Zyklus folgt, wie es Ärzte empfehlen.",

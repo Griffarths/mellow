@@ -5,7 +5,7 @@ import type { DiaryCopy, TestPageCopy } from "../tools";
 export const diary: DiaryCopy = {
   path: "/ressources/journal-de-migraine",
   navLabel: "Journal de migraine",
-  menuDescription: "Calendrier et tableau des crises à imprimer",
+  menuDescription: "Ton mois de crises, à imprimer",
   metaTitle: "Journal de migraine à imprimer (PDF gratuit)",
   description:
     "Télécharge gratuitement un journal de migraine à imprimer : calendrier du mois, intensité, médicaments et tableau des crises à montrer à ton médecin.",
@@ -279,7 +279,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/ressources/journal-migraine-et-regles",
   navLabel: "Journal migraine et règles",
-  menuDescription: "Tes crises et tes règles sur 3 mois, à imprimer",
+  menuDescription: "Pour voir si tes crises suivent ton cycle",
   metaTitle: "Journal de migraine menstruelle à imprimer (PDF gratuit)",
   description:
     "Un calendrier de 3 mois à imprimer pour noter tes règles et tes crises, et voir si tes migraines suivent ton cycle, comme le demandent les médecins.",

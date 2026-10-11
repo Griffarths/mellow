@@ -11,7 +11,7 @@ const nextStep: Rich = ["O passo seguinte: ", diaryLink, ", para registares as t
 export const diary: DiaryCopy = {
   path: DIARY_PATH,
   navLabel: "Diário de enxaqueca",
-  menuDescription: "Calendário e registo de crises para imprimir",
+  menuDescription: "O teu mês de crises, para imprimir",
   metaTitle: "Diário de enxaqueca para imprimir (PDF gratuito)",
   description:
     "Descarrega grátis um diário de enxaqueca para imprimir: calendário do mês, intensidade, medicação e um registo das crises para mostrares ao teu médico.",
@@ -279,7 +279,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/recursos/diario-enxaqueca-menstrual",
   navLabel: "Diário de enxaqueca menstrual",
-  menuDescription: "Crises e período durante 3 meses, para imprimir",
+  menuDescription: "Para ver se as tuas crises seguem o teu ciclo",
   metaTitle: "Diário de enxaqueca menstrual para imprimir (PDF gratuito)",
   description:
     "Um calendário de 3 meses para imprimir e registar o teu período e as tuas crises, e perceber se as tuas enxaquecas acompanham o ciclo, como pedem os médicos.",

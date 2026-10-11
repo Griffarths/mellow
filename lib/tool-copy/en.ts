@@ -5,7 +5,7 @@ import type { DiaryCopy, TestPageCopy } from "../tools";
 export const diary: DiaryCopy = {
   path: "/resources/migraine-diary",
   navLabel: "Migraine diary",
-  menuDescription: "Printable calendar and attack log",
+  menuDescription: "Your month of attacks, to print",
   metaTitle: "Printable migraine diary (free PDF)",
   description:
     "Download a free printable migraine diary: a monthly calendar, intensity, medication days and an attack log to show your doctor.",
@@ -280,7 +280,7 @@ export const test: TestCopy = {
 export const cycleDiary: DiaryCopy = {
   path: "/resources/menstrual-migraine-diary",
   navLabel: "Menstrual migraine diary",
-  menuDescription: "Your attacks and periods over 3 months, printable",
+  menuDescription: "To see if your attacks follow your cycle",
   metaTitle: "Printable menstrual migraine diary (free PDF)",
   description:
     "A printable 3-month calendar to log your periods and your attacks, and see whether your migraines follow your cycle, as doctors ask.",
