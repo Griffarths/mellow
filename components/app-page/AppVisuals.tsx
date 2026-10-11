@@ -56,72 +56,90 @@ export function CompleteGrid() {
   );
 }
 
-// One month of the calendar: attacks coloured by intensity (August 2026, as
-// on the App Store screenshots: 8 migraines), popping in. Sized so the whole
-// section fits on a laptop screen.
-const ATTACKS: Record<number, "mild" | "moderate" | "intense"> = {
-  2: "intense",
-  5: "moderate",
-  9: "mild",
-  15: "intense",
-  19: "moderate",
-  23: "intense",
-  26: "mild",
-  30: "intense",
-};
-const INTENSITY_BG = { mild: "bg-fleur", moderate: "bg-tagada", intense: "bg-croix" };
+// Three months of the calendar side by side, a calm one, a middling one and a
+// hard one (August 2026 is the month of the rest of the page, 8 migraines, as
+// on the App Store screenshots): the attacks coloured by intensity pop in.
+// Under them, the three Mellows of the intensity scale. On a phone the months
+// slide sideways, August first.
+type Level = "mild" | "moderate" | "intense";
+const MONTHS: Array<{ month: number; attacks: Record<number, Level> }> = [
+  { month: 5, attacks: { 4: "mild", 20: "moderate" } },
+  { month: 6, attacks: { 2: "moderate", 8: "mild", 13: "intense", 19: "moderate", 25: "mild" } },
+  {
+    month: 7,
+    attacks: { 2: "intense", 5: "moderate", 9: "mild", 15: "intense", 19: "moderate", 23: "intense", 26: "mild", 30: "intense" },
+  },
+];
+const INTENSITY_BG: Record<Level, string> = { mild: "bg-fleur", moderate: "bg-tagada", intense: "bg-croix" };
+const LEVEL_BLOB = { mild: "Fleur1", moderate: "Tagada2", intense: "Croix2" } as const;
 
 export function BigCalendar() {
   const ui = useTranslations("appPage.ui");
   const locale = intlLocale(useLocale());
-  const month = new Intl.DateTimeFormat(locale, { month: "long", year: "numeric" }).format(
-    new Date(2026, 7, 1),
-  );
+  const monthName = new Intl.DateTimeFormat(locale, { month: "long", year: "numeric" });
   // Monday 3 to Sunday 9 August 2026, for the weekday initials.
   const weekdays = Array.from({ length: 7 }, (_, i) =>
     new Intl.DateTimeFormat(locale, { weekday: "narrow" }).format(new Date(2026, 7, 3 + i)),
   );
-  const offset = 5; // 1 August 2026 is a Saturday.
   let n = 0;
   return (
-    <div aria-hidden className="mx-auto w-full max-w-md">
-      <div className="flex items-baseline justify-between px-2">
-        <p className="text-lg font-bold text-ink first-letter:uppercase">{month}</p>
-        <p className="text-ink-3">{ui("monthMigraines", { count: 8 })}</p>
-      </div>
-      <div className="mt-3 grid grid-cols-7 gap-y-1 text-center">
-        {weekdays.map((d, i) => (
-          <span key={i} className="text-sm text-ink-4">
-            {d}
-          </span>
-        ))}
-        {Array.from({ length: offset }, (_, i) => (
-          <span key={`e${i}`} />
-        ))}
-        {Array.from({ length: 31 }, (_, i) => {
-          const day = i + 1;
-          const level = ATTACKS[day];
+    <div aria-hidden>
+      <div className="-mx-6 flex snap-x snap-mandatory scroll-pl-6 gap-10 overflow-x-auto px-6 pb-2 [scrollbar-width:none] md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden">
+        {MONTHS.map(({ month, attacks }, m) => {
+          const first = new Date(2026, month, 1);
+          const offset = (first.getDay() + 6) % 7; // Monday first.
+          const days = new Date(2026, month + 1, 0).getDate();
           return (
-            <span
-              key={day}
-              className="relative mx-auto grid h-9 w-9 place-items-center text-[15px] text-ink md:h-10 md:w-10 md:text-base"
+            <div
+              key={month}
+              className={`w-[17.5rem] shrink-0 snap-start md:order-none md:w-full ${["order-3", "order-2", "order-1"][m]}`}
             >
-              {level && (
-                <span
-                  className={`app-pop absolute inset-0 rounded-full ${INTENSITY_BG[level]}`}
-                  style={delay(n++, 110, 200)}
-                />
-              )}
-              <span className="relative">{day}</span>
-            </span>
+              <div className="flex items-baseline justify-between px-1">
+                <p className="font-bold text-ink first-letter:uppercase">{monthName.format(first)}</p>
+                <p className="text-sm text-ink-3">{ui("monthMigraines", { count: Object.keys(attacks).length })}</p>
+              </div>
+              <div className="mt-3 grid grid-cols-7 gap-y-1 text-center">
+                {weekdays.map((d, i) => (
+                  <span key={i} className="text-xs text-ink-4">
+                    {d}
+                  </span>
+                ))}
+                {Array.from({ length: offset }, (_, i) => (
+                  <span key={`e${i}`} />
+                ))}
+                {Array.from({ length: days }, (_, i) => {
+                  const day = i + 1;
+                  const level = attacks[day];
+                  return (
+                    <span key={day} className="relative mx-auto grid h-8 w-8 place-items-center text-sm text-ink">
+                      {level && (
+                        <span
+                          className={`app-pop absolute inset-0 rounded-full ${INTENSITY_BG[level]}`}
+                          style={delay(n++, 70, 200)}
+                        />
+                      )}
+                      <span className="relative">{day}</span>
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
           );
         })}
       </div>
-      <div className="mt-4 flex justify-center gap-6 text-sm text-ink-2">
-        {(["mild", "moderate", "intense"] as const).map((level) => (
+      <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-ink-2">
+        {(
+          [
+            ["mild", 1, 3],
+            ["moderate", 4, 6],
+            ["intense", 7, 10],
+          ] as const
+        ).map(([level, from, to]) => (
           <span key={level} className="flex items-center gap-2">
-            <span className={`h-3 w-3 rounded-full ${INTENSITY_BG[level]}`} />
-            {ui(level)}
+            <Blob name={LEVEL_BLOB[level]} className="h-7 w-7" />
+            <span>
+              <span className="font-semibold text-ink">{ui(level)}</span> · {ui("range", { from, to })}
+            </span>
           </span>
         ))}
       </div>

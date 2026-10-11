@@ -167,13 +167,13 @@ function AppContent() {
           </Reveal>
         </section>
 
-        {/* 3. Centred: the calendar, compact enough for the whole section to
-            fit on one laptop screen. */}
-        <section className="mx-auto max-w-4xl px-6 py-16 md:py-20">
+        {/* 3. Centred: three months of the calendar side by side, compact
+            enough for the whole section to fit on one laptop screen. */}
+        <section className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="calendar" />
           </div>
-          <Reveal className="mt-6">
+          <Reveal className="mt-10">
             <BigCalendar />
           </Reveal>
         </section>
