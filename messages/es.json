@@ -208,10 +208,6 @@
       "humidity": "Humedad",
       "points": "{value} puntos",
       "monthMigraines": "{count, plural, one {# migraña} other {# migrañas}}",
-      "dayIntensity": "Intensidad de la migraña",
-      "dayStart": "Inicio",
-      "dayEnd": "Fin",
-      "dayDuration": "Duración",
       "range": "del {from} al {to}",
       "steps": [
         {

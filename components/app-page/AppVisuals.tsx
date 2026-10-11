@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Blob } from "../phones/Blob";
-import { CalendarDay, type DayAttack, type Level } from "./CalendarDay";
 
 // Drawings of the app for the /app page, laid right on the page (no card):
 // the key element of each screen, with the app's colours, mascots and
@@ -57,73 +56,76 @@ export function CompleteGrid() {
   );
 }
 
-// The example month of the page: August 2026, 8 attacks (as on the App Store
-// screenshots), each with its day, start time, score out of 10, length in
-// hours and the triggers logged. The calendar, the reports and the figures of
-// the page all come from it.
-const ATTACKS_LOG: Array<[number, string, number, number, Array<"stress" | "sleepLack" | "screens">]> = [
-  [2, "08:10", 8, 13, ["stress"]],
-  [5, "17:40", 5, 5, ["stress", "screens"]],
-  [9, "07:30", 2, 3, []],
-  [15, "06:50", 9, 25, ["stress", "sleepLack"]],
-  [19, "14:20", 6, 7, ["sleepLack", "screens"]],
-  [23, "09:05", 8, 12, ["stress", "sleepLack"]],
-  [26, "18:30", 3, 2, ["screens"]],
-  [30, "07:15", 7, 5, ["stress", "sleepLack"]],
-];
+// One month of the calendar: attacks coloured by intensity (August 2026, as
+// on the App Store screenshots: 8 migraines), popping in. Sized so the whole
+// section fits on a laptop screen.
+const ATTACKS: Record<number, "mild" | "moderate" | "intense"> = {
+  2: "intense",
+  5: "moderate",
+  9: "mild",
+  15: "intense",
+  19: "moderate",
+  23: "intense",
+  26: "mild",
+  30: "intense",
+};
+const INTENSITY_BG = { mild: "bg-fleur", moderate: "bg-tagada", intense: "bg-croix" };
 
-const levelOf = (score: number): Level => (score <= 3 ? "mild" : score <= 6 ? "moderate" : "intense");
-// The Mellow of each level, as in the app (CalendrierView).
-const BLOB: Record<Level, string> = { mild: "Fleur1", moderate: "Tagada2", intense: "Croix2" };
-
-// One month of the calendar, attacks coloured by intensity and popping in,
-// with the sheet of the chosen attack beside it (CalendarDay). Sized so the
-// whole section fits on a laptop screen.
 export function BigCalendar() {
   const ui = useTranslations("appPage.ui");
   const locale = intlLocale(useLocale());
-  const month = new Intl.DateTimeFormat(locale, { month: "long", year: "numeric" }).format(new Date(2026, 7, 1));
+  const month = new Intl.DateTimeFormat(locale, { month: "long", year: "numeric" }).format(
+    new Date(2026, 7, 1),
+  );
   // Monday 3 to Sunday 9 August 2026, for the weekday initials.
   const weekdays = Array.from({ length: 7 }, (_, i) =>
     new Intl.DateTimeFormat(locale, { weekday: "narrow" }).format(new Date(2026, 7, 3 + i)),
   );
-  const date = new Intl.DateTimeFormat(locale, { weekday: "long", day: "numeric", month: "long" });
-  const time = new Intl.DateTimeFormat(locale, { hour: "2-digit", minute: "2-digit" });
-  const hours = new Intl.NumberFormat(locale, { style: "unit", unit: "hour", unitDisplay: "short" });
-  const attacks: Record<number, DayAttack> = {};
-  for (const [day, hhmm, score, length] of ATTACKS_LOG) {
-    const [h, m] = hhmm.split(":").map(Number);
-    const start = new Date(2026, 7, day, h, m);
-    const end = new Date(start.getTime() + length * 3600_000);
-    attacks[day] = {
-      level: levelOf(score),
-      blob: BLOB[levelOf(score)],
-      score,
-      date: date.format(start),
-      start: time.format(start),
-      end: time.format(end),
-      duration: hours.format(length),
-    };
-  }
+  const offset = 5; // 1 August 2026 is a Saturday.
+  let n = 0;
   return (
-    <CalendarDay
-      month={month}
-      count={ui("monthMigraines", { count: ATTACKS_LOG.length })}
-      weekdays={weekdays}
-      offset={5}
-      days={31}
-      attacks={attacks}
-      initial={15}
-      labels={{
-        mild: ui("mild"),
-        moderate: ui("moderate"),
-        intense: ui("intense"),
-        intensity: ui("dayIntensity"),
-        start: ui("dayStart"),
-        end: ui("dayEnd"),
-        duration: ui("dayDuration"),
-      }}
-    />
+    <div aria-hidden className="mx-auto w-full max-w-md">
+      <div className="flex items-baseline justify-between px-2">
+        <p className="text-lg font-bold text-ink first-letter:uppercase">{month}</p>
+        <p className="text-ink-3">{ui("monthMigraines", { count: 8 })}</p>
+      </div>
+      <div className="mt-3 grid grid-cols-7 gap-y-1 text-center">
+        {weekdays.map((d, i) => (
+          <span key={i} className="text-sm text-ink-4">
+            {d}
+          </span>
+        ))}
+        {Array.from({ length: offset }, (_, i) => (
+          <span key={`e${i}`} />
+        ))}
+        {Array.from({ length: 31 }, (_, i) => {
+          const day = i + 1;
+          const level = ATTACKS[day];
+          return (
+            <span
+              key={day}
+              className="relative mx-auto grid h-9 w-9 place-items-center text-[15px] text-ink md:h-10 md:w-10 md:text-base"
+            >
+              {level && (
+                <span
+                  className={`app-pop absolute inset-0 rounded-full ${INTENSITY_BG[level]}`}
+                  style={delay(n++, 110, 200)}
+                />
+              )}
+              <span className="relative">{day}</span>
+            </span>
+          );
+        })}
+      </div>
+      <div className="mt-4 flex justify-center gap-6 text-sm text-ink-2">
+        {(["mild", "moderate", "intense"] as const).map((level) => (
+          <span key={level} className="flex items-center gap-2">
+            <span className={`h-3 w-3 rounded-full ${INTENSITY_BG[level]}`} />
+            {ui(level)}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -409,7 +411,17 @@ export function CareGrid({ items }: { items: Array<{ title: string; text: string
 // a table: the analysis in front, the history on the left, MIDAS on the
 // right. Same layout, colours and wording as the real PDFs (RapportAnalysePDF,
 // RapportHistoriquePDF, MidasReportService), filled with the example month of
-// the calendar above (ATTACKS_LOG).
+// the calendar above: 8 attacks in August 2026.
+const ATTACKS_LOG: Array<[number, string, number, number, Array<"stress" | "sleepLack" | "screens">]> = [
+  [2, "08:10", 8, 13, ["stress"]],
+  [5, "17:40", 5, 5, ["stress", "screens"]],
+  [9, "07:30", 2, 3, []],
+  [15, "06:50", 9, 25, ["stress", "sleepLack"]],
+  [19, "14:20", 6, 7, ["sleepLack", "screens"]],
+  [23, "09:05", 8, 12, ["stress", "sleepLack"]],
+  [26, "18:30", 3, 2, ["screens"]],
+  [30, "07:15", 7, 5, ["stress", "sleepLack"]],
+];
 // Attacks per month, March to August, for the analysis' trend.
 const MONTHLY = [5, 6, 4, 7, 6, 8];
 // The MIDAS grades' colours (MidasService), the third one being this score's.

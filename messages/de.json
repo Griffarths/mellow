@@ -208,10 +208,6 @@
       "humidity": "Feuchtigkeit",
       "points": "{value} Punkte",
       "monthMigraines": "{count, plural, one {# Migräne} other {# Migränen}}",
-      "dayIntensity": "Intensität der Migräne",
-      "dayStart": "Beginn",
-      "dayEnd": "Ende",
-      "dayDuration": "Dauer",
       "range": "{from} bis {to}",
       "steps": [
         {

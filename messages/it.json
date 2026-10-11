@@ -208,10 +208,6 @@
       "humidity": "Umidità",
       "points": "{value} punti",
       "monthMigraines": "{count, plural, one {# emicrania} other {# emicranie}}",
-      "dayIntensity": "Intensità dell'emicrania",
-      "dayStart": "Inizio",
-      "dayEnd": "Fine",
-      "dayDuration": "Durata",
       "range": "da {from} a {to}",
       "steps": [
         {
