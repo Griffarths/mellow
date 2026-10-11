@@ -133,8 +133,10 @@ export function BigCalendar() {
 // migraines, the one in the calendar above.
 const TOTAL = 8;
 
-// What keeps coming back: the potential triggers, each with its share of the
-// migraines in red, paler the rarer it is (like the app's rows).
+// What keeps coming back: one wide row per potential trigger, its share of the
+// migraines in red (paler the rarer, like the app's rows), a bar across and
+// how many migraines; then, with the link, the pair logged together (the
+// app shows a pair from three times on).
 const TRIGGERS: Array<["stress" | "sleepLack" | "screens", number]> = [
   ["stress", 5],
   ["sleepLack", 4],
@@ -147,78 +149,42 @@ export function TriggerList() {
   const max = TRIGGERS[0][1];
   return (
     <div aria-hidden>
-      <p className="text-sm font-semibold text-ink-3">{ui("triggersTitle")}</p>
-      <ul className="mt-2 divide-y divide-surface-line">
+      <ul className="divide-y divide-surface-line">
         {TRIGGERS.map(([key, count], i) => (
-          <li key={key} className="flex items-center gap-5 py-4">
+          <li
+            key={key}
+            className="grid grid-cols-[4.5rem_minmax(0,1fr)_auto] items-center gap-x-4 gap-y-2 py-4 md:grid-cols-[5.5rem_11rem_minmax(0,1fr)_auto] md:gap-x-6"
+          >
             <span
-              className="app-pop w-20 shrink-0 text-3xl font-extrabold tabular-nums tracking-tight text-danger md:text-4xl"
+              className="app-pop text-3xl font-extrabold tabular-nums tracking-tight text-danger md:text-4xl"
               style={delay(i, 140)}
             >
               <span style={{ opacity: 0.35 + (0.65 * count) / max }}>{percent.format(count / TOTAL)}</span>
             </span>
-            <span>
-              <span className="block text-lg font-bold text-ink">{ui(key)}</span>
-              <span className="block text-ink-3">{ui("share", { count, total: TOTAL })}</span>
+            <span className="text-lg font-bold text-ink">{ui(key)}</span>
+            {/* The bar takes its own line on a phone. */}
+            <span className="col-span-3 h-2.5 rounded-full bg-surface-soft md:col-span-1">
+              <span
+                className="app-grow-x block h-2.5 rounded-full bg-croix"
+                style={{ width: `${(count / TOTAL) * 100}%`, ...delay(i, 180, 300) }}
+              />
+            </span>
+            <span className="row-start-1 whitespace-nowrap text-ink-3 md:row-start-auto [grid-column:3] md:[grid-column:auto]">
+              {count} {ui("outOfTotal", { total: TOTAL })}
             </span>
           </li>
         ))}
       </ul>
-    </div>
-  );
-}
-
-// Beside the triggers: what is logged together (the app shows a pair from
-// three times on, so only Stress and lack of sleep here) and, from Apple
-// Health, the night before an attack against the other nights.
-const SLEEP_BEFORE = 6 * 60 + 5; // minutes
-const SLEEP_OTHER = 7 * 60 + 15;
-
-export function TogetherAndSleep() {
-  const ui = useTranslations("appPage.ui");
-  const locale = intlLocale(useLocale());
-  const hours = new Intl.NumberFormat(locale, { style: "unit", unit: "hour", unitDisplay: "short" });
-  const minutes = new Intl.NumberFormat(locale, { style: "unit", unit: "minute", unitDisplay: "short" });
-  const length = (m: number) => `${hours.format(Math.floor(m / 60))} ${minutes.format(m % 60)}`;
-  const nights: Array<[string, number, string]> = [
-    [ui("sleepNightBefore"), SLEEP_BEFORE, "bg-croix"],
-    [ui("sleepOtherNights"), SLEEP_OTHER, "bg-tagada"],
-  ];
-  return (
-    <div aria-hidden>
-      <p className="text-sm font-semibold text-ink-3">{ui("together")}</p>
-      <div className="app-pop mt-2 flex items-start gap-4 border-b border-surface-line py-4" style={delay(3, 140)}>
-        <svg viewBox="0 0 24 24" className="mt-0.5 h-6 w-6 shrink-0 text-ink" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <div className="app-pop mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center" style={delay(3, 140)}>
+        <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-ink" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M10 14a4.5 4.5 0 0 0 6.4 0l3.2-3.2a4.5 4.5 0 0 0-6.4-6.4L12 5.6" />
           <path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3.2 3.2a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2" />
         </svg>
-        <span>
-          <span className="block text-lg font-bold text-ink">
-            {ui("stress")} · {ui("sleepLack")}
-          </span>
-          <span className="block text-ink-3">{ui("togetherDetail", { count: 3, total: TOTAL })}</span>
+        <span className="font-bold text-ink">
+          {ui("stress")} · {ui("sleepLack")}
         </span>
+        <span className="text-ink-3">{ui("togetherDetail", { count: 3, total: TOTAL })}</span>
       </div>
-      <p className="mt-8 text-sm font-semibold text-ink-3">{ui("sleepBefore")}</p>
-      <div className="mt-4 space-y-4">
-        {nights.map(([label, m, bg], i) => (
-          <div key={label}>
-            <div className="flex justify-between text-[15px]">
-              <span className="text-ink-2">{label}</span>
-              <span className="font-semibold tabular-nums text-ink">{length(m)}</span>
-            </div>
-            <div className="mt-1.5 h-3 rounded-full bg-surface-soft">
-              <div
-                className={`app-grow-x h-3 rounded-full ${bg}`}
-                style={{ width: `${(m / (8 * 60)) * 100}%`, ...delay(i, 200, 400) }}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-      <p className="mt-4 text-sm leading-snug text-ink-3">
-        {ui("sleepLess", { gap: length(SLEEP_OTHER - SLEEP_BEFORE), nights: 30 })}
-      </p>
     </div>
   );
 }

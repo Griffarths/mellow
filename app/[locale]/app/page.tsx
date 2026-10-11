@@ -23,7 +23,6 @@ import {
   MedsChart,
   ReliefList,
   ReportsFan,
-  TogetherAndSleep,
   TriggerList,
 } from "@/components/app-page/AppVisuals";
 
@@ -179,16 +178,14 @@ function AppContent() {
           </Reveal>
         </section>
 
-        {/* 4. Centred: what triggers the attacks, then the app's potential
-            triggers and, beside them, what comes back together and the
-            sleep before an attack (as the relief section). */}
+        {/* 4. Centred: what triggers the attacks, then a wide list of the
+            app's potential triggers and the pair logged together. */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="triggers" />
           </div>
-          <Reveal className="mt-12 grid gap-14 md:grid-cols-2 md:gap-20">
+          <Reveal className="mx-auto mt-12 max-w-3xl">
             <TriggerList />
-            <TogetherAndSleep />
           </Reveal>
         </section>
 
