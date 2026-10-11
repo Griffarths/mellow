@@ -53,23 +53,12 @@ const KICKER = "text-sm font-semibold uppercase tracking-[0.08em] text-croix-ink
 const H2 = "mt-3 text-balance text-h2 text-ink";
 const TEXT = "mt-4 text-[17px] leading-[1.7] text-ink-body md:text-lg";
 
-function PremiumTag({ label }: { label: string }) {
-  return (
-    <span className="ml-3 inline-block -translate-y-1 rounded-full bg-sable-tint px-3 py-1 align-middle text-xs font-semibold text-[#8A5A1F]">
-      {label}
-    </span>
-  );
-}
-
-function Heading({ id, premium }: { id: string; premium?: boolean }) {
+function Heading({ id }: { id: string }) {
   const t = useTranslations("appPage");
   return (
     <>
       <p className={KICKER}>{t(`blocks.${id}.kicker`)}</p>
-      <h2 className={H2}>
-        {t(`blocks.${id}.title`)}
-        {premium && <PremiumTag label={t("premium")} />}
-      </h2>
+      <h2 className={H2}>{t(`blocks.${id}.title`)}</h2>
       <p className={TEXT}>{t(`blocks.${id}.text`)}</p>
     </>
   );
@@ -217,7 +206,7 @@ function AppContent() {
         {/* 7. The text left-aligned, the seven days across the page. */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <div className="max-w-2xl">
-            <Heading id="weather" premium />
+            <Heading id="weather" />
           </div>
           <Reveal className="mt-12">
             <p className="mb-4 text-sm font-semibold text-ink-3">{ui("weatherDays")}</p>
@@ -238,7 +227,7 @@ function AppContent() {
         {/* 9. The reports on the left, the text on the right. */}
         <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-20 md:py-24">
           <div className="md:order-2">
-            <Heading id="doctor" premium />
+            <Heading id="doctor" />
           </div>
           <Reveal className="md:order-1">
             <ReportsList />

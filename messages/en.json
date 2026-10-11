@@ -91,7 +91,6 @@
     "metaDescription": "Mellow, the migraine tracking app: log an attack in two taps, follow your calendar, understand your triggers and prepare for your appointments. Free on iPhone.",
     "title": "The Mellow app",
     "subtitle": "Log your attacks in seconds, understand what triggers them and prepare for your appointments.",
-    "premium": "Premium",
     "blocks": {
       "log": {
         "kicker": "During an attack",

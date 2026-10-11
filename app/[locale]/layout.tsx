@@ -54,7 +54,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={jakarta.variable}>
-      <body className="bg-white font-sans text-ink antialiased">
+      {/* Browser extensions (ColorZilla, Grammarly…) add attributes to <body>
+          before React loads: not a real mismatch. */}
+      <body className="bg-white font-sans text-ink antialiased" suppressHydrationWarning>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <Analytics />
       </body>
