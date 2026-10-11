@@ -96,6 +96,24 @@
     "metaDescription": "Mellow, die App zum Erfassen deiner Migräne: Erfasse eine Attacke mit zwei Taps, behalte deinen Kalender im Blick, verstehe deine Auslöser und bereite deine Arzttermine vor. Kostenlos auf dem iPhone.",
     "title": "Die Mellow-App",
     "subtitle": "Erfasse deine Attacken in Sekunden, verstehe, was sie auslöst, und bereite deine Arzttermine vor.",
+    "callouts": [
+      {
+        "title": "Dein Mellow",
+        "text": "Jeden Tag ein kleines Wort, das sich während und nach einer Attacke ändert."
+      },
+      {
+        "title": "Deine Tage ohne Migräne",
+        "text": "Und die Zahl der Migränen in diesem Monat."
+      },
+      {
+        "title": "Umarmungen",
+        "text": "Schick deine Unterstützung an alle, die gerade Migräne haben."
+      },
+      {
+        "title": "Alles mit einem Tipp",
+        "text": "Deine Stimmung, dein MIDAS-Score, Kurse und geführtes Atmen."
+      }
+    ],
     "blocks": {
       "log": {
         "kicker": "Während der Attacke",

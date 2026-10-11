@@ -96,6 +96,24 @@
     "metaDescription": "Mellow, l'app per tenere traccia delle tue emicranie: registra un attacco con due tap, segui il tuo calendario, capisci i tuoi fattori scatenanti e prepara le tue visite. Gratis su iPhone.",
     "title": "L'app Mellow",
     "subtitle": "Registra i tuoi attacchi in pochi secondi, capisci cosa li scatena e prepara le tue visite.",
+    "callouts": [
+      {
+        "title": "Il tuo Mellow",
+        "text": "Una parolina ogni giorno, che cambia durante e dopo un attacco."
+      },
+      {
+        "title": "I tuoi giorni senza emicrania",
+        "text": "E il numero di emicranie del mese."
+      },
+      {
+        "title": "Abbracci",
+        "text": "Manda il tuo sostegno a chi ha un'emicrania in questo momento."
+      },
+      {
+        "title": "Tutto con un tocco",
+        "text": "Il tuo umore, il tuo score MIDAS, i corsi e la respirazione guidata."
+      }
+    ],
     "blocks": {
       "log": {
         "kicker": "Durante l'attacco",
