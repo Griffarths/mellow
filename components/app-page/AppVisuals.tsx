@@ -5,11 +5,9 @@ import { Blob } from "../phones/Blob";
 // Drawings of the app for the /app page, laid right on the page (no card):
 // the key element of each screen, with the app's colours, mascots and
 // wording (labels copied from the iOS app's strings, messages appPage.ui).
-// The .app-pop and .app-grow-x parts play once in view (Reveal).
 
 // Intl locale for dates: the site's "pt" is Portugal.
 const intlLocale = (locale: string) => (locale === "pt" ? "pt-PT" : locale);
-const delay = (i: number, step = 70, start = 100) => ({ animationDelay: `${start + i * step}ms` });
 
 // Completing an attack: the nine questions the app asks, in its order, each
 // with a 3D emoji from Microsoft's Fluent Emoji (public/emoji; MIT licence,
@@ -43,8 +41,7 @@ export function CompleteGrid() {
             height={256}
             loading="lazy"
             draggable={false}
-            className="app-pop h-12 w-12 shrink-0 select-none md:h-14 md:w-14"
-            style={delay(i, 70)}
+            className="h-12 w-12 shrink-0 select-none md:h-14 md:w-14"
           />
           <div className="min-w-0">
             <p className="text-lg font-bold text-ink">{step.label}</p>
@@ -114,8 +111,7 @@ export function BigCalendar() {
                     <span key={day} className="relative mx-auto grid h-8 w-8 place-items-center text-sm text-ink">
                       {level && (
                         <span
-                          className={`app-pop absolute inset-0 rounded-full ${INTENSITY_BG[level]}`}
-                          style={delay(n++, 70, 200)}
+                          className={`absolute inset-0 rounded-full ${INTENSITY_BG[level]}`}
                         />
                       )}
                       <span className="relative">{day}</span>
@@ -174,8 +170,7 @@ export function TriggerList() {
             className="grid grid-cols-[4.5rem_minmax(0,1fr)_auto] items-center gap-x-4 gap-y-2 py-4 md:grid-cols-[5.5rem_11rem_minmax(0,1fr)_auto] md:gap-x-6"
           >
             <span
-              className="app-pop text-3xl font-extrabold tabular-nums tracking-tight text-danger md:text-4xl"
-              style={delay(i, 140)}
+              className="text-3xl font-extrabold tabular-nums tracking-tight text-danger md:text-4xl"
             >
               <span style={{ opacity: 0.35 + (0.65 * count) / max }}>{percent.format(count / TOTAL)}</span>
             </span>
@@ -183,8 +178,8 @@ export function TriggerList() {
             {/* The bar takes its own line on a phone. */}
             <span className="col-span-3 h-2.5 rounded-full bg-surface-soft md:col-span-1">
               <span
-                className="app-grow-x block h-2.5 rounded-full bg-croix"
-                style={{ width: `${(count / TOTAL) * 100}%`, ...delay(i, 180, 300) }}
+                className="block h-2.5 rounded-full bg-croix"
+                style={{ width: `${(count / TOTAL) * 100}%` }}
               />
             </span>
             <span className="row-start-1 whitespace-nowrap text-ink-3 md:row-start-auto [grid-column:3] md:[grid-column:auto]">
@@ -193,7 +188,7 @@ export function TriggerList() {
           </li>
         ))}
       </ul>
-      <div className="app-pop mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center" style={delay(3, 140)}>
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center">
         <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-ink" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M10 14a4.5 4.5 0 0 0 6.4 0l3.2-3.2a4.5 4.5 0 0 0-6.4-6.4L12 5.6" />
           <path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3.2 3.2a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2" />
@@ -224,18 +219,16 @@ function Feel({
   value,
   suffix,
   caption,
-  index,
   children,
 }: {
   value: string;
   suffix?: string;
   caption: string;
-  index: number;
   children: ReactNode;
 }) {
   return (
     <div className="grid grid-cols-[7.5rem_minmax(0,1fr)] items-center gap-x-6 py-7 first:pt-0 last:pb-0 md:block md:px-8 md:py-0 md:first:pl-0 md:last:pr-0">
-      <div className="app-pop" style={delay(index, 140)}>
+      <div>
         <p className="whitespace-nowrap text-4xl font-extrabold tracking-tight text-ink md:text-6xl">
           {value}
           {suffix && <span className="ml-1.5 text-lg font-bold tracking-normal text-ink-3 md:text-2xl">{suffix}</span>}
@@ -254,13 +247,13 @@ export function FeelFigures() {
   const percent = new Intl.NumberFormat(locale, { style: "percent" });
   return (
     <div aria-hidden className="grid divide-y divide-surface-line md:grid-cols-3 md:divide-x md:divide-y-0">
-      <Feel value={hours.format(9)} caption={ui("perAttack")} index={0}>
+      <Feel value={hours.format(9)} caption={ui("perAttack")}>
         <div className="flex h-3 gap-[3px]">
           {DURATIONS.map(([key, count, bg], i) => (
             <div
               key={key}
-              className={`app-grow-x rounded ${bg}`}
-              style={{ flex: `${count} 1 0`, ...delay(i, 150, 300) }}
+              className={`rounded ${bg}`}
+              style={{ flex: `${count} 1 0` }}
             />
           ))}
         </div>
@@ -275,14 +268,14 @@ export function FeelFigures() {
         </ul>
       </Feel>
 
-      <Feel value="4" suffix={ui("outOfTotal", { total: TOTAL })} caption={ui("intenseAttacks")} index={1}>
+      <Feel value="4" suffix={ui("outOfTotal", { total: TOTAL })} caption={ui("intenseAttacks")}>
         <div className="flex items-end gap-1">
           {INTENSITIES.map((count, i) => (
             <div key={i} className="flex flex-1 flex-col items-center gap-1">
               <span className="text-xs font-semibold tabular-nums text-ink-3">{count || "\u00a0"}</span>
               <div
-                className={`w-full rounded-[3px] ${count ? `app-grow-y ${intensityBg(i + 1)}` : "bg-surface-grouped"}`}
-                style={count ? { height: count * 28, ...delay(i, 60, 300) } : { height: 4 }}
+                className={`w-full rounded-[3px] ${count ? intensityBg(i + 1) : "bg-surface-grouped"}`}
+                style={count ? { height: count * 28 } : { height: 4 }}
               />
             </div>
           ))}
@@ -296,7 +289,7 @@ export function FeelFigures() {
         </div>
       </Feel>
 
-      <Feel value={percent.format(6 / TOTAL)} caption={ui("withNausea")} index={2}>
+      <Feel value={percent.format(6 / TOTAL)} caption={ui("withNausea")}>
         <ul className="divide-y divide-surface-line text-sm md:text-[15px]">
           {(
             [
@@ -332,8 +325,7 @@ export function ReliefList() {
           <li key={name} className="flex items-start gap-4 py-4">
             <svg
               viewBox="0 0 24 24"
-              className={`app-pop mt-0.5 h-7 w-7 shrink-0 ${works ? "text-success" : "text-danger"}`}
-              style={delay(i, 140)}
+              className={`mt-0.5 h-7 w-7 shrink-0 ${works ? "text-success" : "text-danger"}`}
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
@@ -379,8 +371,8 @@ export function MedsChart() {
             <div key={i} className="flex h-full flex-1 flex-col items-center justify-end gap-1.5">
               <span className="text-sm font-semibold tabular-nums text-ink-3">{doses}</span>
               <div
-                className="app-grow-y w-full rounded-md bg-tagada"
-                style={{ height: `${(doses / CEILING) * 100}%`, ...delay(i, 90, 200) }}
+                className="w-full rounded-md bg-tagada"
+                style={{ height: `${(doses / CEILING) * 100}%` }}
               />
             </div>
           ))}
@@ -421,8 +413,7 @@ export function CareGrid({ items }: { items: Array<{ title: string; text: string
             height={256}
             loading="lazy"
             draggable={false}
-            className="app-pop mx-auto h-16 w-16 select-none md:h-20 md:w-20"
-            style={delay(i, 140)}
+            className="mx-auto h-16 w-16 select-none md:h-20 md:w-20"
           />
           <h3 className="mt-4 text-lg font-bold text-ink">{item.title}</h3>
           <p className="mt-1.5 text-[15px] leading-relaxed text-ink-2">{item.text}</p>
@@ -651,7 +642,7 @@ export function ReportsFan() {
       >
         {[AnalysisSheet, HistorySheet, MidasSheet].map((Sheet, i) => (
           <div key={i} className={`${PAPER} shrink-0 snap-start`}>
-            <div className="app-pop" style={delay(i, 160)}>
+            <div>
               <Sheet />
             </div>
           </div>
@@ -663,19 +654,19 @@ export function ReportsFan() {
         <div className="group absolute left-1/2 top-0 h-[420px] w-[760px] origin-top -translate-x-1/2 scale-[0.72] md:scale-[0.85] lg:scale-100">
           {/* The history, on the left. */}
           <div className={`${SHEET} left-[10px] top-[24px] -rotate-[7deg] group-hover:-translate-x-6 group-hover:-rotate-[10deg]`}>
-            <div className="app-pop" style={delay(1, 160)}>
+            <div>
               <HistorySheet />
             </div>
           </div>
           {/* MIDAS, on the right. */}
           <div className={`${SHEET} right-[10px] top-[24px] rotate-[7deg] group-hover:translate-x-6 group-hover:rotate-[10deg]`}>
-            <div className="app-pop" style={delay(2, 160)}>
+            <div>
               <MidasSheet />
             </div>
           </div>
           {/* The analysis, in front, a little bigger. */}
           <div className={`${SHEET} left-[255px] top-[18px] z-10 scale-[1.08] group-hover:-translate-y-2`}>
-            <div className="app-pop" style={delay(0, 160)}>
+            <div>
               <AnalysisSheet />
             </div>
           </div>

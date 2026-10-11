@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useState, type CSSProperties } from "react";
 
 type Labels = {
   question: string;
@@ -24,47 +24,15 @@ const LEVELS = [
 const levelOf = (n: number) => (n <= 3 ? 0 : n <= 6 ? 1 : 2);
 
 // The three Mellows of the intensity scale and a slider from 1 to 10: the
-// Mellow of the chosen level grows, the others fade. Once in view the value
-// climbs alone from 1 to 8, unless the visitor asked for less motion.
+// Mellow of the chosen level grows, the others fade. It starts on 8.
 export function IntensityDemo({ labels }: { labels: Labels }) {
   const [value, setValue] = useState(8);
-  const ref = useRef<HTMLDivElement>(null);
-  const touched = useRef(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let timer: ReturnType<typeof setInterval> | undefined;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting || touched.current) return;
-        observer.disconnect();
-        let n = 1;
-        setValue(n);
-        timer = setInterval(() => {
-          if (touched.current || n >= 8) return clearInterval(timer);
-          n += 1;
-          setValue(n);
-        }, 260);
-      },
-      { threshold: 0.5 },
-    );
-    observer.observe(el);
-    return () => {
-      observer.disconnect();
-      clearInterval(timer);
-    };
-  }, []);
-
-  const set = (n: number) => {
-    touched.current = true;
-    setValue(n);
-  };
+  const set = (n: number) => setValue(n);
   const active = levelOf(value);
   const level = LEVELS[active];
 
   return (
-    <div ref={ref} className="mx-auto max-w-xl">
+    <div className="mx-auto max-w-xl">
       {/* The Mellows keep the same box and are only zoomed (transform), so
           switching level never changes the height of the row and nothing
           below moves. */}

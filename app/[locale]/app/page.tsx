@@ -12,7 +12,6 @@ import { StoreBadges } from "@/components/StoreBadges";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Stars } from "@/components/sections/SocialProof";
 import { IntensityDemo } from "@/components/app-page/IntensityDemo";
-import { Reveal } from "@/components/app-page/Reveal";
 import { RisingHero } from "@/components/app-page/RisingHero";
 import { WeatherChart } from "@/components/app-page/WeatherChart";
 import {
@@ -93,12 +92,6 @@ function AppContent() {
   return (
     <>
       <Nav />
-      {/* Without JavaScript the drawings show as they end up. */}
-      <noscript
-        dangerouslySetInnerHTML={{
-          __html: "<style>.app-pop{opacity:1}.app-grow-x{transform:none}</style>",
-        }}
-      />
       <main className="overflow-x-clip">
         {/* Header, centred: the text, then the phone with the app's home
             screen, cut by the bottom of the screen. The header stays in
@@ -162,9 +155,9 @@ function AppContent() {
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="complete" />
           </div>
-          <Reveal className="mt-12">
+          <div className="mt-12">
             <CompleteGrid />
-          </Reveal>
+          </div>
         </section>
 
         {/* 3. Centred: three months of the calendar side by side, compact
@@ -173,9 +166,9 @@ function AppContent() {
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="calendar" />
           </div>
-          <Reveal className="mt-10">
+          <div className="mt-10">
             <BigCalendar />
-          </Reveal>
+          </div>
         </section>
 
         {/* 4. Centred: what triggers the attacks, then a wide list of the
@@ -184,9 +177,9 @@ function AppContent() {
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="triggers" />
           </div>
-          <Reveal className="mx-auto mt-12 max-w-3xl">
+          <div className="mx-auto mt-12 max-w-3xl">
             <TriggerList />
-          </Reveal>
+          </div>
         </section>
 
         {/* 5. Centred: what the attacks are like, three answers in large,
@@ -195,9 +188,9 @@ function AppContent() {
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="feel" />
           </div>
-          <Reveal className="mt-12">
+          <div className="mt-12">
             <FeelFigures />
-          </Reveal>
+          </div>
         </section>
 
         {/* 6. Centred: what brings relief, then what works or not and the
@@ -206,10 +199,10 @@ function AppContent() {
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="relief" />
           </div>
-          <Reveal className="mt-12 grid gap-14 md:grid-cols-2 md:gap-20">
+          <div className="mt-12 grid gap-14 md:grid-cols-2 md:gap-20">
             <ReliefList />
             <MedsChart />
-          </Reveal>
+          </div>
         </section>
 
         {/* 7. Centred: the weather, then the week's curve across the page,
@@ -258,9 +251,9 @@ function AppContent() {
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="doctor" />
           </div>
-          <Reveal className="mt-12">
+          <div className="mt-12">
             <ReportsFan />
-          </Reveal>
+          </div>
         </section>
 
         {/* 9. Centred: four things the app does between attacks, each with
@@ -269,9 +262,9 @@ function AppContent() {
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="care" />
           </div>
-          <Reveal className="mt-14">
+          <div className="mt-14">
             <CareGrid items={careItems} />
-          </Reveal>
+          </div>
         </section>
 
         {/* The data: the title centred, then one row per promise, the name
