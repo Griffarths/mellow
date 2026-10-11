@@ -28,8 +28,8 @@ import {
 
 type Props = { params: Promise<{ locale: string }> };
 
-// The app in detail, one moment of an attack per section, each laid out its
-// own way with the app's elements right on the page: the intensity to play
+// The app in detail, one moment of an attack per section, every title
+// centred and its drawing of the app below it: the intensity to play
 // with, the questions, the calendar, the triggers, what the attacks are like,
 // what brings relief, the weather, the reports, the rest between attacks.
 // Then the data.
@@ -136,7 +136,7 @@ function AppContent() {
 
         {/* 1. Centred: the title, then the three Mellows of the intensity
             scale and the slider to play with. */}
-        <section className="mx-auto max-w-3xl px-6 py-20 text-center md:py-28">
+        <section className="mx-auto max-w-3xl px-6 py-16 text-center md:py-24">
           <Heading id="log" />
           <div className="mt-12">
             <IntensityDemo
@@ -156,10 +156,10 @@ function AppContent() {
           </div>
         </section>
 
-        {/* 2. The title left-aligned on top, then the nine questions of the
-            app in a grid across the page (one column on phones). */}
+        {/* 2. Centred: the title, then the nine questions of the app in a
+            grid across the page (one column on phones). */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-          <div className="max-w-2xl">
+          <div className="mx-auto max-w-2xl text-center">
             <Heading id="complete" />
           </div>
           <Reveal className="mt-12">
@@ -178,13 +178,13 @@ function AppContent() {
           </Reveal>
         </section>
 
-        {/* 4. What triggers the attacks: the text on the left, the app's
-            potential triggers on the right. */}
-        <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-20 md:py-24">
-          <div>
+        {/* 4. Centred: what triggers the attacks, then the app's potential
+            triggers below. */}
+        <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+          <div className="mx-auto max-w-2xl text-center">
             <Heading id="triggers" />
           </div>
-          <Reveal>
+          <Reveal className="mx-auto mt-12 max-w-md">
             <TriggerList />
           </Reveal>
         </section>
@@ -200,10 +200,10 @@ function AppContent() {
           </Reveal>
         </section>
 
-        {/* 6. What brings relief: the title on top, then what works or not
-            and the medication doses side by side. */}
+        {/* 6. Centred: what brings relief, then what works or not and the
+            medication doses side by side. */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-          <div className="max-w-2xl">
+          <div className="mx-auto max-w-2xl text-center">
             <Heading id="relief" />
           </div>
           <Reveal className="mt-12 grid gap-14 md:grid-cols-2 md:gap-20">
@@ -212,10 +212,10 @@ function AppContent() {
           </Reveal>
         </section>
 
-        {/* 7. The text left-aligned, then the week's curve across the page,
+        {/* 7. Centred: the weather, then the week's curve across the page,
             pressure or humidity, as in the app. */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-          <div className="max-w-2xl">
+          <div className="mx-auto max-w-2xl text-center">
             <Heading id="weather" />
           </div>
           <div className="mt-12">
