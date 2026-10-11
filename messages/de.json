@@ -114,10 +114,20 @@
         "title": "Alle deine Attacken in einem Kalender",
         "text": "Jede Attacke erscheint in der Farbe ihrer Stärke, Monat für Monat, mit der Zahl der Migränen im Monat. Dazu dein ganzer Verlauf, eine Attacke pro Zeile."
       },
-      "understand": {
-        "kicker": "Verstehen",
-        "title": "Was dir wirklich hilft, und was deine Attacken auslöst",
-        "text": "Mellow analysiert deine letzten 30 Tage und sagt dir, was ihm auffällt: deine Medikamente und Methoden, von der wirksamsten bis zur unwirksamsten, deine Auslöser und sogar den Zusammenhang mit deinem Schlaf, dank Apple Health."
+      "triggers": {
+        "kicker": "Was immer wiederkehrt",
+        "title": "Was löst deine Attacken aus?",
+        "text": "Mellow schaut sich die Faktoren an, die du vor deinen Migränen notierst: die häufigsten, die, die zusammen auftreten, und dank Apple Health sogar deine Nächte vor einer Attacke."
+      },
+      "feel": {
+        "kicker": "Was du spürst",
+        "title": "Wie sehen deine Attacken aus?",
+        "text": "Wie lange sie dauern, wie stark sie sind, welche Symptome wiederkehren: Mellow fasst deine Attacken in Zahlen, damit du sie endlich beschreiben kannst."
+      },
+      "relief": {
+        "kicker": "Was dir hilft",
+        "title": "Was lindert deine Migräne?",
+        "text": "Mellow vergleicht deine Medikamente und Methoden, Attacke für Attacke, und sagt dir, was wirklich hilft. Außerdem zählt Mellow deine Medikamenteneinnahmen, damit du unter 10 pro Monat bleibst."
       },
       "weather": {
         "kicker": "Vorausschauen",
@@ -229,12 +239,6 @@
       "intense": "Stark",
       "darkRest": "Ruhe im Dunkeln",
       "icePack": "Kältebeutel",
-      "reliefHigh": "Sehr wirksam",
-      "reliefMid": "Eher wirksam",
-      "reliefNone": "Ohne Wirkung",
-      "statMigraines": "Migränen",
-      "statDays": "Betroffene Tage",
-      "statIntensity": "Ø Intensität",
       "weatherDays": "Die nächsten sieben Tage",
       "reportAnalysis": "Analyse",
       "reportHistory": "Verlauf",
@@ -242,7 +246,6 @@
       "reportAnalysisSub": "Häufigkeit, Auslöser, was dir hilft",
       "reportHistorySub": "Alle deine Migränen, eine pro Zeile",
       "reportMidasSub": "Deine Beeinträchtigung der letzten 3 Monate",
-      "times": "{count, plural, one {# Mal} other {# Mal}}",
       "monthMigraines": "{count, plural, one {# Migräne} other {# Migränen}}",
       "range": "{from} bis {to}",
       "steps": [
@@ -282,7 +285,23 @@
           "label": "Auswirkung",
           "question": "Arbeit / Schule · Haushalt · Soziale Aktivitäten"
         }
-      ]
+      ],
+      "triggersTitle": "Mögliche Auslöser",
+      "stress": "Stress",
+      "sleepLack": "Schlafmangel",
+      "screens": "Bildschirme",
+      "share": "{count} von {total} Migränen",
+      "together": "Was zusammen auftritt",
+      "togetherDetail": "{count} von {total} Migränen: beide zusammen notiert.",
+      "perAttack": "pro Attacke, im Schnitt",
+      "outOfTotal": "von {total}",
+      "intenseAttacks": "starke Attacken, von 7 bis 10",
+      "withNausea": "mit Übelkeit",
+      "reliefBest": "Wirkt oder nicht",
+      "effective": "{count} von {total} Malen wirksam.",
+      "noEffect": "{count} von {total} Malen ohne Wirkung.",
+      "medsTitle": "Deine Medikamenteneinnahmen",
+      "medsLine": "Die Linie markiert 10 Einnahmen pro Monat, die Grenze, die du nicht überschreiten solltest."
     }
   },
   "mellows": {

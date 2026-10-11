@@ -109,10 +109,20 @@
         "title": "Toutes tes crises dans un calendrier",
         "text": "Chaque crise apparaît avec la couleur de son intensité, mois après mois, avec le nombre de migraines du mois. Et tout ton historique, une crise par ligne."
       },
-      "understand": {
-        "kicker": "Comprendre",
-        "title": "Ce qui te soulage vraiment, et ce qui déclenche tes crises",
-        "text": "Mellow analyse tes 30 derniers jours et te dit ce qu'il remarque : tes médicaments et tes méthodes, du plus efficace au moins efficace, tes déclencheurs, et même le lien avec ton sommeil grâce à Apple Santé."
+      "triggers": {
+        "kicker": "Ce qui revient",
+        "title": "Qu'est-ce qui déclenche tes crises ?",
+        "text": "Mellow regarde les facteurs que tu notes avant tes migraines : ceux qui reviennent le plus souvent, ceux qui reviennent ensemble, et même tes nuits avant une crise, grâce à Apple Santé."
+      },
+      "feel": {
+        "kicker": "Ce que tu ressens",
+        "title": "À quoi ressemblent tes crises ?",
+        "text": "Combien de temps elles durent, leur intensité, les symptômes qui reviennent : Mellow met tes crises en chiffres, pour que tu puisses enfin les décrire."
+      },
+      "relief": {
+        "kicker": "Ce qui te soulage",
+        "title": "Qu'est-ce qui soulage tes migraines ?",
+        "text": "Mellow compare tes médicaments et tes méthodes, crise après crise, et te dit ce qui marche vraiment. Il compte aussi tes prises de médicament, pour que tu restes sous les 10 par mois."
       },
       "weather": {
         "kicker": "Anticiper",
@@ -224,12 +234,6 @@
       "intense": "Intense",
       "darkRest": "Repos dans le noir",
       "icePack": "Poche de glace",
-      "reliefHigh": "Très efficace",
-      "reliefMid": "Plutôt efficace",
-      "reliefNone": "Sans effet",
-      "statMigraines": "Migraines",
-      "statDays": "Jours touchés",
-      "statIntensity": "Intensité moy.",
       "weatherDays": "Les sept prochains jours",
       "reportAnalysis": "Analyse",
       "reportHistory": "Historique",
@@ -237,7 +241,6 @@
       "reportAnalysisSub": "Fréquence, déclencheurs, ce qui te soulage",
       "reportHistorySub": "Toutes tes migraines, une par ligne",
       "reportMidasSub": "Ton incapacité sur les 3 derniers mois",
-      "times": "{count, plural, one {# fois} other {# fois}}",
       "monthMigraines": "{count, plural, one {# migraine} other {# migraines}}",
       "range": "{from} à {to}",
       "steps": [
@@ -277,7 +280,23 @@
           "label": "Impact",
           "question": "Travail / école · Ménage · Activités sociales"
         }
-      ]
+      ],
+      "triggersTitle": "Déclencheurs potentiels",
+      "stress": "Stress",
+      "sleepLack": "Manque de sommeil",
+      "screens": "Écrans",
+      "share": "{count, plural, one {# migraine sur {total}} other {# migraines sur {total}}}",
+      "together": "Ce qui revient ensemble",
+      "togetherDetail": "Notés ensemble {count} fois sur {total} migraines.",
+      "perAttack": "par crise, en moyenne",
+      "outOfTotal": "sur {total}",
+      "intenseAttacks": "crises intenses, de 7 à 10",
+      "withNausea": "avec des nausées",
+      "reliefBest": "Ce qui marche, ou pas",
+      "effective": "Efficace {count} fois sur {total}.",
+      "noEffect": "Sans effet {count} fois sur {total}.",
+      "medsTitle": "Tes prises de médicament",
+      "medsLine": "Le trait marque 10 prises par mois, le seuil à ne pas dépasser."
     }
   },
   "mellows": {

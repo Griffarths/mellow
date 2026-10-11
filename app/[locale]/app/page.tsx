@@ -15,11 +15,13 @@ import { IntensityDemo } from "@/components/app-page/IntensityDemo";
 import { Reveal } from "@/components/app-page/Reveal";
 import {
   BigCalendar,
-  BigStats,
   CompleteGrid,
+  FeelFigures,
+  MedsChart,
   MellowsCare,
-  ReliefBars,
+  ReliefList,
   ReportsList,
+  TriggerList,
   WeatherBand,
 } from "@/components/app-page/AppVisuals";
 
@@ -27,8 +29,9 @@ type Props = { params: Promise<{ locale: string }> };
 
 // The app in detail, one moment of an attack per section, each laid out its
 // own way with the app's elements right on the page: the intensity to play
-// with, the tags, the calendar, the analysis, the weather, the Mellows, the
-// reports. Then free or Premium, and the data.
+// with, the questions, the calendar, the triggers, what the attacks are like,
+// what brings relief, the weather, the Mellows, the reports. Then free or
+// Premium, and the data.
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "appPage" });
@@ -178,20 +181,40 @@ function AppContent() {
           </Reveal>
         </section>
 
-        {/* 4. The text and the relief bars, the big figures beside them. */}
-        <section className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-16 md:grid-cols-2 md:gap-20 md:py-24">
+        {/* 4. What triggers the attacks: the text on the left, the app's
+            potential triggers on the right. */}
+        <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-20 md:py-24">
+          <div>
+            <Heading id="triggers" />
+          </div>
           <Reveal>
-            <Heading id="understand" premium />
-            <div className="mt-10">
-              <ReliefBars />
-            </div>
-          </Reveal>
-          <Reveal className="md:order-first">
-            <BigStats />
+            <TriggerList />
           </Reveal>
         </section>
 
-        {/* 5. The text left-aligned, the seven days across the page. */}
+        {/* 5. Centred: what the attacks are like, three answers in large. */}
+        <section className="mx-auto max-w-4xl px-6 py-16 md:py-24">
+          <div className="mx-auto max-w-2xl text-center">
+            <Heading id="feel" />
+          </div>
+          <Reveal className="mt-12">
+            <FeelFigures />
+          </Reveal>
+        </section>
+
+        {/* 6. What brings relief: the title on top, then what works or not
+            and the medication doses side by side. */}
+        <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+          <div className="max-w-2xl">
+            <Heading id="relief" />
+          </div>
+          <Reveal className="mt-12 grid gap-14 md:grid-cols-2 md:gap-20">
+            <ReliefList />
+            <MedsChart />
+          </Reveal>
+        </section>
+
+        {/* 7. The text left-aligned, the seven days across the page. */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <div className="max-w-2xl">
             <Heading id="weather" premium />
@@ -202,7 +225,7 @@ function AppContent() {
           </Reveal>
         </section>
 
-        {/* 6. Centred: the four Mellows, each with what it brings. */}
+        {/* 8. Centred: the four Mellows, each with what it brings. */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="care" />
@@ -212,7 +235,7 @@ function AppContent() {
           </Reveal>
         </section>
 
-        {/* 7. The reports on the left, the text on the right. */}
+        {/* 9. The reports on the left, the text on the right. */}
         <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-20 md:py-24">
           <div className="md:order-2">
             <Heading id="doctor" premium />

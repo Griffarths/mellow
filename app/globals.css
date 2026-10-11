@@ -207,6 +207,15 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
   }
 }
 
+@keyframes app-grow-y {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
 .app-pop {
   opacity: 0;
 }
@@ -216,12 +225,21 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
   transform-origin: left;
 }
 
+.app-grow-y {
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
 [data-shown="true"] .app-pop {
   animation: app-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
 [data-shown="true"] .app-grow-x {
   animation: app-grow-x 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+[data-shown="true"] .app-grow-y {
+  animation: app-grow-y 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 /* /app page: the intensity slider, filled up to the value in the colour of
@@ -265,7 +283,8 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
     animation: none;
   }
   [data-shown] .app-pop,
-  [data-shown] .app-grow-x {
+  [data-shown] .app-grow-x,
+  [data-shown] .app-grow-y {
     animation: none !important;
     opacity: 1;
     transform: none;

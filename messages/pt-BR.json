@@ -114,10 +114,20 @@
         "title": "Todas as suas crises em um calendário",
         "text": "Cada crise aparece com a cor da sua intensidade, mês a mês, com o número de enxaquecas do mês. E todo o seu histórico, uma crise por linha."
       },
-      "understand": {
-        "kicker": "Entender",
-        "title": "O que realmente alivia, e o que desencadeia suas crises",
-        "text": "O Mellow analisa seus últimos 30 dias e conta o que percebe: seus medicamentos e métodos, do mais ao menos eficaz, seus gatilhos e até a relação com seu sono, graças ao app Saúde da Apple."
+      "triggers": {
+        "kicker": "O que se repete",
+        "title": "O que desencadeia suas crises?",
+        "text": "O Mellow olha os fatores que você anota antes das suas enxaquecas: os que mais se repetem, os que vêm juntos, e até suas noites antes de uma crise, graças ao app Saúde da Apple."
+      },
+      "feel": {
+        "kicker": "O que você sente",
+        "title": "Como são suas crises?",
+        "text": "Quanto tempo duram, qual a intensidade, quais sintomas se repetem: o Mellow coloca suas crises em números, para você finalmente conseguir descrevê-las."
+      },
+      "relief": {
+        "kicker": "O que te alivia",
+        "title": "O que alivia suas enxaquecas?",
+        "text": "O Mellow compara seus medicamentos e seus métodos, crise após crise, e diz o que realmente funciona. Ele também conta suas doses de medicamento, para você ficar abaixo de 10 por mês."
       },
       "weather": {
         "kicker": "Antecipar",
@@ -229,12 +239,6 @@
       "intense": "Intensa",
       "darkRest": "Repouso no escuro",
       "icePack": "Bolsa de gelo",
-      "reliefHigh": "Muito eficaz",
-      "reliefMid": "Razoável",
-      "reliefNone": "Sem efeito",
-      "statMigraines": "Enxaquecas",
-      "statDays": "Dias afetados",
-      "statIntensity": "Intensidade média",
       "weatherDays": "Os próximos sete dias",
       "reportAnalysis": "Análise",
       "reportHistory": "Histórico",
@@ -242,7 +246,6 @@
       "reportAnalysisSub": "Frequência, gatilhos, o que te alivia",
       "reportHistorySub": "Todas as suas enxaquecas, uma por linha",
       "reportMidasSub": "Sua incapacidade nos últimos 3 meses",
-      "times": "{count, plural, one {# vez} other {# vezes}}",
       "monthMigraines": "{count, plural, one {# enxaqueca} other {# enxaquecas}}",
       "range": "de {from} a {to}",
       "steps": [
@@ -282,7 +285,23 @@
           "label": "Impacto",
           "question": "Trabalho / escola · Casa · Atividades sociais"
         }
-      ]
+      ],
+      "triggersTitle": "Gatilhos potenciais",
+      "stress": "Estresse",
+      "sleepLack": "Falta de sono",
+      "screens": "Telas",
+      "share": "{count, plural, one {# enxaqueca de {total}} other {# enxaquecas de {total}}}",
+      "together": "O que vem junto",
+      "togetherDetail": "Anotados juntos {count} vezes em {total} enxaquecas.",
+      "perAttack": "por crise, em média",
+      "outOfTotal": "de {total}",
+      "intenseAttacks": "crises intensas, de 7 a 10",
+      "withNausea": "com náuseas",
+      "reliefBest": "O que funciona, ou não",
+      "effective": "Eficaz {count} vezes em {total}.",
+      "noEffect": "Sem efeito {count} vezes em {total}.",
+      "medsTitle": "Suas doses de medicamento",
+      "medsLine": "A linha marca 10 doses por mês, o limite a não passar."
     }
   },
   "mellows": {

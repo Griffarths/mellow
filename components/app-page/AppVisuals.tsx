@@ -128,63 +128,164 @@ export function BigCalendar() {
   );
 }
 
-// The analysis: three large figures.
-export function BigStats() {
+// The analysis, as in the app (AnalyseDetaillee): one example month of 8
+// migraines, the one in the calendar above.
+const TOTAL = 8;
+
+// What keeps coming back: the potential triggers, each with its share of the
+// migraines in red, paler the rarer it is (like the app's rows), then what
+// is logged together.
+const TRIGGERS: Array<["stress" | "sleepLack" | "screens", number]> = [
+  ["stress", 5],
+  ["sleepLack", 4],
+  ["screens", 3],
+];
+
+export function TriggerList() {
   const ui = useTranslations("appPage.ui");
-  const stats: Array<[string, string]> = [
-    ["7", ui("statMigraines")],
-    ["7", ui("statDays")],
-    ["6", ui("statIntensity")],
+  const percent = new Intl.NumberFormat(intlLocale(useLocale()), { style: "percent" });
+  const max = TRIGGERS[0][1];
+  return (
+    <div aria-hidden>
+      <p className="text-sm font-semibold text-ink-3">{ui("triggersTitle")}</p>
+      <ul className="mt-2 divide-y divide-surface-line">
+        {TRIGGERS.map(([key, count], i) => (
+          <li key={key} className="flex items-center gap-5 py-4">
+            <span
+              className="app-pop w-20 shrink-0 text-3xl font-extrabold tabular-nums tracking-tight text-danger md:text-4xl"
+              style={delay(i, 140)}
+            >
+              <span style={{ opacity: 0.35 + (0.65 * count) / max }}>{percent.format(count / TOTAL)}</span>
+            </span>
+            <span>
+              <span className="block text-lg font-bold text-ink">{ui(key)}</span>
+              <span className="block text-ink-3">{ui("share", { count, total: TOTAL })}</span>
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-8 text-sm font-semibold text-ink-3">{ui("together")}</p>
+      <div className="app-pop mt-3 flex items-start gap-4" style={delay(3, 140)}>
+        <svg viewBox="0 0 24 24" className="mt-0.5 h-6 w-6 shrink-0 text-ink" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M10 14a4.5 4.5 0 0 0 6.4 0l3.2-3.2a4.5 4.5 0 0 0-6.4-6.4L12 5.6" />
+          <path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3.2 3.2a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2" />
+        </svg>
+        <span>
+          <span className="block text-lg font-bold text-ink">
+            {ui("stress")} · {ui("sleepLack")}
+          </span>
+          <span className="block text-ink-3">{ui("togetherDetail", { count: 3, total: TOTAL })}</span>
+        </span>
+      </div>
+    </div>
+  );
+}
+
+// What you feel: three answers in large, side by side.
+export function FeelFigures() {
+  const ui = useTranslations("appPage.ui");
+  const locale = intlLocale(useLocale());
+  const hours = new Intl.NumberFormat(locale, { style: "unit", unit: "hour", unitDisplay: "short" });
+  const percent = new Intl.NumberFormat(locale, { style: "percent" });
+  const figures: Array<[string, string | null, string]> = [
+    [hours.format(9), null, ui("perAttack")],
+    ["4", ui("outOfTotal", { total: TOTAL }), ui("intenseAttacks")],
+    [percent.format(6 / TOTAL), null, ui("withNausea")],
   ];
   return (
     <div aria-hidden className="grid grid-cols-3 divide-x divide-surface-line">
-      {stats.map(([value, label], i) => (
-        <div key={label} className="app-pop px-2 text-center" style={delay(i, 140)}>
-          <p className="text-6xl font-extrabold tracking-tight text-ink md:text-7xl">{value}</p>
-          <p className="mt-2 text-sm text-ink-3">{label}</p>
+      {figures.map(([value, suffix, caption], i) => (
+        <div key={caption} className="app-pop px-2 text-center md:px-6" style={delay(i, 140)}>
+          <p className="whitespace-nowrap text-4xl font-extrabold tracking-tight text-ink md:text-6xl">
+            {value}
+            {suffix && <span className="ml-1.5 text-lg font-bold tracking-normal text-ink-3 md:text-2xl">{suffix}</span>}
+          </p>
+          <p className="mt-3 text-balance text-sm text-ink-3 md:text-base">{caption}</p>
         </div>
       ))}
     </div>
   );
 }
 
-// What brings relief, bars filling in by efficacy.
-export function ReliefBars() {
+// What works, or not: the best medication and the best method in green, what
+// had no effect in red, as in the app's list.
+export function ReliefList() {
   const ui = useTranslations("appPage.ui");
-  const reliefs: Array<[string, number, string, string]> = [
-    [ui("darkRest"), 4, "w-full", "bg-success"],
-    ["Sumatriptan 50 mg", 3, "w-3/4", "bg-success/45"],
-    [ui("icePack"), 1, "w-1/4", "bg-surface-line"],
+  const rows: Array<[string, boolean, number, number]> = [
+    ["Sumatriptan 50 mg", true, 5, 6],
+    [ui("darkRest"), true, 4, 4],
+    [ui("icePack"), false, 3, 4],
   ];
   return (
     <div aria-hidden>
-      <div className="space-y-5">
-        {reliefs.map(([name, times, width, color], i) => (
-          <div key={name}>
-            <div className="flex justify-between">
-              <span className="font-semibold text-ink">{name}</span>
-              <span className="text-ink-3">{ui("times", { count: times })}</span>
-            </div>
-            <div className="mt-2 h-3 rounded-full bg-surface-soft">
-              <div className={`app-grow-x h-3 rounded-full ${width} ${color}`} style={delay(i, 220, 300)} />
-            </div>
-          </div>
+      <p className="text-sm font-semibold text-ink-3">{ui("reliefBest")}</p>
+      <ul className="mt-2 divide-y divide-surface-line">
+        {rows.map(([name, works, count, total], i) => (
+          <li key={name} className="flex items-start gap-4 py-4">
+            <svg
+              viewBox="0 0 24 24"
+              className={`app-pop mt-0.5 h-7 w-7 shrink-0 ${works ? "text-success" : "text-danger"}`}
+              style={delay(i, 140)}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="12" r="9.5" />
+              <path d={works ? "m8 12.5 2.8 2.8L16.5 9.5" : "m9 9 6 6m0-6-6 6"} />
+            </svg>
+            <span>
+              <span className="block text-lg font-bold text-ink">{name}</span>
+              <span className="block text-ink-3">
+                {ui(works ? "effective" : "noEffect", { count, total })}
+              </span>
+            </span>
+          </li>
         ))}
+      </ul>
+    </div>
+  );
+}
+
+// The medication doses month by month, the line at 10 a month behind the bars
+// (as in the app: the bars only turn red above it).
+const DOSES = [3, 5, 4, 7, 5, 6]; // March to August 2026.
+const CEILING = 12;
+
+export function MedsChart() {
+  const ui = useTranslations("appPage.ui");
+  const month = new Intl.DateTimeFormat(intlLocale(useLocale()), { month: "short" });
+  return (
+    <div aria-hidden>
+      <p className="text-sm font-semibold text-ink-3">{ui("medsTitle")}</p>
+      <div className="relative mt-6 h-40">
+        <div
+          className="absolute inset-x-0 border-t-2 border-dashed border-danger"
+          style={{ bottom: `${(10 / CEILING) * 100}%` }}
+        >
+          <span className="absolute -top-6 right-0 text-sm font-bold text-danger">10</span>
+        </div>
+        <div className="relative flex h-full items-end gap-3 md:gap-4">
+          {DOSES.map((doses, i) => (
+            <div key={i} className="flex h-full flex-1 flex-col items-center justify-end gap-1.5">
+              <span className="text-sm font-semibold tabular-nums text-ink-3">{doses}</span>
+              <div
+                className="app-grow-y w-full rounded-md bg-tagada"
+                style={{ height: `${(doses / CEILING) * 100}%`, ...delay(i, 90, 200) }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1 text-sm text-ink-2">
-        {(
-          [
-            ["reliefHigh", "bg-success"],
-            ["reliefMid", "bg-success/45"],
-            ["reliefNone", "bg-surface-line"],
-          ] as const
-        ).map(([key, color]) => (
-          <span key={key} className="flex items-center gap-2">
-            <span className={`h-3 w-3 rounded-full ${color}`} />
-            {ui(key)}
+      <div className="mt-2 flex gap-3 md:gap-4">
+        {DOSES.map((_, i) => (
+          <span key={i} className="flex-1 text-center text-sm text-ink-4 first-letter:uppercase">
+            {month.format(new Date(2026, 2 + i, 1)).replace(".", "")}
           </span>
         ))}
       </div>
+      <p className="mt-4 text-sm text-ink-3">{ui("medsLine")}</p>
     </div>
   );
 }

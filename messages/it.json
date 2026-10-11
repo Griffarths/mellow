@@ -114,10 +114,20 @@
         "title": "Tutti i tuoi attacchi in un calendario",
         "text": "Ogni attacco compare con il colore della sua intensità, mese dopo mese, con il numero di emicranie del mese. E tutto il tuo storico, un attacco per riga."
       },
-      "understand": {
-        "kicker": "Capire",
-        "title": "Cosa ti dà davvero sollievo, e cosa scatena i tuoi attacchi",
-        "text": "Mellow analizza i tuoi ultimi 30 giorni e ti dice cosa nota: i tuoi farmaci e i tuoi metodi, dal più al meno efficace, i tuoi fattori scatenanti e persino il legame con il sonno, grazie ad Apple Salute."
+      "triggers": {
+        "kicker": "Ciò che si ripete",
+        "title": "Cosa scatena i tuoi attacchi?",
+        "text": "Mellow osserva i fattori che annoti prima delle tue emicranie: quelli che tornano più spesso, quelli che tornano insieme, e persino le tue notti prima di un attacco, grazie ad Apple Salute."
+      },
+      "feel": {
+        "kicker": "Quello che senti",
+        "title": "Come sono i tuoi attacchi?",
+        "text": "Quanto durano, quanto sono intensi, quali sintomi tornano: Mellow mette i tuoi attacchi in numeri, così puoi finalmente descriverli."
+      },
+      "relief": {
+        "kicker": "Quello che ti dà sollievo",
+        "title": "Cosa dà sollievo alle tue emicranie?",
+        "text": "Mellow confronta i tuoi farmaci e i tuoi metodi, attacco dopo attacco, e ti dice cosa funziona davvero. Conta anche le tue assunzioni di farmaci, così resti sotto le 10 al mese."
       },
       "weather": {
         "kicker": "Prevedere",
@@ -229,12 +239,6 @@
       "intense": "Intensa",
       "darkRest": "Riposo al buio",
       "icePack": "Borsa del ghiaccio",
-      "reliefHigh": "Molto efficace",
-      "reliefMid": "Abbastanza efficace",
-      "reliefNone": "Senza effetto",
-      "statMigraines": "Emicranie",
-      "statDays": "Giorni colpiti",
-      "statIntensity": "Intensità media",
       "weatherDays": "I prossimi sette giorni",
       "reportAnalysis": "Analisi",
       "reportHistory": "Storico",
@@ -242,7 +246,6 @@
       "reportAnalysisSub": "Frequenza, fattori scatenanti, cosa ti dà sollievo",
       "reportHistorySub": "Tutte le tue emicranie, una per riga",
       "reportMidasSub": "La tua disabilità negli ultimi 3 mesi",
-      "times": "{count, plural, one {# volta} other {# volte}}",
       "monthMigraines": "{count, plural, one {# emicrania} other {# emicranie}}",
       "range": "da {from} a {to}",
       "steps": [
@@ -282,7 +285,23 @@
           "label": "Impatto",
           "question": "Lavoro / scuola · Faccende · Attività sociali"
         }
-      ]
+      ],
+      "triggersTitle": "Fattori scatenanti potenziali",
+      "stress": "Stress",
+      "sleepLack": "Mancanza di sonno",
+      "screens": "Schermi",
+      "share": "{count, plural, one {# emicrania di {total}} other {# emicranie di {total}}}",
+      "together": "Ciò che torna insieme",
+      "togetherDetail": "Annotati insieme {count} volte su {total} emicranie.",
+      "perAttack": "per attacco, in media",
+      "outOfTotal": "su {total}",
+      "intenseAttacks": "attacchi intensi, da 7 a 10",
+      "withNausea": "con nausea",
+      "reliefBest": "Cosa funziona, o no",
+      "effective": "Efficace {count} volte su {total}.",
+      "noEffect": "Senza effetto {count} volte su {total}.",
+      "medsTitle": "Le tue assunzioni di farmaci",
+      "medsLine": "La linea segna 10 assunzioni al mese, la soglia da non superare."
     }
   },
   "mellows": {

@@ -109,10 +109,20 @@
         "title": "All your attacks in a calendar",
         "text": "Each attack shows up in the color of its intensity, month after month, with the number of migraines that month. Plus your full history, one attack per line."
       },
-      "understand": {
-        "kicker": "Understand",
-        "title": "What really brings relief, and what triggers your attacks",
-        "text": "Mellow analyzes your last 30 days and tells you what it notices: your medication and methods, from most to least effective, your triggers, and even the link with your sleep through Apple Health."
+      "triggers": {
+        "kicker": "What keeps coming back",
+        "title": "What triggers your attacks?",
+        "text": "Mellow looks at the factors you log before your migraines: the ones that come back most often, the ones that come back together, and even your nights before an attack, through Apple Health."
+      },
+      "feel": {
+        "kicker": "What you feel",
+        "title": "What are your attacks like?",
+        "text": "How long they last, how intense they are, which symptoms come back: Mellow puts your attacks into numbers, so you can finally describe them."
+      },
+      "relief": {
+        "kicker": "What relieves you",
+        "title": "What relieves your migraines?",
+        "text": "Mellow compares your medication and your methods, attack after attack, and tells you what really works. It also counts your medication doses, so you stay under 10 a month."
       },
       "weather": {
         "kicker": "Anticipate",
@@ -224,12 +234,6 @@
       "intense": "Intense",
       "darkRest": "Rest in the dark",
       "icePack": "Ice pack",
-      "reliefHigh": "Very effective",
-      "reliefMid": "Fairly effective",
-      "reliefNone": "No effect",
-      "statMigraines": "Migraines",
-      "statDays": "Days affected",
-      "statIntensity": "Avg. intensity",
       "weatherDays": "The next seven days",
       "reportAnalysis": "Analysis",
       "reportHistory": "History",
@@ -237,7 +241,6 @@
       "reportAnalysisSub": "Frequency, triggers, what relieves you",
       "reportHistorySub": "All your migraines, one per line",
       "reportMidasSub": "Your disability over the last 3 months",
-      "times": "{count, plural, one {# time} other {# times}}",
       "monthMigraines": "{count, plural, one {# migraine} other {# migraines}}",
       "range": "{from} to {to}",
       "steps": [
@@ -277,7 +280,23 @@
           "label": "Impact",
           "question": "Work / school · Household · Social activities"
         }
-      ]
+      ],
+      "triggersTitle": "Potential triggers",
+      "stress": "Stress",
+      "sleepLack": "Lack of sleep",
+      "screens": "Screens",
+      "share": "{count, plural, one {# migraine out of {total}} other {# migraines out of {total}}}",
+      "together": "What comes back together",
+      "togetherDetail": "Logged together {count} times out of {total} migraines.",
+      "perAttack": "per attack, on average",
+      "outOfTotal": "out of {total}",
+      "intenseAttacks": "intense attacks, from 7 to 10",
+      "withNausea": "with nausea",
+      "reliefBest": "What works, or not",
+      "effective": "Effective {count} times out of {total}.",
+      "noEffect": "No effect {count} times out of {total}.",
+      "medsTitle": "Your medication doses",
+      "medsLine": "The line marks 10 doses a month, the limit not to cross."
     }
   },
   "mellows": {

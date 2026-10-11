@@ -114,10 +114,20 @@
         "title": "Todas tus crisis en un calendario",
         "text": "Cada crisis aparece con el color de su intensidad, mes a mes, con el número de migrañas del mes. Y todo tu historial, una crisis por línea."
       },
-      "understand": {
-        "kicker": "Entender",
-        "title": "Lo que de verdad te alivia, y lo que desencadena tus crisis",
-        "text": "Mellow analiza tus últimos 30 días y te cuenta lo que observa: tus medicamentos y tus métodos, del más al menos eficaz, tus desencadenantes e incluso la relación con tu sueño, gracias a Apple Salud."
+      "triggers": {
+        "kicker": "Lo que se repite",
+        "title": "¿Qué desencadena tus crisis?",
+        "text": "Mellow mira los factores que anotas antes de tus migrañas: los que más se repiten, los que se repiten juntos, e incluso tus noches antes de una crisis, gracias a Apple Salud."
+      },
+      "feel": {
+        "kicker": "Lo que sientes",
+        "title": "¿Cómo son tus crisis?",
+        "text": "Cuánto duran, qué intensidad tienen, qué síntomas se repiten: Mellow pone tus crisis en cifras, para que por fin puedas describirlas."
+      },
+      "relief": {
+        "kicker": "Lo que te alivia",
+        "title": "¿Qué alivia tus migrañas?",
+        "text": "Mellow compara tus medicamentos y tus métodos, crisis tras crisis, y te dice lo que de verdad funciona. También cuenta tus tomas de medicamento, para que te quedes por debajo de 10 al mes."
       },
       "weather": {
         "kicker": "Anticiparte",
@@ -229,12 +239,6 @@
       "intense": "Intensa",
       "darkRest": "Reposo en la oscuridad",
       "icePack": "Bolsa de hielo",
-      "reliefHigh": "Muy eficaz",
-      "reliefMid": "Bastante eficaz",
-      "reliefNone": "Sin efecto",
-      "statMigraines": "Migrañas",
-      "statDays": "Días afectados",
-      "statIntensity": "Intensidad media",
       "weatherDays": "Los próximos siete días",
       "reportAnalysis": "Análisis",
       "reportHistory": "Historial",
@@ -242,7 +246,6 @@
       "reportAnalysisSub": "Frecuencia, desencadenantes, lo que te alivia",
       "reportHistorySub": "Todas tus migrañas, una por línea",
       "reportMidasSub": "Tu discapacidad en los últimos 3 meses",
-      "times": "{count, plural, one {# vez} other {# veces}}",
       "monthMigraines": "{count, plural, one {# migraña} other {# migrañas}}",
       "range": "del {from} al {to}",
       "steps": [
@@ -282,7 +285,23 @@
           "label": "Impacto",
           "question": "Trabajo / escuela · Hogar · Actividades sociales"
         }
-      ]
+      ],
+      "triggersTitle": "Desencadenantes potenciales",
+      "stress": "Estrés",
+      "sleepLack": "Falta de sueño",
+      "screens": "Pantallas",
+      "share": "{count, plural, one {# migraña de {total}} other {# migrañas de {total}}}",
+      "together": "Lo que se repite junto",
+      "togetherDetail": "Anotados juntos {count} veces de {total} migrañas.",
+      "perAttack": "por crisis, de media",
+      "outOfTotal": "de {total}",
+      "intenseAttacks": "crisis intensas, de 7 a 10",
+      "withNausea": "con náuseas",
+      "reliefBest": "Lo que funciona, o no",
+      "effective": "Eficaz {count} veces de {total}.",
+      "noEffect": "Sin efecto {count} veces de {total}.",
+      "medsTitle": "Tus tomas de medicamento",
+      "medsLine": "La línea marca 10 tomas al mes, el límite que no conviene pasar."
     }
   },
   "mellows": {
