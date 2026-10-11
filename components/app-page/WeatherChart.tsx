@@ -7,8 +7,11 @@ type Metric = "pressure" | "humidity";
 type Series = {
   label: string;
   values: number[];
-  // The value the day before the first one, so Monday has a change too.
+  // The value the day before the first one, so Monday has a change too, and
+  // the day after the last one: the curve runs on past the week to both
+  // edges, where it fades out.
   previous: number;
+  next: number;
   // The y range of the chart, with room above for the label of the change.
   min: number;
   max: number;
@@ -90,7 +93,9 @@ export function WeatherChart({ title, days, pressure, humidity }: Props) {
   const label = s.format.replace("{value}", signed(change));
 
   const points = s.values.map((v, i) => [x(i, n), y(v, s)] as [number, number]);
-  const line = curve(points);
+  // The curve through the week, plus the day before and the day after,
+  // outside the chart, so it reaches both edges.
+  const line = curve([[x(-1, n), y(s.previous, s)], ...points, [x(n, n), y(s.next, s)]]);
   const left = `${(points[day][0] / W) * 100}%`;
   const top = `${points[day][1]}%`;
 
@@ -153,14 +158,18 @@ export function WeatherChart({ title, days, pressure, humidity }: Props) {
       >
         {/* Remounted on each switch, so the new curve fades in. */}
         <div key={metric} aria-hidden className="chart-fade relative h-44 md:h-56">
-          <svg viewBox={`0 0 ${W} 100`} preserveAspectRatio="none" className="absolute inset-0 h-full w-full overflow-visible">
+          <svg
+            viewBox={`0 0 ${W} 100`}
+            preserveAspectRatio="none"
+            className="absolute inset-0 h-full w-full [mask-image:linear-gradient(to_right,transparent,black_9%,black_91%,transparent)]"
+          >
             <defs>
               <linearGradient id={`area-${metric}`} x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0" stopColor={s.color} stopOpacity="0.45" />
                 <stop offset="1" stopColor={s.color} stopOpacity="0.04" />
               </linearGradient>
             </defs>
-            <path d={`${line} L${points[n - 1][0]},100 L${points[0][0]},100 Z`} fill={`url(#area-${metric})`} />
+            <path d={`${line} L${x(n, n)},100 L${x(-1, n)},100 Z`} fill={`url(#area-${metric})`} />
             <path d={line} fill="none" stroke={s.color} strokeWidth="3" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
           </svg>
           {/* The cursor in HTML, so it glides from day to day and the
