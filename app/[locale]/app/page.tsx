@@ -124,7 +124,7 @@ function AppContent() {
             </>
           }
           phone={<Phone src={`/app-screens/${locale}/home.jpg`} alt={tFeatures("phoneAlt")} eager />}
-          callouts={t.raw("callouts") as Array<{ title: string; text: string }>}
+          promises={t.raw("promises") as Array<{ title: string; text: string }>}
         />
 
         {/* 1. Centred: the title, then the three Mellows of the intensity

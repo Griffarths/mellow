@@ -91,22 +91,22 @@
     "metaDescription": "Mellow, l'app de suivi des migraines : note une crise en deux taps, suis ton calendrier, comprends tes déclencheurs et prépare tes rendez-vous. Gratuite sur iPhone.",
     "title": "L'app Mellow",
     "subtitle": "Note tes crises en quelques secondes, comprends ce qui les déclenche et prépare tes rendez-vous.",
-    "callouts": [
+    "promises": [
       {
-        "title": "Ton Mellow",
-        "text": "Un petit mot chaque jour, qui change pendant et après une crise."
+        "title": "Reprends le contrôle de tes migraines.",
+        "text": "Tout ton suivi au même endroit, jour après jour."
       },
       {
-        "title": "Tes jours sans migraine",
-        "text": "Et le nombre de migraines du mois."
+        "title": "Note une crise en deux taps.",
+        "text": "Même depuis le widget, sans ouvrir l'app."
       },
       {
-        "title": "Des câlins",
-        "text": "Envoie ton soutien à ceux qui ont une migraine en ce moment."
+        "title": "Comprends ce qui les déclenche.",
+        "text": "Tes déclencheurs, ce qui te soulage, la météo."
       },
       {
-        "title": "Tout en un geste",
-        "text": "Ton humeur, ton score MIDAS, des cours et la respiration guidée."
+        "title": "Prépare tes rendez-vous sans stress.",
+        "text": "Trois rapports PDF à montrer à ton médecin."
       }
     ],
     "blocks": {

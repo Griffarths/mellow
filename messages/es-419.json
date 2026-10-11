@@ -96,22 +96,22 @@
     "metaDescription": "Mellow, la app para llevar el registro de tus migrañas: registra una crisis con dos toques, sigue tu calendario, entiende tus desencadenantes y prepara tus citas médicas. Gratis en iPhone.",
     "title": "La app Mellow",
     "subtitle": "Registra tus crisis en segundos, entiende qué las desencadena y prepara tus citas médicas.",
-    "callouts": [
+    "promises": [
       {
-        "title": "Tu Mellow",
-        "text": "Una palabrita cada día, que cambia durante y después de una crisis."
+        "title": "Recupera el control de tus migrañas.",
+        "text": "Todo tu seguimiento en un solo lugar, día tras día."
       },
       {
-        "title": "Tus días sin migraña",
-        "text": "Y el número de migrañas del mes."
+        "title": "Registra una crisis con dos toques.",
+        "text": "Incluso desde el widget, sin abrir la app."
       },
       {
-        "title": "Abrazos",
-        "text": "Envía tu apoyo a quienes tienen una migraña ahora mismo."
+        "title": "Entiende qué las desencadena.",
+        "text": "Tus desencadenantes, lo que te alivia, el clima."
       },
       {
-        "title": "Todo en un toque",
-        "text": "Tu estado de ánimo, tu score MIDAS, cursos y respiración guiada."
+        "title": "Prepara tus consultas sin estrés.",
+        "text": "Tres reportes PDF para mostrarle a tu médico."
       }
     ],
     "blocks": {

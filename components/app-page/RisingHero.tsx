@@ -5,29 +5,30 @@ import { useEffect, useRef, type ReactNode } from "react";
 // How far the page scrolls while the header stays in place.
 const PINNED = 520;
 
-// What the callouts point at on the home screen, in % of the phone (frame
-// included): the Mellow, the migraine-free days, the hugs, the shortcuts.
-// Left or right of the phone, and when each one appears in the rise (0 to 1).
-const TARGETS = [
-  { side: "left", x: 30, y: 27, from: 0.5 },
-  { side: "right", x: 84, y: 43, from: 0.6 },
-  { side: "left", x: 11, y: 52, from: 0.7 },
-  { side: "right", x: 78, y: 72, from: 0.8 },
+// Where the four promises sit around the phone: left or right, the height of
+// their middle in % of the phone, and when each one appears in the rise (0 to
+// 1), reading from one side to the other, top to bottom.
+const SPOTS = [
+  { side: "left", y: 22, from: 0.5 },
+  { side: "right", y: 38, from: 0.6 },
+  { side: "left", y: 58, from: 0.7 },
+  { side: "right", y: 74, from: 0.8 },
 ] as const;
 
 // The header of the /app page: the text, then the phone cut by the bottom of
 // the screen. The section stays pinned under the navbar while the page
 // scrolls PINNED pixels: the text fades out and the phone rises until it is
 // whole, then the page goes on. If the visitor asked for less motion, the
-// header is a plain section, nothing pinned and nothing moving.
+// header is a plain section, nothing pinned and nothing moving. From a laptop
+// up, four promises then appear one by one on the sides of the phone.
 export function RisingHero({
   text,
   phone,
-  callouts,
+  promises,
 }: {
   text: ReactNode;
   phone: ReactNode;
-  callouts: Array<{ title: string; text: string }>;
+  promises: Array<{ title: string; text: string }>;
 }) {
   const sectionRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -35,7 +36,7 @@ export function RisingHero({
   const windowRef = useRef<HTMLDivElement>(null);
   const phoneRef = useRef<HTMLDivElement>(null);
   const fadeRef = useRef<HTMLDivElement>(null);
-  const calloutRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const promiseRefs = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -58,9 +59,9 @@ export function RisingHero({
       textEl.style.transform = `translateY(${-40 * p}px)`;
       // The white fade hides the cut; once the phone is whole, it goes.
       fade.style.opacity = String(1 - p);
-      // The callouts come one by one at the end of the rise.
-      calloutRefs.current.forEach((el, i) => {
-        if (el) el.style.opacity = String(Math.min(1, Math.max(0, (p - TARGETS[i].from) / 0.15)));
+      // The promises come one by one at the end of the rise.
+      promiseRefs.current.forEach((el, i) => {
+        if (el) el.style.opacity = String(Math.min(1, Math.max(0, (p - SPOTS[i].from) / 0.15)));
       });
     };
     const onScroll = () => {
@@ -100,27 +101,26 @@ export function RisingHero({
           >
             <div className="relative">
               {phone}
-              {/* From a laptop up: each callout on the side of the phone, a
-                  thin line running to what it points at. */}
-              {callouts.map((callout, i) => {
-                const t = TARGETS[i];
-                const left = t.side === "left";
+              {/* From a laptop up, on the sides of the phone. */}
+              {promises.map((promise, i) => {
+                const spot = SPOTS[i];
+                const left = spot.side === "left";
                 return (
                   <div
-                    key={callout.title}
+                    key={promise.title}
                     ref={(el) => {
-                      calloutRefs.current[i] = el;
+                      promiseRefs.current[i] = el;
                     }}
-                    aria-hidden
-                    className={`absolute hidden -translate-y-1/2 items-center opacity-0 lg:flex motion-reduce:!hidden ${left ? "" : "flex-row-reverse"}`}
-                    style={left ? { top: `${t.y}%`, left: -290, right: `${100 - t.x}%` } : { top: `${t.y}%`, left: `${t.x}%`, right: -290 }}
+                    className={`absolute hidden w-[270px] -translate-y-1/2 opacity-0 lg:block motion-reduce:!hidden ${
+                      left ? "right-[calc(100%+3.5rem)] text-right" : "left-[calc(100%+3.5rem)]"
+                    }`}
+                    style={{ top: `${spot.y}%` }}
                   >
-                    <div className={`w-[230px] shrink-0 ${left ? "pr-4 text-right" : "pl-4"}`}>
-                      <p className="text-[15px] font-bold text-ink">{callout.title}</p>
-                      <p className="mt-0.5 text-sm leading-snug text-ink-3">{callout.text}</p>
-                    </div>
-                    <span className="h-px flex-1 bg-ink/25" />
-                    <span className="h-2 w-2 shrink-0 rounded-full bg-croix-ink ring-2 ring-white" />
+                    {/* Non-breaking hyphens: "rendez-vous" stays on one line. */}
+                    <p className="text-balance text-xl font-bold leading-snug text-ink">
+                      {promise.title.replace(/(\p{L})-(\p{L})/gu, "$1\u2011$2")}
+                    </p>
+                    <p className="mt-1.5 text-base leading-snug text-ink-3">{promise.text}</p>
                   </div>
                 );
               })}
