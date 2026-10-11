@@ -157,59 +157,6 @@
         "text": "Exporte en PDF l'analyse de tes crises, ton historique et ton score MIDAS, pour montrer à ton médecin ou à ton neurologue des données claires."
       }
     },
-    "plans": {
-      "title": "Gratuit ou Premium",
-      "subtitle": "Mellow est gratuit pour noter et suivre tes crises. Le Premium ajoute les analyses et les outils pour aller plus loin.",
-      "freeTitle": "Gratuit",
-      "premiumTitle": "Premium",
-      "rows": [
-        {
-          "label": "Noter tes crises, aussi depuis le widget",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Calendrier et historique",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Humeur, respiration guidée et câlins",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Sauvegarde dans le cloud",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Cours sur la migraine",
-          "free": "Quelques-uns",
-          "premium": "Tous"
-        },
-        {
-          "label": "Analyse détaillée et remarques de Mellow",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Déclencheurs et soulagements",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Météo et sommeil",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Rapports PDF et export du score MIDAS",
-          "free": "no",
-          "premium": "yes"
-        }
-      ]
-    },
     "data": {
       "title": "Tes données, bien gardées",
       "cloud": {

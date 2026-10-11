@@ -162,59 +162,6 @@
         "text": "Exportiere die Analyse deiner Attacken, deinen Verlauf und deinen MIDAS-Score als PDF, um deinem Arzt oder Neurologen klare Daten zu zeigen."
       }
     },
-    "plans": {
-      "title": "Kostenlos oder Premium",
-      "subtitle": "Mellow ist kostenlos, um deine Attacken zu erfassen und zu verfolgen. Premium bringt die Analysen und Werkzeuge, um weiterzugehen.",
-      "freeTitle": "Kostenlos",
-      "premiumTitle": "Premium",
-      "rows": [
-        {
-          "label": "Attacken erfassen, auch über das Widget",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Kalender und Verlauf",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Stimmung, geführtes Atmen und Umarmungen",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Sicherung in der Cloud",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Kurse über Migräne",
-          "free": "Einige",
-          "premium": "Alle"
-        },
-        {
-          "label": "Detaillierte Analyse und Hinweise von Mellow",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Auslöser und Linderung",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Wetter und Schlaf",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "PDF-Berichte und Export des MIDAS-Scores",
-          "free": "no",
-          "premium": "yes"
-        }
-      ]
-    },
     "data": {
       "title": "Deine Daten, gut aufgehoben",
       "cloud": {

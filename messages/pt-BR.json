@@ -162,59 +162,6 @@
         "text": "Exporte em PDF a análise das suas crises, seu histórico e sua pontuação MIDAS, para mostrar dados claros ao seu médico ou neurologista."
       }
     },
-    "plans": {
-      "title": "Grátis ou Premium",
-      "subtitle": "O Mellow é grátis para registrar e acompanhar suas crises. O Premium adiciona as análises e as ferramentas para ir mais longe.",
-      "freeTitle": "Grátis",
-      "premiumTitle": "Premium",
-      "rows": [
-        {
-          "label": "Registrar suas crises, também pelo widget",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Calendário e histórico",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Humor, respiração guiada e abraços",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Backup na nuvem",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Cursos sobre enxaqueca",
-          "free": "Alguns",
-          "premium": "Todos"
-        },
-        {
-          "label": "Análise detalhada e observações do Mellow",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Gatilhos e alívio",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Clima e sono",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Relatórios PDF e exportação da pontuação MIDAS",
-          "free": "no",
-          "premium": "yes"
-        }
-      ]
-    },
     "data": {
       "title": "Seus dados, bem guardados",
       "cloud": {

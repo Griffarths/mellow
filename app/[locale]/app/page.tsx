@@ -31,7 +31,7 @@ type Props = { params: Promise<{ locale: string }> };
 // own way with the app's elements right on the page: the intensity to play
 // with, the questions, the calendar, the triggers, what the attacks are like,
 // what brings relief, the weather, the reports, the rest between attacks.
-// Then free or Premium, and the data.
+// Then the data.
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "appPage" });
@@ -71,17 +71,6 @@ function Heading({ id }: { id: string }) {
 const PRESSURE = [1016, 1014, 1008, 1011, 1013, 1014, 1015];
 const HUMIDITY = [62, 64, 83, 75, 70, 66, 63];
 
-function Cell({ value }: { value: string }) {
-  if (value === "yes")
-    return (
-      <svg viewBox="0 0 20 20" className="mx-auto h-5 w-5 text-success" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-label="✓">
-        <path d="m4 10.5 4 4 8-9" />
-      </svg>
-    );
-  if (value === "no") return <span className="text-ink-mute" aria-label="–">–</span>;
-  return <span className="text-sm font-semibold text-ink">{value}</span>;
-}
-
 function AppContent() {
   const t = useTranslations("appPage");
   const ui = useTranslations("appPage.ui");
@@ -94,7 +83,6 @@ function AppContent() {
     weekday.format(new Date(2026, 7, 3 + i)).replace(".", ""),
   );
   const careItems = t.raw("blocks.care.items") as Array<{ title: string; text: string }>;
-  const rows = t.raw("plans.rows") as Array<{ label: string; free: string; premium: string }>;
   const rating = APP_STORE_RATING
     ? new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(
         APP_STORE_RATING.value,
@@ -273,36 +261,6 @@ function AppContent() {
           <Reveal className="mt-14">
             <CareGrid items={careItems} />
           </Reveal>
-        </section>
-
-        {/* Free or Premium, as a comparison table. */}
-        <section className="mx-auto max-w-3xl px-6 py-16 md:py-24">
-          <div className="text-center">
-            <h2 className="text-h2 text-ink">{t("plans.title")}</h2>
-            <p className="mt-4 text-balance text-lg text-ink-2">{t("plans.subtitle")}</p>
-          </div>
-          <table className="mt-10 w-full text-left">
-            <thead>
-              <tr className="border-b border-ink">
-                <th className="py-3" />
-                <th className="w-24 py-3 text-center font-bold text-ink md:w-32">{t("plans.freeTitle")}</th>
-                <th className="w-24 py-3 text-center font-bold text-croix-ink md:w-32">{t("plans.premiumTitle")}</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-surface-line">
-              {rows.map((row) => (
-                <tr key={row.label}>
-                  <td className="py-3.5 pr-3 text-[16px] leading-snug text-ink-body">{row.label}</td>
-                  <td className="py-3.5 text-center">
-                    <Cell value={row.free} />
-                  </td>
-                  <td className="py-3.5 text-center">
-                    <Cell value={row.premium} />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </section>
 
         <section className="mx-auto max-w-5xl px-6 pb-16 md:pb-24">

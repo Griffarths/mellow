@@ -162,59 +162,6 @@
         "text": "Esporta in PDF l'analisi dei tuoi attacchi, il tuo storico e il tuo punteggio MIDAS, per mostrare dati chiari al tuo medico o al tuo neurologo."
       }
     },
-    "plans": {
-      "title": "Gratis o Premium",
-      "subtitle": "Mellow è gratis per registrare e seguire i tuoi attacchi. Premium aggiunge le analisi e gli strumenti per andare oltre.",
-      "freeTitle": "Gratis",
-      "premiumTitle": "Premium",
-      "rows": [
-        {
-          "label": "Registrare gli attacchi, anche dal widget",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Calendario e storico",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Umore, respirazione guidata e abbracci",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Backup nel cloud",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Corsi sull'emicrania",
-          "free": "Alcuni",
-          "premium": "Tutti"
-        },
-        {
-          "label": "Analisi dettagliata e osservazioni di Mellow",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Fattori scatenanti e sollievo",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Meteo e sonno",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Report PDF ed esportazione del punteggio MIDAS",
-          "free": "no",
-          "premium": "yes"
-        }
-      ]
-    },
     "data": {
       "title": "I tuoi dati, ben custoditi",
       "cloud": {

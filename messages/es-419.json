@@ -162,59 +162,6 @@
         "text": "Exporta en PDF el análisis de tus crisis, tu historial y tu puntuación MIDAS, para mostrarle datos claros a tu médico o a tu neurólogo."
       }
     },
-    "plans": {
-      "title": "Gratis o Premium",
-      "subtitle": "Mellow es gratis para registrar y seguir tus crisis. Premium agrega los análisis y las herramientas para ir más allá.",
-      "freeTitle": "Gratis",
-      "premiumTitle": "Premium",
-      "rows": [
-        {
-          "label": "Registrar tus crisis, también desde el widget",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Calendario e historial",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Estado de ánimo, respiración guiada y abrazos",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Respaldo en la nube",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Cursos sobre la migraña",
-          "free": "Algunos",
-          "premium": "Todos"
-        },
-        {
-          "label": "Análisis detallado y observaciones de Mellow",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Desencadenantes y alivios",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Clima y sueño",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Informes PDF y exportación de la puntuación MIDAS",
-          "free": "no",
-          "premium": "yes"
-        }
-      ]
-    },
     "data": {
       "title": "Tus datos, bien cuidados",
       "cloud": {

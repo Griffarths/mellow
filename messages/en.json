@@ -157,59 +157,6 @@
         "text": "Export your attack analysis, your history and your MIDAS score as PDFs, to show your doctor or neurologist clear data."
       }
     },
-    "plans": {
-      "title": "Free or Premium",
-      "subtitle": "Mellow is free to log and track your attacks. Premium adds the analyses and tools to go further.",
-      "freeTitle": "Free",
-      "premiumTitle": "Premium",
-      "rows": [
-        {
-          "label": "Log your attacks, also from the widget",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Calendar and history",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Mood, guided breathing and hugs",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Cloud backup",
-          "free": "yes",
-          "premium": "yes"
-        },
-        {
-          "label": "Migraine courses",
-          "free": "Some",
-          "premium": "All"
-        },
-        {
-          "label": "Detailed analysis and Mellow's insights",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Triggers and relief",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "Weather and sleep",
-          "free": "no",
-          "premium": "yes"
-        },
-        {
-          "label": "PDF reports and MIDAS score export",
-          "free": "no",
-          "premium": "yes"
-        }
-      ]
-    },
     "data": {
       "title": "Your data, well kept",
       "cloud": {
