@@ -13,6 +13,7 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { Stars } from "@/components/sections/SocialProof";
 import { IntensityDemo } from "@/components/app-page/IntensityDemo";
 import { Reveal } from "@/components/app-page/Reveal";
+import { RisingHero } from "@/components/app-page/RisingHero";
 import { WeatherChart } from "@/components/app-page/WeatherChart";
 import {
   BigCalendar,
@@ -101,33 +102,31 @@ function AppContent() {
       <main className="overflow-x-clip">
         {/* Header, centred: the text, then the phone with the app's home
             screen, cut by the bottom of the section and fading into the
-            page, as on a product page. */}
+            page; it rises as the page scrolls (RisingHero). */}
         <section className="relative overflow-hidden">
-          <div className="mx-auto max-w-3xl px-6 pt-12 text-center md:pt-16">
-            <h1 className="text-h1 text-ink">{t("title")}</h1>
-            <p className="mx-auto mt-5 max-w-xl text-balance text-lg text-ink-2">{t("subtitle")}</p>
-            {rating && APP_STORE_RATING && (
-              <div className="mt-8 flex items-center justify-center gap-3">
-                <Stars
-                  rating={APP_STORE_RATING.value}
-                  label={tStars("starsLabel", { rating })}
-                  size="h-5 w-5"
-                />
-                <span className="text-ink-2">
-                  {tCta("rating", { rating, count: APP_STORE_RATING.count })}
-                </span>
-              </div>
-            )}
-            <StoreBadges className="mt-4" sizeClass="h-11 w-auto select-none md:h-12" />
-          </div>
-          {/* Wider than the phone, so only the bottom is cut, not the side
-              buttons. */}
-          <div className="mt-12 h-[330px] overflow-hidden md:mt-14 md:h-[420px]">
-            <div className="mx-auto w-[270px] md:w-[340px]">
-              <Phone src={`/app-screens/${locale}/home.jpg`} alt={tFeatures("phoneAlt")} eager />
-            </div>
-          </div>
-          <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white" />
+          <RisingHero
+            text={
+              <>
+                <h1 className="text-h1 text-ink">{t("title")}</h1>
+                <p className="mx-auto mt-5 max-w-xl text-balance text-lg text-ink-2">{t("subtitle")}</p>
+                {rating && APP_STORE_RATING && (
+                  <div className="mt-8 flex items-center justify-center gap-3">
+                    <Stars
+                      rating={APP_STORE_RATING.value}
+                      label={tStars("starsLabel", { rating })}
+                      size="h-5 w-5"
+                    />
+                    <span className="text-ink-2">
+                      {tCta("rating", { rating, count: APP_STORE_RATING.count })}
+                    </span>
+                  </div>
+                )}
+                <StoreBadges className="mt-4" sizeClass="h-11 w-auto select-none md:h-12" />
+              </>
+            }
+            phone={<Phone src={`/app-screens/${locale}/home.jpg`} alt={tFeatures("phoneAlt")} eager />}
+          />
+          <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24 bg-gradient-to-t from-white" />
         </section>
 
         {/* 1. Centred: the title, then the three Mellows of the intensity
