@@ -2,12 +2,17 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 
+// How far the page scrolls while the header stays in place.
+const PINNED = 520;
+
 // The header of the /app page: the text, then the phone cut by the bottom of
-// the section. When the page scrolls, the phone rises faster than the page,
-// so the rest of its screen comes out from behind the cut, and the text fades
-// as the phone passes over it. Nothing moves if the visitor asked for less
-// motion.
+// the screen. The section stays pinned under the navbar while the page
+// scrolls PINNED pixels: the text fades out and the phone rises until it is
+// whole, then the page goes on. If the visitor asked for less motion, the
+// header is a plain section, nothing pinned and nothing moving.
 export function RisingHero({ text, phone }: { text: ReactNode; phone: ReactNode }) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const windowRef = useRef<HTMLDivElement>(null);
   const phoneRef = useRef<HTMLDivElement>(null);
@@ -17,14 +22,20 @@ export function RisingHero({ text, phone }: { text: ReactNode; phone: ReactNode 
     let frame = 0;
     const update = () => {
       frame = 0;
-      const [textEl, windowEl, phoneEl] = [textRef.current, windowRef.current, phoneRef.current];
-      if (!textEl || !windowEl || !phoneEl) return;
-      const y = Math.max(0, window.scrollY);
-      // At most until the bottom of the phone reaches the bottom of the cut.
-      const most = Math.max(0, phoneEl.offsetHeight - windowEl.offsetHeight);
-      phoneEl.style.transform = `translateY(${-Math.min(most, y * 0.45)}px)`;
-      // Gone by the time the phone reaches the button.
-      textEl.style.opacity = String(1 - Math.min(1, Math.max(0, (y - 20) / 160)));
+      const els = [sectionRef.current, stageRef.current, textRef.current, windowRef.current, phoneRef.current];
+      if (els.some((el) => !el)) return;
+      const [section, stage, textEl, windowEl, phoneEl] = els as HTMLElement[];
+      // 0 when the header arrives, 1 when the page is about to go on.
+      const done = section.offsetHeight - stage.offsetHeight;
+      const p = done > 0 ? Math.min(1, Math.max(0, -section.getBoundingClientRect().top / done)) : 0;
+      // The phone ends whole and centred in the stage (or at its top if the
+      // screen is too short for it).
+      const end = Math.max(16, (stage.offsetHeight - phoneEl.offsetHeight) / 2);
+      const rise = Math.max(0, windowEl.offsetTop - end);
+      phoneEl.style.transform = `translateY(${-rise * p}px)`;
+      // The text is gone before the phone covers it.
+      textEl.style.opacity = String(1 - Math.min(1, p * 2.5));
+      textEl.style.transform = `translateY(${-40 * p}px)`;
     };
     const onScroll = () => {
       if (!frame) frame = requestAnimationFrame(update);
@@ -40,21 +51,27 @@ export function RisingHero({ text, phone }: { text: ReactNode; phone: ReactNode 
   }, []);
 
   return (
-    <>
-      <div ref={textRef} className="mx-auto max-w-3xl px-6 pt-12 text-center md:pt-16">
-        {text}
-      </div>
-      {/* Cut only at the bottom (clip-path), so the phone can rise above
-          the window and over the text; wider than the phone, so its side
-          buttons show. */}
+    <section
+      ref={sectionRef}
+      className="relative motion-reduce:!h-auto"
+      style={{ height: `calc(100svh - 4rem + ${PINNED}px)` }}
+    >
+      {/* The stage stays under the navbar (4rem) while the section scrolls by. */}
       <div
-        ref={windowRef}
-        className="relative z-10 mt-12 h-[330px] [clip-path:inset(-100vh_-100vw_0_-100vw)] md:mt-14 md:h-[420px]"
+        ref={stageRef}
+        className="sticky top-16 h-[calc(100svh-4rem)] overflow-hidden motion-reduce:static motion-reduce:h-auto"
       >
-        <div ref={phoneRef} className="mx-auto w-[270px] will-change-transform md:w-[340px]">
-          {phone}
+        <div ref={textRef} className="mx-auto max-w-3xl px-6 pt-12 text-center md:pt-16">
+          {text}
         </div>
+        {/* Wider than the phone, so its side buttons show. */}
+        <div ref={windowRef} className="mt-12 md:mt-14 motion-reduce:h-[330px] motion-reduce:overflow-hidden md:motion-reduce:h-[420px]">
+          <div ref={phoneRef} className="mx-auto w-[270px] will-change-transform md:w-[340px]">
+            {phone}
+          </div>
+        </div>
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white" />
       </div>
-    </>
+    </section>
   );
 }
