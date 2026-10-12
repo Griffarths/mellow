@@ -23,7 +23,7 @@ export function Features() {
   const doctor = DOCTOR_PATH[locale] ?? DOCTOR_PATH.en;
 
   return (
-    <section id="features" className="overflow-x-clip pt-12 lg:pt-20">
+    <section id="features" className="overflow-x-clip pb-16 pt-12 md:pb-24 lg:pt-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-h2 text-ink">{t("title")}</h2>

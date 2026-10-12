@@ -71,7 +71,7 @@ export function SocialProof() {
   );
 
   return (
-    <section id="reviews" className="py-14 md:py-24">
+    <section id="reviews" className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         {isSample && (
           <p className="mb-8 rounded-chip bg-brand-hot-soft px-4 py-3 text-sm font-semibold text-ink">

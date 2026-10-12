@@ -13,7 +13,7 @@ export function WhyMellow() {
   const t = useTranslations("why");
 
   return (
-    <section id="why" className="pt-20 lg:pt-28">
+    <section id="why" className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-h2 text-ink">{t("title")}</h2>

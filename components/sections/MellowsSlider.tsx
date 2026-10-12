@@ -41,7 +41,7 @@ export function MellowsSlider() {
   }, []);
 
   return (
-    <section className="py-14 md:py-28">
+    <section className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           {/* The title breaks after its comma: "A gentle app, / not a

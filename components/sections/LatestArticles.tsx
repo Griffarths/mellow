@@ -12,7 +12,7 @@ export function LatestArticles() {
   if (articles.length === 0) return null;
 
   return (
-    <section id="latest" className="pb-14 md:pb-24">
+    <section id="latest" className="pb-14 pt-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center gap-4 md:flex-row md:items-end md:justify-between">
           <h2 className="text-center text-h2 text-ink md:text-left">{t("latestTitle")}</h2>
