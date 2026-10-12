@@ -296,6 +296,79 @@
       "reduced": "Verlangsamt"
     }
   },
+  "doctorPage": {
+    "metaTitle": "Für deinen Arzt: PDF-Berichte deiner Migräne · Mellow",
+    "metaDescription": "Mellow macht aus deinen Attacken klare PDF-Berichte für deinen Arzt oder Neurologen: Migränetage, Medikamente, MIDAS-Score. Bereite deinen Termin in 3 Schritten vor.",
+    "title": "Zeig deinem Arzt, was du wirklich durchmachst",
+    "subtitle": "Im Termin vergisst man schnell Daten, Attacken und Medikamente. Mellow behält sie für dich und macht daraus klare PDF-Berichte für deinen Arzt oder Neurologen.",
+    "look": {
+      "kicker": "Im Arzttermin",
+      "title": "Worauf dein Arzt zuerst schaut",
+      "text": "Um eine Behandlung anzupassen, stützen sich Ärztinnen und Ärzte auf ein paar Werte. Mellow berechnet sie für dich, Attacke für Attacke.",
+      "items": [
+        {
+          "title": "Deine Migränetage pro Monat",
+          "text": "Ab 15 Tagen pro Monat spricht man von chronischer Migräne."
+        },
+        {
+          "title": "Deine Medikamenteneinnahmen",
+          "text": "Ab mehr als 10 Einnahmen pro Monat können Medikamente die Migräne aufrechterhalten."
+        },
+        {
+          "title": "Stärke und Dauer deiner Attacken",
+          "text": "Um die richtige Akutbehandlung zu wählen."
+        },
+        {
+          "title": "Wobei dich die Migräne einschränkt",
+          "text": "Der MIDAS-Score misst die Auswirkungen auf deine Arbeit, deinen Haushalt und dein soziales Leben."
+        }
+      ]
+    },
+    "reports": {
+      "kicker": "Die Berichte",
+      "title": "Drei PDF-Berichte, mit einem Tipp bereit",
+      "text": "Wähl den Zeitraum (einen Monat, drei Monate, ein Jahr oder deinen ganzen Verlauf) und exportiere. Druck deine Berichte aus, schick sie oder zeig sie auf deinem Handy.",
+      "items": [
+        {
+          "title": "Analyse",
+          "text": "Die wichtigsten Zahlen des Zeitraums, was du ansprechen solltest, die Entwicklung, deine Auslöser und deine Behandlungen."
+        },
+        {
+          "title": "Verlauf",
+          "text": "Alle deine Attacken, eine pro Zeile: Datum, Stärke, Dauer, Symptome, Auslöser, Medikamente und was geholfen hat."
+        },
+        {
+          "title": "MIDAS-Score",
+          "text": "Deine Beeinträchtigung in den letzten 90 Tagen, mit dem Grad und den verpassten oder verlangsamten Tagen."
+        }
+      ],
+      "note": "Die PDF-Berichte gehören zu Mellow Premium. Das Erfassen deiner Attacken ist kostenlos."
+    },
+    "steps": {
+      "kicker": "Vor dem Termin",
+      "title": "Bereite deinen Termin in 3 Schritten vor",
+      "items": [
+        {
+          "title": "Erfasse deine Attacken laufend",
+          "text": "In der App mit zwei Tipps oder auf Papier mit dem <diary>Migränetagebuch zum Ausdrucken</diary>."
+        },
+        {
+          "title": "Exportiere deine Berichte am Vortag",
+          "text": "Wähl den Zeitraum seit deinem letzten Termin."
+        },
+        {
+          "title": "Schreib deine Fragen auf",
+          "text": "Eine vorbeugende Behandlung? Ein anderes Mittel gegen die Attacken? Notier sie dir, damit du nichts vergisst."
+        }
+      ]
+    },
+    "pro": {
+      "kicker": "Gesundheitsfachkräfte",
+      "title": "Du arbeitest im Gesundheitswesen?",
+      "text": "Mellow hilft deinen Patientinnen und Patienten, mit klaren Daten in den Termin zu kommen: Migränetage, Medikamenteneinnahmen, MIDAS-Score. Möchtest du einen Beispielbericht sehen oder mit uns darüber sprechen?",
+      "cta": "Schreib uns"
+    }
+  },
   "mellows": {
     "title": "Eine sanfte App,<br></br>keine Krankenakte.",
     "subtitle": "Jeder Mellow begleitet dich in einem anderen Moment deiner Migräne, von ganz normalen Tagen bis zu den stärksten Attacken.",

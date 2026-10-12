@@ -1,5 +1,5 @@
 // The "For your doctor" page, in each language (same idea as the tools:
-// one path per language). The page itself is still to create.
+// one path per language). Spain and Latin America share their path.
 export const DOCTOR_PATH: Record<string, string> = {
   fr: "/pour-ton-medecin",
   en: "/for-your-doctor",

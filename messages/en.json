@@ -291,6 +291,79 @@
       "reduced": "Slowed"
     }
   },
+  "doctorPage": {
+    "metaTitle": "For your doctor: PDF reports of your migraines · Mellow",
+    "metaDescription": "Mellow turns your attacks into clear PDF reports for your doctor or neurologist: migraine days, medication, MIDAS score. Get ready for your appointment in 3 steps.",
+    "title": "Show your doctor what you really go through",
+    "subtitle": "At the appointment, it's easy to forget dates, attacks and medication. Mellow keeps track of them for you and turns them into clear PDF reports to show your doctor or neurologist.",
+    "look": {
+      "kicker": "At the appointment",
+      "title": "What your doctor looks at first",
+      "text": "To adjust a treatment, doctors rely on a few markers. Mellow works them out for you, attack after attack.",
+      "items": [
+        {
+          "title": "Your migraine days per month",
+          "text": "From 15 days a month onwards, migraine is considered chronic."
+        },
+        {
+          "title": "Your medication doses",
+          "text": "Beyond 10 doses a month, medication itself can keep the migraines going."
+        },
+        {
+          "title": "How intense and how long your attacks are",
+          "text": "To choose the right treatment for your attacks."
+        },
+        {
+          "title": "What migraine stops you from doing",
+          "text": "The MIDAS score measures the impact on your work, your chores at home and your social life."
+        }
+      ]
+    },
+    "reports": {
+      "kicker": "The reports",
+      "title": "Three PDF reports, ready in one tap",
+      "text": "Choose the period (one month, three months, one year or your whole history) and export. Print your reports, send them or show them on your phone.",
+      "items": [
+        {
+          "title": "Analysis",
+          "text": "The key figures for the period, what's worth flagging, the trend, your triggers and your treatments."
+        },
+        {
+          "title": "History",
+          "text": "All your attacks, one per line: date, intensity, duration, symptoms, triggers, medication and what helped."
+        },
+        {
+          "title": "MIDAS score",
+          "text": "Your disability over the last 90 days, with the grade and the days missed or slowed."
+        }
+      ],
+      "note": "The PDF reports are part of Mellow Premium. Tracking your attacks is free."
+    },
+    "steps": {
+      "kicker": "Before the appointment",
+      "title": "Prepare your appointment in 3 steps",
+      "items": [
+        {
+          "title": "Log your attacks as they come",
+          "text": "In the app, in two taps, or on paper with the <diary>printable migraine diary</diary>."
+        },
+        {
+          "title": "Export your reports the day before",
+          "text": "Choose the period since your last appointment."
+        },
+        {
+          "title": "Write down your questions",
+          "text": "A preventive treatment? A different treatment for your attacks? Note them down so you don't forget anything."
+        }
+      ]
+    },
+    "pro": {
+      "kicker": "Healthcare professionals",
+      "title": "Are you a clinician?",
+      "text": "Mellow helps your patients come in with clear data: migraine days, medication doses, MIDAS score. Would you like to see a sample report or talk to us about it?",
+      "cta": "Get in touch"
+    }
+  },
   "mellows": {
     "title": "A gentle app,<br></br>not a medical record.",
     "subtitle": "Each Mellow is there for a different moment of your migraine, from ordinary days to the worst attacks.",

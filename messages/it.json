@@ -296,6 +296,79 @@
       "reduced": "Rallentato"
     }
   },
+  "doctorPage": {
+    "metaTitle": "Per il tuo medico: report PDF della tua emicrania · Mellow",
+    "metaDescription": "Mellow trasforma i tuoi attacchi in report PDF chiari per il tuo medico o neurologo: giorni di emicrania, farmaci, punteggio MIDAS. Prepara la visita in 3 passaggi.",
+    "title": "Mostra al tuo medico quello che vivi davvero",
+    "subtitle": "Durante la visita è facile dimenticare date, attacchi e farmaci. Mellow li conserva per te e li trasforma in report PDF chiari da mostrare al tuo medico o al tuo neurologo.",
+    "look": {
+      "kicker": "Durante la visita",
+      "title": "Cosa guarda per primo il tuo medico",
+      "text": "Per adattare una terapia, i medici si basano su alcuni riferimenti. Mellow li calcola per te, attacco dopo attacco.",
+      "items": [
+        {
+          "title": "I tuoi giorni di emicrania al mese",
+          "text": "A partire da 15 giorni al mese si parla di emicrania cronica."
+        },
+        {
+          "title": "Le tue assunzioni di farmaci",
+          "text": "Oltre le 10 assunzioni al mese, i farmaci possono alimentare l'emicrania."
+        },
+        {
+          "title": "Intensità e durata dei tuoi attacchi",
+          "text": "Per scegliere la terapia giusta per gli attacchi."
+        },
+        {
+          "title": "Cosa l'emicrania ti impedisce di fare",
+          "text": "Il punteggio MIDAS misura l'impatto sul tuo lavoro, sulle faccende di casa e sulla tua vita sociale."
+        }
+      ]
+    },
+    "reports": {
+      "kicker": "I report",
+      "title": "Tre report PDF, pronti in un gesto",
+      "text": "Scegli il periodo (un mese, tre mesi, un anno o tutto il tuo storico) ed esporta. Stampa i tuoi report, inviali o mostrali sul telefono.",
+      "items": [
+        {
+          "title": "Analisi",
+          "text": "I numeri chiave del periodo, cosa segnalare, l'andamento, i tuoi fattori scatenanti e le tue terapie."
+        },
+        {
+          "title": "Storico",
+          "text": "Tutti i tuoi attacchi, uno per riga: data, intensità, durata, sintomi, fattori scatenanti, farmaci e cosa ha aiutato."
+        },
+        {
+          "title": "Punteggio MIDAS",
+          "text": "La tua disabilità negli ultimi 90 giorni, con il grado e i giorni saltati o rallentati."
+        }
+      ],
+      "note": "I report PDF fanno parte di Mellow Premium. Il monitoraggio dei tuoi attacchi, invece, è gratuito."
+    },
+    "steps": {
+      "kicker": "Prima della visita",
+      "title": "Prepara la visita in 3 passaggi",
+      "items": [
+        {
+          "title": "Registra i tuoi attacchi giorno per giorno",
+          "text": "Nell'app, in due tocchi, o su carta con il <diary>diario dell'emicrania da stampare</diary>."
+        },
+        {
+          "title": "Esporta i report il giorno prima",
+          "text": "Scegli il periodo dalla tua ultima visita."
+        },
+        {
+          "title": "Scrivi le tue domande",
+          "text": "Una terapia di prevenzione? Un'altra terapia per gli attacchi? Annotale per non dimenticare nulla."
+        }
+      ]
+    },
+    "pro": {
+      "kicker": "Professionisti sanitari",
+      "title": "Lavori in ambito sanitario?",
+      "text": "Mellow aiuta i tuoi pazienti ad arrivare con dati chiari: giorni di emicrania, assunzioni di farmaci, punteggio MIDAS. Vuoi vedere un esempio di report o parlarne con noi?",
+      "cta": "Scrivici"
+    }
+  },
   "mellows": {
     "title": "Un'app delicata,<br></br>non una cartella clinica.",
     "subtitle": "Ogni Mellow ti accompagna in un momento diverso della tua emicrania, dai giorni normali agli attacchi più forti.",

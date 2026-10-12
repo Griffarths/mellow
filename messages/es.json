@@ -296,6 +296,79 @@
       "reduced": "Ralentizado"
     }
   },
+  "doctorPage": {
+    "metaTitle": "Para tu médico: informes PDF de tus migrañas · Mellow",
+    "metaDescription": "Mellow convierte tus crisis en informes PDF claros para tu médico o neurólogo: días de migraña, medicación, puntuación MIDAS. Prepara tu cita en 3 pasos.",
+    "title": "Enseña a tu médico lo que vives de verdad",
+    "subtitle": "En la consulta se olvidan fácilmente las fechas, las crisis y los medicamentos. Mellow los guarda por ti y los convierte en informes PDF claros para enseñar a tu médico o a tu neurólogo.",
+    "look": {
+      "kicker": "En la consulta",
+      "title": "Lo que tu médico mira primero",
+      "text": "Para ajustar un tratamiento, los médicos se basan en algunas referencias. Mellow las calcula por ti, crisis tras crisis.",
+      "items": [
+        {
+          "title": "Tus días de migraña al mes",
+          "text": "A partir de 15 días al mes se habla de migraña crónica."
+        },
+        {
+          "title": "Tus tomas de medicamentos",
+          "text": "Por encima de 10 tomas al mes, los medicamentos pueden mantener las migrañas."
+        },
+        {
+          "title": "La intensidad y la duración de tus crisis",
+          "text": "Para elegir el tratamiento adecuado para las crisis."
+        },
+        {
+          "title": "Lo que la migraña te impide hacer",
+          "text": "La puntuación MIDAS mide el impacto en tu trabajo, en las tareas de casa y en tu vida social."
+        }
+      ]
+    },
+    "reports": {
+      "kicker": "Los informes",
+      "title": "Tres informes PDF, listos en un gesto",
+      "text": "Elige el periodo (un mes, tres meses, un año o todo tu historial) y exporta. Imprime tus informes, envíalos o enséñalos en tu móvil.",
+      "items": [
+        {
+          "title": "Análisis",
+          "text": "Las cifras clave del periodo, lo que conviene comentar, la evolución, tus desencadenantes y tus tratamientos."
+        },
+        {
+          "title": "Historial",
+          "text": "Todas tus crisis, una por línea: fecha, intensidad, duración, síntomas, desencadenantes, medicamentos y lo que te ayudó."
+        },
+        {
+          "title": "Puntuación MIDAS",
+          "text": "Tu discapacidad en los últimos 90 días, con el grado y los días perdidos o ralentizados."
+        }
+      ],
+      "note": "Los informes PDF forman parte de Mellow Premium. El registro de tus crisis es gratis."
+    },
+    "steps": {
+      "kicker": "Antes de la cita",
+      "title": "Prepara tu cita en 3 pasos",
+      "items": [
+        {
+          "title": "Anota tus crisis día a día",
+          "text": "En la app, con dos toques, o en papel con el <diary>diario de migraña para imprimir</diary>."
+        },
+        {
+          "title": "Exporta tus informes el día antes",
+          "text": "Elige el periodo desde tu última cita."
+        },
+        {
+          "title": "Escribe tus preguntas",
+          "text": "¿Un tratamiento preventivo? ¿Otro tratamiento para las crisis? Anótalas para no olvidar nada."
+        }
+      ]
+    },
+    "pro": {
+      "kicker": "Profesionales sanitarios",
+      "title": "¿Eres profesional de la salud?",
+      "text": "Mellow ayuda a tus pacientes a llegar con datos claros: días de migraña, tomas de medicamentos, puntuación MIDAS. ¿Quieres ver un ejemplo de informe o hablarlo con nosotros?",
+      "cta": "Escríbenos"
+    }
+  },
   "mellows": {
     "title": "Una app amable,<br></br>no un historial médico.",
     "subtitle": "Cada Mellow te acompaña en un momento distinto de tu migraña, desde los días normales hasta las crisis más fuertes.",

@@ -291,6 +291,79 @@
       "reduced": "Ralentie"
     }
   },
+  "doctorPage": {
+    "metaTitle": "Pour ton médecin : rapports PDF de tes migraines · Mellow",
+    "metaDescription": "Mellow fait de tes crises des rapports PDF clairs pour ton médecin ou ton neurologue : jours de migraine, médicaments, score MIDAS. Prépare ta consultation en 3 étapes.",
+    "title": "Montre à ton médecin ce que tu vis vraiment",
+    "subtitle": "En consultation, on oublie vite les dates, les crises et les médicaments. Mellow les garde pour toi et en fait des rapports PDF clairs, à montrer à ton médecin ou à ton neurologue.",
+    "look": {
+      "kicker": "En consultation",
+      "title": "Ce que ton médecin regarde en premier",
+      "text": "Pour adapter un traitement, les médecins s'appuient sur quelques repères. Mellow les calcule pour toi, crise après crise.",
+      "items": [
+        {
+          "title": "Tes jours de migraine par mois",
+          "text": "À partir de 15 jours par mois, on parle de migraine chronique."
+        },
+        {
+          "title": "Tes prises de médicaments",
+          "text": "Au-delà de 10 prises par mois, les médicaments peuvent entretenir les migraines."
+        },
+        {
+          "title": "L'intensité et la durée de tes crises",
+          "text": "Pour choisir le bon traitement de crise."
+        },
+        {
+          "title": "Ce que la migraine t'empêche de faire",
+          "text": "Le score MIDAS mesure l'impact sur ton travail, tes tâches à la maison et ta vie sociale."
+        }
+      ]
+    },
+    "reports": {
+      "kicker": "Les rapports",
+      "title": "Trois rapports PDF, prêts en un geste",
+      "text": "Choisis la période (un mois, trois mois, un an ou tout ton historique) et exporte. Imprime tes rapports, envoie-les ou montre-les sur ton téléphone.",
+      "items": [
+        {
+          "title": "Analyse",
+          "text": "Les chiffres clés de la période, ce qui est à signaler, l'évolution, tes déclencheurs et tes traitements."
+        },
+        {
+          "title": "Historique",
+          "text": "Toutes tes crises, une par ligne : date, intensité, durée, symptômes, déclencheurs, médicaments et ce qui a aidé."
+        },
+        {
+          "title": "Score MIDAS",
+          "text": "Ton incapacité sur les 90 derniers jours, avec le grade et les jours manqués ou ralentis."
+        }
+      ],
+      "note": "Les rapports PDF font partie de Mellow Premium. Le suivi de tes crises, lui, est gratuit."
+    },
+    "steps": {
+      "kicker": "Avant le rendez-vous",
+      "title": "Prépare ta consultation en 3 étapes",
+      "items": [
+        {
+          "title": "Note tes crises au fil des jours",
+          "text": "Dans l'app, en deux taps, ou sur papier avec le <diary>journal de migraine à imprimer</diary>."
+        },
+        {
+          "title": "Exporte tes rapports la veille",
+          "text": "Choisis la période depuis ton dernier rendez-vous."
+        },
+        {
+          "title": "Écris tes questions",
+          "text": "Un traitement de fond ? Un autre traitement de crise ? Note-les pour ne rien oublier."
+        }
+      ]
+    },
+    "pro": {
+      "kicker": "Professionnels de santé",
+      "title": "Tu es soignant ?",
+      "text": "Mellow aide tes patients à arriver avec des données claires : jours de migraine, prises de médicaments, score MIDAS. Tu veux voir un exemple de rapport ou en parler avec nous ?",
+      "cta": "Nous écrire"
+    }
+  },
   "mellows": {
     "title": "Une app douce,<br></br>pas un dossier médical.",
     "subtitle": "Chaque Mellow t'accompagne à un moment de ta migraine, des jours ordinaires aux crises les plus fortes.",

@@ -13,6 +13,7 @@ import { PILLARS, PILLAR_IDS } from "@/lib/pillars";
 import { withDefault } from "@/lib/hreflang";
 import { TOOL_LOCALES } from "@/lib/tools";
 import { TOOL_IDS, toolAlternates, toolUrl } from "@/lib/tools-seo";
+import { doctorAlternates, doctorUrl } from "@/lib/doctor-seo";
 
 const SITE_URL = "https://mellowmigraine.com";
 
@@ -50,6 +51,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
       alternates: { languages: appAlternates },
+    });
+  }
+
+  // For your doctor: one path per language, cross-linked via hreflang
+  const doctorLanguages = doctorAlternates();
+  for (const locale of routing.locales) {
+    entries.push({
+      url: doctorUrl(locale),
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: { languages: doctorLanguages },
     });
   }
 

@@ -296,6 +296,79 @@
       "reduced": "Reduzido"
     }
   },
+  "doctorPage": {
+    "metaTitle": "Para o seu médico: relatórios PDF das suas enxaquecas · Mellow",
+    "metaDescription": "O Mellow transforma suas crises em relatórios PDF claros para o seu médico ou neurologista: dias de enxaqueca, medicamentos, pontuação MIDAS. Prepare sua consulta em 3 passos.",
+    "title": "Mostre ao seu médico o que você realmente vive",
+    "subtitle": "Na consulta, é fácil esquecer as datas, as crises e os medicamentos. O Mellow guarda tudo para você e transforma em relatórios PDF claros para mostrar ao seu médico ou neurologista.",
+    "look": {
+      "kicker": "Na consulta",
+      "title": "O que o seu médico olha primeiro",
+      "text": "Para ajustar um tratamento, os médicos se baseiam em algumas referências. O Mellow calcula tudo para você, crise após crise.",
+      "items": [
+        {
+          "title": "Seus dias de enxaqueca por mês",
+          "text": "A partir de 15 dias por mês, fala-se em enxaqueca crônica."
+        },
+        {
+          "title": "Suas doses de medicamentos",
+          "text": "Acima de 10 doses por mês, os medicamentos podem manter as enxaquecas."
+        },
+        {
+          "title": "A intensidade e a duração das suas crises",
+          "text": "Para escolher o tratamento certo para as crises."
+        },
+        {
+          "title": "O que a enxaqueca impede você de fazer",
+          "text": "A pontuação MIDAS mede o impacto no seu trabalho, nas tarefas de casa e na sua vida social."
+        }
+      ]
+    },
+    "reports": {
+      "kicker": "Os relatórios",
+      "title": "Três relatórios PDF, prontos em um gesto",
+      "text": "Escolha o período (um mês, três meses, um ano ou todo o seu histórico) e exporte. Imprima seus relatórios, envie ou mostre no celular.",
+      "items": [
+        {
+          "title": "Análise",
+          "text": "Os números-chave do período, o que vale a pena mencionar, a evolução, seus gatilhos e seus tratamentos."
+        },
+        {
+          "title": "Histórico",
+          "text": "Todas as suas crises, uma por linha: data, intensidade, duração, sintomas, gatilhos, medicamentos e o que ajudou."
+        },
+        {
+          "title": "Pontuação MIDAS",
+          "text": "Sua incapacidade nos últimos 90 dias, com o grau e os dias perdidos ou reduzidos."
+        }
+      ],
+      "note": "Os relatórios PDF fazem parte do Mellow Premium. O registro das suas crises é gratuito."
+    },
+    "steps": {
+      "kicker": "Antes da consulta",
+      "title": "Prepare sua consulta em 3 passos",
+      "items": [
+        {
+          "title": "Registre suas crises dia a dia",
+          "text": "No app, em dois toques, ou no papel com o <diary>diário de enxaqueca para imprimir</diary>."
+        },
+        {
+          "title": "Exporte seus relatórios na véspera",
+          "text": "Escolha o período desde a sua última consulta."
+        },
+        {
+          "title": "Escreva suas perguntas",
+          "text": "Um tratamento preventivo? Outro tratamento para as crises? Anote tudo para não esquecer nada."
+        }
+      ]
+    },
+    "pro": {
+      "kicker": "Profissionais de saúde",
+      "title": "Você é profissional de saúde?",
+      "text": "O Mellow ajuda seus pacientes a chegar com dados claros: dias de enxaqueca, doses de medicamentos, pontuação MIDAS. Quer ver um exemplo de relatório ou conversar com a gente?",
+      "cta": "Fale com a gente"
+    }
+  },
   "mellows": {
     "title": "Um app gentil,<br></br>não um prontuário médico.",
     "subtitle": "Cada Mellow acompanha você em um momento diferente da sua enxaqueca, dos dias normais às crises mais fortes.",
