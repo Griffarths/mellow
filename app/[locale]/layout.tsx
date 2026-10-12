@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { QrWidget } from "@/components/QrWidget";
+import { ScrollReset } from "@/components/ScrollReset";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
@@ -59,6 +60,7 @@ export default async function LocaleLayout({
           before React loads: not a real mismatch. */}
       <body className="bg-white font-sans text-ink antialiased" suppressHydrationWarning>
         <NextIntlClientProvider>
+          <ScrollReset />
           {children}
           <QrWidget />
         </NextIntlClientProvider>
