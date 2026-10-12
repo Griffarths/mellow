@@ -17,7 +17,7 @@ export function OverusePage({ locale }: { locale: ToolLocale }) {
     <>
       <Nav />
       <main className="mx-auto max-w-6xl px-6 pb-20 pt-10 md:pb-28 md:pt-16">
-        <div className="mx-auto max-w-3xl">
+        <div className="max-w-3xl">
           <h1 className="text-display text-ink">{ty(c.title)}</h1>
           <p className="mt-5 text-lg leading-relaxed text-ink-2">{ty(c.lead)}</p>
           <p className="mt-3 text-sm leading-relaxed text-ink-3">
@@ -25,7 +25,7 @@ export function OverusePage({ locale }: { locale: ToolLocale }) {
           </p>
         </div>
 
-        <div className="mx-auto mt-10 max-w-5xl">
+        <div className="mt-10 max-w-5xl">
           <OveruseCalculator
             locale={locale}
             copy={OVERUSE_COPY[locale]}
@@ -33,7 +33,7 @@ export function OverusePage({ locale }: { locale: ToolLocale }) {
           />
         </div>
 
-        <div className="mx-auto mt-20 max-w-3xl">
+        <div className="mt-20">
           <section>
             <h2 className={H2}>{ty(c.thresholdsTitle)}</h2>
             <p className="mt-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">
