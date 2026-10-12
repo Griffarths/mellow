@@ -17,9 +17,10 @@ const LINK = "transition hover:text-ink";
 // The About page exists in French and English only.
 const ABOUT_PATH: Partial<Record<string, string>> = { fr: "/a-propos", en: "/about" };
 
-// Brand on the left, then three columns of links (resources, Mellow, legal);
-// copyright and language at the bottom. The Mellow column opens with the two
-// pages of the menu, the app and for your doctor.
+// Brand on the left, then three columns of links (Mellow, the free tools,
+// legal), in the order of the menu: the Mellow column opens with its first
+// two pages, the app and for your doctor. Copyright and language at the
+// bottom.
 export function Footer({ localePaths }: Props = {}) {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
@@ -45,18 +46,9 @@ export function Footer({ localePaths }: Props = {}) {
           <p className="mt-3 max-w-[26ch] text-[15px] leading-relaxed text-ink-2">{hero("title")}</p>
         </div>
 
-        {/* Two columns on phones (resources and Mellow side by side, legal
+        {/* Two columns on phones (Mellow and the tools side by side, legal
             below), three from md. */}
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:col-span-3 md:grid-cols-3 md:gap-8">
-          {isToolLocale(locale) && (
-            <Column title={TOOLS_LABEL[locale]}>
-              {toolsMenu(locale).map((tool) => (
-                <Link key={tool.path} href={tool.path} className={LINK}>
-                  {tool.navLabel}
-                </Link>
-              ))}
-            </Column>
-          )}
           <Column title="Mellow">
             <Link href="/app" className={LINK}>
               {nav("app")}
@@ -88,6 +80,15 @@ export function Footer({ localePaths }: Props = {}) {
               {t("contact")}
             </Link>
           </Column>
+          {isToolLocale(locale) && (
+            <Column title={TOOLS_LABEL[locale]}>
+              {toolsMenu(locale).map((tool) => (
+                <Link key={tool.path} href={tool.path} className={LINK}>
+                  {tool.navLabel}
+                </Link>
+              ))}
+            </Column>
+          )}
           <Column title={t("legalTitle")}>
             <Link href="/confidentialite" className={LINK}>
               {t("privacy")}
