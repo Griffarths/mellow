@@ -14,9 +14,9 @@ const SHADOW = "shadow-[0_1px_3px_rgb(0_0_0/0.06),0_16px_32px_-12px_rgb(0_0_0/0.
 // with the Mellow sitting on its top edge and the App Store QR code, to scan
 // with the iPhone (phones only get the badges: they cannot scan themselves).
 // The cross folds it into the Mellow alone, in a round button that opens it
-// again. It steps aside while an element marked data-hides-qr is on screen:
-// the pink hero of the home page, which has its badge, and the final
-// "Download Mellow" block, which has the same QR code. Folding and opening
+// again. It is there from the top of every page, the home page's hero
+// included, and only steps aside while an element marked data-hides-qr is on
+// screen: the final "Download Mellow" block, which has the same QR code. Folding and opening
 // are animated (qr-* in globals.css): the card shrinks into the corner and
 // the round button pops up; the card springs out of the corner and the
 // Mellow hops onto it. Only after a click, never on load.

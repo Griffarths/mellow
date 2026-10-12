@@ -8,7 +8,6 @@ export function Hero() {
   const t = useTranslations("hero");
   return (
     <section
-      data-hides-qr
       id="download"
       className="home-hero relative flex flex-col items-center justify-center overflow-hidden px-6 text-center"
     >
