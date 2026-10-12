@@ -224,6 +224,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-ophtalmique",
         "migraine-avec-aura",
         "combien-de-temps-dure-une-migraine",
+        "migraine-qui-dure-plusieurs-jours",
       ],
     },
     en: {
@@ -243,6 +244,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "ophthalmic-migraine",
         "migraine-with-aura",
         "how-long-does-a-migraine-last",
+        "migraine-that-wont-go-away",
       ],
     },
     es: {
@@ -262,6 +264,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-menstrual-regla",
         "migrana-con-aura-sintomas",
         "cuanto-dura-una-migrana",
+        "migrana-que-dura-varios-dias",
       ],
     },
     "es-419": {
@@ -281,6 +284,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-menstrual",
         "migrana-con-aura-senales-antes-de-la-crisis",
         "cuanto-dura-una-migrana",
+        "migrana-que-dura-varios-dias",
       ],
     },
     de: {
@@ -300,6 +304,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-mit-aura",
         "menstruelle-migraene",
         "augenmigraene",
+        "migraene-dauert-mehrere-tage",
       ],
     },
     it: {
@@ -319,6 +324,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-oftalmica",
         "emicrania-mestruale",
         "emicrania-con-aura-sintomi",
+        "emicrania-che-non-passa",
       ],
     },
     pt: {
@@ -338,6 +344,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-ocular-oftalmica",
         "enxaqueca-menstrual",
         "enxaqueca-com-aura-sinais-antes-da-crise",
+        "enxaqueca-que-nao-passa",
       ],
     },
     "pt-BR": {
@@ -357,6 +364,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-ocular-aura-visual",
         "enxaqueca-menstrual",
         "enxaqueca-com-aura-sinais-antes-da-crise",
+        "enxaqueca-que-nao-passa",
       ],
     },
   },
