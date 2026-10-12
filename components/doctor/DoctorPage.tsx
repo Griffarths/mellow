@@ -120,19 +120,16 @@ export function DoctorPage() {
         </section>
 
         {/* 3. Three steps before the appointment, one under the other in a
-            narrow column: a large pink number for each, joined by a line down
-            to the last one. The first step links to the printable diary. */}
+            narrow column, each with its number in large. The first step
+            links to the printable diary. */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <Heading id="steps" />
           <ol className="mx-auto mt-12 max-w-xl">
             {steps.map((item, i) => (
               <li key={item.title} className="flex gap-5">
-                <div className="flex w-10 shrink-0 flex-col items-center">
-                  <span aria-hidden className="text-[56px] font-extrabold leading-none tracking-tight text-croix">
-                    {i + 1}
-                  </span>
-                  {i < steps.length - 1 && <span aria-hidden className="my-3 w-[1.5px] flex-1 bg-fleur" />}
-                </div>
+                <span aria-hidden className="w-10 shrink-0 text-center text-[56px] font-extrabold leading-none tracking-tight text-ink">
+                  {i + 1}
+                </span>
                 <div className={`pt-3 ${i < steps.length - 1 ? "pb-10" : ""}`}>
                   <h3 className="text-xl font-bold text-ink">{item.title}</h3>
                   <p className="mt-2 text-[17px] leading-[1.7] text-ink-body">
