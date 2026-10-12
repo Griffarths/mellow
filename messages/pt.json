@@ -403,7 +403,9 @@
     "subtitle": "Gratuita para descarregar. Regista a tua primeira crise em poucos segundos.",
     "rating": "{rating} em {count, plural, one {# classificação} other {# classificações}}",
     "scan": "Lê o código com o teu iPhone",
-    "qrAlt": "Código QR para a Mellow na App Store"
+    "qrAlt": "Código QR para a Mellow na App Store",
+    "qrOpen": "Mostrar o código QR para descarregar o Mellow",
+    "qrClose": "Fechar"
   },
   "footer": {
     "privacy": "Privacidade",

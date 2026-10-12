@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { QrWidget } from "@/components/QrWidget";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
@@ -57,7 +58,10 @@ export default async function LocaleLayout({
       {/* Browser extensions (ColorZilla, Grammarly…) add attributes to <body>
           before React loads: not a real mismatch. */}
       <body className="bg-white font-sans text-ink antialiased" suppressHydrationWarning>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          <QrWidget />
+        </NextIntlClientProvider>
         <Analytics />
       </body>
     </html>

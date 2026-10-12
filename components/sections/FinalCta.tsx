@@ -20,7 +20,7 @@ export function FinalCta() {
     : null;
 
   return (
-    <section className="bg-hero">
+    <section data-hides-qr className="bg-hero">
       <div className="mx-auto grid max-w-4xl items-center gap-12 px-6 py-20 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:py-24">
         <div className="text-center md:text-left">
           <div className="flex justify-center md:justify-start">
