@@ -15,6 +15,7 @@ import {
   HistorySheet,
   MidasSheet,
   PAPER,
+  ReportsCarousel,
 } from "@/components/app-page/AppVisuals";
 import { SpreadingHero } from "@/components/doctor/SpreadingHero";
 import { LINK_CLASS } from "@/components/tools/RichText";
@@ -90,6 +91,7 @@ export function DoctorPage() {
               <StoreBadges className="mt-4" sizeClass="h-11 w-auto select-none md:h-12" />
             </>
           }
+          carousel={<ReportsCarousel />}
           left={<Sheet content={<HistorySheet />} />}
           front={<Sheet content={<AnalysisSheet />} />}
           right={<Sheet content={<MidasSheet />} />}
