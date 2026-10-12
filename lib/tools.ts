@@ -72,17 +72,6 @@ export const TOOLS_LABEL: Record<ToolLocale, string> = {
   "pt-BR": "Ferramentas gratuitas",
 };
 
-export const ALL_TOOLS_LABEL: Record<ToolLocale, string> = {
-  fr: "Tous les outils",
-  en: "All tools",
-  de: "Alle Tools",
-  it: "Tutti gli strumenti",
-  es: "Todas las herramientas",
-  "es-419": "Todas las herramientas",
-  pt: "Todas as ferramentas",
-  "pt-BR": "Todas as ferramentas",
-};
-
 // Every language's texts, one module per language in lib/tool-copy/.
 const COPY = { fr, en, de, it, es, "es-419": es419, pt, "pt-BR": ptBR };
 
@@ -100,10 +89,4 @@ export const OVERUSE_COPY = byLocale((c) => c.overuse);
 // Order of the tools menu and the footer links.
 export function toolsMenu(locale: ToolLocale) {
   return [DIARY, CYCLE_DIARY, TEST_PAGE, OVERUSE_PAGE].map((copy) => copy[locale]);
-}
-
-// The page grouping all the tools, at the root of their folder
-// (/ressources, /resources, /ressourcen…). Still to create.
-export function toolsHubPath(locale: ToolLocale) {
-  return `/${DIARY[locale].path.split("/")[1]}`;
 }
