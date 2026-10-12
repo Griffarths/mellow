@@ -336,8 +336,7 @@
           "title": "MIDAS score",
           "text": "Your disability over the last 90 days, with the grade and the days missed or slowed."
         }
-      ],
-      "note": "The PDF reports are part of Mellow Premium. Tracking your attacks is free."
+      ]
     },
     "steps": {
       "kicker": "Before the appointment",

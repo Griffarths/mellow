@@ -91,7 +91,7 @@ export function DoctorPage() {
         </section>
 
         {/* 2. The three reports side by side, a rule between them on
-            computers, then what is free and what is not. */}
+            computers. */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <Heading id="reports" />
           <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-0">
@@ -102,7 +102,6 @@ export function DoctorPage() {
               </div>
             ))}
           </div>
-          <p className="mx-auto mt-12 max-w-2xl text-center text-sm text-ink-3">{t("reports.note")}</p>
         </section>
 
         {/* 3. Three steps before the appointment, numbered. The first one
