@@ -9,10 +9,10 @@ import { NavShell } from "./NavShell";
 import { ToolsMenu } from "./ToolsMenu";
 import { StoreBadges } from "./StoreBadges";
 
-// nav-on-hero: white while the nav is transparent over the pink hero
-// (globals.css).
+// Black, pink on hover. nav-on-hero: white while the nav is transparent over
+// the pink hero (globals.css).
 const LINK_CLASS =
-  "nav-on-hero whitespace-nowrap text-sm font-semibold text-ink-2 transition hover:text-ink";
+  "nav-on-hero whitespace-nowrap text-sm font-semibold text-ink transition hover:text-croix-ink";
 
 // From md: logo, then the menu (the app, for your doctor, the free tools,
 // the blog) and on the right a small Android link beside the store badge. Below:

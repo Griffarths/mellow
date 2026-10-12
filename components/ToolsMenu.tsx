@@ -36,7 +36,7 @@ export function ToolsMenu({ label, items, className = "" }: Props) {
         aria-expanded={open}
         aria-haspopup="true"
         onClick={() => setOpen((v) => !v)}
-        className="nav-on-hero inline-flex items-center gap-1 whitespace-nowrap text-sm font-semibold text-ink-2 transition hover:text-ink"
+        className="nav-on-hero inline-flex items-center gap-1 whitespace-nowrap text-sm font-semibold text-ink transition hover:text-croix-ink"
       >
         {label}
         <svg
