@@ -14,6 +14,10 @@ import { LINK_CLASS } from "@/components/tools/RichText";
 
 type Item = { title: string; text: string };
 
+// Fluent emoji (MIT) of the three reports, in the order of the messages:
+// the analysis, the history (one attack per line), MIDAS (90 days).
+const REPORT_EMOJI = ["magnifying_glass_tilted_left_3d", "clipboard_3d", "spiral_calendar_3d"];
+
 const KICKER = "text-sm font-semibold uppercase tracking-[0.08em] text-croix-ink";
 const H2 = "mt-3 text-balance text-h2 text-ink";
 const TEXT = "mt-4 text-[17px] leading-[1.7] text-ink-body md:text-lg";
@@ -90,15 +94,26 @@ export function DoctorPage() {
           </div>
         </section>
 
-        {/* 2. The three reports side by side, a rule between them on
-            computers. */}
-        <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+        {/* 2. The three reports side by side, centred, each under its
+            emoji, like the rest between attacks on the /app page. */}
+        <section className="mx-auto max-w-5xl px-6 py-16 md:py-24">
           <Heading id="reports" />
-          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-0">
-            {reports.map((item) => (
-              <div key={item.title} className="md:border-l md:border-surface-line md:px-10 md:first:border-l-0 md:first:pl-0 md:last:pr-0">
-                <h3 className="text-xl font-bold text-ink">{item.title}</h3>
-                <p className="mt-2 text-[17px] leading-[1.7] text-ink-body">{item.text}</p>
+          <div className="mt-14 grid gap-12 md:grid-cols-3 md:gap-10">
+            {reports.map((item, i) => (
+              <div key={item.title} className="text-center">
+                <img
+                  src={`/emoji/${REPORT_EMOJI[i]}.png`}
+                  alt=""
+                  aria-hidden
+                  width={256}
+                  height={256}
+                  loading="lazy"
+                  draggable={false}
+                  className="mx-auto h-16 w-16 select-none md:h-20 md:w-20"
+                />
+                <h3 className="mt-4 text-xl font-bold text-ink">{item.title}</h3>
+                {/* No word left alone on the last line of a centred text. */}
+                <p className="mt-2 text-pretty text-[17px] leading-[1.7] text-ink-body">{item.text}</p>
               </div>
             ))}
           </div>
