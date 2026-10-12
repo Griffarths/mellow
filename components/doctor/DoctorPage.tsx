@@ -15,7 +15,6 @@ import {
   HistorySheet,
   MidasSheet,
   PAPER,
-  ReportsCarousel,
 } from "@/components/app-page/AppVisuals";
 import { SpreadingHero } from "@/components/doctor/SpreadingHero";
 import { LINK_CLASS } from "@/components/tools/RichText";
@@ -35,6 +34,28 @@ function Sheet({ content }: { content: ReactNode }) {
   return (
     <div className={PAPER}>
       <div>{content}</div>
+    </div>
+  );
+}
+
+// On a phone, the three reports as a still pile, as a computer shows them
+// before the animation: the analysis in front, the history and MIDAS behind
+// it, peeking out and tilted. Same sizes and places as the fan of
+// SpreadingHero, at full size.
+function ReportsPile() {
+  return (
+    <div aria-hidden className="relative h-[390px]">
+      <div className="absolute left-1/2 top-0 h-[420px] w-[760px] -translate-x-1/2">
+        <div className="absolute left-[10px] top-[24px] [transform:translate3d(222px,-5px,0)_rotate(-5deg)]">
+          <Sheet content={<HistorySheet />} />
+        </div>
+        <div className="absolute right-[10px] top-[24px] [transform:translate3d(-222px,-5px,0)_rotate(5deg)]">
+          <Sheet content={<MidasSheet />} />
+        </div>
+        <div className="absolute left-[255px] top-[18px] z-10 scale-[1.08]">
+          <Sheet content={<AnalysisSheet />} />
+        </div>
+      </div>
     </div>
   );
 }
@@ -91,7 +112,7 @@ export function DoctorPage() {
               <StoreBadges className="mt-4" sizeClass="h-11 w-auto select-none md:h-12" />
             </>
           }
-          carousel={<ReportsCarousel />}
+          phone={<ReportsPile />}
           left={<Sheet content={<HistorySheet />} />}
           front={<Sheet content={<AnalysisSheet />} />}
           right={<Sheet content={<MidasSheet />} />}

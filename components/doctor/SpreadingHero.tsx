@@ -12,8 +12,8 @@ const PINNED = 420;
 const SHIFT = 245;
 const PEEK = 23;
 
-// The animation runs from a tablet up (on a phone the sheets are a row to
-// swipe) and only if the visitor did not ask for less motion.
+// The animation runs from a tablet up (a phone shows a still pile instead)
+// and only if the visitor did not ask for less motion.
 const ACTIVE = "(min-width: 640px) and (prefers-reduced-motion: no-preference)";
 
 // The header of the "For your doctor" page, like the phone of the /app page:
@@ -22,16 +22,17 @@ const ACTIVE = "(min-width: 640px) and (prefers-reduced-motion: no-preference)";
 // pixels: the text fades out, the reports rise until they are whole and the
 // history and MIDAS slide out to the sides, then the page goes on. Unlike
 // the /app page, nothing moves on hover. On a phone, or with less motion, it
-// is a plain section, the fan already spread.
+// is a plain section: on a phone the still pile (`phone`), with less motion
+// the fan already spread.
 export function SpreadingHero({
   text,
-  carousel,
+  phone,
   left,
   front,
   right,
 }: {
   text: ReactNode;
-  carousel: ReactNode;
+  phone: ReactNode;
   left: ReactNode;
   front: ReactNode;
   right: ReactNode;
@@ -125,7 +126,8 @@ export function SpreadingHero({
           {text}
         </div>
 
-        <div className="mt-12 px-6 pb-8 sm:hidden">{carousel}</div>
+        {/* On a phone, the reports as a still pile. */}
+        <div className="mt-12 px-6 pb-8 sm:hidden">{phone}</div>
 
         {/* From a tablet up, the fan, scaled to the width: larger than on
             the /app page, the reports being the subject here. Before the
