@@ -10,7 +10,7 @@ const PINNED = 420;
 // front sheet (left 255px), peeking out by PEEK pixels so the pile shows, to
 // its place on the side (10px from the edge).
 const SHIFT = 245;
-const PEEK = 16;
+const PEEK = 23;
 
 // The animation runs from a tablet up (on a phone the sheets are a row to
 // swipe) and only if the visitor did not ask for less motion.
@@ -82,8 +82,8 @@ export function SpreadingHero({
       textEl.style.transform = `translate3d(0, ${-40 * p}px, 0)`;
       fade.style.opacity = String(1 - p);
       const x = (SHIFT - PEEK) * (1 - s);
-      leftEl.style.transform = `translate3d(${x}px, ${-6 * (1 - s)}px, 0) rotate(${-4 - 3 * s}deg)`;
-      rightEl.style.transform = `translate3d(${-x}px, ${-6 * (1 - s)}px, 0) rotate(${4 + 3 * s}deg)`;
+      leftEl.style.transform = `translate3d(${x}px, ${-5 * (1 - s)}px, 0) rotate(${-5 - 2 * s}deg)`;
+      rightEl.style.transform = `translate3d(${-x}px, ${-5 * (1 - s)}px, 0) rotate(${5 + 2 * s}deg)`;
     };
     // Back to the plain section: the styles of the stylesheet apply again.
     const reset = () => {
@@ -140,14 +140,14 @@ export function SpreadingHero({
             {/* The history, on the left. */}
             <div
               ref={leftRef}
-              className="absolute left-[10px] top-[24px] -rotate-[7deg] will-change-transform sm:motion-safe:[transform:translate3d(229px,-6px,0)_rotate(-4deg)]"
+              className="absolute left-[10px] top-[24px] -rotate-[7deg] will-change-transform sm:motion-safe:[transform:translate3d(222px,-5px,0)_rotate(-5deg)]"
             >
               {left}
             </div>
             {/* MIDAS, on the right. */}
             <div
               ref={rightRef}
-              className="absolute right-[10px] top-[24px] rotate-[7deg] will-change-transform sm:motion-safe:[transform:translate3d(-229px,-6px,0)_rotate(4deg)]"
+              className="absolute right-[10px] top-[24px] rotate-[7deg] will-change-transform sm:motion-safe:[transform:translate3d(-222px,-5px,0)_rotate(5deg)]"
             >
               {right}
             </div>
