@@ -127,7 +127,7 @@ export function DoctorPage() {
           <ol className="mx-auto mt-12 max-w-xl">
             {steps.map((item, i) => (
               <li key={item.title} className="flex gap-5">
-                <span aria-hidden className="w-10 shrink-0 text-center text-[56px] font-extrabold leading-none tracking-tight text-ink">
+                <span aria-hidden className="w-10 shrink-0 text-center text-[56px] font-extrabold leading-none tracking-tight text-croix-ink">
                   {i + 1}
                 </span>
                 <div className={`pt-3 ${i < steps.length - 1 ? "pb-10" : ""}`}>
