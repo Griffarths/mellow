@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
+import { DOCTOR_PATH } from "@/lib/doctor";
 import { PLAY_STORE_URL } from "@/lib/stores";
 import { TOOLS_LABEL, isToolLocale, toolsMenu } from "@/lib/tools";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -17,13 +18,15 @@ const LINK = "transition hover:text-ink";
 const ABOUT_PATH: Partial<Record<string, string>> = { fr: "/a-propos", en: "/about" };
 
 // Brand on the left, then three columns of links (resources, Mellow, legal);
-// copyright and language at the bottom.
+// copyright and language at the bottom. The Mellow column opens with the two
+// pages of the menu, the app and for your doctor.
 export function Footer({ localePaths }: Props = {}) {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
   const hero = useTranslations("hero");
   const locale = useLocale();
   const about = ABOUT_PATH[locale];
+  const doctor = DOCTOR_PATH[locale] ?? DOCTOR_PATH.en;
 
   return (
     <footer className="border-t border-surface-line">
@@ -55,6 +58,12 @@ export function Footer({ localePaths }: Props = {}) {
             </Column>
           )}
           <Column title="Mellow">
+            <Link href="/app" className={LINK}>
+              {nav("app")}
+            </Link>
+            <Link href={doctor} className={LINK}>
+              {nav("doctor")}
+            </Link>
             <Link href="/blog" className={LINK}>
               {nav("blog")}
             </Link>
