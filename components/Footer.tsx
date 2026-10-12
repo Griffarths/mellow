@@ -6,6 +6,7 @@ import { DOCTOR_PATH } from "@/lib/doctor";
 import { PLAY_STORE_URL } from "@/lib/stores";
 import { TOOLS_LABEL, isToolLocale, toolsMenu } from "@/lib/tools";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { StoreBadges } from "./StoreBadges";
 
 type Props = {
   // This page's path in each language, when it differs (see LanguageSwitcher).
@@ -17,10 +18,10 @@ const LINK = "transition hover:text-ink";
 // The About page exists in French and English only.
 const ABOUT_PATH: Partial<Record<string, string>> = { fr: "/a-propos", en: "/about" };
 
-// Brand on the left, then three columns of links (Mellow, the free tools,
-// legal), in the order of the menu: the Mellow column opens with its first
-// two pages, the app and for your doctor. Copyright and language at the
-// bottom.
+// Brand on the left, with the store badge under the tagline, then three
+// columns of links (Mellow, the free tools, legal), in the order of the menu:
+// the Mellow column opens with its first two pages, the app and for your
+// doctor. Copyright and language at the bottom.
 export function Footer({ localePaths }: Props = {}) {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
@@ -44,6 +45,7 @@ export function Footer({ localePaths }: Props = {}) {
             <span className="text-lg font-extrabold tracking-tight text-ink">Mellow</span>
           </Link>
           <p className="mt-3 max-w-[26ch] text-[15px] leading-relaxed text-ink-2">{hero("title")}</p>
+          <StoreBadges className="mt-5" sizeClass="h-10 w-auto select-none" align="start" />
         </div>
 
         {/* Two columns on phones (Mellow and the tools side by side, legal
