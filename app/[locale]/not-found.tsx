@@ -1,22 +1,18 @@
-import type { Metadata } from "next";
 import { useLocale, useTranslations } from "next-intl";
-import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { DOCTOR_PATH } from "@/lib/doctor";
 import { TOOLS_LABEL, isToolLocale, toolsMenu } from "@/lib/tools";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("notFoundPage");
-  return { title: t("metaTitle") };
-}
-
 const ROW = "flex items-center justify-between gap-4 py-4 text-[17px] font-semibold text-ink transition hover:text-croix-ink";
 
 // The site's "page not found", in the visitor's language: the Mellow, the
 // title, a sentence, then the pages of the menu in a list between rules, the
-// free tools by name (they have no page of their own).
+// free tools by name (they have no page of their own). The tab title is a
+// <title> tag in the page (React puts it in the head), not generateMetadata:
+// reading the locale there makes statically generated routes such as the
+// blog's turn dynamic when they call notFound(), and they fail with a 500.
 export default function NotFound() {
   const t = useTranslations("notFoundPage");
   const nav = useTranslations("nav");
@@ -25,6 +21,7 @@ export default function NotFound() {
 
   return (
     <>
+      <title>{t("metaTitle")}</title>
       <Nav />
       <main className="mx-auto max-w-xl px-6 py-16 text-center md:py-24">
         <img
