@@ -73,10 +73,10 @@ export function SpreadingHero({
       if (p === last) return;
       last = p;
       // The sheets spread once the fan is well on its way up, easing in and
-      // out, and the fan grows a little as it opens.
+      // out.
       const t = Math.min(1, Math.max(0, (p - 0.25) / 0.75));
       const s = t * t * (3 - 2 * t);
-      fan.style.transform = `translate3d(0, ${-rise * p}px, 0) scale(${1 + 0.1 * s})`;
+      fan.style.transform = `translate3d(0, ${-rise * p}px, 0)`;
       // The text is gone before the reports cover it.
       textEl.style.opacity = String(1 - Math.min(1, p * 3));
       textEl.style.transform = `translate3d(0, ${-40 * p}px, 0)`;
@@ -127,15 +127,16 @@ export function SpreadingHero({
 
         <div className="mt-12 px-6 pb-8 sm:hidden">{carousel}</div>
 
-        {/* From a tablet up, the fan, scaled to the width. Before the
+        {/* From a tablet up, the fan, scaled to the width: larger than on
+            the /app page, the reports being the subject here. Before the
             animation takes over (and on the server), the side sheets wait
             stacked behind the front one, so nothing jumps on load. */}
         <div
           ref={fanRef}
           aria-hidden
-          className="relative mx-auto mt-12 hidden h-[320px] max-w-[760px] will-change-transform sm:block md:mt-16 md:h-[380px] lg:h-[440px]"
+          className="relative mx-auto mt-12 hidden h-[320px] will-change-transform sm:block md:mt-16 md:h-[380px] lg:h-[470px] xl:h-[550px]"
         >
-          <div className="group absolute left-1/2 top-0 h-[420px] w-[760px] origin-top -translate-x-1/2 scale-[0.72] md:scale-[0.85] lg:scale-100">
+          <div className="group absolute left-1/2 top-0 h-[420px] w-[760px] origin-top -translate-x-1/2 scale-[0.72] md:scale-[0.9] lg:scale-[1.1] xl:scale-[1.3]">
             {/* The history, on the left. */}
             <div
               ref={leftRef}
