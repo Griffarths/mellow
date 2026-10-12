@@ -81,7 +81,7 @@ export function DoctorPage() {
           text={
             <>
               <h1 className="text-balance text-h1 text-ink">{t("title")}</h1>
-              <p className="mx-auto mt-5 max-w-2xl text-balance text-lg text-ink-2">{t("subtitle")}</p>
+              <p className="mx-auto mt-5 max-w-3xl text-balance text-lg text-ink-2">{t("subtitle")}</p>
               {rating && APP_STORE_RATING && (
                 <div className="mt-8 flex items-center justify-center gap-3">
                   <Stars rating={APP_STORE_RATING.value} label={tStars("starsLabel", { rating })} size="h-5 w-5" />
