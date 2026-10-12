@@ -104,26 +104,35 @@ export function DoctorPage() {
           </div>
         </section>
 
-        {/* 3. Three steps before the appointment, numbered. The first one
-            links to the printable diary. */}
+        {/* 3. Three steps before the appointment, one under the other in a
+            narrow column: a numbered dot for each, joined by a line down to
+            the last one. The first step links to the printable diary. */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <Heading id="steps" />
-          <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-12">
+          <ol className="mx-auto mt-12 max-w-xl">
             {steps.map((item, i) => (
-              <li key={item.title}>
-                <span aria-hidden className="block text-5xl font-extrabold leading-none text-croix">
-                  {i + 1}
-                </span>
-                <h3 className="mt-4 text-xl font-bold text-ink">{item.title}</h3>
-                <p className="mt-2 text-[17px] leading-[1.7] text-ink-body">
-                  {t.rich(`steps.items.${i}.text`, {
-                    diary: (chunks) => (
-                      <Link href={diary} className={LINK_CLASS}>
-                        {chunks}
-                      </Link>
-                    ),
-                  })}
-                </p>
+              <li key={item.title} className="flex gap-5">
+                <div className="flex flex-col items-center">
+                  <span
+                    aria-hidden
+                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-fleur-tint text-lg font-bold text-croix-ink"
+                  >
+                    {i + 1}
+                  </span>
+                  {i < steps.length - 1 && <span aria-hidden className="my-2 w-[1.5px] flex-1 bg-fleur" />}
+                </div>
+                <div className={`pt-2 ${i < steps.length - 1 ? "pb-10" : ""}`}>
+                  <h3 className="text-xl font-bold text-ink">{item.title}</h3>
+                  <p className="mt-2 text-[17px] leading-[1.7] text-ink-body">
+                    {t.rich(`steps.items.${i}.text`, {
+                      diary: (chunks) => (
+                        <Link href={diary} className={LINK_CLASS}>
+                          {chunks}
+                        </Link>
+                      ),
+                    })}
+                  </p>
+                </div>
               </li>
             ))}
           </ol>
