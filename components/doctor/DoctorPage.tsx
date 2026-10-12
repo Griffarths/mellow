@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -9,7 +10,14 @@ import { Footer } from "@/components/Footer";
 import { StoreBadges } from "@/components/StoreBadges";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Stars } from "@/components/sections/SocialProof";
-import { ReportsFan } from "@/components/app-page/AppVisuals";
+import {
+  AnalysisSheet,
+  HistorySheet,
+  MidasSheet,
+  PAPER,
+  ReportsCarousel,
+} from "@/components/app-page/AppVisuals";
+import { SpreadingHero } from "@/components/doctor/SpreadingHero";
 import { LINK_CLASS } from "@/components/tools/RichText";
 
 type Item = { title: string; text: string };
@@ -21,6 +29,15 @@ const REPORT_EMOJI = ["magnifying_glass_tilted_left_3d", "clipboard_3d", "spiral
 const KICKER = "text-sm font-semibold uppercase tracking-[0.08em] text-croix-ink";
 const H2 = "mt-3 text-balance text-h2 text-ink";
 const TEXT = "mt-4 text-[17px] leading-[1.7] text-ink-body md:text-lg";
+
+// One sheet of the fan, as on the /app page.
+function Sheet({ content }: { content: ReactNode }) {
+  return (
+    <div className={PAPER}>
+      <div>{content}</div>
+    </div>
+  );
+}
 
 // The title of a section, centred, as on the /app page: the kicker, the
 // title, then the text if the section has one.
@@ -58,23 +75,27 @@ export function DoctorPage() {
     <>
       <Nav />
       <main className="overflow-x-clip">
-        {/* Header, centred: the text, then the three reports fanned out. */}
-        <section className="mx-auto max-w-6xl px-6 pb-8 pt-12 md:pb-12 md:pt-16">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-balance text-h1 text-ink">{t("title")}</h1>
-            <p className="mx-auto mt-5 max-w-2xl text-balance text-lg text-ink-2">{t("subtitle")}</p>
-            {rating && APP_STORE_RATING && (
-              <div className="mt-8 flex items-center justify-center gap-3">
-                <Stars rating={APP_STORE_RATING.value} label={tStars("starsLabel", { rating })} size="h-5 w-5" />
-                <span className="text-ink-2">{tCta("rating", { rating, count: APP_STORE_RATING.count })}</span>
-              </div>
-            )}
-            <StoreBadges className="mt-4" sizeClass="h-11 w-auto select-none md:h-12" />
-          </div>
-          <div className="mt-12 md:mt-16">
-            <ReportsFan />
-          </div>
-        </section>
+        {/* Header, centred: the text, then the three reports, which rise
+            and spread out as the page scrolls (SpreadingHero). */}
+        <SpreadingHero
+          text={
+            <>
+              <h1 className="text-balance text-h1 text-ink">{t("title")}</h1>
+              <p className="mx-auto mt-5 max-w-2xl text-balance text-lg text-ink-2">{t("subtitle")}</p>
+              {rating && APP_STORE_RATING && (
+                <div className="mt-8 flex items-center justify-center gap-3">
+                  <Stars rating={APP_STORE_RATING.value} label={tStars("starsLabel", { rating })} size="h-5 w-5" />
+                  <span className="text-ink-2">{tCta("rating", { rating, count: APP_STORE_RATING.count })}</span>
+                </div>
+              )}
+              <StoreBadges className="mt-4" sizeClass="h-11 w-auto select-none md:h-12" />
+            </>
+          }
+          carousel={<ReportsCarousel />}
+          left={<Sheet content={<HistorySheet />} />}
+          front={<Sheet content={<AnalysisSheet />} />}
+          right={<Sheet content={<MidasSheet />} />}
+        />
 
         {/* 1. What doctors look at first: one row per marker, its name large
             on the left and its text on the right (stacked on a phone), a

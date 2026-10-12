@@ -447,7 +447,7 @@ const MISSED = new Set([31, 47, 62, 75, 84]);
 const SLOWED = new Set([8, 19, 32, 48, 55, 63, 70, 76, 89]);
 
 // A sheet of paper: white with a soft shadow, like the phone at the top.
-const PAPER =
+export const PAPER =
   "h-[354px] w-[250px] overflow-hidden rounded-md bg-white p-5 text-left shadow-[0_1px_3px_rgb(0_0_0/0.05),0_16px_32px_-16px_rgb(0_0_0/0.16)] ring-1 ring-black/[0.04]";
 const SHEET = `${PAPER} absolute transition-transform duration-500 ease-out motion-reduce:transition-none`;
 
@@ -486,7 +486,7 @@ function SheetTitle({ children }: { children: ReactNode }) {
   );
 }
 
-function HistorySheet() {
+export function HistorySheet() {
   const ui = useTranslations("appPage.ui");
   const pdf = useTranslations("appPage.pdf");
   const { locale, hours, august } = useReportFormat();
@@ -517,7 +517,7 @@ function HistorySheet() {
   );
 }
 
-function MidasSheet() {
+export function MidasSheet() {
   const pdf = useTranslations("appPage.pdf");
   const { long } = useReportFormat();
   return (
@@ -569,7 +569,7 @@ function MidasSheet() {
   );
 }
 
-function AnalysisSheet() {
+export function AnalysisSheet() {
   const ui = useTranslations("appPage.ui");
   const pdf = useTranslations("appPage.pdf");
   const { locale, hours, august } = useReportFormat();
@@ -630,24 +630,30 @@ function AnalysisSheet() {
   );
 }
 
+// On a phone the fan does not fit: the three sheets in a row, swiped one
+// after the other, the next one peeking out. The padding leaves room for the
+// shadow, which the scrolling row would cut.
+export function ReportsCarousel() {
+  return (
+    <div
+      aria-hidden
+      className="-mx-6 flex snap-x snap-mandatory scroll-pl-6 gap-4 overflow-x-auto px-6 pb-12 pt-4 [scrollbar-width:none] sm:hidden [&::-webkit-scrollbar]:hidden"
+    >
+      {[AnalysisSheet, HistorySheet, MidasSheet].map((Sheet, i) => (
+        <div key={i} className={`${PAPER} shrink-0 snap-start`}>
+          <div>
+            <Sheet />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function ReportsFan() {
   return (
     <>
-      {/* On a phone the fan does not fit: the three sheets in a row, swiped
-          one after the other, the next one peeking out. The padding leaves
-          room for the shadow, which the scrolling row would cut. */}
-      <div
-        aria-hidden
-        className="-mx-6 flex snap-x snap-mandatory scroll-pl-6 gap-4 overflow-x-auto px-6 pb-12 pt-4 [scrollbar-width:none] sm:hidden [&::-webkit-scrollbar]:hidden"
-      >
-        {[AnalysisSheet, HistorySheet, MidasSheet].map((Sheet, i) => (
-          <div key={i} className={`${PAPER} shrink-0 snap-start`}>
-            <div>
-              <Sheet />
-            </div>
-          </div>
-        ))}
-      </div>
+      <ReportsCarousel />
 
       {/* From a tablet up, the fan, scaled to the width. */}
       <div aria-hidden className="relative mx-auto hidden h-[320px] max-w-[760px] sm:block md:h-[380px] lg:h-[440px]">
