@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { FinalCta } from "@/components/sections/FinalCta";
 import { type BlogLocale, getAllArticles, liveBlogLocales, pageCount, pageOf } from "@/lib/blog";
 import { BlogBrowser } from "./BlogBrowser";
 import { FeaturedArticle } from "./FeaturedArticle";
@@ -51,6 +52,7 @@ export async function BlogIndex({ locale, page }: { locale: BlogLocale; page: nu
           </>
         )}
       </main>
+      <FinalCta />
       {/* Page 2 and beyond: the language switch goes to the first page of the other blogs. */}
       <Footer localePaths={page > 1 ? Object.fromEntries(liveBlogLocales().map((l) => [l, "/blog"])) : undefined} />
     </>

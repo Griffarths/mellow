@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { FinalCta } from "@/components/sections/FinalCta";
 import { type BlogLocale, getPillarArticles, pageCount, pageOf } from "@/lib/blog";
 import { PILLARS, type PillarId } from "@/lib/pillars";
 import { DIARY, OVERUSE_PAGE, TEST_PAGE, isToolLocale } from "@/lib/tools";
@@ -75,6 +76,7 @@ export async function PillarPage({ pillar, locale, page, localePaths }: Props) {
         </div>
 
       </main>
+      <FinalCta />
       <Footer localePaths={localePaths} />
     </>
   );
