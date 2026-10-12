@@ -130,6 +130,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // Android testers: same path in every locale
+  const androidAlternates = withDefault(
+    Object.fromEntries(routing.locales.map((l) => [l, url(l, "/android")])),
+  );
+  for (const locale of routing.locales) {
+    entries.push({
+      url: url(locale, "/android"),
+      changeFrequency: "monthly",
+      priority: 0.5,
+      alternates: { languages: androidAlternates },
+    });
+  }
+
   // Localized legal pages
   for (const suffix of ["/contact", "/editorial", "/confidentialite", "/mentions-legales"]) {
     const languages = withDefault(
