@@ -451,5 +451,10 @@
     "errorText": "Escríbenos desde la página de contacto: lo corregimos rápido.",
     "contact": "Contactar",
     "disclaimer": "Estos artículos son informativos y no sustituyen el consejo de un profesional de la salud."
+  },
+  "notFoundPage": {
+    "metaTitle": "Página no encontrada · Mellow",
+    "title": "Esta página no existe (o ya no existe)",
+    "text": "Tal vez la dirección cambió. Mientras tanto, aquí tienes adónde ir:"
   }
 }

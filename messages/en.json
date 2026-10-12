@@ -446,5 +446,10 @@
     "errorText": "Write to us from the contact page: we fix things quickly.",
     "contact": "Contact us",
     "disclaimer": "These articles are for information and do not replace the advice of a healthcare professional."
+  },
+  "notFoundPage": {
+    "metaTitle": "Page not found · Mellow",
+    "title": "This page doesn't exist (or no longer does)",
+    "text": "The address may have changed. In the meantime, here's where to go:"
   }
 }

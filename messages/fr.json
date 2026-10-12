@@ -446,5 +446,10 @@
     "errorText": "Écris-nous depuis la page contact : nous corrigeons rapidement.",
     "contact": "Nous contacter",
     "disclaimer": "Ces articles sont informatifs et ne remplacent pas l'avis d'un professionnel de santé."
+  },
+  "notFoundPage": {
+    "metaTitle": "Page introuvable · Mellow",
+    "title": "Cette page n'existe pas (ou plus)",
+    "text": "L'adresse a peut-être changé. En attendant, voici où aller :"
   }
 }
