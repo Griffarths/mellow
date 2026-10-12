@@ -74,8 +74,10 @@
     },
     "doctor": {
       "title": "Prepara tu cita médica",
-      "text": "Tres informes en PDF claros y completos para mostrárselos a tu médico: el análisis, el historial de tus crisis y tu puntuación MIDAS."
-    }
+      "text": "Tres informes en PDF claros y completos para mostrárselos a tu médico: el análisis, el historial de tus crisis y tu puntuación MIDAS.",
+      "link": "Ver los reportes para tu médico"
+    },
+    "appLink": "Descubre toda la app"
   },
   "why": {
     "title": "¿Por qué Mellow?",
@@ -179,7 +181,8 @@
       "doctor": {
         "kicker": "Con tu médico",
         "title": "Informes listos para tu cita",
-        "text": "Exporta en PDF el análisis de tus crisis, tu historial y tu puntuación MIDAS, para mostrarle datos claros a tu médico o a tu neurólogo."
+        "text": "Exporta en PDF el análisis de tus crisis, tu historial y tu puntuación MIDAS, para mostrarle datos claros a tu médico o a tu neurólogo.",
+        "link": "Todo sobre los reportes para tu médico"
       }
     },
     "data": {

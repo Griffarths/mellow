@@ -69,8 +69,10 @@
     },
     "doctor": {
       "title": "Prépare ton rendez-vous",
-      "text": "Trois rapports PDF clairs et complets à montrer à ton médecin : l'analyse, l'historique de tes crises et ton score MIDAS."
-    }
+      "text": "Trois rapports PDF clairs et complets à montrer à ton médecin : l'analyse, l'historique de tes crises et ton score MIDAS.",
+      "link": "Voir les rapports pour ton médecin"
+    },
+    "appLink": "Découvrir toute l'app"
   },
   "why": {
     "title": "Pourquoi Mellow ?",
@@ -174,7 +176,8 @@
       "doctor": {
         "kicker": "Chez le médecin",
         "title": "Des rapports prêts pour ton rendez-vous",
-        "text": "Exporte en PDF l'analyse de tes crises, ton historique et ton score MIDAS, pour montrer à ton médecin ou à ton neurologue des données claires."
+        "text": "Exporte en PDF l'analyse de tes crises, ton historique et ton score MIDAS, pour montrer à ton médecin ou à ton neurologue des données claires.",
+        "link": "Tout sur les rapports pour ton médecin"
       }
     },
     "data": {

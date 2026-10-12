@@ -74,8 +74,10 @@
     },
     "doctor": {
       "title": "Bereite deinen Arzttermin vor",
-      "text": "Drei übersichtliche, vollständige PDF-Berichte, die du deinem Arzt zeigen kannst: die Analyse, der Verlauf deiner Attacken und dein MIDAS-Score."
-    }
+      "text": "Drei übersichtliche, vollständige PDF-Berichte, die du deinem Arzt zeigen kannst: die Analyse, der Verlauf deiner Attacken und dein MIDAS-Score.",
+      "link": "Die Berichte für deinen Arzt ansehen"
+    },
+    "appLink": "Die ganze App entdecken"
   },
   "why": {
     "title": "Warum Mellow?",
@@ -179,7 +181,8 @@
       "doctor": {
         "kicker": "Beim Arzt",
         "title": "Berichte, bereit für deinen Termin",
-        "text": "Exportiere die Analyse deiner Attacken, deinen Verlauf und deinen MIDAS-Score als PDF, um deinem Arzt oder Neurologen klare Daten zu zeigen."
+        "text": "Exportiere die Analyse deiner Attacken, deinen Verlauf und deinen MIDAS-Score als PDF, um deinem Arzt oder Neurologen klare Daten zu zeigen.",
+        "link": "Alles über die Berichte für deinen Arzt"
       }
     },
     "data": {

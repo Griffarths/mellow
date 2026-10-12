@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { hasLocale, useLocale, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { DOCTOR_PATH } from "@/lib/doctor";
 import { pageAlternates } from "@/lib/hreflang";
 import { APP_STORE_RATING } from "@/content/reviews";
 import { Nav } from "@/components/Nav";
@@ -10,6 +12,7 @@ import { Footer } from "@/components/Footer";
 import { Phone } from "@/components/PhoneFrame";
 import { StoreBadges } from "@/components/StoreBadges";
 import { FinalCta } from "@/components/sections/FinalCta";
+import { LINK_CLASS } from "@/components/tools/RichText";
 import { Stars } from "@/components/sections/SocialProof";
 import { IntensityDemo } from "@/components/app-page/IntensityDemo";
 import { RisingHero } from "@/components/app-page/RisingHero";
@@ -245,11 +248,16 @@ function AppContent() {
           </div>
         </section>
 
-        {/* 8. Centred: the title, then the three PDF reports of the app
-            fanned out below it. */}
+        {/* 8. Centred: the title and a link to the "For your doctor" page,
+            then the three PDF reports of the app fanned out below it. */}
         <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <Heading id="doctor" />
+            <p className="mt-5 text-[17px] md:text-lg">
+              <Link href={DOCTOR_PATH[locale] ?? DOCTOR_PATH.en} className={LINK_CLASS}>
+                {t("blocks.doctor.link")}
+              </Link>
+            </p>
           </div>
           <div className="mt-12">
             <ReportsFan />

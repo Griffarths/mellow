@@ -74,8 +74,10 @@
     },
     "doctor": {
       "title": "Prepare sua consulta",
-      "text": "Três relatórios em PDF claros e completos para mostrar ao seu médico: a análise, o histórico das suas crises e sua pontuação MIDAS."
-    }
+      "text": "Três relatórios em PDF claros e completos para mostrar ao seu médico: a análise, o histórico das suas crises e sua pontuação MIDAS.",
+      "link": "Ver os relatórios para o seu médico"
+    },
+    "appLink": "Conheça o app completo"
   },
   "why": {
     "title": "Por que o Mellow?",
@@ -179,7 +181,8 @@
       "doctor": {
         "kicker": "No médico",
         "title": "Relatórios prontos para sua consulta",
-        "text": "Exporte em PDF a análise das suas crises, seu histórico e sua pontuação MIDAS, para mostrar dados claros ao seu médico ou neurologista."
+        "text": "Exporte em PDF a análise das suas crises, seu histórico e sua pontuação MIDAS, para mostrar dados claros ao seu médico ou neurologista.",
+        "link": "Tudo sobre os relatórios para o seu médico"
       }
     },
     "data": {

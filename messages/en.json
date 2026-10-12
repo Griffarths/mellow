@@ -69,8 +69,10 @@
     },
     "doctor": {
       "title": "Prepare for your appointment",
-      "text": "Three clear, complete PDF reports to show your doctor: your analysis, the history of your attacks and your MIDAS score."
-    }
+      "text": "Three clear, complete PDF reports to show your doctor: your analysis, the history of your attacks and your MIDAS score.",
+      "link": "See the reports for your doctor"
+    },
+    "appLink": "Discover the whole app"
   },
   "why": {
     "title": "Why Mellow?",
@@ -174,7 +176,8 @@
       "doctor": {
         "kicker": "At the doctor's",
         "title": "Reports ready for your appointment",
-        "text": "Export your attack analysis, your history and your MIDAS score as PDFs, to show your doctor or neurologist clear data."
+        "text": "Export your attack analysis, your history and your MIDAS score as PDFs, to show your doctor or neurologist clear data.",
+        "link": "All about the reports for your doctor"
       }
     },
     "data": {

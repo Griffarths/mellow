@@ -74,8 +74,10 @@
     },
     "doctor": {
       "title": "Prepara la tua visita",
-      "text": "Tre report PDF chiari e completi da mostrare al tuo medico: l'analisi, lo storico dei tuoi attacchi e il tuo punteggio MIDAS."
-    }
+      "text": "Tre report PDF chiari e completi da mostrare al tuo medico: l'analisi, lo storico dei tuoi attacchi e il tuo punteggio MIDAS.",
+      "link": "Guarda i report per il tuo medico"
+    },
+    "appLink": "Scopri tutta l'app"
   },
   "why": {
     "title": "Perché Mellow?",
@@ -179,7 +181,8 @@
       "doctor": {
         "kicker": "Dal medico",
         "title": "Report pronti per la tua visita",
-        "text": "Esporta in PDF l'analisi dei tuoi attacchi, il tuo storico e il tuo punteggio MIDAS, per mostrare dati chiari al tuo medico o al tuo neurologo."
+        "text": "Esporta in PDF l'analisi dei tuoi attacchi, il tuo storico e il tuo punteggio MIDAS, per mostrare dati chiari al tuo medico o al tuo neurologo.",
+        "link": "Tutto sui report per il tuo medico"
       }
     },
     "data": {
