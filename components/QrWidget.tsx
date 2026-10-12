@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { APP_STORE_URL } from "@/lib/stores";
@@ -16,13 +16,21 @@ const SHADOW = "shadow-[0_1px_3px_rgb(0_0_0/0.06),0_16px_32px_-12px_rgb(0_0_0/0.
 // The cross folds it into the Mellow alone, in a round button that opens it
 // again. It steps aside while an element marked data-hides-qr is on screen:
 // the pink hero of the home page, which has its badge, and the final
-// "Download Mellow" block, which has the same QR code.
+// "Download Mellow" block, which has the same QR code. Folding and opening
+// are animated (qr-* in globals.css): the card shrinks into the corner and
+// the round button pops up; the card springs out of the corner and the
+// Mellow hops onto it. Only after a click, never on load.
 export function QrWidget() {
   const t = useTranslations("finalCta");
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
   const [covered, setCovered] = useState(false);
+  // The card on its way out, before the round button replaces it.
+  const [closing, setClosing] = useState(false);
+  // Set by the first click: the page loads without any animation.
+  const [animate, setAnimate] = useState(false);
+  const timer = useRef(0);
 
   useEffect(() => {
     try {
@@ -50,11 +58,26 @@ export function QrWidget() {
     return () => observer.disconnect();
   }, [pathname]);
 
+  useEffect(() => () => window.clearTimeout(timer.current), []);
+
   const fold = (value: boolean) => {
-    setCollapsed(value);
+    if (closing) return;
     try {
       sessionStorage.setItem(STORAGE_KEY, value ? "1" : "0");
     } catch {}
+    setAnimate(true);
+    // Opening, or with less motion: straight away. Folding: once the card
+    // has shrunk (qr-out, 180ms).
+    if (!value || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setClosing(false);
+      setCollapsed(value);
+      return;
+    }
+    setClosing(true);
+    timer.current = window.setTimeout(() => {
+      setClosing(false);
+      setCollapsed(true);
+    }, 180);
   };
 
   if (!mounted) return null;
@@ -72,18 +95,22 @@ export function QrWidget() {
           onClick={() => fold(false)}
           aria-label={t("qrOpen")}
           title={t("qrOpen")}
-          className={`grid h-14 w-14 place-items-center rounded-full bg-white transition hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-hot ${SHADOW}`}
+          className={`grid h-14 w-14 place-items-center rounded-full bg-white transition hover:scale-105 ${animate ? "qr-pop" : ""} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-hot ${SHADOW}`}
         >
           <img src="/blobs/Fleur1.svg" alt="" aria-hidden draggable={false} className="h-9 w-9 select-none" />
         </button>
       ) : (
-        <div className={`relative w-[176px] rounded-[22px] bg-white px-4 pb-4 pt-9 text-center ${SHADOW}`}>
+        <div
+          className={`relative w-[176px] rounded-[22px] bg-white px-4 pb-4 pt-9 text-center ${SHADOW} ${
+            closing ? "qr-out" : animate ? "qr-in" : ""
+          }`}
+        >
           <img
             src="/blobs/Fleur1.svg"
             alt=""
             aria-hidden
             draggable={false}
-            className="absolute -top-7 left-1/2 h-14 w-14 -translate-x-1/2 select-none"
+            className={`absolute -top-7 left-1/2 h-14 w-14 -translate-x-1/2 select-none ${animate && !closing ? "qr-hop" : ""}`}
           />
           <button
             type="button"

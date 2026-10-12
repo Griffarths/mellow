@@ -242,3 +242,83 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
     animation: none;
   }
 }
+
+/* The QR code widget (components/QrWidget.tsx), after a click only. The card
+   shrinks into the bottom right corner (qr-out) or springs out of it (qr-in),
+   the round button pops up (qr-pop), the Mellow hops onto the card (qr-hop,
+   with the -50% of its centring). "backwards": once over, the animations let
+   go, so the hover zoom of the button works again. */
+@keyframes qr-in {
+  from {
+    opacity: 0;
+    transform: scale(0.35);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes qr-out {
+  to {
+    opacity: 0;
+    transform: scale(0.35);
+  }
+}
+
+@keyframes qr-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes qr-hop {
+  0%,
+  100% {
+    transform: translate(-50%, 0) rotate(0);
+  }
+  40% {
+    transform: translate(-50%, -10px) rotate(-8deg);
+  }
+  70% {
+    transform: translate(-50%, 0) rotate(5deg);
+  }
+}
+
+.qr-in {
+  transform-origin: bottom right;
+  animation: qr-in 420ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.qr-out {
+  transform-origin: bottom right;
+  animation: qr-out 180ms ease-in forwards;
+}
+
+.qr-pop {
+  animation: qr-pop 360ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.qr-hop {
+  animation: qr-hop 600ms ease-out 220ms backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qr-in,
+  .qr-out,
+  .qr-pop,
+  .qr-hop {
+    animation: none;
+  }
+}
