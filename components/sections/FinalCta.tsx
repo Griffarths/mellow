@@ -6,9 +6,10 @@ import { Stars } from "./SocialProof";
 
 // Last call to download: the mascot, text, App Store rating and badge on the
 // left, and on computers a card with the app icon and a QR code to scan with
-// the iPhone
-// (public/qr-app-store.svg, generated with macOS CoreImage, points to the
-// App Store page). Phones only get the badge: they cannot scan themselves.
+// the iPhone (public/qr-app-store.svg, generated with macOS CoreImage, then
+// redrawn with round dots and rounded corners, same modules; points to the
+// App Store page, checked with Apple's Vision and CoreImage readers). Phones
+// only get the badge: they cannot scan themselves.
 export function FinalCta() {
   const t = useTranslations("finalCta");
   const tStars = useTranslations("socialProof");
