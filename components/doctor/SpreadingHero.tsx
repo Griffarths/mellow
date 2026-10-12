@@ -20,9 +20,9 @@ const ACTIVE = "(min-width: 640px) and (prefers-reduced-motion: no-preference)";
 // the text, then the three reports stacked, cut by the bottom of the screen.
 // The section stays pinned under the navbar while the page scrolls PINNED
 // pixels: the text fades out, the reports rise until they are whole and the
-// history and MIDAS slide out to the sides, then the page goes on. Once
-// spread, the fan opens a little more on hover, as on the /app page. On a
-// phone, or with less motion, it is a plain section, the fan already spread.
+// history and MIDAS slide out to the sides, then the page goes on. Unlike
+// the /app page, nothing moves on hover. On a phone, or with less motion, it
+// is a plain section, the fan already spread.
 export function SpreadingHero({
   text,
   carousel,
@@ -136,27 +136,23 @@ export function SpreadingHero({
           aria-hidden
           className="relative mx-auto mt-12 hidden h-[320px] will-change-transform sm:block md:mt-16 md:h-[380px] lg:h-[470px] xl:h-[550px]"
         >
-          <div className="group absolute left-1/2 top-0 h-[420px] w-[760px] origin-top -translate-x-1/2 scale-[0.72] md:scale-[0.9] lg:scale-[1.1] xl:scale-[1.3]">
+          <div className="absolute left-1/2 top-0 h-[420px] w-[760px] origin-top -translate-x-1/2 scale-[0.72] md:scale-[0.9] lg:scale-[1.1] xl:scale-[1.3]">
             {/* The history, on the left. */}
             <div
               ref={leftRef}
               className="absolute left-[10px] top-[24px] -rotate-[7deg] will-change-transform sm:motion-safe:[transform:translate3d(229px,-6px,0)_rotate(-4deg)]"
             >
-              <div className="transition-transform duration-500 ease-out group-hover:-translate-x-6 group-hover:-rotate-3 motion-reduce:transition-none">
-                {left}
-              </div>
+              {left}
             </div>
             {/* MIDAS, on the right. */}
             <div
               ref={rightRef}
               className="absolute right-[10px] top-[24px] rotate-[7deg] will-change-transform sm:motion-safe:[transform:translate3d(-229px,-6px,0)_rotate(4deg)]"
             >
-              <div className="transition-transform duration-500 ease-out group-hover:translate-x-6 group-hover:rotate-3 motion-reduce:transition-none">
-                {right}
-              </div>
+              {right}
             </div>
             {/* The analysis, in front, a little bigger. */}
-            <div className="absolute left-[255px] top-[18px] z-10 scale-[1.08] transition-transform duration-500 ease-out group-hover:-translate-y-2 motion-reduce:transition-none">
+            <div className="absolute left-[255px] top-[18px] z-10 scale-[1.08]">
               {front}
             </div>
           </div>
