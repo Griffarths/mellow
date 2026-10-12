@@ -1,6 +1,7 @@
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { BlogCta } from "@/components/blog/BlogCta";
+import { AppRow } from "@/components/AppRow";
+import { FinalCta } from "@/components/sections/FinalCta";
 import { buttonClass } from "@/components/ui/Button";
 import type { ToolLocale } from "@/lib/tools";
 import { CYCLE_DIARY, DIARY, toolPaths } from "@/lib/tools";
@@ -114,9 +115,10 @@ export function DiaryPage({ locale, tool = "diary" }: Props) {
             </ul>
           </section>
 
-          <BlogCta title={ty(c.appTitle)} text={ty(c.appText)} />
+          <AppRow className="mt-14" title={ty(c.appTitle)} text={ty(c.appText)} />
 
-          <section className="mt-16 border-t border-surface-line pt-12">
+          {/* The app row's bottom rule already separates the questions. */}
+          <section className="mt-14">
             <h2 className="text-h3 text-ink md:text-[28px]">{ty(c.faqTitle)}</h2>
             <div className="mt-6 divide-y divide-surface-line">
               {c.faq.map((f) => (
@@ -129,6 +131,7 @@ export function DiaryPage({ locale, tool = "diary" }: Props) {
           </section>
         </div>
       </main>
+      <FinalCta />
       <Footer localePaths={toolPaths(all)} />
     </>
   );

@@ -29,8 +29,6 @@
     "backToBlog": "Volver al blog",
     "tocTitle": "Índice",
     "relatedTitle": "Artículos relacionados",
-    "ctaTitle": "Recupera el control de tus migrañas",
-    "ctaSubtitle": "Descarga Mellow y empieza a entender qué desencadena tus crisis.",
     "pillarCount": "{count, plural, one {# artículo} other {# artículos}}",
     "allInPillar": "Todos los artículos «{pillar}»",
     "latestTitle": "Mellow Blog",

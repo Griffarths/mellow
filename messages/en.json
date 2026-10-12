@@ -24,8 +24,6 @@
     "backToBlog": "Back to blog",
     "tocTitle": "Table of contents",
     "relatedTitle": "Related articles",
-    "ctaTitle": "Take back control of your migraines",
-    "ctaSubtitle": "Download Mellow and start understanding what triggers your attacks.",
     "pillarCount": "{count, plural, one {# article} other {# articles}}",
     "allInPillar": "All “{pillar}” articles",
     "latestTitle": "Mellow Blog",

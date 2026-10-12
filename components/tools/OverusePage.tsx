@@ -1,5 +1,6 @@
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { FinalCta } from "@/components/sections/FinalCta";
 import { StoreBadges } from "@/components/StoreBadges";
 import type { ToolLocale } from "@/lib/tools";
 import { OVERUSE_COPY, OVERUSE_PAGE, toolPaths } from "@/lib/tools";
@@ -83,6 +84,7 @@ export function OverusePage({ locale }: { locale: ToolLocale }) {
           </section>
         </div>
       </main>
+      <FinalCta />
       <Footer localePaths={toolPaths(OVERUSE_PAGE)} />
     </>
   );

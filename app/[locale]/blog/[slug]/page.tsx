@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import type { ComponentProps } from "react";
 import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -14,11 +13,10 @@ import { Footer } from "@/components/Footer";
 import { ArticleHeader } from "@/components/blog/ArticleHeader";
 import { BackToBlog } from "@/components/blog/BackToBlog";
 import { TableOfContents } from "@/components/blog/TableOfContents";
-import { BlogCta } from "@/components/blog/BlogCta";
+import { FinalCta } from "@/components/sections/FinalCta";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
 import { PillarPage } from "@/components/blog/PillarPage";
 import { mdxComponents } from "@/lib/mdx-components";
-import { AppCta } from "@/components/blog/AppCta";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { AUTHOR, aboutUrl } from "@/lib/author";
 import { extractFaq } from "@/lib/faq";
@@ -221,17 +219,7 @@ export default async function ArticlePage({ params }: Props) {
         label: PILLARS[articlePillar][locale].label,
       }
     : null;
-  // The mid-article app card takes the colour of the article's topic.
-  const components = articlePillar
-    ? {
-        ...mdxComponents,
-        AppCta: (props: ComponentProps<typeof AppCta>) => (
-          <AppCta {...props} tone={PILLARS[articlePillar].tone} />
-        ),
-      }
-    : mdxComponents;
   const related = getRelatedArticles(article);
-  const hasEndCta = /<AppCta[^>]*variant="end"/.test(article.content);
 
   const articleUrl = urlFor(locale, `/blog/${slug}`);
   const jsonLd = {
@@ -310,7 +298,7 @@ export default async function ArticlePage({ params }: Props) {
             <div className="mt-10 max-w-[65ch]">
               <MDXRemote
                 source={article.content}
-                components={components}
+                components={mdxComponents}
                 options={{
                   mdxOptions: {
                     remarkPlugins: [remarkGfm, remarkTypographize(article.locale)],
@@ -328,7 +316,6 @@ export default async function ArticlePage({ params }: Props) {
                 }}
               />
               <AuthorBox />
-              {!hasEndCta && <BlogCta />}
               <RelatedArticles articles={related} pillar={pillarLink} />
             </div>
           </article>
@@ -338,6 +325,8 @@ export default async function ArticlePage({ params }: Props) {
           </aside>
         </div>
       </main>
+      {/* Every article ends like the other pages, with the download block. */}
+      <FinalCta />
       <Footer localePaths={articlePaths(getArticleVersions(article))} />
       <script
         type="application/ld+json"

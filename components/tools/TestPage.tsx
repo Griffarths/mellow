@@ -1,5 +1,6 @@
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { FinalCta } from "@/components/sections/FinalCta";
 import { StoreBadges } from "@/components/StoreBadges";
 import type { ToolLocale } from "@/lib/tools";
 import { TEST_COPY, TEST_PAGE, toolPaths } from "@/lib/tools";
@@ -56,6 +57,7 @@ export function TestPage({ locale }: { locale: ToolLocale }) {
           </div>
         </div>
       </main>
+      <FinalCta />
       <Footer localePaths={toolPaths(TEST_PAGE)} />
     </>
   );

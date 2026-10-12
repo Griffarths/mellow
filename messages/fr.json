@@ -24,8 +24,6 @@
     "backToBlog": "Retour au blog",
     "tocTitle": "Sommaire",
     "relatedTitle": "Articles connexes",
-    "ctaTitle": "Reprends le contrôle de tes migraines",
-    "ctaSubtitle": "Télécharge Mellow et commence à comprendre ce qui déclenche tes crises.",
     "pillarCount": "{count, plural, one {# article} other {# articles}}",
     "allInPillar": "Tous les articles « {pillar} »",
     "latestTitle": "Mellow Blog",

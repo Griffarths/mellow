@@ -29,8 +29,6 @@
     "backToBlog": "Zurück zum Blog",
     "tocTitle": "Inhalt",
     "relatedTitle": "Ähnliche Artikel",
-    "ctaTitle": "Hol dir die Kontrolle über deine Migräne zurück",
-    "ctaSubtitle": "Lade Mellow herunter und finde heraus, was deine Attacken auslöst.",
     "pillarCount": "{count, plural, one {# Artikel} other {# Artikel}}",
     "allInPillar": "Alle Artikel zu „{pillar}“",
     "latestTitle": "Mellow Blog",

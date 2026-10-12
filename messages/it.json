@@ -29,8 +29,6 @@
     "backToBlog": "Torna al blog",
     "tocTitle": "Indice",
     "relatedTitle": "Articoli correlati",
-    "ctaTitle": "Riprendi il controllo della tua emicrania",
-    "ctaSubtitle": "Scarica Mellow e inizia a capire cosa scatena i tuoi attacchi.",
     "pillarCount": "{count, plural, one {# articolo} other {# articoli}}",
     "allInPillar": "Tutti gli articoli «{pillar}»",
     "latestTitle": "Mellow Blog",

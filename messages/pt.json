@@ -29,8 +29,6 @@
     "backToBlog": "Voltar ao blog",
     "tocTitle": "Índice",
     "relatedTitle": "Artigos relacionados",
-    "ctaTitle": "Retoma o controlo das tuas enxaquecas",
-    "ctaSubtitle": "Descarrega a Mellow e começa a perceber o que desencadeia as tuas crises.",
     "pillarCount": "{count, plural, one {# artigo} other {# artigos}}",
     "allInPillar": "Todos os artigos «{pillar}»",
     "latestTitle": "Mellow Blog",
