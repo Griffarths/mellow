@@ -1,3 +1,5 @@
+import { ABOUT_PATH, aboutUrl } from "./about";
+
 // The blog's author. Shown under each article title, in the author box at the
 // end of the article and in the structured data (BlogPosting.author).
 export const AUTHOR = {
@@ -5,16 +7,9 @@ export const AUTHOR = {
   mascot: "/blobs/Fleur1.svg",
 } as const;
 
-// The About page exists in French and English only; other languages link to
-// the English one.
-export function aboutPath(locale: string): { href: string; external: boolean } {
-  if (locale === "fr") return { href: "/a-propos", external: false };
-  if (locale === "en") return { href: "/about", external: false };
-  return { href: "https://mellowmigraine.com/about", external: true };
+// The About page, in the visitor's language.
+export function aboutPath(locale: string) {
+  return ABOUT_PATH[locale] ?? ABOUT_PATH.en;
 }
 
-export function aboutUrl(locale: string): string {
-  return locale === "fr"
-    ? "https://mellowmigraine.com/fr/a-propos"
-    : "https://mellowmigraine.com/about";
-}
+export { aboutUrl };

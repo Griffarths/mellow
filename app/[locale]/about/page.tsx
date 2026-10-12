@@ -5,11 +5,11 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { ABOUT_PATH, aboutAlternates } from "@/lib/about";
 
 const SITE_URL = "https://mellowmigraine.com";
 const PAGE_LOCALE = "en";
 const PAGE_URL = `${SITE_URL}/about`;
-const FR_ALTERNATE = `${SITE_URL}/fr/a-propos`;
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -24,14 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: "About · Mellow",
     description:
       "The story of Mellow, a migraine tracking app built by Laurine Nicoletti, indie developer based in Bordeaux. An app made by someone with migraines, not by a marketing committee.",
-    alternates: {
-      canonical: PAGE_URL,
-      languages: {
-        en: PAGE_URL,
-        "fr-FR": FR_ALTERNATE,
-        "x-default": PAGE_URL,
-      },
-    },
+    alternates: { canonical: PAGE_URL, languages: aboutAlternates() },
     openGraph: {
       type: "website",
       title: "About · Mellow",
@@ -247,7 +240,7 @@ export default async function AboutPage({ params }: Props) {
           <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">Laurine</p>
         </article>
       </main>
-      <Footer localePaths={{ en: "/about", fr: "/a-propos" }} />
+      <Footer localePaths={ABOUT_PATH} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

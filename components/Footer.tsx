@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
+import { ABOUT_PATH } from "@/lib/about";
 import { DOCTOR_PATH } from "@/lib/doctor";
 import { PLAY_STORE_URL } from "@/lib/stores";
 import { TOOLS_LABEL, isToolLocale, toolsMenu } from "@/lib/tools";
@@ -15,8 +16,6 @@ type Props = {
 
 const LINK = "transition hover:text-ink";
 
-// The About page exists in French and English only.
-const ABOUT_PATH: Partial<Record<string, string>> = { fr: "/a-propos", en: "/about" };
 
 // Brand on the left, with the store badge under the tagline, then three
 // columns of links (Mellow, the free tools, legal), in the order of the menu:
@@ -27,7 +26,7 @@ export function Footer({ localePaths }: Props = {}) {
   const nav = useTranslations("nav");
   const hero = useTranslations("hero");
   const locale = useLocale();
-  const about = ABOUT_PATH[locale];
+  const about = ABOUT_PATH[locale] ?? ABOUT_PATH.en;
   const doctor = DOCTOR_PATH[locale] ?? DOCTOR_PATH.en;
 
   return (
@@ -61,11 +60,9 @@ export function Footer({ localePaths }: Props = {}) {
             <Link href="/blog" className={LINK}>
               {nav("blog")}
             </Link>
-            {about && (
-              <Link href={about} className={LINK}>
-                {t("about")}
-              </Link>
-            )}
+            <Link href={about} className={LINK}>
+              {t("about")}
+            </Link>
             {PLAY_STORE_URL ? (
               <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className={LINK}>
                 {nav("android")}

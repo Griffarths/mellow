@@ -14,6 +14,7 @@ import { withDefault } from "@/lib/hreflang";
 import { TOOL_LOCALES } from "@/lib/tools";
 import { TOOL_IDS, toolAlternates, toolUrl } from "@/lib/tools-seo";
 import { doctorAlternates, doctorUrl } from "@/lib/doctor-seo";
+import { aboutAlternates, aboutUrl } from "@/lib/about";
 
 const SITE_URL = "https://mellowmigraine.com";
 
@@ -144,24 +145,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // About page — FR and EN have different paths; cross-link via hreflang
-  const aboutLanguages = {
-    "fr-FR": `${SITE_URL}/fr/a-propos`,
-    en: `${SITE_URL}/about`,
-    "x-default": `${SITE_URL}/about`,
-  };
-  entries.push({
-    url: `${SITE_URL}/fr/a-propos`,
-    changeFrequency: "yearly",
-    priority: 0.5,
-    alternates: { languages: aboutLanguages },
-  });
-  entries.push({
-    url: `${SITE_URL}/about`,
-    changeFrequency: "yearly",
-    priority: 0.5,
-    alternates: { languages: aboutLanguages },
-  });
+  // About: one path per language, cross-linked via hreflang
+  const aboutLanguages = aboutAlternates();
+  for (const locale of routing.locales) {
+    entries.push({
+      url: aboutUrl(locale),
+      changeFrequency: "yearly",
+      priority: 0.5,
+      alternates: { languages: aboutLanguages },
+    });
+  }
 
   return entries;
 }

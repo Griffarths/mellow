@@ -16,11 +16,7 @@ export function AuthorBox() {
         name: AUTHOR.name,
         b: (chunks) => <strong className="font-semibold text-ink">{chunks}</strong>,
       })}{" "}
-      {about.external ? (
-        <a href={about.href} className={link}>{t("authorMore")}</a>
-      ) : (
-        <Link href={about.href} className={link}>{t("authorMore")}</Link>
-      )}
+      <Link href={about} className={link}>{t("authorMore")}</Link>
       {" · "}
       <Link href="/editorial" className={link}>{t("editorialLink")}</Link>
     </p>

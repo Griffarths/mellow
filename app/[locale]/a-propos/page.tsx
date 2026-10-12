@@ -5,11 +5,11 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { ABOUT_PATH, aboutAlternates } from "@/lib/about";
 
 const SITE_URL = "https://mellowmigraine.com";
 const PAGE_LOCALE = "fr";
 const PAGE_URL = `${SITE_URL}/${PAGE_LOCALE}/a-propos`;
-const EN_ALTERNATE = `${SITE_URL}/about`;
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -24,14 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: "À propos · Mellow",
     description:
       "L'histoire de Mellow, app de tracking de migraines créée par Laurine Nicoletti, développeuse solo basée à Bordeaux. Une app pensée par une migraineuse, pas par un comité marketing.",
-    alternates: {
-      canonical: PAGE_URL,
-      languages: {
-        "fr-FR": PAGE_URL,
-        en: EN_ALTERNATE,
-        "x-default": EN_ALTERNATE,
-      },
-    },
+    alternates: { canonical: PAGE_URL, languages: aboutAlternates() },
     openGraph: {
       type: "website",
       title: "À propos · Mellow",
@@ -234,7 +227,7 @@ export default async function AboutPage({ params }: Props) {
           <p className="my-5 text-[17px] leading-[1.8] text-ink-body md:text-lg">Laurine</p>
         </article>
       </main>
-      <Footer localePaths={{ en: "/about", fr: "/a-propos" }} />
+      <Footer localePaths={ABOUT_PATH} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
