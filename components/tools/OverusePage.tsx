@@ -17,7 +17,7 @@ export function OverusePage({ locale }: { locale: ToolLocale }) {
     <>
       <Nav />
       <main className="mx-auto max-w-6xl px-6 pb-20 pt-10 md:pb-28 md:pt-16">
-        <div className="max-w-3xl">
+        <div>
           <h1 className="text-display text-ink">{ty(c.title)}</h1>
           <p className="mt-5 text-lg leading-relaxed text-ink-2">{ty(c.lead)}</p>
           <p className="mt-3 text-sm leading-relaxed text-ink-3">
