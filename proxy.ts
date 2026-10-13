@@ -15,6 +15,8 @@ export default function proxy(request: NextRequest) {
     : withoutDetection(request);
 }
 
+// /cs-media is Carousel Studio's media, rewritten to Vercel Blob in
+// next.config.ts: no language prefix there.
 export const config = {
-  matcher: ["/((?!_next|_vercel|.*\\..*).*)"],
+  matcher: ["/((?!_next|_vercel|cs-media|.*\\..*).*)"],
 };

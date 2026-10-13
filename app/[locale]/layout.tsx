@@ -5,7 +5,7 @@ import { QrWidget } from "@/components/QrWidget";
 import { ScrollReset } from "@/components/ScrollReset";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Analytics } from "@vercel/analytics/next";
+import { SiteAnalytics } from "@/components/SiteAnalytics";
 import { routing } from "@/i18n/routing";
 import { APP_STORE_ID } from "@/lib/stores";
 import "../globals.css";
@@ -64,7 +64,7 @@ export default async function LocaleLayout({
           {children}
           <QrWidget />
         </NextIntlClientProvider>
-        <Analytics />
+        <SiteAnalytics />
       </body>
     </html>
   );

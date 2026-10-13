@@ -52,6 +52,24 @@ const nextConfig: NextConfig = {
     ];
     return [...moved, ...pillars].map(([source, destination]) => ({ source, destination, permanent: true }));
   },
+
+  // Carousel Studio's media for TikTok, served from mellowmigraine.com (TikTok
+  // only pulls media from a verified domain) while stored in Vercel Blob. A
+  // rewrite, not a redirect: the address stays on the site. beforeFiles, so
+  // no page of the site can catch these paths first; proxy.ts leaves them
+  // alone too.
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/cs-media/:path*",
+          destination: "https://qisndhsdaq4bsmud.public.blob.vercel-storage.com/carousel-studio/:path*",
+        },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
 };
 
 export default withNextIntl(nextConfig);
