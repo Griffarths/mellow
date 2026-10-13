@@ -386,6 +386,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "anti-cgrp-migraine",
         "triptans-tout-comprendre",
         "soulager-migraine-sans-medicament",
+        "migraine-nausees-vomissements",
       ],
     },
     en: {
@@ -404,6 +405,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "cgrp-migraine-treatment",
         "triptans-explained",
         "relieve-migraine-without-medication",
+        "migraine-nausea",
       ],
     },
     es: {
@@ -422,6 +424,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "como-aliviar-una-migrana-sin-medicamentos",
         "anti-cgrp-migrana-tratamiento-preventivo",
         "botox-migrana-cronica-protocolo-preempt",
+        "migrana-con-nauseas-y-vomitos",
       ],
     },
     "es-419": {
@@ -440,6 +443,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "como-aliviar-una-migrana-sin-medicamentos",
         "anti-cgrp-migrana-tratamiento-preventivo",
         "botox-para-migrana-cronica-protocolo-preempt",
+        "migrana-nauseas",
       ],
     },
     de: {
@@ -458,6 +462,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "magnesium-bei-migraene",
         "cgrp-antikoerper-migraene",
         "botox-migraene-preempt-schema",
+        "migraene-uebelkeit",
       ],
     },
     it: {
@@ -476,6 +481,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "magnesio-emicrania",
         "anticorpi-monoclonali-emicrania-anti-cgrp",
         "botox-emicrania-cronica-protocollo-preempt",
+        "emicrania-nausea-perche-succede-come-alleggerirla",
       ],
     },
     pt: {
@@ -494,6 +500,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "anti-cgrp-enxaqueca-tratamento-preventivo",
         "aliviar-enxaqueca-sem-medicamentos",
         "botox-enxaqueca-cronica-protocolo-preempt",
+        "enxaqueca-nauseas",
       ],
     },
     "pt-BR": {
@@ -512,6 +519,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "como-aliviar-enxaqueca-sem-remedio",
         "anti-cgrp-enxaqueca-tratamento-preventivo",
         "botox-para-enxaqueca-cronica-protocolo-preempt",
+        "enxaqueca-nausea",
       ],
     },
   },
