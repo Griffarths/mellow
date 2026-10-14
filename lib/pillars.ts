@@ -225,6 +225,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-avec-aura",
         "combien-de-temps-dure-une-migraine",
         "migraine-qui-dure-plusieurs-jours",
+        "sinusite-ou-migraine",
       ],
     },
     en: {
@@ -245,6 +246,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-with-aura",
         "how-long-does-a-migraine-last",
         "migraine-that-wont-go-away",
+        "sinus-headache-or-migraine",
       ],
     },
     es: {
@@ -265,6 +267,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-con-aura-sintomas",
         "cuanto-dura-una-migrana",
         "migrana-que-dura-varios-dias",
+        "migrana-o-sinusitis-como-distinguirlas",
       ],
     },
     "es-419": {
@@ -285,6 +288,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-con-aura-senales-antes-de-la-crisis",
         "cuanto-dura-una-migrana",
         "migrana-que-dura-varios-dias",
+        "sinusitis-o-migrana-como-distinguirlas",
       ],
     },
     de: {
@@ -305,6 +309,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "menstruelle-migraene",
         "augenmigraene",
         "migraene-dauert-mehrere-tage",
+        "sinusitis-oder-migraene",
       ],
     },
     it: {
@@ -325,6 +330,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-mestruale",
         "emicrania-con-aura-sintomi",
         "emicrania-che-non-passa",
+        "mal-di-testa-da-sinusite-o-emicrania",
       ],
     },
     pt: {
@@ -345,6 +351,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-menstrual",
         "enxaqueca-com-aura-sinais-antes-da-crise",
         "enxaqueca-que-nao-passa",
+        "sinusite-ou-enxaqueca",
       ],
     },
     "pt-BR": {
@@ -365,6 +372,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-menstrual",
         "enxaqueca-com-aura-sinais-antes-da-crise",
         "enxaqueca-que-nao-passa",
+        "sinusite-ou-enxaqueca",
       ],
     },
   },
