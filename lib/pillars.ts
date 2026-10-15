@@ -808,6 +808,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "glossaire-migraine",
         "migraine-en-chiffres",
+        "causes-de-la-migraine",
       ],
     },
     en: {
@@ -823,6 +824,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "migraine-glossary",
         "migraine-by-the-numbers",
+        "what-causes-migraines",
       ],
     },
     es: {
@@ -838,6 +840,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "migrana-en-cifras",
         "glosario-de-migrana",
+        "causas-de-la-migrana",
       ],
     },
     "es-419": {
@@ -853,6 +856,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "glosario-de-migrana",
         "estadisticas-de-migrana",
+        "causas-de-la-migrana",
       ],
     },
     de: {
@@ -868,6 +872,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "migraene-statistik-zahlen",
         "migraene-glossar",
+        "migraene-ursachen-gehirn",
       ],
     },
     it: {
@@ -883,6 +888,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "glossario-emicrania",
         "emicrania-statistiche-mondo-italia",
+        "cause-emicrania-cosa-succede-nel-cervello",
       ],
     },
     pt: {
@@ -898,6 +904,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "glossario-enxaqueca",
         "enxaqueca-em-numeros",
+        "causas-da-enxaqueca",
       ],
     },
     "pt-BR": {
@@ -913,6 +920,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "glossario-da-enxaqueca",
         "enxaqueca-em-numeros",
+        "causas-da-enxaqueca",
       ],
     },
   },
