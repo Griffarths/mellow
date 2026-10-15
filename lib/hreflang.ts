@@ -26,13 +26,18 @@ export function withDefault(languages: Record<string, string>) {
   return languages.en ? { ...languages, "x-default": languages.en } : languages;
 }
 
+// hreflang map of a page that exists at the same path in every language (also used by the sitemap).
+export function sameAlternates(suffix: string) {
+  return withDefault(
+    Object.fromEntries(routing.locales.map((l) => [CODE[l], localizedUrl(l, suffix)])),
+  );
+}
+
 // Canonical + hreflang of a page that exists at the same path in every language.
 export function pageAlternates(locale: string, suffix: string) {
   return {
     canonical: localizedUrl(locale, suffix),
-    languages: withDefault(
-      Object.fromEntries(routing.locales.map((l) => [CODE[l], localizedUrl(l, suffix)])),
-    ),
+    languages: sameAlternates(suffix),
   };
 }
 

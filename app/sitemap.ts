@@ -10,7 +10,7 @@ import {
   liveBlogLocales,
 } from "@/lib/blog";
 import { PILLARS, PILLAR_IDS } from "@/lib/pillars";
-import { withDefault } from "@/lib/hreflang";
+import { sameAlternates, withDefault } from "@/lib/hreflang";
 import { TOOL_LOCALES } from "@/lib/tools";
 import { TOOL_IDS, toolAlternates, toolUrl } from "@/lib/tools-seo";
 import { doctorAlternates, doctorUrl } from "@/lib/doctor-seo";
@@ -30,9 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   // Home: one entry per locale, with hreflang alternates pointing to all locales
-  const homeAlternates = withDefault(
-    Object.fromEntries(routing.locales.map((l) => [l, url(l, "")])),
-  );
+  const homeAlternates = sameAlternates("");
   for (const locale of routing.locales) {
     entries.push({
       url: url(locale, ""),
@@ -43,9 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // The app in detail: same path in every locale
-  const appAlternates = withDefault(
-    Object.fromEntries(routing.locales.map((l) => [l, url(l, "/app")])),
-  );
+  const appAlternates = sameAlternates("/app");
   for (const locale of routing.locales) {
     entries.push({
       url: url(locale, "/app"),
@@ -67,9 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Blog index: one entry per locale (every locale has /blog — coming-soon for non-FR/EN)
-  const blogIndexAlternates = withDefault(
-    Object.fromEntries(routing.locales.map((l) => [l, url(l, "/blog")])),
-  );
+  const blogIndexAlternates = sameAlternates("/blog");
   for (const locale of routing.locales) {
     entries.push({
       url: url(locale, "/blog"),
@@ -131,9 +125,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Android testers: same path in every locale
-  const androidAlternates = withDefault(
-    Object.fromEntries(routing.locales.map((l) => [l, url(l, "/android")])),
-  );
+  const androidAlternates = sameAlternates("/android");
   for (const locale of routing.locales) {
     entries.push({
       url: url(locale, "/android"),
@@ -145,9 +137,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Localized legal pages
   for (const suffix of ["/contact", "/editorial", "/confidentialite", "/mentions-legales"]) {
-    const languages = withDefault(
-      Object.fromEntries(routing.locales.map((l) => [l, url(l, suffix)])),
-    );
+    const languages = sameAlternates(suffix);
     for (const locale of routing.locales) {
       entries.push({
         url: url(locale, suffix),
