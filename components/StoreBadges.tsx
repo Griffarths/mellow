@@ -1,3 +1,4 @@
+import type { AppStoreCampaign } from "@/lib/stores";
 import { AppStoreButton } from "./AppStoreButton";
 import { GooglePlayButton } from "./GooglePlayButton";
 
@@ -5,6 +6,7 @@ type Props = {
   className?: string;
   sizeClass?: string;
   align?: "center" | "start";
+  campaign?: AppStoreCampaign;
 };
 
 // 48px on mobile keeps both badges on one line at 375px wide (worst case:
@@ -15,6 +17,7 @@ export function StoreBadges({
   className = "",
   sizeClass = DEFAULT_SIZE,
   align = "center",
+  campaign = "site",
 }: Props) {
   return (
     <div
@@ -22,7 +25,7 @@ export function StoreBadges({
         align === "center" ? "justify-center" : "justify-start"
       } ${className}`}
     >
-      <AppStoreButton sizeClass={sizeClass} />
+      <AppStoreButton sizeClass={sizeClass} campaign={campaign} />
       <GooglePlayButton sizeClass={sizeClass} />
     </div>
   );

@@ -52,7 +52,7 @@ export async function BlogIndex({ locale, page }: { locale: BlogLocale; page: nu
           </>
         )}
       </main>
-      <FinalCta />
+      <FinalCta campaign="blog" />
       {/* Page 2 and beyond: the language switch goes to the first page of the other blogs. */}
       <Footer localePaths={page > 1 ? Object.fromEntries(liveBlogLocales().map((l) => [l, "/blog"])) : undefined} />
     </>

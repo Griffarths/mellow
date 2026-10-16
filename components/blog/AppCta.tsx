@@ -17,5 +17,7 @@ type Props = {
 export function AppCta({ title, text, variant = "inline" }: Props) {
   const locale = useLocale();
   if (variant === "end") return null;
-  return <AppRow className="my-10" title={typographize(title, locale)} text={typographize(text, locale)} />;
+  return (
+    <AppRow className="my-10" title={typographize(title, locale)} text={typographize(text, locale)} campaign="blog" />
+  );
 }

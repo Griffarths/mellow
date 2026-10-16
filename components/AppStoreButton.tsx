@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import type { Locale } from "@/i18n/routing";
-import { APP_STORE_URL } from "@/lib/stores";
+import { APP_STORE_URLS, type AppStoreCampaign } from "@/lib/stores";
 
 const BADGES: Record<Locale, string> = {
   fr: "Download_on_the_App_Store_Badge_FR_RGB_blk_100517.svg",
@@ -16,16 +16,19 @@ const BADGES: Record<Locale, string> = {
 type Props = {
   className?: string;
   sizeClass?: string;
+  // Which campaign link (lib/stores.ts): the site's, unless the button
+  // belongs to the blog.
+  campaign?: AppStoreCampaign;
 };
 
-export function AppStoreButton({ className = "", sizeClass }: Props) {
+export function AppStoreButton({ className = "", sizeClass, campaign = "site" }: Props) {
   const locale = useLocale() as Locale;
   const t = useTranslations("nav");
   const file = BADGES[locale] ?? BADGES.en;
 
   return (
     <a
-      href={APP_STORE_URL}
+      href={APP_STORE_URLS[campaign]}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={t("appStoreAriaLabel")}

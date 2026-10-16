@@ -76,7 +76,7 @@ export async function PillarPage({ pillar, locale, page, localePaths }: Props) {
         </div>
 
       </main>
-      <FinalCta />
+      <FinalCta campaign="blog" />
       <Footer localePaths={localePaths} />
     </>
   );

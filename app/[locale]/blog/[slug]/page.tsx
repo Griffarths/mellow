@@ -326,7 +326,7 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </main>
       {/* Every article ends like the other pages, with the download block. */}
-      <FinalCta />
+      <FinalCta campaign="blog" />
       <Footer localePaths={articlePaths(getArticleVersions(article))} />
       <script
         type="application/ld+json"

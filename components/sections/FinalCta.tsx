@@ -3,14 +3,18 @@ import { StoreBadges } from "../StoreBadges";
 import { Blob } from "../phones/Blob";
 import { APP_STORE_RATING } from "@/content/reviews";
 import { Stars } from "./SocialProof";
+import type { AppStoreCampaign } from "@/lib/stores";
 
 // Last call to download: the mascot, text, App Store rating and badge on the
 // left, and on computers a card with the app icon and a QR code to scan with
-// the iPhone (public/qr-app-store.svg, generated with macOS CoreImage, then
-// redrawn with round dots and rounded corners, same modules; points to the
-// App Store page, checked with Apple's Vision and CoreImage readers). Phones
-// only get the badge: they cannot scan themselves.
-export function FinalCta() {
+// the iPhone (public/qr-app-store.svg, generated with macOS CoreImage from
+// the "site" campaign link of lib/stores.ts, error correction M, then drawn
+// with round dots and rounded corners; checked with Apple's Vision and
+// CoreImage readers). Phones only get the badge: they cannot scan
+// themselves.
+// campaign: the badge's link, "blog" at the end of the blog's pages. The QR
+// code stays the site's on every page.
+export function FinalCta({ campaign = "site" }: { campaign?: AppStoreCampaign } = {}) {
   const t = useTranslations("finalCta");
   const tStars = useTranslations("socialProof");
   const locale = useLocale();
@@ -44,6 +48,7 @@ export function FinalCta() {
           <StoreBadges
             className={`${rating ? "mt-4" : "mt-8"} md:justify-start`}
             sizeClass="h-11 w-auto select-none md:h-12"
+            campaign={campaign}
           />
         </div>
 
