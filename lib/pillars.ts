@@ -548,6 +548,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-hereditaire-genetique-transmission",
         "mal-de-tete-tous-les-jours",
         "migraine-ou-mal-de-tete",
+        "migraine-cervicale-mal-de-tete-nuque",
       ],
     },
     en: {
@@ -565,6 +566,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "is-migraine-hereditary",
         "headache-every-day",
         "migraine-vs-headache",
+        "migraine-neck-pain",
       ],
     },
     es: {
@@ -582,6 +584,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "dolor-de-cabeza-todos-los-dias",
         "diferencia-migrana-dolor-de-cabeza",
         "migrana-hereditaria-genetica",
+        "migrana-cervical-dolor-nuca",
       ],
     },
     "es-419": {
@@ -599,6 +602,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "dolor-de-cabeza-todos-los-dias",
         "diferencia-migrana-dolor-de-cabeza",
         "la-migrana-es-hereditaria",
+        "migrana-cervical-dolor-de-cabeza-nuca",
       ],
     },
     de: {
@@ -616,6 +620,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-oder-kopfschmerzen-unterschied",
         "jeden-tag-kopfschmerzen",
         "migraene-erblich",
+        "migraene-nackenschmerzen",
       ],
     },
     it: {
@@ -633,6 +638,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "mal-di-testa-tutti-i-giorni",
         "differenza-tra-emicrania-e-mal-di-testa",
         "emicrania-ereditaria",
+        "mal-di-testa-da-cervicale",
       ],
     },
     pt: {
@@ -650,6 +656,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "dor-de-cabeca-todos-os-dias",
         "diferenca-entre-enxaqueca-e-dor-de-cabeca",
         "enxaqueca-hereditaria",
+        "enxaqueca-cervical-dor-de-cabeca-nuca",
       ],
     },
     "pt-BR": {
@@ -667,6 +674,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "dor-de-cabeca-todos-os-dias",
         "diferenca-entre-enxaqueca-e-dor-de-cabeca",
         "enxaqueca-e-hereditaria",
+        "enxaqueca-cervical-dor-na-nuca",
       ],
     },
   },
