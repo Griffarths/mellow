@@ -226,6 +226,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "combien-de-temps-dure-une-migraine",
         "migraine-qui-dure-plusieurs-jours",
         "sinusite-ou-migraine",
+        "migraine-silencieuse-aura-sans-mal-de-tete",
       ],
     },
     en: {
@@ -247,6 +248,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "how-long-does-a-migraine-last",
         "migraine-that-wont-go-away",
         "sinus-headache-or-migraine",
+        "silent-migraine-aura-without-headache",
       ],
     },
     es: {
@@ -268,6 +270,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "cuanto-dura-una-migrana",
         "migrana-que-dura-varios-dias",
         "migrana-o-sinusitis-como-distinguirlas",
+        "migrana-silenciosa-aura-sin-dolor-de-cabeza",
       ],
     },
     "es-419": {
@@ -289,6 +292,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "cuanto-dura-una-migrana",
         "migrana-que-dura-varios-dias",
         "sinusitis-o-migrana-como-distinguirlas",
+        "migrana-silenciosa-aura-sin-dolor-de-cabeza",
       ],
     },
     de: {
@@ -310,6 +314,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "augenmigraene",
         "migraene-dauert-mehrere-tage",
         "sinusitis-oder-migraene",
+        "stille-migraene-aura-ohne-kopfschmerzen",
       ],
     },
     it: {
@@ -331,6 +336,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-con-aura-sintomi",
         "emicrania-che-non-passa",
         "mal-di-testa-da-sinusite-o-emicrania",
+        "emicrania-silente-aura-senza-mal-di-testa",
       ],
     },
     pt: {
@@ -352,6 +358,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-com-aura-sinais-antes-da-crise",
         "enxaqueca-que-nao-passa",
         "sinusite-ou-enxaqueca",
+        "enxaqueca-silenciosa-aura-sem-dor-de-cabeca",
       ],
     },
     "pt-BR": {
@@ -373,6 +380,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-com-aura-sinais-antes-da-crise",
         "enxaqueca-que-nao-passa",
         "sinusite-ou-enxaqueca",
+        "enxaqueca-silenciosa-aura-sem-dor-de-cabeca",
       ],
     },
   },
