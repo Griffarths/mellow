@@ -227,6 +227,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-qui-dure-plusieurs-jours",
         "sinusite-ou-migraine",
         "migraine-silencieuse-aura-sans-mal-de-tete",
+        "eclairs-de-lumiere-dans-les-yeux-migraine",
       ],
     },
     en: {
@@ -249,6 +250,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-that-wont-go-away",
         "sinus-headache-or-migraine",
         "silent-migraine-aura-without-headache",
+        "flashing-lights-in-eyes-migraine-aura",
       ],
     },
     es: {
@@ -271,6 +273,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-que-dura-varios-dias",
         "migrana-o-sinusitis-como-distinguirlas",
         "migrana-silenciosa-aura-sin-dolor-de-cabeza",
+        "destellos-de-luz-en-los-ojos-aura-migrana",
       ],
     },
     "es-419": {
@@ -293,6 +296,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-que-dura-varios-dias",
         "sinusitis-o-migrana-como-distinguirlas",
         "migrana-silenciosa-aura-sin-dolor-de-cabeza",
+        "destellos-de-luz-en-los-ojos-aura-migrana",
       ],
     },
     de: {
@@ -315,6 +319,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-dauert-mehrere-tage",
         "sinusitis-oder-migraene",
         "stille-migraene-aura-ohne-kopfschmerzen",
+        "lichtblitze-im-auge-migraene-aura",
       ],
     },
     it: {
@@ -337,6 +342,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-che-non-passa",
         "mal-di-testa-da-sinusite-o-emicrania",
         "emicrania-silente-aura-senza-mal-di-testa",
+        "lampi-di-luce-negli-occhi-aura-emicrania",
       ],
     },
     pt: {
@@ -359,6 +365,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-que-nao-passa",
         "sinusite-ou-enxaqueca",
         "enxaqueca-silenciosa-aura-sem-dor-de-cabeca",
+        "flashes-de-luz-nos-olhos-aura-enxaqueca",
       ],
     },
     "pt-BR": {
@@ -381,6 +388,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-que-nao-passa",
         "sinusite-ou-enxaqueca",
         "enxaqueca-silenciosa-aura-sem-dor-de-cabeca",
+        "flashes-de-luz-nos-olhos-aura-enxaqueca",
       ],
     },
   },
