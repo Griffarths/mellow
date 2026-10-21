@@ -411,6 +411,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "triptans-tout-comprendre",
         "soulager-migraine-sans-medicament",
         "migraine-nausees-vomissements",
+        "migraine-quel-medecin-consulter",
       ],
     },
     en: {
@@ -430,6 +431,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "triptans-explained",
         "relieve-migraine-without-medication",
         "migraine-nausea",
+        "when-to-see-a-doctor-for-migraine",
       ],
     },
     es: {
@@ -449,6 +451,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "anti-cgrp-migrana-tratamiento-preventivo",
         "botox-migrana-cronica-protocolo-preempt",
         "migrana-con-nauseas-y-vomitos",
+        "migrana-que-medico-consultar",
       ],
     },
     "es-419": {
@@ -468,6 +471,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "anti-cgrp-migrana-tratamiento-preventivo",
         "botox-para-migrana-cronica-protocolo-preempt",
         "migrana-nauseas",
+        "con-que-medico-consultar-por-migrana",
       ],
     },
     de: {
@@ -487,6 +491,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "cgrp-antikoerper-migraene",
         "botox-migraene-preempt-schema",
         "migraene-uebelkeit",
+        "migraene-welcher-arzt",
       ],
     },
     it: {
@@ -506,6 +511,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "anticorpi-monoclonali-emicrania-anti-cgrp",
         "botox-emicrania-cronica-protocollo-preempt",
         "emicrania-nausea-perche-succede-come-alleggerirla",
+        "emicrania-quale-specialista",
       ],
     },
     pt: {
@@ -525,6 +531,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "aliviar-enxaqueca-sem-medicamentos",
         "botox-enxaqueca-cronica-protocolo-preempt",
         "enxaqueca-nauseas",
+        "enxaqueca-que-medico-consultar",
       ],
     },
     "pt-BR": {
@@ -544,6 +551,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "anti-cgrp-enxaqueca-tratamento-preventivo",
         "botox-para-enxaqueca-cronica-protocolo-preempt",
         "enxaqueca-nausea",
+        "enxaqueca-qual-medico-procurar",
       ],
     },
   },
