@@ -8,12 +8,17 @@ const SITE_URL = "https://mellowmigraine.com";
 const PAGE_URL = `${SITE_URL}/download`;
 const APP_STORE_URL =
   "https://apps.apple.com/app/apple-store/id6762257609?pt=128563123&ct=tiktok&mt=8";
+// Google Play with the TikTok campaign in the referrer (read by the Android
+// app at first launch). Keep it encoded as is (%3D, %26).
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.arthurgriffiths.mellow&referrer=utm_source%3Dtiktok%26utm_medium%3Dweb%26utm_campaign%3Dtiktok";
 
 // Inline anti-flicker + UA-gated redirect.
 // - <style> hides <html> immediately so nothing paints while we decide.
 // - The script runs synchronously as soon as it's parsed (first child of
 //   <body>): if the UA is a TikTok in-app browser, reveal the page;
-//   otherwise window.location.replace to the App Store before any paint.
+//   otherwise window.location.replace to Google Play on Android, to the
+//   App Store elsewhere, before any paint.
 // - A 800 ms safety timeout force-reveals the page if neither branch
 //   ran (script error in an exotic webview, blocked redirect, etc.) so
 //   the user never sees a permanently blank screen.
@@ -27,7 +32,7 @@ const REDIRECT_SCRIPT = `(function(){
     if (inApp) {
       document.documentElement.style.visibility = 'visible';
     } else {
-      window.location.replace(${JSON.stringify(APP_STORE_URL)});
+      window.location.replace(/android/i.test(ua) ? ${JSON.stringify(PLAY_STORE_URL)} : ${JSON.stringify(APP_STORE_URL)});
     }
   } catch (e) {
     document.documentElement.style.visibility = 'visible';
@@ -73,7 +78,7 @@ const STEPS = [
   },
   {
     n: 3,
-    text: "Télécharge Mellow sur l'App Store",
+    text: "Télécharge Mellow sur l'App Store ou Google Play",
     bg: "bg-tagada-tint",
   },
 ];
