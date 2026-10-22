@@ -5,7 +5,7 @@ export default function LegalContentDe() {
     <>
       <h1>Impressum · Mellow</h1>
       <p>
-        <strong>Letzte Aktualisierung: 18. April 2026</strong>
+        <strong>Letzte Aktualisierung: 22. Oktober 2026</strong>
       </p>
 
       <h2>1. Anbieter der Anwendung</h2>
@@ -93,38 +93,39 @@ export default function LegalContentDe() {
         Die Mellow-Anwendung kann Standortdaten des Nutzers erheben, um die
         Nachverfolgung von Migräne-Episoden zu bereichern (Korrelation mit
         Umweltfaktoren wie Wetterbedingungen oder Luftdruck). Der Zugriff auf
-        den Standort wird über die APIs des Betriebssystems iOS angefordert,
+        den Standort wird über die APIs des Betriebssystems iOS oder Android angefordert,
         und der Nutzer kann ihn jederzeit in den Geräteeinstellungen erteilen,
         einschränken oder verweigern. Details zur Verarbeitung dieser Daten
         finden sich in der{" "}
         <Link href="/confidentialite">Datenschutzerklärung</Link>.
       </p>
 
-      <h2>4. Hosting der rechtlichen Seiten</h2>
+      <h2>4. Hosting der Website</h2>
       <p>
-        Dieses Impressum, die Datenschutzerklärung und alle weiteren
-        rechtlichen Dokumente zur Mellow-Anwendung werden gehostet von:
+        Die Website mellowmigraine.com, auf der dieses Impressum, die
+        Datenschutzerklärung und alle weiteren rechtlichen Dokumente zur
+        Mellow-Anwendung veröffentlicht werden, wird gehostet von:
       </p>
       <p>
-        <strong>Notion Labs, Inc.</strong>
+        <strong>Vercel Inc.</strong>
         <br />
-        2300 Harrison Street
+        440 N Barranca Avenue #4133
         <br />
-        San Francisco, CA 94110, USA
+        Covina, CA 91723, USA
         <br />
         <a
-          href="https://www.notion.so"
+          href="https://vercel.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          https://www.notion.so
+          https://vercel.com
         </a>
       </p>
 
       <h2>5. Vertrieb der Anwendung</h2>
       <p>
-        Die Mellow-Anwendung wird ausschließlich über den App Store
-        vertrieben, betrieben von:
+        Die Mellow-Anwendung wird auf dem iPhone über den App Store vertrieben,
+        betrieben von:
       </p>
       <p>
         <strong>Apple Inc.</strong>
@@ -132,6 +133,16 @@ export default function LegalContentDe() {
         One Apple Park Way
         <br />
         Cupertino, CA 95014, USA
+      </p>
+      <p>
+        und auf Android über Google Play, betrieben von:
+      </p>
+      <p>
+        <strong>Google LLC</strong>
+        <br />
+        1600 Amphitheatre Parkway
+        <br />
+        Mountain View, CA 94043, USA
       </p>
 
       <h2>6. Nutzungsbedingungen</h2>
@@ -179,7 +190,7 @@ export default function LegalContentDe() {
         <strong>
           <Link href="/confidentialite">Datenschutzerklärung</Link>
         </strong>{" "}
-        beschrieben, die in der Anwendung und auf der App-Store-Seite zugänglich
+        beschrieben, die in der Anwendung und auf ihren Seiten im App Store und bei Google Play zugänglich
         ist.
       </p>
       <p>

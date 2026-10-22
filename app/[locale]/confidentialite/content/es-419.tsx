@@ -4,7 +4,7 @@ export default function PrivacyContentEs419() {
     <>
       <h1>Política de privacidad · Mellow</h1>
       <p>
-        <strong>Última actualización: 8 de octubre de 2026</strong>
+        <strong>Última actualización: 22 de octubre de 2026</strong>
       </p>
 
       <p>
@@ -167,11 +167,11 @@ export default function PrivacyContentEs419() {
         envías y recibes, y los usuarios que bloqueas.
       </p>
       <p>
-        <strong>Datos de pago.</strong> Podemos recopilar los datos
-        necesarios para procesar tu pago si decides realizar compras, como
-        el número de tu instrumento de pago y el código de seguridad
-        asociado. Todos los datos de pago son administrados y almacenados
-        por RevenueCat. Su política está disponible aquí:{" "}
+        <strong>Datos de pago.</strong> Si decides realizar compras, el pago lo
+        procesa Apple (App Store) en iPhone y Google Play en Android: nunca
+        tenemos acceso a tus datos bancarios. Tus suscripciones las administra
+        RevenueCat, tanto en iPhone como en Android. Su política está disponible
+        aquí:{" "}
         <a
           href="https://www.revenuecat.com/privacy"
           target="_blank"
@@ -213,6 +213,14 @@ export default function PrivacyContentEs419() {
           guardamos un token de notificación de tu dispositivo. Si deseas no
           recibirlas, puedes desactivarlas desde la configuración del
           dispositivo.
+        </li>
+        <li>
+          <em>Datos de sueño.</em> Si lo permites, Mellow lee tus datos de sueño
+          desde Apple Salud en iPhone o desde Health Connect en Android, para
+          relacionarlos con tus migrañas. Estos datos nunca se usan con fines
+          publicitarios ni se envían a Meta o TikTok. Puedes retirar este acceso
+          en cualquier momento desde la configuración de Apple Salud o de Health
+          Connect.
         </li>
       </ul>
       <p>
@@ -354,9 +362,12 @@ export default function PrivacyContentEs419() {
           <strong>
             Para medir la efectividad de nuestras campañas publicitarias.
           </strong>{" "}
-          Si permites el rastreo en la solicitud de iOS, enviamos a Meta y
-          TikTok los datos descritos en la sección 4, para saber qué campañas
-          generan instalaciones y suscripciones.
+          En iPhone, si permites el rastreo en la solicitud de iOS, enviamos a
+          Meta y TikTok los datos descritos en la sección 4, para saber qué
+          campañas generan instalaciones y suscripciones. En Android, Google
+          Play nos indica de dónde viene la instalación (por ejemplo, nuestro
+          sitio web o una de nuestras campañas) y registramos esta información
+          en PostHog.
         </li>
         <li>
           <strong>
@@ -525,29 +536,28 @@ export default function PrivacyContentEs419() {
       <ul>
         <li>Servicios de cloud computing: Supabase</li>
         <li>
-          Optimización de funciones e infraestructura: Supabase y
-          WeatherKit (Apple)
+          Optimización de funciones e infraestructura: Supabase, WeatherKit (Apple) en iPhone y Open-Meteo en Android
         </li>
-        <li>Facturación y suscripciones: RevenueCat</li>
+        <li>Facturación y suscripciones: RevenueCat, Apple (App Store) y Google Play</li>
         <li>
           Notificaciones push: Apple Push Notification service, Google
           Firebase Cloud Messaging
         </li>
         <li>
-          Registro y autenticación de cuenta: Apple (Sign In with Apple)
+          Registro y autenticación de cuenta: Supabase (correo electrónico), Apple (Sign In with Apple) y Google (Sign in with Google)
         </li>
         <li>Analítica web y móvil: PostHog</li>
         <li>
           Medición de campañas publicitarias: Meta (Facebook SDK, API de
-          Conversiones)
+          Conversiones), solo en iPhone
         </li>
         <li>
-          Medición de campañas publicitarias: TikTok (TikTok Business SDK)
+          Medición de campañas publicitarias: TikTok (TikTok Business SDK), solo en iPhone
         </li>
         <li>Pruebas de la aplicación: TestFlight</li>
       </ul>
       <p>
-        <strong>Medición de campañas publicitarias.</strong> Usamos Meta y
+        <strong>Medición de campañas publicitarias.</strong> En iPhone, usamos Meta y
         TikTok para medir la efectividad de nuestras campañas publicitarias,
         solo si lo aceptas. Mientras no permitas el rastreo en la solicitud de
         iOS, sus SDK no se activan y no se les envía ningún dato. Si permites
@@ -558,6 +568,7 @@ export default function PrivacyContentEs419() {
         síntomas, desencadenantes, notas) se les envía, en ningún caso. Puedes
         retirar tu consentimiento en cualquier momento en Configuración &gt;
         Privacidad y seguridad &gt; Rastreo.
+        La app de Android no integra Meta ni TikTok y no les envía ningún dato.
       </p>
       <p>
         También podemos necesitar compartir tus datos personales en las
@@ -595,7 +606,7 @@ export default function PrivacyContentEs419() {
         en Estados Unidos.
       </p>
       <p>
-        Si permites el rastreo, los datos enviados a Meta y TikTok para medir
+        En iPhone, si permites el rastreo, los datos enviados a Meta y TikTok para medir
         nuestras campañas publicitarias pueden ser procesados por estas
         empresas en Estados Unidos y en otros países donde operan.
       </p>

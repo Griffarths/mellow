@@ -5,7 +5,7 @@ export default function LegalContentFr() {
     <>
       <h1>Mentions légales · Mellow</h1>
       <p>
-        <strong>Dernière mise à jour&nbsp;: 18 avril 2026</strong>
+        <strong>Dernière mise à jour&nbsp;: 22 octobre 2026</strong>
       </p>
 
       <h2>1. Éditeur de l&apos;application</h2>
@@ -95,37 +95,37 @@ export default function LegalContentFr() {
         épisodes migraineux (corrélation avec des facteurs environnementaux
         tels que les conditions météorologiques ou la pression atmosphérique).
         L&apos;accès à la localisation est demandé via les APIs du système
-        d&apos;exploitation iOS et l&apos;utilisateur peut l&apos;accorder, la
+        d&apos;exploitation iOS ou Android et l&apos;utilisateur peut l&apos;accorder, la
         restreindre ou la refuser à tout moment depuis les réglages de son
         appareil. Le détail du traitement de ces données est précisé dans la{" "}
         <Link href="/confidentialite">Politique de confidentialité</Link>.
       </p>
 
-      <h2>4. Hébergement des pages légales</h2>
+      <h2>4. Hébergement du site</h2>
       <p>
-        Les présentes mentions légales, la politique de confidentialité et tout
-        autre document légal relatif à l&apos;application Mellow sont hébergés
-        par&nbsp;:
+        Le site mellowmigraine.com, qui publie les présentes mentions légales,
+        la politique de confidentialité et tout autre document légal relatif à
+        l&apos;application Mellow, est hébergé par&nbsp;:
       </p>
       <p>
-        <strong>Notion Labs, Inc.</strong>
+        <strong>Vercel Inc.</strong>
         <br />
-        2300 Harrison Street
+        440 N Barranca Avenue #4133
         <br />
-        San Francisco, CA 94110, États-Unis
+        Covina, CA 91723, États-Unis
         <br />
         <a
-          href="https://www.notion.so"
+          href="https://vercel.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          https://www.notion.so
+          https://vercel.com
         </a>
       </p>
 
       <h2>5. Distribution de l&apos;application</h2>
       <p>
-        L&apos;application Mellow est distribuée exclusivement via l&apos;App
+        L&apos;application Mellow est distribuée sur iPhone via l&apos;App
         Store, exploité par&nbsp;:
       </p>
       <p>
@@ -134,6 +134,16 @@ export default function LegalContentFr() {
         One Apple Park Way
         <br />
         Cupertino, CA 95014, États-Unis
+      </p>
+      <p>
+        et sur Android via Google Play, exploité par&nbsp;:
+      </p>
+      <p>
+        <strong>Google LLC</strong>
+        <br />
+        1600 Amphitheatre Parkway
+        <br />
+        Mountain View, CA 94043, États-Unis
       </p>
 
       <h2>6. Conditions d&apos;utilisation</h2>
@@ -183,7 +193,7 @@ export default function LegalContentFr() {
         <strong>
           <Link href="/confidentialite">Politique de confidentialité</Link>
         </strong>
-        , accessible depuis l&apos;application et depuis la fiche App Store.
+        , accessible depuis l&apos;application et depuis ses fiches App Store et Google Play.
       </p>
       <p>
         Conformément au Règlement Général sur la Protection des Données (RGPD,

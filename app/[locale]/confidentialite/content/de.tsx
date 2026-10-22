@@ -5,7 +5,7 @@ export default function PrivacyContentDe() {
     <>
       <h1>Datenschutzerklärung · Mellow</h1>
       <p>
-        <strong>Letzte Aktualisierung: 8. Oktober 2026</strong>
+        <strong>Letzte Aktualisierung: 22. Oktober 2026</strong>
       </p>
 
       <p>
@@ -176,11 +176,11 @@ export default function PrivacyContentDe() {
         sowie die Nutzer, die du blockierst.
       </p>
       <p>
-        <strong>Zahlungsdaten.</strong> Wir können die zur Bearbeitung
-        deiner Zahlung erforderlichen Daten erheben, wenn du Käufe tätigst,
-        z.&nbsp;B. die Nummer deines Zahlungsmittels und den zugehörigen
-        Sicherheitscode. Alle Zahlungsdaten werden von RevenueCat verwaltet
-        und gespeichert. Deren Datenschutzhinweis findest du hier:{" "}
+        <strong>Zahlungsdaten.</strong> Wenn du Käufe tätigst, wird die Zahlung
+        auf dem iPhone von Apple (App Store) und auf Android von Google Play
+        abgewickelt: Wir haben nie Zugriff auf deine Bank- oder Kartendaten.
+        Deine Abonnements werden von RevenueCat verwaltet, auf dem iPhone wie
+        auf Android. Deren Datenschutzhinweis findest du hier:{" "}
         <a
           href="https://www.revenuecat.com/privacy"
           target="_blank"
@@ -221,6 +221,14 @@ export default function PrivacyContentDe() {
           Umarmung schickt. Dafür speichern wir ein Benachrichtigungs-Token
           für dein Gerät. Du kannst die Benachrichtigungen in den
           Geräteeinstellungen deaktivieren.
+        </li>
+        <li>
+          <em>Schlafdaten.</em> Wenn du es erlaubst, liest Mellow deine
+          Schlafdaten aus Apple Health auf dem iPhone oder aus Health Connect
+          auf Android, um sie mit deinen Migräneattacken in Verbindung zu
+          bringen. Diese Daten werden nie für Werbezwecke verwendet und nie an
+          Meta oder TikTok übermittelt. Du kannst diesen Zugriff jederzeit in
+          den Einstellungen von Apple Health oder Health Connect widerrufen.
         </li>
       </ul>
       <p>
@@ -364,9 +372,12 @@ export default function PrivacyContentDe() {
           <strong>
             Um die Wirksamkeit unserer Werbekampagnen zu messen.
           </strong>{" "}
-          Wenn du das Tracking in der Anfrage von iOS erlaubst, übermitteln
-          wir Meta und TikTok die in Abschnitt 4 beschriebenen Daten, um zu
-          erfahren, welche Kampagnen zu Installationen und Abonnements führen.
+          Wenn du auf dem iPhone das Tracking in der Anfrage von iOS erlaubst,
+          übermitteln wir Meta und TikTok die in Abschnitt 4 beschriebenen
+          Daten, um zu erfahren, welche Kampagnen zu Installationen und
+          Abonnements führen. Auf Android teilt uns Google Play mit, woher die
+          Installation stammt (zum Beispiel von unserer Website oder aus einer
+          unserer Kampagnen), und wir speichern diese Information in PostHog.
         </li>
         <li>
           <strong>
@@ -538,27 +549,25 @@ export default function PrivacyContentDe() {
       <ul>
         <li>Cloud-Computing-Dienste: Supabase</li>
         <li>
-          Funktionalität und Infrastrukturoptimierung: Supabase und
-          WeatherKit (Apple)
+          Funktionalität und Infrastrukturoptimierung: Supabase, WeatherKit (Apple) auf dem iPhone und Open-Meteo auf Android
         </li>
-        <li>Rechnungsstellung und Abrechnung: RevenueCat</li>
+        <li>Rechnungsstellung und Abrechnung: RevenueCat, Apple (App Store) und Google Play</li>
         <li>
           Push-Benachrichtigungen: Apple Push Notification service, Google
           Firebase Cloud Messaging
         </li>
         <li>
-          Kontoregistrierung und -authentifizierung: Apple (Sign In with
-          Apple)
+          Kontoregistrierung und -authentifizierung: Supabase (E-Mail), Apple (Sign In with Apple) und Google (Sign in with Google)
         </li>
         <li>Web- und Mobile-Analytics: PostHog</li>
         <li>
-          Messung von Werbekampagnen: Meta (Facebook SDK, Conversions API)
+          Messung von Werbekampagnen: Meta (Facebook SDK, Conversions API), nur auf dem iPhone
         </li>
-        <li>Messung von Werbekampagnen: TikTok (TikTok Business SDK)</li>
+        <li>Messung von Werbekampagnen: TikTok (TikTok Business SDK), nur auf dem iPhone</li>
         <li>App-Tests: TestFlight</li>
       </ul>
       <p>
-        <strong>Messung von Werbekampagnen.</strong> Wir nutzen Meta und
+        <strong>Messung von Werbekampagnen.</strong> Auf dem iPhone nutzen wir Meta und
         TikTok, um die Wirksamkeit unserer Werbekampagnen zu messen, aber nur,
         wenn du zustimmst. Solange du das Tracking in der Anfrage von iOS
         nicht erlaubt hast, sind ihre SDKs nicht aktiviert und es werden keine
@@ -570,6 +579,8 @@ export default function PrivacyContentDe() {
         Symptome, Auslöser, Notizen), werden ihnen in keinem Fall übermittelt.
         Du kannst deine Zustimmung jederzeit unter Einstellungen &gt;
         Datenschutz & Sicherheit &gt; Tracking widerrufen.
+        Die Android-App enthält weder Meta noch TikTok und übermittelt ihnen
+        keine Daten.
       </p>
       <p>
         Wir können deine personenbezogenen Daten auch in folgenden
@@ -607,7 +618,7 @@ export default function PrivacyContentDe() {
         den USA.
       </p>
       <p>
-        Wenn du das Tracking erlaubst, können die Daten, die wir zur Messung
+        Wenn du auf dem iPhone das Tracking erlaubst, können die Daten, die wir zur Messung
         unserer Werbekampagnen an Meta und TikTok übermitteln, von diesen
         Unternehmen in den USA und in anderen Ländern verarbeitet werden, in
         denen sie tätig sind.
