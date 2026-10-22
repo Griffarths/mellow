@@ -1,7 +1,12 @@
 import createMiddleware from "next-intl/middleware";
 import { NextResponse, type NextRequest } from "next/server";
 import { routing } from "./i18n/routing";
-import { APP_STORE_URL, PLAY_STORE_URL } from "./lib/stores";
+import {
+  APP_STORE_INSTAGRAM_URL,
+  APP_STORE_URL,
+  PLAY_STORE_INSTAGRAM_URL,
+  PLAY_STORE_URL,
+} from "./lib/stores";
 
 const withDetection = createMiddleware(routing);
 // Deep links (articles, tools, /about) often exist in one language only:
@@ -17,17 +22,22 @@ const withoutDetection = createMiddleware({ ...routing, localeDetection: false }
 // the campaign.
 const ANDROID_PAGE = /^\/(?:(?:en|fr|de|it|es|es-419|pt|pt-BR)\/)?android\/?$/;
 
-// The site's QR code (public/qr-download.svg) opens /qr, which sends each
-// phone to its store with the "site" campaign: Google Play on Android, the
-// App Store on iPhone, iPad and Mac (an iPad's Safari presents itself as a
-// Mac), and anything else to the home page in the visitor's language. Not
-// cached: the answer depends on the device.
-const QR_PAGE = /^\/qr\/?$/;
+// Short links that send each device straight to its store: Google Play on
+// Android, the App Store on iPhone, iPad and Mac (an iPad's Safari presents
+// itself as a Mac), and anything else to the home page in the visitor's
+// language. Not cached: the answer depends on the device.
+// /qr: the site's QR code (public/qr-download.svg), "site" campaign.
+// /instagram: the link in Mellow's Instagram bio, "instagram-bio" campaign.
+type StoreLinks = { play: string; appStore: string };
+const STORE_LINKS: Record<string, StoreLinks> = {
+  "/qr": { play: PLAY_STORE_URL, appStore: APP_STORE_URL },
+  "/instagram": { play: PLAY_STORE_INSTAGRAM_URL, appStore: APP_STORE_INSTAGRAM_URL },
+};
 
-function storeFor(request: NextRequest) {
+function storeFor(request: NextRequest, links: StoreLinks) {
   const userAgent = request.headers.get("user-agent") ?? "";
-  if (/android/i.test(userAgent)) return PLAY_STORE_URL;
-  if (/iphone|ipad|ipod|macintosh/i.test(userAgent)) return APP_STORE_URL;
+  if (/android/i.test(userAgent)) return links.play;
+  if (/iphone|ipad|ipod|macintosh/i.test(userAgent)) return links.appStore;
   return new URL("/", request.url).toString();
 }
 
@@ -35,8 +45,12 @@ export default function proxy(request: NextRequest) {
   if (ANDROID_PAGE.test(request.nextUrl.pathname)) {
     return new NextResponse(null, { status: 308, headers: { Location: PLAY_STORE_URL } });
   }
-  if (QR_PAGE.test(request.nextUrl.pathname)) {
-    return new NextResponse(null, { status: 307, headers: { Location: storeFor(request), "Cache-Control": "no-store" } });
+  const links = STORE_LINKS[request.nextUrl.pathname.replace(/\/$/, "")];
+  if (links) {
+    return new NextResponse(null, {
+      status: 307,
+      headers: { Location: storeFor(request, links), "Cache-Control": "no-store" },
+    });
   }
   return request.nextUrl.pathname === "/"
     ? withDetection(request)

@@ -21,3 +21,10 @@ export const PLAY_STORE_URL =
 export const PLAY_STORE_BLOG_URL =
   "https://play.google.com/store/apps/details?id=com.arthurgriffiths.mellow&referrer=utm_source%3Dmellowmigraine%26utm_medium%3Dweb%26utm_campaign%3Dblog";
 export const PLAY_STORE_URLS: Record<StoreCampaign, string> = { site: PLAY_STORE_URL, blog: PLAY_STORE_BLOG_URL };
+
+// The link in Mellow's Instagram bio, /instagram, which proxy.ts sends to the
+// right store: "instagram-bio" campaign on both.
+export const APP_STORE_INSTAGRAM_URL =
+  "https://apps.apple.com/app/apple-store/id6762257609?pt=128563123&ct=instagram-bio&mt=8";
+export const PLAY_STORE_INSTAGRAM_URL =
+  "https://play.google.com/store/apps/details?id=com.arthurgriffiths.mellow&referrer=utm_source%3Dinstagram%26utm_medium%3Dsocial%26utm_campaign%3Dinstagram-bio";
