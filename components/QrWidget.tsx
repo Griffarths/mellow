@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
-import { APP_STORE_URL } from "@/lib/stores";
 
 // Remembered for the visit, from page to page (a reload included).
 const STORAGE_KEY = "mellow-qr-collapsed";
@@ -125,10 +124,11 @@ export function QrWidget() {
             </svg>
           </button>
           <p className="text-[15px] font-bold leading-tight text-ink">{t("title")}</p>
-          {/* A click works too, for a visitor who would rather not scan. */}
-          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="mt-3 block">
+          {/* Not a link: a click from a computer could only pick one store,
+              and the page's badges already lead to both. */}
+          <div className="mt-3">
             <img src="/qr-download.svg" alt={t("qrAlt")} width={31} height={31} className="mx-auto h-32 w-32" />
-          </a>
+          </div>
           <p className="mt-2 text-xs text-ink-3">{t("scan")}</p>
         </div>
       )}
