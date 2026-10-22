@@ -554,7 +554,6 @@ export default function PrivacyContentEs419() {
         <li>
           Medición de campañas publicitarias: TikTok (TikTok Business SDK), solo en iPhone
         </li>
-        <li>Pruebas de la aplicación: TestFlight</li>
       </ul>
       <p>
         <strong>Medición de campañas publicitarias.</strong> En iPhone, usamos Meta y

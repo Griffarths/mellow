@@ -524,7 +524,6 @@ export default function PrivacyContentEn() {
         <li>Web and Mobile Analytics: PostHog</li>
         <li>Advertising Measurement: Meta (Facebook SDK, Conversions API), iPhone only</li>
         <li>Advertising Measurement: TikTok (TikTok Business SDK), iPhone only</li>
-        <li>Website Testing: TestFlight</li>
       </ul>
       <p>
         <strong>Advertising campaign measurement.</strong> On iPhone, we use Meta and

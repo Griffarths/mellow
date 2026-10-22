@@ -578,7 +578,6 @@ export default function PrivacyContentFr() {
         <li>
           Mesure des campagnes publicitaires&nbsp;: TikTok (TikTok Business SDK), sur iPhone uniquement
         </li>
-        <li>Tests applicatifs&nbsp;: TestFlight</li>
       </ul>
       <p>
         <strong>Mesure des campagnes publicitaires.</strong> Sur iPhone, nous utilisons

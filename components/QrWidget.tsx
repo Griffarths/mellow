@@ -11,8 +11,10 @@ const STORAGE_KEY = "mellow-qr-collapsed";
 const SHADOW = "shadow-[0_1px_3px_rgb(0_0_0/0.06),0_16px_32px_-12px_rgb(0_0_0/0.18)] ring-1 ring-black/[0.04]";
 
 // From a laptop up, in the bottom right corner of every page: a white card
-// with the Mellow sitting on its top edge and the App Store QR code, to scan
-// with the iPhone (phones only get the badges: they cannot scan themselves).
+// with the Mellow sitting on its top edge and the QR code, to scan with a
+// phone: it opens /qr, which proxy.ts sends to Google Play on Android and to
+// the App Store on iPhone (phones only get the badges: they cannot scan
+// themselves).
 // The cross folds it into the Mellow alone, in a round button that opens it
 // again. It is there from the top of every page, the home page's hero
 // included, and only steps aside while an element marked data-hides-qr is on
@@ -125,7 +127,7 @@ export function QrWidget() {
           <p className="text-[15px] font-bold leading-tight text-ink">{t("title")}</p>
           {/* A click works too, for a visitor who would rather not scan. */}
           <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="mt-3 block">
-            <img src="/qr-app-store.svg" alt={t("qrAlt")} width={31} height={31} className="mx-auto h-32 w-32" />
+            <img src="/qr-download.svg" alt={t("qrAlt")} width={31} height={31} className="mx-auto h-32 w-32" />
           </a>
           <p className="mt-2 text-xs text-ink-3">{t("scan")}</p>
         </div>

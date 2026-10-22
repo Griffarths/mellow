@@ -5,13 +5,13 @@ import { APP_STORE_RATING } from "@/content/reviews";
 import { Stars } from "./SocialProof";
 import type { StoreCampaign } from "@/lib/stores";
 
-// Last call to download: the mascot, text, App Store rating and badge on the
+// Last call to download: the mascot, text, App Store rating and badges on the
 // left, and on computers a card with the app icon and a QR code to scan with
-// the iPhone (public/qr-app-store.svg, generated with macOS CoreImage from
-// the "site" campaign link of lib/stores.ts, error correction M, then drawn
-// with round dots and rounded corners; checked with Apple's Vision and
-// CoreImage readers). Phones only get the badge: they cannot scan
-// themselves.
+// a phone (public/qr-download.svg: https://mellowmigraine.com/qr, which
+// proxy.ts sends to Google Play or the App Store with the "site" campaign;
+// generated with macOS CoreImage, error correction M, then drawn with round
+// dots and rounded corners; checked with Apple's Vision and CoreImage
+// readers). Phones only get the badges: they cannot scan themselves.
 // campaign: the badge's link, "blog" at the end of the blog's pages. The QR
 // code stays the site's on every page.
 export function FinalCta({ campaign = "site" }: { campaign?: StoreCampaign } = {}) {
@@ -58,7 +58,7 @@ export function FinalCta({ campaign = "site" }: { campaign?: StoreCampaign } = {
               <img src="/logo.png" alt="" aria-hidden width={450} height={450} className="h-10 w-10" />
             </span>
             <img
-              src="/qr-app-store.svg"
+              src="/qr-download.svg"
               alt={t("qrAlt")}
               width={31}
               height={31}

@@ -564,7 +564,6 @@ export default function PrivacyContentDe() {
           Messung von Werbekampagnen: Meta (Facebook SDK, Conversions API), nur auf dem iPhone
         </li>
         <li>Messung von Werbekampagnen: TikTok (TikTok Business SDK), nur auf dem iPhone</li>
-        <li>App-Tests: TestFlight</li>
       </ul>
       <p>
         <strong>Messung von Werbekampagnen.</strong> Auf dem iPhone nutzen wir Meta und

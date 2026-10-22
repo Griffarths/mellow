@@ -544,7 +544,6 @@ export default function PrivacyContentIt() {
           Misurazione delle campagne pubblicitarie: TikTok (TikTok Business
           SDK), solo su iPhone
         </li>
-        <li>Test dell&apos;applicazione: TestFlight</li>
       </ul>
       <p>
         <strong>Misurazione delle campagne pubblicitarie.</strong> Su iPhone, usiamo Meta

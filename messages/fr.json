@@ -393,8 +393,8 @@
     "title": "Télécharge Mellow",
     "subtitle": "Gratuit à télécharger. Note ta première crise en quelques secondes.",
     "rating": "{rating} sur {count, plural, one {# note} other {# notes}}",
-    "scan": "Scanne avec ton iPhone",
-    "qrAlt": "QR code vers Mellow sur l'App Store",
+    "scan": "Scanne avec ton téléphone",
+    "qrAlt": "QR code pour télécharger Mellow",
     "qrOpen": "Afficher le QR code pour télécharger Mellow",
     "qrClose": "Fermer"
   },
