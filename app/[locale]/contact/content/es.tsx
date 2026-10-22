@@ -106,9 +106,8 @@ export default function ContactContentEs() {
 
       <h3>Restaurar compras</h3>
       <p>
-        Abre Mellow, ve a Ajustes y toca «Restaurar compras». Asegúrate de
-        haber iniciado sesión con el mismo Apple ID que usaste para
-        suscribirte.
+        Abre Mellow, ve a Ajustes y toca «Restaurar compras». Asegúrate de haber iniciado sesión con la cuenta que usaste para
+        suscribirte: tu Apple ID en iPhone o tu cuenta de Google en Android.
       </p>
 
       <hr />

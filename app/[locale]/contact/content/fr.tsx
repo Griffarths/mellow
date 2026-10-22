@@ -109,8 +109,9 @@ export default function ContactContentFr() {
       <h3>Restaurer les achats</h3>
       <p>
         Ouvre Mellow, va dans Réglages et touche «&nbsp;Restaurer les
-        achats&nbsp;». Assure-toi d&apos;être connecté avec le même identifiant
-        Apple que celui utilisé pour t&apos;abonner.
+        achats&nbsp;». Assure-toi d&apos;être connecté avec le compte utilisé pour
+        t&apos;abonner&nbsp;: ton identifiant Apple sur iPhone ou ton compte
+        Google sur Android.
       </p>
 
       <hr />

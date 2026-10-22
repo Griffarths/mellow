@@ -105,8 +105,8 @@ export default function ContactContentIt() {
       <h3>Ripristinare gli acquisti</h3>
       <p>
         Apri Mellow, vai in Impostazioni e tocca «Ripristina acquisti».
-        Assicurati di aver effettuato l&apos;accesso con lo stesso ID Apple
-        usato per abbonarti.
+        Assicurati di aver effettuato l&apos;accesso con l&apos;account usato per
+        abbonarti: il tuo ID Apple su iPhone o il tuo account Google su Android.
       </p>
 
       <hr />

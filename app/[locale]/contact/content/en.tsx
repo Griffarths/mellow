@@ -101,8 +101,8 @@ export default function ContactContentEn() {
       <h3>Restore purchases</h3>
       <p>
         Open Mellow, go to Settings, and tap &quot;Restore purchases.&quot;
-        Make sure you&apos;re signed in with the same Apple ID you used to
-        subscribe.
+        Make sure you&apos;re signed in with the account you used to subscribe:
+        your Apple ID on iPhone or your Google account on Android.
       </p>
 
       <hr />

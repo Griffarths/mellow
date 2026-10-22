@@ -106,8 +106,8 @@ export default function ContactContentPtBr() {
       <h3>Restaurar compras</h3>
       <p>
         Abra o Mellow, vá em Ajustes e toque em «Restaurar compras».
-        Certifique-se de estar conectado com o mesmo Apple ID usado para
-        assinar.
+        Certifique-se de estar conectado à conta usada para assinar: seu Apple ID
+        no iPhone ou sua conta Google no Android.
       </p>
 
       <hr />

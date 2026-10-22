@@ -107,8 +107,9 @@ export default function ContactContentDe() {
       <h3>Käufe wiederherstellen</h3>
       <p>
         Öffne Mellow, gehe zu Einstellungen und tippe auf „Käufe
-        wiederherstellen". Achte darauf, mit derselben Apple ID angemeldet zu
-        sein, mit der du das Abonnement abgeschlossen hast.
+        wiederherstellen". Achte darauf, mit dem Konto angemeldet zu sein, mit dem du das Abonnement
+        abgeschlossen hast: deiner Apple ID auf dem iPhone oder deinem
+        Google-Konto auf Android.
       </p>
 
       <hr />
