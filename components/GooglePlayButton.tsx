@@ -1,21 +1,22 @@
 import { useLocale, useTranslations } from "next-intl";
 import type { Locale } from "@/i18n/routing";
-import { PLAY_STORE_URL } from "@/lib/stores";
+import { PLAY_STORE_URLS, type StoreCampaign } from "@/lib/stores";
 
 type Props = {
   className?: string;
   sizeClass?: string;
+  // Which campaign link (lib/stores.ts): the site's, unless the button
+  // belongs to the blog.
+  campaign?: StoreCampaign;
 };
 
 // Official badges from play.google.com/intl/en_us/badges, one per locale.
-export function GooglePlayButton({ className = "", sizeClass }: Props) {
+export function GooglePlayButton({ className = "", sizeClass, campaign = "site" }: Props) {
   const locale = useLocale() as Locale;
   const t = useTranslations("nav");
-  if (!PLAY_STORE_URL) return null;
-
   return (
     <a
-      href={PLAY_STORE_URL}
+      href={PLAY_STORE_URLS[campaign]}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={t("googlePlayAriaLabel")}

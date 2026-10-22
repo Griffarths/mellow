@@ -10,8 +10,6 @@
     "app": "Die App",
     "doctor": "Für deinen Arzt",
     "blog": "Blog",
-    "androidBeta": "Android testen",
-    "android": "Android-App",
     "googlePlayAriaLabel": "Jetzt bei Google Play",
     "download": "Laden",
     "menuOpen": "Menü öffnen",
@@ -82,7 +80,7 @@
     "subtitle": "Dein Begleiter, um deine Migräne kennenzulernen und zu verstehen.",
     "free": {
       "title": "Kostenlos, einfach und zuverlässig",
-      "text": "Mellow ist eine einfache, übersichtliche und gut strukturierte App, die alle Aspekte deiner Migräne erfasst: Stärke, Medikamente, Symptome und Auslöser. Verfügbar auf dem iPhone und im Test auf Android, speichert sie deine Daten in der Cloud, damit du deinen Verlauf auf all deinen Geräten wiederfindest, wann immer du ihn brauchst."
+      "text": "Mellow ist eine einfache, übersichtliche und gut strukturierte App, die alle Aspekte deiner Migräne erfasst: Stärke, Medikamente, Symptome und Auslöser. Verfügbar auf iPhone und Android, speichert sie deine Daten in der Cloud, damit du deinen Verlauf auf all deinen Geräten wiederfindest, wann immer du ihn brauchst."
     },
     "founder": {
       "title": "Entwickelt von einer Migränebetroffenen",
@@ -95,7 +93,7 @@
   },
   "appPage": {
     "metaTitle": "Migräne-Tracker-App · Mellow",
-    "metaDescription": "Mellow, die App zum Erfassen deiner Migräne: Erfasse eine Attacke mit zwei Taps, behalte deinen Kalender im Blick, verstehe deine Auslöser und bereite deine Arzttermine vor. Kostenlos auf dem iPhone.",
+    "metaDescription": "Mellow, die App zum Erfassen deiner Migräne: Erfasse eine Attacke mit zwei Taps, behalte deinen Kalender im Blick, verstehe deine Auslöser und bereite deine Arzttermine vor. Kostenlos für iPhone und Android.",
     "title": "Die Mellow-App",
     "subtitle": "Hol dir die Kontrolle über deine Migräne zurück.",
     "promises": [

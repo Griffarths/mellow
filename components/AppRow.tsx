@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import { APP_STORE_RATING } from "@/content/reviews";
-import type { AppStoreCampaign } from "@/lib/stores";
+import type { StoreCampaign } from "@/lib/stores";
 import { StoreBadges } from "./StoreBadges";
 import { Stars } from "./sections/SocialProof";
 
@@ -8,7 +8,7 @@ type Props = {
   title: string;
   text: string;
   className?: string;
-  campaign?: AppStoreCampaign;
+  campaign?: StoreCampaign;
 };
 
 // The app like a small App Store listing, between two rules on the white

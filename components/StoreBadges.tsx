@@ -1,4 +1,4 @@
-import type { AppStoreCampaign } from "@/lib/stores";
+import type { StoreCampaign } from "@/lib/stores";
 import { AppStoreButton } from "./AppStoreButton";
 import { GooglePlayButton } from "./GooglePlayButton";
 
@@ -6,7 +6,7 @@ type Props = {
   className?: string;
   sizeClass?: string;
   align?: "center" | "start";
-  campaign?: AppStoreCampaign;
+  campaign?: StoreCampaign;
 };
 
 // 48px on mobile keeps both badges on one line at 375px wide (worst case:
@@ -26,7 +26,7 @@ export function StoreBadges({
       } ${className}`}
     >
       <AppStoreButton sizeClass={sizeClass} campaign={campaign} />
-      <GooglePlayButton sizeClass={sizeClass} />
+      <GooglePlayButton sizeClass={sizeClass} campaign={campaign} />
     </div>
   );
 }

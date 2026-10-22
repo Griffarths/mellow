@@ -10,8 +10,6 @@
     "app": "La app",
     "doctor": "Para tu médico",
     "blog": "Blog",
-    "androidBeta": "Probar Android",
-    "android": "App Android",
     "googlePlayAriaLabel": "Disponible en Google Play",
     "download": "Descargar",
     "menuOpen": "Abrir el menú",
@@ -82,7 +80,7 @@
     "subtitle": "Tu compañero para aprender sobre tus migrañas y entenderlas.",
     "free": {
       "title": "Gratis, fácil de usar y confiable",
-      "text": "Mellow te ofrece una app sencilla, clara y bien organizada, que registra todos los aspectos de tus migrañas: intensidad, medicamentos, síntomas y desencadenantes. Disponible en iPhone y en pruebas en Android, guarda tus datos en la nube para que encuentres tu historial en todos tus dispositivos, cada vez que lo necesites."
+      "text": "Mellow te ofrece una app sencilla, clara y bien organizada, que registra todos los aspectos de tus migrañas: intensidad, medicamentos, síntomas y desencadenantes. Disponible en iPhone y Android, guarda tus datos en la nube para que encuentres tu historial en todos tus dispositivos, cada vez que lo necesites."
     },
     "founder": {
       "title": "Desarrollada por alguien con migraña",
@@ -95,7 +93,7 @@
   },
   "appPage": {
     "metaTitle": "App para el registro de migrañas · Mellow",
-    "metaDescription": "Mellow, la app para llevar el registro de tus migrañas: registra una crisis con dos toques, sigue tu calendario, entiende tus desencadenantes y prepara tus citas médicas. Gratis en iPhone.",
+    "metaDescription": "Mellow, la app para llevar el registro de tus migrañas: registra una crisis con dos toques, sigue tu calendario, entiende tus desencadenantes y prepara tus citas médicas. Gratis en iPhone y Android.",
     "title": "La app Mellow",
     "subtitle": "Recupera el control de tus migrañas.",
     "promises": [

@@ -2,6 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
+import { DownloadButton } from "./DownloadButton";
 
 type Item = { href: string; label: string; description?: string };
 
@@ -12,14 +13,10 @@ type Props = {
   resources: Item[];
   // The blog.
   links: Item[];
-  // Small, under the store badges; external opens in a new tab.
-  android: Item & { external: boolean };
   download: {
     label: string;
     appStoreUrl: string;
-    // Play Store URL once public, else the Android tester page.
-    androidHref: string;
-    androidExternal: boolean;
+    playStoreUrl: string;
   };
   openLabel: string;
   closeLabel: string;
@@ -35,19 +32,12 @@ export function MobileMenu({
   resourcesTitle,
   resources,
   links,
-  android,
   download,
   openLabel,
   closeLabel,
   badges,
 }: Props) {
   const [open, setOpen] = useState(false);
-  // Android visitors get the Android page instead of the App Store. Read
-  // after mount so the server and first client render match.
-  const [isAndroid, setIsAndroid] = useState(false);
-  useEffect(() => {
-    setIsAndroid(/android/i.test(navigator.userAgent));
-  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -65,25 +55,10 @@ export function MobileMenu({
   }, [open]);
 
   const close = () => setOpen(false);
-  const downloadClass =
-    "nav-cta inline-flex h-9 items-center whitespace-nowrap rounded-full bg-ink px-4 text-sm font-semibold text-white transition hover:bg-ink/85";
 
   return (
     <div className="flex shrink-0 items-center gap-1.5 md:hidden">
-      {isAndroid && !download.androidExternal ? (
-        <Link href={download.androidHref} className={downloadClass}>
-          {download.label}
-        </Link>
-      ) : (
-        <a
-          href={isAndroid ? download.androidHref : download.appStoreUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={downloadClass}
-        >
-          {download.label}
-        </a>
-      )}
+      <DownloadButton label={download.label} appStoreUrl={download.appStoreUrl} playStoreUrl={download.playStoreUrl} />
 
       <button
         type="button"
@@ -140,15 +115,6 @@ export function MobileMenu({
           </ul>
 
           <div className="mt-8">{badges}</div>
-          {android.external ? (
-            <a href={android.href} target="_blank" rel="noopener noreferrer" onClick={close} className="mt-4 inline-block text-sm font-semibold text-ink-3">
-              {android.label}
-            </a>
-          ) : (
-            <Link href={android.href} onClick={close} className="mt-4 inline-block text-sm font-semibold text-ink-3">
-              {android.label}
-            </Link>
-          )}
         </nav>
       )}
     </div>

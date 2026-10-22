@@ -3,7 +3,7 @@ import { StoreBadges } from "../StoreBadges";
 import { Blob } from "../phones/Blob";
 import { APP_STORE_RATING } from "@/content/reviews";
 import { Stars } from "./SocialProof";
-import type { AppStoreCampaign } from "@/lib/stores";
+import type { StoreCampaign } from "@/lib/stores";
 
 // Last call to download: the mascot, text, App Store rating and badge on the
 // left, and on computers a card with the app icon and a QR code to scan with
@@ -14,7 +14,7 @@ import type { AppStoreCampaign } from "@/lib/stores";
 // themselves.
 // campaign: the badge's link, "blog" at the end of the blog's pages. The QR
 // code stays the site's on every page.
-export function FinalCta({ campaign = "site" }: { campaign?: AppStoreCampaign } = {}) {
+export function FinalCta({ campaign = "site" }: { campaign?: StoreCampaign } = {}) {
   const t = useTranslations("finalCta");
   const tStars = useTranslations("socialProof");
   const locale = useLocale();

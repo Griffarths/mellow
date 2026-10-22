@@ -7,6 +7,7 @@ import { TOOLS_LABEL, isToolLocale, toolsMenu } from "@/lib/tools";
 import { MobileMenu } from "./MobileMenu";
 import { NavShell } from "./NavShell";
 import { ToolsMenu } from "./ToolsMenu";
+import { DownloadButton } from "./DownloadButton";
 import { StoreBadges } from "./StoreBadges";
 
 // Black, pink on hover. nav-on-hero: white while the nav is transparent over
@@ -31,9 +32,6 @@ export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
       }))
     : [];
   const doctor = DOCTOR_PATH[locale] ?? DOCTOR_PATH.en;
-  const android = PLAY_STORE_URL
-    ? { href: PLAY_STORE_URL, label: t("android"), external: true }
-    : { href: "/android", label: t("androidBeta"), external: false };
 
   return (
     <NavShell overHero={overHero}>
@@ -68,19 +66,18 @@ export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
             </Link>
           </div>
         </div>
-        {/* Android, small, beside the badge; both hidden over the home hero
-            until the nav turns white (nav-cta). */}
-        <div className="nav-cta hidden shrink-0 items-center gap-4 md:flex">
-          {android.external ? (
-            <a href={android.href} target="_blank" rel="noopener noreferrer" className="hidden whitespace-nowrap text-xs font-semibold text-ink-3 transition hover:text-ink lg:block">
-              {android.label}
-            </a>
-          ) : (
-            <Link href={android.href} className="hidden whitespace-nowrap text-xs font-semibold text-ink-3 transition hover:text-ink lg:block">
-              {android.label}
-            </Link>
-          )}
-          <StoreBadges className="shrink-0 flex-nowrap gap-2" sizeClass="h-10 w-auto select-none" />
+        {/* The App Store and Google Play badges from a laptop up; on a
+            tablet, where they do not fit beside the links, the compact
+            download button. Hidden over the home hero until the nav turns
+            white (nav-cta). */}
+        <div className="nav-cta hidden shrink-0 items-center md:flex">
+          <DownloadButton
+            label={t("download")}
+            appStoreUrl={APP_STORE_URL}
+            playStoreUrl={PLAY_STORE_URL}
+            className="lg:hidden"
+          />
+          <StoreBadges className="hidden shrink-0 flex-nowrap gap-2 lg:flex" sizeClass="h-10 w-auto select-none" />
         </div>
         <MobileMenu
           top={[
@@ -90,12 +87,10 @@ export function Nav({ overHero = false }: { overHero?: boolean } = {}) {
           resourcesTitle={isToolLocale(locale) ? TOOLS_LABEL[locale] : ""}
           resources={resources}
           links={[{ href: "/blog", label: t("blog") }]}
-          android={android}
           download={{
             label: t("download"),
             appStoreUrl: APP_STORE_URL,
-            androidHref: android.href,
-            androidExternal: android.external,
+            playStoreUrl: PLAY_STORE_URL,
           }}
           openLabel={t("menuOpen")}
           closeLabel={t("menuClose")}

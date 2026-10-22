@@ -10,8 +10,6 @@
     "app": "The app",
     "doctor": "For your doctor",
     "blog": "Blog",
-    "androidBeta": "Test on Android",
-    "android": "Android app",
     "googlePlayAriaLabel": "Get it on Google Play",
     "download": "Download",
     "menuOpen": "Open menu",
@@ -77,7 +75,7 @@
     "subtitle": "Your companion to learn about and understand your migraines.",
     "free": {
       "title": "Free, easy to use and reliable",
-      "text": "Mellow gives you a simple, clear and well-organized app that tracks every aspect of your migraines: intensity, medication, symptoms and triggers. Available on iPhone and in beta on Android, it saves your data in the cloud, so you can find your history on all your devices whenever you need it."
+      "text": "Mellow gives you a simple, clear and well-organized app that tracks every aspect of your migraines: intensity, medication, symptoms and triggers. Available on iPhone and Android, it saves your data in the cloud, so you can find your history on all your devices whenever you need it."
     },
     "founder": {
       "title": "Developed by someone with migraine",
@@ -90,7 +88,7 @@
   },
   "appPage": {
     "metaTitle": "Migraine tracking app · Mellow",
-    "metaDescription": "Mellow, the migraine tracking app: log an attack in two taps, follow your calendar, understand your triggers and prepare for your appointments. Free on iPhone.",
+    "metaDescription": "Mellow, the migraine tracking app: log an attack in two taps, follow your calendar, understand your triggers and prepare for your appointments. Free on iPhone and Android.",
     "title": "The Mellow app",
     "subtitle": "Take back control of your migraines.",
     "promises": [

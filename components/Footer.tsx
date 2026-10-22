@@ -4,7 +4,6 @@ import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { ABOUT_PATH } from "@/lib/about";
 import { DOCTOR_PATH } from "@/lib/doctor";
-import { PLAY_STORE_URL } from "@/lib/stores";
 import { TOOLS_LABEL, isToolLocale, toolsMenu } from "@/lib/tools";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { StoreBadges } from "./StoreBadges";
@@ -63,15 +62,6 @@ export function Footer({ localePaths }: Props = {}) {
             <Link href={about} className={LINK}>
               {t("about")}
             </Link>
-            {PLAY_STORE_URL ? (
-              <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className={LINK}>
-                {nav("android")}
-              </a>
-            ) : (
-              <Link href="/android" className={LINK}>
-                {nav("androidBeta")}
-              </Link>
-            )}
             <Link href="/editorial" className={LINK}>
               {t("editorial")}
             </Link>

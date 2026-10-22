@@ -10,8 +10,6 @@
     "app": "A app",
     "doctor": "Para o teu médico",
     "blog": "Blog",
-    "androidBeta": "Testar Android",
-    "android": "App Android",
     "googlePlayAriaLabel": "Obter no Google Play",
     "download": "Descarregar",
     "menuOpen": "Abrir o menu",
@@ -82,7 +80,7 @@
     "subtitle": "A tua companheira para conhecer e compreender as tuas enxaquecas.",
     "free": {
       "title": "Gratuita, fácil de usar e fiável",
-      "text": "A Mellow oferece-te uma app simples, clara e bem organizada, que acompanha todos os aspetos das tuas enxaquecas: intensidade, medicação, sintomas e fatores desencadeantes. Disponível no iPhone e em teste no Android, guarda os teus dados na nuvem, para que encontres o teu histórico em todos os teus dispositivos, sempre que precisares."
+      "text": "A Mellow oferece-te uma app simples, clara e bem organizada, que acompanha todos os aspetos das tuas enxaquecas: intensidade, medicação, sintomas e fatores desencadeantes. Disponível no iPhone e no Android, guarda os teus dados na nuvem, para que encontres o teu histórico em todos os teus dispositivos, sempre que precisares."
     },
     "founder": {
       "title": "Desenvolvida por uma pessoa com enxaqueca",
@@ -95,7 +93,7 @@
   },
   "appPage": {
     "metaTitle": "App de registo de enxaquecas · Mellow",
-    "metaDescription": "A Mellow é a app para acompanhares as tuas enxaquecas: regista uma crise em dois toques, segue o teu calendário, percebe os teus fatores desencadeantes e prepara as tuas consultas. Gratuita no iPhone.",
+    "metaDescription": "A Mellow é a app para acompanhares as tuas enxaquecas: regista uma crise em dois toques, segue o teu calendário, percebe os teus fatores desencadeantes e prepara as tuas consultas. Gratuita no iPhone e no Android.",
     "title": "A app Mellow",
     "subtitle": "Retoma o controlo das tuas enxaquecas.",
     "promises": [

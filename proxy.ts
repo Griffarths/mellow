@@ -1,6 +1,7 @@
 import createMiddleware from "next-intl/middleware";
-import type { NextRequest } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 import { routing } from "./i18n/routing";
+import { PLAY_STORE_URL } from "./lib/stores";
 
 const withDetection = createMiddleware(routing);
 // Deep links (articles, tools, /about) often exist in one language only:
@@ -9,7 +10,17 @@ const withDetection = createMiddleware(routing);
 // visitor's language.
 const withoutDetection = createMiddleware({ ...routing, localeDetection: false });
 
+// The Android testers' page (/android, in every language) became useless once
+// Mellow was on Google Play (2026-10-22): links already shared to testers now
+// open the Play Store listing. Redirected here and not in next.config.ts,
+// whose redirects decode the referrer parameter (%3D, %26) and would split
+// the campaign.
+const ANDROID_PAGE = /^\/(?:(?:en|fr|de|it|es|es-419|pt|pt-BR)\/)?android\/?$/;
+
 export default function proxy(request: NextRequest) {
+  if (ANDROID_PAGE.test(request.nextUrl.pathname)) {
+    return new NextResponse(null, { status: 308, headers: { Location: PLAY_STORE_URL } });
+  }
   return request.nextUrl.pathname === "/"
     ? withDetection(request)
     : withoutDetection(request);
