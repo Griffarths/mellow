@@ -20,7 +20,7 @@ export default function ContactContentEs() {
 
       <h2>Acerca de Mellow</h2>
       <p>
-        Mellow es un diario de migrañas y dolores de cabeza para iOS, sereno y
+        Mellow es un diario de migrañas y dolores de cabeza para iPhone y Android, sereno y
         cuidado en su diseño. Registra tus episodios en segundos, sigue
         desencadenantes como el estrés, el sueño, las hormonas y el clima, y
         empieza a ver los patrones detrás de tu dolor.
@@ -39,7 +39,7 @@ export default function ContactContentEs() {
       </p>
 
       <h3>Gestionar o cancelar tu suscripción</h3>
-      <p>Las suscripciones se gestionan a través de tu Apple ID:</p>
+      <p>En iPhone, las suscripciones se gestionan a través de tu Apple ID:</p>
       <ol>
         <li>
           Abre <strong>Ajustes</strong> en tu iPhone
@@ -55,6 +55,25 @@ export default function ContactContentEs() {
           Toca <strong>Cancelar suscripción</strong>
         </li>
       </ol>
+      <p>En Android, se gestionan a través de Google Play:</p>
+      <ol>
+        <li>
+          Abre la app <strong>Google Play Store</strong>
+        </li>
+        <li>
+          Toca tu foto de perfil en la parte superior derecha
+        </li>
+        <li>
+          Toca <strong>Pagos y suscripciones</strong> y luego{" "}
+          <strong>Suscripciones</strong>
+        </li>
+        <li>
+          Selecciona <strong>Mellow Premium</strong>
+        </li>
+        <li>
+          Toca <strong>Cancelar suscripción</strong>
+        </li>
+      </ol>
       <p>
         Tu acceso permanece activo hasta el final del período de facturación
         actual.
@@ -62,7 +81,7 @@ export default function ContactContentEs() {
 
       <h3>Reembolsos</h3>
       <p>
-        Los reembolsos los gestiona Apple. Visita{" "}
+        En iPhone, los reembolsos los gestiona Apple. Visita{" "}
         <a
           href="https://reportaproblem.apple.com/"
           target="_blank"
@@ -71,6 +90,18 @@ export default function ContactContentEs() {
           reportaproblem.apple.com
         </a>
         , inicia sesión con tu Apple ID y selecciona la compra de Mellow.
+      </p>
+      <p>
+        En Android, los reembolsos los gestiona Google Play. Visita la{" "}
+        <a
+          href="https://support.google.com/googleplay/workflow/9813244"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          página de reembolsos de Google Play
+        </a>
+        , inicia sesión con la cuenta de Google que usaste para suscribirte y
+        selecciona la compra de Mellow.
       </p>
 
       <h3>Restaurar compras</h3>

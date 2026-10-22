@@ -16,7 +16,7 @@ export default function ContactContentEn() {
 
       <h2>About Mellow</h2>
       <p>
-        Mellow is a calm, design-forward migraine and headache journal for iOS.
+        Mellow is a calm, design-forward migraine and headache journal for iPhone and Android.
         Log episodes in seconds, track triggers like stress, sleep, hormones,
         and weather, and start seeing the patterns behind your pain.
       </p>
@@ -34,7 +34,7 @@ export default function ContactContentEn() {
       </p>
 
       <h3>Manage or cancel your subscription</h3>
-      <p>Subscriptions are managed through your Apple ID:</p>
+      <p>On iPhone, subscriptions are managed through your Apple ID:</p>
       <ol>
         <li>
           Open <strong>Settings</strong> on your iPhone
@@ -50,13 +50,32 @@ export default function ContactContentEn() {
           Tap <strong>Cancel Subscription</strong>
         </li>
       </ol>
+      <p>On Android, they&apos;re managed through Google Play:</p>
+      <ol>
+        <li>
+          Open the <strong>Google Play Store</strong> app
+        </li>
+        <li>
+          Tap your profile picture at the top right
+        </li>
+        <li>
+          Tap <strong>Payments &amp; subscriptions</strong>, then{" "}
+          <strong>Subscriptions</strong>
+        </li>
+        <li>
+          Select <strong>Mellow Premium</strong>
+        </li>
+        <li>
+          Tap <strong>Cancel subscription</strong>
+        </li>
+      </ol>
       <p>
         Your access remains active until the end of the current billing period.
       </p>
 
       <h3>Refunds</h3>
       <p>
-        Refunds are handled by Apple. Visit{" "}
+        On iPhone, refunds are handled by Apple. Visit{" "}
         <a
           href="https://reportaproblem.apple.com/"
           target="_blank"
@@ -65,6 +84,18 @@ export default function ContactContentEn() {
           reportaproblem.apple.com
         </a>
         , sign in with your Apple ID, and select the Mellow purchase.
+      </p>
+      <p>
+        On Android, refunds are handled by Google Play. Visit the{" "}
+        <a
+          href="https://support.google.com/googleplay/workflow/9813244"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google Play refund page
+        </a>
+        , sign in with the Google account you used to subscribe, and select the
+        Mellow purchase.
       </p>
 
       <h3>Restore purchases</h3>

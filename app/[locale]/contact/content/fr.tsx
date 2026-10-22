@@ -19,7 +19,7 @@ export default function ContactContentFr() {
 
       <h2>À propos de Mellow</h2>
       <p>
-        Mellow est un journal de migraines et maux de tête pour iOS, calme et
+        Mellow est un journal de migraines et maux de tête pour iPhone et Android, calme et
         soigné. Enregistre tes épisodes en quelques secondes, suis des
         déclencheurs comme le stress, le sommeil, les hormones et la météo, et
         commence à voir les schémas derrière ta douleur.
@@ -39,7 +39,7 @@ export default function ContactContentFr() {
       </p>
 
       <h3>Gérer ou annuler ton abonnement</h3>
-      <p>Les abonnements sont gérés via ton identifiant Apple&nbsp;:</p>
+      <p>Sur iPhone, les abonnements sont gérés via ton identifiant Apple&nbsp;:</p>
       <ol>
         <li>
           Ouvre <strong>Réglages</strong> sur ton iPhone
@@ -55,6 +55,25 @@ export default function ContactContentFr() {
           Touche <strong>Annuler l&apos;abonnement</strong>
         </li>
       </ol>
+      <p>Sur Android, ils sont gérés via Google Play&nbsp;:</p>
+      <ol>
+        <li>
+          Ouvre l&apos;application <strong>Google Play Store</strong>
+        </li>
+        <li>
+          Touche ta photo de profil en haut à droite
+        </li>
+        <li>
+          Touche <strong>Paiements et abonnements</strong>, puis{" "}
+          <strong>Abonnements</strong>
+        </li>
+        <li>
+          Sélectionne <strong>Mellow Premium</strong>
+        </li>
+        <li>
+          Touche <strong>Résilier l&apos;abonnement</strong>
+        </li>
+      </ol>
       <p>
         Ton accès reste actif jusqu&apos;à la fin de la période de facturation
         en cours.
@@ -62,7 +81,7 @@ export default function ContactContentFr() {
 
       <h3>Remboursements</h3>
       <p>
-        Les remboursements sont gérés par Apple. Va sur{" "}
+        Sur iPhone, les remboursements sont gérés par Apple. Va sur{" "}
         <a
           href="https://reportaproblem.apple.com/"
           target="_blank"
@@ -72,6 +91,19 @@ export default function ContactContentFr() {
         </a>
         , connecte-toi avec ton identifiant Apple et sélectionne l&apos;achat
         Mellow.
+      </p>
+      <p>
+        Sur Android, les remboursements sont gérés par Google Play. Va sur
+        la{" "}
+        <a
+          href="https://support.google.com/googleplay/workflow/9813244"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          page de remboursement de Google Play
+        </a>
+        , connecte-toi avec le compte Google utilisé pour t&apos;abonner et
+        sélectionne l&apos;achat Mellow.
       </p>
 
       <h3>Restaurer les achats</h3>

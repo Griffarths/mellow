@@ -20,7 +20,7 @@ export default function ContactContentDe() {
       <h2>Über Mellow</h2>
       <p>
         Mellow ist ein ruhiges, durchdacht gestaltetes Migräne- und
-        Kopfschmerztagebuch für iOS. Erfasse Episoden in Sekunden, beobachte
+        Kopfschmerztagebuch für iPhone und Android. Erfasse Episoden in Sekunden, beobachte
         Auslöser wie Stress, Schlaf, Hormone und Wetter, und erkenne die
         Muster hinter deinen Schmerzen.
       </p>
@@ -38,7 +38,7 @@ export default function ContactContentDe() {
       </p>
 
       <h3>Abonnement verwalten oder kündigen</h3>
-      <p>Abonnements werden über deine Apple ID verwaltet:</p>
+      <p>Auf dem iPhone werden Abonnements über deine Apple ID verwaltet:</p>
       <ol>
         <li>
           Öffne <strong>Einstellungen</strong> auf deinem iPhone
@@ -54,6 +54,25 @@ export default function ContactContentDe() {
           Tippe auf <strong>Abonnement kündigen</strong>
         </li>
       </ol>
+      <p>Auf Android werden sie über Google Play verwaltet:</p>
+      <ol>
+        <li>
+          Öffne die App <strong>Google Play Store</strong>
+        </li>
+        <li>
+          Tippe oben rechts auf dein Profilbild
+        </li>
+        <li>
+          Tippe auf <strong>Zahlungen &amp; Abos</strong> und dann auf{" "}
+          <strong>Abos</strong>
+        </li>
+        <li>
+          Wähle <strong>Mellow Premium</strong>
+        </li>
+        <li>
+          Tippe auf <strong>Abo kündigen</strong>
+        </li>
+      </ol>
       <p>
         Dein Zugang bleibt bis zum Ende der laufenden Abrechnungsperiode
         aktiv.
@@ -61,7 +80,7 @@ export default function ContactContentDe() {
 
       <h3>Rückerstattungen</h3>
       <p>
-        Rückerstattungen werden von Apple bearbeitet. Besuche{" "}
+        Auf dem iPhone werden Rückerstattungen von Apple bearbeitet. Besuche{" "}
         <a
           href="https://reportaproblem.apple.com/"
           target="_blank"
@@ -70,6 +89,19 @@ export default function ContactContentDe() {
           reportaproblem.apple.com
         </a>
         , melde dich mit deiner Apple ID an und wähle den Mellow-Kauf aus.
+      </p>
+      <p>
+        Auf Android werden Rückerstattungen von Google Play bearbeitet. Besuche
+        die{" "}
+        <a
+          href="https://support.google.com/googleplay/workflow/9813244"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Erstattungsseite von Google Play
+        </a>
+        , melde dich mit dem Google-Konto an, mit dem du das Abo abgeschlossen
+        hast, und wähle den Mellow-Kauf aus.
       </p>
 
       <h3>Käufe wiederherstellen</h3>
