@@ -228,6 +228,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "sinusite-ou-migraine",
         "migraine-silencieuse-aura-sans-mal-de-tete",
         "eclairs-de-lumiere-dans-les-yeux-migraine",
+        "migraine-vertiges-migraine-vestibulaire",
       ],
     },
     en: {
@@ -251,6 +252,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "sinus-headache-or-migraine",
         "silent-migraine-aura-without-headache",
         "flashing-lights-in-eyes-migraine-aura",
+        "vestibular-migraine-dizziness-vertigo",
       ],
     },
     es: {
@@ -274,6 +276,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-o-sinusitis-como-distinguirlas",
         "migrana-silenciosa-aura-sin-dolor-de-cabeza",
         "destellos-de-luz-en-los-ojos-aura-migrana",
+        "migrana-vestibular-vertigo-sintomas",
       ],
     },
     "es-419": {
@@ -297,6 +300,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "sinusitis-o-migrana-como-distinguirlas",
         "migrana-silenciosa-aura-sin-dolor-de-cabeza",
         "destellos-de-luz-en-los-ojos-aura-migrana",
+        "migrana-vestibular-vertigo-mareo",
       ],
     },
     de: {
@@ -320,6 +324,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "sinusitis-oder-migraene",
         "stille-migraene-aura-ohne-kopfschmerzen",
         "lichtblitze-im-auge-migraene-aura",
+        "vestibulaere-migraene-schwindel",
       ],
     },
     it: {
@@ -343,6 +348,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "mal-di-testa-da-sinusite-o-emicrania",
         "emicrania-silente-aura-senza-mal-di-testa",
         "lampi-di-luce-negli-occhi-aura-emicrania",
+        "emicrania-vestibolare-vertigini",
       ],
     },
     pt: {
@@ -366,6 +372,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "sinusite-ou-enxaqueca",
         "enxaqueca-silenciosa-aura-sem-dor-de-cabeca",
         "flashes-de-luz-nos-olhos-aura-enxaqueca",
+        "enxaqueca-vestibular-tonturas-vertigens",
       ],
     },
     "pt-BR": {
@@ -389,6 +396,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "sinusite-ou-enxaqueca",
         "enxaqueca-silenciosa-aura-sem-dor-de-cabeca",
         "flashes-de-luz-nos-olhos-aura-enxaqueca",
+        "enxaqueca-vestibular-tontura-vertigem",
       ],
     },
   },
