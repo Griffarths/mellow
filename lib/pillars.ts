@@ -420,6 +420,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "soulager-migraine-sans-medicament",
         "migraine-nausees-vomissements",
         "migraine-quel-medecin-consulter",
+        "medicament-migraine-crise",
       ],
     },
     en: {
@@ -440,6 +441,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "relieve-migraine-without-medication",
         "migraine-nausea",
         "when-to-see-a-doctor-for-migraine",
+        "migraine-medication",
       ],
     },
     es: {
@@ -460,6 +462,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "botox-migrana-cronica-protocolo-preempt",
         "migrana-con-nauseas-y-vomitos",
         "migrana-que-medico-consultar",
+        "medicamentos-para-la-migrana",
       ],
     },
     "es-419": {
@@ -480,6 +483,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "botox-para-migrana-cronica-protocolo-preempt",
         "migrana-nauseas",
         "con-que-medico-consultar-por-migrana",
+        "medicamentos-para-la-migrana",
       ],
     },
     de: {
@@ -500,6 +504,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "botox-migraene-preempt-schema",
         "migraene-uebelkeit",
         "migraene-welcher-arzt",
+        "migraene-medikamente-akut-ueberblick",
       ],
     },
     it: {
@@ -520,6 +525,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "botox-emicrania-cronica-protocollo-preempt",
         "emicrania-nausea-perche-succede-come-alleggerirla",
         "emicrania-quale-specialista",
+        "farmaci-per-emicrania-antidolorifici-fans-triptani",
       ],
     },
     pt: {
@@ -540,6 +546,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "botox-enxaqueca-cronica-protocolo-preempt",
         "enxaqueca-nauseas",
         "enxaqueca-que-medico-consultar",
+        "medicamentos-para-a-enxaqueca",
       ],
     },
     "pt-BR": {
@@ -560,6 +567,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "botox-para-enxaqueca-cronica-protocolo-preempt",
         "enxaqueca-nausea",
         "enxaqueca-qual-medico-procurar",
+        "remedios-para-enxaqueca-crise",
       ],
     },
   },
