@@ -48,6 +48,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "stress-et-migraines",
         "identifier-declencheurs-migraine",
         "migraine-et-regles",
+        "migraine-alcool-declencheur",
       ],
     },
     en: {
@@ -70,6 +71,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "stress-and-migraines",
         "identify-migraine-triggers",
         "migraine-and-periods",
+        "alcohol-and-migraine",
       ],
     },
     es: {
@@ -92,6 +94,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "desencadenantes-de-la-migrana-como-identificarlos",
         "alimentos-que-provocan-migrana",
         "migrana-y-pantallas-luz-azul",
+        "migrana-y-alcohol",
       ],
     },
     "es-419": {
@@ -114,6 +117,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "desencadenantes-de-la-migrana-como-identificarlos",
         "alimentos-que-provocan-migrana",
         "luz-azul-y-migrana",
+        "migrana-y-alcohol",
       ],
     },
     de: {
@@ -136,6 +140,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-am-morgen-schlaf",
         "luftdruck-migraene",
         "migraene-bildschirm-blaulicht",
+        "migraene-alkohol",
       ],
     },
     it: {
@@ -158,6 +163,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-del-weekend",
         "emicrania-da-stress",
         "emicrania-e-schermi-luce-blu",
+        "emicrania-alcol-vino-rosso",
       ],
     },
     pt: {
@@ -180,6 +186,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "desencadeantes-da-enxaqueca",
         "alimentos-que-causam-enxaqueca",
         "enxaqueca-e-ecras-luz-azul",
+        "enxaqueca-e-alcool",
       ],
     },
     "pt-BR": {
@@ -202,6 +209,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "dor-de-cabeca-ao-acordar-enxaqueca-sono",
         "alimentos-que-causam-enxaqueca",
         "luz-azul-enxaqueca-telas",
+        "enxaqueca-e-alcool",
       ],
     },
   },
