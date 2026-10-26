@@ -237,6 +237,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-silencieuse-aura-sans-mal-de-tete",
         "eclairs-de-lumiere-dans-les-yeux-migraine",
         "migraine-vertiges-migraine-vestibulaire",
+        "symptomes-avant-une-migraine-prodrome",
       ],
     },
     en: {
@@ -261,6 +262,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "silent-migraine-aura-without-headache",
         "flashing-lights-in-eyes-migraine-aura",
         "vestibular-migraine-dizziness-vertigo",
+        "migraine-prodrome-symptoms",
       ],
     },
     es: {
@@ -285,6 +287,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-silenciosa-aura-sin-dolor-de-cabeza",
         "destellos-de-luz-en-los-ojos-aura-migrana",
         "migrana-vestibular-vertigo-sintomas",
+        "sintomas-antes-de-una-migrana-prodromo",
       ],
     },
     "es-419": {
@@ -309,6 +312,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-silenciosa-aura-sin-dolor-de-cabeza",
         "destellos-de-luz-en-los-ojos-aura-migrana",
         "migrana-vestibular-vertigo-mareo",
+        "sintomas-antes-de-la-migrana-prodromo",
       ],
     },
     de: {
@@ -333,6 +337,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "stille-migraene-aura-ohne-kopfschmerzen",
         "lichtblitze-im-auge-migraene-aura",
         "vestibulaere-migraene-schwindel",
+        "migraene-vorboten",
       ],
     },
     it: {
@@ -357,6 +362,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-silente-aura-senza-mal-di-testa",
         "lampi-di-luce-negli-occhi-aura-emicrania",
         "emicrania-vestibolare-vertigini",
+        "sintomi-prima-dell-emicrania",
       ],
     },
     pt: {
@@ -381,6 +387,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-silenciosa-aura-sem-dor-de-cabeca",
         "flashes-de-luz-nos-olhos-aura-enxaqueca",
         "enxaqueca-vestibular-tonturas-vertigens",
+        "sintomas-antes-da-enxaqueca-prodromo",
       ],
     },
     "pt-BR": {
@@ -405,6 +412,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-silenciosa-aura-sem-dor-de-cabeca",
         "flashes-de-luz-nos-olhos-aura-enxaqueca",
         "enxaqueca-vestibular-tontura-vertigem",
+        "sinais-de-que-a-enxaqueca-vai-comecar",
       ],
     },
   },
