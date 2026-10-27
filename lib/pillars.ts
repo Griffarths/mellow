@@ -238,6 +238,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "eclairs-de-lumiere-dans-les-yeux-migraine",
         "migraine-vertiges-migraine-vestibulaire",
         "symptomes-avant-une-migraine-prodrome",
+        "postdrome-migraine-fatigue-apres-la-crise",
       ],
     },
     en: {
@@ -263,6 +264,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "flashing-lights-in-eyes-migraine-aura",
         "vestibular-migraine-dizziness-vertigo",
         "migraine-prodrome-symptoms",
+        "migraine-hangover-postdrome",
       ],
     },
     es: {
@@ -288,6 +290,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "destellos-de-luz-en-los-ojos-aura-migrana",
         "migrana-vestibular-vertigo-sintomas",
         "sintomas-antes-de-una-migrana-prodromo",
+        "posdromo-migrana",
       ],
     },
     "es-419": {
@@ -313,6 +316,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "destellos-de-luz-en-los-ojos-aura-migrana",
         "migrana-vestibular-vertigo-mareo",
         "sintomas-antes-de-la-migrana-prodromo",
+        "posdromo-de-la-migrana",
       ],
     },
     de: {
@@ -338,6 +342,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "lichtblitze-im-auge-migraene-aura",
         "vestibulaere-migraene-schwindel",
         "migraene-vorboten",
+        "migraenekater-postdrom-erschoepfung",
       ],
     },
     it: {
@@ -363,6 +368,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "lampi-di-luce-negli-occhi-aura-emicrania",
         "emicrania-vestibolare-vertigini",
         "sintomi-prima-dell-emicrania",
+        "postdromo-emicrania-stanchezza-dopo-attacco",
       ],
     },
     pt: {
@@ -388,6 +394,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "flashes-de-luz-nos-olhos-aura-enxaqueca",
         "enxaqueca-vestibular-tonturas-vertigens",
         "sintomas-antes-da-enxaqueca-prodromo",
+        "posdromo-enxaqueca-cansaco-depois-da-crise",
       ],
     },
     "pt-BR": {
@@ -413,6 +420,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "flashes-de-luz-nos-olhos-aura-enxaqueca",
         "enxaqueca-vestibular-tontura-vertigem",
         "sinais-de-que-a-enxaqueca-vai-comecar",
+        "posdromo-da-enxaqueca",
       ],
     },
   },
