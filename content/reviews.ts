@@ -34,5 +34,11 @@ export const REVIEWS: Partial<Record<Locale, Review[]>> = {
       title: "Super !!!",
       text: "Un accompagnement au top avec cette app\nJe peux suivre mes épisodes de migraine et identifier la fréquence et les élément précurseurs\nUn design tout en douceur",
     },
+    {
+      author: "Citiz33",
+      rating: 5,
+      title: "La meilleure application de suivi de migraine !",
+      text: "Je l’ai téléchargé et je l’adore ! L’application est très jolie, facile à utiliser et vraiment pratique pour suivre mes migraines au quotidien. Je la recommande à toute les personnes qui souffrent de migraine !",
+    },
   ],
 };
