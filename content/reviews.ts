@@ -15,7 +15,7 @@ export type Review = {
 // Average rating and number of ratings shown on the App Store page.
 export const APP_STORE_RATING: { value: number; count: number } | null = {
   value: 4.8,
-  count: 50,
+  count: 58,
 };
 
 // Up to 3 reviews per locale, in that locale's language. Locales without
