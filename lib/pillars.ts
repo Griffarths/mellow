@@ -613,6 +613,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "mal-de-tete-tous-les-jours",
         "migraine-ou-mal-de-tete",
         "migraine-cervicale-mal-de-tete-nuque",
+        "migraine-dangereuse-risques-etudes",
       ],
     },
     en: {
@@ -631,6 +632,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "headache-every-day",
         "migraine-vs-headache",
         "migraine-neck-pain",
+        "is-migraine-dangerous",
       ],
     },
     es: {
@@ -649,6 +651,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "diferencia-migrana-dolor-de-cabeza",
         "migrana-hereditaria-genetica",
         "migrana-cervical-dolor-nuca",
+        "es-peligrosa-la-migrana",
       ],
     },
     "es-419": {
@@ -667,6 +670,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "diferencia-migrana-dolor-de-cabeza",
         "la-migrana-es-hereditaria",
         "migrana-cervical-dolor-de-cabeza-nuca",
+        "es-peligrosa-la-migrana",
       ],
     },
     de: {
@@ -685,6 +689,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "jeden-tag-kopfschmerzen",
         "migraene-erblich",
         "migraene-nackenschmerzen",
+        "migraene-gefaehrlich-risiken-studien",
       ],
     },
     it: {
@@ -703,6 +708,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "differenza-tra-emicrania-e-mal-di-testa",
         "emicrania-ereditaria",
         "mal-di-testa-da-cervicale",
+        "emicrania-pericolosa-rischi-studi",
       ],
     },
     pt: {
@@ -721,6 +727,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "diferenca-entre-enxaqueca-e-dor-de-cabeca",
         "enxaqueca-hereditaria",
         "enxaqueca-cervical-dor-de-cabeca-nuca",
+        "enxaqueca-e-perigosa",
       ],
     },
     "pt-BR": {
@@ -739,6 +746,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "diferenca-entre-enxaqueca-e-dor-de-cabeca",
         "enxaqueca-e-hereditaria",
         "enxaqueca-cervical-dor-na-nuca",
+        "enxaqueca-e-perigosa",
       ],
     },
   },
