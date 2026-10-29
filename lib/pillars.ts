@@ -765,6 +765,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "carnet-de-migraine-quoi-noter",
         "migraine-enfant-adolescent",
+        "analyser-son-carnet-de-migraine",
       ],
     },
     en: {
@@ -780,6 +781,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "migraine-diary-what-to-note",
         "migraine-in-children-and-teens",
+        "migraine-diary-patterns",
       ],
     },
     es: {
@@ -795,6 +797,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "diario-de-migrana-que-anotar",
         "migrana-infantil-guia-para-padres",
+        "analizar-diario-de-migrana",
       ],
     },
     "es-419": {
@@ -810,6 +813,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "diario-de-migrana-que-anotar",
         "migrana-en-ninos-guia-para-padres",
+        "analizar-tu-diario-de-migrana",
       ],
     },
     de: {
@@ -825,6 +829,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "migraenekalender-was-notieren",
         "migraene-bei-kindern",
+        "migraenetagebuch-auswerten",
       ],
     },
     it: {
@@ -840,6 +845,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "diario-dell-emicrania-cosa-annotare",
         "emicrania-nei-bambini",
+        "analizzare-il-diario-dell-emicrania",
       ],
     },
     pt: {
@@ -855,6 +861,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "diario-de-enxaqueca-o-que-anotar",
         "enxaqueca-em-criancas-guia-para-pais",
+        "analisar-diario-de-enxaqueca",
       ],
     },
     "pt-BR": {
@@ -870,6 +877,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
       articles: [
         "diario-de-enxaqueca-o-que-anotar",
         "enxaqueca-infantil-guia-para-pais",
+        "como-analisar-diario-de-enxaqueca",
       ],
     },
   },
