@@ -9,13 +9,13 @@ export const mdxComponents = {
   // Headings
   h2: (props: Props<"h2">) => (
     <h2
-      className="mt-14 scroll-mt-24 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]"
+      className="mt-14 scroll-mt-32 text-[26px] font-extrabold leading-tight tracking-tight text-ink md:text-[32px]"
       {...props}
     />
   ),
   h3: (props: Props<"h3">) => (
     <h3
-      className="mt-10 scroll-mt-24 text-[21px] font-bold leading-snug tracking-tight text-ink md:text-2xl"
+      className="mt-10 scroll-mt-32 text-[21px] font-bold leading-snug tracking-tight text-ink md:text-2xl"
       {...props}
     />
   ),

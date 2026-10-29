@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import readingTime from "reading-time";
 import GithubSlugger from "github-slugger";
 import { PILLARS, pillarOfArticle, type PillarId } from "./pillars";
+import { typographize } from "./typography";
 
 // Every site locale can have articles (content/blog/{locale}). A locale's blog
 // goes live as soon as it has at least one article: see hasBlog().
@@ -233,9 +234,11 @@ export function toCard(article: Article, category?: string): CardArticle {
 
 export type TocHeading = { level: 2 | 3; text: string; slug: string };
 
-export function extractHeadings(content: string): TocHeading[] {
+export function extractHeadings(content: string, locale: string): TocHeading[] {
   // Fresh slugger per article so duplicate-handling state matches
   // what rehype-slug does at render time (per-document github-slugger).
+  // rehype-slug sees the typographized heading (French: a non-breaking space
+  // before : ? !, which the slug drops), so the anchors are made from it too.
   const slugger = new GithubSlugger();
   const lines = content.split("\n");
   const headings: TocHeading[] = [];
@@ -249,7 +252,7 @@ export function extractHeadings(content: string): TocHeading[] {
     const m = /^(#{2,3})\s+(.+?)\s*#*\s*$/.exec(line);
     if (!m) continue;
     const level = m[1].length as 2 | 3;
-    const text = m[2].trim();
+    const text = typographize(m[2].trim(), locale);
     headings.push({ level, text, slug: slugger.slug(text) });
   }
   return headings;

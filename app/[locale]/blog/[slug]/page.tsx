@@ -289,42 +289,43 @@ export default async function ArticlePage({ params }: Props) {
   return (
     <>
       <Nav />
-      <main className="mx-auto max-w-6xl px-6 py-12 md:py-16">
-        <BackToBlog />
+      {/* The table of contents bar stays under the menu while the article is
+          read, and leaves with it, before the download block. */}
+      <div>
+        <TableOfContents content={article.content} />
+        <main className="mx-auto max-w-6xl px-6 py-12 md:py-16">
+          <BackToBlog />
 
-        <div className="mt-8 lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-12">
-          <article className="min-w-0">
-            <ArticleHeader article={article} pillar={pillarLink} />
-            <div className="mt-10 max-w-[65ch]">
-              <MDXRemote
-                source={article.content}
-                components={mdxComponents}
-                options={{
-                  mdxOptions: {
-                    remarkPlugins: [remarkGfm, remarkTypographize(article.locale)],
-                    rehypePlugins: [
-                      rehypeSlug,
-                      [
-                        rehypeAutolinkHeadings,
-                        {
-                          behavior: "wrap",
-                          properties: { className: "no-underline" },
-                        },
+          <div className="mt-8">
+            <article className="min-w-0 lg:max-w-[51rem]">
+              <ArticleHeader article={article} pillar={pillarLink} />
+              <div className="mt-10 max-w-[65ch]">
+                <MDXRemote
+                  source={article.content}
+                  components={mdxComponents}
+                  options={{
+                    mdxOptions: {
+                      remarkPlugins: [remarkGfm, remarkTypographize(article.locale)],
+                      rehypePlugins: [
+                        rehypeSlug,
+                        [
+                          rehypeAutolinkHeadings,
+                          {
+                            behavior: "wrap",
+                            properties: { className: "no-underline" },
+                          },
+                        ],
                       ],
-                    ],
-                  },
-                }}
-              />
-              <AuthorBox />
-              <RelatedArticles articles={related} pillar={pillarLink} />
-            </div>
-          </article>
-
-          <aside className="hidden lg:block">
-            <TableOfContents content={article.content} />
-          </aside>
-        </div>
-      </main>
+                    },
+                  }}
+                />
+                <AuthorBox />
+                <RelatedArticles articles={related} pillar={pillarLink} />
+              </div>
+            </article>
+          </div>
+        </main>
+      </div>
       {/* Every article ends like the other pages, with the download block. */}
       <FinalCta campaign="blog" />
       <Footer localePaths={articlePaths(getArticleVersions(article))} />

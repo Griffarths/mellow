@@ -322,3 +322,10 @@ header[data-solid="false"]:not(:has(#mobile-menu)) .nav-cta {
     animation: none;
   }
 }
+
+/* The list of an article's table of contents (components/blog/TocBar.tsx): a
+   thin scrollbar, when it scrolls. */
+.toc-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(0 0 0 / 0.18) transparent;
+}
