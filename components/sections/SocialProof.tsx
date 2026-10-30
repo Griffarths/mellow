@@ -42,7 +42,7 @@ export function SocialProof() {
 
   const isSample = !hasData;
   const rating = isSample ? SAMPLE_RATING : APP_STORE_RATING;
-  const reviews = (isSample ? SAMPLE_REVIEWS : ownReviews).slice(0, 3);
+  const reviews = (isSample ? SAMPLE_REVIEWS : ownReviews).slice(0, 4);
   const format = new Intl.NumberFormat(locale, {
     minimumFractionDigits: 1,
     maximumFractionDigits: 1,

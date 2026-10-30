@@ -18,7 +18,7 @@ export const APP_STORE_RATING: { value: number; count: number } | null = {
   count: 58,
 };
 
-// Up to 3 reviews per locale, in that locale's language. Locales without
+// Up to 4 reviews per locale, in that locale's language. Locales without
 // reviews show the rating alone.
 export const REVIEWS: Partial<Record<Locale, Review[]>> = {
   fr: [
@@ -39,6 +39,12 @@ export const REVIEWS: Partial<Record<Locale, Review[]>> = {
       rating: 5,
       title: "La meilleure application de suivi de migraine !",
       text: "Je l’ai téléchargé et je l’adore ! L’application est très jolie, facile à utiliser et vraiment pratique pour suivre mes migraines au quotidien. Je la recommande à toute les personnes qui souffrent de migraine !",
+    },
+    {
+      author: "Sylv3335",
+      rating: 5,
+      title: "J’adore Mellow",
+      text: "J’utilise Mellow pour suivre mes migraines et je trouve l’application vraiment pratique. J’aime pouvoir noter mes crises et retrouver les informations facilement. L’application est agréable à utiliser et ça permet de mieux suivre l’évolution de ses migraines au fil du temps. Je suis contente de l’avoir découverte ! 😊",
     },
   ],
 };
