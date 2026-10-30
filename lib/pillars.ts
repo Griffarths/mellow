@@ -239,6 +239,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-vertiges-migraine-vestibulaire",
         "symptomes-avant-une-migraine-prodrome",
         "postdrome-migraine-fatigue-apres-la-crise",
+        "migraine-derriere-l-oeil",
       ],
     },
     en: {
@@ -265,6 +266,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "vestibular-migraine-dizziness-vertigo",
         "migraine-prodrome-symptoms",
         "migraine-hangover-postdrome",
+        "migraine-behind-the-eye",
       ],
     },
     es: {
@@ -291,6 +293,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-vestibular-vertigo-sintomas",
         "sintomas-antes-de-una-migrana-prodromo",
         "posdromo-migrana",
+        "migrana-detras-del-ojo-un-solo-lado",
       ],
     },
     "es-419": {
@@ -317,6 +320,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-vestibular-vertigo-mareo",
         "sintomas-antes-de-la-migrana-prodromo",
         "posdromo-de-la-migrana",
+        "migrana-detras-del-ojo",
       ],
     },
     de: {
@@ -343,6 +347,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "vestibulaere-migraene-schwindel",
         "migraene-vorboten",
         "migraenekater-postdrom-erschoepfung",
+        "migraene-hinter-dem-auge",
       ],
     },
     it: {
@@ -369,6 +374,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-vestibolare-vertigini",
         "sintomi-prima-dell-emicrania",
         "postdromo-emicrania-stanchezza-dopo-attacco",
+        "emicrania-dietro-l-occhio",
       ],
     },
     pt: {
@@ -395,6 +401,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-vestibular-tonturas-vertigens",
         "sintomas-antes-da-enxaqueca-prodromo",
         "posdromo-enxaqueca-cansaco-depois-da-crise",
+        "enxaqueca-atras-do-olho",
       ],
     },
     "pt-BR": {
@@ -421,6 +428,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-vestibular-tontura-vertigem",
         "sinais-de-que-a-enxaqueca-vai-comecar",
         "posdromo-da-enxaqueca",
+        "enxaqueca-atras-do-olho",
       ],
     },
   },
