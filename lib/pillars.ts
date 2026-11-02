@@ -622,6 +622,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-ou-mal-de-tete",
         "migraine-cervicale-mal-de-tete-nuque",
         "migraine-dangereuse-risques-etudes",
+        "migraine-irm-faut-il-passer-imagerie",
       ],
     },
     en: {
@@ -641,6 +642,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-vs-headache",
         "migraine-neck-pain",
         "is-migraine-dangerous",
+        "mri-for-migraine",
       ],
     },
     es: {
@@ -660,6 +662,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-hereditaria-genetica",
         "migrana-cervical-dolor-nuca",
         "es-peligrosa-la-migrana",
+        "resonancia-magnetica-migrana",
       ],
     },
     "es-419": {
@@ -679,6 +682,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "la-migrana-es-hereditaria",
         "migrana-cervical-dolor-de-cabeza-nuca",
         "es-peligrosa-la-migrana",
+        "resonancia-magnetica-migrana",
       ],
     },
     de: {
@@ -698,6 +702,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-erblich",
         "migraene-nackenschmerzen",
         "migraene-gefaehrlich-risiken-studien",
+        "mrt-bei-migraene",
       ],
     },
     it: {
@@ -717,6 +722,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-ereditaria",
         "mal-di-testa-da-cervicale",
         "emicrania-pericolosa-rischi-studi",
+        "risonanza-magnetica-emicrania",
       ],
     },
     pt: {
@@ -736,6 +742,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-hereditaria",
         "enxaqueca-cervical-dor-de-cabeca-nuca",
         "enxaqueca-e-perigosa",
+        "ressonancia-magnetica-enxaqueca",
       ],
     },
     "pt-BR": {
@@ -755,6 +762,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-e-hereditaria",
         "enxaqueca-cervical-dor-na-nuca",
         "enxaqueca-e-perigosa",
+        "ressonancia-magnetica-enxaqueca",
       ],
     },
   },
