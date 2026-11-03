@@ -782,6 +782,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "carnet-de-migraine-quoi-noter",
         "migraine-enfant-adolescent",
         "analyser-son-carnet-de-migraine",
+        "meilleure-application-migraine",
       ],
     },
     en: {
@@ -798,6 +799,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-diary-what-to-note",
         "migraine-in-children-and-teens",
         "migraine-diary-patterns",
+        "best-migraine-app",
       ],
     },
     es: {
@@ -814,6 +816,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "diario-de-migrana-que-anotar",
         "migrana-infantil-guia-para-padres",
         "analizar-diario-de-migrana",
+        "mejor-app-para-migrana-criterios",
       ],
     },
     "es-419": {
@@ -830,6 +833,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "diario-de-migrana-que-anotar",
         "migrana-en-ninos-guia-para-padres",
         "analizar-tu-diario-de-migrana",
+        "mejor-app-para-migrana",
       ],
     },
     de: {
@@ -846,6 +850,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraenekalender-was-notieren",
         "migraene-bei-kindern",
         "migraenetagebuch-auswerten",
+        "migraene-app-10-kriterien",
       ],
     },
     it: {
@@ -862,6 +867,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "diario-dell-emicrania-cosa-annotare",
         "emicrania-nei-bambini",
         "analizzare-il-diario-dell-emicrania",
+        "migliore-app-per-emicrania",
       ],
     },
     pt: {
@@ -878,6 +884,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "diario-de-enxaqueca-o-que-anotar",
         "enxaqueca-em-criancas-guia-para-pais",
         "analisar-diario-de-enxaqueca",
+        "melhor-aplicacao-para-enxaqueca",
       ],
     },
     "pt-BR": {
@@ -894,6 +901,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "diario-de-enxaqueca-o-que-anotar",
         "enxaqueca-infantil-guia-para-pais",
         "como-analisar-diario-de-enxaqueca",
+        "melhor-aplicativo-para-enxaqueca",
       ],
     },
   },
