@@ -5,7 +5,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ABOUT_COPY } from "@/lib/about-copy";
 import { ABOUT_PATH, aboutAlternates, aboutUrl } from "@/lib/about";
-import { HREFLANG, OG_LOCALE } from "@/lib/blog";
+import { LANGUAGE_TAG, OG_LOCALE } from "@/lib/blog";
 
 export type AboutLocale = keyof typeof ABOUT_COPY;
 
@@ -57,7 +57,7 @@ export function AboutPage({ locale }: { locale: AboutLocale }) {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     url: aboutUrl(locale),
-    inLanguage: HREFLANG[locale],
+    inLanguage: LANGUAGE_TAG[locale],
     name: c.metaTitle,
     mainEntity: {
       "@type": "Person",

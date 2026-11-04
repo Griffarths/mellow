@@ -2,17 +2,26 @@ import { routing } from "@/i18n/routing";
 
 const SITE_URL = "https://mellowmigraine.com";
 
-// hreflang code of each language of the site.
-const CODE: Record<string, string> = {
-  fr: "fr-FR",
+// hreflang code of each language of the site, as Google reads them: an ISO
+// 639-1 language, optionally with an ISO 3166-1 country (Google ignores other
+// codes, such as es-419). French goes by language alone, for French speakers
+// in every country; Spain keeps es-ES, and the Latin American version is the
+// Spanish of every other country.
+export const HREFLANG: Record<string, string> = {
+  fr: "fr",
   en: "en",
   de: "de",
   it: "it",
   es: "es-ES",
-  "es-419": "es-419",
+  "es-419": "es",
   pt: "pt-PT",
   "pt-BR": "pt-BR",
 };
+
+// Language-alone codes added next to a language-and-country one, for the
+// speakers of that language elsewhere: the Brazilian version also serves
+// Portuguese speakers outside Portugal and Brazil.
+const CATCH_ALL: Record<string, string> = { "pt-BR": "pt" };
 
 export function localizedUrl(locale: string, suffix: string) {
   return locale === routing.defaultLocale
@@ -20,16 +29,21 @@ export function localizedUrl(locale: string, suffix: string) {
     : `${SITE_URL}/${locale}${suffix}`;
 }
 
-// Adds x-default (the English version, shown to visitors whose language the
-// site doesn't have) to a hreflang map. No English version, no x-default.
+// Completes a hreflang map: the catch-all codes, and x-default (the English
+// version, shown to visitors whose language the site doesn't have). No
+// English version, no x-default.
 export function withDefault(languages: Record<string, string>) {
-  return languages.en ? { ...languages, "x-default": languages.en } : languages;
+  const all = { ...languages };
+  for (const [code, catchAll] of Object.entries(CATCH_ALL)) {
+    if (all[code] && !all[catchAll]) all[catchAll] = all[code];
+  }
+  return all.en ? { ...all, "x-default": all.en } : all;
 }
 
 // hreflang map of a page that exists at the same path in every language (also used by the sitemap).
 export function sameAlternates(suffix: string) {
   return withDefault(
-    Object.fromEntries(routing.locales.map((l) => [CODE[l], localizedUrl(l, suffix)])),
+    Object.fromEntries(routing.locales.map((l) => [HREFLANG[l], localizedUrl(l, suffix)])),
   );
 }
 

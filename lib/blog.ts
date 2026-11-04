@@ -5,14 +5,16 @@ import readingTime from "reading-time";
 import GithubSlugger from "github-slugger";
 import { PILLARS, pillarOfArticle, type PillarId } from "./pillars";
 import { typographize } from "./typography";
+export { HREFLANG } from "./hreflang";
 
 // Every site locale can have articles (content/blog/{locale}). A locale's blog
 // goes live as soon as it has at least one article: see hasBlog().
 export const BLOG_LOCALES = ["fr", "en", "de", "it", "es", "es-419", "pt", "pt-BR"] as const;
 export type BlogLocale = (typeof BLOG_LOCALES)[number];
 
-// hreflang / inLanguage code and Open Graph locale for each blog locale.
-export const HREFLANG: Record<BlogLocale, string> = {
+// Language tag (schema.org inLanguage) and Open Graph locale for each blog
+// locale. The hreflang codes, which follow Google's rules, are in hreflang.ts.
+export const LANGUAGE_TAG: Record<BlogLocale, string> = {
   fr: "fr-FR",
   en: "en",
   de: "de",

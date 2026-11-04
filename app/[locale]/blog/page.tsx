@@ -6,7 +6,7 @@ import { routing } from "@/i18n/routing";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { BlogIndex } from "@/components/blog/BlogIndex";
-import { HREFLANG, getAllArticles, hasBlog } from "@/lib/blog";
+import { LANGUAGE_TAG, getAllArticles, hasBlog } from "@/lib/blog";
 import { ComingSoon } from "./coming-soon";
 import { pageAlternates } from "@/lib/hreflang";
 
@@ -69,7 +69,7 @@ export default async function BlogIndexPage({ params }: Props) {
     url: blogUrl,
     name: `Mellow · ${t("indexTitle")}`,
     description: t("indexSubtitle"),
-    inLanguage: locale === "en" ? "en-US" : HREFLANG[locale],
+    inLanguage: locale === "en" ? "en-US" : LANGUAGE_TAG[locale],
     publisher: {
       "@type": "Organization",
       name: "Mellow",

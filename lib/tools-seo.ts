@@ -9,6 +9,7 @@ import {
   type ToolLocale,
 } from "./tools";
 import { HREFLANG, OG_LOCALE } from "./blog";
+import { withDefault } from "./hreflang";
 import { versioned } from "./diary-assets";
 
 const SITE_URL = "https://mellowmigraine.com";
@@ -36,10 +37,7 @@ export function toolUrl(tool: ToolId, locale: ToolLocale) {
 
 // hreflang → URL for every language version of a tool, plus x-default.
 export function toolAlternates(tool: ToolId): Record<string, string> {
-  return {
-    ...Object.fromEntries(TOOL_LOCALES.map((l) => [HREFLANG[l], toolUrl(tool, l)])),
-    "x-default": toolUrl(tool, "en"),
-  };
+  return withDefault(Object.fromEntries(TOOL_LOCALES.map((l) => [HREFLANG[l], toolUrl(tool, l)])));
 }
 
 export function toolMetadata(tool: ToolId, locale: ToolLocale): Metadata {

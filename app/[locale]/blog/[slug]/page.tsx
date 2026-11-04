@@ -24,6 +24,7 @@ import { breadcrumbJsonLd, withDefault } from "@/lib/hreflang";
 import {
   type BlogLocale,
   HREFLANG,
+  LANGUAGE_TAG,
   OG_LOCALE,
   coverOgImage,
   getAllArticles,
@@ -101,7 +102,7 @@ function articleLanguages(versions: Partial<Record<BlogLocale, string>>) {
   ));
 }
 
-const inLanguage = (locale: BlogLocale) => (locale === "en" ? "en-US" : HREFLANG[locale]);
+const inLanguage = (locale: BlogLocale) => (locale === "en" ? "en-US" : LANGUAGE_TAG[locale]);
 
 function pillarMetadata(pillar: PillarId, locale: BlogLocale): Metadata {
   const copy = PILLARS[pillar][locale];
