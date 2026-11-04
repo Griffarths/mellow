@@ -49,6 +49,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "identifier-declencheurs-migraine",
         "migraine-et-regles",
         "migraine-alcool-declencheur",
+        "migraine-pression-atmospherique-hpa",
       ],
     },
     en: {
@@ -72,6 +73,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "identify-migraine-triggers",
         "migraine-and-periods",
         "alcohol-and-migraine",
+        "migraine-pressure-drop-hpa-flying-altitude",
       ],
     },
     es: {
@@ -95,6 +97,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "alimentos-que-provocan-migrana",
         "migrana-y-pantallas-luz-azul",
         "migrana-y-alcohol",
+        "migrana-por-baja-presion-hpa-avion-montana",
       ],
     },
     "es-419": {
@@ -118,6 +121,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "alimentos-que-provocan-migrana",
         "luz-azul-y-migrana",
         "migrana-y-alcohol",
+        "migrana-por-baja-presion-hpa-avion-montana",
       ],
     },
     de: {
@@ -141,6 +145,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "luftdruck-migraene",
         "migraene-bildschirm-blaulicht",
         "migraene-alkohol",
+        "migraene-luftdruckabfall-hpa-flugzeug-berge",
       ],
     },
     it: {
@@ -164,6 +169,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-da-stress",
         "emicrania-e-schermi-luce-blu",
         "emicrania-alcol-vino-rosso",
+        "emicrania-calo-di-pressione-hpa-aereo-montagna",
       ],
     },
     pt: {
@@ -187,6 +193,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "alimentos-que-causam-enxaqueca",
         "enxaqueca-e-ecras-luz-azul",
         "enxaqueca-e-alcool",
+        "enxaqueca-queda-de-pressao-hpa-aviao-montanha",
       ],
     },
     "pt-BR": {
@@ -210,6 +217,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "alimentos-que-causam-enxaqueca",
         "luz-azul-enxaqueca-telas",
         "enxaqueca-e-alcool",
+        "enxaqueca-queda-de-pressao-hpa-aviao-montanha",
       ],
     },
   },
