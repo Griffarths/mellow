@@ -631,6 +631,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-cervicale-mal-de-tete-nuque",
         "migraine-dangereuse-risques-etudes",
         "migraine-irm-faut-il-passer-imagerie",
+        "cephalee-de-tension-symptomes-duree-migraine",
       ],
     },
     en: {
@@ -651,6 +652,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-neck-pain",
         "is-migraine-dangerous",
         "mri-for-migraine",
+        "tension-headache-symptoms",
       ],
     },
     es: {
@@ -671,6 +673,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-cervical-dolor-nuca",
         "es-peligrosa-la-migrana",
         "resonancia-magnetica-migrana",
+        "cefalea-tensional-sintomas-duracion-migrana",
       ],
     },
     "es-419": {
@@ -691,6 +694,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-cervical-dolor-de-cabeza-nuca",
         "es-peligrosa-la-migrana",
         "resonancia-magnetica-migrana",
+        "cefalea-tensional-sintomas-duracion-diferencias-migrana",
       ],
     },
     de: {
@@ -711,6 +715,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-nackenschmerzen",
         "migraene-gefaehrlich-risiken-studien",
         "mrt-bei-migraene",
+        "spannungskopfschmerzen-symptome-dauer-migraene",
       ],
     },
     it: {
@@ -731,6 +736,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "mal-di-testa-da-cervicale",
         "emicrania-pericolosa-rischi-studi",
         "risonanza-magnetica-emicrania",
+        "cefalea-tensiva-sintomi-durata-differenze-emicrania",
       ],
     },
     pt: {
@@ -751,6 +757,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-cervical-dor-de-cabeca-nuca",
         "enxaqueca-e-perigosa",
         "ressonancia-magnetica-enxaqueca",
+        "dor-de-cabeca-de-tensao-sintomas-duracao",
       ],
     },
     "pt-BR": {
@@ -771,6 +778,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-cervical-dor-na-nuca",
         "enxaqueca-e-perigosa",
         "ressonancia-magnetica-enxaqueca",
+        "dor-de-cabeca-tensional-sintomas-duracao",
       ],
     },
   },
