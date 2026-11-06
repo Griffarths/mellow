@@ -461,6 +461,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-nausees-vomissements",
         "migraine-quel-medecin-consulter",
         "medicament-migraine-crise",
+        "antidouleur-mal-de-tete-paracetamol-ibuprofene-aspirine",
       ],
     },
     en: {
@@ -482,6 +483,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-nausea",
         "when-to-see-a-doctor-for-migraine",
         "migraine-medication",
+        "painkiller-for-headache",
       ],
     },
     es: {
@@ -503,6 +505,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-con-nauseas-y-vomitos",
         "migrana-que-medico-consultar",
         "medicamentos-para-la-migrana",
+        "analgesicos-para-el-dolor-de-cabeza",
       ],
     },
     "es-419": {
@@ -524,6 +527,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-nauseas",
         "con-que-medico-consultar-por-migrana",
         "medicamentos-para-la-migrana",
+        "analgesicos-para-el-dolor-de-cabeza",
       ],
     },
     de: {
@@ -545,6 +549,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-uebelkeit",
         "migraene-welcher-arzt",
         "migraene-medikamente-akut-ueberblick",
+        "schmerzmittel-bei-kopfschmerzen",
       ],
     },
     it: {
@@ -566,6 +571,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-nausea-perche-succede-come-alleggerirla",
         "emicrania-quale-specialista",
         "farmaci-per-emicrania-antidolorifici-fans-triptani",
+        "antidolorifico-per-mal-di-testa",
       ],
     },
     pt: {
@@ -587,6 +593,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-nauseas",
         "enxaqueca-que-medico-consultar",
         "medicamentos-para-a-enxaqueca",
+        "analgesico-para-dor-de-cabeca",
       ],
     },
     "pt-BR": {
@@ -608,6 +615,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-nausea",
         "enxaqueca-qual-medico-procurar",
         "remedios-para-enxaqueca-crise",
+        "remedio-para-dor-de-cabeca-paracetamol-ibuprofeno-aspirina",
       ],
     },
   },
