@@ -462,6 +462,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-quel-medecin-consulter",
         "medicament-migraine-crise",
         "antidouleur-mal-de-tete-paracetamol-ibuprofene-aspirine",
+        "medicament-migraine-ne-marche-pas",
       ],
     },
     en: {
@@ -484,6 +485,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "when-to-see-a-doctor-for-migraine",
         "migraine-medication",
         "painkiller-for-headache",
+        "migraine-medication-not-working",
       ],
     },
     es: {
@@ -506,6 +508,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-que-medico-consultar",
         "medicamentos-para-la-migrana",
         "analgesicos-para-el-dolor-de-cabeza",
+        "medicamento-para-migrana-no-hace-efecto",
       ],
     },
     "es-419": {
@@ -528,6 +531,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "con-que-medico-consultar-por-migrana",
         "medicamentos-para-la-migrana",
         "analgesicos-para-el-dolor-de-cabeza",
+        "medicamento-para-la-migrana-no-funciona",
       ],
     },
     de: {
@@ -550,6 +554,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-welcher-arzt",
         "migraene-medikamente-akut-ueberblick",
         "schmerzmittel-bei-kopfschmerzen",
+        "migraene-medikament-wirkt-nicht",
       ],
     },
     it: {
@@ -572,6 +577,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-quale-specialista",
         "farmaci-per-emicrania-antidolorifici-fans-triptani",
         "antidolorifico-per-mal-di-testa",
+        "farmaco-per-emicrania-non-funziona",
       ],
     },
     pt: {
@@ -594,6 +600,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-que-medico-consultar",
         "medicamentos-para-a-enxaqueca",
         "analgesico-para-dor-de-cabeca",
+        "medicamento-para-a-enxaqueca-nao-faz-efeito",
       ],
     },
     "pt-BR": {
@@ -616,6 +623,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-qual-medico-procurar",
         "remedios-para-enxaqueca-crise",
         "remedio-para-dor-de-cabeca-paracetamol-ibuprofeno-aspirina",
+        "remedio-para-enxaqueca-nao-faz-efeito",
       ],
     },
   },
