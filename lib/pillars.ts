@@ -248,6 +248,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "symptomes-avant-une-migraine-prodrome",
         "postdrome-migraine-fatigue-apres-la-crise",
         "migraine-derriere-l-oeil",
+        "photophobie-migraine-lumiere-bruit-odeurs",
       ],
     },
     en: {
@@ -275,6 +276,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-prodrome-symptoms",
         "migraine-hangover-postdrome",
         "migraine-behind-the-eye",
+        "migraine-light-sensitivity",
       ],
     },
     es: {
@@ -302,6 +304,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "sintomas-antes-de-una-migrana-prodromo",
         "posdromo-migrana",
         "migrana-detras-del-ojo-un-solo-lado",
+        "sensibilidad-luz-ruido-migrana",
       ],
     },
     "es-419": {
@@ -329,6 +332,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "sintomas-antes-de-la-migrana-prodromo",
         "posdromo-de-la-migrana",
         "migrana-detras-del-ojo",
+        "migrana-sensibilidad-a-la-luz-ruido-olores",
       ],
     },
     de: {
@@ -356,6 +360,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-vorboten",
         "migraenekater-postdrom-erschoepfung",
         "migraene-hinter-dem-auge",
+        "migraene-lichtempfindlichkeit-laerm-gerueche",
       ],
     },
     it: {
@@ -383,6 +388,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "sintomi-prima-dell-emicrania",
         "postdromo-emicrania-stanchezza-dopo-attacco",
         "emicrania-dietro-l-occhio",
+        "emicrania-sensibilita-alla-luce",
       ],
     },
     pt: {
@@ -410,6 +416,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "sintomas-antes-da-enxaqueca-prodromo",
         "posdromo-enxaqueca-cansaco-depois-da-crise",
         "enxaqueca-atras-do-olho",
+        "enxaqueca-sensibilidade-luz-ruido-cheiros",
       ],
     },
     "pt-BR": {
@@ -437,6 +444,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "sinais-de-que-a-enxaqueca-vai-comecar",
         "posdromo-da-enxaqueca",
         "enxaqueca-atras-do-olho",
+        "enxaqueca-sensibilidade-a-luz-barulho-cheiros",
       ],
     },
   },
