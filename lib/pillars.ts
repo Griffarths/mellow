@@ -249,6 +249,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "postdrome-migraine-fatigue-apres-la-crise",
         "migraine-derriere-l-oeil",
         "photophobie-migraine-lumiere-bruit-odeurs",
+        "migraine-chronique-definition-15-jours",
       ],
     },
     en: {
@@ -277,6 +278,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-hangover-postdrome",
         "migraine-behind-the-eye",
         "migraine-light-sensitivity",
+        "chronic-migraine-vs-episodic-migraine",
       ],
     },
     es: {
@@ -305,6 +307,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "posdromo-migrana",
         "migrana-detras-del-ojo-un-solo-lado",
         "sensibilidad-luz-ruido-migrana",
+        "migrana-cronica-que-es-limite-15-dias",
       ],
     },
     "es-419": {
@@ -333,6 +336,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "posdromo-de-la-migrana",
         "migrana-detras-del-ojo",
         "migrana-sensibilidad-a-la-luz-ruido-olores",
+        "migrana-cronica-que-es-limite-15-dias",
       ],
     },
     de: {
@@ -361,6 +365,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraenekater-postdrom-erschoepfung",
         "migraene-hinter-dem-auge",
         "migraene-lichtempfindlichkeit-laerm-gerueche",
+        "chronische-migraene-definition-15-tage",
       ],
     },
     it: {
@@ -389,6 +394,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "postdromo-emicrania-stanchezza-dopo-attacco",
         "emicrania-dietro-l-occhio",
         "emicrania-sensibilita-alla-luce",
+        "emicrania-cronica-cos-e-15-giorni",
       ],
     },
     pt: {
@@ -417,6 +423,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "posdromo-enxaqueca-cansaco-depois-da-crise",
         "enxaqueca-atras-do-olho",
         "enxaqueca-sensibilidade-luz-ruido-cheiros",
+        "enxaqueca-cronica-ou-episodica-15-dias",
       ],
     },
     "pt-BR": {
@@ -445,6 +452,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "posdromo-da-enxaqueca",
         "enxaqueca-atras-do-olho",
         "enxaqueca-sensibilidade-a-luz-barulho-cheiros",
+        "enxaqueca-cronica-o-que-e",
       ],
     },
   },
