@@ -831,6 +831,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-enfant-adolescent",
         "analyser-son-carnet-de-migraine",
         "meilleure-application-migraine",
+        "rapport-migraine-pour-le-medecin",
       ],
     },
     en: {
@@ -848,6 +849,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-in-children-and-teens",
         "migraine-diary-patterns",
         "best-migraine-app",
+        "migraine-report-for-doctor",
       ],
     },
     es: {
@@ -865,6 +867,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-infantil-guia-para-padres",
         "analizar-diario-de-migrana",
         "mejor-app-para-migrana-criterios",
+        "informe-de-migrana-para-el-medico",
       ],
     },
     "es-419": {
@@ -882,6 +885,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-en-ninos-guia-para-padres",
         "analizar-tu-diario-de-migrana",
         "mejor-app-para-migrana",
+        "informe-de-migrana-para-el-medico",
       ],
     },
     de: {
@@ -899,6 +903,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-bei-kindern",
         "migraenetagebuch-auswerten",
         "migraene-app-10-kriterien",
+        "migraene-bericht-fuer-den-arzt",
       ],
     },
     it: {
@@ -916,6 +921,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-nei-bambini",
         "analizzare-il-diario-dell-emicrania",
         "migliore-app-per-emicrania",
+        "report-emicrania-per-il-medico",
       ],
     },
     pt: {
@@ -933,6 +939,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-em-criancas-guia-para-pais",
         "analisar-diario-de-enxaqueca",
         "melhor-aplicacao-para-enxaqueca",
+        "relatorio-de-enxaqueca-para-o-medico",
       ],
     },
     "pt-BR": {
@@ -950,6 +957,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-infantil-guia-para-pais",
         "como-analisar-diario-de-enxaqueca",
         "melhor-aplicativo-para-enxaqueca",
+        "relatorio-de-enxaqueca-para-o-medico",
       ],
     },
   },
