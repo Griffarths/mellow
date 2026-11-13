@@ -977,6 +977,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "glossaire-migraine",
         "migraine-en-chiffres",
         "causes-de-la-migraine",
+        "idees-recues-migraine",
       ],
     },
     en: {
@@ -993,6 +994,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-glossary",
         "migraine-by-the-numbers",
         "what-causes-migraines",
+        "migraine-myths",
       ],
     },
     es: {
@@ -1009,6 +1011,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-en-cifras",
         "glosario-de-migrana",
         "causas-de-la-migrana",
+        "mitos-sobre-la-migrana",
       ],
     },
     "es-419": {
@@ -1025,6 +1028,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "glosario-de-migrana",
         "estadisticas-de-migrana",
         "causas-de-la-migrana",
+        "mitos-sobre-la-migrana",
       ],
     },
     de: {
@@ -1041,6 +1045,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-statistik-zahlen",
         "migraene-glossar",
         "migraene-ursachen-gehirn",
+        "migraene-mythen",
       ],
     },
     it: {
@@ -1057,6 +1062,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "glossario-emicrania",
         "emicrania-statistiche-mondo-italia",
         "cause-emicrania-cosa-succede-nel-cervello",
+        "falsi-miti-emicrania",
       ],
     },
     pt: {
@@ -1073,6 +1079,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "glossario-enxaqueca",
         "enxaqueca-em-numeros",
         "causas-da-enxaqueca",
+        "mitos-sobre-enxaqueca",
       ],
     },
     "pt-BR": {
@@ -1089,6 +1096,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "glossario-da-enxaqueca",
         "enxaqueca-em-numeros",
         "causas-da-enxaqueca",
+        "mitos-e-verdades-sobre-enxaqueca",
       ],
     },
   },
