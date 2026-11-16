@@ -479,6 +479,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "medicament-migraine-crise",
         "antidouleur-mal-de-tete-paracetamol-ibuprofene-aspirine",
         "medicament-migraine-ne-marche-pas",
+        "cephalee-par-abus-medicamenteux",
       ],
     },
     en: {
@@ -502,6 +503,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-medication",
         "painkiller-for-headache",
         "migraine-medication-not-working",
+        "medication-overuse-headache",
       ],
     },
     es: {
@@ -525,6 +527,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "medicamentos-para-la-migrana",
         "analgesicos-para-el-dolor-de-cabeza",
         "medicamento-para-migrana-no-hace-efecto",
+        "cefalea-por-abuso-de-analgesicos",
       ],
     },
     "es-419": {
@@ -548,6 +551,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "medicamentos-para-la-migrana",
         "analgesicos-para-el-dolor-de-cabeza",
         "medicamento-para-la-migrana-no-funciona",
+        "cefalea-por-abuso-de-analgesicos",
       ],
     },
     de: {
@@ -571,6 +575,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-medikamente-akut-ueberblick",
         "schmerzmittel-bei-kopfschmerzen",
         "migraene-medikament-wirkt-nicht",
+        "kopfschmerz-durch-schmerzmittel",
       ],
     },
     it: {
@@ -594,6 +599,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "farmaci-per-emicrania-antidolorifici-fans-triptani",
         "antidolorifico-per-mal-di-testa",
         "farmaco-per-emicrania-non-funziona",
+        "cefalea-da-abuso-di-farmaci",
       ],
     },
     pt: {
@@ -617,6 +623,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "medicamentos-para-a-enxaqueca",
         "analgesico-para-dor-de-cabeca",
         "medicamento-para-a-enxaqueca-nao-faz-efeito",
+        "cefaleia-por-abuso-de-analgesicos",
       ],
     },
     "pt-BR": {
@@ -640,6 +647,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "remedios-para-enxaqueca-crise",
         "remedio-para-dor-de-cabeca-paracetamol-ibuprofeno-aspirina",
         "remedio-para-enxaqueca-nao-faz-efeito",
+        "cefaleia-por-abuso-de-analgesicos",
       ],
     },
   },
