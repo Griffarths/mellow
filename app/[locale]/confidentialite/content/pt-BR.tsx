@@ -783,6 +783,11 @@ export default function PrivacyContentPtBr() {
         conta e risco. Você só deve acessar os Serviços em um ambiente
         seguro.
       </p>
+      <p>
+        Os dados trocados entre o app e nossos servidores, e entre nossos
+        servidores e a Anthropic para «Falar com o Mellow», são criptografados
+        durante a transferência (HTTPS).
+      </p>
 
       <h2>8. Coletamos dados de menores?</h2>
       <p>

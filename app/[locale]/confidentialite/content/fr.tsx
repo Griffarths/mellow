@@ -827,6 +827,11 @@ export default function PrivacyContentFr() {
         Services se fait à tes propres risques. Tu ne devrais accéder aux
         Services que dans un environnement sécurisé.
       </p>
+      <p>
+        Les données échangées entre l&apos;app et nos serveurs, et entre nos
+        serveurs et Anthropic pour «&nbsp;Parler à Mellow&nbsp;», sont
+        chiffrées pendant leur transfert (HTTPS).
+      </p>
 
       <h2>8. Collectons-nous des informations auprès de mineurs&nbsp;?</h2>
       <p>

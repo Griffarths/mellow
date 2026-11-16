@@ -797,6 +797,11 @@ export default function PrivacyContentEs419() {
         riesgo. Solo deberías acceder a los Servicios en un entorno
         seguro.
       </p>
+      <p>
+        Los datos que se intercambian entre la app y nuestros servidores, y
+        entre nuestros servidores y Anthropic para «Hablar con Mellow», se
+        cifran durante su transferencia (HTTPS).
+      </p>
 
       <h2>8. ¿Recopilamos datos de menores?</h2>
       <p>

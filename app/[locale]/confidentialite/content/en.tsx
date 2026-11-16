@@ -760,6 +760,11 @@ export default function PrivacyContentEn() {
         from our Services is at your own risk. You should only access the
         Services within a secure environment.
       </p>
+      <p>
+        Data exchanged between the app and our servers, and between our
+        servers and Anthropic for &quot;Talk to Mellow,&quot; is encrypted in
+        transit (HTTPS).
+      </p>
 
       <h2>8. Do we collect information from minors?</h2>
       <p>

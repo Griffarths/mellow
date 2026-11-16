@@ -815,6 +815,11 @@ export default function PrivacyContentDe() {
         auf eigenes Risiko. Du solltest die Dienste nur in einer sicheren
         Umgebung nutzen.
       </p>
+      <p>
+        Die Daten, die zwischen der App und unseren Servern sowie zwischen
+        unseren Servern und Anthropic für „Mit Mellow sprechen“ ausgetauscht
+        werden, sind während der Übertragung verschlüsselt (HTTPS).
+      </p>
 
       <h2>8. Erheben wir Daten von Minderjährigen?</h2>
       <p>
