@@ -223,7 +223,7 @@ export default function PrivacyContentFr() {
           sur Android, pour les mettre en lien avec tes migraines. Ces données
           ne sont jamais utilisées à des fins publicitaires ni transmises à Meta
           ou TikTok. Tu peux retirer cet accès à tout moment dans les réglages
-          d&apos;Apple Santé ou de Santé Connect. Si tu utilises «&nbsp;Parle à
+          d&apos;Apple Santé ou de Santé Connect. Si tu utilises «&nbsp;Parler à
           Mellow&nbsp;» et que tu as donné ton accord, les analyses de sommeil
           que t&apos;affiche l&apos;application (jamais tes nuits une par une)
           sont transmises à Anthropic pour répondre à tes questions (voir
@@ -390,7 +390,7 @@ export default function PrivacyContentFr() {
         </li>
         <li>
           <strong>
-            Pour répondre à tes questions dans «&nbsp;Parle à Mellow&nbsp;».
+            Pour répondre à tes questions dans «&nbsp;Parler à Mellow&nbsp;».
           </strong>{" "}
           Si tu as donné ton accord, nous transmettons un résumé de ton carnet
           à Anthropic pour répondre aux questions que tu poses dans le chat
@@ -432,7 +432,7 @@ export default function PrivacyContentFr() {
           si tu nous as donné l&apos;autorisation (c&apos;est-à-dire ton
           consentement) d&apos;utiliser tes données personnelles pour un
           objectif spécifique. Tu peux retirer ton consentement à tout
-          moment. C&apos;est le cas de «&nbsp;Parle à Mellow&nbsp;», qui ne
+          moment. C&apos;est le cas de «&nbsp;Parler à Mellow&nbsp;», qui ne
           fonctionne qu&apos;avec ton accord (voir section 4).
         </li>
         <li>
@@ -585,7 +585,7 @@ export default function PrivacyContentFr() {
         </li>
         <li>Analyse web et mobile&nbsp;: PostHog</li>
         <li>
-          Assistant conversationnel «&nbsp;Parle à Mellow&nbsp;»&nbsp;:
+          Assistant conversationnel «&nbsp;Parler à Mellow&nbsp;»&nbsp;:
           Anthropic (Claude)
         </li>
         <li>
@@ -636,9 +636,9 @@ export default function PrivacyContentFr() {
         utilisateur qui t&apos;a envoyé un câlin.
       </p>
 
-      <h3>Parle à Mellow</h3>
+      <h3>Parler à Mellow</h3>
       <p>
-        «&nbsp;Parle à Mellow&nbsp;» est un chat qui répond à tes questions sur
+        «&nbsp;Parler à Mellow&nbsp;» est un chat qui répond à tes questions sur
         tes propres données&nbsp;: tes crises, tes traitements, ton sommeil.
         Pour te répondre, nous utilisons Claude, un modèle d&apos;intelligence
         artificielle de la société Anthropic. Voici exactement ce qui se passe
@@ -750,7 +750,7 @@ export default function PrivacyContentFr() {
         sociétés aux États-Unis et dans d&apos;autres pays où elles opèrent.
       </p>
       <p>
-        Les données envoyées à Anthropic pour «&nbsp;Parle à Mellow&nbsp;» sont
+        Les données envoyées à Anthropic pour «&nbsp;Parler à Mellow&nbsp;» sont
         traitées aux États-Unis. Ce transfert est encadré par les Clauses
         Contractuelles Types de la Commission européenne, intégrées au contrat
         de sous-traitance d&apos;Anthropic.
@@ -793,7 +793,7 @@ export default function PrivacyContentFr() {
         compte chez nous.
       </p>
       <p>
-        Pour «&nbsp;Parle à Mellow&nbsp;», nous ne conservons ni tes questions
+        Pour «&nbsp;Parler à Mellow&nbsp;», nous ne conservons ni tes questions
         ni les réponses, et Anthropic conserve les données qu&apos;il reçoit
         pendant 30&nbsp;jours (voir section 4).
       </p>
@@ -898,7 +898,7 @@ export default function PrivacyContentFr() {
         Tu peux arrêter à tout moment de partager ton prénom et ta migraine en
         cours avec les autres utilisateurs en désactivant «&nbsp;Recevoir des
         câlins&nbsp;» dans les réglages de l&apos;application. Tu peux aussi
-        retirer à tout moment ton accord à «&nbsp;Parle à Mellow&nbsp;» dans
+        retirer à tout moment ton accord à «&nbsp;Parler à Mellow&nbsp;» dans
         les réglages de l&apos;application&nbsp;: plus aucune donnée n&apos;est
         alors envoyée à Anthropic, et le chat cesse de fonctionner.
       </p>

@@ -88,7 +88,7 @@ export default function LegalContentFr() {
         </a>
       </p>
 
-      <h3>Assistant conversationnel «&nbsp;Parle à Mellow&nbsp;»</h3>
+      <h3>Assistant conversationnel «&nbsp;Parler à Mellow&nbsp;»</h3>
       <p>
         Anthropic Ireland, Limited
         <br />
