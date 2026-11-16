@@ -4,7 +4,7 @@ export default function PrivacyContentPt() {
     <>
       <h1>Política de privacidade · Mellow</h1>
       <p>
-        <strong>Última atualização: 22 de outubro de 2026</strong>
+        <strong>Última atualização: 16 de novembro de 2026</strong>
       </p>
 
       <p>
@@ -218,6 +218,10 @@ export default function PrivacyContentPt() {
           usados para fins publicitários nem transmitidos à Meta ou ao TikTok.
           Podes retirar este acesso a qualquer momento nas definições da app
           Saúde ou da Conexão Saúde.
+          Se usares «Falar com o Mellow» e tiveres dado o teu consentimento, as
+          análises de sono que a aplicação te mostra (nunca as tuas noites uma a
+          uma) são transmitidas à Anthropic para responder às tuas perguntas
+          (ver secção 4).
         </li>
       </ul>
       <p>
@@ -369,6 +373,14 @@ export default function PrivacyContentPt() {
         </li>
         <li>
           <strong>
+            Para responder às tuas perguntas em «Falar com o Mellow».
+          </strong>{" "}
+          Se tiveres dado o teu consentimento, transmitimos um resumo do teu
+          diário à Anthropic para responder às perguntas que fazes no chat (ver
+          secção 4).
+        </li>
+        <li>
+          <strong>
             Para salvaguardar ou proteger interesses vitais de uma
             pessoa.
           </strong>{" "}
@@ -403,6 +415,8 @@ export default function PrivacyContentPt() {
           nos deste autorização (ou seja, consentimento) para os utilizar
           para um fim específico. Podes retirar o teu consentimento a
           qualquer momento.
+          É o caso de «Falar com o Mellow», que só funciona com o teu
+          consentimento (ver secção 4).
         </li>
         <li>
           <strong>Execução de contrato.</strong> Podemos tratar os teus
@@ -544,6 +558,9 @@ export default function PrivacyContentPt() {
         </li>
         <li>Análise web e móvel: PostHog</li>
         <li>
+          Assistente de conversação «Falar com o Mellow»: Anthropic (Claude)
+        </li>
+        <li>
           Medição de campanhas publicitárias: Meta (Facebook SDK, API de
           Conversões), apenas no iPhone
         </li>
@@ -590,6 +607,101 @@ export default function PrivacyContentPt() {
         aplicação e bloquear um utilizador que te tenha enviado um abraço.
       </p>
 
+      <h3>Falar com o Mellow</h3>
+      <p>
+        «Falar com o Mellow» é um chat que responde às tuas perguntas sobre os
+        teus próprios dados: as tuas crises, os teus tratamentos, o teu sono.
+        Para te responder, usamos o Claude, um modelo de inteligência artificial
+        da empresa Anthropic. Eis exatamente o que acontece quando o usas.
+      </p>
+      <p>
+        <strong>Primeiro, o teu consentimento.</strong> Antes da tua primeira
+        pergunta, a aplicação mostra-te um ecrã que explica que os dados do teu
+        diário serão lidos para te responder. Enquanto não deres o teu
+        consentimento, nenhum dado é enviado e o chat não funciona. Podes
+        retirar este consentimento a qualquer momento nas definições da
+        aplicação: a partir daí, deixam de ser enviados dados e o chat deixa de
+        funcionar.
+      </p>
+      <p>
+        <strong>O que é enviado.</strong> A tua pergunta segue para o nosso
+        servidor, que lê os dados da tua conta, os resume e os transmite à
+        Anthropic juntamente com a tua pergunta. A resposta volta depois para a
+        aplicação. Este resumo contém:
+      </p>
+      <ul>
+        <li>
+          as tuas crises dos últimos doze meses: data e hora de início, duração,
+          intensidade numa escala até 10, localização da dor, sinais de aviso,
+          sintomas, fatores desencadeantes, medicamentos tomados e a sua
+          eficácia, o que te aliviou e a sua eficácia;
+        </li>
+        <li>
+          os teus tratamentos em curso;
+        </li>
+        <li>
+          as tuas três próximas consultas médicas;
+        </li>
+        <li>
+          estatísticas calculadas pela aplicação: crises por mês, por dia da
+          semana e por hora, intensidade, duração, fatores desencadeantes mais
+          frequentes, eficácia dos medicamentos e do que te alivia;
+        </li>
+        <li>
+          os registos de pressão atmosférica e de humidade dos últimos sete
+          dias, e cinco dias de previsões meteorológicas;
+        </li>
+        <li>
+          as análises do teu sono (ver abaixo);
+        </li>
+        <li>
+          a tua pergunta e as mensagens anteriores da mesma conversa.
+        </li>
+      </ul>
+      <p>
+        <strong>O que não é enviado.</strong> Nem o teu nome, nem o teu endereço
+        de e-mail, nem o identificador da tua conta. Também nenhuma localização:
+        a meteorologia é calculada antes do envio e só seguem os números. A
+        Anthropic recebe, portanto, estes dados sem saber a quem pertencem.
+        Continuam a ser dados pessoais, mas só enviamos o necessário para te
+        responder.
+      </p>
+      <p>
+        <strong>O teu sono.</strong> Os dados de sono vêm da app Saúde da Apple
+        (HealthKit) no iOS e da Conexão Saúde (Health Connect) no Android. O
+        chat recebe exatamente as análises que o ecrã Sono da aplicação te
+        mostra, e nada mais: o número de noites analisadas, a tua duração
+        mediana de sono, o efeito de uma noite curta no risco de crise, o número
+        de noites curtas que não foram seguidas de nenhuma crise, o efeito da
+        noite na intensidade das crises, as crises já presentes ao acordar, o
+        teu sono na noite a seguir a uma crise, as tuas horas habituais de
+        deitar e de levantar e a sua regularidade, o efeito de te deitares a
+        horas irregulares, o desfasamento da hora de levantar ao fim de semana e
+        o efeito de um sono agitado. Nunca recebe as tuas noites uma a uma, nem
+        o detalhe dos teus despertares ou das tuas fases de sono profundo e REM.
+        Por outras palavras, o chat não sabe do teu sono nada mais do que aquilo
+        que vês na aplicação.
+      </p>
+      <p>
+        <strong>O que guardamos.</strong> Nem as tuas perguntas, nem as
+        respostas. De cada mensagem guardamos apenas a data, a posição na
+        conversa e contadores técnicos ligados ao custo do serviço, sem qualquer
+        texto.
+      </p>
+      <p>
+        <strong>O que a Anthropic guarda.</strong> A Anthropic atua como nossa
+        subcontratante: a empresa trata estes dados apenas por nossa conta e
+        segundo as nossas instruções, no âmbito de um contrato de subcontratação
+        conforme ao artigo 28.º do RGPD. Os dados enviados e as respostas são
+        conservados pela Anthropic durante 30 dias. Durante esse período, podem
+        ser consultados pela Anthropic para fins de segurança, por exemplo para
+        detetar abusos. O tratamento é feito nos Estados Unidos (ver secção 5).
+      </p>
+      <p>
+        <strong>Sem treino.</strong> A Anthropic não usa estes dados para
+        treinar os seus modelos de inteligência artificial.
+      </p>
+
       <h2>5. Os teus dados são transferidos internacionalmente?</h2>
       <p>
         <em>Em resumo:</em> Podemos transferir, armazenar e tratar os
@@ -607,6 +719,12 @@ export default function PrivacyContentPt() {
         No iPhone, se autorizares o rastreamento, os dados transmitidos à Meta e ao
         TikTok para medir as nossas campanhas publicitárias podem ser tratados
         por estas empresas nos Estados Unidos e noutros países onde operam.
+      </p>
+      <p>
+        Os dados enviados à Anthropic para «Falar com o Mellow» são tratados nos
+        Estados Unidos. Esta transferência está enquadrada pelas Cláusulas
+        Contratuais-Tipo da Comissão Europeia, integradas no contrato de
+        subcontratação da Anthropic.
       </p>
       <p>
         Se resides no Espaço Económico Europeu (EEE), Reino Unido (UK)
@@ -643,6 +761,11 @@ export default function PrivacyContentPt() {
         legais). Nenhum fim desta política exige conservar os teus
         dados por mais tempo do que o período em que tens uma conta
         connosco.
+      </p>
+      <p>
+        Para «Falar com o Mellow», não guardamos as tuas perguntas nem as
+        respostas, e a Anthropic conserva os dados que recebe durante 30 dias
+        (ver secção 4).
       </p>
       <p>
         Quando deixarmos de ter uma necessidade comercial legítima
@@ -737,6 +860,9 @@ export default function PrivacyContentPt() {
         Podes deixar de partilhar o teu nome próprio e a tua enxaqueca em
         curso com outros utilizadores a qualquer momento, desativando «Receber
         abraços» nas definições da aplicação.
+        Também podes retirar a qualquer momento o teu consentimento a «Falar com
+        o Mellow» nas definições da aplicação: a partir daí, deixam de ser
+        enviados dados à Anthropic e o chat deixa de funcionar.
       </p>
       <p>
         <strong>Informações da conta:</strong> Se a qualquer momento

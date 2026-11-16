@@ -5,7 +5,7 @@ export default function LegalContentPtBr() {
     <>
       <h1>Aviso legal · Mellow</h1>
       <p>
-        <strong>Última atualização: 22 de outubro de 2026</strong>
+        <strong>Última atualização: 16 de novembro de 2026</strong>
       </p>
 
       <h2>1. Editor do aplicativo</h2>
@@ -85,6 +85,31 @@ export default function LegalContentPtBr() {
         >
           https://www.revenuecat.com
         </a>
+      </p>
+
+      <h3>Assistente de conversa «Falar com o Mellow»</h3>
+      <p>
+        Anthropic Ireland, Limited
+        <br />
+        6th Floor, South Bank House, Barrow Street
+        <br />
+        Dublin 4, D04 TR29, Irlanda
+        <br />
+        <a
+          href="https://www.anthropic.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://www.anthropic.com
+        </a>
+      </p>
+      <p>
+        <em>
+          Os dados são tratados nos Estados Unidos, no âmbito de um contrato de
+          tratamento de dados que inclui as Cláusulas Contratuais Padrão da
+          Comissão Europeia. Os detalhes estão na{" "}
+          <Link href="/confidentialite">Política de privacidade</Link>.
+        </em>
       </p>
 
       <h3>Dados de geolocalização</h3>

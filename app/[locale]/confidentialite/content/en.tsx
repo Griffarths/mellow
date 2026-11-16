@@ -5,7 +5,7 @@ export default function PrivacyContentEn() {
     <>
       <h1>Privacy Policy · Mellow</h1>
       <p>
-        <strong>Last updated: October 22, 2026</strong>
+        <strong>Last updated: November 16, 2026</strong>
       </p>
 
       <p>
@@ -216,6 +216,9 @@ export default function PrivacyContentEn() {
           relate it to your migraines. This data is never used for advertising
           or shared with Meta or TikTok. You can remove this access at any time
           in the Apple Health or Health Connect settings.
+          If you use &quot;Talk to Mellow&quot; and have given your consent, the
+          sleep analyses the app shows you (never your nights one by one) are
+          sent to Anthropic to answer your questions (see section 4).
         </li>
       </ul>
       <p>
@@ -359,6 +362,13 @@ export default function PrivacyContentEn() {
         </li>
         <li>
           <strong>
+            To answer your questions in &quot;Talk to Mellow.&quot;
+          </strong>{" "}
+          If you have given your consent, we send a summary of your diary to
+          Anthropic to answer the questions you ask in the chat (see section 4).
+        </li>
+        <li>
+          <strong>
             To save or protect an individual&apos;s vital interest.
           </strong>{" "}
           We may process your information when necessary to save or protect
@@ -385,6 +395,8 @@ export default function PrivacyContentEn() {
           have given us permission (i.e., consent) to use your personal
           information for a specific purpose. You can withdraw your consent
           at any time.
+          This is the case for &quot;Talk to Mellow,&quot; which only works with
+          your consent (see section 4).
         </li>
         <li>
           <strong>Performance of a Contract.</strong> We may process your
@@ -522,6 +534,10 @@ export default function PrivacyContentEn() {
           User Account Registration and Authentication: Supabase (email), Apple (Sign In with Apple) and Google (Sign in with Google)
         </li>
         <li>Web and Mobile Analytics: PostHog</li>
+        <li>
+          Conversational Assistant (&quot;Talk to Mellow&quot;): Anthropic
+          (Claude)
+        </li>
         <li>Advertising Measurement: Meta (Facebook SDK, Conversions API), iPhone only</li>
         <li>Advertising Measurement: TikTok (TikTok Business SDK), iPhone only</li>
       </ul>
@@ -559,6 +575,99 @@ export default function PrivacyContentEn() {
         sent you a hug.
       </p>
 
+      <h3>Talk to Mellow</h3>
+      <p>
+        &quot;Talk to Mellow&quot; is a chat that answers your questions about
+        your own data: your attacks, your treatments, your sleep. To answer you,
+        we use Claude, an artificial intelligence model made by the company
+        Anthropic. Here is exactly what happens when you use it.
+      </p>
+      <p>
+        <strong>Your consent first.</strong> Before your first question, the app
+        shows you a screen explaining that the data in your diary will be read
+        to answer you. Until you have given your consent, no data is sent and
+        the chat does not work. You can withdraw this consent at any time in the
+        app&apos;s settings: no more data is then sent, and the chat stops
+        working.
+      </p>
+      <p>
+        <strong>What is sent.</strong> Your question goes to our server, which
+        reads the data in your account, summarizes it and sends it to Anthropic
+        along with your question. The answer then comes back to the app. This
+        summary contains:
+      </p>
+      <ul>
+        <li>
+          your attacks from the last twelve months: start date and time,
+          duration, intensity out of 10, location of the pain, warning signs,
+          symptoms, triggers, medications taken and how well they worked, what
+          relieved you and how well it worked;
+        </li>
+        <li>
+          your current treatments;
+        </li>
+        <li>
+          your next three medical appointments;
+        </li>
+        <li>
+          statistics calculated by the app: attacks by month, by day of the week
+          and by hour, intensity, duration, most frequent triggers, how well
+          your medications and the things that relieve you work;
+        </li>
+        <li>
+          atmospheric pressure and humidity readings from the last seven days,
+          and five days of weather forecasts;
+        </li>
+        <li>
+          your sleep analyses (see below);
+        </li>
+        <li>
+          your question, and the previous messages in the same conversation.
+        </li>
+      </ul>
+      <p>
+        <strong>What is not sent.</strong> Not your name, not your email
+        address, not your account ID. No location either: the weather is worked
+        out before sending, and only the figures are sent. Anthropic therefore
+        receives this data without knowing who it belongs to. It remains
+        personal data, but we only send what is needed to answer you.
+      </p>
+      <p>
+        <strong>Your sleep.</strong> Sleep data comes from Apple&apos;s Health
+        app (HealthKit) on iOS, and from Health Connect on Android. The chat
+        receives exactly the analyses that the app&apos;s Sleep screen shows
+        you, and nothing more: the number of nights analyzed, your median sleep
+        duration, the effect of a short night on the risk of an attack, the
+        number of short nights that were not followed by any attack, the effect
+        of the night on the intensity of attacks, the attacks already present on
+        waking, your sleep on the night after an attack, your usual bedtime and
+        wake-up time and how regular they are, the effect of an irregular
+        bedtime, the shift in your wake-up time at weekends and the effect of
+        restless sleep. It never receives your nights one by one, nor the
+        details of your awakenings or of your deep and REM sleep stages. In
+        other words, the chat knows nothing more about your sleep than what you
+        see in the app.
+      </p>
+      <p>
+        <strong>What we keep.</strong> Neither your questions nor the answers.
+        For each message, we only keep its date, its position in the
+        conversation and technical counters related to the cost of the service,
+        with no text.
+      </p>
+      <p>
+        <strong>What Anthropic keeps.</strong> Anthropic acts as our processor:
+        the company processes this data only on our behalf and according to our
+        instructions, under a data processing agreement that complies with
+        Article 28 of the GDPR. The data sent and the answers are kept by
+        Anthropic for 30 days. During this period, they may be accessed by
+        Anthropic for safety and security purposes, for example to detect abuse.
+        Processing takes place in the United States (see section 5).
+      </p>
+      <p>
+        <strong>No training.</strong> Anthropic does not use this data to train
+        its artificial intelligence models.
+      </p>
+
       <h2>5. Is your information transferred internationally?</h2>
       <p>
         <em>In Short:</em> We may transfer, store, and process your
@@ -575,6 +684,12 @@ export default function PrivacyContentEn() {
         On iPhone, if you allow tracking, the data shared with Meta and TikTok to measure
         our advertising campaigns may be processed by these companies in the
         United States and in other countries where they operate.
+      </p>
+      <p>
+        Data sent to Anthropic for &quot;Talk to Mellow&quot; is processed in
+        the United States. This transfer is governed by the European
+        Commission&apos;s Standard Contractual Clauses, which are part of
+        Anthropic&apos;s data processing agreement.
       </p>
       <p>
         If you are a resident in the European Economic Area (EEA), United
@@ -611,6 +726,11 @@ export default function PrivacyContentEn() {
         accounting, or other legal requirements). No purpose in this notice
         will require us keeping your personal information for longer than the
         period of time in which users have an account with us.
+      </p>
+      <p>
+        For &quot;Talk to Mellow,&quot; we keep neither your questions nor the
+        answers, and Anthropic keeps the data it receives for 30 days (see
+        section 4).
       </p>
       <p>
         When we have no ongoing legitimate business need to process your
@@ -705,6 +825,9 @@ export default function PrivacyContentEn() {
         You can stop sharing your first name and current migraine with other
         users at any time by turning off &quot;Receive hugs&quot; in the app
         settings.
+        You can also withdraw your consent to &quot;Talk to Mellow&quot; at any
+        time in the app&apos;s settings: no more data is then sent to Anthropic,
+        and the chat stops working.
       </p>
       <p>
         <strong>Account Information:</strong> If you would at any time like
