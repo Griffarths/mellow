@@ -480,6 +480,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "antidouleur-mal-de-tete-paracetamol-ibuprofene-aspirine",
         "medicament-migraine-ne-marche-pas",
         "cephalee-par-abus-medicamenteux",
+        "traitement-preventif-migraine",
       ],
     },
     en: {
@@ -504,6 +505,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "painkiller-for-headache",
         "migraine-medication-not-working",
         "medication-overuse-headache",
+        "migraine-prevention-medication",
       ],
     },
     es: {
@@ -528,6 +530,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "analgesicos-para-el-dolor-de-cabeza",
         "medicamento-para-migrana-no-hace-efecto",
         "cefalea-por-abuso-de-analgesicos",
+        "tratamiento-preventivo-migrana",
       ],
     },
     "es-419": {
@@ -552,6 +555,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "analgesicos-para-el-dolor-de-cabeza",
         "medicamento-para-la-migrana-no-funciona",
         "cefalea-por-abuso-de-analgesicos",
+        "tratamiento-preventivo-migrana",
       ],
     },
     de: {
@@ -576,6 +580,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "schmerzmittel-bei-kopfschmerzen",
         "migraene-medikament-wirkt-nicht",
         "kopfschmerz-durch-schmerzmittel",
+        "migraeneprophylaxe-medikamente",
       ],
     },
     it: {
@@ -600,6 +605,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "antidolorifico-per-mal-di-testa",
         "farmaco-per-emicrania-non-funziona",
         "cefalea-da-abuso-di-farmaci",
+        "profilassi-emicrania-farmaci-preventivi",
       ],
     },
     pt: {
@@ -624,6 +630,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "analgesico-para-dor-de-cabeca",
         "medicamento-para-a-enxaqueca-nao-faz-efeito",
         "cefaleia-por-abuso-de-analgesicos",
+        "tratamento-preventivo-enxaqueca",
       ],
     },
     "pt-BR": {
@@ -648,6 +655,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "remedio-para-dor-de-cabeca-paracetamol-ibuprofeno-aspirina",
         "remedio-para-enxaqueca-nao-faz-efeito",
         "cefaleia-por-abuso-de-analgesicos",
+        "tratamento-preventivo-enxaqueca",
       ],
     },
   },
