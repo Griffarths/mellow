@@ -250,6 +250,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-derriere-l-oeil",
         "photophobie-migraine-lumiere-bruit-odeurs",
         "migraine-chronique-definition-15-jours",
+        "aura-migraineuse-fourmillements",
       ],
     },
     en: {
@@ -279,6 +280,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-behind-the-eye",
         "migraine-light-sensitivity",
         "chronic-migraine-vs-episodic-migraine",
+        "migraine-aura-tingling-numbness-speech",
       ],
     },
     es: {
@@ -308,6 +310,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-detras-del-ojo-un-solo-lado",
         "sensibilidad-luz-ruido-migrana",
         "migrana-cronica-que-es-limite-15-dias",
+        "aura-migranosa-hormigueo-dificultad-hablar",
       ],
     },
     "es-419": {
@@ -337,6 +340,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-detras-del-ojo",
         "migrana-sensibilidad-a-la-luz-ruido-olores",
         "migrana-cronica-que-es-limite-15-dias",
+        "aura-de-migrana-con-hormigueo",
       ],
     },
     de: {
@@ -366,6 +370,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-hinter-dem-auge",
         "migraene-lichtempfindlichkeit-laerm-gerueche",
         "chronische-migraene-definition-15-tage",
+        "migraene-aura-kribbeln-taubheit-sprachstoerung",
       ],
     },
     it: {
@@ -395,6 +400,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-dietro-l-occhio",
         "emicrania-sensibilita-alla-luce",
         "emicrania-cronica-cos-e-15-giorni",
+        "aura-emicranica-formicolio",
       ],
     },
     pt: {
@@ -424,6 +430,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-atras-do-olho",
         "enxaqueca-sensibilidade-luz-ruido-cheiros",
         "enxaqueca-cronica-ou-episodica-15-dias",
+        "aura-sensitiva-enxaqueca-formigueiro",
       ],
     },
     "pt-BR": {
@@ -453,6 +460,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-atras-do-olho",
         "enxaqueca-sensibilidade-a-luz-barulho-cheiros",
         "enxaqueca-cronica-o-que-e",
+        "aura-de-enxaqueca-formigamento",
       ],
     },
   },
