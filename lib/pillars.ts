@@ -251,6 +251,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "photophobie-migraine-lumiere-bruit-odeurs",
         "migraine-chronique-definition-15-jours",
         "aura-migraineuse-fourmillements",
+        "migraine-brouillard-mental",
       ],
     },
     en: {
@@ -281,6 +282,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-light-sensitivity",
         "chronic-migraine-vs-episodic-migraine",
         "migraine-aura-tingling-numbness-speech",
+        "migraine-brain-fog",
       ],
     },
     es: {
@@ -311,6 +313,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "sensibilidad-luz-ruido-migrana",
         "migrana-cronica-que-es-limite-15-dias",
         "aura-migranosa-hormigueo-dificultad-hablar",
+        "niebla-mental-migrana",
       ],
     },
     "es-419": {
@@ -341,6 +344,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-sensibilidad-a-la-luz-ruido-olores",
         "migrana-cronica-que-es-limite-15-dias",
         "aura-de-migrana-con-hormigueo",
+        "niebla-mental-con-migrana",
       ],
     },
     de: {
@@ -371,6 +375,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-lichtempfindlichkeit-laerm-gerueche",
         "chronische-migraene-definition-15-tage",
         "migraene-aura-kribbeln-taubheit-sprachstoerung",
+        "migraene-brain-fog",
       ],
     },
     it: {
@@ -401,6 +406,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-sensibilita-alla-luce",
         "emicrania-cronica-cos-e-15-giorni",
         "aura-emicranica-formicolio",
+        "nebbia-mentale-emicrania",
       ],
     },
     pt: {
@@ -431,6 +437,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-sensibilidade-luz-ruido-cheiros",
         "enxaqueca-cronica-ou-episodica-15-dias",
         "aura-sensitiva-enxaqueca-formigueiro",
+        "nevoa-mental-enxaqueca",
       ],
     },
     "pt-BR": {
@@ -461,6 +468,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-sensibilidade-a-luz-barulho-cheiros",
         "enxaqueca-cronica-o-que-e",
         "aura-de-enxaqueca-formigamento",
+        "nevoa-mental-na-enxaqueca",
       ],
     },
   },
