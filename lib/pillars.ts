@@ -50,6 +50,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-et-regles",
         "migraine-alcool-declencheur",
         "migraine-pression-atmospherique-hpa",
+        "migraine-et-grossesse",
       ],
     },
     en: {
@@ -74,6 +75,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-and-periods",
         "alcohol-and-migraine",
         "migraine-pressure-drop-hpa-flying-altitude",
+        "migraine-during-pregnancy",
       ],
     },
     es: {
@@ -98,6 +100,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-y-pantallas-luz-azul",
         "migrana-y-alcohol",
         "migrana-por-baja-presion-hpa-avion-montana",
+        "migrana-y-embarazo",
       ],
     },
     "es-419": {
@@ -122,6 +125,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "luz-azul-y-migrana",
         "migrana-y-alcohol",
         "migrana-por-baja-presion-hpa-avion-montana",
+        "migrana-y-embarazo",
       ],
     },
     de: {
@@ -146,6 +150,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-bildschirm-blaulicht",
         "migraene-alkohol",
         "migraene-luftdruckabfall-hpa-flugzeug-berge",
+        "migraene-schwangerschaft",
       ],
     },
     it: {
@@ -170,6 +175,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-e-schermi-luce-blu",
         "emicrania-alcol-vino-rosso",
         "emicrania-calo-di-pressione-hpa-aereo-montagna",
+        "emicrania-in-gravidanza",
       ],
     },
     pt: {
@@ -194,6 +200,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-e-ecras-luz-azul",
         "enxaqueca-e-alcool",
         "enxaqueca-queda-de-pressao-hpa-aviao-montanha",
+        "enxaqueca-na-gravidez",
       ],
     },
     "pt-BR": {
@@ -218,6 +225,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "luz-azul-enxaqueca-telas",
         "enxaqueca-e-alcool",
         "enxaqueca-queda-de-pressao-hpa-aviao-montanha",
+        "enxaqueca-na-gravidez",
       ],
     },
   },
