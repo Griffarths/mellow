@@ -51,6 +51,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-alcool-declencheur",
         "migraine-pression-atmospherique-hpa",
         "migraine-et-grossesse",
+        "cafe-et-migraine",
       ],
     },
     en: {
@@ -76,6 +77,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "alcohol-and-migraine",
         "migraine-pressure-drop-hpa-flying-altitude",
         "migraine-during-pregnancy",
+        "caffeine-and-migraine",
       ],
     },
     es: {
@@ -101,6 +103,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-y-alcohol",
         "migrana-por-baja-presion-hpa-avion-montana",
         "migrana-y-embarazo",
+        "cafeina-y-migrana",
       ],
     },
     "es-419": {
@@ -126,6 +129,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-y-alcohol",
         "migrana-por-baja-presion-hpa-avion-montana",
         "migrana-y-embarazo",
+        "cafeina-y-migrana",
       ],
     },
     de: {
@@ -151,6 +155,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-alkohol",
         "migraene-luftdruckabfall-hpa-flugzeug-berge",
         "migraene-schwangerschaft",
+        "koffein-migraene-kaffee",
       ],
     },
     it: {
@@ -176,6 +181,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-alcol-vino-rosso",
         "emicrania-calo-di-pressione-hpa-aereo-montagna",
         "emicrania-in-gravidanza",
+        "caffe-e-emicrania",
       ],
     },
     pt: {
@@ -201,6 +207,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-e-alcool",
         "enxaqueca-queda-de-pressao-hpa-aviao-montanha",
         "enxaqueca-na-gravidez",
+        "cafeina-e-enxaqueca",
       ],
     },
     "pt-BR": {
@@ -226,6 +233,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-e-alcool",
         "enxaqueca-queda-de-pressao-hpa-aviao-montanha",
         "enxaqueca-na-gravidez",
+        "cafe-e-enxaqueca",
       ],
     },
   },
