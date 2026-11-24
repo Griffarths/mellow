@@ -268,6 +268,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-chronique-definition-15-jours",
         "aura-migraineuse-fourmillements",
         "migraine-brouillard-mental",
+        "combien-de-migraines-par-mois",
       ],
     },
     en: {
@@ -299,6 +300,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "chronic-migraine-vs-episodic-migraine",
         "migraine-aura-tingling-numbness-speech",
         "migraine-brain-fog",
+        "how-many-migraines-a-month-is-normal",
       ],
     },
     es: {
@@ -330,6 +332,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-cronica-que-es-limite-15-dias",
         "aura-migranosa-hormigueo-dificultad-hablar",
         "niebla-mental-migrana",
+        "cuantas-migranas-al-mes-es-normal",
       ],
     },
     "es-419": {
@@ -361,6 +364,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migrana-cronica-que-es-limite-15-dias",
         "aura-de-migrana-con-hormigueo",
         "niebla-mental-con-migrana",
+        "cuantas-migranas-al-mes-es-normal",
       ],
     },
     de: {
@@ -392,6 +396,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "chronische-migraene-definition-15-tage",
         "migraene-aura-kribbeln-taubheit-sprachstoerung",
         "migraene-brain-fog",
+        "migraene-pro-monat-normal",
       ],
     },
     it: {
@@ -423,6 +428,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "emicrania-cronica-cos-e-15-giorni",
         "aura-emicranica-formicolio",
         "nebbia-mentale-emicrania",
+        "quante-emicranie-al-mese-sono-normali",
       ],
     },
     pt: {
@@ -454,6 +460,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-cronica-ou-episodica-15-dias",
         "aura-sensitiva-enxaqueca-formigueiro",
         "nevoa-mental-enxaqueca",
+        "quantas-crises-de-enxaqueca-por-mes-e-normal",
       ],
     },
     "pt-BR": {
@@ -485,6 +492,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "enxaqueca-cronica-o-que-e",
         "aura-de-enxaqueca-formigamento",
         "nevoa-mental-na-enxaqueca",
+        "quantas-crises-de-enxaqueca-por-mes-e-normal",
       ],
     },
   },
