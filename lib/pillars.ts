@@ -521,6 +521,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "medicament-migraine-ne-marche-pas",
         "cephalee-par-abus-medicamenteux",
         "traitement-preventif-migraine",
+        "traitement-migraine-avec-aura",
       ],
     },
     en: {
@@ -546,6 +547,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-medication-not-working",
         "medication-overuse-headache",
         "migraine-prevention-medication",
+        "migraine-with-aura-treatment",
       ],
     },
     es: {
@@ -571,6 +573,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "medicamento-para-migrana-no-hace-efecto",
         "cefalea-por-abuso-de-analgesicos",
         "tratamiento-preventivo-migrana",
+        "migrana-con-aura-tratamiento",
       ],
     },
     "es-419": {
@@ -596,6 +599,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "medicamento-para-la-migrana-no-funciona",
         "cefalea-por-abuso-de-analgesicos",
         "tratamiento-preventivo-migrana",
+        "migrana-con-aura-tratamiento",
       ],
     },
     de: {
@@ -621,6 +625,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraene-medikament-wirkt-nicht",
         "kopfschmerz-durch-schmerzmittel",
         "migraeneprophylaxe-medikamente",
+        "migraene-mit-aura-behandlung",
       ],
     },
     it: {
@@ -646,6 +651,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "farmaco-per-emicrania-non-funziona",
         "cefalea-da-abuso-di-farmaci",
         "profilassi-emicrania-farmaci-preventivi",
+        "emicrania-con-aura-terapia-cosa-fare",
       ],
     },
     pt: {
@@ -671,6 +677,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "medicamento-para-a-enxaqueca-nao-faz-efeito",
         "cefaleia-por-abuso-de-analgesicos",
         "tratamento-preventivo-enxaqueca",
+        "enxaqueca-com-aura-tratamento",
       ],
     },
     "pt-BR": {
@@ -696,6 +703,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "remedio-para-enxaqueca-nao-faz-efeito",
         "cefaleia-por-abuso-de-analgesicos",
         "tratamento-preventivo-enxaqueca",
+        "enxaqueca-com-aura-tratamento",
       ],
     },
   },
