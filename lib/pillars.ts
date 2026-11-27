@@ -896,6 +896,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "analyser-son-carnet-de-migraine",
         "meilleure-application-migraine",
         "rapport-migraine-pour-le-medecin",
+        "noter-sa-migraine-pendant-la-crise",
       ],
     },
     en: {
@@ -914,6 +915,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraine-diary-patterns",
         "best-migraine-app",
         "migraine-report-for-doctor",
+        "how-to-track-migraines-when-in-pain",
       ],
     },
     es: {
@@ -932,6 +934,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "analizar-diario-de-migrana",
         "mejor-app-para-migrana-criterios",
         "informe-de-migrana-para-el-medico",
+        "anotar-la-migrana-durante-la-crisis",
       ],
     },
     "es-419": {
@@ -950,6 +953,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "analizar-tu-diario-de-migrana",
         "mejor-app-para-migrana",
         "informe-de-migrana-para-el-medico",
+        "como-anotar-una-migrana-cuando-tienes-dolor",
       ],
     },
     de: {
@@ -968,6 +972,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "migraenetagebuch-auswerten",
         "migraene-app-10-kriterien",
         "migraene-bericht-fuer-den-arzt",
+        "migraene-notieren-minimales-tagebuch",
       ],
     },
     it: {
@@ -986,6 +991,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "analizzare-il-diario-dell-emicrania",
         "migliore-app-per-emicrania",
         "report-emicrania-per-il-medico",
+        "annotare-emicrania-durante-attacco",
       ],
     },
     pt: {
@@ -1004,6 +1010,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "analisar-diario-de-enxaqueca",
         "melhor-aplicacao-para-enxaqueca",
         "relatorio-de-enxaqueca-para-o-medico",
+        "anotar-enxaqueca-durante-a-crise",
       ],
     },
     "pt-BR": {
@@ -1022,6 +1029,7 @@ export const PILLARS: Record<PillarId, Pillar> = {
         "como-analisar-diario-de-enxaqueca",
         "melhor-aplicativo-para-enxaqueca",
         "relatorio-de-enxaqueca-para-o-medico",
+        "como-anotar-enxaqueca-na-crise",
       ],
     },
   },
